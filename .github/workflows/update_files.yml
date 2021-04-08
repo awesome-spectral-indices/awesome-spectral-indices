@@ -1,0 +1,37 @@
+name: update_files
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron:  '/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'          
+      - name: dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas          
+      - name: execute        
+        run: |
+          python update_files.py
+      - name: commit
+        continue-on-error: true
+        run: |
+          today=$(date +"%Y-%m-%d")
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Updated files ${today} UTC" -a
+      - name: push
+        continue-on-error: true
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
