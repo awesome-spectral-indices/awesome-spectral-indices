@@ -161,4 +161,139 @@
         "type": "vegetation",
         "date_of_addition": "2021-07-04"
     },
+    {
+        "short_name": "BAI",
+        "long_name": "Burned Area Index",
+        "formula": "1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)",
+        "bands": ["N","R"],
+        "reference": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "BAIS2",
+        "long_name": "Burned Area Index for Sentinel 2",
+        "formula": "(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0)",
+        "bands": ["RE2","RE3","RE4","R","S2"],
+        "reference": "https://doi.org/10.3390/ecrs-2-05177",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "CSIT",
+        "long_name": "Char Soil Index Thermal",
+        "formula": "N / (S2 * T1 / 10000.0)",
+        "bands": ["N","S2","T1"],
+        "reference": "https://doi.org/10.1080/01431160600954704",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NBR",
+        "long_name": "Normalized Burn Ratio",
+        "formula": "(N - S2) / (N + S2)",
+        "bands": ["N","S2"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=53",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NBRT",
+        "long_name": "Normalized Burn Ratio Thermal",
+        "formula": "(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))",
+        "bands": ["N","S2","T1"],
+        "reference": "https://doi.org/10.1080/01431160500239008",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NDVIT",
+        "long_name": "Normalized Difference Vegetation Index Thermal",
+        "formula": "(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0))",
+        "bands": ["N","R","T1"],
+        "reference": "https://doi.org/10.1080/01431160600954704",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "SAVIT",
+        "long_name": "Soil-Adjusted Vegetation Index Thermal",
+        "formula": "(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L)",
+        "bands": ["N","R","T1","L"],
+        "reference": "https://doi.org/10.1080/01431160600954704",
+        "type": "burn",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "MNDWI",
+        "long_name": "Modified Normalized Difference Water Index",
+        "formula": "(G - S1) / (G + S1)",
+        "bands": ["G","S1"],
+        "reference": "https://doi.org/10.1080/01431160600589179",
+        "type": "water",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NDWI",
+        "long_name": "Normalized Difference Water Index",
+        "formula": "(G - N) / (G + N)",
+        "bands": ["G","N"],
+        "reference": "https://doi.org/10.1080/01431169608948714",
+        "type": "water",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NDSI",
+        "long_name": "Normalized Difference Snow Index",
+        "formula": "(G - S1) / (G + S1)",
+        "bands": ["G","S1"],
+        "reference": "https://doi.org/10.1109/IGARSS.1994.399618",
+        "type": "snow",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NDDI",
+        "long_name": "Normalized Difference Drought Index",
+        "formula": "(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))",
+        "bands": ["G","N","R"],
+        "reference": "https://doi.org/10.1029/2006GL029127",
+        "type": "drought",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "kEVI",
+        "long_name": "Kernel Enhanced Vegetation Index",
+        "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
+        "bands": ["kNN","g","kNR","C1","C2","kNB","kNL"],
+        "reference": "https://doi.org/10.1126/sciadv.abc7447",
+        "type": "kernel",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "kNDVI",
+        "long_name": "Kernel Normalized Difference Vegetation Index",
+        "formula": "(kNN - kNR)/(kNN + kNR)",
+        "bands": ["kNN","kNR"],
+        "reference": "https://doi.org/10.1126/sciadv.abc7447",
+        "type": "kernel",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "kRVI",
+        "long_name": "Kernel Ratio Vegetation Index",
+        "formula": "kNN / kNR",
+        "bands": ["kNN","kNR"],
+        "reference": "https://doi.org/10.1126/sciadv.abc7447",
+        "type": "kernel",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "kVARI",
+        "long_name": "Kernel Visible Atmospherically Resistant Index",
+        "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
+        "bands": ["kGG","kGR","kGB"],
+        "reference": "https://doi.org/10.1126/sciadv.abc7447",
+        "type": "kernel",
+        "date_of_addition": "2021-07-04"
+    }
 ]
