@@ -1,0 +1,164 @@
+[    
+    {
+        "short_name": "NDVI",
+        "long_name": "Normalized Difference Vegetation Index",
+        "formula": "(N - R)/(N + R)",
+        "bands": ["N","R"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=58",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "BNDVI",
+        "long_name": "Blue Normalized Difference Vegetation Index",
+        "formula": "(N - B)/(N + B)",
+        "bands": ["N","B"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=135",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "CIG",
+        "long_name": "Chlorophyll Index Green",
+        "formula": "(N / G) - 1.0",
+        "bands": ["N","G"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=128",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "CVI",
+        "long_name": "Chlorophyll Vegetation Index",
+        "formula": "(N * R) / (G ** 2.0)",
+        "bands": ["N","G","R"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "EVI",
+        "long_name": "Enhanced Vegetation Index",
+        "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
+        "bands": ["N","g","R","C1","C2","B","L"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=16",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "EVI2",
+        "long_name": "Two-Band Enhanced Vegetation Index",
+        "formula": "g * (N - R) / (N + 2.4 * R + L)",
+        "bands": ["N","g","R","L"],
+        "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GARI",
+        "long_name": "Green Atmospherically Resistant Vegetation Index",
+        "formula": "(N - (G - (B - R))) / (N - (G + (B - R)))",
+        "bands": ["N","G","R","B"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GEMI",
+        "long_name": "Global Environment Monitoring Index",
+        "formula": "((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))",
+        "bands": ["N","R"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=25",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GBNDVI",
+        "long_name": "Green-Blue Normalized Difference Vegetation Index",
+        "formula": "(N - (G + B))/(N + (G + B))",
+        "bands": ["N","G","B"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GLI",
+        "long_name": "Green Leaf Index",
+        "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
+        "bands": ["R","G","B"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=375",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GNDVI",
+        "long_name": "Green Normalized Difference Vegetation Index",
+        "formula": "(N - G)/(N + G)",
+        "bands": ["N","G"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=401",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GRNDVI",
+        "long_name": "Green-Red Normalized Difference Vegetation Index",
+        "formula": "(N - (G + R))/(N + (G + R))",
+        "bands": ["R","G","N"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=185",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "GVMI",
+        "long_name": "Global Vegetation Moisture Index",
+        "formula": "((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))",
+        "bands": ["S2","N"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=372",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "MNDVI",
+        "long_name": "Modified Normalized Difference Vegetation Index",
+        "formula": "(N - S2)/(N + S2)",
+        "bands": ["S2","N"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=245",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "NGRDI",
+        "long_name": "Normalized Green Red Difference Index",
+        "formula": "(G - R) / (G + R)",
+        "bands": ["G","R"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=390",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "RVI",
+        "long_name": "Ratio Vegetation Index",
+        "formula": "N / R",
+        "bands": ["N","R"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=72",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "SAVI",
+        "long_name": "Soil-Adjusted Vegetation Index",
+        "formula": "(1.0 + L) * (N - R) / (N + R + L)",
+        "bands": ["N","R","L"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=87",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+    {
+        "short_name": "VARI",
+        "long_name": "Visible Atmospherically Resistant Index",
+        "formula": "(G - R) / (G + R - B)",
+        "bands": ["B","R","G"],
+        "reference": "https://www.indexdatabase.de/db/i-single.php?id=356",
+        "type": "vegetation",
+        "date_of_addition": "2021-07-04"
+    },
+]
