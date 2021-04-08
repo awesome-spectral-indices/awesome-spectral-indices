@@ -7,7 +7,7 @@ A ready-to-use curated list of spectral indices for Google Earth Engine.
 The ready-to-use curated list of spectral indices is presented in the `spectral-indices-list.json` file. From the `json` file a `csv` file is created: `spectral-indices-list.csv`.
 Additionally, the `spectral-indices-list-eemont-style.json` is created from the original `json` file to be used by the [eemont Python package](https://github.com/davemlz/eemont).
 
-Each element of the list have the following attributes:
+Each element of the list has the following attributes:
 
 - `short_name`: Short name of the index (e.g. `"NDWI"`).
 - `long_name`: Long name of the index (e.g. `"Normalized Difference Water Index"`).
