@@ -1,6 +1,5 @@
 name: update_files
-on: 
-  workflow_dispatch:
+on:
   schedule:
     - cron:  '*/5 * * * *'
 
