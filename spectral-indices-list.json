@@ -6,7 +6,7 @@
         "bands": ["N","R"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=58",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "BNDVI",
@@ -15,7 +15,7 @@
         "bands": ["N","B"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=135",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "CIG",
@@ -24,7 +24,7 @@
         "bands": ["N","G"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=128",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "CVI",
@@ -33,7 +33,7 @@
         "bands": ["N","G","R"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "EVI",
@@ -42,7 +42,7 @@
         "bands": ["N","g","R","C1","C2","B","L"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=16",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "EVI2",
@@ -51,7 +51,7 @@
         "bands": ["N","g","R","L"],
         "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GARI",
@@ -60,7 +60,7 @@
         "bands": ["N","G","R","B"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GEMI",
@@ -69,7 +69,7 @@
         "bands": ["N","R"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=25",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GBNDVI",
@@ -78,7 +78,7 @@
         "bands": ["N","G","B"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GLI",
@@ -87,7 +87,7 @@
         "bands": ["R","G","B"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=375",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GNDVI",
@@ -96,7 +96,7 @@
         "bands": ["N","G"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=401",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GRNDVI",
@@ -105,7 +105,7 @@
         "bands": ["R","G","N"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=185",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "GVMI",
@@ -114,7 +114,7 @@
         "bands": ["S2","N"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=372",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "MNDVI",
@@ -123,7 +123,7 @@
         "bands": ["S2","N"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=245",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NGRDI",
@@ -132,7 +132,7 @@
         "bands": ["G","R"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=390",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "RVI",
@@ -141,7 +141,7 @@
         "bands": ["N","R"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=72",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "SAVI",
@@ -150,7 +150,7 @@
         "bands": ["N","R","L"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=87",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "VARI",
@@ -159,7 +159,7 @@
         "bands": ["B","R","G"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=356",
         "type": "vegetation",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "BAI",
@@ -168,7 +168,7 @@
         "bands": ["N","R"],
         "reference": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "BAIS2",
@@ -177,7 +177,7 @@
         "bands": ["RE2","RE3","RE4","R","S2"],
         "reference": "https://doi.org/10.3390/ecrs-2-05177",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "CSIT",
@@ -186,7 +186,7 @@
         "bands": ["N","S2","T1"],
         "reference": "https://doi.org/10.1080/01431160600954704",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NBR",
@@ -195,7 +195,7 @@
         "bands": ["N","S2"],
         "reference": "https://www.indexdatabase.de/db/i-single.php?id=53",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NBRT",
@@ -204,7 +204,7 @@
         "bands": ["N","S2","T1"],
         "reference": "https://doi.org/10.1080/01431160500239008",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NDVIT",
@@ -213,7 +213,7 @@
         "bands": ["N","R","T1"],
         "reference": "https://doi.org/10.1080/01431160600954704",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "SAVIT",
@@ -222,7 +222,7 @@
         "bands": ["N","R","T1","L"],
         "reference": "https://doi.org/10.1080/01431160600954704",
         "type": "burn",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "MNDWI",
@@ -231,7 +231,7 @@
         "bands": ["G","S1"],
         "reference": "https://doi.org/10.1080/01431160600589179",
         "type": "water",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NDWI",
@@ -240,7 +240,7 @@
         "bands": ["G","N"],
         "reference": "https://doi.org/10.1080/01431169608948714",
         "type": "water",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NDSI",
@@ -249,7 +249,7 @@
         "bands": ["G","S1"],
         "reference": "https://doi.org/10.1109/IGARSS.1994.399618",
         "type": "snow",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "NDDI",
@@ -258,7 +258,7 @@
         "bands": ["G","N","R"],
         "reference": "https://doi.org/10.1029/2006GL029127",
         "type": "drought",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "kEVI",
@@ -267,7 +267,7 @@
         "bands": ["kNN","g","kNR","C1","C2","kNB","kNL"],
         "reference": "https://doi.org/10.1126/sciadv.abc7447",
         "type": "kernel",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "kNDVI",
@@ -276,7 +276,7 @@
         "bands": ["kNN","kNR"],
         "reference": "https://doi.org/10.1126/sciadv.abc7447",
         "type": "kernel",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "kRVI",
@@ -285,7 +285,7 @@
         "bands": ["kNN","kNR"],
         "reference": "https://doi.org/10.1126/sciadv.abc7447",
         "type": "kernel",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
     },
     {
         "short_name": "kVARI",
@@ -294,6 +294,15 @@
         "bands": ["kGG","kGR","kGB"],
         "reference": "https://doi.org/10.1126/sciadv.abc7447",
         "type": "kernel",
-        "date_of_addition": "2021-07-04"
+        "date_of_addition": "2021-04-07"
+    },
+    {
+        "short_name": "SeLI",
+        "long_name": "Sentinel-2 LAI Green Index",
+        "formula": "(RE4 - RE1) / (RE4 + RE1)",
+        "bands": ["RE4","RE1"],
+        "reference": "https://doi.org/10.3390/s19040904",
+        "type": "vegetation",
+        "date_of_addition": "2021-04-08"
     }
 ]
