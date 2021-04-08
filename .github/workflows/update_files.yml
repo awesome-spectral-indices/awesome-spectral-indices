@@ -1,7 +1,8 @@
 name: update_files
 on:
+  workflow_dispatch:
   schedule:
-    - cron:  '0/45 * * * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
