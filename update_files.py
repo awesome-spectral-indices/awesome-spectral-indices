@@ -19,5 +19,5 @@ for index in indiceslist:
         'date_of_addition': index['date_of_addition'],
     }
 # Save the dictionary as a json
-with open('spectral-indices-list-eemont-style.json','w') as fp:
-    json.dump(indices, fp, indent = 4)
+with open('spectral-indices-dict.json','w') as fp:
+    json.dump(indices, fp, indent = 4, sort_keys = True)

@@ -5,7 +5,7 @@ A ready-to-use curated list of spectral indices for Google Earth Engine.
 ## Spectral Indices
 
 The ready-to-use curated list of spectral indices is presented in the `spectral-indices-list.json` file. From the `json` file a `csv` file is created: `spectral-indices-list.csv`.
-Additionally, the `spectral-indices-list-eemont-style.json` is created from the original `json` file to be used by the [eemont Python package](https://github.com/davemlz/eemont).
+Additionally, the `spectral-indices-dict.json` is created from the original `json` file to be used by the [eemont Python package](https://github.com/davemlz/eemont).
 
 Each element of the list has the following attributes:
 
@@ -62,5 +62,5 @@ git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
 
 Or you can download the single files here (right-click > Save link as...):
 
-- json file: [Raw file](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json).
-- csv file: [Raw file](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.csv).
+- json file: ([Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json), [Raw dict](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json)).
+- csv file: [Raw csv](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.csv).
