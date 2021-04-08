@@ -4,7 +4,7 @@ import pandas as pd
 f = open('spectral-indices-list.json')
 indiceslist = json.load(f)
 # Convert it to a dataframe
-df = pd.DataFrame(indiceslist)
+df = pd.DataFrame(indiceslist).sort_values('short_name')
 # Save the dataframe as csv
 df.to_csv('spectral-indices-list.csv',index = False)
 # Convert it to a eemont-style dictionary

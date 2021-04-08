@@ -172,7 +172,7 @@
     },
     {
         "short_name": "BAIS2",
-        "long_name": "Burned Area Index for Sentinel 2",
+        "long_name": "Burned Area Index for Sentinel-2",
         "formula": "(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0)",
         "bands": ["RE2","RE3","RE4","R","S2"],
         "reference": "https://doi.org/10.3390/ecrs-2-05177",
