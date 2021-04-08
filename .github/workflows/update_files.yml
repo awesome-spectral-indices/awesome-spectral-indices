@@ -2,7 +2,7 @@ name: update_files
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '0 0 * * *'
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       - name: commit
         continue-on-error: true
         run: |
-          today=$(date +"%Y-%m-%d")
+          today=$(date +"%Y-%m-%d %H:%M:%S")
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
