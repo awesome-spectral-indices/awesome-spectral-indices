@@ -14,12 +14,12 @@ Each element of the list has the following attributes:
 - `formula`: Expression/formula of the index (e.g. `"(N - G)/(N + G)"`).
 - `bands`: List of required bands/parameters for the index computation (e.g. `["N","G"]`).
 - `reference`: Link to the index reference/paper/doi (e.g. `"https://doi.org/10.1080/01431169608948714"`).
-- `type`: Type/application of the index (e.g. `water`).
-- `date_of_addition`: Date of addition to the list (e.g. `2021-04-07`).
+- `type`: Type/application of the index (e.g. `"water"`).
+- `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
 
 ### Expressions
 
-The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) to be used by the [ee.Image.expression() method](https://developers.google.com/earth-engine/apidocs/ee-image-expression) in [Google Earth Engine](https://earthengine.google.com/). The parameters used in the expression for each index follow this standard:
+The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) to be used by the [ee.Image.expression()](https://developers.google.com/earth-engine/apidocs/ee-image-expression) method in [Google Earth Engine](https://earthengine.google.com/). The parameters used in the expression for each index follow this standard:
 
 - `A`: Aerosol band (e.g. B1 of Sentinel-2).
 - `B`: Blue band (e.g. B2 of Sentinel-2).
@@ -62,5 +62,5 @@ git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
 
 Or you can download the single files here (right-click > Save link as...):
 
-- json file: (Raw file)[https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json]
-- csv file: (Raw file)[https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.csv]
+- json file: [Raw file](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json).
+- csv file: [Raw file](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.csv).
