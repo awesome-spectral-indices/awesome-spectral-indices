@@ -20,4 +20,4 @@ for index in indiceslist:
     }
 # Save the dictionary as a json
 with open('spectral-indices-list-eemont-style.json','w') as fp:
-    json.dump(indices, fp)
+    json.dump(indices, fp, indent = 4)
