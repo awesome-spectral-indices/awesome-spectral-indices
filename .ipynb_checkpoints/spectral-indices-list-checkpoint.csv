@@ -1,0 +1,35 @@
+short_name,long_name,formula,bands,reference,type,date_of_addition
+BAI,Burned Area Index,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['N', 'R']",https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,burn,2021-04-07
+BAIS2,Burned Area Index for Sentinel-2,(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0),"['RE2', 'RE3', 'RE4', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,burn,2021-04-07
+BNDVI,Blue Normalized Difference Vegetation Index,(N - B)/(N + B),"['N', 'B']",https://www.indexdatabase.de/db/i-single.php?id=135,vegetation,2021-04-07
+CIG,Chlorophyll Index Green,(N / G) - 1.0,"['N', 'G']",https://www.indexdatabase.de/db/i-single.php?id=128,vegetation,2021-04-07
+CSIT,Char Soil Index Thermal,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,burn,2021-04-07
+CVI,Chlorophyll Vegetation Index,(N * R) / (G ** 2.0),"['N', 'G', 'R']",https://www.indexdatabase.de/db/i-single.php?id=391,vegetation,2021-04-07
+EVI,Enhanced Vegetation Index,g * (N - R) / (N + C1 * R - C2 * B + L),"['N', 'g', 'R', 'C1', 'C2', 'B', 'L']",https://www.indexdatabase.de/db/i-single.php?id=16,vegetation,2021-04-07
+EVI2,Two-Band Enhanced Vegetation Index,g * (N - R) / (N + 2.4 * R + L),"['N', 'g', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,vegetation,2021-04-07
+GARI,Green Atmospherically Resistant Vegetation Index,(N - (G - (B - R))) / (N - (G + (B - R))),"['N', 'G', 'R', 'B']",https://www.indexdatabase.de/db/i-single.php?id=363,vegetation,2021-04-07
+GBNDVI,Green-Blue Normalized Difference Vegetation Index,(N - (G + B))/(N + (G + B)),"['N', 'G', 'B']",https://www.indexdatabase.de/db/i-single.php?id=186,vegetation,2021-04-07
+GEMI,Global Environment Monitoring Index,((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R)),"['N', 'R']",https://www.indexdatabase.de/db/i-single.php?id=25,vegetation,2021-04-07
+GLI,Green Leaf Index,(2.0 * G - R - B) / (2.0 * G + R + B),"['R', 'G', 'B']",https://www.indexdatabase.de/db/i-single.php?id=375,vegetation,2021-04-07
+GNDVI,Green Normalized Difference Vegetation Index,(N - G)/(N + G),"['N', 'G']",https://www.indexdatabase.de/db/i-single.php?id=401,vegetation,2021-04-07
+GRNDVI,Green-Red Normalized Difference Vegetation Index,(N - (G + R))/(N + (G + R)),"['R', 'G', 'N']",https://www.indexdatabase.de/db/i-single.php?id=185,vegetation,2021-04-07
+GVMI,Global Vegetation Moisture Index,((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02)),"['S2', 'N']",https://www.indexdatabase.de/db/i-single.php?id=372,vegetation,2021-04-07
+MNDVI,Modified Normalized Difference Vegetation Index,(N - S2)/(N + S2),"['S2', 'N']",https://www.indexdatabase.de/db/i-single.php?id=245,vegetation,2021-04-07
+MNDWI,Modified Normalized Difference Water Index,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1080/01431160600589179,water,2021-04-07
+NBR,Normalized Burn Ratio,(N - S2) / (N + S2),"['N', 'S2']",https://www.indexdatabase.de/db/i-single.php?id=53,burn,2021-04-07
+NBRT,Normalized Burn Ratio Thermal,(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0)),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160500239008,burn,2021-04-07
+NDDI,Normalized Difference Drought Index,(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N))),"['G', 'N', 'R']",https://doi.org/10.1029/2006GL029127,drought,2021-04-07
+NDSI,Normalized Difference Snow Index,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,snow,2021-04-07
+NDVI,Normalized Difference Vegetation Index,(N - R)/(N + R),"['N', 'R']",https://www.indexdatabase.de/db/i-single.php?id=58,vegetation,2021-04-07
+NDVIT,Normalized Difference Vegetation Index Thermal,(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0)),"['N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,burn,2021-04-07
+NDWI,Normalized Difference Water Index,(G - N) / (G + N),"['G', 'N']",https://doi.org/10.1080/01431169608948714,water,2021-04-07
+NGRDI,Normalized Green Red Difference Index,(G - R) / (G + R),"['G', 'R']",https://www.indexdatabase.de/db/i-single.php?id=390,vegetation,2021-04-07
+RVI,Ratio Vegetation Index,N / R,"['N', 'R']",https://www.indexdatabase.de/db/i-single.php?id=72,vegetation,2021-04-07
+SAVI,Soil-Adjusted Vegetation Index,(1.0 + L) * (N - R) / (N + R + L),"['N', 'R', 'L']",https://www.indexdatabase.de/db/i-single.php?id=87,vegetation,2021-04-07
+SAVIT,Soil-Adjusted Vegetation Index Thermal,(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L),"['N', 'R', 'T1', 'L']",https://doi.org/10.1080/01431160600954704,burn,2021-04-07
+SeLI,Sentinel-2 LAI Green Index,(RE4 - RE1) / (RE4 + RE1),"['RE4', 'RE1']",https://doi.org/10.3390/s19040904,vegetation,2021-04-08
+VARI,Visible Atmospherically Resistant Index,(G - R) / (G + R - B),"['B', 'R', 'G']",https://www.indexdatabase.de/db/i-single.php?id=356,vegetation,2021-04-07
+kEVI,Kernel Enhanced Vegetation Index,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['kNN', 'g', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,kernel,2021-04-07
+kNDVI,Kernel Normalized Difference Vegetation Index,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,kernel,2021-04-07
+kRVI,Kernel Ratio Vegetation Index,kNN / kNR,"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,kernel,2021-04-07
+kVARI,Kernel Visible Atmospherically Resistant Index,(kGG - kGR) / (kGG + kGR - kGB),"['kGG', 'kGR', 'kGB']",https://doi.org/10.1126/sciadv.abc7447,kernel,2021-04-07
