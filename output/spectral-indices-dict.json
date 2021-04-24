@@ -1,0 +1,476 @@
+{
+    "SpectralIndices": {
+        "BAI": {
+            "bands": [
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)",
+            "long_name": "Burned Area Index",
+            "reference": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
+            "short_name": "BAI",
+            "type": "burn"
+        },
+        "BAIS2": {
+            "bands": [
+                "RE2",
+                "RE3",
+                "RE4",
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0)",
+            "long_name": "Burned Area Index for Sentinel 2",
+            "reference": "https://doi.org/10.3390/ecrs-2-05177",
+            "short_name": "BAIS2",
+            "type": "burn"
+        },
+        "BNDVI": {
+            "bands": [
+                "N",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - B)/(N + B)",
+            "long_name": "Blue Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=135",
+            "short_name": "BNDVI",
+            "type": "vegetation"
+        },
+        "CIG": {
+            "bands": [
+                "N",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N / G) - 1.0",
+            "long_name": "Chlorophyll Index Green",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
+            "short_name": "CIG",
+            "type": "vegetation"
+        },
+        "CSIT": {
+            "bands": [
+                "N",
+                "S2",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "N / (S2 * T1 / 10000.0)",
+            "long_name": "Char Soil Index Thermal",
+            "reference": "https://doi.org/10.1080/01431160600954704",
+            "short_name": "CSIT",
+            "type": "burn"
+        },
+        "CVI": {
+            "bands": [
+                "N",
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N * R) / (G ** 2.0)",
+            "long_name": "Chlorophyll Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
+            "short_name": "CVI",
+            "type": "vegetation"
+        },
+        "EVI": {
+            "bands": [
+                "g",
+                "N",
+                "R",
+                "C1",
+                "C2",
+                "B",
+                "L"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
+            "long_name": "Enhanced Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=16",
+            "short_name": "EVI",
+            "type": "vegetation"
+        },
+        "EVI2": {
+            "bands": [
+                "g",
+                "N",
+                "R",
+                "L"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "g * (N - R) / (N + 2.4 * R + L)",
+            "long_name": "Two-Band Enhanced Vegetation Index",
+            "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
+            "short_name": "EVI2",
+            "type": "vegetation"
+        },
+        "GARI": {
+            "bands": [
+                "N",
+                "G",
+                "B",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - (G - (B - R))) / (N - (G + (B - R)))",
+            "long_name": "Green Atmospherically Resistant Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
+            "short_name": "GARI",
+            "type": "vegetation"
+        },
+        "GBNDVI": {
+            "bands": [
+                "N",
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - (G + B))/(N + (G + B))",
+            "long_name": "Green-Blue Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
+            "short_name": "GBNDVI",
+            "type": "vegetation"
+        },
+        "GEMI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))",
+            "long_name": "Global Environment Monitoring Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=25",
+            "short_name": "GEMI",
+            "type": "vegetation"
+        },
+        "GLI": {
+            "bands": [
+                "G",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
+            "long_name": "Green Leaf Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=375",
+            "short_name": "GLI",
+            "type": "vegetation"
+        },
+        "GNDVI": {
+            "bands": [
+                "N",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - G)/(N + G)",
+            "long_name": "Green Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=401",
+            "short_name": "GNDVI",
+            "type": "vegetation"
+        },
+        "GRNDVI": {
+            "bands": [
+                "N",
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - (G + R))/(N + (G + R))",
+            "long_name": "Green-Red Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=185",
+            "short_name": "GRNDVI",
+            "type": "vegetation"
+        },
+        "GVMI": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))",
+            "long_name": "Global Vegetation Moisture Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=372",
+            "short_name": "GVMI",
+            "type": "vegetation"
+        },
+        "MNDVI": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - S2)/(N + S2)",
+            "long_name": "Modified Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=245",
+            "short_name": "MNDVI",
+            "type": "vegetation"
+        },
+        "MNDWI": {
+            "bands": [
+                "G",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(G - S1) / (G + S1)",
+            "long_name": "Modified Normalized Difference Water Index",
+            "reference": "https://doi.org/10.1080/01431160600589179",
+            "short_name": "MNDWI",
+            "type": "water"
+        },
+        "NBR": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - S2) / (N + S2)",
+            "long_name": "Normalized Burn Ratio",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=53",
+            "short_name": "NBR",
+            "type": "burn"
+        },
+        "NBRT": {
+            "bands": [
+                "N",
+                "S2",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))",
+            "long_name": "Normalized Burn Ratio Thermal",
+            "reference": "https://doi.org/10.1080/01431160500239008",
+            "short_name": "NBRT",
+            "type": "burn"
+        },
+        "NDDI": {
+            "bands": [
+                "N",
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))",
+            "long_name": "Normalized Difference Drought Index",
+            "reference": "https://doi.org/10.1029/2006GL029127",
+            "short_name": "NDDI",
+            "type": "drought"
+        },
+        "NDSI": {
+            "bands": [
+                "G",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(G - S1) / (G + S1)",
+            "long_name": "Normalized Difference Snow Index",
+            "reference": "https://doi.org/10.1109/IGARSS.1994.399618",
+            "short_name": "NDSI",
+            "type": "snow"
+        },
+        "NDVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - R)/(N + R)",
+            "long_name": "Normalized Difference Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=58",
+            "short_name": "NDVI",
+            "type": "vegetation"
+        },
+        "NDVIT": {
+            "bands": [
+                "N",
+                "R",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0))",
+            "long_name": "Normalized Difference Vegetation Index Thermal",
+            "reference": "https://doi.org/10.1080/01431160600954704",
+            "short_name": "NDVIT",
+            "type": "burn"
+        },
+        "NDWI": {
+            "bands": [
+                "G",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(G - N) / (G + N)",
+            "long_name": "Normalized Difference Water Index",
+            "reference": "https://doi.org/10.1080/01431169608948714",
+            "short_name": "NDWI",
+            "type": "water"
+        },
+        "NGRDI": {
+            "bands": [
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(G - R) / (G + R)",
+            "long_name": "Normalized Green Red Difference Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=390",
+            "short_name": "NGRDI",
+            "type": "vegetation"
+        },
+        "RVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "N / R",
+            "long_name": "Ratio Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=72",
+            "short_name": "RVI",
+            "type": "vegetation"
+        },
+        "SAVI": {
+            "bands": [
+                "L",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(1.0 + L) * (N - R) / (N + R + L)",
+            "long_name": "Soil-Adjusted Vegetation Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=87",
+            "short_name": "SAVI",
+            "type": "vegetation"
+        },
+        "SAVIT": {
+            "bands": [
+                "L",
+                "N",
+                "R",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L)",
+            "long_name": "Soil-Adjusted Vegetation Index Thermal",
+            "reference": "https://doi.org/10.1080/01431160600954704",
+            "short_name": "SAVIT",
+            "type": "burn"
+        },
+        "SeLI": {
+            "bands": [
+                "RE4",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-08",
+            "formula": "(RE4 - RE1) / (RE4 + RE1)",
+            "long_name": "Sentinel-2 LAI Green Index",
+            "reference": "https://doi.org/10.3390/s19040904",
+            "short_name": "SeLI",
+            "type": "vegetation"
+        },
+        "VARI": {
+            "bands": [
+                "G",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(G - R) / (G + R - B)",
+            "long_name": "Visible Atmospherically Resistant Index",
+            "reference": "https://www.indexdatabase.de/db/i-single.php?id=356",
+            "short_name": "VARI",
+            "type": "vegetation"
+        },
+        "kEVI": {
+            "bands": [
+                "g",
+                "kNN",
+                "kNR",
+                "C1",
+                "C2",
+                "kNB",
+                "kNL"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
+            "long_name": "Kernel Enhanced Vegetation Index",
+            "reference": "https://doi.org/10.1126/sciadv.abc7447",
+            "short_name": "kEVI",
+            "type": "kernel"
+        },
+        "kNDVI": {
+            "bands": [
+                "kNN",
+                "kNR"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(kNN - kNR)/(kNN + kNR)",
+            "long_name": "Kernel Normalized Difference Vegetation Index",
+            "reference": "https://doi.org/10.1126/sciadv.abc7447",
+            "short_name": "kNDVI",
+            "type": "kernel"
+        },
+        "kRVI": {
+            "bands": [
+                "kNN",
+                "kNR"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "kNN / kNR",
+            "long_name": "Kernel Ratio Vegetation Index",
+            "reference": "https://doi.org/10.1126/sciadv.abc7447",
+            "short_name": "kRVI",
+            "type": "kernel"
+        },
+        "kVARI": {
+            "bands": [
+                "kGG",
+                "kGR",
+                "kGB"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-04-07",
+            "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
+            "long_name": "Kernel Visible Atmospherically Resistant Index",
+            "reference": "https://doi.org/10.1126/sciadv.abc7447",
+            "short_name": "kVARI",
+            "type": "kernel"
+        }
+    }
+}

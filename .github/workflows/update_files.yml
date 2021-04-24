@@ -17,12 +17,12 @@ jobs:
       - name: dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas   
           pip install py_expression_eval
           pip install pydantic
+          pip install orjson
       - name: execute        
         run: |
-          python update_files.py
+          python main.py
       - name: commit
         continue-on-error: true
         run: |
