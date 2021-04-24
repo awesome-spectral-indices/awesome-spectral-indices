@@ -172,7 +172,7 @@ I'll take the information to create a new index, test the index and add it to th
 
 2. **The not so hard way:**
 
-    0. Install the required dependencies:
+    1. Install the required dependencies:
     
     ```
     pydantic
@@ -180,14 +180,14 @@ I'll take the information to create a new index, test the index and add it to th
     py_expression_eval
     ```
     
-    1. Fork the repository and clone it to your local machine.
-    2. Create a development branch:
+    2. Fork the repository and clone it to your local machine.
+    3. Create a development branch:
     
     ```
     git checkout -b name-of-dev-branch
     ```
     
-    3. Open the `indices.py` file: The list of indices is stored in a variable called `indices`. At the end of the file, add a new index (example shown below):
+    4. Open the `indices.py` file: The list of indices is stored in a variable called `indices`. At the end of the file, add a new index (example shown below):
     
     ```python
     indices.append(
@@ -205,13 +205,13 @@ I'll take the information to create a new index, test the index and add it to th
     
         - The `SpectralIndex` class is a validator created using `pydantic`. This validator *validates* the added data.
         
-    4. Test the new index (or indices):
+    5. Test the new index (or indices):
     
     ```
     python test_indices.py
     ```
     
-    5. Commit your changes:
+    6. Commit your changes:
     
     ```
     git add .
@@ -219,4 +219,4 @@ I'll take the information to create a new index, test the index and add it to th
     git push origin name-of-dev-branch
     ```
     
-    6. Submit a pull request with the tests.
+    7. Submit a pull request with the tests.
