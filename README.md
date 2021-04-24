@@ -170,7 +170,7 @@ Contributing to the list is pretty simple:
 
 I'll take the information to create a new index, test the index and add it to the list!
 
-1. **The not so hard way:**
+2. **The not so hard way:**
 
     0. Install the required dependencies:
     
