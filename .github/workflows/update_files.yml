@@ -19,6 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas   
           pip install py_expression_eval
+          pip install pydantic
       - name: execute        
         run: |
           python update_files.py
