@@ -154,6 +154,10 @@ A list of eemont tutorials of spectral indices computation is shown below:
 - [006 NDSI and Snow Cover for Sentinel-2](https://github.com/davemlz/eemont/blob/master/tutorials/006-NDSI-and-Snow-Cover-Sentinel-2-MOD10A2.ipynb)
 - [012 Computing Spectral indices for the MOD09GA MODIS Product](https://github.com/davemlz/eemont/blob/master/tutorials/012-Spectral-Indices-MODIS-MOD09GA.ipynb)
 
+### R (rgee)
+
+The instructions to use the list of spectral indices with [rgee](https://github.com/r-spatial/rgee) and [rgeeExtraa](https://github.com/r-earthengine/rgeeExtra) will be here soon!
+
 ## Do you want to contribute?
 
 Contributing to the list is pretty simple:
