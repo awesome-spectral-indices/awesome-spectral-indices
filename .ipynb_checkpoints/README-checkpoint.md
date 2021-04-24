@@ -168,55 +168,55 @@ Contributing to the list is pretty simple:
 - `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
 - `contributor`: GitHub user link of the vcontributor (e.g. `"https://github.com/davemlz"`).
 
-I'll take the information to create a new index, test the index and add it to the list!
+    I'll take the information to create a new index, test the index and add it to the list!
 
 2. **The not so hard way:**
 
     1. Install the required dependencies:
     
-    ```
-    pydantic
-    typing
-    py_expression_eval
-    ```
+        ```
+        pydantic
+        typing
+        py_expression_eval
+        ```
     
     2. Fork the repository and clone it to your local machine.
     3. Create a development branch:
     
-    ```
-    git checkout -b name-of-dev-branch
-    ```
+        ```
+        git checkout -b name-of-dev-branch
+        ```
     
     4. Open the `indices.py` file: The list of indices is stored in a variable called `indices`. At the end of the file, add a new index (example shown below):
     
-    ```python
-    indices.append(
-        SpectralIndex(
-            short_name = 'SeLI',
-            long_name = 'Sentinel-2 LAI Green Index',
-            formula = '(RE4 - RE1) / (RE4 + RE1)',
-            reference = 'https://doi.org/10.3390/s19040904',
-            type = 'vegetation',
-            date_of_addition = '2021-04-08',
-            contributor = "https://github.com/davemlz"
+        ```python
+        indices.append(
+            SpectralIndex(
+                short_name = 'SeLI',
+                long_name = 'Sentinel-2 LAI Green Index',
+                formula = '(RE4 - RE1) / (RE4 + RE1)',
+                reference = 'https://doi.org/10.3390/s19040904',
+                type = 'vegetation',
+                date_of_addition = '2021-04-08',
+                contributor = "https://github.com/davemlz"
+            )
         )
-    )
-    ```
+        ```
     
         - The `SpectralIndex` class is a validator created using `pydantic`. This validator *validates* the added data.
         
     5. Test the new index (or indices):
     
-    ```
-    python test_indices.py
-    ```
+        ```
+        python test_indices.py
+        ```
     
     6. Commit your changes:
     
-    ```
-    git add .
-    git commit -m "short-name-of-the-index ADDED"
-    git push origin name-of-dev-branch
-    ```
+        ```
+        git add .
+        git commit -m "short-name-of-the-index ADDED"
+        git push origin name-of-dev-branch
+        ```
     
     7. Submit a pull request with the tests.
