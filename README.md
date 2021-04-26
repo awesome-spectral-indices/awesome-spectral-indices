@@ -4,8 +4,7 @@ A ready-to-use curated list of spectral indices for Google Earth Engine.
 
 ## Spectral Indices
 
-The ready-to-use curated list of spectral indices ([check the list here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/spectral-indices-list.csv)) is presented in the `spectral-indices-list.json` file. From the `json` file a `csv` file is created: `spectral-indices-list.csv`.
-Additionally, the `spectral-indices-dict.json` is created from the original `json` file to be used by the [eemont Python package](https://github.com/davemlz/eemont).
+The ready-to-use curated list of spectral indices ([check the list here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json)) is presented in the `spectral-indices-dict.json` file. This file is used by the [eemont Python package](https://github.com/davemlz/eemont) in order to compute spectral indices (Python API) and by the [spectral module](https://code.earthengine.google.com/?accept_repo=users/dmlmont/spectral) in order to access the spectral indices in the Code Editor (JavaScript API).
 
 ### Attributes
 
@@ -53,7 +52,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ## List
 
-Check the full list of spectral indices [here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/spectral-indices-list.csv).
+Check the full list of spectral indices [here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json).
 
 ## Download Raw Files
 
@@ -63,10 +62,9 @@ You can download or clone the repository:
 git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
 ```
 
-Or you can download the single files here (right-click > Save link as...):
+Or you can download the single file here (right-click > Save link as...):
 
-- json file: ([Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.json), [Raw dict](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-dict.json)).
-- csv file: [Raw csv](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/spectral-indices-list.csv).
+- json file: [Raw list](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json)
 
 ## How to use the list?
 
@@ -103,6 +101,7 @@ print(spectral.indices.NDWI.bands);
 print(spectral.indices.NDWI.reference);
 print(spectral.indices.NDWI.type);
 print(spectral.indices.NDWI.date_of_addition);
+print(spectral.indices.NDWI.contributor);
 ```
 
 The formula of each index can be used for its computation. Here you can find a tutorial on how to use them and the additional code required to achieve it: [Computing BAIS2 using the Awesome List of Spectral Indices](https://code.earthengine.google.com/15716a9f3e91e454538eebe1dcb5efbe).
@@ -156,7 +155,7 @@ A list of eemont tutorials of spectral indices computation is shown below:
 
 ### R (rgee)
 
-The instructions to use the list of spectral indices with [rgee](https://github.com/r-spatial/rgee) and [rgeeExtra](https://github.com/r-earthengine/rgeeExtra) will be here soon!
+The instructions to use the list of spectral indices with [rgee](https://github.com/r-spatial/rgee) and [rgeeExtraa](https://github.com/r-earthengine/rgeeExtra) will be here soon!
 
 ## Do you want to contribute?
 
@@ -181,7 +180,6 @@ Contributing to the list is pretty simple:
         ```
         pydantic
         typing
-        orjson
         py_expression_eval
         ```
     
@@ -192,17 +190,19 @@ Contributing to the list is pretty simple:
         git checkout -b name-of-dev-branch
         ```
     
-    4. Open the `src/indices.py` file: The list of indices is stored in a DataClass called `SpectralIndices`. At the end of the file, add a new index (example shown below):
+    4. Open the `indices.py` file: The list of indices is stored in a variable called `indices`. At the end of the file, add a new index (example shown below):
     
         ```python
-        SeLI=SpectralIndex(
-            short_name='SeLI',
-            long_name='Sentinel-2 LAI Green Index',
-            formula='(RE4 - RE1) / (RE4 + RE1)',
-            reference='https://doi.org/10.3390/s19040904',
-            type='vegetation',
-            date_of_addition='2021-04-08',
-            contributor="https://github.com/davemlz"
+        indices.append(
+            SpectralIndex(
+                short_name = 'SeLI',
+                long_name = 'Sentinel-2 LAI Green Index',
+                formula = '(RE4 - RE1) / (RE4 + RE1)',
+                reference = 'https://doi.org/10.3390/s19040904',
+                type = 'vegetation',
+                date_of_addition = '2021-04-08',
+                contributor = "https://github.com/davemlz"
+            )
         )
         ```
     
@@ -211,7 +211,7 @@ Contributing to the list is pretty simple:
     5. Test the new index (or indices):
     
         ```
-        python test/test_indices.py
+        python test_indices.py
         ```
     
     6. Commit your changes:
