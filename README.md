@@ -202,6 +202,7 @@ Contributing to the list is pretty simple:
             type='vegetation',
             date_of_addition='2021-04-08',
             contributor="https://github.com/davemlz"
+        )
         ```
     
         - The `SpectralIndex` class is a validator created using `pydantic`. This validator *validates* the added data.
