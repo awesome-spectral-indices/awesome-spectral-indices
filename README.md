@@ -155,7 +155,7 @@ A list of eemont tutorials of spectral indices computation is shown below:
 
 ### R (rgee)
 
-The instructions to use the list of spectral indices with [rgee](https://github.com/r-spatial/rgee) and [rgeeExtraa](https://github.com/r-earthengine/rgeeExtra) will be here soon!
+The instructions to use the list of spectral indices with [rgee](https://github.com/r-spatial/rgee) and [rgeeExtra](https://github.com/r-earthengine/rgeeExtra) will be here soon!
 
 ## Do you want to contribute?
 
@@ -190,20 +190,17 @@ Contributing to the list is pretty simple:
         git checkout -b name-of-dev-branch
         ```
     
-    4. Open the `indices.py` file: The list of indices is stored in a variable called `indices`. At the end of the file, add a new index (example shown below):
+    4. Open the `src/indices.py` file: The list of indices is stored in a DataClass called `SpectralIndices`. At the end of the file, add a new index (example shown below):
     
         ```python
-        indices.append(
-            SpectralIndex(
-                short_name = 'SeLI',
-                long_name = 'Sentinel-2 LAI Green Index',
-                formula = '(RE4 - RE1) / (RE4 + RE1)',
-                reference = 'https://doi.org/10.3390/s19040904',
-                type = 'vegetation',
-                date_of_addition = '2021-04-08',
-                contributor = "https://github.com/davemlz"
-            )
-        )
+        SeLI=SpectralIndex(
+            short_name='SeLI',
+            long_name='Sentinel-2 LAI Green Index',
+            formula='(RE4 - RE1) / (RE4 + RE1)',
+            reference='https://doi.org/10.3390/s19040904',
+            type='vegetation',
+            date_of_addition='2021-04-08',
+            contributor="https://github.com/davemlz"
         ```
     
         - The `SpectralIndex` class is a validator created using `pydantic`. This validator *validates* the added data.
@@ -211,7 +208,7 @@ Contributing to the list is pretty simple:
     5. Test the new index (or indices):
     
         ```
-        python test_indices.py
+        python test/test_indices.py
         ```
     
     6. Commit your changes:
