@@ -180,6 +180,7 @@ Contributing to the list is pretty simple:
         ```
         pydantic
         typing
+        orjson
         py_expression_eval
         ```
     
