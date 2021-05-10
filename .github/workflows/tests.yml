@@ -1,0 +1,25 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'          
+      - name: dependencies
+        run: |
+          python -m pip install --upgrade pip          
+          pip install pytest
+          pip install pydantic
+          pip install typing
+          pip install orjson
+          pip install py_expression_eval
+      - name: test        
+        run: |
+          pytest test

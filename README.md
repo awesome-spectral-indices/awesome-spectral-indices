@@ -1,4 +1,7 @@
-# Awesome Spectral Indices for Google Earth Engine [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Spectral Indices for Google Earth Engine
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![tests](https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg)](https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml)
 
 A ready-to-use curated list of spectral indices for Google Earth Engine.
 
