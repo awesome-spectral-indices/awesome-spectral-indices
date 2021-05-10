@@ -29,6 +29,13 @@ class Bands(Enum):
     KGG = "kGG"
     KGR = "kGR"
     KGB = "kGB"
+    KBB = "kBB"
+    KBR = "kBR"
+    KBL = "kBL"
+    KRR = "kRR"
+    KRB = "kRB"
+    KRL = "kRL"
+    KLL = "kLL"
 
 class IndexType(Enum):
     """
