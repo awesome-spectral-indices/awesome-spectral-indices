@@ -3,7 +3,7 @@ name: Count
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   update-badges:
