@@ -2,6 +2,7 @@
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![tests](https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg)](https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json)
 
 A ready-to-use curated list of spectral indices for Google Earth Engine.
 
