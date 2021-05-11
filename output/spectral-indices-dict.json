@@ -432,7 +432,7 @@
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
-            "formula": "g * (kNN - 2*kNR + kRR) / ((C2^2)*kBB - 2*C2*kBL - 2*C2*kNB - 2*C1*C2*kBR + kLL + 2*kNL + 2*C1*kRL + kNN + 2*C1*kNR + (C1^2)*kRR)",
+            "formula": "g * (kNN - 2*kNR + kRR) / ((C2 ** 2)*kBB - 2*C2*kBL - 2*C2*kNB - 2*C1*C2*kBR + kLL + 2*kNL + 2*C1*kRL + kNN + 2*C1*kNR + (C1 ** 2)*kRR)",
             "long_name": "Kernel Enhanced Vegetation Index",
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kEVI",
