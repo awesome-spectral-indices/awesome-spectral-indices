@@ -1,4 +1,4 @@
-name: Count
+name: count_spectral_indices
 
 on:
   push:
@@ -25,4 +25,5 @@ jobs:
           filename: spectral.json
           label: Spectral Indices
           message: ${{ env.COUNT }}
-          color: green
+          color: blue
+          namedLogo: Google Earth
