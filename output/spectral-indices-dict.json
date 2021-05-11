@@ -1,5 +1,19 @@
 {
     "SpectralIndices": {
+        "ARVI": {
+            "bands": [
+                "N",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-11",
+            "formula": "(N - (R - (R - B))) / (N + (R - (R - B)))",
+            "long_name": "Atmospherically Resistant Vegetation Index",
+            "reference": "https://doi.org/10.1109/36.134076",
+            "short_name": "ARVI",
+            "type": "vegetation"
+        },
         "BAI": {
             "bands": [
                 "R",
@@ -238,6 +252,20 @@
             "short_name": "MNDWI",
             "type": "water"
         },
+        "MNLI": {
+            "bands": [
+                "L",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-11",
+            "formula": "(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)",
+            "long_name": "Modified Non-Linear Vegetation Index",
+            "reference": "https://doi.org/10.1109/TGRS.2003.812910",
+            "short_name": "MNLI",
+            "type": "vegetation"
+        },
         "NBR": {
             "bands": [
                 "N",
@@ -301,7 +329,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N - R)/(N + R)",
             "long_name": "Normalized Difference Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=58",
+            "reference": "https://doi.org/10.1016/0034-4257(79)90013-0",
             "short_name": "NDVI",
             "type": "vegetation"
         },
@@ -345,6 +373,32 @@
             "short_name": "NGRDI",
             "type": "vegetation"
         },
+        "NLI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-11",
+            "formula": "((N ** 2) - R)/((N ** 2) + R)",
+            "long_name": "Non-Linear Vegetation Index",
+            "reference": "https://doi.org/10.1080/02757259409532252",
+            "short_name": "NLI",
+            "type": "vegetation"
+        },
+        "OSAVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-11",
+            "formula": "(N - R) / (N + R + 0.16)",
+            "long_name": "Optimized Soil-Adjusted Vegetation Index",
+            "reference": "https://doi.org/10.1016/0034-4257(95)00186-7",
+            "short_name": "OSAVI",
+            "type": "vegetation"
+        },
         "RVI": {
             "bands": [
                 "N",
@@ -354,8 +408,23 @@
             "date_of_addition": "2021-04-07",
             "formula": "N / R",
             "long_name": "Ratio Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=72",
+            "reference": "https://doi.org/10.2134/agronj1968.00021962006000060016x",
             "short_name": "RVI",
+            "type": "vegetation"
+        },
+        "SARVI": {
+            "bands": [
+                "L",
+                "N",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-11",
+            "formula": "(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
+            "long_name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
+            "reference": "https://doi.org/10.1109/36.134076",
+            "short_name": "SARVI",
             "type": "vegetation"
         },
         "SAVI": {
@@ -368,7 +437,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(1.0 + L) * (N - R) / (N + R + L)",
             "long_name": "Soil-Adjusted Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=87",
+            "reference": "https://doi.org/10.1016/0034-4257(88)90106-X",
             "short_name": "SAVI",
             "type": "vegetation"
         },
