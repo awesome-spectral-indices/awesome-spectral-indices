@@ -12,4 +12,4 @@ for key in spindex.SpectralIndices:
 
 # Save results
 with open('output/spectral-indices-dict.json', 'w') as fp:
-    fp.write(spindex.json(indent=4, sort_keys=True))
+    fp.write(spindex.SpectralIndices.json(indent=4, sort_keys=True))
