@@ -130,7 +130,7 @@ spindex = SpectralIndices(
             short_name='NDVI',
             long_name='Normalized Difference Vegetation Index',
             formula='(N - R)/(N + R)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=58',
+            reference='https://doi.org/10.1016/0034-4257(79)90013-0',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -148,7 +148,7 @@ spindex = SpectralIndices(
             short_name='RVI',
             long_name='Ratio Vegetation Index',
             formula='N / R',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=72',
+            reference='https://doi.org/10.2134/agronj1968.00021962006000060016x',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -157,7 +157,7 @@ spindex = SpectralIndices(
             short_name='SAVI',
             long_name='Soil-Adjusted Vegetation Index',
             formula='(1.0 + L) * (N - R) / (N + R + L)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=87',
+            reference='https://doi.org/10.1016/0034-4257(88)90106-X',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -314,6 +314,51 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-04-08',
             contributor="https://github.com/davemlz"
-        )        
+        ),
+        OSAVI=SpectralIndex(
+            short_name='OSAVI',
+            long_name='Optimized Soil-Adjusted Vegetation Index',
+            formula='(N - R) / (N + R + 0.16)',
+            reference='https://doi.org/10.1016/0034-4257(95)00186-7',
+            type='vegetation',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        ),
+        ARVI=SpectralIndex(
+            short_name='ARVI',
+            long_name='Atmospherically Resistant Vegetation Index',
+            formula='(N - (R - (R - B))) / (N + (R - (R - B)))',
+            reference='https://doi.org/10.1109/36.134076',
+            type='vegetation',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        ),
+        SARVI=SpectralIndex(
+            short_name='SARVI',
+            long_name='Soil Adjusted and Atmospherically Resistant Vegetation Index',
+            formula='(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)',
+            reference='https://doi.org/10.1109/36.134076',
+            type='vegetation',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        ),
+        NLI=SpectralIndex(
+            short_name='NLI',
+            long_name='Non-Linear Vegetation Index',
+            formula='((N ** 2) - R)/((N ** 2) + R)',
+            reference='https://doi.org/10.1080/02757259409532252',
+            type='vegetation',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        ),
+        MNLI=SpectralIndex(
+            short_name='MNLI',
+            long_name='Modified Non-Linear Vegetation Index',
+            formula='(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)',
+            reference='https://doi.org/10.1109/TGRS.2003.812910',
+            type='vegetation',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        )
     )
 )
