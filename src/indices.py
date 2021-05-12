@@ -40,7 +40,7 @@ spindex = SpectralIndices(
             short_name='EVI',
             long_name='Enhanced Vegetation Index',
             formula='g * (N - R) / (N + C1 * R - C2 * B + L)',            
-            reference='https://www.indexdatabase.de/db/i-single.php?id=16',
+            reference='https://doi.org/10.1016/S0034-4257(96)00112-5',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -166,7 +166,7 @@ spindex = SpectralIndices(
             short_name='VARI',
             long_name='Visible Atmospherically Resistant Index',
             formula='(G - R) / (G + R - B)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=356',
+            reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
