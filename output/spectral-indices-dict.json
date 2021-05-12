@@ -111,7 +111,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
             "long_name": "Enhanced Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=16",
+            "reference": "https://doi.org/10.1016/S0034-4257(96)00112-5",
             "short_name": "EVI",
             "type": "vegetation"
         },
@@ -479,7 +479,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(G - R) / (G + R - B)",
             "long_name": "Visible Atmospherically Resistant Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=356",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VARI",
             "type": "vegetation"
         },
