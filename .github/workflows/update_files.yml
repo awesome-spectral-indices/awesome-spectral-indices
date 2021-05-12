@@ -36,7 +36,7 @@ jobs:
           filename: spectral.json
           label: Spectral Indices
           message: ${{ env.COUNT }}
-          color: purple
+          color: yellow
       - name: commit
         continue-on-error: true
         run: |
