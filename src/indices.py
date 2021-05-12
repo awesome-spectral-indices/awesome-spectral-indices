@@ -359,6 +359,15 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
+        ),
+        NMDI=SpectralIndex(
+            short_name='NMDI',
+            long_name='Normalized Multi‐band Drought Index',
+            formula='(N - (S1 - S2))/(N + (S1 - S2))',
+            reference='https://doi.org/10.1029/2007GL031021',
+            type='drought',
+            date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
         )
     )
 )
