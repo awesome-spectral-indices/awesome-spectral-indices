@@ -1,5 +1,6 @@
 from src.indices import spindex
 from py_expression_eval import Parser
+import pandas as pd
 
 parser = Parser()
 
@@ -13,3 +14,13 @@ for key in spindex.SpectralIndices:
 # Save results
 with open('output/spectral-indices-dict.json', 'w') as fp:
     fp.write(spindex.json(indent=4, sort_keys=True))
+    
+# Convert to pandas and save CSV
+df = pd.DataFrame(spindex.SpectralIndices.values())
+df = df[["short_name","long_name","type","formula","bands","reference","contributor","date_of_addition"]]
+df.to_csv('output/spectral-indices-table.csv',index = False)
+
+# Save tables for Docs
+for t in ["vegetation","burn","water","snow","drought","kernel"]:
+    name = "docs/_static/indices_" + t + ".csv"
+    df[df["type"] == t][["short_name","long_name","reference"]].to_csv(name,index = False)

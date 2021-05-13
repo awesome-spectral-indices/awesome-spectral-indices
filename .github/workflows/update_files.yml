@@ -20,6 +20,7 @@ jobs:
           pip install py_expression_eval
           pip install pydantic
           pip install orjson
+          pip install pandas
       - name: execute        
         run: |
           python main.py
