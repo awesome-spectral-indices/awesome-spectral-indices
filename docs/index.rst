@@ -12,6 +12,10 @@ Awesome Spectral Indices for Google Earth Engine!
 
 .. image:: https://img.shields.io/github/stars/davemlz/awesome-ee-spectral-indices?style=social
         :alt: GitHub Repo stars
+        
+.. image:: https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest
+        :target: https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
 
 **A ready-to-use curated list of spectral indices for Google Earth Engine.**
 
