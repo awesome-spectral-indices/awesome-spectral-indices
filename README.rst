@@ -20,7 +20,7 @@ Awesome Spectral Indices for Google Earth Engine!
 Spectral Indices
 --------------------
 
-The ready-to-use curated list of spectral indices (`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json>`_) is presented in the `spectral-indices-dict.json` file. This file is used by the `eemont Python package <https://github.com/davemlz/eemont>`_ in order to compute spectral indices (Python API) and by the `spectral module <https://code.earthengine.google.com/?accept_repo=users/dmlmont/spectral>`_ in order to access the spectral indices in the Code Editor (JavaScript API).
+The ready-to-use curated list of spectral indices (`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) is presented here in order to compute multiple spectral indices in `Google Earth Engine <https://earthengine.google.com/>`_ for different datasets. This list is used by the `eemont Python package <https://github.com/davemlz/eemont>`_ in order to compute spectral indices in the Python API and by the `spectral module <https://code.earthengine.google.com/?accept_repo=users/dmlmont/spectral>`_ in order to access the spectral indices in the Code Editor (JavaScript API).
 
 Attributes
 ~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ Each item of the list has the following attributes:
 Expressions
 ~~~~~~~~~~~~~~~~
 
-The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) to be used by the `ee.Image.expression() <https://developers.google.com/earth-engine/apidocs/ee-image-expression>`_ method in `Google Earth Engine <https://earthengine.google.com/>`_. The parameters used in the expression for each index follow this standard:
+The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) that can be used by the `ee.Image.expression() <https://developers.google.com/earth-engine/apidocs/ee-image-expression>`_ method in `Google Earth Engine <https://earthengine.google.com/>`_. The parameters used in the expression for each index follow this standard:
 
 .. list-table:: Standard variables for spectral indices expressions and satellite equivalents.   
    :header-rows: 1
@@ -145,7 +145,7 @@ The kernel indices are constructed using a special type of parameters:
 List
 -------
 
-Check the full list of spectral indices `here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json>`_.
+Check the full list of spectral indices `here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_.
 
 Download Raw Files
 ------------------------
@@ -156,9 +156,10 @@ You can download or clone the repository:
 
     git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
 
-Or you can download the single file here (right-click > Save link as...):
+Or you can download the single files here (right-click > Save link as...):
 
 - json file: `Raw list <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json>`_
+- csv file: `Raw list <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_
 
 Credits
 ------------------------
