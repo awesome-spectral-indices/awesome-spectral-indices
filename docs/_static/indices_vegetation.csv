@@ -6,6 +6,7 @@ CIRE,Chlorophyll Index Red Edge,https://doi.org/10.1078/0176-1617-00887
 CVI,Chlorophyll Vegetation Index,https://www.cabdirect.org/cabdirect/abstract/20073176046
 EVI,Enhanced Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00112-5
 EVI2,Two-Band Enhanced Vegetation Index,https://doi.org/10.1016/j.rse.2008.06.006
+ExG,Excess Green Index,https://doi.org/10.13031/2013.27838
 GARI,Green Atmospherically Resistant Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=363
 GBNDVI,Green-Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=186
 GDVI,Generalized Difference Vegetation Index,https://doi.org/10.3390/rs6021211
@@ -17,6 +18,7 @@ GVMI,Global Vegetation Moisture Index,https://www.indexdatabase.de/db/i-single.p
 MCARI,Modified Chlorophyll Absorption in Reflectance Index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1,https://doi.org/10.1016/j.rse.2003.12.013
 MCARI2,Modified Chlorophyll Absorption in Reflectance Index 2,https://doi.org/10.1016/j.rse.2003.12.013
+MGRVI,Modified Green Red Vegetation Index,https://doi.org/10.1016/j.jag.2015.02.012
 MNDVI,Modified Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=245
 MNLI,Modified Non-Linear Vegetation Index,https://doi.org/10.1109/TGRS.2003.812910
 MSAVI,Modified Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(94)90134-1

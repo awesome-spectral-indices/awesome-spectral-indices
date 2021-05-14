@@ -143,6 +143,20 @@
             "short_name": "EVI2",
             "type": "vegetation"
         },
+        "ExG": {
+            "bands": [
+                "G",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "2 * G - R - B",
+            "long_name": "Excess Green Index",
+            "reference": "https://doi.org/10.13031/2013.27838",
+            "short_name": "ExG",
+            "type": "vegetation"
+        },
         "GARI": {
             "bands": [
                 "N",
@@ -293,6 +307,19 @@
             "long_name": "Modified Chlorophyll Absorption in Reflectance Index 2",
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MCARI2",
+            "type": "vegetation"
+        },
+        "MGRVI": {
+            "bands": [
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)",
+            "long_name": "Modified Green Red Vegetation Index",
+            "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
+            "short_name": "MGRVI",
             "type": "vegetation"
         },
         "MNDVI": {
