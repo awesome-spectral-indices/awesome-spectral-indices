@@ -25,6 +25,8 @@ class Bands(Enum):
     C_EXPONENT = "cexp"
     N_EXPONENT = "nexp"
     ALPHA = "alpha"
+    SOIL_LINE_SLOPE = "slope"
+    SOIL_LINE_INTERCEPT = "intercept"
     KNN = "kNN"
     KNR = "kNR"
     KNB = "kNB"

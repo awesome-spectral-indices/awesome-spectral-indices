@@ -539,6 +539,24 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        DVI=SpectralIndex(
+            short_name='DVI',
+            long_name='Difference Vegetation Index',
+            formula='N - R',
+            reference='https://doi.org/10.2307/1936256',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        WDVI=SpectralIndex(
+            short_name='WDVI',
+            long_name='Weighted Difference Vegetation Index',
+            formula='N - slope * R',
+            reference='https://doi.org/10.1016/0034-4257(89)90076-X',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
