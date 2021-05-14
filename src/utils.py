@@ -22,6 +22,7 @@ class Bands(Enum):
     CANOPY_BACKGROUND_ADJUSTMENT = "L"
     AEROSOL_COEFFICIENT1 = "C1"
     AEROSOL_COEFFICIENT2 = "C2"
+    C_EXPONENT = "cexp"
     KNN = "kNN"
     KNR = "kNR"
     KNB = "kNB"

@@ -22,7 +22,7 @@ spindex = SpectralIndices(
             short_name='CIG',
             long_name='Chlorophyll Index Green',
             formula='(N / G) - 1.0',            
-            reference='https://www.indexdatabase.de/db/i-single.php?id=391',
+            reference='https://doi.org/10.1078/0176-1617-00887',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -31,7 +31,7 @@ spindex = SpectralIndices(
             short_name='CVI',
             long_name='Chlorophyll Vegetation Index',
             formula='(N * R) / (G ** 2.0)',            
-            reference='https://www.indexdatabase.de/db/i-single.php?id=391',
+            reference='https://www.cabdirect.org/cabdirect/abstract/20073176046',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -85,7 +85,7 @@ spindex = SpectralIndices(
             short_name='GLI',
             long_name='Green Leaf Index',
             formula='(2.0 * G - R - B) / (2.0 * G + R + B)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=375',
+            reference='http://dx.doi.org/10.1080/10106040108542184',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -94,7 +94,7 @@ spindex = SpectralIndices(
             short_name='GNDVI',
             long_name='Green Normalized Difference Vegetation Index',
             formula='(N - G)/(N + G)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=401',
+            reference='https://doi.org/10.1016/S0034-4257(96)00072-7',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -139,7 +139,7 @@ spindex = SpectralIndices(
             short_name='NGRDI',
             long_name='Normalized Green Red Difference Index',
             formula='(G - R) / (G + R)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=390',
+            reference='https://doi.org/10.1016/0034-4257(79)90013-0',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -367,6 +367,69 @@ spindex = SpectralIndices(
             reference='https://doi.org/10.1029/2007GL031021',
             type='drought',
             date_of_addition='2021-05-11',
+            contributor="https://github.com/davemlz"
+        ),
+        MSAVI=SpectralIndex(
+            short_name='MSAVI',
+            long_name='Modified Soil-Adjusted Vegetation Index',
+            formula='0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)',
+            reference='https://doi.org/10.1016/0034-4257(94)90134-1',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        MCARI=SpectralIndex(
+            short_name='MCARI',
+            long_name='Modified Chlorophyll Absorption in Reflectance index',
+            formula='((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)',
+            reference='http://dx.doi.org/10.1016/S0034-4257(00)00113-9',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        OCVI=SpectralIndex(
+            short_name='OCVI',
+            long_name='Optimized Chlorophyll Vegetation Index',
+            formula='(N / G) * (R / G) ** cexp',            
+            reference='http://dx.doi.org/10.1007/s11119-008-9075-z',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        NDREI=SpectralIndex(
+            short_name='NDREI',
+            long_name='Normalized Difference Red Edge Index',
+            formula='(N - RE1) / (N + RE1)',            
+            reference='https://doi.org/10.1016/1011-1344(93)06963-4',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        CIRE=SpectralIndex(
+            short_name='CIRE',
+            long_name='Chlorophyll Index Red Edge',
+            formula='(N / RE1) - 1',            
+            reference='https://doi.org/10.1078/0176-1617-00887',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        MTCI=SpectralIndex(
+            short_name='MTCI',
+            long_name='MERIS Terrestrial Chlorophyll Index',
+            formula='(RE2 - RE1) / (RE1 - R)',            
+            reference='https://doi.org/10.1080/0143116042000274015',
+            type='vegetation',
+            date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        TCARI=SpectralIndex(
+            short_name='TCARI',
+            long_name='Transformed Chlorophyll Absorption in Reflectance index',
+            formula='3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))',
+            reference='https://doi.org/10.1016/S0034-4257(02)00018-4',
+            type='vegetation',
+            date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         )
     )
