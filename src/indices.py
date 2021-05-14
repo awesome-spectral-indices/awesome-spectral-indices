@@ -380,7 +380,7 @@ spindex = SpectralIndices(
         ),
         MCARI=SpectralIndex(
             short_name='MCARI',
-            long_name='Modified Chlorophyll Absorption in Reflectance index',
+            long_name='Modified Chlorophyll Absorption in Reflectance Index',
             formula='((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)',
             reference='http://dx.doi.org/10.1016/S0034-4257(00)00113-9',
             type='vegetation',
@@ -425,11 +425,29 @@ spindex = SpectralIndices(
         ),
         TCARI=SpectralIndex(
             short_name='TCARI',
-            long_name='Transformed Chlorophyll Absorption in Reflectance index',
+            long_name='Transformed Chlorophyll Absorption in Reflectance Index',
             formula='3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))',
             reference='https://doi.org/10.1016/S0034-4257(02)00018-4',
             type='vegetation',
             date_of_addition='2021-05-13',
+            contributor="https://github.com/davemlz"
+        ),
+        GDVI=SpectralIndex(
+            short_name='GDVI',
+            long_name='Generalized Difference Vegetation Index',
+            formula='((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))',
+            reference='https://doi.org/10.3390/rs6021211',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        WDRVI=SpectralIndex(
+            short_name='WDRVI',
+            long_name='Wide Dynamic Range Vegetation Index',
+            formula='(alpha * N - R) / (alpha * N + R)',
+            reference='https://doi.org/10.1078/0176-1617-01176',
+            type='vegetation',
+            date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         )
     )

@@ -23,6 +23,8 @@ class Bands(Enum):
     AEROSOL_COEFFICIENT1 = "C1"
     AEROSOL_COEFFICIENT2 = "C2"
     C_EXPONENT = "cexp"
+    N_EXPONENT = "nexp"
+    ALPHA = "alpha"
     KNN = "kNN"
     KNR = "kNR"
     KNB = "kNB"
