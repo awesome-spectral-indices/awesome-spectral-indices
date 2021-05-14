@@ -430,6 +430,19 @@
             "short_name": "NBRT",
             "type": "burn"
         },
+        "NDBI": {
+            "bands": [
+                "S1",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "(S1 - N) / (S1 + N)",
+            "long_name": "Normalized Difference Built-Up Index",
+            "reference": "http://dx.doi.org/10.1080/01431160304987",
+            "short_name": "NDBI",
+            "type": "urban"
+        },
         "NDDI": {
             "bands": [
                 "N",
