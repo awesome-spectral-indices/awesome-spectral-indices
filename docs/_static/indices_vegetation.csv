@@ -15,10 +15,14 @@ GNDVI,Green Normalized Difference Vegetation Index,https://doi.org/10.1016/S0034
 GRNDVI,Green-Red Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=185
 GVMI,Global Vegetation Moisture Index,https://www.indexdatabase.de/db/i-single.php?id=372
 MCARI,Modified Chlorophyll Absorption in Reflectance Index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
+MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1,https://doi.org/10.1016/j.rse.2003.12.013
+MCARI2,Modified Chlorophyll Absorption in Reflectance Index 2,https://doi.org/10.1016/j.rse.2003.12.013
 MNDVI,Modified Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=245
 MNLI,Modified Non-Linear Vegetation Index,https://doi.org/10.1109/TGRS.2003.812910
 MSAVI,Modified Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(94)90134-1
 MTCI,MERIS Terrestrial Chlorophyll Index,https://doi.org/10.1080/0143116042000274015
+MTVI1,Modified Triangular Vegetation Index 1,https://doi.org/10.1016/j.rse.2003.12.013
+MTVI2,Modified Triangular Vegetation Index 2,https://doi.org/10.1016/j.rse.2003.12.013
 NDREI,Normalized Difference Red Edge Index,https://doi.org/10.1016/1011-1344(93)06963-4
 NDVI,Normalized Difference Vegetation Index,https://doi.org/10.1016/0034-4257(79)90013-0
 NGRDI,Normalized Green Red Difference Index,https://doi.org/10.1016/0034-4257(79)90013-0
