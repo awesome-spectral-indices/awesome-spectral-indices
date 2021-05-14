@@ -449,6 +449,42 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        MCARI1=SpectralIndex(
+            short_name='MCARI1',
+            long_name='Modified Chlorophyll Absorption in Reflectance Index 1',
+            formula='1.2 * (2.5 * (N - R) - 1.3 * (N - G))',
+            reference='https://doi.org/10.1016/j.rse.2003.12.013',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        MTVI1=SpectralIndex(
+            short_name='MTVI1',
+            long_name='Modified Triangular Vegetation Index 1',
+            formula='1.2 * (1.2 * (N - G) - 2.5 * (R - G))',
+            reference='https://doi.org/10.1016/j.rse.2003.12.013',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        MCARI2=SpectralIndex(
+            short_name='MCARI2',
+            long_name='Modified Chlorophyll Absorption in Reflectance Index 2',
+            formula='(1.5 * (2.5 * (N - R) - 1.3 * (N - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)',
+            reference='https://doi.org/10.1016/j.rse.2003.12.013',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        MTVI2=SpectralIndex(
+            short_name='MTVI2',
+            long_name='Modified Triangular Vegetation Index 2',
+            formula='(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)',
+            reference='https://doi.org/10.1016/j.rse.2003.12.013',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
