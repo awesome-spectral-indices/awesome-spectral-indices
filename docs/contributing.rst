@@ -57,7 +57,7 @@ For the formula attribute, the standard variables for spectral indices expressio
      - C1
    * - Coefficient 2 for the aerosol resistance term
      - C2
-   * - c exponent for OCVI.
+   * - Exponent used for OCVI.
      - cexp
    * - k(A,B)
      - kAB

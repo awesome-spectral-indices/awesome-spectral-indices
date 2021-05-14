@@ -135,7 +135,7 @@ Additional index parameters also follow a standard:
 - :code:`L`: Canopy background adjustment (e.g. Used for SAVI and EVI).
 - :code:`C1`: Coefficient 1 for the aerosol resistance term (e.g. Used for EVI).
 - :code:`C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
-- :code:`cexp`: c exponent used for OCVI.
+- :code:`cexp`: Exponent used for OCVI.
 
 The kernel indices are constructed using a special type of parameters:
 
