@@ -494,6 +494,15 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        MSR=SpectralIndex(
+            short_name='MSR',
+            long_name='Modified Simple Ratio',
+            formula='(N / R - 1) / (N / R + 1) ** 0.5',
+            reference='https://doi.org/10.1080/07038992.1996.10855178',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
