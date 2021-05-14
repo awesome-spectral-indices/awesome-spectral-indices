@@ -8,12 +8,13 @@ EVI,Enhanced Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00112-5
 EVI2,Two-Band Enhanced Vegetation Index,https://doi.org/10.1016/j.rse.2008.06.006
 GARI,Green Atmospherically Resistant Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=363
 GBNDVI,Green-Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=186
+GDVI,Generalized Difference Vegetation Index,https://doi.org/10.3390/rs6021211
 GEMI,Global Environment Monitoring Index,https://www.indexdatabase.de/db/i-single.php?id=25
 GLI,Green Leaf Index,http://dx.doi.org/10.1080/10106040108542184
 GNDVI,Green Normalized Difference Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00072-7
 GRNDVI,Green-Red Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=185
 GVMI,Global Vegetation Moisture Index,https://www.indexdatabase.de/db/i-single.php?id=372
-MCARI,Modified Chlorophyll Absorption in Reflectance index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
+MCARI,Modified Chlorophyll Absorption in Reflectance Index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
 MNDVI,Modified Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=245
 MNLI,Modified Non-Linear Vegetation Index,https://doi.org/10.1109/TGRS.2003.812910
 MSAVI,Modified Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(94)90134-1
@@ -28,5 +29,6 @@ RVI,Ratio Vegetation Index,https://doi.org/10.2134/agronj1968.000219620060000600
 SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 SAVI,Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(88)90106-X
 SeLI,Sentinel-2 LAI Green Index,https://doi.org/10.3390/s19040904
-TCARI,Transformed Chlorophyll Absorption in Reflectance index,https://doi.org/10.1016/S0034-4257(02)00018-4
+TCARI,Transformed Chlorophyll Absorption in Reflectance Index,https://doi.org/10.1016/S0034-4257(02)00018-4
 VARI,Visible Atmospherically Resistant Index,https://doi.org/10.1016/S0034-4257(01)00289-9
+WDRVI,Wide Dynamic Range Vegetation Index,https://doi.org/10.1078/0176-1617-01176

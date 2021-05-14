@@ -172,6 +172,20 @@
             "short_name": "GBNDVI",
             "type": "vegetation"
         },
+        "GDVI": {
+            "bands": [
+                "N",
+                "nexp",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))",
+            "long_name": "Generalized Difference Vegetation Index",
+            "reference": "https://doi.org/10.3390/rs6021211",
+            "short_name": "GDVI",
+            "type": "vegetation"
+        },
         "GEMI": {
             "bands": [
                 "N",
@@ -248,7 +262,7 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)",
-            "long_name": "Modified Chlorophyll Absorption in Reflectance index",
+            "long_name": "Modified Chlorophyll Absorption in Reflectance Index",
             "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00113-9",
             "short_name": "MCARI",
             "type": "vegetation"
@@ -574,7 +588,7 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))",
-            "long_name": "Transformed Chlorophyll Absorption in Reflectance index",
+            "long_name": "Transformed Chlorophyll Absorption in Reflectance Index",
             "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
             "short_name": "TCARI",
             "type": "vegetation"
@@ -591,6 +605,20 @@
             "long_name": "Visible Atmospherically Resistant Index",
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VARI",
+            "type": "vegetation"
+        },
+        "WDRVI": {
+            "bands": [
+                "alpha",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "(alpha * N - R) / (alpha * N + R)",
+            "long_name": "Wide Dynamic Range Vegetation Index",
+            "reference": "https://doi.org/10.1078/0176-1617-01176",
+            "short_name": "WDRVI",
             "type": "vegetation"
         },
         "kEVI": {
