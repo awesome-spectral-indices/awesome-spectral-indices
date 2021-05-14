@@ -521,6 +521,24 @@ spindex = SpectralIndices(
             type='urban',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        MGRVI=SpectralIndex(
+            short_name='MGRVI',
+            long_name='Modified Green Red Vegetation Index',
+            formula='(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)',
+            reference='https://doi.org/10.1016/j.jag.2015.02.012',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        ExG=SpectralIndex(
+            short_name='ExG',
+            long_name='Excess Green Index',
+            formula='2 * G - R - B',
+            reference='https://doi.org/10.13031/2013.27838',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
