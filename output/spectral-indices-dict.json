@@ -65,8 +65,21 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N / G) - 1.0",
             "long_name": "Chlorophyll Index Green",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
+            "reference": "https://doi.org/10.1078/0176-1617-00887",
             "short_name": "CIG",
+            "type": "vegetation"
+        },
+        "CIRE": {
+            "bands": [
+                "N",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "(N / RE1) - 1",
+            "long_name": "Chlorophyll Index Red Edge",
+            "reference": "https://doi.org/10.1078/0176-1617-00887",
+            "short_name": "CIRE",
             "type": "vegetation"
         },
         "CSIT": {
@@ -93,7 +106,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N * R) / (G ** 2.0)",
             "long_name": "Chlorophyll Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=391",
+            "reference": "https://www.cabdirect.org/cabdirect/abstract/20073176046",
             "short_name": "CVI",
             "type": "vegetation"
         },
@@ -182,7 +195,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
             "long_name": "Green Leaf Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=375",
+            "reference": "http://dx.doi.org/10.1080/10106040108542184",
             "short_name": "GLI",
             "type": "vegetation"
         },
@@ -195,7 +208,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N - G)/(N + G)",
             "long_name": "Green Normalized Difference Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=401",
+            "reference": "https://doi.org/10.1016/S0034-4257(96)00072-7",
             "short_name": "GNDVI",
             "type": "vegetation"
         },
@@ -224,6 +237,20 @@
             "long_name": "Global Vegetation Moisture Index",
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=372",
             "short_name": "GVMI",
+            "type": "vegetation"
+        },
+        "MCARI": {
+            "bands": [
+                "RE1",
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)",
+            "long_name": "Modified Chlorophyll Absorption in Reflectance index",
+            "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00113-9",
+            "short_name": "MCARI",
             "type": "vegetation"
         },
         "MNDVI": {
@@ -266,6 +293,33 @@
             "short_name": "MNLI",
             "type": "vegetation"
         },
+        "MSAVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)",
+            "long_name": "Modified Soil-Adjusted Vegetation Index",
+            "reference": "https://doi.org/10.1016/0034-4257(94)90134-1",
+            "short_name": "MSAVI",
+            "type": "vegetation"
+        },
+        "MTCI": {
+            "bands": [
+                "RE2",
+                "RE1",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "(RE2 - RE1) / (RE1 - R)",
+            "long_name": "MERIS Terrestrial Chlorophyll Index",
+            "reference": "https://doi.org/10.1080/0143116042000274015",
+            "short_name": "MTCI",
+            "type": "vegetation"
+        },
         "NBR": {
             "bands": [
                 "N",
@@ -306,6 +360,19 @@
             "reference": "https://doi.org/10.1029/2006GL029127",
             "short_name": "NDDI",
             "type": "drought"
+        },
+        "NDREI": {
+            "bands": [
+                "N",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "(N - RE1) / (N + RE1)",
+            "long_name": "Normalized Difference Red Edge Index",
+            "reference": "https://doi.org/10.1016/1011-1344(93)06963-4",
+            "short_name": "NDREI",
+            "type": "vegetation"
         },
         "NDSI": {
             "bands": [
@@ -369,7 +436,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(G - R) / (G + R)",
             "long_name": "Normalized Green Red Difference Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=390",
+            "reference": "https://doi.org/10.1016/0034-4257(79)90013-0",
             "short_name": "NGRDI",
             "type": "vegetation"
         },
@@ -399,6 +466,21 @@
             "reference": "https://doi.org/10.1029/2007GL031021",
             "short_name": "NMDI",
             "type": "drought"
+        },
+        "OCVI": {
+            "bands": [
+                "N",
+                "G",
+                "R",
+                "cexp"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "(N / G) * (R / G) ** cexp",
+            "long_name": "Optimized Chlorophyll Vegetation Index",
+            "reference": "http://dx.doi.org/10.1007/s11119-008-9075-z",
+            "short_name": "OCVI",
+            "type": "vegetation"
         },
         "OSAVI": {
             "bands": [
@@ -481,6 +563,20 @@
             "long_name": "Sentinel-2 LAI Green Index",
             "reference": "https://doi.org/10.3390/s19040904",
             "short_name": "SeLI",
+            "type": "vegetation"
+        },
+        "TCARI": {
+            "bands": [
+                "RE1",
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-13",
+            "formula": "3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))",
+            "long_name": "Transformed Chlorophyll Absorption in Reflectance index",
+            "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
+            "short_name": "TCARI",
             "type": "vegetation"
         },
         "VARI": {

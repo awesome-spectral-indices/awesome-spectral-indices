@@ -1,25 +1,32 @@
 short_name,long_name,reference
 ARVI,Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 BNDVI,Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=135
-CIG,Chlorophyll Index Green,https://www.indexdatabase.de/db/i-single.php?id=391
-CVI,Chlorophyll Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=391
+CIG,Chlorophyll Index Green,https://doi.org/10.1078/0176-1617-00887
+CIRE,Chlorophyll Index Red Edge,https://doi.org/10.1078/0176-1617-00887
+CVI,Chlorophyll Vegetation Index,https://www.cabdirect.org/cabdirect/abstract/20073176046
 EVI,Enhanced Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00112-5
 EVI2,Two-Band Enhanced Vegetation Index,https://doi.org/10.1016/j.rse.2008.06.006
 GARI,Green Atmospherically Resistant Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=363
 GBNDVI,Green-Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=186
 GEMI,Global Environment Monitoring Index,https://www.indexdatabase.de/db/i-single.php?id=25
-GLI,Green Leaf Index,https://www.indexdatabase.de/db/i-single.php?id=375
-GNDVI,Green Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=401
+GLI,Green Leaf Index,http://dx.doi.org/10.1080/10106040108542184
+GNDVI,Green Normalized Difference Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00072-7
 GRNDVI,Green-Red Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=185
 GVMI,Global Vegetation Moisture Index,https://www.indexdatabase.de/db/i-single.php?id=372
+MCARI,Modified Chlorophyll Absorption in Reflectance index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
 MNDVI,Modified Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=245
 MNLI,Modified Non-Linear Vegetation Index,https://doi.org/10.1109/TGRS.2003.812910
+MSAVI,Modified Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(94)90134-1
+MTCI,MERIS Terrestrial Chlorophyll Index,https://doi.org/10.1080/0143116042000274015
+NDREI,Normalized Difference Red Edge Index,https://doi.org/10.1016/1011-1344(93)06963-4
 NDVI,Normalized Difference Vegetation Index,https://doi.org/10.1016/0034-4257(79)90013-0
-NGRDI,Normalized Green Red Difference Index,https://www.indexdatabase.de/db/i-single.php?id=390
+NGRDI,Normalized Green Red Difference Index,https://doi.org/10.1016/0034-4257(79)90013-0
 NLI,Non-Linear Vegetation Index,https://doi.org/10.1080/02757259409532252
+OCVI,Optimized Chlorophyll Vegetation Index,http://dx.doi.org/10.1007/s11119-008-9075-z
 OSAVI,Optimized Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(95)00186-7
 RVI,Ratio Vegetation Index,https://doi.org/10.2134/agronj1968.00021962006000060016x
 SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 SAVI,Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(88)90106-X
 SeLI,Sentinel-2 LAI Green Index,https://doi.org/10.3390/s19040904
+TCARI,Transformed Chlorophyll Absorption in Reflectance index,https://doi.org/10.1016/S0034-4257(02)00018-4
 VARI,Visible Atmospherically Resistant Index,https://doi.org/10.1016/S0034-4257(01)00289-9
