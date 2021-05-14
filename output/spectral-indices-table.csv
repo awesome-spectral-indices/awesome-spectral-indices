@@ -24,6 +24,7 @@ MNDVI,Modified Normalized Difference Vegetation Index,vegetation,(N - S2)/(N + S
 MNDWI,Modified Normalized Difference Water Index,water,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1080/01431160600589179,https://github.com/davemlz,2021-04-07
 MNLI,Modified Non-Linear Vegetation Index,vegetation,(1 + L)*((N ** 2) - R)/((N ** 2) + R + L),"['L', 'N', 'R']",https://doi.org/10.1109/TGRS.2003.812910,https://github.com/davemlz,2021-05-11
 MSAVI,Modified Soil-Adjusted Vegetation Index,vegetation,0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5),"['N', 'R']",https://doi.org/10.1016/0034-4257(94)90134-1,https://github.com/davemlz,2021-05-13
+MSR,Modified Simple Ratio,vegetation,(N / R - 1) / (N / R + 1) ** 0.5,"['N', 'R']",https://doi.org/10.1080/07038992.1996.10855178,https://github.com/davemlz,2021-05-14
 MTCI,MERIS Terrestrial Chlorophyll Index,vegetation,(RE2 - RE1) / (RE1 - R),"['RE2', 'RE1', 'R']",https://doi.org/10.1080/0143116042000274015,https://github.com/davemlz,2021-05-13
 MTVI1,Modified Triangular Vegetation Index 1,vegetation,1.2 * (1.2 * (N - G) - 2.5 * (R - G)),"['N', 'G', 'R']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14
 MTVI2,Modified Triangular Vegetation Index 2,vegetation,(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5),"['N', 'G', 'R']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14

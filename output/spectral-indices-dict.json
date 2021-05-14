@@ -348,6 +348,19 @@
             "short_name": "MSAVI",
             "type": "vegetation"
         },
+        "MSR": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "(N / R - 1) / (N / R + 1) ** 0.5",
+            "long_name": "Modified Simple Ratio",
+            "reference": "https://doi.org/10.1080/07038992.1996.10855178",
+            "short_name": "MSR",
+            "type": "vegetation"
+        },
         "MTCI": {
             "bands": [
                 "RE2",
