@@ -110,6 +110,19 @@
             "short_name": "CVI",
             "type": "vegetation"
         },
+        "DVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "N - R",
+            "long_name": "Difference Vegetation Index",
+            "reference": "https://doi.org/10.2307/1936256",
+            "short_name": "DVI",
+            "type": "vegetation"
+        },
         "EVI": {
             "bands": [
                 "g",
@@ -755,6 +768,20 @@
             "long_name": "Wide Dynamic Range Vegetation Index",
             "reference": "https://doi.org/10.1078/0176-1617-01176",
             "short_name": "WDRVI",
+            "type": "vegetation"
+        },
+        "WDVI": {
+            "bands": [
+                "N",
+                "slope",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "N - slope * R",
+            "long_name": "Weighted Difference Vegetation Index",
+            "reference": "https://doi.org/10.1016/0034-4257(89)90076-X",
+            "short_name": "WDVI",
             "type": "vegetation"
         },
         "kEVI": {

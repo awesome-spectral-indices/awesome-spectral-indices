@@ -7,6 +7,7 @@ CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.or
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://www.cabdirect.org/cabdirect/abstract/20073176046,https://github.com/davemlz,2021-04-07
+DVI,Difference Vegetation Index,vegetation,N - R,"['N', 'R']",https://doi.org/10.2307/1936256,https://github.com/davemlz,2021-05-14
 EVI,Enhanced Vegetation Index,vegetation,g * (N - R) / (N + C1 * R - C2 * B + L),"['g', 'N', 'R', 'C1', 'C2', 'B', 'L']",https://doi.org/10.1016/S0034-4257(96)00112-5,https://github.com/davemlz,2021-04-07
 EVI2,Two-Band Enhanced Vegetation Index,vegetation,g * (N - R) / (N + 2.4 * R + L),"['g', 'N', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,https://github.com/davemlz,2021-04-07
 ExG,Excess Green Index,vegetation,2 * G - R - B,"['G', 'R', 'B']",https://doi.org/10.13031/2013.27838,https://github.com/davemlz,2021-05-14
@@ -54,6 +55,7 @@ TCARI,Transformed Chlorophyll Absorption in Reflectance Index,vegetation,3 * ((R
 TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G)),"['N', 'G', 'R']",http://dx.doi.org/10.1016/S0034-4257(00)00197-8,https://github.com/davemlz,2021-05-14
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
+WDVI,Weighted Difference Vegetation Index,vegetation,N - slope * R,"['N', 'slope', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
 kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - 2*kNR + kRR) / ((C2 ** 2)*kBB - 2*C2*kBL - 2*C2*kNB - 2*C1*C2*kBR + kLL + 2*kNL + 2*C1*kRL + kNN + 2*C1*kNR + (C1 ** 2)*kRR),"['g', 'kNN', 'kNR', 'kRR', 'C2', 'kBB', 'kBL', 'kNB', 'C1', 'kBR', 'kLL', 'kNL', 'kRL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 kNDVI,Kernel Normalized Difference Vegetation Index,kernel,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
 kRVI,Kernel Ratio Vegetation Index,kernel,kNN / kNR,"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
