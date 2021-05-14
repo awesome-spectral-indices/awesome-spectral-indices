@@ -59,6 +59,10 @@ For the formula attribute, the standard variables for spectral indices expressio
      - C2
    * - Exponent used for OCVI.
      - cexp
+   * - Exponent used for GDVI.
+     - nexp
+   * - Weighting coefficient used for WDRVI.
+     - alpha
    * - k(A,B)
      - kAB
 

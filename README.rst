@@ -136,6 +136,8 @@ Additional index parameters also follow a standard:
 - :code:`C1`: Coefficient 1 for the aerosol resistance term (e.g. Used for EVI).
 - :code:`C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
 - :code:`cexp`: Exponent used for OCVI.
+- :code:`nexp`: Exponent used for GDVI.
+- :code:`alpha`: Weighting coefficient used for WDRVI.
 
 The kernel indices are constructed using a special type of parameters:
 
