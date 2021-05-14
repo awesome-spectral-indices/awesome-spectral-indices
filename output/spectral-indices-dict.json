@@ -649,6 +649,20 @@
             "short_name": "TCARI",
             "type": "vegetation"
         },
+        "TVI": {
+            "bands": [
+                "N",
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "0.5 * (120 * (N - G) - 200 * (R - G))",
+            "long_name": "Triangular Vegetation Index",
+            "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00197-8",
+            "short_name": "TVI",
+            "type": "vegetation"
+        },
         "VARI": {
             "bands": [
                 "G",

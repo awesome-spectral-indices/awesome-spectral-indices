@@ -34,5 +34,6 @@ SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,https://doi.o
 SAVI,Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(88)90106-X
 SeLI,Sentinel-2 LAI Green Index,https://doi.org/10.3390/s19040904
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index,https://doi.org/10.1016/S0034-4257(02)00018-4
+TVI,Triangular Vegetation Index,http://dx.doi.org/10.1016/S0034-4257(00)00197-8
 VARI,Visible Atmospherically Resistant Index,https://doi.org/10.1016/S0034-4257(01)00289-9
 WDRVI,Wide Dynamic Range Vegetation Index,https://doi.org/10.1078/0176-1617-01176
