@@ -36,6 +36,13 @@ Drought
    :file: _static/indices_drought.csv   
    :header-rows: 1
    
+Urban
+--------------
+   
+.. csv-table:: Urban Spectral Indices
+   :file: _static/indices_urban.csv   
+   :header-rows: 1
+   
 Kernel
 --------------
    

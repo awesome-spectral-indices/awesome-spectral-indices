@@ -512,6 +512,15 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        NDBI=SpectralIndex(
+            short_name='NDBI',
+            long_name='Normalized Difference Built-Up Index',
+            formula='(S1 - N) / (S1 + N)',
+            reference='http://dx.doi.org/10.1080/01431160304987',
+            type='urban',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
