@@ -14,6 +14,21 @@
             "short_name": "ARVI",
             "type": "vegetation"
         },
+        "ATSAVI": {
+            "bands": [
+                "sla",
+                "N",
+                "R",
+                "slb"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))",
+            "long_name": "Adjusted Transformed Soil-Adjusted Vegetation Index",
+            "reference": "https://doi.org/10.1016/0034-4257(91)90009-U",
+            "short_name": "ATSAVI",
+            "type": "vegetation"
+        },
         "BAI": {
             "bands": [
                 "R",
@@ -686,6 +701,21 @@
             "short_name": "SAVI",
             "type": "vegetation"
         },
+        "SAVI2": {
+            "bands": [
+                "N",
+                "R",
+                "slb",
+                "sla"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "N / (R + (slb / sla))",
+            "long_name": "Soil-Adjusted Vegetation Index 2",
+            "reference": "https://doi.org/10.1080/01431169008955053",
+            "short_name": "SAVI2",
+            "type": "vegetation"
+        },
         "SAVIT": {
             "bands": [
                 "L",
@@ -726,6 +756,21 @@
             "long_name": "Transformed Chlorophyll Absorption in Reflectance Index",
             "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
             "short_name": "TCARI",
+            "type": "vegetation"
+        },
+        "TSAVI": {
+            "bands": [
+                "sla",
+                "N",
+                "R",
+                "slb"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb)",
+            "long_name": "Transformed Soil-Adjusted Vegetation Index",
+            "reference": "https://doi.org/10.1109/IGARSS.1989.576128",
+            "short_name": "TSAVI",
             "type": "vegetation"
         },
         "TVI": {
@@ -773,12 +818,12 @@
         "WDVI": {
             "bands": [
                 "N",
-                "slope",
+                "sla",
                 "R"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
-            "formula": "N - slope * R",
+            "formula": "N - sla * R",
             "long_name": "Weighted Difference Vegetation Index",
             "reference": "https://doi.org/10.1016/0034-4257(89)90076-X",
             "short_name": "WDVI",
