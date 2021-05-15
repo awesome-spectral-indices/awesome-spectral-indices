@@ -76,7 +76,7 @@ spindex = SpectralIndices(
             short_name='GEMI',
             long_name='Global Environment Monitoring Index',
             formula='((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=25',
+            reference='http://dx.doi.org/10.1007/bf00031911',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -112,7 +112,7 @@ spindex = SpectralIndices(
             short_name='GVMI',
             long_name='Global Vegetation Moisture Index',
             formula='((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=372',
+            reference='https://doi.org/10.1016/S0034-4257(02)00037-8',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -121,7 +121,7 @@ spindex = SpectralIndices(
             short_name='MNDVI',
             long_name='Modified Normalized Difference Vegetation Index',
             formula='(N - S2)/(N + S2)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=245',
+            reference='https://doi.org/10.1080/014311697216810',
             type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
