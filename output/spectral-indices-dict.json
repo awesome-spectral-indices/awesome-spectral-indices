@@ -758,6 +758,34 @@
             "short_name": "TCARI",
             "type": "vegetation"
         },
+        "TCI": {
+            "bands": [
+                "RE1",
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5",
+            "long_name": "Triangular Chlorophyll Index",
+            "reference": "http://dx.doi.org/10.1109/TGRS.2007.904836",
+            "short_name": "TCI",
+            "type": "vegetation"
+        },
+        "TGI": {
+            "bands": [
+                "R",
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-05-14",
+            "formula": "- 0.5 * (190 * (R - G) - 120 * (R - B))",
+            "long_name": "Triangular Greenness Index",
+            "reference": "http://dx.doi.org/10.1016/j.jag.2012.07.020",
+            "short_name": "TGI",
+            "type": "vegetation"
+        },
         "TSAVI": {
             "bands": [
                 "sla",
