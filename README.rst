@@ -138,8 +138,8 @@ Additional index parameters also follow a standard:
 - :code:`cexp`: Exponent used for OCVI.
 - :code:`nexp`: Exponent used for GDVI.
 - :code:`alpha`: Weighting coefficient used for WDRVI.
-- :code:`slope`: Soil line slope.
-- :code:`intercept`: Soil line intercept.
+- :code:`sla`: Soil line slope.
+- :code:`slb`: Soil line intercept.
 
 The kernel indices are constructed using a special type of parameters:
 

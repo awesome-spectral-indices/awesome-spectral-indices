@@ -552,8 +552,35 @@ spindex = SpectralIndices(
         WDVI=SpectralIndex(
             short_name='WDVI',
             long_name='Weighted Difference Vegetation Index',
-            formula='N - slope * R',
+            formula='N - sla * R',
             reference='https://doi.org/10.1016/0034-4257(89)90076-X',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        TSAVI=SpectralIndex(
+            short_name='TSAVI',
+            long_name='Transformed Soil-Adjusted Vegetation Index',
+            formula='sla * (N - sla * R - slb) / (sla * N + R - sla * slb)',
+            reference='https://doi.org/10.1109/IGARSS.1989.576128',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        ATSAVI=SpectralIndex(
+            short_name='ATSAVI',
+            long_name='Adjusted Transformed Soil-Adjusted Vegetation Index',
+            formula='sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))',
+            reference='https://doi.org/10.1016/0034-4257(91)90009-U',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        SAVI2=SpectralIndex(
+            short_name='SAVI2',
+            long_name='Soil-Adjusted Vegetation Index 2',
+            formula='N / (R + (slb / sla))',
+            reference='https://doi.org/10.1080/01431169008955053',
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
