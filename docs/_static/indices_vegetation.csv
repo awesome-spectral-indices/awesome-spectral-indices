@@ -12,16 +12,16 @@ ExG,Excess Green Index,https://doi.org/10.13031/2013.27838
 GARI,Green Atmospherically Resistant Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=363
 GBNDVI,Green-Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=186
 GDVI,Generalized Difference Vegetation Index,https://doi.org/10.3390/rs6021211
-GEMI,Global Environment Monitoring Index,https://www.indexdatabase.de/db/i-single.php?id=25
+GEMI,Global Environment Monitoring Index,http://dx.doi.org/10.1007/bf00031911
 GLI,Green Leaf Index,http://dx.doi.org/10.1080/10106040108542184
 GNDVI,Green Normalized Difference Vegetation Index,https://doi.org/10.1016/S0034-4257(96)00072-7
 GRNDVI,Green-Red Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=185
-GVMI,Global Vegetation Moisture Index,https://www.indexdatabase.de/db/i-single.php?id=372
+GVMI,Global Vegetation Moisture Index,https://doi.org/10.1016/S0034-4257(02)00037-8
 MCARI,Modified Chlorophyll Absorption in Reflectance Index,http://dx.doi.org/10.1016/S0034-4257(00)00113-9
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1,https://doi.org/10.1016/j.rse.2003.12.013
 MCARI2,Modified Chlorophyll Absorption in Reflectance Index 2,https://doi.org/10.1016/j.rse.2003.12.013
 MGRVI,Modified Green Red Vegetation Index,https://doi.org/10.1016/j.jag.2015.02.012
-MNDVI,Modified Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=245
+MNDVI,Modified Normalized Difference Vegetation Index,https://doi.org/10.1080/014311697216810
 MNLI,Modified Non-Linear Vegetation Index,https://doi.org/10.1109/TGRS.2003.812910
 MSAVI,Modified Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(94)90134-1
 MSR,Modified Simple Ratio,https://doi.org/10.1080/07038992.1996.10855178
