@@ -584,6 +584,24 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        TCI=SpectralIndex(
+            short_name='TCI',
+            long_name='Triangular Chlorophyll Index',
+            formula='1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5',
+            reference='http://dx.doi.org/10.1109/TGRS.2007.904836',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
+        ),
+        TGI=SpectralIndex(
+            short_name='TGI',
+            long_name='Triangular Greenness Index',
+            formula='- 0.5 * (190 * (R - G) - 120 * (R - B))',
+            reference='http://dx.doi.org/10.1016/j.jag.2012.07.020',
+            type='vegetation',
+            date_of_addition='2021-05-14',
+            contributor="https://github.com/davemlz"
         )
     )
 )
