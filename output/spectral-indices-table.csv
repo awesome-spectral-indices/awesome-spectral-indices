@@ -61,7 +61,7 @@ TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G))
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
-kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - 2*kNR + kRR) / ((C2 ** 2)*kBB - 2*C2*kBL - 2*C2*kNB - 2*C1*C2*kBR + kLL + 2*kNL + 2*C1*kRL + kNN + 2*C1*kNR + (C1 ** 2)*kRR),"['g', 'kNN', 'kNR', 'kRR', 'C2', 'kBB', 'kBL', 'kNB', 'C1', 'kBR', 'kLL', 'kNL', 'kRL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
+kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['g', 'kNN', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 kNDVI,Kernel Normalized Difference Vegetation Index,kernel,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
 kRVI,Kernel Ratio Vegetation Index,kernel,kNN / kNR,"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
-kVARI,Kernel Visible Atmospherically Resistant Index,kernel,(kGG - 2*kGR + kRR) / (kBB - 2*kGB - 2*kRB + kGG + 2*kGR + kRR),"['kGG', 'kGR', 'kRR', 'kBB', 'kGB', 'kRB']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
+kVARI,Kernel Visible Atmospherically Resistant Index,kernel,(kGG - kGR) / (kGG + kGR - kGB),"['kGG', 'kGR', 'kGB']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
