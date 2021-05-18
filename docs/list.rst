@@ -1,6 +1,9 @@
 Spectral Indices by Type
 ============================
 
+.. note::
+   All spectral indices listed here are considered broad-band spectral indices. Narrow-band spectral indices are coerced to the closest broad-band spectrum.
+
 Vegetation
 --------------
 
@@ -45,6 +48,9 @@ Urban
    
 Kernel
 --------------
+
+.. warning::
+   All kernel indices listed here were extracted from the `Supplementary Material <http://advances.sciencemag.org/cgi/content/full/7/9/eabc7447/DC1>`_ of `Camps-Valls et al., 2021 <https://doi.org/10.1126/sciadv.abc7447>`_. Please note that the kEVI and kVARI indices may have more than one implementation, but for simplicity, just one is presented here.
    
 .. csv-table:: Kernel Spectral Indices
    :file: _static/indices_kernel.csv   

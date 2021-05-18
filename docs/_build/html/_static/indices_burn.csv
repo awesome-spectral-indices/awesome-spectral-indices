@@ -1,8 +1,0 @@
-short_name,long_name,reference
-BAI,Burned Area Index,https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf
-BAIS2,Burned Area Index for Sentinel 2,https://doi.org/10.3390/ecrs-2-05177
-CSIT,Char Soil Index Thermal,https://doi.org/10.1080/01431160600954704
-NBR,Normalized Burn Ratio,https://www.indexdatabase.de/db/i-single.php?id=53
-NBRT,Normalized Burn Ratio Thermal,https://doi.org/10.1080/01431160500239008
-NDVIT,Normalized Difference Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704
-SAVIT,Soil-Adjusted Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704
