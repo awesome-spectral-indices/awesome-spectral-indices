@@ -37,8 +37,31 @@ If you want to use the list of spectral indices in the Code Editor, please follo
     print(spectral.indices.NDWI.type);
     print(spectral.indices.NDWI.date_of_addition);
     print(spectral.indices.NDWI.contributor);
+    
+6. Compute indices using the :code:`computeIndex()` method:
 
-The formula of each index can be used for its computation. Here you can find a tutorial on how to use them and the additional code required to achieve it: `Computing BAIS2 using the Awesome List of Spectral Indices <https://code.earthengine.google.com/15716a9f3e91e454538eebe1dcb5efbe>`_.
+.. code-block:: javascript
+
+   var spectral = require("users/dmlmont/spectral:spectral");
+
+   var S2 = ee.ImageCollection("COPERNICUS/S2_SR").first()
+   
+   var parameters = {
+       "N": S2.select("B8"),
+       "R": S2.select("B4"),
+       "G": S2.select("B3"),
+       "L": 0.5
+   };
+   
+   var S2 = spectral.computeIndex(S2,["NDVI","GNDVI","SAVI"],parameters);
+
+A list of spectral examples is shown below:
+
+- Example 1: Exploring spectral indices (`Code Editor <https://code.earthengine.google.com/6f438f939672318555b8e1ae55257020>`_).
+- Example 2: Computing One Index (`Code Editor <https://code.earthengine.google.com/378462b0d7b6dd8e523e02b349e67508>`_).
+- Example 3: Computing Multiple Indices (`Code Editor <https://code.earthengine.google.com/94523fdbc4ff80b77e76e7c05983c276>`_).
+- Example 4: Computing Kernel Indices (`Code Editor <https://code.earthengine.google.com/45399b947d0b1db532f1d2e6dd86d42a>`_).
+- Example 5: Mapping Indices Over an Image Collection (`Code Editor <https://code.earthengine.google.com/9c303e11f1c4a04a1c9c2dfbeaf2abee>`_).
 
 Python API
 --------------------------------
@@ -70,8 +93,17 @@ If you want to use the list of spectral indices in the Python API, please follow
 
     ee.Authenticate()
     ee.Initialize()
+    
+6. Explore spectral indices:
 
-6. The awesome spectral indices list is included in the `.index()` method for `ee.ImageCollection` and `ee.Image` classes extensions:
+.. code-block:: python
+
+    indices = eemont.indices()
+    indices.NDVI.reference
+    indices.NDVI.formula
+    indices.NDVI.long_name
+
+7. The awesome spectral indices list is included in the `.index()` method for `ee.ImageCollection` and `ee.Image` classes extensions:
 
 .. code-block:: python
 

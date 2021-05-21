@@ -20,7 +20,7 @@ Awesome Spectral Indices for Google Earth Engine!
 Spectral Indices
 --------------------
 
-The ready-to-use curated list of spectral indices (`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) is presented here in order to compute multiple spectral indices in `Google Earth Engine <https://earthengine.google.com/>`_ for different datasets. This list is used by the `eemont Python package <https://github.com/davemlz/eemont>`_ in order to compute spectral indices in the Python API and by the `spectral module <https://code.earthengine.google.com/?accept_repo=users/dmlmont/spectral>`_ in order to access the spectral indices in the Code Editor (JavaScript API).
+The ready-to-use curated list of spectral indices (`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) is presented here in order to compute multiple spectral indices in `Google Earth Engine <https://earthengine.google.com/>`_ for different datasets. This list is used by the `eemont Python package <https://github.com/davemlz/eemont>`_ in order to compute spectral indices in the Python API and by the `spectral module <https://github.com/davemlz/spectral>`_ in order to access and compute the spectral indices in the Code Editor (JavaScript API).
 
 Attributes
 ~~~~~~~~~~~~~~~~
