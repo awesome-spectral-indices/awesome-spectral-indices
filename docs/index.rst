@@ -156,6 +156,25 @@ The kernel indices are constructed using a special type of parameters:
 - :code:`p`: Kernel degree (used for the polynomial kernel).
 - :code:`c`: Free parameter that trades off the influence of higher-order versus lower-order terms (used for the polynomial kernel).
 
+Used by
+---------
+
+JavaScript API
+~~~~~~~~~~~~~~~~
+
+- `spectral <https://github.com/davemlz/spectral>`_
+
+Python API
+~~~~~~~~~~~~~~~~
+
+- `eemont <https://github.com/davemlz/eemont>`_
+- `eeExtra <https://github.com/r-earthengine/ee_extra>`_ (SOON)
+
+R (`rgee <https://github.com/r-spatial/rgee>`_)
+~~~~~~~~~~~~~~~~
+
+- `rgeeExtra <https://github.com/r-earthengine/rgeeExtra>`_ (SOON)
+
 List
 -------
 
