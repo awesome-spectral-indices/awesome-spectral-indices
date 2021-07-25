@@ -1,6 +1,16 @@
 Awesome Spectral Indices for Google Earth Engine!
 =================================================
 
+.. raw:: html
+
+  <embed>
+    <p align="center">
+      <a href="https://github.com/davemlz/awesome-ee-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/davemlz/main/AwesomeSpectralIndices.png" height="200px"/></a>
+      <br>
+      <b>A ready-to-use curated list of spectral indices for <a href="https://earthengine.google.com/">Google Earth Engine</a></b>
+    </p>
+  </embed>
+
 .. image:: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
         :target: https://github.com/sindresorhus/awesome
         
@@ -11,11 +21,19 @@ Awesome Spectral Indices for Google Earth Engine!
         :target: https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml
 
 .. image:: https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest
-        :target: https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest        
+        :target: https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest
 
-.. image:: https://img.shields.io/github/stars/davemlz/awesome-ee-spectral-indices?style=social
+.. image:: https://img.shields.io/badge/GitHub%20Sponsors-Donate-ff69b4.svg
+        :target: https://github.com/sponsors/davemlz
+
+.. image:: https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-ff69b4.svg
+        :target: https://www.buymeacoffee.com/davemlz
         
-**A ready-to-use curated list of spectral indices for Google Earth Engine.**
+.. image:: https://img.shields.io/badge/kofi-Donate-ff69b4.svg
+        :target: https://ko-fi.com/davemlz
+
+.. image:: https://img.shields.io/twitter/follow/dmlmont?style=social
+        :target: https://twitter.com/dmlmont
 
 .. toctree::   
    :maxdepth: 2
