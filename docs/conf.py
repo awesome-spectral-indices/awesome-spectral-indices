@@ -57,9 +57,17 @@ html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
     'nav_title': 'Awesome Spectral Indices for Google Earth Engine',
+
+    'nav_links':[
+        {
+            'href':'usage',
+            'title': 'The Usage',
+            'internal': True,
+        }
+    ],
     
     # Set the color and the accent color
-    'color_primary': 'purple',
+    'color_primary': 'white',
     'color_accent': 'pink',
 
     # Set the repo location to get a badge with stats
