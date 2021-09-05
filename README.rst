@@ -44,7 +44,7 @@ Each item of the list has the following attributes:
 
 - :code:`short_name`: Short name of the index (e.g. :code:`"NDWI"`).
 - :code:`long_name`: Long name of the index (e.g. :code:`"Normalized Difference Water Index"`).
-- :code:`formula`: Expression/formula of the index (e.g. :code:`"(N - G)/(N + G)"`).
+- :code:`formula`: Expression/formula of the index (e.g. :code:`"(G - N)/(G + N)"`).
 - :code:`bands`: List of required bands/parameters for the index computation (e.g. :code:`["N","G"]`).
 - :code:`reference`: Link to the index reference/paper/doi (e.g. :code:`"https://doi.org/10.1080/01431169608948714"`).
 - :code:`type`: Type/application of the index (e.g. :code:`"water"`).
