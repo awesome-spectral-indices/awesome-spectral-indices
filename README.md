@@ -44,7 +44,7 @@
 
 # Spectral Indices
 
-The ready-to-use curated list of spectral indices ([check the list here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv)) for remote sensing applications is presented here. The list is available in two formats ([CSV](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv), [JSON](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json)) so it can be easily used in any programming language.
+The ready-to-use curated list of spectral indices ([check the list here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv)) for remote sensing applications is presented here. The list is available in two formats ([CSV](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv), [JSON](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json)) so it can be easily used in any programming language.
 
 ## Attributes
 
@@ -82,6 +82,8 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>A</td>
 <td>B1</td>
 <td>B1</td>
+<td></td>
+<td></td>
 
 </tr>
 
@@ -123,6 +125,9 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Red Edge 1</td>
 <td>RE1</td>
 <td>B5</td>
+<td></td>
+<td></td>
+<td></td>
 
 </tr>
 
@@ -131,6 +136,9 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Red Edge 2</td>
 <td>RE2</td>
 <td>B6</td>
+<td></td>
+<td></td>
+<td></td>
 
 </tr>
 
@@ -139,6 +147,9 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Red Edge 3</td>
 <td>RE3</td>
 <td>B7</td>
+<td></td>
+<td></td>
+<td></td>
 
 </tr>
 
@@ -147,6 +158,9 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Red Edge 4</td>
 <td>RE4</td>
 <td>B8A</td>
+<td></td>
+<td></td>
+<td></td>
 
 </tr>
 
