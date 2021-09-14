@@ -1,5 +1,5 @@
-Awesome Spectral Indices for Google Earth Engine!
-=================================================
+Awesome Spectral Indices
+========================
 
 .. raw:: html
 
