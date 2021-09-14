@@ -63,7 +63,7 @@ html_theme_options = {
     'color_accent': 'pink',
 
     # Set the repo location to get a badge with stats
-    'repo_url': 'https://github.com/davemlz/awesome-ee-spectral-indices',
+    'repo_url': 'https://github.com/davemlz/awesome-spectral-indices',
     'repo_name': 'awesome-spectral-indices',
 
     # Visible levels of the global TOC; -1 means unlimited
