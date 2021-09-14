@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/davemlz/awesome-ee-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/docs/_static/asi.png" alt="Awesome Spectral Indices"></a>
+  <a href="https://github.com/davemlz/awesome-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/awesome-spectral-indices/main/docs/_static/asi.png" alt="Awesome Spectral Indices"></a>
 </p>
 <p align="center">
     <em>A ready-to-use curated list of Spectral Indices for Remote Sensing applications.</em>
@@ -17,6 +17,7 @@
 <a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest" target="_blank">
     <img src="https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest" alt="Documentation">
 </a>
+<a href="https://zenodo.org/badge/latestdoi/355720108"><img src="https://zenodo.org/badge/355720108.svg" alt="DOI"></a>
 <a href="https://github.com/sponsors/davemlz" target="_blank">
     <img src="https://img.shields.io/badge/GitHub%20Sponsors-Donate-ff69b4.svg" alt="GitHub Sponsors">
 </a>
