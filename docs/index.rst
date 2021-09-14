@@ -5,35 +5,41 @@ Awesome Spectral Indices for Google Earth Engine!
 
   <embed>
     <p align="center">
-      <a href="https://github.com/davemlz/awesome-ee-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/davemlz/main/AwesomeSpectralIndices.png" height="200px"/></a>
-      <br>
-      <b>A ready-to-use curated list of spectral indices for <a href="https://earthengine.google.com/">Google Earth Engine</a></b>
+      <a href="https://github.com/davemlz/awesome-ee-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/docs/_static/asi.png" alt="Awesome Spectral Indices"></a>
+    </p>
+    <p align="center">
+        <em>A ready-to-use curated list of Spectral Indices for Remote Sensing applications.</em>
+    </p>
+    <p align="center">
+    <a href="https://github.com/sindresorhus/awesome" target="_blank">
+        <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
+    </a>
+    <a href="https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json" target="_blank">
+        <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
+    </a>
+    <a href="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml" target="_blank">
+        <img src="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg" alt="Tests">
+    </a>
+    <a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest" target="_blank">
+        <img src="https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest" alt="Documentation">
+    </a>
+    <a href="https://github.com/sponsors/davemlz" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub%20Sponsors-Donate-ff69b4.svg" alt="GitHub Sponsors">
+    </a>
+    <a href="https://www.buymeacoffee.com/davemlz" target="_blank">
+        <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-ff69b4.svg" alt="Buy me a coffee">
+    </a>
+    <a href="https://ko-fi.com/davemlz" target="_blank">
+        <img src="https://img.shields.io/badge/kofi-Donate-ff69b4.svg" alt="Ko-fi">
+    </a>
+    <a href="https://twitter.com/dmlmont" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/dmlmont?style=social" alt="Twitter">
+    </a>
+    <a href="https://github.com/psf/black" target="_blank">
+        <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Black">
+    </a>
     </p>
   </embed>
-
-.. image:: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
-        :target: https://github.com/sindresorhus/awesome
-        
-.. image:: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json
-        :target: https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json
-        
-.. image:: https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg
-        :target: https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml
-
-.. image:: https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest
-        :target: https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest
-
-.. image:: https://img.shields.io/badge/GitHub%20Sponsors-Donate-ff69b4.svg
-        :target: https://github.com/sponsors/davemlz
-
-.. image:: https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-ff69b4.svg
-        :target: https://www.buymeacoffee.com/davemlz
-        
-.. image:: https://img.shields.io/badge/kofi-Donate-ff69b4.svg
-        :target: https://ko-fi.com/davemlz
-
-.. image:: https://img.shields.io/twitter/follow/dmlmont?style=social
-        :target: https://twitter.com/dmlmont
 
 .. toctree::   
    :maxdepth: 2
@@ -47,7 +53,12 @@ Awesome Spectral Indices for Google Earth Engine!
 Spectral Indices
 --------------------
 
-The ready-to-use curated list of spectral indices (`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) is presented here in order to compute multiple spectral indices in `Google Earth Engine <https://earthengine.google.com/>`_ for different datasets. This list is used by the `eemont Python package <https://github.com/davemlz/eemont>`_ in order to compute spectral indices in the Python API and by the `spectral module <https://code.earthengine.google.com/?accept_repo=users/dmlmont/spectral>`_ in order to access the spectral indices in the Code Editor (JavaScript API).
+The ready-to-use curated list of spectral indices 
+(`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) for remote sensing applications 
+is presented here. The list is available in two formats 
+(`CSV <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_, 
+`JSON <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json>`_) so it can be easily used in any 
+programming language.
 
 Attributes
 ~~~~~~~~~~~~~~~~
@@ -56,7 +67,7 @@ Each item of the list has the following attributes:
 
 - :code:`short_name`: Short name of the index (e.g. :code:`"NDWI"`).
 - :code:`long_name`: Long name of the index (e.g. :code:`"Normalized Difference Water Index"`).
-- :code:`formula`: Expression/formula of the index (e.g. :code:`"(N - G)/(N + G)"`).
+- :code:`formula`: Expression/formula of the index (e.g. :code:`"(G - N)/(G + N)"`).
 - :code:`bands`: List of required bands/parameters for the index computation (e.g. :code:`["N","G"]`).
 - :code:`reference`: Link to the index reference/paper/doi (e.g. :code:`"https://doi.org/10.1080/01431169608948714"`).
 - :code:`type`: Type/application of the index (e.g. :code:`"water"`).
@@ -66,7 +77,7 @@ Each item of the list has the following attributes:
 Expressions
 ~~~~~~~~~~~~~~~~
 
-The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) that can be used by the `ee.Image.expression() <https://developers.google.com/earth-engine/apidocs/ee-image-expression>`_ method in `Google Earth Engine <https://earthengine.google.com/>`_. The parameters used in the expression for each index follow this standard:
+The formula of the index is presented as a string/expression (e.g. :code:`"(N - R)/(N + R)"`) that can be easily evaluated. The parameters used in the expression for each index follow this standard:
 
 .. list-table:: Standard variables for spectral indices expressions and satellite equivalents.   
    :header-rows: 1
@@ -177,21 +188,22 @@ The kernel indices are constructed using a special type of parameters:
 Used by
 ---------
 
-JavaScript API
-~~~~~~~~~~~~~~~~
+JavaScript
+~~~~~~~~~~
 
-- `spectral <https://github.com/davemlz/spectral>`_
+- `spectral <https://github.com/davemlz/spectral>`_: Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
 
-Python API
-~~~~~~~~~~~~~~~~
+Python
+~~~~~~
 
-- `eemont <https://github.com/davemlz/eemont>`_
-- `eeExtra <https://github.com/r-earthengine/ee_extra>`_ (SOON)
+- `eemont <https://github.com/davemlz/eemont>`_: A python package that extends Google Earth Engine.
+- `eeExtra <https://github.com/r-earthengine/ee_extra>`_: A ninja Python package behind rgee, rgeeExtra and eemont.
+- `spnydex <https://github.com/davemlz/spyndex>`_: Awesome Spectral Indices in Python.
 
-R (`rgee <https://github.com/r-spatial/rgee>`_)
-~~~~~~~~~~~~~~~~
+R
+~
 
-- `rgeeExtra <https://github.com/r-earthengine/rgeeExtra>`_ (SOON)
+- `rgeeExtra <https://github.com/r-earthengine/rgeeExtra>`_: High-level functions to process spatial and simple Earth Engine objects. Popular Third-party GEE algorithms are re-coded from Javascript and Python to R.
 
 List
 -------
@@ -209,8 +221,8 @@ You can download or clone the repository:
 
 Or you can download the single files here (right-click > Save link as...):
 
-- json file: `Raw list <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json>`_
-- csv file: `Raw list <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_
+- JSON: `Raw list <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json>`_
+- CSV: `Raw list <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_
 
 Credits
 ------------------------

@@ -358,7 +358,7 @@ git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
 
 Or you can download the single files here (right-click > Save link as...):
 
-- JSON: [Raw list](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json)
+- JSON: [Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json)
 - CSV: [Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv)
 
 # Credits
