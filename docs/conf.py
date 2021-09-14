@@ -57,14 +57,6 @@ html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
     'nav_title': 'Awesome Spectral Indices for Google Earth Engine',
-
-    'nav_links':[
-        {
-            'href':'usage',
-            'title': 'The Usage',
-            'internal': True,
-        }
-    ],
     
     # Set the color and the accent color
     'color_primary': 'white',
@@ -72,7 +64,7 @@ html_theme_options = {
 
     # Set the repo location to get a badge with stats
     'repo_url': 'https://github.com/davemlz/awesome-ee-spectral-indices',
-    'repo_name': 'awesome-ee-spectral-indices',
+    'repo_name': 'awesome-spectral-indices',
 
     # Visible levels of the global TOC; -1 means unlimited
     'globaltoc_depth': 3,
