@@ -56,7 +56,7 @@ html_static_path = ['_static']
 html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
-    'nav_title': 'Awesome Spectral Indices for Google Earth Engine',
+    'nav_title': 'Awesome Spectral Indices',
     
     # Set the color and the accent color
     'color_primary': 'white',

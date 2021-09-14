@@ -47,7 +47,6 @@ Awesome Spectral Indices for Google Earth Engine!
    :hidden:
    
    list   
-   usage
    contributing
 
 Spectral Indices
