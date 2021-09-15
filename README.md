@@ -258,7 +258,7 @@ The kernel indices are constructed using a special type of parameters:
 
 # Spectral Indices by Type
 
-## Vegetation
+## Vegetation 🌱
 
 - [ARVI](https://doi.org/10.1109/36.134076): Atmospherically Resistant Vegetation Index.
 - [ATSAVI](https://doi.org/10.1016/0034-4257(91)90009-U): Adjusted Transformed Soil-Adjusted Vegetation Index.
@@ -310,7 +310,7 @@ The kernel indices are constructed using a special type of parameters:
 - [WDRVI](https://doi.org/10.1078/0176-1617-01176): Wide Dynamic Range Vegetation Index.
 - [WDVI](https://doi.org/10.1016/0034-4257(89)90076-X): Weighted Difference Vegetation Index.
 
-## Burn
+## Burn 🔥
 
 - [BAI](https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf): Burned Area Index.
 - [BAIS2](https://doi.org/10.3390/ecrs-2-05177): Burned Area Index for Sentinel 2.
@@ -320,25 +320,25 @@ The kernel indices are constructed using a special type of parameters:
 - [NDVIT](https://doi.org/10.1080/01431160600954704): Normalized Difference Vegetation Index Thermal.
 - [SAVIT](https://doi.org/10.1080/01431160600954704): Soil-Adjusted Vegetation Index Thermal.
 
-## Water
+## Water 🌊
 
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.
 
-## Snow
+## Snow ⛄
 
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
 
-## Drought
+## Drought 🏜️
 
 - [NDDI](https://doi.org/10.1029/2006GL029127): Normalized Difference Drought Index.
 - [NMDI](https://doi.org/10.1029/2007GL031021): Normalized Multi‐band Drought Index.
 
-## Urban
+## Urban 🏙️
 
 - [NDBI](http://dx.doi.org/10.1080/01431160304987): Normalized Difference Built-Up Index.
 
-## Kernel
+## Kernel 🎯
 
 - [kEVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Enhanced Vegetation Index.
 - [kNDVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Normalized Difference Vegetation Index.
