@@ -260,16 +260,33 @@ The kernel indices are constructed using a special type of parameters:
 
 ## Vegetation 🌱
 
+### A
+
 - [ARVI](https://doi.org/10.1109/36.134076): Atmospherically Resistant Vegetation Index.
 - [ATSAVI](https://doi.org/10.1016/0034-4257(91)90009-U): Adjusted Transformed Soil-Adjusted Vegetation Index.
+
+### B
+
 - [BNDVI](https://www.indexdatabase.de/db/i-single.php?id=135): Blue Normalized Difference Vegetation Index.
+
+### C
+
 - [CIG](https://doi.org/10.1078/0176-1617-00887): Chlorophyll Index Green.
 - [CIRE](https://doi.org/10.1078/0176-1617-00887): Chlorophyll Index Red Edge.
-- [CVI](https://www.cabdirect.org/cabdirect/abstract/20073176046): Chlorophyll Vegetation Index.  
+- [CVI](https://www.cabdirect.org/cabdirect/abstract/20073176046): Chlorophyll Vegetation Index. 
+
+### D
+
 - [DVI](https://doi.org/10.2307/1936256): Difference Vegetation Index.  
+
+### E
+
 - [EVI](https://doi.org/10.1016/S0034-4257(96)00112-5): Enhanced Vegetation Index. 
 - [EVI2](https://doi.org/10.1016/j.rse.2008.06.006): Two-Band Enhanced Vegetation Index. 
 - [ExG](https://doi.org/10.13031/2013.27838): Excess Green Index. 
+
+### G
+
 - [GARI](https://www.indexdatabase.de/db/i-single.php?id=363): Green Atmospherically Resistant Vegetation Index.
 - [GBNDVI](https://www.indexdatabase.de/db/i-single.php?id=186): Green-Blue Normalized Difference Vegetation Index.
 - [GDVI](https://doi.org/10.3390/rs6021211): Generalized Difference Vegetation Index. 
@@ -278,6 +295,9 @@ The kernel indices are constructed using a special type of parameters:
 - [GNDVI](https://doi.org/10.1016/S0034-4257(96)00072-7): Green Normalized Difference Vegetation Index. 
 - [GRNDVI](https://www.indexdatabase.de/db/i-single.php?id=185): Green-Red Normalized Difference Vegetation Index. 
 - [GVMI](https://doi.org/10.1016/S0034-4257(02)00037-8): Global Vegetation Moisture Index. 
+
+### M
+
 - [MCARI](http://dx.doi.org/10.1016/S0034-4257(00)00113-9): Modified Chlorophyll Absorption in Reflectance Index. 
 - [MCARI1](https://doi.org/10.1016/j.rse.2003.12.013): Modified Chlorophyll Absorption in Reflectance Index 1.
 - [MCARI2](https://doi.org/10.1016/j.rse.2003.12.013): Modified Chlorophyll Absorption in Reflectance Index 2. 
@@ -289,35 +309,67 @@ The kernel indices are constructed using a special type of parameters:
 - [MTCI](https://doi.org/10.1080/0143116042000274015): MERIS Terrestrial Chlorophyll Index.
 - [MTVI1](https://doi.org/10.1016/j.rse.2003.12.013): Modified Triangular Vegetation Index 1.
 - [MTVI2](https://doi.org/10.1016/j.rse.2003.12.013): Modified Triangular Vegetation Index 2.
+
+### N
+
 - [NDREI](https://doi.org/10.1016/1011-1344(93)06963-4): Normalized Difference Red Edge Index.
 - [NDVI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Difference Vegetation Index.
 - [NGRDI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Green Red Difference Index.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
+
+### O
+
 - [OCVI](http://dx.doi.org/10.1007/s11119-008-9075-z): Optimized Chlorophyll Vegetation Index.
 - [OSAVI](https://doi.org/10.1016/0034-4257(95)00186-7): Optimized Soil-Adjusted Vegetation Index.
+
+### R
+
 - [RDVI](https://doi.org/10.1016/0034-4257(94)00114-3): Renormalized Difference Vegetation Index.
 - [RVI](https://doi.org/10.2134/agronj1968.00021962006000060016x): Ratio Vegetation Index.
+
+### S
+
 - [SARVI](https://doi.org/10.1109/36.134076): Soil Adjusted and Atmospherically Resistant Vegetation Index.
 - [SAVI](https://doi.org/10.1016/0034-4257(88)90106-X): Soil-Adjusted Vegetation Index.
 - [SAVI2](https://doi.org/10.1080/01431169008955053): Soil-Adjusted Vegetation Index 2.
 - [SeLI](https://doi.org/10.3390/s19040904): Sentinel-2 LAI Green Index.
+
+### T
+
 - [TCARI](https://doi.org/10.1016/S0034-4257(02)00018-4): Transformed Chlorophyll Absorption in Reflectance Index.
 - [TCI](http://dx.doi.org/10.1109/TGRS.2007.904836): Triangular Chlorophyll Index.
 - [TGI](http://dx.doi.org/10.1016/j.jag.2012.07.020): Triangular Greenness Index.
 - [TSAVI](https://doi.org/10.1109/IGARSS.1989.576128): Transformed Soil-Adjusted Vegetation Index.
 - [TVI](http://dx.doi.org/10.1016/S0034-4257(00)00197-8): Triangular Vegetation Index.
+
+### V
+
 - [VARI](https://doi.org/10.1016/S0034-4257(01)00289-9): Visible Atmospherically Resistant Index.
+
+### W
+
 - [WDRVI](https://doi.org/10.1078/0176-1617-01176): Wide Dynamic Range Vegetation Index.
 - [WDVI](https://doi.org/10.1016/0034-4257(89)90076-X): Weighted Difference Vegetation Index.
 
 ## Burn 🔥
 
+### B
+
 - [BAI](https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf): Burned Area Index.
 - [BAIS2](https://doi.org/10.3390/ecrs-2-05177): Burned Area Index for Sentinel 2.
+
+### C
+
 - [CSIT](https://doi.org/10.1080/01431160600954704): Char Soil Index Thermal.
+
+### N
+
 - [NBR](https://www.indexdatabase.de/db/i-single.php?id=53): Normalized Burn Ratio.
 - [NBRT](https://doi.org/10.1080/01431160600954704): Normalized Burn Ratio Thermal.
 - [NDVIT](https://doi.org/10.1080/01431160600954704): Normalized Difference Vegetation Index Thermal.
+
+### S
+
 - [SAVIT](https://doi.org/10.1080/01431160600954704): Soil-Adjusted Vegetation Index Thermal.
 
 ## Water 🌊
