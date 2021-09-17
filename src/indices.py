@@ -629,6 +629,15 @@ spindex = SpectralIndices(
             type='urban',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
+        ),
+        NDBaI=SpectralIndex(
+            short_name='NDBaI',
+            long_name='Normalized Difference Bareness Index',
+            formula='(S1 - T1) / (S1 + T1)',
+            reference='https://doi.org/10.1109/IGARSS.2005.1526319',
+            type='urban',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
         )
     )
 )
