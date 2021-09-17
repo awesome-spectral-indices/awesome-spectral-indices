@@ -318,8 +318,11 @@ The kernel indices are constructed using a special type of parameters:
 
 - [NDREI](https://doi.org/10.1016/1011-1344(93)06963-4): Normalized Difference Red Edge Index.
 - [NDVI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Difference Vegetation Index.
+- [NDYI](https://doi.org/10.1016/j.rse.2016.06.016): Normalized Difference Yellowness Index.
 - [NGRDI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Green Red Difference Index.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
+- [NRFIg](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Green.
+- [NRFIr](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Red.
 
 ### O
 

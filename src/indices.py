@@ -657,5 +657,32 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
+        NDYI=SpectralIndex(
+            short_name='NDYI',
+            long_name='Normalized Difference Yellowness Index',
+            formula='(G - B) / (G + B)',
+            reference='https://doi.org/10.1016/j.rse.2016.06.016',
+            type='vegetation',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NRFIr=SpectralIndex(
+            short_name='NRFIr',
+            long_name='Normalized Rapeseed Flowering Index Red',
+            formula='(R - S2) / (R + S2)',
+            reference='https://doi.org/10.3390/rs13010105',
+            type='vegetation',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NRFIg=SpectralIndex(
+            short_name='NRFIg',
+            long_name='Normalized Rapeseed Flowering Index Green',
+            formula='(G - S2) / (G + S2)',
+            reference='https://doi.org/10.3390/rs13010105',
+            type='vegetation',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
