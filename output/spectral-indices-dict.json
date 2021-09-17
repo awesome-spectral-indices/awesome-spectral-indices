@@ -620,6 +620,19 @@
             "short_name": "NDWI",
             "type": "water"
         },
+        "NDYI": {
+            "bands": [
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(G - B) / (G + B)",
+            "long_name": "Normalized Difference Yellowness Index",
+            "reference": "https://doi.org/10.1016/j.rse.2016.06.016",
+            "short_name": "NDYI",
+            "type": "vegetation"
+        },
         "NGRDI": {
             "bands": [
                 "G",
@@ -672,6 +685,32 @@
             "reference": "https://doi.org/10.1029/2007GL031021",
             "short_name": "NMDI",
             "type": "drought"
+        },
+        "NRFIg": {
+            "bands": [
+                "G",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(G - S2) / (G + S2)",
+            "long_name": "Normalized Rapeseed Flowering Index Green",
+            "reference": "https://doi.org/10.3390/rs13010105",
+            "short_name": "NRFIg",
+            "type": "vegetation"
+        },
+        "NRFIr": {
+            "bands": [
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(R - S2) / (R + S2)",
+            "long_name": "Normalized Rapeseed Flowering Index Red",
+            "reference": "https://doi.org/10.3390/rs13010105",
+            "short_name": "NRFIr",
+            "type": "vegetation"
         },
         "OCVI": {
             "bands": [
