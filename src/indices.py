@@ -684,5 +684,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        TRRVI=SpectralIndex(
+            short_name='TRRVI',
+            long_name='Transformed Red Range Vegetation Index',
+            formula='((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)',
+            reference='https://doi.org/10.3390/rs12152359',
+            type='vegetation',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
