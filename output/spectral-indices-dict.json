@@ -633,6 +633,19 @@
             "short_name": "NGRDI",
             "type": "vegetation"
         },
+        "NHFD": {
+            "bands": [
+                "RE1",
+                "A"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-17",
+            "formula": "(RE1 - A) / (RE1 + A)",
+            "long_name": "Non-Homogeneous Feature Difference",
+            "reference": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
+            "short_name": "NHFD",
+            "type": "urban"
+        },
         "NLI": {
             "bands": [
                 "N",

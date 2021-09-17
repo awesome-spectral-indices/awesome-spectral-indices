@@ -45,6 +45,7 @@ NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),"['N', 'R
 NDVIT,Normalized Difference Vegetation Index Thermal,burn,(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0)),"['N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 NDWI,Normalized Difference Water Index,water,(G - N) / (G + N),"['G', 'N']",https://doi.org/10.1080/01431169608948714,https://github.com/davemlz,2021-04-07
 NGRDI,Normalized Green Red Difference Index,vegetation,(G - R) / (G + R),"['G', 'R']",https://doi.org/10.1016/0034-4257(79)90013-0,https://github.com/davemlz,2021-04-07
+NHFD,Non-Homogeneous Feature Difference,urban,(RE1 - A) / (RE1 + A),"['RE1', 'A']",https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4,https://github.com/davemlz,2021-09-17
 NLI,Non-Linear Vegetation Index,vegetation,((N ** 2) - R)/((N ** 2) + R),"['N', 'R']",https://doi.org/10.1080/02757259409532252,https://github.com/davemlz,2021-05-11
 NMDI,Normalized Multi‐band Drought Index,drought,(N - (S1 - S2))/(N + (S1 - S2)),"['N', 'S1', 'S2']",https://doi.org/10.1029/2007GL031021,https://github.com/davemlz,2021-05-11
 OCVI,Optimized Chlorophyll Vegetation Index,vegetation,(N / G) * (R / G) ** cexp,"['N', 'G', 'R', 'cexp']",http://dx.doi.org/10.1007/s11119-008-9075-z,https://github.com/davemlz,2021-05-13
