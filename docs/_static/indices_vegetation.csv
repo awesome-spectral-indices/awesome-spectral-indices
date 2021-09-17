@@ -41,6 +41,7 @@ S2REP,Sentinel-2 Red-Edge Position,https://doi.org/10.1016/j.isprsjprs.2013.04.0
 SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 SAVI,Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(88)90106-X
 SAVI2,Soil-Adjusted Vegetation Index 2,https://doi.org/10.1080/01431169008955053
+SIPI,Structure Insensitive Pigment Index,https://eurekamag.com/research/009/395/009395053.php
 SeLI,Sentinel-2 LAI Green Index,https://doi.org/10.3390/s19040904
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index,https://doi.org/10.1016/S0034-4257(02)00018-4
 TCI,Triangular Chlorophyll Index,http://dx.doi.org/10.1109/TGRS.2007.904836

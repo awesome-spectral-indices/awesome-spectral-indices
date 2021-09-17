@@ -788,6 +788,20 @@
             "short_name": "SAVIT",
             "type": "burn"
         },
+        "SIPI": {
+            "bands": [
+                "N",
+                "A",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-17",
+            "formula": "(N - A) / (N - R)",
+            "long_name": "Structure Insensitive Pigment Index",
+            "reference": "https://eurekamag.com/research/009/395/009395053.php",
+            "short_name": "SIPI",
+            "type": "vegetation"
+        },
         "SeLI": {
             "bands": [
                 "RE4",

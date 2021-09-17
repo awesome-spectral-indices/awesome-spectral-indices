@@ -56,6 +56,7 @@ SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,vegetation,(1
 SAVI,Soil-Adjusted Vegetation Index,vegetation,(1.0 + L) * (N - R) / (N + R + L),"['L', 'N', 'R']",https://doi.org/10.1016/0034-4257(88)90106-X,https://github.com/davemlz,2021-04-07
 SAVI2,Soil-Adjusted Vegetation Index 2,vegetation,N / (R + (slb / sla)),"['N', 'R', 'slb', 'sla']",https://doi.org/10.1080/01431169008955053,https://github.com/davemlz,2021-05-14
 SAVIT,Soil-Adjusted Vegetation Index Thermal,burn,(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L),"['L', 'N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
+SIPI,Structure Insensitive Pigment Index,vegetation,(N - A) / (N - R),"['N', 'A', 'R']",https://eurekamag.com/research/009/395/009395053.php,https://github.com/davemlz,2021-09-17
 SeLI,Sentinel-2 LAI Green Index,vegetation,(RE4 - RE1) / (RE4 + RE1),"['RE4', 'RE1']",https://doi.org/10.3390/s19040904,https://github.com/davemlz,2021-04-08
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index,vegetation,3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R)),"['RE1', 'R', 'G']",https://doi.org/10.1016/S0034-4257(02)00018-4,https://github.com/davemlz,2021-05-13
 TCI,Triangular Chlorophyll Index,vegetation,1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5,"['RE1', 'G', 'R']",http://dx.doi.org/10.1109/TGRS.2007.904836,https://github.com/davemlz,2021-05-14
