@@ -338,6 +338,7 @@ The kernel indices are constructed using a special type of parameters:
 - [SAVI](https://doi.org/10.1016/0034-4257(88)90106-X): Soil-Adjusted Vegetation Index.
 - [SAVI2](https://doi.org/10.1080/01431169008955053): Soil-Adjusted Vegetation Index 2.
 - [SeLI](https://doi.org/10.3390/s19040904): Sentinel-2 LAI Green Index.
+- [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
 
 ### T
 

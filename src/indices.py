@@ -638,6 +638,15 @@ spindex = SpectralIndices(
             type='urban',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
+        ),
+        SIPI=SpectralIndex(
+            short_name='SIPI',
+            long_name='Structure Insensitive Pigment Index',
+            formula='(N - A) / (N - R)',
+            reference='https://eurekamag.com/research/009/395/009395053.php',
+            type='vegetation',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
         )
     )
 )
