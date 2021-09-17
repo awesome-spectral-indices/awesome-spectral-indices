@@ -647,6 +647,15 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
-        )
+        ),
+        NHFD=SpectralIndex(
+            short_name='NHFD',
+            long_name='Non-Homogeneous Feature Difference',
+            formula='(RE1 - A) / (RE1 + A)',
+            reference='https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4',
+            type='urban',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
