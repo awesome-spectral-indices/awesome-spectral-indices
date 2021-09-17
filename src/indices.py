@@ -602,6 +602,24 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
+        ),
+        IRECI=SpectralIndex(
+            short_name='IRECI',
+            long_name='Inverted Red-Edge Chlorophyll Index',
+            formula='(RE3 − R) / (RE1 / RE2)',
+            reference='https://doi.org/10.1016/j.isprsjprs.2013.04.007',
+            type='vegetation',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
+        ),
+        S2REP=SpectralIndex(
+            short_name='S2REP',
+            long_name='Sentinel-2 Red-Edge Position',
+            formula='705.0 + 35.0 * ((((RE3 + R) / 2.0) − RE1) / (RE2 − RE1))',
+            reference='https://doi.org/10.1016/j.isprsjprs.2013.04.007',
+            type='vegetation',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
         )
     )
 )
