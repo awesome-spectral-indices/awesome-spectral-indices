@@ -1,2 +1,4 @@
 short_name,long_name,reference
+EBBI,Enhanced Built-Up and Bareness Index,https://doi.org/10.3390/rs4102957
 NDBI,Normalized Difference Built-Up Index,http://dx.doi.org/10.1080/01431160304987
+NDBaI,Normalized Difference Bareness Index,https://doi.org/10.1109/IGARSS.2005.1526319

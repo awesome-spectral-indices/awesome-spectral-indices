@@ -9,6 +9,7 @@ CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://www.cabdirect.org/cabdirect/abstract/20073176046,https://github.com/davemlz,2021-04-07
 DVI,Difference Vegetation Index,vegetation,N - R,"['N', 'R']",https://doi.org/10.2307/1936256,https://github.com/davemlz,2021-05-14
+EBBI,Enhanced Built-Up and Bareness Index,urban,(S1 - N) / (10.0 * ((S1 + T1) ** 0.5)),"['S1', 'N', 'T1']",https://doi.org/10.3390/rs4102957,https://github.com/davemlz,2021-09-17
 EVI,Enhanced Vegetation Index,vegetation,g * (N - R) / (N + C1 * R - C2 * B + L),"['g', 'N', 'R', 'C1', 'C2', 'B', 'L']",https://doi.org/10.1016/S0034-4257(96)00112-5,https://github.com/davemlz,2021-04-07
 EVI2,Two-Band Enhanced Vegetation Index,vegetation,g * (N - R) / (N + 2.4 * R + L),"['g', 'N', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,https://github.com/davemlz,2021-04-07
 ExG,Excess Green Index,vegetation,2 * G - R - B,"['G', 'R', 'B']",https://doi.org/10.13031/2013.27838,https://github.com/davemlz,2021-05-14
@@ -36,6 +37,7 @@ MTVI2,Modified Triangular Vegetation Index 2,vegetation,(1.5 * (1.2 * (N - G) - 
 NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),"['N', 'S2']",https://www.indexdatabase.de/db/i-single.php?id=53,https://github.com/davemlz,2021-04-07
 NBRT,Normalized Burn Ratio Thermal,burn,(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0)),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160500239008,https://github.com/davemlz,2021-04-07
 NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),"['S1', 'N']",http://dx.doi.org/10.1080/01431160304987,https://github.com/davemlz,2021-05-14
+NDBaI,Normalized Difference Bareness Index,urban,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17
 NDDI,Normalized Difference Drought Index,drought,(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N))),"['N', 'R', 'G']",https://doi.org/10.1029/2006GL029127,https://github.com/davemlz,2021-04-07
 NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N', 'RE1']",https://doi.org/10.1016/1011-1344(93)06963-4,https://github.com/davemlz,2021-05-13
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07

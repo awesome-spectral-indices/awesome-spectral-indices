@@ -138,6 +138,20 @@
             "short_name": "DVI",
             "type": "vegetation"
         },
+        "EBBI": {
+            "bands": [
+                "S1",
+                "N",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-17",
+            "formula": "(S1 - N) / (10.0 * ((S1 + T1) ** 0.5))",
+            "long_name": "Enhanced Built-Up and Bareness Index",
+            "reference": "https://doi.org/10.3390/rs4102957",
+            "short_name": "EBBI",
+            "type": "urban"
+        },
         "EVI": {
             "bands": [
                 "g",
@@ -511,6 +525,19 @@
             "long_name": "Normalized Difference Built-Up Index",
             "reference": "http://dx.doi.org/10.1080/01431160304987",
             "short_name": "NDBI",
+            "type": "urban"
+        },
+        "NDBaI": {
+            "bands": [
+                "S1",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-17",
+            "formula": "(S1 - T1) / (S1 + T1)",
+            "long_name": "Normalized Difference Bareness Index",
+            "reference": "https://doi.org/10.1109/IGARSS.2005.1526319",
+            "short_name": "NDBaI",
             "type": "urban"
         },
         "NDDI": {
