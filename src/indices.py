@@ -620,6 +620,15 @@ spindex = SpectralIndices(
             type='vegetation',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
+        ),
+        EBBI=SpectralIndex(
+            short_name='EBBI',
+            long_name='Enhanced Built-Up and Bareness Index',
+            formula='(S1 - N) / (10.0 * ((S1 + T1) ** 0.5))',
+            reference='https://doi.org/10.3390/rs4102957',
+            type='urban',
+            date_of_addition='2021-09-17',
+            contributor="https://github.com/davemlz"
         )
     )
 )

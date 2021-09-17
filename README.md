@@ -393,6 +393,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ## Urban 🏙️
 
+- [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
 - [NDBI](http://dx.doi.org/10.1080/01431160304987): Normalized Difference Built-Up Index.
 
 ## Kernel 🎯
