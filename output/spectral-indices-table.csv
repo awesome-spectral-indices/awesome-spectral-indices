@@ -1,6 +1,8 @@
 short_name,long_name,type,formula,bands,reference,contributor,date_of_addition
 ARVI,Atmospherically Resistant Vegetation Index,vegetation,(N - (R - (R - B))) / (N + (R - (R - B))),"['N', 'R', 'B']",https://doi.org/10.1109/36.134076,https://github.com/davemlz,2021-05-11
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0)),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1016/0034-4257(91)90009-U,https://github.com/davemlz,2021-05-14
+AWEInsh,Automated Water Extraction Index,water,4.0 * (G - S1) - 0.25 * N + 2.75 * S2,"['G', 'S1', 'N', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
+AWEIsh,Automated Water Extraction Index with Shadows Elimination,water,B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2,"['B', 'G', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
 BAI,Burned Area Index,burn,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['R', 'N']",https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,https://github.com/davemlz,2021-04-07
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0),"['RE2', 'RE3', 'RE4', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://www.indexdatabase.de/db/i-single.php?id=135,https://github.com/davemlz,2021-04-07
@@ -75,6 +77,8 @@ TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G))
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
+WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
+WI2,Water Index 2,water,(B - S2) / (B + S2),"['B', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
 kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['g', 'kNN', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 kNDVI,Kernel Normalized Difference Vegetation Index,kernel,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
 kRVI,Kernel Ratio Vegetation Index,kernel,kNN / kNR,"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07

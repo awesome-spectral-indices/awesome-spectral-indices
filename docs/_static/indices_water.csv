@@ -1,3 +1,7 @@
 short_name,long_name,reference
+AWEInsh,Automated Water Extraction Index,https://doi.org/10.1016/j.rse.2013.08.029
+AWEIsh,Automated Water Extraction Index with Shadows Elimination,https://doi.org/10.1016/j.rse.2013.08.029
 MNDWI,Modified Normalized Difference Water Index,https://doi.org/10.1080/01431160600589179
 NDWI,Normalized Difference Water Index,https://doi.org/10.1080/01431169608948714
+WI1,Water Index 1,https://doi.org/10.3390/rs11182186
+WI2,Water Index 2,https://doi.org/10.3390/rs11182186

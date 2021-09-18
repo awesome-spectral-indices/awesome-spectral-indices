@@ -29,6 +29,37 @@
             "short_name": "ATSAVI",
             "type": "vegetation"
         },
+        "AWEInsh": {
+            "bands": [
+                "G",
+                "S1",
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "4.0 * (G - S1) - 0.25 * N + 2.75 * S2",
+            "long_name": "Automated Water Extraction Index",
+            "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
+            "short_name": "AWEInsh",
+            "type": "water"
+        },
+        "AWEIsh": {
+            "bands": [
+                "B",
+                "G",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2",
+            "long_name": "Automated Water Extraction Index with Shadows Elimination",
+            "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
+            "short_name": "AWEIsh",
+            "type": "water"
+        },
         "BAI": {
             "bands": [
                 "R",
@@ -1048,6 +1079,32 @@
             "reference": "https://doi.org/10.1016/0034-4257(89)90076-X",
             "short_name": "WDVI",
             "type": "vegetation"
+        },
+        "WI1": {
+            "bands": [
+                "G",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(G - S2) / (G + S2)",
+            "long_name": "Water Index 1",
+            "reference": "https://doi.org/10.3390/rs11182186",
+            "short_name": "WI1",
+            "type": "water"
+        },
+        "WI2": {
+            "bands": [
+                "B",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(B - S2) / (B + S2)",
+            "long_name": "Water Index 2",
+            "reference": "https://doi.org/10.3390/rs11182186",
+            "short_name": "WI2",
+            "type": "water"
         },
         "kEVI": {
             "bands": [
