@@ -51,6 +51,7 @@ TCI,Triangular Chlorophyll Index,http://dx.doi.org/10.1109/TGRS.2007.904836
 TGI,Triangular Greenness Index,http://dx.doi.org/10.1016/j.jag.2012.07.020
 TRRVI,Transformed Red Range Vegetation Index,https://doi.org/10.3390/rs12152359
 TSAVI,Transformed Soil-Adjusted Vegetation Index,https://doi.org/10.1109/IGARSS.1989.576128
+TTVI,Transformed Triangular Vegetation Index,https://doi.org/10.3390/rs12010016
 TVI,Triangular Vegetation Index,http://dx.doi.org/10.1016/S0034-4257(00)00197-8
 VARI,Visible Atmospherically Resistant Index,https://doi.org/10.1016/S0034-4257(01)00289-9
 WDRVI,Wide Dynamic Range Vegetation Index,https://doi.org/10.1078/0176-1617-01176

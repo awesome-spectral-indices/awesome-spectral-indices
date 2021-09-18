@@ -580,6 +580,19 @@
             "short_name": "NDSI",
             "type": "snow"
         },
+        "NDSII": {
+            "bands": [
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(R - S1) / (R + S1)",
+            "long_name": "Normalized Difference Snow Ice Index",
+            "reference": "https://doi.org/10.1080/01431160119766",
+            "short_name": "NDSII",
+            "type": "snow"
+        },
         "NDVI": {
             "bands": [
                 "N",
@@ -781,6 +794,20 @@
             "short_name": "S2REP",
             "type": "vegetation"
         },
+        "S3": {
+            "bands": [
+                "N",
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(N * (R - S1)) / ((N + R) * (N + S1))",
+            "long_name": "S3 Snow Index",
+            "reference": "https://doi.org/10.3178/jjshwr.12.28",
+            "short_name": "S3",
+            "type": "snow"
+        },
         "SARVI": {
             "bands": [
                 "L",
@@ -853,6 +880,20 @@
             "reference": "https://eurekamag.com/research/009/395/009395053.php",
             "short_name": "SIPI",
             "type": "vegetation"
+        },
+        "SWI": {
+            "bands": [
+                "G",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "(G * (N - S1)) / ((G + N) * (N + S1))",
+            "long_name": "Snow Water Index",
+            "reference": "https://doi.org/10.3390/rs11232774",
+            "short_name": "SWI",
+            "type": "snow"
         },
         "SeLI": {
             "bands": [
@@ -936,6 +977,20 @@
             "long_name": "Transformed Soil-Adjusted Vegetation Index",
             "reference": "https://doi.org/10.1109/IGARSS.1989.576128",
             "short_name": "TSAVI",
+            "type": "vegetation"
+        },
+        "TTVI": {
+            "bands": [
+                "RE3",
+                "RE2",
+                "RE4"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740))",
+            "long_name": "Transformed Triangular Vegetation Index",
+            "reference": "https://doi.org/10.3390/rs12010016",
+            "short_name": "TTVI",
             "type": "vegetation"
         },
         "TVI": {
