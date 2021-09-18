@@ -729,5 +729,23 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        WI1=SpectralIndex(
+            short_name='WI1',
+            long_name='Water Index 1',
+            formula='(G - S2) / (G + S2)',
+            reference='https://doi.org/10.3390/rs11182186',
+            type='water',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
+        WI2=SpectralIndex(
+            short_name='WI2',
+            long_name='Water Index 2',
+            formula='(B - S2) / (B + S2)',
+            reference='https://doi.org/10.3390/rs11182186',
+            type='water',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

@@ -376,6 +376,8 @@ The kernel indices are constructed using a special type of parameters:
 
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.
+- [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
+- [WI2](https://doi.org/10.3390/rs11182186): Water Index 2.
 
 ## Snow ⛄
 
