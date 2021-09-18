@@ -747,5 +747,23 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        AWEInsh=SpectralIndex(
+            short_name='AWEInsh',
+            long_name='Automated Water Extraction Index',
+            formula='4.0 * (G - S1) - 0.25 * N + 2.75 * S2',
+            reference='https://doi.org/10.1016/j.rse.2013.08.029',
+            type='water',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
+        AWEIsh=SpectralIndex(
+            short_name='AWEIsh',
+            long_name='Automated Water Extraction Index with Shadows Elimination',
+            formula='B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2',
+            reference='https://doi.org/10.1016/j.rse.2013.08.029',
+            type='water',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

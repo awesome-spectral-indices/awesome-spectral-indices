@@ -374,6 +374,8 @@ The kernel indices are constructed using a special type of parameters:
 
 ## Water 🌊
 
+- [AWEInsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index.
+- [AWEIsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index with Shadows Elimination.
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
