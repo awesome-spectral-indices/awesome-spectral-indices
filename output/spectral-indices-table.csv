@@ -65,6 +65,7 @@ SeLI,Sentinel-2 LAI Green Index,vegetation,(RE4 - RE1) / (RE4 + RE1),"['RE4', 'R
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index,vegetation,3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R)),"['RE1', 'R', 'G']",https://doi.org/10.1016/S0034-4257(02)00018-4,https://github.com/davemlz,2021-05-13
 TCI,Triangular Chlorophyll Index,vegetation,1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5,"['RE1', 'G', 'R']",http://dx.doi.org/10.1109/TGRS.2007.904836,https://github.com/davemlz,2021-05-14
 TGI,Triangular Greenness Index,vegetation,- 0.5 * (190 * (R - G) - 120 * (R - B)),"['R', 'G', 'B']",http://dx.doi.org/10.1016/j.jag.2012.07.020,https://github.com/davemlz,2021-05-14
+TRRVI,Transformed Red Range Vegetation Index,vegetation,((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0),"['RE2', 'R', 'N']",https://doi.org/10.3390/rs12152359,https://github.com/davemlz,2021-09-18
 TSAVI,Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1109/IGARSS.1989.576128,https://github.com/davemlz,2021-05-14
 TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G)),"['N', 'G', 'R']",http://dx.doi.org/10.1016/S0034-4257(00)00197-8,https://github.com/davemlz,2021-05-14
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07

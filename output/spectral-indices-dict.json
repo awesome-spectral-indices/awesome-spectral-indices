@@ -909,6 +909,20 @@
             "short_name": "TGI",
             "type": "vegetation"
         },
+        "TRRVI": {
+            "bands": [
+                "RE2",
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-18",
+            "formula": "((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)",
+            "long_name": "Transformed Red Range Vegetation Index",
+            "reference": "https://doi.org/10.3390/rs12152359",
+            "short_name": "TRRVI",
+            "type": "vegetation"
+        },
         "TSAVI": {
             "bands": [
                 "sla",
