@@ -364,23 +364,12 @@ The kernel indices are constructed using a special type of parameters:
 
 ## Burn 🔥
 
-### B
-
 - [BAI](https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf): Burned Area Index.
 - [BAIS2](https://doi.org/10.3390/ecrs-2-05177): Burned Area Index for Sentinel 2.
-
-### C
-
 - [CSIT](https://doi.org/10.1080/01431160600954704): Char Soil Index Thermal.
-
-### N
-
 - [NBR](https://www.indexdatabase.de/db/i-single.php?id=53): Normalized Burn Ratio.
 - [NBRT](https://doi.org/10.1080/01431160600954704): Normalized Burn Ratio Thermal.
 - [NDVIT](https://doi.org/10.1080/01431160600954704): Normalized Difference Vegetation Index Thermal.
-
-### S
-
 - [SAVIT](https://doi.org/10.1080/01431160600954704): Soil-Adjusted Vegetation Index Thermal.
 
 ## Water 🌊
@@ -392,6 +381,7 @@ The kernel indices are constructed using a special type of parameters:
 
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
 - [NDSII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow Ice Index.
+- [S3](https://doi.org/10.3178/jjshwr.12.28): S3 Snow Index.
 - [SWI](https://doi.org/10.3390/rs11232774): Snow Water Index.
 
 ## Drought 🏜️

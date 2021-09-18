@@ -720,5 +720,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        S3=SpectralIndex(
+            short_name='S3',
+            long_name='S3 Snow Index',
+            formula='(N * (R - S1)) / ((N + R) * (N + S1))',
+            reference='https://doi.org/10.3178/jjshwr.12.28',
+            type='snow',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
