@@ -693,5 +693,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        TTVI=SpectralIndex(
+            short_name='TTVI',
+            long_name='Transformed Triangular Vegetation Index',
+            formula='0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740))',
+            reference='https://doi.org/10.3390/rs12010016',
+            type='vegetation',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
