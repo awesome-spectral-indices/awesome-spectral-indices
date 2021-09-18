@@ -711,5 +711,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
+        SWI=SpectralIndex(
+            short_name='SWI',
+            long_name='Snow Water Index',
+            formula='(G * (N - S1)) / ((G + N) * (N + S1))',
+            reference='https://doi.org/10.3390/rs11232774',
+            type='snow',
+            date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

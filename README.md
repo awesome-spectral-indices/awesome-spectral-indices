@@ -392,6 +392,7 @@ The kernel indices are constructed using a special type of parameters:
 
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
 - [NDSII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow Ice Index.
+- [SWI](https://doi.org/10.3390/rs11232774): Snow Water Index.
 
 ## Drought 🏜️
 
