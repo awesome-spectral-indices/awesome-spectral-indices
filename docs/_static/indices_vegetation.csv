@@ -1,4 +1,5 @@
 short_name,long_name,reference
+ARI,Anthocyanin Reflectance Index,https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2
 ARVI,Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(91)90009-U
 BNDVI,Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=135
@@ -55,5 +56,8 @@ TSAVI,Transformed Soil-Adjusted Vegetation Index,https://doi.org/10.1109/IGARSS.
 TTVI,Transformed Triangular Vegetation Index,https://doi.org/10.3390/rs12010016
 TVI,Triangular Vegetation Index,http://dx.doi.org/10.1016/S0034-4257(00)00197-8
 VARI,Visible Atmospherically Resistant Index,https://doi.org/10.1016/S0034-4257(01)00289-9
+VARI700,Visible Atmospherically Resistant Index (700 nm),https://doi.org/10.1016/S0034-4257(01)00289-9
+VI700,Vegetation Index (700 nm),https://doi.org/10.1016/S0034-4257(01)00289-9
+VIG,Vegetation Index Green,https://doi.org/10.1016/S0034-4257(01)00289-9
 WDRVI,Wide Dynamic Range Vegetation Index,https://doi.org/10.1078/0176-1617-01176
 WDVI,Weighted Difference Vegetation Index,https://doi.org/10.1016/0034-4257(89)90076-X

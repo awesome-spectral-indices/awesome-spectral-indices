@@ -1,5 +1,18 @@
 {
     "SpectralIndices": {
+        "ARI": {
+            "bands": [
+                "G",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(1 / G) - (1 / RE1)",
+            "long_name": "Anthocyanin Reflectance Index",
+            "reference": "https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2",
+            "short_name": "ARI",
+            "type": "vegetation"
+        },
         "ARVI": {
             "bands": [
                 "N",
@@ -1077,6 +1090,46 @@
             "long_name": "Visible Atmospherically Resistant Index",
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VARI",
+            "type": "vegetation"
+        },
+        "VARI700": {
+            "bands": [
+                "RE1",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)",
+            "long_name": "Visible Atmospherically Resistant Index (700 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
+            "short_name": "VARI700",
+            "type": "vegetation"
+        },
+        "VI700": {
+            "bands": [
+                "RE1",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(RE1 - R) / (RE1 + R)",
+            "long_name": "Vegetation Index (700 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
+            "short_name": "VI700",
+            "type": "vegetation"
+        },
+        "VIG": {
+            "bands": [
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(G - R) / (G + R)",
+            "long_name": "Vegetation Index Green",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
+            "short_name": "VIG",
             "type": "vegetation"
         },
         "WDRVI": {

@@ -1,4 +1,5 @@
 short_name,long_name,type,formula,bands,reference,contributor,date_of_addition
+ARI,Anthocyanin Reflectance Index,vegetation,(1 / G) - (1 / RE1),"['G', 'RE1']",https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2,https://github.com/davemlz,2021-09-20
 ARVI,Atmospherically Resistant Vegetation Index,vegetation,(N - (R - (R - B))) / (N + (R - (R - B))),"['N', 'R', 'B']",https://doi.org/10.1109/36.134076,https://github.com/davemlz,2021-05-11
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0)),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1016/0034-4257(91)90009-U,https://github.com/davemlz,2021-05-14
 AWEInsh,Automated Water Extraction Index,water,4.0 * (G - S1) - 0.25 * N + 2.75 * S2,"['G', 'S1', 'N', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
@@ -77,6 +78,9 @@ TSAVI,Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R -
 TTVI,Transformed Triangular Vegetation Index,vegetation,0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740)),"['RE3', 'RE2', 'RE4']",https://doi.org/10.3390/rs12010016,https://github.com/davemlz,2021-09-18
 TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G)),"['N', 'G', 'R']",http://dx.doi.org/10.1016/S0034-4257(00)00197-8,https://github.com/davemlz,2021-05-14
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
+VARI700,Visible Atmospherically Resistant Index (700 nm),vegetation,(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B),"['RE1', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
+VI700,Vegetation Index (700 nm),vegetation,(RE1 - R) / (RE1 + R),"['RE1', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
+VIG,Vegetation Index Green,vegetation,(G - R) / (G + R),"['G', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
 WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
