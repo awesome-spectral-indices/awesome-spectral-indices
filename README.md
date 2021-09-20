@@ -358,6 +358,9 @@ The kernel indices are constructed using a special type of parameters:
 ### V
 
 - [VARI](https://doi.org/10.1016/S0034-4257(01)00289-9): Visible Atmospherically Resistant Index.
+- [VARI700](https://doi.org/10.1016/S0034-4257(01)00289-9): Visible Atmospherically Resistant Index (700 nm).
+- [VI700](https://doi.org/10.1016/S0034-4257(01)00289-9): Vegetation Index (700 nm).
+- [VIG](https://doi.org/10.1016/S0034-4257(01)00289-9): Vegetation Index Green.
 
 ### W
 

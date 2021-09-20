@@ -792,5 +792,32 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
+        VIG=SpectralIndex(
+            short_name='VIG',
+            long_name='Vegetation Index Green',
+            formula='(G - R) / (G + R)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
+            type='vegetation',
+            date_of_addition='2021-09-20',
+            contributor="https://github.com/davemlz"
+        ),
+        VI700=SpectralIndex(
+            short_name='VI700',
+            long_name='Vegetation Index (700 nm)',
+            formula='(RE1 - R) / (RE1 + R)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
+            type='vegetation',
+            date_of_addition='2021-09-20',
+            contributor="https://github.com/davemlz"
+        ),
+        VARI700=SpectralIndex(
+            short_name='VARI700',
+            long_name='Visible Atmospherically Resistant Index (700 nm)',
+            formula='(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
+            type='vegetation',
+            date_of_addition='2021-09-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
