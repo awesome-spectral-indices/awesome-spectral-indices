@@ -774,5 +774,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
+        BWDRVI=SpectralIndex(
+            short_name='BWDRVI',
+            long_name='Blue Wide Dynamic Range Vegetation Index',
+            formula='(alpha * N - B) / (alpha * N + B)',
+            reference='https://doi.org/10.2135/cropsci2007.01.0031',
+            type='vegetation',
+            date_of_addition='2021-09-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

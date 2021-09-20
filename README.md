@@ -230,7 +230,7 @@ Additional index parameters also follow a standard:
 - `C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
 - `cexp`: Exponent used for OCVI.
 - `nexp`: Exponent used for GDVI.
-- `alpha`: Weighting coefficient used for WDRVI.
+- `alpha`: Weighting coefficient used for WDRVI and BWDRVI.
 - `sla`: Soil line slope.
 - `slb`: Soil line intercept.
 
@@ -268,6 +268,7 @@ The kernel indices are constructed using a special type of parameters:
 ### B
 
 - [BNDVI](https://www.indexdatabase.de/db/i-single.php?id=135): Blue Normalized Difference Vegetation Index.
+- [BWDRVI](https://doi.org/10.2135/cropsci2007.01.0031): Blue Wide Dynamic Range Vegetation Index.
 
 ### C
 
