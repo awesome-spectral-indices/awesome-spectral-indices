@@ -6,6 +6,7 @@ AWEIsh,Automated Water Extraction Index with Shadows Elimination,water,B + 2.5 *
 BAI,Burned Area Index,burn,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['R', 'N']",https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,https://github.com/davemlz,2021-04-07
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0),"['RE2', 'RE3', 'RE4', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://www.indexdatabase.de/db/i-single.php?id=135,https://github.com/davemlz,2021-04-07
+BWDRVI,Blue Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - B) / (alpha * N + B),"['alpha', 'N', 'B']",https://doi.org/10.2135/cropsci2007.01.0031,https://github.com/davemlz,2021-09-20
 CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-04-07
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
@@ -36,7 +37,8 @@ MSR,Modified Simple Ratio,vegetation,(N / R - 1) / ((N / R + 1) ** 0.5),"['N', '
 MTCI,MERIS Terrestrial Chlorophyll Index,vegetation,(RE2 - RE1) / (RE1 - R),"['RE2', 'RE1', 'R']",https://doi.org/10.1080/0143116042000274015,https://github.com/davemlz,2021-05-13
 MTVI1,Modified Triangular Vegetation Index 1,vegetation,1.2 * (1.2 * (N - G) - 2.5 * (R - G)),"['N', 'G', 'R']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14
 MTVI2,Modified Triangular Vegetation Index 2,vegetation,(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5),"['N', 'G', 'R']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14
-NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),"['N', 'S2']",https://www.indexdatabase.de/db/i-single.php?id=53,https://github.com/davemlz,2021-04-07
+NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),"['N', 'S2']",https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio,https://github.com/davemlz,2021-04-07
+NBR2,Normalized Burn Ratio 2,burn,(S1 - S2) / (S1 + S2),"['S1', 'S2']",https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2,https://github.com/davemlz,2021-09-20
 NBRT,Normalized Burn Ratio Thermal,burn,(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0)),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160500239008,https://github.com/davemlz,2021-04-07
 NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),"['S1', 'N']",http://dx.doi.org/10.1080/01431160304987,https://github.com/davemlz,2021-05-14
 NDBaI,Normalized Difference Bareness Index,urban,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17

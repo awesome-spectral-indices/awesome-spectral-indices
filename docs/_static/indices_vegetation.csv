@@ -2,6 +2,7 @@ short_name,long_name,reference
 ARVI,Atmospherically Resistant Vegetation Index,https://doi.org/10.1109/36.134076
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,https://doi.org/10.1016/0034-4257(91)90009-U
 BNDVI,Blue Normalized Difference Vegetation Index,https://www.indexdatabase.de/db/i-single.php?id=135
+BWDRVI,Blue Wide Dynamic Range Vegetation Index,https://doi.org/10.2135/cropsci2007.01.0031
 CIG,Chlorophyll Index Green,https://doi.org/10.1078/0176-1617-00887
 CIRE,Chlorophyll Index Red Edge,https://doi.org/10.1078/0176-1617-00887
 CVI,Chlorophyll Vegetation Index,https://www.cabdirect.org/cabdirect/abstract/20073176046

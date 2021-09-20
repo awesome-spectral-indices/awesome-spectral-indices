@@ -102,6 +102,20 @@
             "short_name": "BNDVI",
             "type": "vegetation"
         },
+        "BWDRVI": {
+            "bands": [
+                "alpha",
+                "N",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(alpha * N - B) / (alpha * N + B)",
+            "long_name": "Blue Wide Dynamic Range Vegetation Index",
+            "reference": "https://doi.org/10.2135/cropsci2007.01.0031",
+            "short_name": "BWDRVI",
+            "type": "vegetation"
+        },
         "CIG": {
             "bands": [
                 "N",
@@ -527,8 +541,21 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N - S2) / (N + S2)",
             "long_name": "Normalized Burn Ratio",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=53",
+            "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio",
             "short_name": "NBR",
+            "type": "burn"
+        },
+        "NBR2": {
+            "bands": [
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-09-20",
+            "formula": "(S1 - S2) / (S1 + S2)",
+            "long_name": "Normalized Burn Ratio 2",
+            "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
+            "short_name": "NBR2",
             "type": "burn"
         },
         "NBRT": {
