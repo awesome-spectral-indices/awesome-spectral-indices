@@ -783,5 +783,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
+        ARI=SpectralIndex(
+            short_name='ARI',
+            long_name='Anthocyanin Reflectance Index',
+            formula='(1 / G) - (1 / RE1)',
+            reference='https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2',
+            type='vegetation',
+            date_of_addition='2021-09-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

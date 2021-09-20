@@ -262,6 +262,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ### A
 
+- [ARI](https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2): Anthocyanin Reflectance Index.
 - [ARVI](https://doi.org/10.1109/36.134076): Atmospherically Resistant Vegetation Index.
 - [ATSAVI](https://doi.org/10.1016/0034-4257(91)90009-U): Adjusted Transformed Soil-Adjusted Vegetation Index.
 
