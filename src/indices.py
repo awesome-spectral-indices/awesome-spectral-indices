@@ -202,7 +202,7 @@ spindex = SpectralIndices(
             short_name='NBR',
             long_name='Normalized Burn Ratio',
             formula='(N - S2) / (N + S2)',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=53',
+            reference='https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio',
             type='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
@@ -763,6 +763,15 @@ spindex = SpectralIndices(
             reference='https://doi.org/10.1016/j.rse.2013.08.029',
             type='water',
             date_of_addition='2021-09-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NBR2=SpectralIndex(
+            short_name='NBR2',
+            long_name='Normalized Burn Ratio 2',
+            formula='(S1 - S2) / (S1 + S2)',
+            reference='https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2',
+            type='burn',
+            date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
     )

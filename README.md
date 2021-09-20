@@ -367,7 +367,8 @@ The kernel indices are constructed using a special type of parameters:
 - [BAI](https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf): Burned Area Index.
 - [BAIS2](https://doi.org/10.3390/ecrs-2-05177): Burned Area Index for Sentinel 2.
 - [CSIT](https://doi.org/10.1080/01431160600954704): Char Soil Index Thermal.
-- [NBR](https://www.indexdatabase.de/db/i-single.php?id=53): Normalized Burn Ratio.
+- [NBR](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio): Normalized Burn Ratio.
+- [NBR2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2): Normalized Burn Ratio 2.
 - [NBRT](https://doi.org/10.1080/01431160600954704): Normalized Burn Ratio Thermal.
 - [NDVIT](https://doi.org/10.1080/01431160600954704): Normalized Difference Vegetation Index Thermal.
 - [SAVIT](https://doi.org/10.1080/01431160600954704): Soil-Adjusted Vegetation Index Thermal.
