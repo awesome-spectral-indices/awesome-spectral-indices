@@ -1,5 +1,5 @@
 short_name,long_name,reference,equation
 NDSI,Normalized Difference Snow Index,https://doi.org/10.1109/IGARSS.1994.399618,:math:`(G-S1)/(G+S1)`
 NDSII,Normalized Difference Snow Ice Index,https://doi.org/10.1080/01431160119766,:math:`(R-S1)/(R+S1)`
-S3,S3 Snow Index,https://doi.org/10.3178/jjshwr.12.28,:math:`(N	imes (R-S1))/((N+R)	imes (N+S1))`
-SWI,Snow Water Index,https://doi.org/10.3390/rs11232774,:math:`(G	imes (N-S1))/((G+N)	imes (N+S1))`
+S3,S3 Snow Index,https://doi.org/10.3178/jjshwr.12.28,:math:`(N(R-S1))/((N+R)(N+S1))`
+SWI,Snow Water Index,https://doi.org/10.3390/rs11232774,:math:`(G(N-S1))/((G+N)(N+S1))`
