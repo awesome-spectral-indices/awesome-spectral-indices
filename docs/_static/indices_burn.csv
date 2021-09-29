@@ -1,9 +1,9 @@
 short_name,long_name,reference,equation
 BAI,Burned Area Index,https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,:math:`1.0/((0.1-R)^{2.0}+(0.06-N)^{2.0})`
-BAIS2,Burned Area Index for Sentinel 2,https://doi.org/10.3390/ecrs-2-05177,:math:`(1.0-((RE2RE3RE4)/R)^{0.5})(((S2-RE4)/(S2+RE4)^{0.5})+1.0)`
-CSIT,Char Soil Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`N/(S2T1/10000.0)`
+BAIS2,Burned Area Index for Sentinel 2,https://doi.org/10.3390/ecrs-2-05177,:math:`(1.0-((RE2\timesRE3\timesRE4)/R)^{0.5})\times(((S2-RE4)/(S2+RE4)^{0.5})+1.0)`
+CSIT,Char Soil Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`N/(S2\timesT1/10000.0)`
 NBR,Normalized Burn Ratio,https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio,:math:`(N-S2)/(N+S2)`
 NBR2,Normalized Burn Ratio 2,https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2,:math:`(S1-S2)/(S1+S2)`
-NBRT,Normalized Burn Ratio Thermal,https://doi.org/10.1080/01431160500239008,:math:`(N-(S2T1/10000.0))/(N+(S2T1/10000.0))`
-NDVIT,Normalized Difference Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`(N-(RT1/10000.0))/(N+(RT1/10000.0))`
-SAVIT,Soil-Adjusted Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`(1.0+L)(N-(RT1/10000.0))/(N+(RT1/10000.0)+L)`
+NBRT,Normalized Burn Ratio Thermal,https://doi.org/10.1080/01431160500239008,:math:`(N-(S2\timesT1/10000.0))/(N+(S2\timesT1/10000.0))`
+NDVIT,Normalized Difference Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`(N-(R\timesT1/10000.0))/(N+(R\timesT1/10000.0))`
+SAVIT,Soil-Adjusted Vegetation Index Thermal,https://doi.org/10.1080/01431160600954704,:math:`(1.0+L)\times(N-(R\timesT1/10000.0))/(N+(R\timesT1/10000.0)+L)`
