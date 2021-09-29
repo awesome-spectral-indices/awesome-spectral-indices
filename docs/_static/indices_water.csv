@@ -1,7 +1,7 @@
-short_name,long_name,reference,equation
-AWEInsh,Automated Water Extraction Index,https://doi.org/10.1016/j.rse.2013.08.029,:math:`4.0\times (G-S1)-0.25\times N+2.75\times S2`
-AWEIsh,Automated Water Extraction Index with Shadows Elimination,https://doi.org/10.1016/j.rse.2013.08.029,:math:`B+2.5\times G-1.5\times (N+S1)-0.25\times S2`
-MNDWI,Modified Normalized Difference Water Index,https://doi.org/10.1080/01431160600589179,:math:`(G-S1)/(G+S1)`
-NDWI,Normalized Difference Water Index,https://doi.org/10.1080/01431169608948714,:math:`(G-N)/(G+N)`
-WI1,Water Index 1,https://doi.org/10.3390/rs11182186,:math:`(G-S2)/(G+S2)`
-WI2,Water Index 2,https://doi.org/10.3390/rs11182186,:math:`(B-S2)/(B+S2)`
+Index,Long Name,Equation
+AWEInsh,Automated Water Extraction Index [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`4.0\times (G-S1)-0.25\times N+2.75\times S2`
+AWEIsh,Automated Water Extraction Index with Shadows Elimination [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`B+2.5\times G-1.5\times (N+S1)-0.25\times S2`
+MNDWI,Modified Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431160600589179>`_],:math:`(G-S1)/(G+S1)`
+NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
+WI1,Water Index 1 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(G-S2)/(G+S2)`
+WI2,Water Index 2 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(B-S2)/(B+S2)`

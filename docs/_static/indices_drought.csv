@@ -1,3 +1,3 @@
-short_name,long_name,reference,equation
-NDDI,Normalized Difference Drought Index,https://doi.org/10.1029/2006GL029127,:math:`(((N-R)/(N+R))-((G-N)/(G+N)))/(((N-R)/(N+R))+((G-N)/(G+N)))`
-NMDI,Normalized Multi‐band Drought Index,https://doi.org/10.1029/2007GL031021,:math:`(N-(S1-S2))/(N+(S1-S2))`
+Index,Long Name,Equation
+NDDI,Normalized Difference Drought Index [`ref <https://doi.org/10.1029/2006GL029127>`_],:math:`(((N-R)/(N+R))-((G-N)/(G+N)))/(((N-R)/(N+R))+((G-N)/(G+N)))`
+NMDI,Normalized Multi‐band Drought Index [`ref <https://doi.org/10.1029/2007GL031021>`_],:math:`(N-(S1-S2))/(N+(S1-S2))`
