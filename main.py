@@ -27,7 +27,11 @@ df.to_csv('output/spectral-indices-table.csv',index = False)
 def toMath(x):
     x = x.replace(" ","")
     x = x.replace("**","^")
-    x = x.replace("*","\times ")
+    x = x.replace("^2.0","^{2.0}")
+    x = x.replace("^0.5","^{0.5}")
+    x = x.replace("^nexp","^{nexp}")
+    x = x.replace("^cexp","^{cexp}")
+    x = x.replace("*","")
     x = f":math:`{x}`"
     return x
 df["equation"] = df["formula"].apply(toMath)
