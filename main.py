@@ -34,7 +34,12 @@ def toMath(x):
     x = x.replace("*","\\times ")
     x = f":math:`{x}`"
     return x
-df["equation"] = df["formula"].apply(toMath)
+df["Equation"] = df["formula"].apply(toMath)
+def addLinkToLongName(x):
+    x = f"{x['long_name']} [`ref <{x['reference']}>`_]"
+    return x
+df["Long Name"] = df.apply(addLinkToLongName)
+df["Index"] = df["short_name"]
 for t in ["vegetation","burn","water","snow","drought","urban","kernel"]:
     name = "docs/_static/indices_" + t + ".csv"
-    df[df["type"] == t][["short_name","long_name","reference","equation"]].to_csv(name,index = False)
+    df[df["type"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)
