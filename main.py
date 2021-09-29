@@ -31,7 +31,7 @@ def toMath(x):
     x = x.replace("^0.5","^{0.5}")
     x = x.replace("^nexp","^{nexp}")
     x = x.replace("^cexp","^{cexp}")
-    x = x.replace("*","\\times")
+    x = x.replace("*","\\times ")
     x = f":math:`{x}`"
     return x
 df["equation"] = df["formula"].apply(toMath)
