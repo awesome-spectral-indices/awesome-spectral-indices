@@ -24,7 +24,13 @@ df = df[["short_name","long_name","type","formula","bands","reference","contribu
 df.to_csv('output/spectral-indices-table.csv',index = False)
 
 # Save tables for Docs
-df["equation"] = df["formula"].apply(lambda x: f":math:`{x}`")
+def toMath(x):
+    x = x.replace(" ","")
+    x = x.replace("**","^")
+    x = x.replace("*","\times ")
+    x = f":math:`{x}`"
+    return x
+df["equation"] = df["formula"].apply(toMath)
 for t in ["vegetation","burn","water","snow","drought","urban","kernel"]:
     name = "docs/_static/indices_" + t + ".csv"
     df[df["type"] == t][["short_name","long_name","reference","equation"]].to_csv(name,index = False)
