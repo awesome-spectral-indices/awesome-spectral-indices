@@ -1,6 +1,6 @@
 short_name,long_name,type,formula,bands,reference,contributor,date_of_addition
 ARI,Anthocyanin Reflectance Index,vegetation,(1 / G) - (1 / RE1),"['G', 'RE1']",https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2,https://github.com/davemlz,2021-09-20
-ARVI,Atmospherically Resistant Vegetation Index,vegetation,(N - (R - (R - B))) / (N + (R - (R - B))),"['N', 'R', 'B']",https://doi.org/10.1109/36.134076,https://github.com/davemlz,2021-05-11
+ARVI,Atmospherically Resistant Vegetation Index,vegetation,(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B))),"['N', 'R', 'gamma', 'B']",https://doi.org/10.1109/36.134076,https://github.com/davemlz,2021-05-11
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0)),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1016/0034-4257(91)90009-U,https://github.com/davemlz,2021-05-14
 AWEInsh,Automated Water Extraction Index,water,4.0 * (G - S1) - 0.25 * N + 2.75 * S2,"['G', 'S1', 'N', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
 AWEIsh,Automated Water Extraction Index with Shadows Elimination,water,B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2,"['B', 'G', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18

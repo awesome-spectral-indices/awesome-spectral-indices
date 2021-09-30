@@ -17,11 +17,12 @@
             "bands": [
                 "N",
                 "R",
+                "gamma",
                 "B"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
-            "formula": "(N - (R - (R - B))) / (N + (R - (R - B)))",
+            "formula": "(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
             "long_name": "Atmospherically Resistant Vegetation Index",
             "reference": "https://doi.org/10.1109/36.134076",
             "short_name": "ARVI",
