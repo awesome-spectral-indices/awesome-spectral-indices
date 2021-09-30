@@ -24,6 +24,7 @@ class Bands(Enum):
     AEROSOL_COEFFICIENT2 = "C2"
     C_EXPONENT = "cexp"
     N_EXPONENT = "nexp"
+    GAMMA = "gamma"
     ALPHA = "alpha"
     SOIL_LINE_SLOPE = "sla"
     SOIL_LINE_INTERCEPT = "slb"

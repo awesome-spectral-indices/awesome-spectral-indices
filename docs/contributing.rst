@@ -63,6 +63,8 @@ For the formula attribute, the standard variables for spectral indices expressio
      - nexp
    * - Weighting coefficient used for WDRVI.
      - alpha
+   * - Weighting coefficient used for ARVI.
+     - gamma
    * - Soil line slope.
      - sla
    * - Soil line intercept.

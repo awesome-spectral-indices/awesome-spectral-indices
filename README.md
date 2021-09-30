@@ -231,6 +231,7 @@ Additional index parameters also follow a standard:
 - `cexp`: Exponent used for OCVI.
 - `nexp`: Exponent used for GDVI.
 - `alpha`: Weighting coefficient used for WDRVI and BWDRVI.
+- `gamma`: Weighting coefficient used for ARVI.
 - `sla`: Soil line slope.
 - `slb`: Soil line intercept.
 
