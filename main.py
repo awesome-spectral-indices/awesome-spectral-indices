@@ -29,8 +29,10 @@ def toMath(x):
     x = x.replace("**","^")
     x = x.replace("^2.0","^{2.0}")
     x = x.replace("^0.5","^{0.5}")
-    x = x.replace("^nexp","^{nexp}")
-    x = x.replace("^cexp","^{cexp}")
+    x = x.replace("^nexp","^{n}")
+    x = x.replace("^cexp","^{c}")
+    x = x.replace("gamma","\\gamma ")
+    x = x.replace("alpha","\\alpha ")
     x = x.replace("*","\\times ")
     x = f":math:`{x}`"
     return x
