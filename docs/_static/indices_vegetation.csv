@@ -1,9 +1,9 @@
 Index,Long Name,Equation
 ARI,Anthocyanin Reflectance Index [`ref <https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2>`_],:math:`(1/G)-(1/RE1)`
-ARVI,Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(N-(R-gamma\times (R-B)))/(N+(R-gamma\times (R-B)))`
+ARVI,Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(N-(R-\gamma \times (R-B)))/(N+(R-\gamma \times (R-B)))`
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(91)90009-U>`_],:math:`sla\times (N-sla\times R-slb)/(sla\times N+R-sla\times slb+0.08\times (1+sla^{2.0}))`
 BNDVI,Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=135>`_],:math:`(N-B)/(N+B)`
-BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/cropsci2007.01.0031>`_],:math:`(alpha\times N-B)/(alpha\times N+B)`
+BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/cropsci2007.01.0031>`_],:math:`(\alpha \times N-B)/(\alpha \times N+B)`
 CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/G)-1.0`
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`
 CVI,Chlorophyll Vegetation Index [`ref <https://www.cabdirect.org/cabdirect/abstract/20073176046>`_],:math:`(N\times R)/(G^{2.0})`
@@ -13,7 +13,7 @@ EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.200
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
 GARI,Green Atmospherically Resistant Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=363>`_],:math:`(N-(G-(B-R)))/(N-(G+(B-R)))`
 GBNDVI,Green-Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=186>`_],:math:`(N-(G+B))/(N+(G+B))`
-GDVI,Generalized Difference Vegetation Index [`ref <https://doi.org/10.3390/rs6021211>`_],:math:`((N^{nexp})-(R^{nexp}))/((N^{nexp})+(R^{nexp}))`
+GDVI,Generalized Difference Vegetation Index [`ref <https://doi.org/10.3390/rs6021211>`_],:math:`((N^{n})-(R^{n}))/((N^{n})+(R^{n}))`
 GEMI,Global Environment Monitoring Index [`ref <http://dx.doi.org/10.1007/bf00031911>`_],:math:`((2.0\times ((N^{2.0})-(R^{2.0}))+1.5\times N+0.5\times R)/(N+R+0.5))\times (1.0-0.25\times ((2.0\times ((N^{2.0})-(R^2))+1.5\times N+0.5\times R)/(N+R+0.5)))-((R-0.125)/(1-R))`
 GLI,Green Leaf Index [`ref <http://dx.doi.org/10.1080/10106040108542184>`_],:math:`(2.0\times G-R-B)/(2.0\times G+R+B)`
 GNDVI,Green Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00072-7>`_],:math:`(N-G)/(N+G)`
@@ -38,7 +38,7 @@ NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-
 NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252>`_],:math:`((N^2)-R)/((N^2)+R)`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
 NRFIr,Normalized Rapeseed Flowering Index Red [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(R-S2)/(R+S2)`
-OCVI,Optimized Chlorophyll Vegetation Index [`ref <http://dx.doi.org/10.1007/s11119-008-9075-z>`_],:math:`(N/G)\times (R/G)^{cexp}`
+OCVI,Optimized Chlorophyll Vegetation Index [`ref <http://dx.doi.org/10.1007/s11119-008-9075-z>`_],:math:`(N/G)\times (R/G)^{c}`
 OSAVI,Optimized Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(95)00186-7>`_],:math:`(N-R)/(N+R+0.16)`
 RDVI,Renormalized Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)00114-3>`_],:math:`(N-R)/((N+R)^{0.5})`
 RVI,Ratio Vegetation Index [`ref <https://doi.org/10.2134/agronj1968.00021962006000060016x>`_],:math:`N/R`
@@ -59,5 +59,5 @@ VARI,Visible Atmospherically Resistant Index [`ref <https://doi.org/10.1016/S003
 VARI700,Visible Atmospherically Resistant Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(RE1-1.7\times R+0.7\times B)/(RE1+1.3\times R-1.3\times B)`
 VI700,Vegetation Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(RE1-R)/(RE1+R)`
 VIG,Vegetation Index Green [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(G-R)/(G+R)`
-WDRVI,Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.1078/0176-1617-01176>`_],:math:`(alpha\times N-R)/(alpha\times N+R)`
+WDRVI,Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.1078/0176-1617-01176>`_],:math:`(\alpha \times N-R)/(\alpha \times N+R)`
 WDVI,Weighted Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(89)90076-X>`_],:math:`N-sla\times R`
