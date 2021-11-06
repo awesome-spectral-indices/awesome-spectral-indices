@@ -325,6 +325,7 @@ The kernel indices are constructed using a special type of parameters:
 
 - [NDREI](https://doi.org/10.1016/1011-1344(93)06963-4): Normalized Difference Red Edge Index.
 - [NDVI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Difference Vegetation Index.
+- [NDVI705](https://doi.org/10.1016/S0176-1617(11)81633-0): Normalized Difference Vegetation Index (705 and 750 nm).
 - [NDYI](https://doi.org/10.1016/j.rse.2016.06.016): Normalized Difference Yellowness Index.
 - [NGRDI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Green Red Difference Index.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
@@ -349,6 +350,8 @@ The kernel indices are constructed using a special type of parameters:
 - [SAVI2](https://doi.org/10.1080/01431169008955053): Soil-Adjusted Vegetation Index 2.
 - [SeLI](https://doi.org/10.3390/s19040904): Sentinel-2 LAI Green Index.
 - [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
+- [SR555](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (555 and 750 nm).
+- [SR705](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (705 and 750 nm).
 
 ### T
 
