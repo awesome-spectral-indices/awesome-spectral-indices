@@ -907,6 +907,20 @@
             "short_name": "RDVI",
             "type": "vegetation"
         },
+        "REDSI": {
+            "bands": [
+                "RE3",
+                "R",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)",
+            "long_name": "Red-Edge Disease Stress Index",
+            "reference": "https://doi.org/10.3390/s18030868",
+            "short_name": "REDSI",
+            "type": "vegetation"
+        },
         "RVI": {
             "bands": [
                 "N",
