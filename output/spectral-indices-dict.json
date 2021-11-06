@@ -734,6 +734,19 @@
             "short_name": "NDVI",
             "type": "vegetation"
         },
+        "NDVI705": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(RE2 - RE1) / (RE2 + RE1)",
+            "long_name": "Normalized Difference Vegetation Index (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
+            "short_name": "NDVI705",
+            "type": "vegetation"
+        },
         "NDVIT": {
             "bands": [
                 "N",
@@ -1007,6 +1020,32 @@
             "long_name": "Structure Insensitive Pigment Index",
             "reference": "https://eurekamag.com/research/009/395/009395053.php",
             "short_name": "SIPI",
+            "type": "vegetation"
+        },
+        "SR555": {
+            "bands": [
+                "RE2",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "RE2 / G",
+            "long_name": "Simple Ratio (555 and 750 nm)",
+            "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
+            "short_name": "SR555",
+            "type": "vegetation"
+        },
+        "SR705": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "RE2 / RE1",
+            "long_name": "Simple Ratio (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
+            "short_name": "SR705",
             "type": "vegetation"
         },
         "SWI": {

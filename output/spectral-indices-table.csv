@@ -52,6 +52,7 @@ NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07
 NDSII,Normalized Difference Snow Ice Index,snow,(R - S1) / (R + S1),"['R', 'S1']",https://doi.org/10.1080/01431160119766,https://github.com/davemlz,2021-09-18
 NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),"['N', 'R']",https://doi.org/10.1016/0034-4257(79)90013-0,https://github.com/davemlz,2021-04-07
+NDVI705,Normalized Difference Vegetation Index (705 and 750 nm),vegetation,(RE2 - RE1) / (RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
 NDVIT,Normalized Difference Vegetation Index Thermal,burn,(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0)),"['N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 NDWI,Normalized Difference Water Index,water,(G - N) / (G + N),"['G', 'N']",https://doi.org/10.1080/01431169608948714,https://github.com/davemlz,2021-04-07
 NDYI,Normalized Difference Yellowness Index,vegetation,(G - B) / (G + B),"['G', 'B']",https://doi.org/10.1016/j.rse.2016.06.016,https://github.com/davemlz,2021-09-18
@@ -72,6 +73,8 @@ SAVI,Soil-Adjusted Vegetation Index,vegetation,(1.0 + L) * (N - R) / (N + R + L)
 SAVI2,Soil-Adjusted Vegetation Index 2,vegetation,N / (R + (slb / sla)),"['N', 'R', 'slb', 'sla']",https://doi.org/10.1080/01431169008955053,https://github.com/davemlz,2021-05-14
 SAVIT,Soil-Adjusted Vegetation Index Thermal,burn,(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L),"['L', 'N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 SIPI,Structure Insensitive Pigment Index,vegetation,(N - A) / (N - R),"['N', 'A', 'R']",https://eurekamag.com/research/009/395/009395053.php,https://github.com/davemlz,2021-09-17
+SR555,Simple Ratio (555 and 750 nm),vegetation,RE2 / G,"['RE2', 'G']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
+SR705,Simple Ratio (705 and 750 nm),vegetation,RE2 / RE1,"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
 SWI,Snow Water Index,snow,(G * (N - S1)) / ((G + N) * (N + S1)),"['G', 'N', 'S1']",https://doi.org/10.3390/rs11232774,https://github.com/davemlz,2021-09-18
 SeLI,Sentinel-2 LAI Green Index,vegetation,(RE4 - RE1) / (RE4 + RE1),"['RE4', 'RE1']",https://doi.org/10.3390/s19040904,https://github.com/davemlz,2021-04-08
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index,vegetation,3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R)),"['RE1', 'R', 'G']",https://doi.org/10.1016/S0034-4257(02)00018-4,https://github.com/davemlz,2021-05-13
