@@ -819,5 +819,23 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
+        TCARIOSAVI=SpectralIndex(
+            short_name='TCARIOSAVI',
+            long_name='TCARI/OSAVI Ratio',
+            formula='(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))',
+            reference='https://doi.org/10.1016/S0034-4257(02)00018-4',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
+        MCARIOSAVI=SpectralIndex(
+            short_name='MCARIOSAVI',
+            long_name='MCARI/OSAVI Ratio',
+            formula='(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))',
+            reference='https://doi.org/10.1016/S0034-4257(00)00113-9',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

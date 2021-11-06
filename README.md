@@ -305,7 +305,8 @@ The kernel indices are constructed using a special type of parameters:
 
 ### M
 
-- [MCARI](http://dx.doi.org/10.1016/S0034-4257(00)00113-9): Modified Chlorophyll Absorption in Reflectance Index. 
+- [MCARI](http://dx.doi.org/10.1016/S0034-4257(00)00113-9): Modified Chlorophyll Absorption in Reflectance Index.
+- [MCARIOSAVI](https://doi.org/10.1016/S0034-4257(00)00113-9): MCARI/OSAVI Ratio. 
 - [MCARI1](https://doi.org/10.1016/j.rse.2003.12.013): Modified Chlorophyll Absorption in Reflectance Index 1.
 - [MCARI2](https://doi.org/10.1016/j.rse.2003.12.013): Modified Chlorophyll Absorption in Reflectance Index 2. 
 - [MGRVI](https://doi.org/10.1016/j.jag.2015.02.012): Modified Green Red Vegetation Index.  
@@ -349,6 +350,7 @@ The kernel indices are constructed using a special type of parameters:
 ### T
 
 - [TCARI](https://doi.org/10.1016/S0034-4257(02)00018-4): Transformed Chlorophyll Absorption in Reflectance Index.
+- [TCARIOSAVI](https://doi.org/10.1016/S0034-4257(02)00018-4): TCARI/OSAVI Ratio.
 - [TCI](http://dx.doi.org/10.1109/TGRS.2007.904836): Triangular Chlorophyll Index.
 - [TGI](http://dx.doi.org/10.1016/j.jag.2012.07.020): Triangular Greenness Index.
 - [TRRVI](https://doi.org/10.3390/rs12152359): Transformed Red Range Vegetation Index.
