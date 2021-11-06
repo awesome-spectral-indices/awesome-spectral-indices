@@ -23,11 +23,15 @@ IRECI,Inverted Red-Edge Chlorophyll Index [`ref <https://doi.org/10.1016/j.isprs
 MCARI,Modified Chlorophyll Absorption in Reflectance Index [`ref <http://dx.doi.org/10.1016/S0034-4257(00)00113-9>`_],:math:`((RE1-R)-0.2\times (RE1-G))\times (RE1/R)`
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (2.5\times (N-R)-1.3\times (N-G))`
 MCARI2,Modified Chlorophyll Absorption in Reflectance Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (2.5\times (N-R)-1.3\times (N-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
+MCARI705,Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`((RE2-RE1)-0.2\times (RE2-G))\times (RE2/RE1)`
+MCARIOSAVI,MCARI/OSAVI Ratio [`ref <https://doi.org/10.1016/S0034-4257(00)00113-9>`_],:math:`(((RE1-R)-0.2\times (RE1-G))\times (RE1/R))/(1.16\times (N-R)/(N+R+0.16))`
+MCARIOSAVI705,MCARI/OSAVI Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`(((RE2-RE1)-0.2\times (RE2-G))\times (RE2/RE1))/(1.16\times (RE2-RE1)/(RE2+RE1+0.16))`
 MGRVI,Modified Green Red Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2015.02.012>`_],:math:`(G^{2.0}-R^{2.0})/(G^{2.0}+R^{2.0})`
 MNDVI,Modified Normalized Difference Vegetation Index [`ref <https://doi.org/10.1080/014311697216810>`_],:math:`(N-S2)/(N+S2)`
 MNLI,Modified Non-Linear Vegetation Index [`ref <https://doi.org/10.1109/TGRS.2003.812910>`_],:math:`(1+L)\times ((N^2)-R)/((N^2)+R+L)`
 MSAVI,Modified Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)90134-1>`_],:math:`0.5\times (2.0\times N+1-(((2\times N+1)^2)-8\times (N-R))^{0.5})`
 MSR,Modified Simple Ratio [`ref <https://doi.org/10.1080/07038992.1996.10855178>`_],:math:`(N/R-1)/((N/R+1)^{0.5})`
+MSR705,Modified Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`(RE2/RE1-1)/((RE2/RE1+1)^{0.5})`
 MTCI,MERIS Terrestrial Chlorophyll Index [`ref <https://doi.org/10.1080/0143116042000274015>`_],:math:`(RE2-RE1)/(RE1-R)`
 MTVI1,Modified Triangular Vegetation Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (1.2\times (N-G)-2.5\times (R-G))`
 MTVI2,Modified Triangular Vegetation Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (1.2\times (N-G)-2.5\times (R-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
@@ -49,6 +53,8 @@ SAVI2,Soil-Adjusted Vegetation Index 2 [`ref <https://doi.org/10.1080/0143116900
 SIPI,Structure Insensitive Pigment Index [`ref <https://eurekamag.com/research/009/395/009395053.php>`_],:math:`(N-A)/(N-R)`
 SeLI,Sentinel-2 LAI Green Index [`ref <https://doi.org/10.3390/s19040904>`_],:math:`(RE4-RE1)/(RE4+RE1)`
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index [`ref <https://doi.org/10.1016/S0034-4257(02)00018-4>`_],:math:`3\times ((RE1-R)-0.2\times (RE1-G)\times (RE1/R))`
+TCARIOSAVI,TCARI/OSAVI Ratio [`ref <https://doi.org/10.1016/S0034-4257(02)00018-4>`_],:math:`(3\times ((RE1-R)-0.2\times (RE1-G)\times (RE1/R)))/(1.16\times (N-R)/(N+R+0.16))`
+TCARIOSAVI705,TCARI/OSAVI Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`(3\times ((RE2-RE1)-0.2\times (RE2-G)\times (RE2/RE1)))/(1.16\times (RE2-RE1)/(RE2+RE1+0.16))`
 TCI,Triangular Chlorophyll Index [`ref <http://dx.doi.org/10.1109/TGRS.2007.904836>`_],:math:`1.2\times (RE1-G)-1.5\times (R-G)\times (RE1/R)^{0.5}`
 TGI,Triangular Greenness Index [`ref <http://dx.doi.org/10.1016/j.jag.2012.07.020>`_],:math:`-0.5\times (190\times (R-G)-120\times (R-B))`
 TRRVI,Transformed Red Range Vegetation Index [`ref <https://doi.org/10.3390/rs12152359>`_],:math:`((RE2-R)/(RE2+R))/(((N-R)/(N+R))+1.0)`

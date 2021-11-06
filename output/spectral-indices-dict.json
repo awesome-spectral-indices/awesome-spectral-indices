@@ -425,6 +425,49 @@
             "short_name": "MCARI2",
             "type": "vegetation"
         },
+        "MCARI705": {
+            "bands": [
+                "RE2",
+                "RE1",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)",
+            "long_name": "Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
+            "short_name": "MCARI705",
+            "type": "vegetation"
+        },
+        "MCARIOSAVI": {
+            "bands": [
+                "RE1",
+                "R",
+                "G",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))",
+            "long_name": "MCARI/OSAVI Ratio",
+            "reference": "https://doi.org/10.1016/S0034-4257(00)00113-9",
+            "short_name": "MCARIOSAVI",
+            "type": "vegetation"
+        },
+        "MCARIOSAVI705": {
+            "bands": [
+                "RE2",
+                "RE1",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
+            "long_name": "MCARI/OSAVI Ratio (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
+            "short_name": "MCARIOSAVI705",
+            "type": "vegetation"
+        },
         "MGRVI": {
             "bands": [
                 "G",
@@ -502,6 +545,19 @@
             "long_name": "Modified Simple Ratio",
             "reference": "https://doi.org/10.1080/07038992.1996.10855178",
             "short_name": "MSR",
+            "type": "vegetation"
+        },
+        "MSR705": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)",
+            "long_name": "Modified Simple Ratio (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
+            "short_name": "MSR705",
             "type": "vegetation"
         },
         "MTCI": {
@@ -992,6 +1048,35 @@
             "long_name": "Transformed Chlorophyll Absorption in Reflectance Index",
             "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
             "short_name": "TCARI",
+            "type": "vegetation"
+        },
+        "TCARIOSAVI": {
+            "bands": [
+                "RE1",
+                "R",
+                "G",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))",
+            "long_name": "TCARI/OSAVI Ratio",
+            "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
+            "short_name": "TCARIOSAVI",
+            "type": "vegetation"
+        },
+        "TCARIOSAVI705": {
+            "bands": [
+                "RE2",
+                "RE1",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-06",
+            "formula": "(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
+            "long_name": "TCARI/OSAVI Ratio (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
+            "short_name": "TCARIOSAVI705",
             "type": "vegetation"
         },
         "TCI": {
