@@ -900,5 +900,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
+        REDSI=SpectralIndex(
+            short_name='REDSI',
+            long_name='Red-Edge Disease Stress Index',
+            formula='((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)',
+            reference='https://doi.org/10.3390/s18030868',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

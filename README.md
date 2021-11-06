@@ -340,6 +340,7 @@ The kernel indices are constructed using a special type of parameters:
 ### R
 
 - [RDVI](https://doi.org/10.1016/0034-4257(94)00114-3): Renormalized Difference Vegetation Index.
+- [REDSI](https://doi.org/10.3390/s18030868): Red-Edge Disease Stress Index.
 - [RVI](https://doi.org/10.2134/agronj1968.00021962006000060016x): Ratio Vegetation Index.
 
 ### S
