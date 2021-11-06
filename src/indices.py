@@ -837,5 +837,41 @@ spindex = SpectralIndices(
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
+        TCARIOSAVI705=SpectralIndex(
+            short_name='TCARIOSAVI705',
+            long_name='TCARI/OSAVI Ratio (705 and 750 nm)',
+            formula='(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))',
+            reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
+        MCARIOSAVI705=SpectralIndex(
+            short_name='MCARIOSAVI705',
+            long_name='MCARI/OSAVI Ratio (705 and 750 nm)',
+            formula='(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))',
+            reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
+        MCARI705=SpectralIndex(
+            short_name='MCARI705',
+            long_name='Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)',
+            formula='((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)',
+            reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
+        MSR705=SpectralIndex(
+            short_name='MSR705',
+            long_name='Modified Simple Ratio (705 and 750 nm)',
+            formula='(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)',
+            reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
+            type='vegetation',
+            date_of_addition='2021-11-06',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
