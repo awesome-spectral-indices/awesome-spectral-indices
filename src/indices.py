@@ -918,5 +918,23 @@ spindex = SpectralIndices(
             date_of_addition='2021-11-16',
             contributor="https://github.com/davemlz"
         ),
+        AFRI2100=SpectralIndex(
+            short_name='AFRI2100',
+            long_name='Aerosol Free Vegetation Index (2100 nm)',
+            formula='(N - 0.5 * S2) / (N + 0.5 * S2)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00190-0',
+            type='vegetation',
+            date_of_addition='2021-11-17',
+            contributor="https://github.com/davemlz"
+        ),
+        AFRI1600=SpectralIndex(
+            short_name='AFRI1600',
+            long_name='Aerosol Free Vegetation Index (1600 nm)',
+            formula='(N - 0.66 * S1) / (N + 0.66 * S1)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00190-0',
+            type='vegetation',
+            date_of_addition='2021-11-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
