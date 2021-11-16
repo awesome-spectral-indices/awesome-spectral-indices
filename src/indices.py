@@ -909,5 +909,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
+        NIRv=SpectralIndex(
+            short_name='NIRv',
+            long_name='Near-Infrared Reflectance of Vegetation',
+            formula='((N - R) / (N + R)) * N',
+            reference='https://doi.org/10.1126/sciadv.1602244',
+            type='vegetation',
+            date_of_addition='2021-11-16',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
