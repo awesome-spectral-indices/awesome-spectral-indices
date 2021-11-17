@@ -1,5 +1,31 @@
 {
     "SpectralIndices": {
+        "AFRI1600": {
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-17",
+            "formula": "(N - 0.66 * S1) / (N + 0.66 * S1)",
+            "long_name": "Aerosol Free Vegetation Index (1600 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
+            "short_name": "AFRI1600",
+            "type": "vegetation"
+        },
+        "AFRI2100": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-17",
+            "formula": "(N - 0.5 * S2) / (N + 0.5 * S2)",
+            "long_name": "Aerosol Free Vegetation Index (2100 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
+            "short_name": "AFRI2100",
+            "type": "vegetation"
+        },
         "ARI": {
             "bands": [
                 "G",
@@ -812,6 +838,19 @@
             "reference": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
             "short_name": "NHFD",
             "type": "urban"
+        },
+        "NIRv": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-16",
+            "formula": "((N - R) / (N + R)) * N",
+            "long_name": "Near-Infrared Reflectance of Vegetation",
+            "reference": "https://doi.org/10.1126/sciadv.1602244",
+            "short_name": "NIRv",
+            "type": "vegetation"
         },
         "NLI": {
             "bands": [

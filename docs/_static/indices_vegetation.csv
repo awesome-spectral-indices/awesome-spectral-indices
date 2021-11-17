@@ -1,4 +1,6 @@
 Index,Long Name,Equation
+AFRI1600,Aerosol Free Vegetation Index (1600 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00190-0>`_],:math:`(N-0.66\times S1)/(N+0.66\times S1)`
+AFRI2100,Aerosol Free Vegetation Index (2100 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00190-0>`_],:math:`(N-0.5\times S2)/(N+0.5\times S2)`
 ARI,Anthocyanin Reflectance Index [`ref <https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2>`_],:math:`(1/G)-(1/RE1)`
 ARVI,Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(N-(R-\gamma \times (R-B)))/(N+(R-\gamma \times (R-B)))`
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(91)90009-U>`_],:math:`sla\times (N-sla\times R-slb)/(sla\times N+R-sla\times slb+0.08\times (1+sla^{2.0}))`
@@ -40,6 +42,7 @@ NDVI,Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`(RE2-RE1)/(RE2+RE1)`
 NDYI,Normalized Difference Yellowness Index [`ref <https://doi.org/10.1016/j.rse.2016.06.016>`_],:math:`(G-B)/(G+B)`
 NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(G-R)/(G+R)`
+NIRv,Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1126/sciadv.1602244>`_],:math:`((N-R)/(N+R))\times N`
 NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252>`_],:math:`((N^2)-R)/((N^2)+R)`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
 NRFIr,Normalized Rapeseed Flowering Index Red [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(R-S2)/(R+S2)`
