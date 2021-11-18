@@ -69,6 +69,8 @@ For the formula attribute, the standard variables for spectral indices expressio
      - sla
    * - Soil line intercept.
      - slb
+   * - Photosynthetically Active Radiation.
+     - PAR
    * - k(A,B)
      - kAB
 

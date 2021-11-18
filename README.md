@@ -234,6 +234,7 @@ Additional index parameters also follow a standard:
 - `gamma`: Weighting coefficient used for ARVI.
 - `sla`: Soil line slope.
 - `slb`: Soil line intercept.
+- `PAR`: Photosynthetically Active Radiation.
 
 The kernel indices are constructed using a special type of parameters:
 
@@ -331,6 +332,7 @@ The kernel indices are constructed using a special type of parameters:
 - [NDYI](https://doi.org/10.1016/j.rse.2016.06.016): Normalized Difference Yellowness Index.
 - [NGRDI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Green Red Difference Index.
 - [NIRv](https://doi.org/10.1126/sciadv.1602244): Near-Infrared Reflectance of Vegetation.
+- [NIRvP](https://doi.org/10.1016/j.rse.2021.112763): Near-Infrared Reflectance of Vegetation and Incoming PAR.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
 - [NRFIg](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Green.
 - [NRFIr](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Red.

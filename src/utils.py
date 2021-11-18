@@ -28,6 +28,7 @@ class Bands(Enum):
     ALPHA = "alpha"
     SOIL_LINE_SLOPE = "sla"
     SOIL_LINE_INTERCEPT = "slb"
+    PAR = "PAR"
     KNN = "kNN"
     KNR = "kNR"
     KNB = "kNB"

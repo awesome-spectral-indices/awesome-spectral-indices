@@ -179,6 +179,7 @@ Additional index parameters also follow a standard:
 - :code:`gamma`: Weighting coefficient used for ARVI.
 - :code:`sla`: Soil line slope.
 - :code:`slb`: Soil line intercept.
+- :code:`PAR`: Photosynthetically Active Radiation.
 
 The kernel indices are constructed using a special type of parameters:
 
