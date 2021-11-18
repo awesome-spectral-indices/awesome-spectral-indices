@@ -199,7 +199,7 @@ Python
 
 - `eemont <https://github.com/davemlz/eemont>`_: A python package that extends Google Earth Engine.
 - `eeExtra <https://github.com/r-earthengine/ee_extra>`_: A ninja Python package behind rgee, rgeeExtra and eemont.
-- `spnydex <https://github.com/davemlz/spyndex>`_: Awesome Spectral Indices in Python.
+- `spyndex <https://github.com/davemlz/spyndex>`_: Awesome Spectral Indices in Python.
 
 R
 ~
