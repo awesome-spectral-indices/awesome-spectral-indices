@@ -852,6 +852,20 @@
             "short_name": "NIRv",
             "type": "vegetation"
         },
+        "NIRvP": {
+            "bands": [
+                "N",
+                "R",
+                "PAR"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-11-18",
+            "formula": "((N - R) / (N + R)) * N * PAR",
+            "long_name": "Near-Infrared Reflectance of Vegetation and Incoming PAR",
+            "reference": "https://doi.org/10.1016/j.rse.2021.112763",
+            "short_name": "NIRvP",
+            "type": "vegetation"
+        },
         "NLI": {
             "bands": [
                 "N",

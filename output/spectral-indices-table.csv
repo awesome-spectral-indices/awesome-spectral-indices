@@ -61,6 +61,7 @@ NDYI,Normalized Difference Yellowness Index,vegetation,(G - B) / (G + B),"['G', 
 NGRDI,Normalized Green Red Difference Index,vegetation,(G - R) / (G + R),"['G', 'R']",https://doi.org/10.1016/0034-4257(79)90013-0,https://github.com/davemlz,2021-04-07
 NHFD,Non-Homogeneous Feature Difference,urban,(RE1 - A) / (RE1 + A),"['RE1', 'A']",https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4,https://github.com/davemlz,2021-09-17
 NIRv,Near-Infrared Reflectance of Vegetation,vegetation,((N - R) / (N + R)) * N,"['N', 'R']",https://doi.org/10.1126/sciadv.1602244,https://github.com/davemlz,2021-11-16
+NIRvP,Near-Infrared Reflectance of Vegetation and Incoming PAR,vegetation,((N - R) / (N + R)) * N * PAR,"['N', 'R', 'PAR']",https://doi.org/10.1016/j.rse.2021.112763,https://github.com/davemlz,2021-11-18
 NLI,Non-Linear Vegetation Index,vegetation,((N ** 2) - R)/((N ** 2) + R),"['N', 'R']",https://doi.org/10.1080/02757259409532252,https://github.com/davemlz,2021-05-11
 NMDI,Normalized Multi‐band Drought Index,drought,(N - (S1 - S2))/(N + (S1 - S2)),"['N', 'S1', 'S2']",https://doi.org/10.1029/2007GL031021,https://github.com/davemlz,2021-05-11
 NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18

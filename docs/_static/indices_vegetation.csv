@@ -43,6 +43,7 @@ NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://d
 NDYI,Normalized Difference Yellowness Index [`ref <https://doi.org/10.1016/j.rse.2016.06.016>`_],:math:`(G-B)/(G+B)`
 NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(G-R)/(G+R)`
 NIRv,Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1126/sciadv.1602244>`_],:math:`((N-R)/(N+R))\times N`
+NIRvP,Near-Infrared Reflectance of Vegetation and Incoming PAR [`ref <https://doi.org/10.1016/j.rse.2021.112763>`_],:math:`((N-R)/(N+R))\times N\times PAR`
 NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252>`_],:math:`((N^2)-R)/((N^2)+R)`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
 NRFIr,Normalized Rapeseed Flowering Index Red [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(R-S2)/(R+S2)`
