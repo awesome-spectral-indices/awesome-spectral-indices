@@ -37,6 +37,7 @@ MSR705,Modified Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.a
 MTCI,MERIS Terrestrial Chlorophyll Index [`ref <https://doi.org/10.1080/0143116042000274015>`_],:math:`(RE2-RE1)/(RE1-R)`
 MTVI1,Modified Triangular Vegetation Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (1.2\times (N-G)-2.5\times (R-G))`
 MTVI2,Modified Triangular Vegetation Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (1.2\times (N-G)-2.5\times (R-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
+NDMI,Normalized Difference Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(01)00318-2>`_],:math:`(N-S1)/(N+S1)`
 NDREI,Normalized Difference Red Edge Index [`ref <https://doi.org/10.1016/1011-1344(93)06963-4>`_],:math:`(N-RE1)/(N+RE1)`
 NDVI,Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(N-R)/(N+R)`
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`(RE2-RE1)/(RE2+RE1)`

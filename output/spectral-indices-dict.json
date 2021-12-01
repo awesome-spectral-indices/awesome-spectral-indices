@@ -708,6 +708,19 @@
             "short_name": "NDDI",
             "type": "drought"
         },
+        "NDMI": {
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/bpurinton",
+            "date_of_addition": "2021-12-01",
+            "formula": "(N - S1)/(N + S1)",
+            "long_name": "Normalized Difference Moisture Index",
+            "reference": "https://doi.org/10.1016/S0034-4257(01)00318-2",
+            "short_name": "NDMI",
+            "type": "vegetation"
+        },
         "NDREI": {
             "bands": [
                 "N",
