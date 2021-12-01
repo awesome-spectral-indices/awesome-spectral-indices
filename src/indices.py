@@ -945,5 +945,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-11-18',
             contributor="https://github.com/davemlz"
         ),
+        NDMI=SpectralIndex(
+            short_name='NDMI',
+            long_name='Normalized Difference Moisture Index',
+            formula='(N - S1)/(N + S1)',
+            reference='https://doi.org/10.1016/S0034-4257(01)00318-2',
+            type='vegetation',
+            date_of_addition='2021-12-01',
+            contributor="https://github.com/bpurinton"
+        ),
     )
 )
