@@ -70,6 +70,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <th> Description </th>
 <th> Standard </th>
+<th> Sentinel-1 </th>
 <th> Sentinel-2 </th>
 <th> Landsat-8 </th>
 <th> Landsat-457 </th>
@@ -81,6 +82,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Aerosols</td>
 <td>A</td>
+<td></td>
 <td>B1</td>
 <td>B1</td>
 <td></td>
@@ -103,6 +105,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Green</td>
 <td>G</td>
+<td></td>
 <td>B3</td>
 <td>B3</td>
 <td>B2</td>
@@ -114,6 +117,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red</td>
 <td>R</td>
+<td></td>
 <td>B4</td>
 <td>B4</td>
 <td>B3</td>
@@ -125,6 +129,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 1</td>
 <td>RE1</td>
+<td></td>
 <td>B5</td>
 <td></td>
 <td></td>
@@ -136,6 +141,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 2</td>
 <td>RE2</td>
+<td></td>
 <td>B6</td>
 <td></td>
 <td></td>
@@ -147,6 +153,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 3</td>
 <td>RE3</td>
+<td></td>
 <td>B7</td>
 <td></td>
 <td></td>
@@ -158,6 +165,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 4</td>
 <td>RE4</td>
+<td></td>
 <td>B8A</td>
 <td></td>
 <td></td>
@@ -169,6 +177,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>NIR</td>
 <td>N</td>
+<td></td>
 <td>B8</td>
 <td>B5</td>
 <td>B4</td>
@@ -180,6 +189,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>SWIR 1</td>
 <td>S1</td>
+<td></td>
 <td>B11</td>
 <td>B6</td>
 <td>B5</td>
@@ -191,6 +201,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>SWIR 2</td>
 <td>S2</td>
+<td></td>
 <td>B12</td>
 <td>B7</td>
 <td>B7</td>
@@ -203,6 +214,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Thermal 1</td>
 <td>T1</td>
 <td></td>
+<td></td>
 <td>B10</td>
 <td>B6</td>
 <td></td>
@@ -214,7 +226,56 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>Thermal 2</td>
 <td>T2</td>
 <td></td>
+<td></td>
 <td>B11</td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Dual-band Cross-Polarization HV</td>
+<td>HV</td>
+<td>HV</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Dual-band Cross-Polarization VH</td>
+<td>VH</td>
+<td>VH</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Single Co-Polarization HH</td>
+<td>HH</td>
+<td>HH</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Single Co-Polarization VV</td>
+<td>VV</td>
+<td>VV</td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 
