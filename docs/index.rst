@@ -83,89 +83,131 @@ The formula of the index is presented as a string/expression (e.g. :code:`"(N - 
    :header-rows: 1
 
    * - Description
-     - Standard     
+     - Standard
+     - Sentinel-1   
      - Sentinel-2
      - Landsat 8
      - Landsat 457
      - MODIS     
    * - Aerosols
      - A
+     -
      - B1
      - B1
      -
      -     
    * - Blue
      - B
+     -
      - B2
      - B2
      - B1
      - B3 
    * - Green
      - G
+     -
      - B3
      - B3
      - B2
      - B4    
    * - Red
      - R
+     -
      - B4
      - B4
      - B3
      - B1
    * - Red Edge 1
      - RE1
+     -
      - B5
      - 
      -
      -     
    * - Red Edge 2
      - RE2
+     -
      - B6
      - 
      -
      -     
    * - Red Edge 3
      - RE3
+     -
      - B7
      - 
      -
      -     
    * - Red Edge 4
      - RE4
+     -
      - B8A
      - 
      -
      -     
    * - NIR
      - N
+     -
      - B8
      - B5
      - B4
      - B2
    * - SWIR 1
      - S1
+     -
      - B11
      - B6
      - B5
      - B6     
    * - SWIR 2
      - S2
+     -
      - B12
      - B7
      - B7
      - B7   
    * - Thermal 1
      - T1
+     -
      - 
      - B10
      - B6
      -     
    * - Thermal 2
      - T2
+     -
      - 
      - B11
      - 
-     -    
+     -
+   * - Backscattering Coefficient HV
+     - HV
+     - HV
+     - 
+     -
+     - 
+     -
+   * - Backscattering Coefficient VH
+     - VH
+     - VH
+     - 
+     -
+     - 
+     -
+   * - Backscattering Coefficient HH
+     - HH
+     - HH
+     - 
+     -
+     - 
+     -
+   * - Backscattering Coefficient VV
+     - VV
+     - VV
+     - 
+     -
+     - 
+     -
 
 Additional index parameters also follow a standard:
 

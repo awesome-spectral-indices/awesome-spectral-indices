@@ -55,3 +55,10 @@ Kernel
 .. csv-table:: Kernel Spectral Indices
    :file: _static/indices_kernel.csv   
    :header-rows: 1
+
+RADAR
+--------------
+   
+.. csv-table:: RADAR Spectral Indices
+   :file: _static/indices_radar.csv   
+   :header-rows: 1

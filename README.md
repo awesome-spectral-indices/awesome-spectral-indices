@@ -236,7 +236,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
-<td>Dual-band Cross-Polarization HV</td>
+<td>Backscattering Coefficient HV</td>
 <td>HV</td>
 <td>HV</td>
 <td></td>
@@ -248,7 +248,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
-<td>Dual-band Cross-Polarization VH</td>
+<td>Backscattering Coefficient VH</td>
 <td>VH</td>
 <td>VH</td>
 <td></td>
@@ -260,7 +260,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
-<td>Single Co-Polarization HH</td>
+<td>Backscattering Coefficient HH</td>
 <td>HH</td>
 <td>HH</td>
 <td></td>
@@ -272,7 +272,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
-<td>Single Co-Polarization VV</td>
+<td>Backscattering Coefficient VV</td>
 <td>VV</td>
 <td>VV</td>
 <td></td>

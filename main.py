@@ -39,6 +39,6 @@ def toMath(x):
 df["Equation"] = df["formula"].apply(toMath)
 df["Long Name"] = df["long_name"] + " [`ref <" + df["reference"] + ">`_]"
 df["Index"] = df["short_name"]
-for t in ["vegetation","burn","water","snow","drought","urban","kernel"]:
+for t in ["vegetation","burn","water","snow","drought","urban","kernel","radar"]:
     name = "docs/_static/indices_" + t + ".csv"
     df[df["type"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)
