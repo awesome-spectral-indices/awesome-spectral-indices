@@ -960,6 +960,20 @@
             "short_name": "OSAVI",
             "type": "vegetation"
         },
+        "RAVI": {
+            "bands": [
+                "HV",
+                "HH",
+                "VV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-12-24",
+            "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
+            "long_name": "Radar Vegetation Index",
+            "reference": "https://doi.org/10.1109/IGARSS.2001.976856",
+            "short_name": "RAVI",
+            "type": "radar"
+        },
         "RDVI": {
             "bands": [
                 "N",
