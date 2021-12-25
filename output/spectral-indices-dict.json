@@ -223,6 +223,32 @@
             "short_name": "DVI",
             "type": "vegetation"
         },
+        "DpRVIHH": {
+            "bands": [
+                "HV",
+                "HH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-12-25",
+            "formula": "(4.0 * HV)/(HH + HV)",
+            "long_name": "Dual-Polarized Radar Vegetation Index HH",
+            "reference": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
+            "short_name": "DpRVIHH",
+            "type": "radar"
+        },
+        "DpRVIVV": {
+            "bands": [
+                "VH",
+                "VV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-12-25",
+            "formula": "(4.0 * VH)/(VV + VH)",
+            "long_name": "Dual-Polarized Radar Vegetation Index VV",
+            "reference": "https://doi.org/10.3390/app9040655",
+            "short_name": "DpRVIVV",
+            "type": "radar"
+        },
         "EBBI": {
             "bands": [
                 "S1",
@@ -960,7 +986,7 @@
             "short_name": "OSAVI",
             "type": "vegetation"
         },
-        "RAVI": {
+        "QpRVI": {
             "bands": [
                 "HV",
                 "HH",
@@ -969,9 +995,9 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-24",
             "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
-            "long_name": "Radar Vegetation Index",
+            "long_name": "Quad-Polarized Radar Vegetation Index",
             "reference": "https://doi.org/10.1109/IGARSS.2001.976856",
-            "short_name": "RAVI",
+            "short_name": "QpRVI",
             "type": "radar"
         },
         "RDVI": {

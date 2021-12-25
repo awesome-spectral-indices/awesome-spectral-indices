@@ -15,6 +15,8 @@ CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://www.cabdirect.org/cabdirect/abstract/20073176046,https://github.com/davemlz,2021-04-07
 DVI,Difference Vegetation Index,vegetation,N - R,"['N', 'R']",https://doi.org/10.2307/1936256,https://github.com/davemlz,2021-05-14
+DpRVIHH,Dual-Polarized Radar Vegetation Index HH,radar,(4.0 * HV)/(HH + HV),"['HV', 'HH']",https://www.tandfonline.com/doi/abs/10.5589/m12-043,https://github.com/davemlz,2021-12-25
+DpRVIVV,Dual-Polarized Radar Vegetation Index VV,radar,(4.0 * VH)/(VV + VH),"['VH', 'VV']",https://doi.org/10.3390/app9040655,https://github.com/davemlz,2021-12-25
 EBBI,Enhanced Built-Up and Bareness Index,urban,(S1 - N) / (10.0 * ((S1 + T1) ** 0.5)),"['S1', 'N', 'T1']",https://doi.org/10.3390/rs4102957,https://github.com/davemlz,2021-09-17
 EVI,Enhanced Vegetation Index,vegetation,g * (N - R) / (N + C1 * R - C2 * B + L),"['g', 'N', 'R', 'C1', 'C2', 'B', 'L']",https://doi.org/10.1016/S0034-4257(96)00112-5,https://github.com/davemlz,2021-04-07
 EVI2,Two-Band Enhanced Vegetation Index,vegetation,g * (N - R) / (N + 2.4 * R + L),"['g', 'N', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,https://github.com/davemlz,2021-04-07
@@ -69,7 +71,7 @@ NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),"
 NRFIr,Normalized Rapeseed Flowering Index Red,vegetation,(R - S2) / (R + S2),"['R', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 OCVI,Optimized Chlorophyll Vegetation Index,vegetation,(N / G) * (R / G) ** cexp,"['N', 'G', 'R', 'cexp']",http://dx.doi.org/10.1007/s11119-008-9075-z,https://github.com/davemlz,2021-05-13
 OSAVI,Optimized Soil-Adjusted Vegetation Index,vegetation,(N - R) / (N + R + 0.16),"['N', 'R']",https://doi.org/10.1016/0034-4257(95)00186-7,https://github.com/davemlz,2021-05-11
-RAVI,Radar Vegetation Index,radar,(8.0 * HV)/(HH + VV + 2.0 * HV),"['HV', 'HH', 'VV']",https://doi.org/10.1109/IGARSS.2001.976856,https://github.com/davemlz,2021-12-24
+QpRVI,Quad-Polarized Radar Vegetation Index,radar,(8.0 * HV)/(HH + VV + 2.0 * HV),"['HV', 'HH', 'VV']",https://doi.org/10.1109/IGARSS.2001.976856,https://github.com/davemlz,2021-12-24
 RDVI,Renormalized Difference Vegetation Index,vegetation,(N - R) / ((N + R) ** 0.5),"['N', 'R']",https://doi.org/10.1016/0034-4257(94)00114-3,https://github.com/davemlz,2021-05-14
 REDSI,Red-Edge Disease Stress Index,vegetation,((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R),"['RE3', 'R', 'RE1']",https://doi.org/10.3390/s18030868,https://github.com/davemlz,2021-11-06
 RFDI,Radar Forest Degradation Index,radar,(HH - HV)/(HH + HV),"['HH', 'HV']",https://doi.org/10.5194/bg-9-179-2012,https://github.com/davemlz,2021-12-25
