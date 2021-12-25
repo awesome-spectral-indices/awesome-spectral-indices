@@ -954,5 +954,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-12-01',
             contributor="https://github.com/bpurinton"
         ),
+        RAVI=SpectralIndex(
+            short_name='RAVI',
+            long_name='Radar Vegetation Index',
+            formula='(8.0 * HV)/(HH + VV + 2.0 * HV)',
+            reference='https://doi.org/10.1109/IGARSS.2001.976856',
+            type='radar',
+            date_of_addition='2021-12-24',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
