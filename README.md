@@ -94,6 +94,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Blue</td>
 <td>B</td>
+<td></td>
 <td>B2</td>
 <td>B2</td>
 <td>B1</td>
