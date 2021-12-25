@@ -494,7 +494,8 @@ The kernel indices are constructed using a special type of parameters:
 
 ## RADAR 🛰️
 
-- [RAVI](https://doi.org/10.1109/IGARSS.2001.976856): Radar Vegetation Index (Originally RVI, renamed RAVI here to avoid confusion with the [Ratio Vegetation Index](https://doi.org/10.2134/agronj1968.00021962006000060016x)).
+- [RAVI](https://doi.org/10.1109/IGARSS.2001.976856): Radar Vegetation Index (Originally RVI, renamed RAVI to avoid conflicts with the [Ratio Vegetation Index](https://doi.org/10.2134/agronj1968.00021962006000060016x)).
+- [RFDI](https://doi.org/10.5194/bg-9-179-2012): Radar Forest Degradation Index.
 
 # List
 

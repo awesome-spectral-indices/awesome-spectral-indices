@@ -963,5 +963,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-12-24',
             contributor="https://github.com/davemlz"
         ),
+        RFDI=SpectralIndex(
+            short_name='RFDI',
+            long_name='Radar Forest Degradation Index',
+            formula='(HH - HV)/(HH + HV)',
+            reference='https://doi.org/10.5194/bg-9-179-2012',
+            type='radar',
+            date_of_addition='2021-12-25',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
