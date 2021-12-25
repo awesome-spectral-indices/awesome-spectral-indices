@@ -1001,6 +1001,19 @@
             "short_name": "REDSI",
             "type": "vegetation"
         },
+        "RFDI": {
+            "bands": [
+                "HH",
+                "HV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2021-12-25",
+            "formula": "(HH - HV)/(HH + HV)",
+            "long_name": "Radar Forest Degradation Index",
+            "reference": "https://doi.org/10.5194/bg-9-179-2012",
+            "short_name": "RFDI",
+            "type": "radar"
+        },
         "RVI": {
             "bands": [
                 "N",

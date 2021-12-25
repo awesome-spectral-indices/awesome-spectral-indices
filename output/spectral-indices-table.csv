@@ -72,6 +72,7 @@ OSAVI,Optimized Soil-Adjusted Vegetation Index,vegetation,(N - R) / (N + R + 0.1
 RAVI,Radar Vegetation Index,radar,(8.0 * HV)/(HH + VV + 2.0 * HV),"['HV', 'HH', 'VV']",https://doi.org/10.1109/IGARSS.2001.976856,https://github.com/davemlz,2021-12-24
 RDVI,Renormalized Difference Vegetation Index,vegetation,(N - R) / ((N + R) ** 0.5),"['N', 'R']",https://doi.org/10.1016/0034-4257(94)00114-3,https://github.com/davemlz,2021-05-14
 REDSI,Red-Edge Disease Stress Index,vegetation,((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R),"['RE3', 'R', 'RE1']",https://doi.org/10.3390/s18030868,https://github.com/davemlz,2021-11-06
+RFDI,Radar Forest Degradation Index,radar,(HH - HV)/(HH + HV),"['HH', 'HV']",https://doi.org/10.5194/bg-9-179-2012,https://github.com/davemlz,2021-12-25
 RVI,Ratio Vegetation Index,vegetation,N / R,"['N', 'R']",https://doi.org/10.2134/agronj1968.00021962006000060016x,https://github.com/davemlz,2021-04-07
 S2REP,Sentinel-2 Red-Edge Position,vegetation,705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1)),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 S3,S3 Snow Index,snow,(N * (R - S1)) / ((N + R) * (N + S1)),"['N', 'R', 'S1']",https://doi.org/10.3178/jjshwr.12.28,https://github.com/davemlz,2021-09-18

@@ -1,0 +1,3 @@
+Index,Long Name,Equation
+RAVI,Radar Vegetation Index [`ref <https://doi.org/10.1109/IGARSS.2001.976856>`_],:math:`(8.0\times HV)/(HH+VV+2.0\times HV)`
+RFDI,Radar Forest Degradation Index [`ref <https://doi.org/10.5194/bg-9-179-2012>`_],:math:`(HH-HV)/(HH+HV)`
