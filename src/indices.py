@@ -954,9 +954,9 @@ spindex = SpectralIndices(
             date_of_addition='2021-12-01',
             contributor="https://github.com/bpurinton"
         ),
-        RAVI=SpectralIndex(
-            short_name='RAVI',
-            long_name='Radar Vegetation Index',
+        QpRVI=SpectralIndex(
+            short_name='QpRVI',
+            long_name='Quad-Polarized Radar Vegetation Index',
             formula='(8.0 * HV)/(HH + VV + 2.0 * HV)',
             reference='https://doi.org/10.1109/IGARSS.2001.976856',
             type='radar',
@@ -968,6 +968,24 @@ spindex = SpectralIndices(
             long_name='Radar Forest Degradation Index',
             formula='(HH - HV)/(HH + HV)',
             reference='https://doi.org/10.5194/bg-9-179-2012',
+            type='radar',
+            date_of_addition='2021-12-25',
+            contributor="https://github.com/davemlz"
+        ),
+        DpRVIHH=SpectralIndex(
+            short_name='DpRVIHH',
+            long_name='Dual-Polarized Radar Vegetation Index HH',
+            formula='(4.0 * HV)/(HH + HV)',
+            reference='https://www.tandfonline.com/doi/abs/10.5589/m12-043',
+            type='radar',
+            date_of_addition='2021-12-25',
+            contributor="https://github.com/davemlz"
+        ),
+        DpRVIVV=SpectralIndex(
+            short_name='DpRVIVV',
+            long_name='Dual-Polarized Radar Vegetation Index VV',
+            formula='(4.0 * VH)/(VV + VH)',
+            reference='https://doi.org/10.3390/app9040655',
             type='radar',
             date_of_addition='2021-12-25',
             contributor="https://github.com/davemlz"
