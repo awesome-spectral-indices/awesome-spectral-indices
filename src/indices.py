@@ -1008,5 +1008,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        NDVIMNDWI=SpectralIndex(
+            short_name='NDVIMNDWI',
+            long_name='NDVI-MNDWI Model',
+            formula='((N - R)/(N + R)) - ((G - S1)/(G + S1))',
+            reference='https://doi.org/10.1007/978-3-662-45737-5_51',
+            type='water',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
