@@ -990,5 +990,14 @@ spindex = SpectralIndices(
             date_of_addition='2021-12-25',
             contributor="https://github.com/davemlz"
         ),
+        NWI=SpectralIndex(
+            short_name='NWI',
+            long_name='New Water Index',
+            formula='(B - (N + S1 + S2))/(B + (N + S1 + S2))',
+            reference='https://doi.org/10.11873/j.issn.1004-0323.2009.2.167',
+            type='water',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
