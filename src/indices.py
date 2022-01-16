@@ -999,5 +999,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        WRI=SpectralIndex(
+            short_name='WRI',
+            long_name='Water Ratio Index',
+            formula='(G + R)/(N + S1)',
+            reference='https://doi.org/10.1109/GEOINFORMATICS.2010.5567762',
+            type='water',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

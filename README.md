@@ -466,6 +466,7 @@ The kernel indices are constructed using a special type of parameters:
 - [NWI](https://doi.org/10.11873/j.issn.1004-0323.2009.2.167): New Water Index.
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
 - [WI2](https://doi.org/10.3390/rs11182186): Water Index 2.
+- [WRI](https://doi.org/10.1109/GEOINFORMATICS.2010.5567762): Water Ratio Index.
 
 ## Snow ⛄
 
