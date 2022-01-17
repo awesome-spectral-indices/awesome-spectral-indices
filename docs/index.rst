@@ -219,6 +219,7 @@ Additional index parameters also follow a standard:
 - :code:`nexp`: Exponent used for GDVI.
 - :code:`alpha`: Weighting coefficient used for WDRVI and BWDRVI.
 - :code:`gamma`: Weighting coefficient used for ARVI.
+- :code:`omega`: Weighting coefficient used for MBWI.
 - :code:`sla`: Soil line slope.
 - :code:`slb`: Soil line intercept.
 - :code:`PAR`: Photosynthetically Active Radiation.

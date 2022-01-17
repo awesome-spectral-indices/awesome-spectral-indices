@@ -294,6 +294,7 @@ Additional index parameters also follow a standard:
 - `nexp`: Exponent used for GDVI.
 - `alpha`: Weighting coefficient used for WDRVI and BWDRVI.
 - `gamma`: Weighting coefficient used for ARVI.
+- `omega`: Weighting coefficient used for MBWI.
 - `sla`: Soil line slope.
 - `slb`: Soil line intercept.
 - `PAR`: Photosynthetically Active Radiation.
@@ -461,6 +462,7 @@ The kernel indices are constructed using a special type of parameters:
 
 - [AWEInsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index.
 - [AWEIsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index with Shadows Elimination.
+- [MBWI](https://doi.org/10.1016/j.jag.2018.01.018): Multi-Band Water Index.
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [NDVIMNDWI](https://doi.org/10.1007/978-3-662-45737-5_51): NDVI - MNDWI Model.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.

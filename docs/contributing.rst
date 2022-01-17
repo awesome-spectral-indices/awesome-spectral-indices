@@ -65,6 +65,8 @@ For the formula attribute, the standard variables for spectral indices expressio
      - alpha
    * - Weighting coefficient used for ARVI.
      - gamma
+   * - Weighting coefficient used for MBWI.
+     - omega
    * - Soil line slope.
      - sla
    * - Soil line intercept.

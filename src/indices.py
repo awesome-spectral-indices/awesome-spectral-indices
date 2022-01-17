@@ -1017,5 +1017,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        MBWI=SpectralIndex(
+            short_name='MBWI',
+            long_name='Multi-Band Water Index',
+            formula='(omega * G) - R - N - S1 - S2',
+            reference='https://doi.org/10.1016/j.jag.2018.01.018',
+            type='water',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

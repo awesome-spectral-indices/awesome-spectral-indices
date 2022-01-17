@@ -29,6 +29,7 @@ class Bands(Enum):
     SOIL_LINE_SLOPE = "sla"
     SOIL_LINE_INTERCEPT = "slb"
     PAR = "PAR"
+    OMEGA = "omega"
     HV = "HV"
     HH = "HH"
     VV = "VV"
