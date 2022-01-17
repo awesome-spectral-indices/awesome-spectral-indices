@@ -73,6 +73,12 @@ For the formula attribute, the standard variables for spectral indices expressio
      - slb
    * - Photosynthetically Active Radiation.
      - PAR
+   * - Slope parameter by soil used for NIRvH2.
+     - k
+   * - NIR wavelength used for NIRvH2.
+     - lambdaN
+   * - Red wavelength used for NIRvH2.
+     - lambdaR
    * - k(A,B)
      - kAB
 

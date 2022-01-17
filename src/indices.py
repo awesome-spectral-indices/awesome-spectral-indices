@@ -1053,5 +1053,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        NIRvH2=SpectralIndex(
+            short_name='NIRvH2',
+            long_name='Hyperspectral Near-Infrared Reflectance of Vegetation',
+            formula='N - R - k * (lambdaN - lambdaR)',
+            reference='https://doi.org/10.1016/j.rse.2021.112723',
+            type='vegetation',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

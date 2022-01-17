@@ -223,6 +223,9 @@ Additional index parameters also follow a standard:
 - :code:`sla`: Soil line slope.
 - :code:`slb`: Soil line intercept.
 - :code:`PAR`: Photosynthetically Active Radiation.
+- :code:`k`: Slope parameter by soil used for NIRvH2.
+- :code:`lambdaN`: NIR wavelength used for NIRvH2.
+- :code:`lambdaR`: Red wavelength used for NIRvH2.
 
 The kernel indices are constructed using a special type of parameters:
 
