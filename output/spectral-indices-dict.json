@@ -129,6 +129,20 @@
             "short_name": "BAIS2",
             "type": "burn"
         },
+        "BCC": {
+            "bands": [
+                "B",
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "B / (R + G + B)",
+            "long_name": "Blue Chromatic Coordinate",
+            "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
+            "short_name": "BCC",
+            "type": "vegetation"
+        },
         "BNDVI": {
             "bands": [
                 "N",
@@ -337,6 +351,20 @@
             "long_name": "Green-Blue Normalized Difference Vegetation Index",
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
             "short_name": "GBNDVI",
+            "type": "vegetation"
+        },
+        "GCC": {
+            "bands": [
+                "G",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "G / (R + G + B)",
+            "long_name": "Green Chromatic Coordinate",
+            "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
+            "short_name": "GCC",
             "type": "vegetation"
         },
         "GDVI": {
@@ -923,6 +951,22 @@
             "short_name": "NIRv",
             "type": "vegetation"
         },
+        "NIRvH2": {
+            "bands": [
+                "N",
+                "R",
+                "k",
+                "lambdaN",
+                "lambdaR"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "N - R - k * (lambdaN - lambdaR)",
+            "long_name": "Hyperspectral Near-Infrared Reflectance of Vegetation",
+            "reference": "https://doi.org/10.1016/j.rse.2021.112723",
+            "short_name": "NIRvH2",
+            "type": "vegetation"
+        },
         "NIRvP": {
             "bands": [
                 "N",
@@ -1046,6 +1090,20 @@
             "reference": "https://doi.org/10.1109/IGARSS.2001.976856",
             "short_name": "QpRVI",
             "type": "radar"
+        },
+        "RCC": {
+            "bands": [
+                "R",
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "R / (R + G + B)",
+            "long_name": "Red Chromatic Coordinate",
+            "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
+            "short_name": "RCC",
+            "type": "vegetation"
         },
         "RDVI": {
             "bands": [
