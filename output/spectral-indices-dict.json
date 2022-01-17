@@ -435,6 +435,23 @@
             "short_name": "IRECI",
             "type": "vegetation"
         },
+        "MBWI": {
+            "bands": [
+                "omega",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "(omega * G) - R - N - S1 - S2",
+            "long_name": "Multi-Band Water Index",
+            "reference": "https://doi.org/10.1016/j.jag.2018.01.018",
+            "short_name": "MBWI",
+            "type": "water"
+        },
         "MCARI": {
             "bands": [
                 "RE1",
@@ -812,6 +829,21 @@
             "short_name": "NDVI705",
             "type": "vegetation"
         },
+        "NDVIMNDWI": {
+            "bands": [
+                "N",
+                "R",
+                "G",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "((N - R)/(N + R)) - ((G - S1)/(G + S1))",
+            "long_name": "NDVI-MNDWI Model",
+            "reference": "https://doi.org/10.1007/978-3-662-45737-5_51",
+            "short_name": "NDVIMNDWI",
+            "type": "water"
+        },
         "NDVIT": {
             "bands": [
                 "N",
@@ -957,6 +989,21 @@
             "reference": "https://doi.org/10.3390/rs13010105",
             "short_name": "NRFIr",
             "type": "vegetation"
+        },
+        "NWI": {
+            "bands": [
+                "B",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "(B - (N + S1 + S2))/(B + (N + S1 + S2))",
+            "long_name": "New Water Index",
+            "reference": "https://doi.org/10.11873/j.issn.1004-0323.2009.2.167",
+            "short_name": "NWI",
+            "type": "water"
         },
         "OCVI": {
             "bands": [
@@ -1442,6 +1489,21 @@
             "long_name": "Water Index 2",
             "reference": "https://doi.org/10.3390/rs11182186",
             "short_name": "WI2",
+            "type": "water"
+        },
+        "WRI": {
+            "bands": [
+                "G",
+                "R",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-17",
+            "formula": "(G + R)/(N + S1)",
+            "long_name": "Water Ratio Index",
+            "reference": "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762",
+            "short_name": "WRI",
             "type": "water"
         },
         "kEVI": {
