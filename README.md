@@ -335,6 +335,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ### B
 
+- [BCC](https://doi.org/10.1016/0034-4257(87)90088-5): Blue Chromatic Coordinate.
 - [BNDVI](https://www.indexdatabase.de/db/i-single.php?id=135): Blue Normalized Difference Vegetation Index.
 - [BWDRVI](https://doi.org/10.2135/cropsci2007.01.0031): Blue Wide Dynamic Range Vegetation Index.
 
@@ -358,6 +359,7 @@ The kernel indices are constructed using a special type of parameters:
 
 - [GARI](https://www.indexdatabase.de/db/i-single.php?id=363): Green Atmospherically Resistant Vegetation Index.
 - [GBNDVI](https://www.indexdatabase.de/db/i-single.php?id=186): Green-Blue Normalized Difference Vegetation Index.
+- [GCC](https://doi.org/10.1016/0034-4257(87)90088-5): Green Chromatic Coordinate.
 - [GDVI](https://doi.org/10.3390/rs6021211): Generalized Difference Vegetation Index. 
 - [GEMI](http://dx.doi.org/10.1007/bf00031911): Global Environment Monitoring Index. 
 - [GLI](http://dx.doi.org/10.1080/10106040108542184): Green Leaf Index. 
@@ -408,6 +410,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ### R
 
+- [RCC](https://doi.org/10.1016/0034-4257(87)90088-5): Red Chromatic Coordinate.
 - [RDVI](https://doi.org/10.1016/0034-4257(94)00114-3): Renormalized Difference Vegetation Index.
 - [REDSI](https://doi.org/10.3390/s18030868): Red-Edge Disease Stress Index.
 - [RVI](https://doi.org/10.2134/agronj1968.00021962006000060016x): Ratio Vegetation Index.

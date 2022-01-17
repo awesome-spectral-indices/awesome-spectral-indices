@@ -1026,5 +1026,32 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        GCC=SpectralIndex(
+            short_name='GCC',
+            long_name='Green Chromatic Coordinate',
+            formula='G / (R + G + B)',
+            reference='https://doi.org/10.1016/0034-4257(87)90088-5',
+            type='vegetation',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
+        RCC=SpectralIndex(
+            short_name='RCC',
+            long_name='Red Chromatic Coordinate',
+            formula='R / (R + G + B)',
+            reference='https://doi.org/10.1016/0034-4257(87)90088-5',
+            type='vegetation',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
+        BCC=SpectralIndex(
+            short_name='BCC',
+            long_name='Blue Chromatic Coordinate',
+            formula='B / (R + G + B)',
+            reference='https://doi.org/10.1016/0034-4257(87)90088-5',
+            type='vegetation',
+            date_of_addition='2022-01-17',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
