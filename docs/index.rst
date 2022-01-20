@@ -217,7 +217,7 @@ Additional index parameters also follow a standard:
 - :code:`C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
 - :code:`cexp`: Exponent used for OCVI.
 - :code:`nexp`: Exponent used for GDVI.
-- :code:`alpha`: Weighting coefficient used for WDRVI and BWDRVI.
+- :code:`alpha`: Weighting coefficient used for WDRVI, BWDRVI and NDPI.
 - :code:`gamma`: Weighting coefficient used for ARVI.
 - :code:`omega`: Weighting coefficient used for MBWI.
 - :code:`sla`: Soil line slope.

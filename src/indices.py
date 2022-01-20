@@ -1062,5 +1062,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
+        NDPI=SpectralIndex(
+            short_name='NDPI',
+            long_name='Normalized Difference Phenology Index',
+            formula='(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))',
+            reference='https://doi.org/10.1016/j.rse.2017.04.031',
+            type='vegetation',
+            date_of_addition='2022-01-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

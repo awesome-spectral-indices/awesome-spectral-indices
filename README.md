@@ -292,7 +292,7 @@ Additional index parameters also follow a standard:
 - `C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
 - `cexp`: Exponent used for OCVI.
 - `nexp`: Exponent used for GDVI.
-- `alpha`: Weighting coefficient used for WDRVI and BWDRVI.
+- `alpha`: Weighting coefficient used for WDRVI, BWDRVI and NDPI.
 - `gamma`: Weighting coefficient used for ARVI.
 - `omega`: Weighting coefficient used for MBWI.
 - `sla`: Soil line slope.
@@ -395,6 +395,7 @@ The kernel indices are constructed using a special type of parameters:
 ### N
 
 - [NDMI](https://doi.org/10.1016/S0034-4257(01)00318-2): Normalized Difference Moisture Index.
+- [NDPI](https://doi.org/10.1016/j.rse.2017.04.031): Normalized Difference Phenology Index.
 - [NDREI](https://doi.org/10.1016/1011-1344(93)06963-4): Normalized Difference Red Edge Index.
 - [NDVI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Difference Vegetation Index.
 - [NDVI705](https://doi.org/10.1016/S0176-1617(11)81633-0): Normalized Difference Vegetation Index (705 and 750 nm).
