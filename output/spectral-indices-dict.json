@@ -237,6 +237,23 @@
             "short_name": "DVI",
             "type": "vegetation"
         },
+        "DVIplus": {
+            "bands": [
+                "lambdaN",
+                "lambdaR",
+                "lambdaG",
+                "G",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-20",
+            "formula": "((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R",
+            "long_name": "Difference Vegetation Index Plus",
+            "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
+            "short_name": "DVIplus",
+            "type": "vegetation"
+        },
         "DpRVIHH": {
             "bands": [
                 "HV",
@@ -779,6 +796,36 @@
             "short_name": "NDDI",
             "type": "drought"
         },
+        "NDGI": {
+            "bands": [
+                "lambdaN",
+                "lambdaR",
+                "lambdaG",
+                "G",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-20",
+            "formula": "(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)",
+            "long_name": "Normalized Difference Greenness Index",
+            "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
+            "short_name": "NDGI",
+            "type": "vegetation"
+        },
+        "NDII": {
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-20",
+            "formula": "(N - S1)/(N + S1)",
+            "long_name": "Normalized Difference Infrared Index",
+            "reference": "https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf",
+            "short_name": "NDII",
+            "type": "vegetation"
+        },
         "NDMI": {
             "bands": [
                 "N",
@@ -790,6 +837,21 @@
             "long_name": "Normalized Difference Moisture Index",
             "reference": "https://doi.org/10.1016/S0034-4257(01)00318-2",
             "short_name": "NDMI",
+            "type": "vegetation"
+        },
+        "NDPI": {
+            "bands": [
+                "N",
+                "alpha",
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-20",
+            "formula": "(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))",
+            "long_name": "Normalized Difference Phenology Index",
+            "reference": "https://doi.org/10.1016/j.rse.2017.04.031",
+            "short_name": "NDPI",
             "type": "vegetation"
         },
         "NDREI": {
