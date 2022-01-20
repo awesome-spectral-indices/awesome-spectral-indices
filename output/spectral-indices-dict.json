@@ -341,6 +341,21 @@
             "short_name": "ExG",
             "type": "vegetation"
         },
+        "FCVI": {
+            "bands": [
+                "N",
+                "R",
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-01-20",
+            "formula": "N - ((R + G + B)/3.0)",
+            "long_name": "Fluorescence Correction Vegetation Index",
+            "reference": "https://doi.org/10.1016/j.rse.2020.111676",
+            "short_name": "FCVI",
+            "type": "vegetation"
+        },
         "GARI": {
             "bands": [
                 "N",

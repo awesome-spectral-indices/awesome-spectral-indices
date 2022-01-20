@@ -15,6 +15,7 @@ DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.20
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
 EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2008.06.006>`_],:math:`g\times (N-R)/(N+2.4\times R+L)`
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
+FCVI,Fluorescence Correction Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2020.111676>`_],:math:`N-((R+G+B)/3.0)`
 GARI,Green Atmospherically Resistant Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=363>`_],:math:`(N-(G-(B-R)))/(N-(G+(B-R)))`
 GBNDVI,Green-Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=186>`_],:math:`(N-(G+B))/(N+(G+B))`
 GCC,Green Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`G/(R+G+B)`
