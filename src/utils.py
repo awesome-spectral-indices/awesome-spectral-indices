@@ -33,6 +33,7 @@ class Bands(Enum):
     SLOPE_PARAMETER_SOIL = "k"
     WAVELENGTH_NIR = "lambdaN"
     WAVELENGTH_RED = "lambdaR"
+    WAVELENGTH_GREEN = "lambdaG"
     HV = "HV"
     HH = "HH"
     VV = "VV"

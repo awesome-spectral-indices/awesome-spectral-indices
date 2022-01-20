@@ -1080,5 +1080,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
+        DVIplus=SpectralIndex(
+            short_name='DVIplus',
+            long_name='Difference Vegetation Index Plus',
+            formula='((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R',
+            reference='https://doi.org/10.1016/j.rse.2019.03.028',
+            type='vegetation',
+            date_of_addition='2022-01-20',
+            contributor="https://github.com/davemlz"
+        ),
+        NDGI=SpectralIndex(
+            short_name='NDGI',
+            long_name='Normalized Difference Greenness Index',
+            formula='(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)',
+            reference='https://doi.org/10.1016/j.rse.2019.03.028',
+            type='vegetation',
+            date_of_addition='2022-01-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

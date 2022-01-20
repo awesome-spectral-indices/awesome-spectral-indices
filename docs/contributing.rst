@@ -75,10 +75,12 @@ For the formula attribute, the standard variables for spectral indices expressio
      - PAR
    * - Slope parameter by soil used for NIRvH2.
      - k
-   * - NIR wavelength used for NIRvH2.
+   * - NIR wavelength used for NIRvH2 and NDGI.
      - lambdaN
-   * - Red wavelength used for NIRvH2.
+   * - Red wavelength used for NIRvH2 and NDGI.
      - lambdaR
+   * - Green wavelength used for NDGI.
+     - lambdaG
    * - k(A,B)
      - kAB
 

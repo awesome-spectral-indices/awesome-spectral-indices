@@ -299,8 +299,9 @@ Additional index parameters also follow a standard:
 - `slb`: Soil line intercept.
 - `PAR`: Photosynthetically Active Radiation.
 - `k`: Slope parameter by soil used for NIRvH2.
-- `lambdaN`: NIR wavelength used for NIRvH2.
-- `lambdaR`: Red wavelength used for NIRvH2.
+- `lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
+- `lambdaR`: Red wavelength used for NIRvH2 and NDGI.
+- `lambdaG`: Green wavelength used for NDGI.
 
 The kernel indices are constructed using a special type of parameters:
 
@@ -350,7 +351,8 @@ The kernel indices are constructed using a special type of parameters:
 
 ### D
 
-- [DVI](https://doi.org/10.2307/1936256): Difference Vegetation Index.  
+- [DVI](https://doi.org/10.2307/1936256): Difference Vegetation Index.
+- [DVIplus](https://doi.org/10.1016/j.rse.2019.03.028): Difference Vegetation Index Plus.
 
 ### E
 
@@ -394,6 +396,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ### N
 
+- [NDGI](https://doi.org/10.1016/j.rse.2019.03.028): Normalized Difference Greenness Index.
 - [NDII](https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf): Normalized Difference Infrared Index.
 - [NDMI](https://doi.org/10.1016/S0034-4257(01)00318-2): Normalized Difference Moisture Index.
 - [NDPI](https://doi.org/10.1016/j.rse.2017.04.031): Normalized Difference Phenology Index.
