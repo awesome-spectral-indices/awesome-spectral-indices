@@ -1071,5 +1071,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
+        NDII=SpectralIndex(
+            short_name='NDII',
+            long_name='Normalized Difference Infrared Index',
+            formula='(N - S1)/(N + S1)',
+            reference='https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf',
+            type='vegetation',
+            date_of_addition='2022-01-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
