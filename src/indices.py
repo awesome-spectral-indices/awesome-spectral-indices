@@ -1098,5 +1098,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
+        FCVI=SpectralIndex(
+            short_name='FCVI',
+            long_name='Fluorescence Correction Vegetation Index',
+            formula='N - ((R + G + B)/3.0)',
+            reference='https://doi.org/10.1016/j.rse.2020.111676',
+            type='vegetation',
+            date_of_addition='2022-01-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

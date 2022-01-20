@@ -360,6 +360,10 @@ The kernel indices are constructed using a special type of parameters:
 - [EVI2](https://doi.org/10.1016/j.rse.2008.06.006): Two-Band Enhanced Vegetation Index. 
 - [ExG](https://doi.org/10.13031/2013.27838): Excess Green Index. 
 
+### F
+
+- [FCVI](https://doi.org/10.1016/j.rse.2020.111676): Fluorescence Correction Vegetation Index. 
+
 ### G
 
 - [GARI](https://www.indexdatabase.de/db/i-single.php?id=363): Green Atmospherically Resistant Vegetation Index.
