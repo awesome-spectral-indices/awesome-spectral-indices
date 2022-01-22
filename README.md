@@ -37,9 +37,13 @@
 
 ---
 
-**GitHub**: <a href="https://github.com/davemlz/awesome-ee-spectral-indices" target="_blank">https://github.com/davemlz/awesome-ee-spectral-indices</a>
+**GitHub**: <a href="https://github.com/davemlz/awesome-ee-spectral-indices" target="_blank">github.com/davemlz/awesome-ee-spectral-indices</a>
 
-**Documentation**: <a href="https://awesome-ee-spectral-indices.readthedocs.io/" target="_blank">https://awesome-ee-spectral-indices.readthedocs.io/</a>
+**Documentation**: <a href="https://awesome-ee-spectral-indices.readthedocs.io/" target="_blank">awesome-ee-spectral-indices.readthedocs.io</a>
+
+**Python Package**: <a href="https://github.com/davemlz/spyndex" target="_blank">github.com/davemlz/spyndex</a>
+
+**Google Earth Engine**: <a href="https://github.com/davemlz/eemont" target="_blank">github.com/davemlz/eemont</a> (Python), <a href="https://github.com/davemlz/spectral" target="_blank">github.com/davemlz/spectral</a> (JavaScript) and <a href="https://github.com/r-earthengine/rgeeExtra" target="_blank">github.com/r-earthengine/rgeeExtra</a> (R)
 
 ---
 
