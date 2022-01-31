@@ -33,6 +33,10 @@ def toMath(x):
     x = x.replace("^cexp","^{c}")
     x = x.replace("gamma","\\gamma ")
     x = x.replace("alpha","\\alpha ")
+    x = x.replace("omega","\\omega ")
+    x = x.replace("lambdaN","\\lambda_{N} ")
+    x = x.replace("lambdaR","\\lambda_{R} ")
+    x = x.replace("lambdaG","\\lambda_{G} ")
     x = x.replace("*","\\times ")
     x = f":math:`{x}`"
     return x
