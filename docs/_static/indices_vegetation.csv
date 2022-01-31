@@ -11,7 +11,7 @@ CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`
 CVI,Chlorophyll Vegetation Index [`ref <https://www.cabdirect.org/cabdirect/abstract/20073176046>`_],:math:`(N\times R)/(G^{2.0})`
 DVI,Difference Vegetation Index [`ref <https://doi.org/10.2307/1936256>`_],:math:`N-R`
-DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`((lambdaN-lambdaR)/(lambdaN-lambdaG))\times G+(1.0-((lambdaN-lambdaR)/(lambdaN-lambdaG)))\times N-R`
+DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N-R`
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
 EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2008.06.006>`_],:math:`g\times (N-R)/(N+2.4\times R+L)`
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
@@ -41,7 +41,7 @@ MSR705,Modified Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.a
 MTCI,MERIS Terrestrial Chlorophyll Index [`ref <https://doi.org/10.1080/0143116042000274015>`_],:math:`(RE2-RE1)/(RE1-R)`
 MTVI1,Modified Triangular Vegetation Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (1.2\times (N-G)-2.5\times (R-G))`
 MTVI2,Modified Triangular Vegetation Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (1.2\times (N-G)-2.5\times (R-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
-NDGI,Normalized Difference Greenness Index [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`(((lambdaN-lambdaR)/(lambdaN-lambdaG))\times G+(1.0-((lambdaN-lambdaR)/(lambdaN-lambdaG)))\times N-R)/(((lambdaN-lambdaR)/(lambdaN-lambdaG))\times G+(1.0-((lambdaN-lambdaR)/(lambdaN-lambdaG)))\times N+R)`
+NDGI,Normalized Difference Greenness Index [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`(((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N-R)/(((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N+R)`
 NDII,Normalized Difference Infrared Index [`ref <https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf>`_],:math:`(N-S1)/(N+S1)`
 NDMI,Normalized Difference Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(01)00318-2>`_],:math:`(N-S1)/(N+S1)`
 NDPI,Normalized Difference Phenology Index [`ref <https://doi.org/10.1016/j.rse.2017.04.031>`_],:math:`(N-(\alpha \times R+(1.0-\alpha )\times S1))/(N+(\alpha \times R+(1.0-\alpha )\times S1))`
@@ -51,7 +51,7 @@ NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://d
 NDYI,Normalized Difference Yellowness Index [`ref <https://doi.org/10.1016/j.rse.2016.06.016>`_],:math:`(G-B)/(G+B)`
 NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(G-R)/(G+R)`
 NIRv,Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1126/sciadv.1602244>`_],:math:`((N-R)/(N+R))\times N`
-NIRvH2,Hyperspectral Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1016/j.rse.2021.112723>`_],:math:`N-R-k\times (lambdaN-lambdaR)`
+NIRvH2,Hyperspectral Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1016/j.rse.2021.112723>`_],:math:`N-R-k\times (\lambda_{N} -\lambda_{R} )`
 NIRvP,Near-Infrared Reflectance of Vegetation and Incoming PAR [`ref <https://doi.org/10.1016/j.rse.2021.112763>`_],:math:`((N-R)/(N+R))\times N\times PAR`
 NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252>`_],:math:`((N^2)-R)/((N^2)+R)`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
