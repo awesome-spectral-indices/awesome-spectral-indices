@@ -362,7 +362,7 @@ spindex = SpectralIndices(
         ),
         NMDI=SpectralIndex(
             short_name='NMDI',
-            long_name='Normalized Multi‐band Drought Index',
+            long_name='Normalized Multi-band Drought Index',
             formula='(N - (S1 - S2))/(N + (S1 - S2))',
             reference='https://doi.org/10.1029/2007GL031021',
             type='drought',
