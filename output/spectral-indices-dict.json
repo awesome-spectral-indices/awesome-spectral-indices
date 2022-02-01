@@ -1080,7 +1080,7 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(N - (S1 - S2))/(N + (S1 - S2))",
-            "long_name": "Normalized Multi\u2010band Drought Index",
+            "long_name": "Normalized Multi-band Drought Index",
             "reference": "https://doi.org/10.1029/2007GL031021",
             "short_name": "NMDI",
             "type": "drought"
