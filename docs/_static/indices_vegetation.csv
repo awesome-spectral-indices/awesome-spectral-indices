@@ -46,7 +46,7 @@ NDII,Normalized Difference Infrared Index [`ref <https://www.asprs.org/wp-conten
 NDMI,Normalized Difference Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(01)00318-2>`_],:math:`(N-S1)/(N+S1)`
 NDPI,Normalized Difference Phenology Index [`ref <https://doi.org/10.1016/j.rse.2017.04.031>`_],:math:`(N-(\alpha \times R+(1.0-\alpha )\times S1))/(N+(\alpha \times R+(1.0-\alpha )\times S1))`
 NDREI,Normalized Difference Red Edge Index [`ref <https://doi.org/10.1016/1011-1344(93)06963-4>`_],:math:`(N-RE1)/(N+RE1)`
-NDVI,Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(N-R)/(N+R)`
+NDVI,Normalized Difference Vegetation Index [`ref <https://ntrs.nasa.gov/citations/19740022614>`_],:math:`(N-R)/(N+R)`
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`(RE2-RE1)/(RE2+RE1)`
 NDYI,Normalized Difference Yellowness Index [`ref <https://doi.org/10.1016/j.rse.2016.06.016>`_],:math:`(G-B)/(G+B)`
 NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(G-R)/(G+R)`

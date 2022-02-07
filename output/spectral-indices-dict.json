@@ -917,7 +917,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N - R)/(N + R)",
             "long_name": "Normalized Difference Vegetation Index",
-            "reference": "https://doi.org/10.1016/0034-4257(79)90013-0",
+            "reference": "https://ntrs.nasa.gov/citations/19740022614",
             "short_name": "NDVI",
             "type": "vegetation"
         },
