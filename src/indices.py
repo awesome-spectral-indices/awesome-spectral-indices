@@ -1107,5 +1107,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
+        UI=SpectralIndex(
+            short_name='UI',
+            long_name='Urban Index',
+            formula='(S2 - N)/(S2 + N)',
+            reference='https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf',
+            type='urban',
+            date_of_addition='2022-02-11',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
