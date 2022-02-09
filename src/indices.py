@@ -1134,5 +1134,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
+        IBI=SpectralIndex(
+            short_name='IBI',
+            long_name='Index-Based Built-Up Index',
+            formula='(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)',
+            reference='https://doi.org/10.1080/01431160802039957',
+            type='urban',
+            date_of_addition='2022-02-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
