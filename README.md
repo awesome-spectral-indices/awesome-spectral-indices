@@ -505,6 +505,7 @@ The kernel indices are constructed using a special type of parameters:
 
 ## Urban 🏙️
 
+- [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.
 - [NDBaI](https://doi.org/10.1109/IGARSS.2005.1526319): Normalized Difference Bareness Index.

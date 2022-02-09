@@ -1143,5 +1143,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
+        BLFEI=SpectralIndex(
+            short_name='BLFEI',
+            long_name='Built-Up Land Features Extraction Index',
+            formula='(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)',
+            reference='https://doi.org/10.1080/10106049.2018.1497094',
+            type='urban',
+            date_of_addition='2022-02-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
