@@ -3,3 +3,4 @@ EBBI,Enhanced Built-Up and Bareness Index [`ref <https://doi.org/10.3390/rs41029
 NDBI,Normalized Difference Built-Up Index [`ref <http://dx.doi.org/10.1080/01431160304987>`_],:math:`(S1-N)/(S1+N)`
 NDBaI,Normalized Difference Bareness Index [`ref <https://doi.org/10.1109/IGARSS.2005.1526319>`_],:math:`(S1-T1)/(S1+T1)`
 NHFD,Non-Homogeneous Feature Difference [`ref <https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4>`_],:math:`(RE1-A)/(RE1+A)`
+UI,Urban Index [`ref <https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf>`_],:math:`(S2-N)/(S2+N)`

@@ -1518,6 +1518,19 @@
             "short_name": "TVI",
             "type": "vegetation"
         },
+        "UI": {
+            "bands": [
+                "S2",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-02-11",
+            "formula": "(S2 - N)/(S2 + N)",
+            "long_name": "Urban Index",
+            "reference": "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf",
+            "short_name": "UI",
+            "type": "urban"
+        },
         "VARI": {
             "bands": [
                 "G",

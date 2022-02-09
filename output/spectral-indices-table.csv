@@ -108,6 +108,7 @@ TRRVI,Transformed Red Range Vegetation Index,vegetation,((RE2 - R) / (RE2 + R)) 
 TSAVI,Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1109/IGARSS.1989.576128,https://github.com/davemlz,2021-05-14
 TTVI,Transformed Triangular Vegetation Index,vegetation,0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740)),"['RE3', 'RE2', 'RE4']",https://doi.org/10.3390/rs12010016,https://github.com/davemlz,2021-09-18
 TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G)),"['N', 'G', 'R']",http://dx.doi.org/10.1016/S0034-4257(00)00197-8,https://github.com/davemlz,2021-05-14
+UI,Urban Index,urban,(S2 - N)/(S2 + N),"['S2', 'N']",https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf,https://github.com/davemlz,2022-02-11
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 VARI700,Visible Atmospherically Resistant Index (700 nm),vegetation,(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B),"['RE1', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
 VI700,Vegetation Index (700 nm),vegetation,(RE1 - R) / (RE1 + R),"['RE1', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
