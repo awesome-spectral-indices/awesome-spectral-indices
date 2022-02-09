@@ -1113,7 +1113,25 @@ spindex = SpectralIndices(
             formula='(S2 - N)/(S2 + N)',
             reference='https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf',
             type='urban',
-            date_of_addition='2022-02-11',
+            date_of_addition='2022-02-07',
+            contributor="https://github.com/davemlz"
+        ),
+        VrNIRBI=SpectralIndex(
+            short_name='VrNIRBI',
+            long_name='Visible Red-Based Built-Up Index',
+            formula='(R - N)/(R + N)',
+            reference='https://doi.org/10.1016/j.ecolind.2015.03.037',
+            type='urban',
+            date_of_addition='2022-02-09',
+            contributor="https://github.com/davemlz"
+        ),
+        VgNIRBI=SpectralIndex(
+            short_name='VgNIRBI',
+            long_name='Visible Green-Based Built-Up Index',
+            formula='(G - N)/(G + N)',
+            reference='https://doi.org/10.1016/j.ecolind.2015.03.037',
+            type='urban',
+            date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
     )
