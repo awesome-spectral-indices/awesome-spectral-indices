@@ -9,6 +9,7 @@ AWEIsh,Automated Water Extraction Index with Shadows Elimination,water,B + 2.5 *
 BAI,Burned Area Index,burn,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['R', 'N']",https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,https://github.com/davemlz,2021-04-07
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0),"['RE2', 'RE3', 'RE4', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BCC,Blue Chromatic Coordinate,vegetation,B / (R + G + B),"['B', 'R', 'G']",https://doi.org/10.1016/0034-4257(87)90088-5,https://github.com/davemlz,2022-01-17
+BLFEI,Built-Up Land Features Extraction Index,urban,(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1),"['G', 'R', 'S2', 'S1']",https://doi.org/10.1080/10106049.2018.1497094,https://github.com/davemlz,2022-02-09
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://www.indexdatabase.de/db/i-single.php?id=135,https://github.com/davemlz,2021-04-07
 BWDRVI,Blue Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - B) / (alpha * N + B),"['alpha', 'N', 'B']",https://doi.org/10.2135/cropsci2007.01.0031,https://github.com/davemlz,2021-09-20
 CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-04-07
@@ -33,6 +34,7 @@ GLI,Green Leaf Index,vegetation,(2.0 * G - R - B) / (2.0 * G + R + B),"['G', 'R'
 GNDVI,Green Normalized Difference Vegetation Index,vegetation,(N - G)/(N + G),"['N', 'G']",https://doi.org/10.1016/S0034-4257(96)00072-7,https://github.com/davemlz,2021-04-07
 GRNDVI,Green-Red Normalized Difference Vegetation Index,vegetation,(N - (G + R))/(N + (G + R)),"['N', 'G', 'R']",https://www.indexdatabase.de/db/i-single.php?id=185,https://github.com/davemlz,2021-04-07
 GVMI,Global Vegetation Moisture Index,vegetation,((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02)),"['N', 'S2']",https://doi.org/10.1016/S0034-4257(02)00037-8,https://github.com/davemlz,2021-04-07
+IBI,Index-Based Built-Up Index,urban,(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0),"['S1', 'N', 'R', 'L', 'G']",https://doi.org/10.1080/01431160802039957,https://github.com/davemlz,2022-02-09
 IRECI,Inverted Red-Edge Chlorophyll Index,vegetation,(RE3 - R) / (RE1 / RE2),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 MBWI,Multi-Band Water Index,water,(omega * G) - R - N - S1 - S2,"['omega', 'G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.jag.2018.01.018,https://github.com/davemlz,2022-01-17
 MCARI,Modified Chlorophyll Absorption in Reflectance Index,vegetation,((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R),"['RE1', 'R', 'G']",http://dx.doi.org/10.1016/S0034-4257(00)00113-9,https://github.com/davemlz,2021-05-13
@@ -108,11 +110,13 @@ TRRVI,Transformed Red Range Vegetation Index,vegetation,((RE2 - R) / (RE2 + R)) 
 TSAVI,Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1109/IGARSS.1989.576128,https://github.com/davemlz,2021-05-14
 TTVI,Transformed Triangular Vegetation Index,vegetation,0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740)),"['RE3', 'RE2', 'RE4']",https://doi.org/10.3390/rs12010016,https://github.com/davemlz,2021-09-18
 TVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G)),"['N', 'G', 'R']",http://dx.doi.org/10.1016/S0034-4257(00)00197-8,https://github.com/davemlz,2021-05-14
-UI,Urban Index,urban,(S2 - N)/(S2 + N),"['S2', 'N']",https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf,https://github.com/davemlz,2022-02-11
+UI,Urban Index,urban,(S2 - N)/(S2 + N),"['S2', 'N']",https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf,https://github.com/davemlz,2022-02-07
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 VARI700,Visible Atmospherically Resistant Index (700 nm),vegetation,(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B),"['RE1', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
 VI700,Vegetation Index (700 nm),vegetation,(RE1 - R) / (RE1 + R),"['RE1', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
 VIG,Vegetation Index Green,vegetation,(G - R) / (G + R),"['G', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
+VgNIRBI,Visible Green-Based Built-Up Index,urban,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
+VrNIRBI,Visible Red-Based Built-Up Index,urban,(R - N)/(R + N),"['R', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
 WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18

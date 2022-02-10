@@ -143,6 +143,21 @@
             "short_name": "BCC",
             "type": "vegetation"
         },
+        "BLFEI": {
+            "bands": [
+                "G",
+                "R",
+                "S2",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-02-09",
+            "formula": "(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)",
+            "long_name": "Built-Up Land Features Extraction Index",
+            "reference": "https://doi.org/10.1080/10106049.2018.1497094",
+            "short_name": "BLFEI",
+            "type": "urban"
+        },
         "BNDVI": {
             "bands": [
                 "N",
@@ -479,6 +494,22 @@
             "reference": "https://doi.org/10.1016/S0034-4257(02)00037-8",
             "short_name": "GVMI",
             "type": "vegetation"
+        },
+        "IBI": {
+            "bands": [
+                "S1",
+                "N",
+                "R",
+                "L",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-02-09",
+            "formula": "(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)",
+            "long_name": "Index-Based Built-Up Index",
+            "reference": "https://doi.org/10.1080/01431160802039957",
+            "short_name": "IBI",
+            "type": "urban"
         },
         "IRECI": {
             "bands": [
@@ -1524,7 +1555,7 @@
                 "N"
             ],
             "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2022-02-11",
+            "date_of_addition": "2022-02-07",
             "formula": "(S2 - N)/(S2 + N)",
             "long_name": "Urban Index",
             "reference": "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf",
@@ -1584,6 +1615,32 @@
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VIG",
             "type": "vegetation"
+        },
+        "VgNIRBI": {
+            "bands": [
+                "G",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-02-09",
+            "formula": "(G - N)/(G + N)",
+            "long_name": "Visible Green-Based Built-Up Index",
+            "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
+            "short_name": "VgNIRBI",
+            "type": "urban"
+        },
+        "VrNIRBI": {
+            "bands": [
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-02-09",
+            "formula": "(R - N)/(R + N)",
+            "long_name": "Visible Red-Based Built-Up Index",
+            "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
+            "short_name": "VrNIRBI",
+            "type": "urban"
         },
         "WDRVI": {
             "bands": [
