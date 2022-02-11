@@ -53,17 +53,13 @@ Awesome Spectral Indices
 Spectral Indices
 --------------------
 
-The ready-to-use curated list of spectral indices 
-(`check the list here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_) for remote sensing applications 
-is presented here. The list is available in two formats 
-(`CSV <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_, 
-`JSON <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json>`_) so it can be easily used in any 
-programming language.
+Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
+You can check the `curated list of spectral indices here <https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv>`_, and if you want to use it in your environment, it is available in `CSV <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv>`_ and `JSON <https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json>`_.
 
 Attributes
 ~~~~~~~~~~~~~~~~
 
-Each item of the list has the following attributes:
+All spectral indices follow a standard. Each item of the list has the following attributes:
 
 - :code:`short_name`: Short name of the index (e.g. :code:`"NDWI"`).
 - :code:`long_name`: Long name of the index (e.g. :code:`"Normalized Difference Water Index"`).
@@ -234,6 +230,15 @@ The kernel indices are constructed using a special type of parameters:
 - :code:`p`: Kernel degree (used for the polynomial kernel).
 - :code:`c`: Free parameter that trades off the influence of higher-order versus lower-order terms (used for the polynomial kernel).
 
+Call for Indices!
+-----------------
+
+Researchers that have published (or aim to publish) their novel spectral indices are encouraged to add them to this repository! The list of spectral indices is used as a source for different resources that allow spectral indices computation in different environments (such as Python and Google Earth Engine). To add an index, please follow the `Contribution Guidelines <https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html>`_.
+
+In the same line, if you know an spectral index that is not included in this repository, you are encouraged to add it! Please follow the `Contribution Guidelines <https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html>`_ in order to add it.
+
+There is no deadline. The repository is continuously updated!
+
 Used by
 ---------
 
@@ -246,13 +251,13 @@ Python
 ~~~~~~
 
 - `eemont <https://github.com/davemlz/eemont>`_: A python package that extends Google Earth Engine.
-- `eeExtra <https://github.com/r-earthengine/ee_extra>`_: A ninja Python package behind rgee, rgeeExtra and eemont.
+- `eeExtra <https://github.com/r-earthengine/ee_extra>`_: A Python package that unifies the Google Earth Engine ecosystem.
 - `spyndex <https://github.com/davemlz/spyndex>`_: Awesome Spectral Indices in Python.
 
 R
 ~
 
-- `rgeeExtra <https://github.com/r-earthengine/rgeeExtra>`_: High-level functions to process spatial and simple Earth Engine objects. Popular Third-party GEE algorithms are re-coded from Javascript and Python to R.
+- `rgeeExtra <https://github.com/r-earthengine/rgeeExtra>`_: High-level functions to process spatial and simple Earth Engine objects.
 
 List
 -------
