@@ -359,7 +359,7 @@ There is no deadline. The repository is continuously updated!
 ### B
 
 - [BCC](https://doi.org/10.1016/0034-4257(87)90088-5): Blue Chromatic Coordinate.
-- [BNDVI](https://www.indexdatabase.de/db/i-single.php?id=135): Blue Normalized Difference Vegetation Index.
+- [BNDVI](https://doi.org/10.1016/S1672-6308(07)60027-4): Blue Normalized Difference Vegetation Index.
 - [BWDRVI](https://doi.org/10.2135/cropsci2007.01.0031): Blue Wide Dynamic Range Vegetation Index.
 
 ### C
@@ -505,6 +505,7 @@ There is no deadline. The repository is continuously updated!
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
 - [WI2](https://doi.org/10.3390/rs11182186): Water Index 2.
 - [WRI](https://doi.org/10.1109/GEOINFORMATICS.2010.5567762): Water Ratio Index.
+- [SWI](https://doi.org/10.3390/w13121647): Standardized Water-Level Index.
 
 ## Snow ⛄
 
