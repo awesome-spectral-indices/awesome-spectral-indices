@@ -5,7 +5,7 @@ ARI,Anthocyanin Reflectance Index [`ref <https://doi.org/10.1562/0031-8655(2001)
 ARVI,Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(N-(R-\gamma \times (R-B)))/(N+(R-\gamma \times (R-B)))`
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(91)90009-U>`_],:math:`sla\times (N-sla\times R-slb)/(sla\times N+R-sla\times slb+0.08\times (1+sla^{2.0}))`
 BCC,Blue Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`B/(R+G+B)`
-BNDVI,Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=135>`_],:math:`(N-B)/(N+B)`
+BNDVI,Blue Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S1672-6308(07)60027-4>`_],:math:`(N-B)/(N+B)`
 BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/cropsci2007.01.0031>`_],:math:`(\alpha \times N-B)/(\alpha \times N+B)`
 CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/G)-1.0`
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`

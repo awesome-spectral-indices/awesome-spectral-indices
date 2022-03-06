@@ -6,6 +6,7 @@ MNDWI,Modified Normalized Difference Water Index [`ref <https://doi.org/10.1080/
 NDVIMNDWI,NDVI-MNDWI Model [`ref <https://doi.org/10.1007/978-3-662-45737-5_51>`_],:math:`((N-R)/(N+R))-((G-S1)/(G+S1))`
 NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
 NWI,New Water Index [`ref <https://doi.org/10.11873/j.issn.1004-0323.2009.2.167>`_],:math:`(B-(N+S1+S2))/(B+(N+S1+S2))`
+S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`(RE1-S2)/(RE1+S2)`
 WI1,Water Index 1 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(G-S2)/(G+S2)`
 WI2,Water Index 2 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(B-S2)/(B+S2)`
 WRI,Water Ratio Index [`ref <https://doi.org/10.1109/GEOINFORMATICS.2010.5567762>`_],:math:`(G+R)/(N+S1)`

@@ -163,11 +163,11 @@
                 "N",
                 "B"
             ],
-            "contributor": "https://github.com/davemlz",
+            "contributor": "https://github.com/MATRIX4284",
             "date_of_addition": "2021-04-07",
             "formula": "(N - B)/(N + B)",
             "long_name": "Blue Normalized Difference Vegetation Index",
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=135",
+            "reference": "https://doi.org/10.1016/S1672-6308(07)60027-4",
             "short_name": "BNDVI",
             "type": "vegetation"
         },
@@ -1280,6 +1280,19 @@
             "reference": "https://doi.org/10.1016/j.isprsjprs.2013.04.007",
             "short_name": "S2REP",
             "type": "vegetation"
+        },
+        "S2WI": {
+            "bands": [
+                "RE1",
+                "S2"
+            ],
+            "contributor": "https://github.com/MATRIX4284",
+            "date_of_addition": "2022-03-06",
+            "formula": "(RE1 - S2)/(RE1 + S2)",
+            "long_name": "Sentinel-2 Water Index",
+            "reference": "https://doi.org/10.3390/w13121647",
+            "short_name": "S2WI",
+            "type": "water"
         },
         "S3": {
             "bands": [
