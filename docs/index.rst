@@ -237,6 +237,8 @@ Researchers that have published (or aim to publish) their novel spectral indices
 
 In the same line, if you know an spectral index that is not included in this repository, you are encouraged to add it! Please follow the `Contribution Guidelines <https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html>`_ in order to add it.
 
+And one more thing: If you see an error in one or several indices, please report it or update the index (indices) by following the `Contribution Guidelines <https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html>`_!
+
 There is no deadline. The repository is continuously updated!
 
 Used by
