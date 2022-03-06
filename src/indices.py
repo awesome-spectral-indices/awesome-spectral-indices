@@ -1152,5 +1152,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
+        S2WI=SpectralIndex(
+            short_name='S2WI',
+            long_name='Sentinel-2 Water Index',
+            formula='(RE1 - S2)/(RE1 + S2)',
+            reference='https://doi.org/10.3390/w13121647',
+            type='water',
+            date_of_addition='2022-03-06',
+            contributor="https://github.com/MATRIX4284"
+        ),
     )
 )

@@ -502,6 +502,7 @@ There is no deadline. The repository is continuously updated!
 - [NDVIMNDWI](https://doi.org/10.1007/978-3-662-45737-5_51): NDVI - MNDWI Model.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.
 - [NWI](https://doi.org/10.11873/j.issn.1004-0323.2009.2.167): New Water Index.
+- [S2WI](https://doi.org/10.3390/w13121647): Sentinel-2 Water Index.
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
 - [WI2](https://doi.org/10.3390/rs11182186): Water Index 2.
 - [WRI](https://doi.org/10.1109/GEOINFORMATICS.2010.5567762): Water Ratio Index.
