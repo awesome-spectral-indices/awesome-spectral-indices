@@ -359,7 +359,7 @@ There is no deadline. The repository is continuously updated!
 ### B
 
 - [BCC](https://doi.org/10.1016/0034-4257(87)90088-5): Blue Chromatic Coordinate.
-- [BNDVI](https://www.indexdatabase.de/db/i-single.php?id=135): Blue Normalized Difference Vegetation Index.
+- [BNDVI](https://doi.org/10.1016/S1672-6308(07)60027-4): Blue Normalized Difference Vegetation Index.
 - [BWDRVI](https://doi.org/10.2135/cropsci2007.01.0031): Blue Wide Dynamic Range Vegetation Index.
 
 ### C

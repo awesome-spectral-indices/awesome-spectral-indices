@@ -13,10 +13,10 @@ spindex = SpectralIndices(
             short_name='BNDVI',
             long_name='Blue Normalized Difference Vegetation Index',
             formula='(N - B)/(N + B)',            
-            reference='https://www.indexdatabase.de/db/i-single.php?id=135',
+            reference='https://doi.org/10.1016/S1672-6308(07)60027-4',
             type='vegetation',
             date_of_addition='2021-04-07',
-            contributor="https://github.com/davemlz"
+            contributor="https://github.com/MATRIX4284"
         ),
         CIG=SpectralIndex(
             short_name='CIG',
