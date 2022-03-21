@@ -174,18 +174,6 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
-<td>Red Edge 4</td>
-<td>RE4</td>
-<td></td>
-<td>B8A</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
 <td>NIR</td>
 <td>N</td>
 <td></td>
@@ -193,6 +181,18 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 <td>B5</td>
 <td>B4</td>
 <td>B2</td>
+
+</tr>
+
+<tr>
+
+<td>NIR 2</td>
+<td>N2</td>
+<td></td>
+<td>B8A</td>
+<td></td>
+<td></td>
+<td></td>
 
 </tr>
 

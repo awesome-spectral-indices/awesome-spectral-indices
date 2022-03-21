@@ -133,14 +133,7 @@ The formula of the index is presented as a string/expression (e.g. :code:`"(N - 
      - B7
      - 
      -
-     -     
-   * - Red Edge 4
-     - RE4
-     -
-     - B8A
-     - 
-     -
-     -     
+     -         
    * - NIR
      - N
      -
@@ -148,6 +141,13 @@ The formula of the index is presented as a string/expression (e.g. :code:`"(N - 
      - B5
      - B4
      - B2
+   * - NIR 2
+     - N2
+     -
+     - B8A
+     - 
+     -
+     - 
    * - SWIR 1
      - S1
      -
