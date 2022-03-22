@@ -117,13 +117,13 @@
             "bands": [
                 "RE2",
                 "RE3",
-                "RE4",
+                "N2",
                 "R",
                 "S2"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
-            "formula": "(1.0 - ((RE2 * RE3 * RE4) / R) ** 0.5) * (((S2 - RE4)/(S2 + RE4) ** 0.5) + 1.0)",
+            "formula": "(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0)",
             "long_name": "Burned Area Index for Sentinel 2",
             "reference": "https://doi.org/10.3390/ecrs-2-05177",
             "short_name": "BAIS2",
@@ -1423,12 +1423,12 @@
         },
         "SeLI": {
             "bands": [
-                "RE4",
+                "N2",
                 "RE1"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-08",
-            "formula": "(RE4 - RE1) / (RE4 + RE1)",
+            "formula": "(N2 - RE1) / (N2 + RE1)",
             "long_name": "Sentinel-2 LAI Green Index",
             "reference": "https://doi.org/10.3390/s19040904",
             "short_name": "SeLI",
@@ -1538,11 +1538,11 @@
             "bands": [
                 "RE3",
                 "RE2",
-                "RE4"
+                "N2"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
-            "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (RE4 - RE2) * (783.0 - 740))",
+            "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))",
             "long_name": "Transformed Triangular Vegetation Index",
             "reference": "https://doi.org/10.3390/rs12010016",
             "short_name": "TTVI",
