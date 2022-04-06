@@ -421,6 +421,7 @@ There is no deadline. The repository is continuously updated!
 
 ### N
 
+- [NDDI](https://doi.org/10.1029/2006GL029127): Normalized Difference Drought Index.
 - [NDGI](https://doi.org/10.1016/j.rse.2019.03.028): Normalized Difference Greenness Index.
 - [NDII](https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf): Normalized Difference Infrared Index.
 - [NDMI](https://doi.org/10.1016/S0034-4257(01)00318-2): Normalized Difference Moisture Index.
@@ -434,6 +435,7 @@ There is no deadline. The repository is continuously updated!
 - [NIRvH2](https://doi.org/10.1016/j.rse.2021.112723): Hyperspectral Near-Infrared Reflectance of Vegetation.
 - [NIRvP](https://doi.org/10.1016/j.rse.2021.112763): Near-Infrared Reflectance of Vegetation and Incoming PAR.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
+- [NMDI](https://doi.org/10.1029/2007GL031021): Normalized Multi‐band Drought Index.
 - [NRFIg](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Green.
 - [NRFIr](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Red.
 
@@ -516,10 +518,6 @@ There is no deadline. The repository is continuously updated!
 - [S3](https://doi.org/10.3178/jjshwr.12.28): S3 Snow Index.
 - [SWI](https://doi.org/10.3390/rs11232774): Snow Water Index.
 
-## Drought 🏜️
-
-- [NDDI](https://doi.org/10.1029/2006GL029127): Normalized Difference Drought Index.
-- [NMDI](https://doi.org/10.1029/2007GL031021): Normalized Multi‐band Drought Index.
 
 ## Urban 🏙️
 

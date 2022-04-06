@@ -266,7 +266,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Drought Index',
             formula='(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))',
             reference='https://doi.org/10.1029/2006GL029127',
-            type='drought',
+            type='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -365,7 +365,7 @@ spindex = SpectralIndices(
             long_name='Normalized Multi-band Drought Index',
             formula='(N - (S1 - S2))/(N + (S1 - S2))',
             reference='https://doi.org/10.1029/2007GL031021',
-            type='drought',
+            type='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
