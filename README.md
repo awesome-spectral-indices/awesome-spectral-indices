@@ -426,7 +426,7 @@ There is no deadline. The repository is continuously updated!
 - [NDMI](https://doi.org/10.1016/S0034-4257(01)00318-2): Normalized Difference Moisture Index.
 - [NDPI](https://doi.org/10.1016/j.rse.2017.04.031): Normalized Difference Phenology Index.
 - [NDREI](https://doi.org/10.1016/1011-1344(93)06963-4): Normalized Difference Red Edge Index.
-- [NDVI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Difference Vegetation Index.
+- [NDVI](https://ntrs.nasa.gov/citations/19740022614): Normalized Difference Vegetation Index.
 - [NDVI705](https://doi.org/10.1016/S0176-1617(11)81633-0): Normalized Difference Vegetation Index (705 and 750 nm).
 - [NDYI](https://doi.org/10.1016/j.rse.2016.06.016): Normalized Difference Yellowness Index.
 - [NGRDI](https://doi.org/10.1016/0034-4257(79)90013-0): Normalized Green Red Difference Index.
