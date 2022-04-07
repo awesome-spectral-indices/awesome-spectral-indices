@@ -58,7 +58,7 @@ NBR2,Normalized Burn Ratio 2,burn,(S1 - S2) / (S1 + S2),"['S1', 'S2']",https://w
 NBRT,Normalized Burn Ratio Thermal,burn,(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0)),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160500239008,https://github.com/davemlz,2021-04-07
 NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),"['S1', 'N']",http://dx.doi.org/10.1080/01431160304987,https://github.com/davemlz,2021-05-14
 NDBaI,Normalized Difference Bareness Index,urban,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17
-NDDI,Normalized Difference Drought Index,drought,(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N))),"['N', 'R', 'G']",https://doi.org/10.1029/2006GL029127,https://github.com/davemlz,2021-04-07
+NDDI,Normalized Difference Drought Index,vegetation,(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N))),"['N', 'R', 'G']",https://doi.org/10.1029/2006GL029127,https://github.com/davemlz,2021-04-07
 NDGI,Normalized Difference Greenness Index,vegetation,(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R),"['lambdaN', 'lambdaR', 'lambdaG', 'G', 'N', 'R']",https://doi.org/10.1016/j.rse.2019.03.028,https://github.com/davemlz,2022-01-20
 NDII,Normalized Difference Infrared Index,vegetation,(N - S1)/(N + S1),"['N', 'S1']",https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf,https://github.com/davemlz,2022-01-20
 NDMI,Normalized Difference Moisture Index,vegetation,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1016/S0034-4257(01)00318-2,https://github.com/bpurinton,2021-12-01
@@ -78,7 +78,7 @@ NIRv,Near-Infrared Reflectance of Vegetation,vegetation,((N - R) / (N + R)) * N,
 NIRvH2,Hyperspectral Near-Infrared Reflectance of Vegetation,vegetation,N - R - k * (lambdaN - lambdaR),"['N', 'R', 'k', 'lambdaN', 'lambdaR']",https://doi.org/10.1016/j.rse.2021.112723,https://github.com/davemlz,2022-01-17
 NIRvP,Near-Infrared Reflectance of Vegetation and Incoming PAR,vegetation,((N - R) / (N + R)) * N * PAR,"['N', 'R', 'PAR']",https://doi.org/10.1016/j.rse.2021.112763,https://github.com/davemlz,2021-11-18
 NLI,Non-Linear Vegetation Index,vegetation,((N ** 2) - R)/((N ** 2) + R),"['N', 'R']",https://doi.org/10.1080/02757259409532252,https://github.com/davemlz,2021-05-11
-NMDI,Normalized Multi-band Drought Index,drought,(N - (S1 - S2))/(N + (S1 - S2)),"['N', 'S1', 'S2']",https://doi.org/10.1029/2007GL031021,https://github.com/davemlz,2021-05-11
+NMDI,Normalized Multi-band Drought Index,vegetation,(N - (S1 - S2))/(N + (S1 - S2)),"['N', 'S1', 'S2']",https://doi.org/10.1029/2007GL031021,https://github.com/davemlz,2021-05-11
 NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 NRFIr,Normalized Rapeseed Flowering Index Red,vegetation,(R - S2) / (R + S2),"['R', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 NWI,New Water Index,water,(B - (N + S1 + S2))/(B + (N + S1 + S2)),"['B', 'N', 'S1', 'S2']",https://doi.org/10.11873/j.issn.1004-0323.2009.2.167,https://github.com/davemlz,2022-01-17

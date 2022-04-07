@@ -840,7 +840,7 @@
             "long_name": "Normalized Difference Drought Index",
             "reference": "https://doi.org/10.1029/2006GL029127",
             "short_name": "NDDI",
-            "type": "drought"
+            "type": "vegetation"
         },
         "NDGI": {
             "bands": [
@@ -1114,7 +1114,7 @@
             "long_name": "Normalized Multi-band Drought Index",
             "reference": "https://doi.org/10.1029/2007GL031021",
             "short_name": "NMDI",
-            "type": "drought"
+            "type": "vegetation"
         },
         "NRFIg": {
             "bands": [
