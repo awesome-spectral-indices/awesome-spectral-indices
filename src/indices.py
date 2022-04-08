@@ -1269,5 +1269,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        RGRI=SpectralIndex(
+            short_name='RGRI',
+            long_name='Red-Green Ratio Index',
+            formula='R/G',
+            reference='https://doi.org/10.1016/j.jag.2014.03.018',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

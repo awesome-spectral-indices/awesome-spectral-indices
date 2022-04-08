@@ -456,6 +456,7 @@ There is no deadline. The repository is continuously updated!
 - [RCC](https://doi.org/10.1016/0034-4257(87)90088-5): Red Chromatic Coordinate.
 - [RDVI](https://doi.org/10.1016/0034-4257(94)00114-3): Renormalized Difference Vegetation Index.
 - [REDSI](https://doi.org/10.3390/s18030868): Red-Edge Disease Stress Index.
+- [RGRI](https://doi.org/10.1016/j.jag.2014.03.018): Red-Green Ratio Index.
 - [RVI](https://doi.org/10.2134/agronj1968.00021962006000060016x): Ratio Vegetation Index.
 
 ### S
