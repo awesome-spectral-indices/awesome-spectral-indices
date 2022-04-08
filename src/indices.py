@@ -1197,5 +1197,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        MRBVI=SpectralIndex(
+            short_name='MRBVI',
+            long_name='Modified Red Blue Vegetation Index',
+            formula='(R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)',
+            reference='https://doi.org/10.3390/s20185055',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

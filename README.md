@@ -415,6 +415,7 @@ There is no deadline. The repository is continuously updated!
 - [MGRVI](https://doi.org/10.1016/j.jag.2015.02.012): Modified Green Red Vegetation Index.  
 - [MNDVI](https://doi.org/10.1080/014311697216810): Modified Normalized Difference Vegetation Index.
 - [MNLI](https://doi.org/10.1109/TGRS.2003.812910): Modified Non-Linear Vegetation Index.
+- [MRBVI](https://doi.org/10.3390/s20185055): Modified Red Blue Vegetation Index.
 - [MSAVI](https://doi.org/10.1016/0034-4257(94)90134-1): Modified Soil-Adjusted Vegetation Index.
 - [MSR](https://doi.org/10.1080/07038992.1996.10855178): Modified Simple Ratio.
 - [MSR705](https://doi.org/10.1016/j.agrformet.2008.03.005): Modified Simple Ratio (705 and 750 nm).
