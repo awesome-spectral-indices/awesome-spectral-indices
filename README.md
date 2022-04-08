@@ -397,7 +397,9 @@ There is no deadline. The repository is continuously updated!
 - [GCC](https://doi.org/10.1016/0034-4257(87)90088-5): Green Chromatic Coordinate.
 - [GDVI](https://doi.org/10.3390/rs6021211): Generalized Difference Vegetation Index. 
 - [GEMI](http://dx.doi.org/10.1007/bf00031911): Global Environment Monitoring Index. 
-- [GLI](http://dx.doi.org/10.1080/10106040108542184): Green Leaf Index. 
+- [GLI](http://dx.doi.org/10.1080/10106040108542184): Green Leaf Index.
+- [GM1](https://doi.org/10.1016/S0176-1617(96)80284-7): Gitelson and Merzlyak Index 1.
+- [GM2](https://doi.org/10.1016/S0176-1617(96)80284-7): Gitelson and Merzlyak Index 2.
 - [GNDVI](https://doi.org/10.1016/S0034-4257(96)00072-7): Green Normalized Difference Vegetation Index.
 - [GOSAVI](https://doi.org/10.2134/agronj2004.0314): Green Optimized Soil Adjusted Vegetation Index.
 - [GRNDVI](https://www.indexdatabase.de/db/i-single.php?id=185): Green-Red Normalized Difference Vegetation Index.

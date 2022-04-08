@@ -1368,5 +1368,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        GM1=SpectralIndex(
+            short_name='GM1',
+            long_name='Gitelson and Merzlyak Index 1',
+            formula='RE2/G',
+            reference='https://doi.org/10.1016/S0176-1617(96)80284-7',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        GM2=SpectralIndex(
+            short_name='GM2',
+            long_name='Gitelson and Merzlyak Index 2',
+            formula='RE2/RE1',
+            reference='https://doi.org/10.1016/S0176-1617(96)80284-7',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
