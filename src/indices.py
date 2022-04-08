@@ -1395,5 +1395,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        IPVI=SpectralIndex(
+            short_name='IPVI',
+            long_name='Infrared Percentage Vegetation Index',
+            formula='N/(N + R)',
+            reference='https://doi.org/10.1016/0034-4257(90)90085-Z',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

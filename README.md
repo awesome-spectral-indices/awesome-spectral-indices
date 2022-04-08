@@ -410,7 +410,8 @@ There is no deadline. The repository is continuously updated!
 ### I
 
 - [IAVI](https://www.jipb.net/EN/abstract/abstract23925.shtml): New Atmospherically Resistant Vegetation Index.
-- [IKAW](https://doi.org/10.1006/anbo.1997.0544): Kawashima Index. 
+- [IKAW](https://doi.org/10.1006/anbo.1997.0544): Kawashima Index.
+- [IPVI](https://doi.org/10.1016/0034-4257(90)90085-Z): Infrared Percentage Vegetation Index. 
 - [IRECI](https://doi.org/10.1016/j.isprsjprs.2013.04.007): Inverted Red-Edge Chlorophyll Index. 
 
 ### M
