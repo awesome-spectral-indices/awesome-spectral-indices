@@ -1179,5 +1179,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        ExGExR=SpectralIndex(
+            short_name='ExGExR',
+            long_name='ExG - ExR Vegetation Index',
+            formula='(2.0 * G - R - B) - (1.3 * R - G)',
+            reference='https://doi.org/10.1016/j.compag.2008.03.009',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        ExR=SpectralIndex(
+            short_name='ExR',
+            long_name='Excess Red Index',
+            formula='1.3 * R - G',
+            reference='https://doi.org/10.1117/12.336896',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

@@ -380,7 +380,9 @@ There is no deadline. The repository is continuously updated!
 
 - [EVI](https://doi.org/10.1016/S0034-4257(96)00112-5): Enhanced Vegetation Index. 
 - [EVI2](https://doi.org/10.1016/j.rse.2008.06.006): Two-Band Enhanced Vegetation Index. 
-- [ExG](https://doi.org/10.13031/2013.27838): Excess Green Index. 
+- [ExG](https://doi.org/10.13031/2013.27838): Excess Green Index.
+- [ExGExR](https://doi.org/10.1016/j.compag.2008.03.009): ExG - ExR Vegetation Index.
+- [ExR](https://doi.org/10.1117/12.336896): Excess Red Index.
 
 ### F
 
