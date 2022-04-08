@@ -1359,5 +1359,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        TVI=SpectralIndex(
+            short_name='TVI',
+            long_name='Transformed Vegetation Index',
+            formula='(((N - R)/(N + R)) + 0.5) ** 0.5',
+            reference='https://ntrs.nasa.gov/citations/19740022614',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
