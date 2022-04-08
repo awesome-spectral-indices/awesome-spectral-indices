@@ -465,6 +465,10 @@ There is no deadline. The repository is continuously updated!
 - [OCVI](http://dx.doi.org/10.1007/s11119-008-9075-z): Optimized Chlorophyll Vegetation Index.
 - [OSAVI](https://doi.org/10.1016/0034-4257(95)00186-7): Optimized Soil-Adjusted Vegetation Index.
 
+### P
+
+- [PSRI](https://doi.org/10.1034/j.1399-3054.1999.106119.x): Plant Senescing Reflectance Index.
+
 ### R
 
 - [RCC](https://doi.org/10.1016/0034-4257(87)90088-5): Red Chromatic Coordinate.

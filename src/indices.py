@@ -1440,5 +1440,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        PSRI=SpectralIndex(
+            short_name='PSRI',
+            long_name='Plant Senescing Reflectance Index',
+            formula='(R - B)/RE2',
+            reference='https://doi.org/10.1034/j.1399-3054.1999.106119.x',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
