@@ -1260,5 +1260,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        IKAW=SpectralIndex(
+            short_name='IKAW',
+            long_name='Kawashima Index',
+            formula='(R - B)/(R + B)',
+            reference='https://doi.org/10.1006/anbo.1997.0544',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

@@ -403,6 +403,7 @@ There is no deadline. The repository is continuously updated!
 
 ### I
 
+- [IKAW](https://doi.org/10.1006/anbo.1997.0544): Kawashima Index. 
 - [IRECI](https://doi.org/10.1016/j.isprsjprs.2013.04.007): Inverted Red-Edge Chlorophyll Index. 
 
 ### M
