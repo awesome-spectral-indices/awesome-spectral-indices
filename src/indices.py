@@ -1278,5 +1278,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        RGBVI=SpectralIndex(
+            short_name='RGBVI',
+            long_name='Red Green Blue Vegetation Index',
+            formula='(G ** 2.0 - B * R)/(G ** 2.0 + B * R)',
+            reference='https://doi.org/10.1016/j.jag.2015.02.012',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
