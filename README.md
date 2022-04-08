@@ -422,7 +422,8 @@ There is no deadline. The repository is continuously updated!
 - [MCARI705](https://doi.org/10.1016/j.agrformet.2008.03.005): Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm).
 - [MCARIOSAVI](https://doi.org/10.1016/S0034-4257(00)00113-9): MCARI/OSAVI Ratio.
 - [MCARIOSAVI705](https://doi.org/10.1016/j.agrformet.2008.03.005): MCARI/OSAVI Ratio (705 and 750 nm). 
-- [MGRVI](https://doi.org/10.1016/j.jag.2015.02.012): Modified Green Red Vegetation Index.  
+- [MGRVI](https://doi.org/10.1016/j.jag.2015.02.012): Modified Green Red Vegetation Index.
+- [mND705](https://doi.org/10.1016/S0034-4257(02)00010-X): Modified Normalized Difference (705, 750 and 445 nm).
 - [MNDVI](https://doi.org/10.1080/014311697216810): Modified Normalized Difference Vegetation Index.
 - [MNLI](https://doi.org/10.1109/TGRS.2003.812910): Modified Non-Linear Vegetation Index.
 - [MRBVI](https://doi.org/10.3390/s20185055): Modified Red Blue Vegetation Index.
@@ -430,12 +431,14 @@ There is no deadline. The repository is continuously updated!
 - [MSI](https://doi.org/10.1016/0034-4257(89)90046-1): Moisture Stress Index.
 - [MSR](https://doi.org/10.1080/07038992.1996.10855178): Modified Simple Ratio.
 - [MSR705](https://doi.org/10.1016/j.agrformet.2008.03.005): Modified Simple Ratio (705 and 750 nm).
+- [mSR705](https://doi.org/10.1016/S0034-4257(02)00010-X): Modified Simple Ratio (705 and 445 nm).
 - [MTCI](https://doi.org/10.1080/0143116042000274015): MERIS Terrestrial Chlorophyll Index.
 - [MTVI1](https://doi.org/10.1016/j.rse.2003.12.013): Modified Triangular Vegetation Index 1.
 - [MTVI2](https://doi.org/10.1016/j.rse.2003.12.013): Modified Triangular Vegetation Index 2.
 
 ### N
 
+- [ND705](https://doi.org/10.1016/S0034-4257(02)00010-X): Normalized Difference (705 and 750 nm).
 - [NDDI](https://doi.org/10.1029/2006GL029127): Normalized Difference Drought Index.
 - [NDGI](https://doi.org/10.1016/j.rse.2019.03.028): Normalized Difference Greenness Index.
 - [NDII](https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf): Normalized Difference Infrared Index.

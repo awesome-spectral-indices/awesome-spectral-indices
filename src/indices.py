@@ -1413,5 +1413,32 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        ND705=SpectralIndex(
+            short_name='ND705',
+            long_name='Normalized Difference (705 and 750 nm)',
+            formula='(RE2 - RE1)/(RE2 + RE1)',
+            reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        mSR705=SpectralIndex(
+            short_name='mSR705',
+            long_name='Modified Simple Ratio (705 and 445 nm)',
+            formula='(RE2 - A)/(RE2 + A)',
+            reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        mND705=SpectralIndex(
+            short_name='mND705',
+            long_name='Modified Normalized Difference (705, 750 and 445 nm)',
+            formula='(RE2 - RE1)/(RE2 + RE1 - A)',
+            reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
