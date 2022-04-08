@@ -1296,5 +1296,59 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        NormNIR=SpectralIndex(
+            short_name='NormNIR',
+            long_name='Normalized NIR',
+            formula='N/(N + G + R)',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        NormR=SpectralIndex(
+            short_name='NormR',
+            long_name='Normalized Red',
+            formula='R/(N + G + R)',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        NormG=SpectralIndex(
+            short_name='NormG',
+            long_name='Normalized Green',
+            formula='G/(N + G + R)',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        GRVI=SpectralIndex(
+            short_name='GRVI',
+            long_name='Green Ratio Vegetation Index',
+            formula='N/G',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        GSAVI=SpectralIndex(
+            short_name='GSAVI',
+            long_name='Green Soil Adjusted Vegetation Index',
+            formula='(1.0 + L) * (N - G) / (N + G + L)',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        GOSAVI=SpectralIndex(
+            short_name='GOSAVI',
+            long_name='Green Optimized Soil Adjusted Vegetation Index',
+            formula='(N - G) / (N + G + 0.16)',
+            reference='https://doi.org/10.2134/agronj2004.0314',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

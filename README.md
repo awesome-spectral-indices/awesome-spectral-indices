@@ -398,8 +398,11 @@ There is no deadline. The repository is continuously updated!
 - [GDVI](https://doi.org/10.3390/rs6021211): Generalized Difference Vegetation Index. 
 - [GEMI](http://dx.doi.org/10.1007/bf00031911): Global Environment Monitoring Index. 
 - [GLI](http://dx.doi.org/10.1080/10106040108542184): Green Leaf Index. 
-- [GNDVI](https://doi.org/10.1016/S0034-4257(96)00072-7): Green Normalized Difference Vegetation Index. 
-- [GRNDVI](https://www.indexdatabase.de/db/i-single.php?id=185): Green-Red Normalized Difference Vegetation Index. 
+- [GNDVI](https://doi.org/10.1016/S0034-4257(96)00072-7): Green Normalized Difference Vegetation Index.
+- [GOSAVI](https://doi.org/10.2134/agronj2004.0314): Green Optimized Soil Adjusted Vegetation Index.
+- [GRNDVI](https://www.indexdatabase.de/db/i-single.php?id=185): Green-Red Normalized Difference Vegetation Index.
+- [GRVI](https://doi.org/10.2134/agronj2004.0314): Green Ratio Vegetation Index.
+- [GSAVI](https://doi.org/10.2134/agronj2004.0314): Green Soil Adjusted Vegetation Index.
 - [GVMI](https://doi.org/10.1016/S0034-4257(02)00037-8): Global Vegetation Moisture Index. 
 
 ### I
@@ -444,6 +447,9 @@ There is no deadline. The repository is continuously updated!
 - [NIRvP](https://doi.org/10.1016/j.rse.2021.112763): Near-Infrared Reflectance of Vegetation and Incoming PAR.
 - [NLI](https://doi.org/10.1080/02757259409532252): Non-Linear Vegetation Index.
 - [NMDI](https://doi.org/10.1029/2007GL031021): Normalized Multi‐band Drought Index.
+- [NormG](https://doi.org/10.2134/agronj2004.0314): Normalized Green.
+- [NormNIR](https://doi.org/10.2134/agronj2004.0314): Normalized NIR.
+- [NormR](https://doi.org/10.2134/agronj2004.0314): Normalized Red.
 - [NRFIg](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Green.
 - [NRFIr](https://doi.org/10.3390/rs13010105): Normalized Rapeseed Flowering Index Red.
 
