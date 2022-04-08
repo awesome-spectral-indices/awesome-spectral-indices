@@ -1386,5 +1386,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        IAVI=SpectralIndex(
+            short_name='IAVI',
+            long_name='New Atmospherically Resistant Vegetation Index',
+            formula='(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))',
+            reference='https://www.jipb.net/EN/abstract/abstract23925.shtml',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
