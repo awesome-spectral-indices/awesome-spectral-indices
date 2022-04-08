@@ -2,8 +2,10 @@ Index,Long Name,Equation
 AFRI1600,Aerosol Free Vegetation Index (1600 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00190-0>`_],:math:`(N-0.66\times S1)/(N+0.66\times S1)`
 AFRI2100,Aerosol Free Vegetation Index (2100 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00190-0>`_],:math:`(N-0.5\times S2)/(N+0.5\times S2)`
 ARI,Anthocyanin Reflectance Index [`ref <https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2>`_],:math:`(1/G)-(1/RE1)`
+ARI2,Anthocyanin Reflectance Index 2 [`ref <https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2>`_],:math:`N\times ((1/G)-(1/RE1))`
 ARVI,Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(N-(R-\gamma \times (R-B)))/(N+(R-\gamma \times (R-B)))`
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(91)90009-U>`_],:math:`sla\times (N-sla\times R-slb)/(sla\times N+R-sla\times slb+0.08\times (1+sla^{2.0}))`
+AVI,Advanced Vegetation Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`(N\times (1.0-R)\times (N-R))^(1/3)`
 BCC,Blue Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`B/(R+G+B)`
 BNDVI,Blue Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S1672-6308(07)60027-4>`_],:math:`(N-B)/(N+B)`
 BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/cropsci2007.01.0031>`_],:math:`(\alpha \times N-B)/(\alpha \times N+B)`
@@ -15,6 +17,8 @@ DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.20
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
 EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2008.06.006>`_],:math:`g\times (N-R)/(N+2.4\times R+L)`
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
+ExGR,ExG - ExR Vegetation Index [`ref <https://doi.org/10.1016/j.compag.2008.03.009>`_],:math:`(2.0\times G-R-B)-(1.3\times R-G)`
+ExR,Excess Red Index [`ref <https://doi.org/10.1117/12.336896>`_],:math:`1.3\times R-G`
 FCVI,Fluorescence Correction Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2020.111676>`_],:math:`N-((R+G+B)/3.0)`
 GARI,Green Atmospherically Resistant Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=363>`_],:math:`(N-(G-(B-R)))/(N-(G+(B-R)))`
 GBNDVI,Green-Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=186>`_],:math:`(N-(G+B))/(N+(G+B))`
@@ -23,8 +27,12 @@ GDVI,Generalized Difference Vegetation Index [`ref <https://doi.org/10.3390/rs60
 GEMI,Global Environment Monitoring Index [`ref <http://dx.doi.org/10.1007/bf00031911>`_],:math:`((2.0\times ((N^{2.0})-(R^{2.0}))+1.5\times N+0.5\times R)/(N+R+0.5))\times (1.0-0.25\times ((2.0\times ((N^{2.0})-(R^2))+1.5\times N+0.5\times R)/(N+R+0.5)))-((R-0.125)/(1-R))`
 GLI,Green Leaf Index [`ref <http://dx.doi.org/10.1080/10106040108542184>`_],:math:`(2.0\times G-R-B)/(2.0\times G+R+B)`
 GNDVI,Green Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00072-7>`_],:math:`(N-G)/(N+G)`
+GOSAVI,Green Optimized Soil Adjusted Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`(N-G)/(N+G+0.16)`
 GRNDVI,Green-Red Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=185>`_],:math:`(N-(G+R))/(N+(G+R))`
+GRVI,Green Ratio Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`N/G`
+GSAVI,Green Soil Adjusted Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`(1.0+L)\times (N-G)/(N+G+L)`
 GVMI,Global Vegetation Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(02)00037-8>`_],:math:`((N+0.1)-(S2+0.02))/((N+0.1)+(S2+0.02))`
+IKAW,Kawashima Index [`ref <https://doi.org/10.1006/anbo.1997.0544>`_],:math:`(R-B)/(R+B)`
 IRECI,Inverted Red-Edge Chlorophyll Index [`ref <https://doi.org/10.1016/j.isprsjprs.2013.04.007>`_],:math:`(RE3-R)/(RE1/RE2)`
 MCARI,Modified Chlorophyll Absorption in Reflectance Index [`ref <http://dx.doi.org/10.1016/S0034-4257(00)00113-9>`_],:math:`((RE1-R)-0.2\times (RE1-G))\times (RE1/R)`
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (2.5\times (N-R)-1.3\times (N-G))`
@@ -35,7 +43,9 @@ MCARIOSAVI705,MCARI/OSAVI Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/
 MGRVI,Modified Green Red Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2015.02.012>`_],:math:`(G^{2.0}-R^{2.0})/(G^{2.0}+R^{2.0})`
 MNDVI,Modified Normalized Difference Vegetation Index [`ref <https://doi.org/10.1080/014311697216810>`_],:math:`(N-S2)/(N+S2)`
 MNLI,Modified Non-Linear Vegetation Index [`ref <https://doi.org/10.1109/TGRS.2003.812910>`_],:math:`(1+L)\times ((N^2)-R)/((N^2)+R+L)`
+MRBVI,Modified Red Blue Vegetation Index [`ref <https://doi.org/10.3390/s20185055>`_],:math:`(R^{2.0}-B^{2.0})/(R^{2.0}+B^{2.0})`
 MSAVI,Modified Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)90134-1>`_],:math:`0.5\times (2.0\times N+1-(((2\times N+1)^2)-8\times (N-R))^{0.5})`
+MSI,Moisture Stress Index [`ref <https://doi.org/10.1016/0034-4257(89)90046-1>`_],:math:`S1/N`
 MSR,Modified Simple Ratio [`ref <https://doi.org/10.1080/07038992.1996.10855178>`_],:math:`(N/R-1)/((N/R+1)^{0.5})`
 MSR705,Modified Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`(RE2/RE1-1)/((RE2/RE1+1)^{0.5})`
 MTCI,MERIS Terrestrial Chlorophyll Index [`ref <https://doi.org/10.1080/0143116042000274015>`_],:math:`(RE2-RE1)/(RE1-R)`
@@ -58,17 +68,24 @@ NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252
 NMDI,Normalized Multi-band Drought Index [`ref <https://doi.org/10.1029/2007GL031021>`_],:math:`(N-(S1-S2))/(N+(S1-S2))`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
 NRFIr,Normalized Rapeseed Flowering Index Red [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(R-S2)/(R+S2)`
+NormG,Normalized Green [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`G/(N+G+R)`
+NormNIR,Normalized NIR [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`N/(N+G+R)`
+NormR,Normalized Red [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`R/(N+G+R)`
 OCVI,Optimized Chlorophyll Vegetation Index [`ref <http://dx.doi.org/10.1007/s11119-008-9075-z>`_],:math:`(N/G)\times (R/G)^{c}`
 OSAVI,Optimized Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(95)00186-7>`_],:math:`(N-R)/(N+R+0.16)`
 RCC,Red Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`R/(R+G+B)`
 RDVI,Renormalized Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)00114-3>`_],:math:`(N-R)/((N+R)^{0.5})`
 REDSI,Red-Edge Disease Stress Index [`ref <https://doi.org/10.3390/s18030868>`_],:math:`((705.0-665.0)\times (RE3-R)-(783.0-665.0)\times (RE1-R))/(2.0\times R)`
+RGBVI,Red Green Blue Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2015.02.012>`_],:math:`(G^{2.0}-B\times R)/(G^{2.0}+B\times R)`
+RGRI,Red-Green Ratio Index [`ref <https://doi.org/10.1016/j.jag.2014.03.018>`_],:math:`R/G`
 RVI,Ratio Vegetation Index [`ref <https://doi.org/10.2134/agronj1968.00021962006000060016x>`_],:math:`N/R`
 S2REP,Sentinel-2 Red-Edge Position [`ref <https://doi.org/10.1016/j.isprsjprs.2013.04.007>`_],:math:`705.0+35.0\times ((((RE3+R)/2.0)-RE1)/(RE2-RE1))`
 SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(1+L)\times (N-(R-(R-B)))/(N+(R-(R-B))+L)`
 SAVI,Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(88)90106-X>`_],:math:`(1.0+L)\times (N-R)/(N+R+L)`
 SAVI2,Soil-Adjusted Vegetation Index 2 [`ref <https://doi.org/10.1080/01431169008955053>`_],:math:`N/(R+(slb/sla))`
+SI,Shadow Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`((1.0-B)\times (1.0-G)\times (1.0-R))^(1/3)`
 SIPI,Structure Insensitive Pigment Index [`ref <https://eurekamag.com/research/009/395/009395053.php>`_],:math:`(N-A)/(N-R)`
+SR,Simple Ratio [`ref <https://doi.org/10.2307/1936256>`_],:math:`N/R`
 SR555,Simple Ratio (555 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/G`
 SR705,Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/RE1`
 SeLI,Sentinel-2 LAI Green Index [`ref <https://doi.org/10.3390/s19040904>`_],:math:`(N2-RE1)/(N2+RE1)`
@@ -80,7 +97,8 @@ TGI,Triangular Greenness Index [`ref <http://dx.doi.org/10.1016/j.jag.2012.07.02
 TRRVI,Transformed Red Range Vegetation Index [`ref <https://doi.org/10.3390/rs12152359>`_],:math:`((RE2-R)/(RE2+R))/(((N-R)/(N+R))+1.0)`
 TSAVI,Transformed Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1109/IGARSS.1989.576128>`_],:math:`sla\times (N-sla\times R-slb)/(sla\times N+R-sla\times slb)`
 TTVI,Transformed Triangular Vegetation Index [`ref <https://doi.org/10.3390/rs12010016>`_],:math:`0.5\times ((865.0-740.0)\times (RE3-RE2)-(N2-RE2)\times (783.0-740))`
-TVI,Triangular Vegetation Index [`ref <http://dx.doi.org/10.1016/S0034-4257(00)00197-8>`_],:math:`0.5\times (120\times (N-G)-200\times (R-G))`
+TVI,Transformed Vegetation Index [`ref <https://ntrs.nasa.gov/citations/19740022614>`_],:math:`(((N-R)/(N+R))+0.5)^{0.5}`
+TriVI,Triangular Vegetation Index [`ref <http://dx.doi.org/10.1016/S0034-4257(00)00197-8>`_],:math:`0.5\times (120\times (N-G)-200\times (R-G))`
 VARI,Visible Atmospherically Resistant Index [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(G-R)/(G+R-B)`
 VARI700,Visible Atmospherically Resistant Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(RE1-1.7\times R+0.7\times B)/(RE1+1.3\times R-1.3\times B)`
 VI700,Vegetation Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(RE1-R)/(RE1+R)`

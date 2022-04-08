@@ -1,5 +1,8 @@
 Index,Long Name,Equation
+NDGlaI,Normalized Difference Glacier Index [`ref <https://doi.org/10.1080/01431160802385459>`_],:math:`(G-R)/(G+R)`
 NDSI,Normalized Difference Snow Index [`ref <https://doi.org/10.1109/IGARSS.1994.399618>`_],:math:`(G-S1)/(G+S1)`
-NDSII,Normalized Difference Snow Ice Index [`ref <https://doi.org/10.1080/01431160119766>`_],:math:`(R-S1)/(R+S1)`
+NDSII,Normalized Difference Snow Ice Index [`ref <https://doi.org/10.1080/01431160802385459>`_],:math:`(G-N)/(G+N)`
+NDSInw,Normalized Difference Snow Index with no Water [`ref <https://doi.org/10.3390/w12051339>`_],:math:`(N-S1-\beta )/(N+S1)`
+NDSaII,Normalized Difference Snow and Ice Index [`ref <https://doi.org/10.1080/01431160119766>`_],:math:`(R-S1)/(R+S1)`
 S3,S3 Snow Index [`ref <https://doi.org/10.3178/jjshwr.12.28>`_],:math:`(N\times (R-S1))/((N+R)\times (N+S1))`
 SWI,Snow Water Index [`ref <https://doi.org/10.3390/rs11232774>`_],:math:`(G\times (N-S1))/((G+N)\times (N+S1))`

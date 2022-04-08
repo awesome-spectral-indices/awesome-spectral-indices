@@ -5,6 +5,7 @@ MBWI,Multi-Band Water Index [`ref <https://doi.org/10.1016/j.jag.2018.01.018>`_]
 MNDWI,Modified Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431160600589179>`_],:math:`(G-S1)/(G+S1)`
 NDVIMNDWI,NDVI-MNDWI Model [`ref <https://doi.org/10.1007/978-3-662-45737-5_51>`_],:math:`((N-R)/(N+R))-((G-S1)/(G+S1))`
 NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
+NDWIns,Normalized Difference Water Index with no Snow Cover and Glaciers [`ref <https://doi.org/10.3390/w12051339>`_],:math:`(G-\alpha \times N)/(G+N)`
 NWI,New Water Index [`ref <https://doi.org/10.11873/j.issn.1004-0323.2009.2.167>`_],:math:`(B-(N+S1+S2))/(B+(N+S1+S2))`
 S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`(RE1-S2)/(RE1+S2)`
 WI1,Water Index 1 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(G-S2)/(G+S2)`
