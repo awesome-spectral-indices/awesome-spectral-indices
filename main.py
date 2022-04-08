@@ -33,6 +33,7 @@ def toMath(x):
     x = x.replace("^cexp","^{c}")
     x = x.replace("gamma","\\gamma ")
     x = x.replace("alpha","\\alpha ")
+    x = x.replace("beta","\\beta ")
     x = x.replace("omega","\\omega ")
     x = x.replace("lambdaN","\\lambda_{N} ")
     x = x.replace("lambdaR","\\lambda_{R} ")
@@ -43,6 +44,6 @@ def toMath(x):
 df["Equation"] = df["formula"].apply(toMath)
 df["Long Name"] = df["long_name"] + " [`ref <" + df["reference"] + ">`_]"
 df["Index"] = df["short_name"]
-for t in ["vegetation","burn","water","snow","drought","urban","kernel","radar"]:
+for t in ["vegetation","burn","water","snow","urban","kernel","radar"]:
     name = "docs/_static/indices_" + t + ".csv"
     df[df["type"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)

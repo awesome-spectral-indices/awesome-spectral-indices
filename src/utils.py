@@ -26,6 +26,7 @@ class Bands(Enum):
     N_EXPONENT = "nexp"
     GAMMA = "gamma"
     ALPHA = "alpha"
+    BETA = "beta"
     SOIL_LINE_SLOPE = "sla"
     SOIL_LINE_INTERCEPT = "slb"
     PAR = "PAR"

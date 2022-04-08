@@ -303,6 +303,7 @@ Additional index parameters also follow a standard:
 - `cexp`: Exponent used for OCVI.
 - `nexp`: Exponent used for GDVI.
 - `alpha`: Weighting coefficient used for WDRVI, BWDRVI and NDPI.
+- `beta`: Calibration parameter used for NDSIns.
 - `gamma`: Weighting coefficient used for ARVI.
 - `omega`: Weighting coefficient used for MBWI.
 - `sla`: Soil line slope.
@@ -505,6 +506,7 @@ There is no deadline. The repository is continuously updated!
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [NDVIMNDWI](https://doi.org/10.1007/978-3-662-45737-5_51): NDVI - MNDWI Model.
 - [NDWI](https://doi.org/10.1080/01431169608948714): Normalized Difference Water Index.
+- [NDWIns](https://doi.org/10.3390/w12051339): Normalized Difference Water Index with no Snow Cover and Glaciers.
 - [NWI](https://doi.org/10.11873/j.issn.1004-0323.2009.2.167): New Water Index.
 - [S2WI](https://doi.org/10.3390/w13121647): Sentinel-2 Water Index.
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
@@ -515,6 +517,7 @@ There is no deadline. The repository is continuously updated!
 
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
 - [NDSII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow Ice Index.
+- [NDSInw](https://doi.org/10.3390/w12051339): Normalized Difference Snow Index with no Water.
 - [S3](https://doi.org/10.3178/jjshwr.12.28): S3 Snow Index.
 - [SWI](https://doi.org/10.3390/rs11232774): Snow Water Index.
 

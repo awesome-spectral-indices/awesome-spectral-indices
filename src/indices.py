@@ -1161,5 +1161,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-03-06',
             contributor="https://github.com/MATRIX4284"
         ),
+        NDWIns=SpectralIndex(
+            short_name='NDWIns',
+            long_name='Normalized Difference Water Index with no Snow Cover and Glaciers',
+            formula='(G - alpha * N)/(G + N)',
+            reference='https://doi.org/10.3390/w12051339',
+            type='water',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        NDSInw=SpectralIndex(
+            short_name='NDSInw',
+            long_name='Normalized Difference Snow Index with no Water',
+            formula='(N - S1 - beta)/(N + S1)',
+            reference='https://doi.org/10.3390/w12051339',
+            type='snow',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
