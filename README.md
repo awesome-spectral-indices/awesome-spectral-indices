@@ -375,7 +375,7 @@ There is no deadline. The repository is continuously updated!
 
 ### D
 
-- [DVI](https://doi.org/10.2307/1936256): Difference Vegetation Index.
+- [DVI](https://doi.org/10.1016/0034-4257(94)00114-3): Difference Vegetation Index.
 - [DVIplus](https://doi.org/10.1016/j.rse.2019.03.028): Difference Vegetation Index Plus.
 
 ### E
