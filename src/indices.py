@@ -1242,5 +1242,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        NDGlaI=SpectralIndex(
+            short_name='NDGlaI',
+            long_name='Normalized Difference Glacier Index',
+            formula='(G - R)/(G + R)',
+            reference='https://doi.org/10.1080/01431160802385459',
+            type='snow',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        NDSII=SpectralIndex(
+            short_name='NDSII',
+            long_name='Normalized Difference Snow Ice Index',
+            formula='(G - N)/(G + N)',
+            reference='https://doi.org/10.1080/01431160802385459',
+            type='snow',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
