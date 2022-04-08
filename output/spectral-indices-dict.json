@@ -290,7 +290,7 @@
             "date_of_addition": "2021-05-14",
             "formula": "N - R",
             "long_name": "Difference Vegetation Index",
-            "reference": "https://doi.org/10.2307/1936256",
+            "reference": "https://doi.org/10.1016/0034-4257(94)00114-3",
             "short_name": "DVI",
             "type": "vegetation"
         },
@@ -524,6 +524,32 @@
             "short_name": "GLI",
             "type": "vegetation"
         },
+        "GM1": {
+            "bands": [
+                "RE2",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "RE2/G",
+            "long_name": "Gitelson and Merzlyak Index 1",
+            "reference": "https://doi.org/10.1016/S0176-1617(96)80284-7",
+            "short_name": "GM1",
+            "type": "vegetation"
+        },
+        "GM2": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "RE2/RE1",
+            "long_name": "Gitelson and Merzlyak Index 2",
+            "reference": "https://doi.org/10.1016/S0176-1617(96)80284-7",
+            "short_name": "GM2",
+            "type": "vegetation"
+        },
         "GNDVI": {
             "bands": [
                 "N",
@@ -604,6 +630,21 @@
             "short_name": "GVMI",
             "type": "vegetation"
         },
+        "IAVI": {
+            "bands": [
+                "N",
+                "R",
+                "gamma",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))",
+            "long_name": "New Atmospherically Resistant Vegetation Index",
+            "reference": "https://www.jipb.net/EN/abstract/abstract23925.shtml",
+            "short_name": "IAVI",
+            "type": "vegetation"
+        },
         "IBI": {
             "bands": [
                 "S1",
@@ -631,6 +672,19 @@
             "long_name": "Kawashima Index",
             "reference": "https://doi.org/10.1006/anbo.1997.0544",
             "short_name": "IKAW",
+            "type": "vegetation"
+        },
+        "IPVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "N/(N + R)",
+            "long_name": "Infrared Percentage Vegetation Index",
+            "reference": "https://doi.org/10.1016/0034-4257(90)90085-Z",
+            "short_name": "IPVI",
             "type": "vegetation"
         },
         "IRECI": {
@@ -949,6 +1003,19 @@
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT",
             "type": "burn"
+        },
+        "ND705": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "(RE2 - RE1)/(RE2 + RE1)",
+            "long_name": "Normalized Difference (705 and 750 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
+            "short_name": "ND705",
+            "type": "vegetation"
         },
         "NDBI": {
             "bands": [
@@ -1427,6 +1494,20 @@
             "long_name": "Optimized Soil-Adjusted Vegetation Index",
             "reference": "https://doi.org/10.1016/0034-4257(95)00186-7",
             "short_name": "OSAVI",
+            "type": "vegetation"
+        },
+        "PSRI": {
+            "bands": [
+                "R",
+                "B",
+                "RE2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "(R - B)/RE2",
+            "long_name": "Plant Senescing Reflectance Index",
+            "reference": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
+            "short_name": "PSRI",
             "type": "vegetation"
         },
         "QpRVI": {
@@ -2053,6 +2134,19 @@
             "short_name": "kEVI",
             "type": "kernel"
         },
+        "kIPVI": {
+            "bands": [
+                "kNN",
+                "kNR"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "kNN/(kNN + kNR)",
+            "long_name": "Kernel Infrared Percentage Vegetation Index",
+            "reference": "https://doi.org/10.1126/sciadv.abc7447",
+            "short_name": "kIPVI",
+            "type": "vegetation"
+        },
         "kNDVI": {
             "bands": [
                 "kNN",
@@ -2092,6 +2186,33 @@
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kVARI",
             "type": "kernel"
+        },
+        "mND705": {
+            "bands": [
+                "RE2",
+                "RE1",
+                "A"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "(RE2 - RE1)/(RE2 + RE1 - A)",
+            "long_name": "Modified Normalized Difference (705, 750 and 445 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
+            "short_name": "mND705",
+            "type": "vegetation"
+        },
+        "mSR705": {
+            "bands": [
+                "RE2",
+                "A"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-08",
+            "formula": "(RE2 - A)/(RE2 + A)",
+            "long_name": "Modified Simple Ratio (705 and 445 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
+            "short_name": "mSR705",
+            "type": "vegetation"
         }
     }
 }
