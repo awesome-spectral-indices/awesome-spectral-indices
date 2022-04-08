@@ -562,6 +562,7 @@ There is no deadline. The repository is continuously updated!
 ## Kernel 🎯
 
 - [kEVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Enhanced Vegetation Index.
+- [kIPVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Infrared Percentage Vegetation Index.
 - [kNDVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Normalized Difference Vegetation Index.
 - [kRVI](https://doi.org/10.1126/sciadv.abc7447): Kernel Ratio Vegetation Index.
 - [kVARI](https://doi.org/10.1126/sciadv.abc7447): Kernel Visible Atmospherically Resistant Index.

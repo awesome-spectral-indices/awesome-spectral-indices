@@ -1404,5 +1404,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        kIPVI=SpectralIndex(
+            short_name='kIPVI',
+            long_name='Kernel Infrared Percentage Vegetation Index',
+            formula='kNN/(kNN + kNR)',
+            reference='https://doi.org/10.1126/sciadv.abc7447',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
