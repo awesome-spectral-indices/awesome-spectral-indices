@@ -521,8 +521,8 @@ There is no deadline. The repository is continuously updated!
 
 ## Snow ⛄
 
+- [NDSaII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow and Ice Index.
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
-- [NDSII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow Ice Index.
 - [NDSInw](https://doi.org/10.3390/w12051339): Normalized Difference Snow Index with no Water.
 - [S3](https://doi.org/10.3178/jjshwr.12.28): S3 Snow Index.
 - [SWI](https://doi.org/10.3390/rs11232774): Snow Water Index.

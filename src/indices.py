@@ -702,9 +702,9 @@ spindex = SpectralIndices(
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
-        NDSII=SpectralIndex(
-            short_name='NDSII',
-            long_name='Normalized Difference Snow Ice Index',
+        NDSaII=SpectralIndex(
+            short_name='NDSaII',
+            long_name='Normalized Difference Snow and Ice Index',
             formula='(R - S1) / (R + S1)',
             reference='https://doi.org/10.1080/01431160119766',
             type='snow',
