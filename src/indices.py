@@ -1449,5 +1449,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        NBSIMS=SpectralIndex(
+            short_name='NBSIMS',
+            long_name='Non-Binary Snow Index for Multi-Component Surfaces',
+            formula='0.36 * (G + R + N) - (((B + S2)/G) + S1)',
+            reference='https://doi.org/10.3390/rs13142777',
+            type='snow',
+            date_of_addition='2022-04-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

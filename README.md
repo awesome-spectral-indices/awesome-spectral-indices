@@ -544,6 +544,7 @@ There is no deadline. The repository is continuously updated!
 
 ## Snow ⛄
 
+- [NBSIMS](https://doi.org/10.3390/rs13142777): Non-Binary Snow Index for Multi-Component Surfaces.
 - [NDGlaI](https://doi.org/10.1080/01431160802385459): Normalized Difference Glacier Index.
 - [NDSaII](https://doi.org/10.1080/01431160119766): Normalized Difference Snow and Ice Index.
 - [NDSI](https://doi.org/10.1109/IGARSS.1994.399618): Normalized Difference Snow Index.
