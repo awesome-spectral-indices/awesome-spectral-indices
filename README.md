@@ -490,7 +490,7 @@ There is no deadline. The repository is continuously updated!
 - [TRRVI](https://doi.org/10.3390/rs12152359): Transformed Red Range Vegetation Index.
 - [TSAVI](https://doi.org/10.1109/IGARSS.1989.576128): Transformed Soil-Adjusted Vegetation Index.
 - [TTVI](https://doi.org/10.3390/rs12010016): Transformed Triangular Vegetation Index.
-- [TVI](http://dx.doi.org/10.1016/S0034-4257(00)00197-8): Triangular Vegetation Index.
+- [TriVI](http://dx.doi.org/10.1016/S0034-4257(00)00197-8): Triangular Vegetation Index.
 
 ### V
 

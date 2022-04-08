@@ -486,8 +486,8 @@ spindex = SpectralIndices(
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
-        TVI=SpectralIndex(
-            short_name='TVI',
+        TriVI=SpectralIndex(
+            short_name='TriVI',
             long_name='Triangular Vegetation Index',
             formula='0.5 * (120 * (N - G) - 200 * (R - G))',
             reference='http://dx.doi.org/10.1016/S0034-4257(00)00197-8',
