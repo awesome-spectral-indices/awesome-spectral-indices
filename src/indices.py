@@ -1233,5 +1233,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        MSI=SpectralIndex(
+            short_name='MSI',
+            long_name='Moisture Stress Index',
+            formula='S1/N',
+            reference='https://doi.org/10.1016/0034-4257(89)90046-1',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
