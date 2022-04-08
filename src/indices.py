@@ -1206,5 +1206,32 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        AVI=SpectralIndex(
+            short_name='AVI',
+            long_name='Advanced Vegetation Index',
+            formula='(N * (1.0 - R) * (N - R)) ** (1/3)',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        BI=SpectralIndex(
+            short_name='BI',
+            long_name='Bare Soil Index',
+            formula='((S1 + R) - (N + B))/((S1 + R) + (N + B))',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
+            type='urban',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
+        SI=SpectralIndex(
+            short_name='SI',
+            long_name='Shadow Index',
+            formula='((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

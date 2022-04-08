@@ -358,6 +358,7 @@ There is no deadline. The repository is continuously updated!
 - [ARI](https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2): Anthocyanin Reflectance Index.
 - [ARVI](https://doi.org/10.1109/36.134076): Atmospherically Resistant Vegetation Index.
 - [ATSAVI](https://doi.org/10.1016/0034-4257(91)90009-U): Adjusted Transformed Soil-Adjusted Vegetation Index.
+- [AVI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Advanced Vegetation Index.
 
 ### B
 
@@ -462,6 +463,7 @@ There is no deadline. The repository is continuously updated!
 - [SAVI](https://doi.org/10.1016/0034-4257(88)90106-X): Soil-Adjusted Vegetation Index.
 - [SAVI2](https://doi.org/10.1080/01431169008955053): Soil-Adjusted Vegetation Index 2.
 - [SeLI](https://doi.org/10.3390/s19040904): Sentinel-2 LAI Green Index.
+- [SI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Shadow Index.
 - [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
 - [SR555](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (555 and 750 nm).
 - [SR705](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (705 and 750 nm).
@@ -527,6 +529,7 @@ There is no deadline. The repository is continuously updated!
 
 ## Urban 🏙️
 
+- [BI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Bare Soil Index.
 - [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.
