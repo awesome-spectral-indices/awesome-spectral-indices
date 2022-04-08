@@ -476,6 +476,7 @@ There is no deadline. The repository is continuously updated!
 - [SeLI](https://doi.org/10.3390/s19040904): Sentinel-2 LAI Green Index.
 - [SI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Shadow Index.
 - [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
+- [SR](https://doi.org/10.2307/1936256): Simple Ratio.
 - [SR555](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (555 and 750 nm).
 - [SR705](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (705 and 750 nm).
 

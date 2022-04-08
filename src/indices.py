@@ -1350,5 +1350,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
+        SR=SpectralIndex(
+            short_name='SR',
+            long_name='Simple Ratio',
+            formula='N/R',
+            reference='https://doi.org/10.2307/1936256',
+            type='vegetation',
+            date_of_addition='2022-04-08',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
