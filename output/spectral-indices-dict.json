@@ -964,6 +964,22 @@
             "short_name": "MTVI2",
             "type": "vegetation"
         },
+        "MuWIR": {
+            "bands": [
+                "B",
+                "G",
+                "N",
+                "S2",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))",
+            "long_name": "Revised Multi-Spectral Water Index",
+            "reference": "https://doi.org/10.3390/rs10101643",
+            "short_name": "MuWIR",
+            "type": "water"
+        },
         "NBR": {
             "bands": [
                 "N",
@@ -1582,6 +1598,19 @@
             "short_name": "REDSI",
             "type": "vegetation"
         },
+        "RENDVI": {
+            "bands": [
+                "RE2",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "(RE2 - RE1)/(RE2 + RE1)",
+            "long_name": "Red Edge Normalized Difference Vegetation Index",
+            "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
+            "short_name": "RENDVI",
+            "type": "vegetation"
+        },
         "RFDI": {
             "bands": [
                 "HH",
@@ -1622,14 +1651,27 @@
             "short_name": "RGRI",
             "type": "vegetation"
         },
+        "RI": {
+            "bands": [
+                "R",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "(R - G)/(R + G)",
+            "long_name": "Redness Index",
+            "reference": "https://www.documentation.ird.fr/hor/fdi:34390",
+            "short_name": "RI",
+            "type": "vegetation"
+        },
         "RVI": {
             "bands": [
-                "N",
+                "RE2",
                 "R"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
-            "formula": "N / R",
+            "formula": "RE2 / R",
             "long_name": "Ratio Vegetation Index",
             "reference": "https://doi.org/10.2134/agronj1968.00021962006000060016x",
             "short_name": "RVI",
@@ -1777,6 +1819,33 @@
             "short_name": "SR",
             "type": "vegetation"
         },
+        "SR2": {
+            "bands": [
+                "N",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "N/G",
+            "long_name": "Simple Ratio (800 and 550 nm)",
+            "reference": "https://doi.org/10.1080/01431169308904370",
+            "short_name": "SR2",
+            "type": "vegetation"
+        },
+        "SR3": {
+            "bands": [
+                "N2",
+                "G",
+                "RE1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "N2/(G * RE1)",
+            "long_name": "Simple Ratio (860, 550 and 708 nm)",
+            "reference": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+            "short_name": "SR3",
+            "type": "vegetation"
+        },
         "SR555": {
             "bands": [
                 "RE2",
@@ -1885,6 +1954,19 @@
             "long_name": "Triangular Chlorophyll Index",
             "reference": "http://dx.doi.org/10.1109/TGRS.2007.904836",
             "short_name": "TCI",
+            "type": "vegetation"
+        },
+        "TDVI": {
+            "bands": [
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-09",
+            "formula": "1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))",
+            "long_name": "Transformed Difference Vegetation Index",
+            "reference": "https://doi.org/10.1109/IGARSS.2002.1026867",
+            "short_name": "TDVI",
             "type": "vegetation"
         },
         "TGI": {

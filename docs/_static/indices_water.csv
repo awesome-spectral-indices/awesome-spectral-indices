@@ -3,6 +3,7 @@ AWEInsh,Automated Water Extraction Index [`ref <https://doi.org/10.1016/j.rse.20
 AWEIsh,Automated Water Extraction Index with Shadows Elimination [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`B+2.5\times G-1.5\times (N+S1)-0.25\times S2`
 MBWI,Multi-Band Water Index [`ref <https://doi.org/10.1016/j.jag.2018.01.018>`_],:math:`(\omega \times G)-R-N-S1-S2`
 MNDWI,Modified Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431160600589179>`_],:math:`(G-S1)/(G+S1)`
+MuWIR,Revised Multi-Spectral Water Index [`ref <https://doi.org/10.3390/rs10101643>`_],:math:`-4.0\times ((B-G)/(B+G))+2.0\times ((G-N)/(G+N))+2.0\times ((G-S2)/(G+S2))-((G-S1)/(G+S1))`
 NDVIMNDWI,NDVI-MNDWI Model [`ref <https://doi.org/10.1007/978-3-662-45737-5_51>`_],:math:`((N-R)/(N+R))-((G-S1)/(G+S1))`
 NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
 NDWIns,Normalized Difference Water Index with no Snow Cover and Glaciers [`ref <https://doi.org/10.3390/w12051339>`_],:math:`(G-\alpha \times N)/(G+N)`
