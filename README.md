@@ -491,6 +491,7 @@ There is no deadline. The repository is continuously updated!
 - [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
 - [SR](https://doi.org/10.2307/1936256): Simple Ratio.
 - [SR2](https://doi.org/10.1080/01431169308904370): Simple Ratio (800 and 550 nm).
+- [SR3](https://doi.org/10.1016/S0034-4257(98)00046-7): Simple Ratio (860, 550 and 708 nm).
 - [SR555](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (555 and 750 nm).
 - [SR705](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (705 and 750 nm).
 
