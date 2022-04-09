@@ -490,6 +490,7 @@ There is no deadline. The repository is continuously updated!
 - [SI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Shadow Index.
 - [SIPI](https://eurekamag.com/research/009/395/009395053.php): Structure Insensitive Pigment Index.
 - [SR](https://doi.org/10.2307/1936256): Simple Ratio.
+- [SR2](https://doi.org/10.1080/01431169308904370): Simple Ratio (800 and 550 nm).
 - [SR555](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (555 and 750 nm).
 - [SR705](https://doi.org/10.1016/S0176-1617(11)81633-0): Simple Ratio (705 and 750 nm).
 
