@@ -71,6 +71,7 @@ MTVI2,Modified Triangular Vegetation Index 2,vegetation,(1.5 * (1.2 * (N - G) - 
 NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),"['N', 'S2']",https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio,https://github.com/davemlz,2021-04-07
 NBR2,Normalized Burn Ratio 2,burn,(S1 - S2) / (S1 + S2),"['S1', 'S2']",https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2,https://github.com/davemlz,2021-09-20
 NBRT,Normalized Burn Ratio Thermal,burn,(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0)),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160500239008,https://github.com/davemlz,2021-04-07
+NBSIMS,Non-Binary Snow Index for Multi-Component Surfaces,snow,0.36 * (G + R + N) - (((B + S2)/G) + S1),"['G', 'R', 'N', 'B', 'S2', 'S1']",https://doi.org/10.3390/rs13142777,https://github.com/davemlz,2022-04-09
 ND705,Normalized Difference (705 and 750 nm),vegetation,(RE2 - RE1)/(RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0034-4257(02)00010-X,https://github.com/davemlz,2022-04-08
 NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),"['S1', 'N']",http://dx.doi.org/10.1080/01431160304987,https://github.com/davemlz,2021-05-14
 NDBaI,Normalized Difference Bareness Index,urban,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17

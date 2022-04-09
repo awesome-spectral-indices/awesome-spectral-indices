@@ -1,4 +1,5 @@
 Index,Long Name,Equation
+NBSIMS,Non-Binary Snow Index for Multi-Component Surfaces [`ref <https://doi.org/10.3390/rs13142777>`_],:math:`0.36\times (G+R+N)-(((B+S2)/G)+S1)`
 NDGlaI,Normalized Difference Glacier Index [`ref <https://doi.org/10.1080/01431160802385459>`_],:math:`(G-R)/(G+R)`
 NDSI,Normalized Difference Snow Index [`ref <https://doi.org/10.1109/IGARSS.1994.399618>`_],:math:`(G-S1)/(G+S1)`
 NDSII,Normalized Difference Snow Ice Index [`ref <https://doi.org/10.1080/01431160802385459>`_],:math:`(G-N)/(G+N)`
