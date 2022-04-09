@@ -477,6 +477,7 @@ There is no deadline. The repository is continuously updated!
 - [RENDVI](https://doi.org/10.1016/S0176-1617(11)81633-0): Red Edge Normalized Difference Vegetation Index.
 - [RGBVI](https://doi.org/10.1016/j.jag.2015.02.012): Red Green Blue Vegetation Index.
 - [RGRI](https://doi.org/10.1016/j.jag.2014.03.018): Red-Green Ratio Index.
+- [RI](https://www.documentation.ird.fr/hor/fdi:34390): Redness Index.
 - [RVI](https://doi.org/10.2134/agronj1968.00021962006000060016x): Ratio Vegetation Index.
 
 ### S

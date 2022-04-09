@@ -1476,5 +1476,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
+        RI=SpectralIndex(
+            short_name='RI',
+            long_name='Redness Index',
+            formula='(R - G)/(R + G)',
+            reference='https://www.documentation.ird.fr/hor/fdi:34390',
+            type='vegetation',
+            date_of_addition='2022-04-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
