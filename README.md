@@ -501,6 +501,7 @@ There is no deadline. The repository is continuously updated!
 - [TCARIOSAVI](https://doi.org/10.1016/S0034-4257(02)00018-4): TCARI/OSAVI Ratio.
 - [TCARIOSAVI705](https://doi.org/10.1016/j.agrformet.2008.03.005): TCARI/OSAVI Ratio (705 and 750 nm).
 - [TCI](http://dx.doi.org/10.1109/TGRS.2007.904836): Triangular Chlorophyll Index.
+- [TDVI](https://doi.org/10.1109/IGARSS.2002.1026867): Transformed Difference Vegetation Index.
 - [TGI](http://dx.doi.org/10.1016/j.jag.2012.07.020): Triangular Greenness Index.
 - [TRRVI](https://doi.org/10.3390/rs12152359): Transformed Red Range Vegetation Index.
 - [TSAVI](https://doi.org/10.1109/IGARSS.1989.576128): Transformed Soil-Adjusted Vegetation Index.

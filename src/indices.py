@@ -1503,5 +1503,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
+        TDVI=SpectralIndex(
+            short_name='TDVI',
+            long_name='Transformed Difference Vegetation Index',
+            formula='1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))',
+            reference='https://doi.org/10.1109/IGARSS.2002.1026867',
+            type='vegetation',
+            date_of_addition='2022-04-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
