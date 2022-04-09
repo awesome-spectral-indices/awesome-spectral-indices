@@ -1458,5 +1458,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
+        MuWIR=SpectralIndex(
+            short_name='MuWIR',
+            long_name='Revised Multi-Spectral Water Index',
+            formula='-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))',
+            reference='https://doi.org/10.3390/rs10101643',
+            type='water',
+            date_of_addition='2022-04-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
