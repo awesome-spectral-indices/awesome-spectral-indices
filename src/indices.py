@@ -1467,5 +1467,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
+        RENDVI=SpectralIndex(
+            short_name='RENDVI',
+            long_name='Red Edge Normalized Difference Vegetation Index',
+            formula='(RE2 - RE1)/(RE2 + RE1)',
+            reference='https://doi.org/10.1016/S0176-1617(11)81633-0',
+            type='vegetation',
+            date_of_addition='2022-04-09',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
