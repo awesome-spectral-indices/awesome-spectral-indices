@@ -227,6 +227,20 @@
             "short_name": "BWDRVI",
             "type": "vegetation"
         },
+        "BaI": {
+            "bands": [
+                "R",
+                "S1",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "R + S1 - N",
+            "long_name": "Bareness Index",
+            "reference": "https://doi.org/10.1109/IGARSS.2005.1525743",
+            "short_name": "BaI",
+            "type": "urban"
+        },
         "CIG": {
             "bands": [
                 "N",
@@ -280,6 +294,36 @@
             "reference": "https://www.cabdirect.org/cabdirect/abstract/20073176046",
             "short_name": "CVI",
             "type": "vegetation"
+        },
+        "DBI": {
+            "bands": [
+                "B",
+                "T1",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
+            "long_name": "Dry Built-Up Index",
+            "reference": "https://doi.org/10.3390/land7030081",
+            "short_name": "DBI",
+            "type": "urban"
+        },
+        "DBSI": {
+            "bands": [
+                "S1",
+                "G",
+                "N",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "((S1 - G)/(S1 + G)) - ((N - R)/(N + R))",
+            "long_name": "Dry Bareness Index",
+            "reference": "https://doi.org/10.3390/land7030081",
+            "short_name": "DBSI",
+            "type": "urban"
         },
         "DVI": {
             "bands": [
@@ -349,6 +393,21 @@
             "long_name": "Enhanced Built-Up and Bareness Index",
             "reference": "https://doi.org/10.3390/rs4102957",
             "short_name": "EBBI",
+            "type": "urban"
+        },
+        "EMBI": {
+            "bands": [
+                "S1",
+                "S2",
+                "N",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)",
+            "long_name": "Enhanced Modified Bare Soil Index",
+            "reference": "https://doi.org/10.1016/j.jag.2022.102703",
+            "short_name": "EMBI",
             "type": "urban"
         },
         "EVI": {
@@ -702,6 +761,20 @@
             "short_name": "IRECI",
             "type": "vegetation"
         },
+        "MBI": {
+            "bands": [
+                "S1",
+                "S2",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "((S1 - S2 - N)/(S1 + S2 + N)) + 0.5",
+            "long_name": "Modified Bare Soil Index",
+            "reference": "https://doi.org/10.3390/land10030231",
+            "short_name": "MBI",
+            "type": "urban"
+        },
         "MBWI": {
             "bands": [
                 "omega",
@@ -980,6 +1053,19 @@
             "short_name": "MuWIR",
             "type": "water"
         },
+        "NBLI": {
+            "bands": [
+                "R",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(R - T1)/(R + T1)",
+            "long_name": "Normalized Difference Bare Land Index",
+            "reference": "https://doi.org/10.3390/rs9030249",
+            "short_name": "NBLI",
+            "type": "urban"
+        },
         "NBR": {
             "bands": [
                 "N",
@@ -1036,6 +1122,23 @@
             "reference": "https://doi.org/10.3390/rs13142777",
             "short_name": "NBSIMS",
             "type": "snow"
+        },
+        "NBUI": {
+            "bands": [
+                "S1",
+                "N",
+                "T1",
+                "R",
+                "L",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
+            "long_name": "New Built-Up Index",
+            "reference": "https://hdl.handle.net/1959.11/29500",
+            "short_name": "NBUI",
+            "type": "urban"
         },
         "ND705": {
             "bands": [
@@ -1133,6 +1236,81 @@
             "short_name": "NDII",
             "type": "vegetation"
         },
+        "NDISIb": {
+            "bands": [
+                "T1",
+                "B",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(T1 - (B + N + S1) / 3.0)/(T1 + (B + N + S1) / 3.0)",
+            "long_name": "Normalized Difference Impervious Surface Index Blue",
+            "reference": "https://doi.org/10.14358/PERS.76.5.557",
+            "short_name": "NDISIb",
+            "type": "urban"
+        },
+        "NDISIg": {
+            "bands": [
+                "T1",
+                "G",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(T1 - (G + N + S1) / 3.0)/(T1 + (G + N + S1) / 3.0)",
+            "long_name": "Normalized Difference Impervious Surface Index Green",
+            "reference": "https://doi.org/10.14358/PERS.76.5.557",
+            "short_name": "NDISIg",
+            "type": "urban"
+        },
+        "NDISImndwi": {
+            "bands": [
+                "T1",
+                "G",
+                "S1",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(T1 - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T1 + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
+            "long_name": "Normalized Difference Impervious Surface Index with MNDWI",
+            "reference": "https://doi.org/10.14358/PERS.76.5.557",
+            "short_name": "NDISImndwi",
+            "type": "urban"
+        },
+        "NDISIndwi": {
+            "bands": [
+                "T1",
+                "G",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(T1 - (((G - N)/(G + N)) + N + S1) / 3.0)/(T1 + (((G - N)/(G + N)) + N + S1) / 3.0)",
+            "long_name": "Normalized Difference Impervious Surface Index with NDWI",
+            "reference": "https://doi.org/10.14358/PERS.76.5.557",
+            "short_name": "NDISIndwi",
+            "type": "urban"
+        },
+        "NDISIr": {
+            "bands": [
+                "T1",
+                "R",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0)",
+            "long_name": "Normalized Difference Impervious Surface Index Red",
+            "reference": "https://doi.org/10.14358/PERS.76.5.557",
+            "short_name": "NDISIr",
+            "type": "urban"
+        },
         "NDMI": {
             "bands": [
                 "N",
@@ -1226,6 +1404,19 @@
             "reference": "https://doi.org/10.1080/01431160119766",
             "short_name": "NDSaII",
             "type": "snow"
+        },
+        "NDSoI": {
+            "bands": [
+                "S2",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(S2 - G)/(S2 + G)",
+            "long_name": "Normalized Difference Soil Index",
+            "reference": "https://doi.org/10.1016/j.jag.2015.02.010",
+            "short_name": "NDSoiI",
+            "type": "urban"
         },
         "NDVI": {
             "bands": [
@@ -1444,6 +1635,19 @@
             "short_name": "NRFIr",
             "type": "vegetation"
         },
+        "NSDS": {
+            "bands": [
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "(S1 - S2)/(S1 + S2)",
+            "long_name": "Normalized Shortwave Infrared Difference Soil-Moisture",
+            "reference": "https://doi.org/10.3390/land10030231",
+            "short_name": "NSDS",
+            "type": "urban"
+        },
         "NWI": {
             "bands": [
                 "B",
@@ -1528,6 +1732,19 @@
             "reference": "https://doi.org/10.1016/0034-4257(95)00186-7",
             "short_name": "OSAVI",
             "type": "vegetation"
+        },
+        "PISI": {
+            "bands": [
+                "B",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-18",
+            "formula": "0.8192 * B - 0.5735 * N + 0.0750",
+            "long_name": "Perpendicular Impervious Surface Index",
+            "reference": "https://doi.org/10.3390/rs10101521",
+            "short_name": "PISI",
+            "type": "urban"
         },
         "PSRI": {
             "bands": [
