@@ -1530,5 +1530,50 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        NDISIr=SpectralIndex(
+            short_name='NDISIr',
+            long_name='Normalized Difference Impervious Surface Index Red',
+            formula='(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0)',
+            reference='https://doi.org/10.14358/PERS.76.5.557',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NDISIg=SpectralIndex(
+            short_name='NDISIg',
+            long_name='Normalized Difference Impervious Surface Index Green',
+            formula='(T1 - (G + N + S1) / 3.0)/(T1 + (G + N + S1) / 3.0)',
+            reference='https://doi.org/10.14358/PERS.76.5.557',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NDISIb=SpectralIndex(
+            short_name='NDISIb',
+            long_name='Normalized Difference Impervious Surface Index Blue',
+            formula='(T1 - (B + N + S1) / 3.0)/(T1 + (B + N + S1) / 3.0)',
+            reference='https://doi.org/10.14358/PERS.76.5.557',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NDISIndwi=SpectralIndex(
+            short_name='NDISIndwi',
+            long_name='Normalized Difference Impervious Surface Index with NDWI',
+            formula='(T1 - (((G - N)/(G + N)) + N + S1) / 3.0)/(T1 + (((G - N)/(G + N)) + N + S1) / 3.0)',
+            reference='https://doi.org/10.14358/PERS.76.5.557',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        NDISImndwi=SpectralIndex(
+            short_name='NDISImndwi',
+            long_name='Normalized Difference Impervious Surface Index with MNDWI',
+            formula='(T1 - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T1 + (((G - S1)/(G + S1)) + N + S1) / 3.0)',
+            reference='https://doi.org/10.14358/PERS.76.5.557',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
