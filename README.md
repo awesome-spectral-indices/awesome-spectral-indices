@@ -576,6 +576,7 @@ There is no deadline. The repository is continuously updated!
 - [NDISImndwi](https://doi.org/10.14358/PERS.76.5.557): Normalized Difference Impervious Surface Index with MNDWI.
 - [NDISIndwi](https://doi.org/10.14358/PERS.76.5.557): Normalized Difference Impervious Surface Index with NDWI.
 - [NDISIr](https://doi.org/10.14358/PERS.76.5.557): Normalized Difference Impervious Surface Index Red.
+- [NDSoI](https://doi.org/10.1016/j.jag.2015.02.010): Normalized Difference Soil Index.
 - [NHFD](https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4): Non-Homogeneous Feature Difference.
 - [NSDS](https://doi.org/10.3390/land10030231): Normalized Shortwave Infrared Difference Soil-Moisture.
 - [PISI](https://doi.org/10.3390/rs10101521): Perpendicular Impervious Surface Index.

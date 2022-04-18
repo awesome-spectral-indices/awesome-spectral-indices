@@ -1602,5 +1602,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        NDSoI=SpectralIndex(
+            short_name='NDSoiI',
+            long_name='Normalized Difference Soil Index',
+            formula='(S2 - G)/(S2 + G)',
+            reference='https://doi.org/10.1016/j.jag.2015.02.010',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
