@@ -1512,5 +1512,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
+        NBUI=SpectralIndex(
+            short_name='NBUI',
+            long_name='New Built-Up Index',
+            formula='((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)',
+            reference='https://hdl.handle.net/1959.11/29500',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

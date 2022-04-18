@@ -566,6 +566,7 @@ There is no deadline. The repository is continuously updated!
 - [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.
+- [NBUI](https://hdl.handle.net/1959.11/29500): New Built-Up Index.
 - [NDBaI](https://doi.org/10.1109/IGARSS.2005.1526319): Normalized Difference Bareness Index.
 - [NDBI](http://dx.doi.org/10.1080/01431160304987): Normalized Difference Built-Up Index.
 - [NHFD](https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4): Non-Homogeneous Feature Difference.
