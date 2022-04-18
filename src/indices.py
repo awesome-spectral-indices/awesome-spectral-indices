@@ -1620,5 +1620,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        NBLI=SpectralIndex(
+            short_name='NBLI',
+            long_name='Normalized Difference Bare Land Index',
+            formula='(R - T1)/(R + T1)',
+            reference='https://doi.org/10.3390/rs9030249',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

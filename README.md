@@ -570,6 +570,7 @@ There is no deadline. The repository is continuously updated!
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.
 - [MBI](https://doi.org/10.3390/land10030231): Modified Bare Soil Index.
 - [NBUI](https://hdl.handle.net/1959.11/29500): New Built-Up Index.
+- [NBLI](https://doi.org/10.3390/rs9030249): Normalized Difference Bare Land Index.
 - [NDBaI](https://doi.org/10.1109/IGARSS.2005.1526319): Normalized Difference Bareness Index.
 - [NDBI](http://dx.doi.org/10.1080/01431160304987): Normalized Difference Built-Up Index.
 - [NDISIb](https://doi.org/10.14358/PERS.76.5.557): Normalized Difference Impervious Surface Index Blue.
