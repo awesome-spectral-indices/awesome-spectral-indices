@@ -565,6 +565,8 @@ There is no deadline. The repository is continuously updated!
 - [BaI](https://doi.org/10.1109/IGARSS.2005.1525743): Bareness Index.
 - [BI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Bare Soil Index.
 - [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
+- [DBI](https://doi.org/10.3390/land7030081): Dry Built-Up Index.
+- [DBSI](https://doi.org/10.3390/land7030081): Dry Bareness Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
 - [EMBI](https://doi.org/10.1016/j.jag.2022.102703): Enhanced Modified Bare Soil Index.
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.

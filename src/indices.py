@@ -1629,5 +1629,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        DBI=SpectralIndex(
+            short_name='DBI',
+            long_name='Dry Built-Up Index',
+            formula='((B - T1)/(B + T1)) - ((N - R)/(N + R))',
+            reference='https://doi.org/10.3390/land7030081',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        DBSI=SpectralIndex(
+            short_name='DBSI',
+            long_name='Dry Bareness Index',
+            formula='((S1 - G)/(S1 + G)) - ((N - R)/(N + R))',
+            reference='https://doi.org/10.3390/land7030081',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
