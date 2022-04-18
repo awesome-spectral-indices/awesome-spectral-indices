@@ -570,6 +570,7 @@ There is no deadline. The repository is continuously updated!
 - [NDBaI](https://doi.org/10.1109/IGARSS.2005.1526319): Normalized Difference Bareness Index.
 - [NDBI](http://dx.doi.org/10.1080/01431160304987): Normalized Difference Built-Up Index.
 - [NHFD](https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4): Non-Homogeneous Feature Difference.
+- [PISI](https://doi.org/10.3390/rs10101521): Perpendicular Impervious Surface Index.
 - [UI](https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf): Urban Index.
 - [VgNIRBI](https://doi.org/10.1016/j.ecolind.2015.03.037): Visible Green-Based Built-Up Index.
 - [VrNIRBI](https://doi.org/10.1016/j.ecolind.2015.03.037): Visible Red-Based Built-Up Index.

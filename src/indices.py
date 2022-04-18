@@ -1521,5 +1521,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        PISI=SpectralIndex(
+            short_name='PISI',
+            long_name='Perpendicular Impervious Surface Index',
+            formula='0.8192 * B - 0.5735 * N + 0.0750',
+            reference='https://doi.org/10.3390/rs10101521',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
