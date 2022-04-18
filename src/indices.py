@@ -1611,5 +1611,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        BaI=SpectralIndex(
+            short_name='BaI',
+            long_name='Bareness Index',
+            formula='R + S1 - N',
+            reference='https://doi.org/10.1109/IGARSS.2005.1525743',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

@@ -562,6 +562,7 @@ There is no deadline. The repository is continuously updated!
 
 ## Urban 🏙️
 
+- [BaI](https://doi.org/10.1109/IGARSS.2005.1525743): Bareness Index.
 - [BI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Bare Soil Index.
 - [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
