@@ -1575,5 +1575,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        NSDS=SpectralIndex(
+            short_name='NSDS',
+            long_name='Normalized Shortwave Infrared Difference Soil-Moisture',
+            formula='(S1 - S2)/(S1 + S2)',
+            reference='https://doi.org/10.3390/land10030231',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
+        MBI=SpectralIndex(
+            short_name='MBI',
+            long_name='Modified Bare Soil Index',
+            formula='((S1 - S2 - N)/(S1 + S2 + N)) + 0.5',
+            reference='https://doi.org/10.3390/land10030231',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
