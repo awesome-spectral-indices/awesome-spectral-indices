@@ -1593,5 +1593,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        EMBI=SpectralIndex(
+            short_name='EMBI',
+            long_name='Enhanced Modified Bare Soil Index',
+            formula='((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)',
+            reference='https://doi.org/10.1016/j.jag.2022.102703',
+            type='urban',
+            date_of_addition='2022-04-18',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

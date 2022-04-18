@@ -565,6 +565,7 @@ There is no deadline. The repository is continuously updated!
 - [BI](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf): Bare Soil Index.
 - [BLFEI](https://doi.org/10.1080/10106049.2018.1497094): Built-Up Land Features Extraction Index.
 - [EBBI](https://doi.org/10.3390/rs4102957): Enhanced Built-Up and Bareness Index.
+- [EMBI](https://doi.org/10.1016/j.jag.2022.102703): Enhanced Modified Bare Soil Index.
 - [IBI](https://doi.org/10.1080/01431160802039957): Index-Based Built-Up Index.
 - [MBI](https://doi.org/10.3390/land10030231): Modified Bare Soil Index.
 - [NBUI](https://hdl.handle.net/1959.11/29500): New Built-Up Index.
