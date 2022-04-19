@@ -23,6 +23,7 @@ CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",ht
 CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://www.cabdirect.org/cabdirect/abstract/20073176046,https://github.com/davemlz,2021-04-07
 DBI,Dry Built-Up Index,urban,((B - T1)/(B + T1)) - ((N - R)/(N + R)),"['B', 'T1', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
 DBSI,Dry Bareness Index,urban,((S1 - G)/(S1 + G)) - ((N - R)/(N + R)),"['S1', 'G', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
+DPDD,Dual-Pol Diagonal Distance,radar,(VV + VH)/2.0 ** 0.5,"['VV', 'VH']",https://doi.org/10.1016/j.rse.2018.09.003,https://github.com/davemlz,2022-04-19
 DVI,Difference Vegetation Index,vegetation,N - R,"['N', 'R']",https://doi.org/10.1016/0034-4257(94)00114-3,https://github.com/davemlz,2021-05-14
 DVIplus,Difference Vegetation Index Plus,vegetation,((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R,"['lambdaN', 'lambdaR', 'lambdaG', 'G', 'N', 'R']",https://doi.org/10.1016/j.rse.2019.03.028,https://github.com/davemlz,2022-01-20
 DpRVIHH,Dual-Polarized Radar Vegetation Index HH,radar,(4.0 * HV)/(HH + HV),"['HV', 'HH']",https://www.tandfonline.com/doi/abs/10.5589/m12-043,https://github.com/davemlz,2021-12-25
@@ -98,6 +99,7 @@ NDISIndwi,Normalized Difference Impervious Surface Index with NDWI,urban,(T1 - (
 NDISIr,Normalized Difference Impervious Surface Index Red,urban,(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0),"['T1', 'R', 'N', 'S1']",https://doi.org/10.14358/PERS.76.5.557,https://github.com/davemlz,2022-04-18
 NDMI,Normalized Difference Moisture Index,vegetation,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1016/S0034-4257(01)00318-2,https://github.com/bpurinton,2021-12-01
 NDPI,Normalized Difference Phenology Index,vegetation,(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1)),"['N', 'alpha', 'R', 'S1']",https://doi.org/10.1016/j.rse.2017.04.031,https://github.com/davemlz,2022-01-20
+NDPolI,Normalized Difference Polarization Index,radar,(VV - VH)/(VV + VH),"['VV', 'VH']",https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf,https://github.com/davemlz,2022-04-19
 NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N', 'RE1']",https://doi.org/10.1016/1011-1344(93)06963-4,https://github.com/davemlz,2021-05-13
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07
 NDSII,Normalized Difference Snow Ice Index,snow,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1080/01431160802385459,https://github.com/davemlz,2022-04-08
@@ -169,9 +171,16 @@ TriVI,Triangular Vegetation Index,vegetation,0.5 * (120 * (N - G) - 200 * (R - G
 UI,Urban Index,urban,(S2 - N)/(S2 + N),"['S2', 'N']",https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf,https://github.com/davemlz,2022-02-07
 VARI,Visible Atmospherically Resistant Index,vegetation,(G - R) / (G + R - B),"['G', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-04-07
 VARI700,Visible Atmospherically Resistant Index (700 nm),vegetation,(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B),"['RE1', 'R', 'B']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
+VDDPI,Vertical Dual De-Polarization Index,radar,(VV + VH)/VV,"['VV', 'VH']",https://doi.org/10.1016/j.rse.2018.09.003,https://github.com/davemlz,2022-04-19
+VHVVD,VH-VV Difference,radar,VH - VV,"['VH', 'VV']",https://doi.org/10.3390/app9040655,https://github.com/davemlz,2022-04-19
+VHVVP,VH-VV Product,radar,VH * VV,"['VH', 'VV']",https://doi.org/10.1109/IGARSS47720.2021.9554099,https://github.com/davemlz,2022-04-19
+VHVVR,VH-VV Ratio,radar,VH/VV,"['VH', 'VV']",https://doi.org/10.1109/IGARSS47720.2021.9554099,https://github.com/davemlz,2022-04-19
 VI6T,VI6T Index,burn,(N - T1/10000.0)/(N + T1/10000.0),"['N', 'T1']",https://doi.org/10.1080/01431160500239008,https://github.com/davemlz,2022-04-19
 VI700,Vegetation Index (700 nm),vegetation,(RE1 - R) / (RE1 + R),"['RE1', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
 VIG,Vegetation Index Green,vegetation,(G - R) / (G + R),"['G', 'R']",https://doi.org/10.1016/S0034-4257(01)00289-9,https://github.com/davemlz,2021-09-20
+VVVHD,VV-VH Difference,radar,VV - VH,"['VV', 'VH']",https://doi.org/10.1109/IGARSS47720.2021.9554099,https://github.com/davemlz,2022-04-19
+VVVHR,VV-VH Ratio,radar,VV/VH,"['VV', 'VH']",https://doi.org/10.3390/app9040655,https://github.com/davemlz,2022-04-19
+VVVHS,VV-VH Sum,radar,VV + VH,"['VV', 'VH']",https://doi.org/10.1109/IGARSS47720.2021.9554099,https://github.com/davemlz,2022-04-19
 VgNIRBI,Visible Green-Based Built-Up Index,urban,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
 VrNIRBI,Visible Red-Based Built-Up Index,urban,(R - N)/(R + N),"['R', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14

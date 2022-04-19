@@ -338,6 +338,19 @@
             "short_name": "DBSI",
             "type": "urban"
         },
+        "DPDD": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "(VV + VH)/2.0 ** 0.5",
+            "long_name": "Dual-Pol Diagonal Distance",
+            "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
+            "short_name": "DPDD",
+            "type": "radar"
+        },
         "DVI": {
             "bands": [
                 "N",
@@ -1393,6 +1406,19 @@
             "short_name": "NDPI",
             "type": "vegetation"
         },
+        "NDPolI": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "(VV - VH)/(VV + VH)",
+            "long_name": "Normalized Difference Polarization Index",
+            "reference": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
+            "short_name": "NDPolI",
+            "type": "radar"
+        },
         "NDREI": {
             "bands": [
                 "N",
@@ -2365,6 +2391,58 @@
             "short_name": "VARI700",
             "type": "vegetation"
         },
+        "VDDPI": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "(VV + VH)/VV",
+            "long_name": "Vertical Dual De-Polarization Index",
+            "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
+            "short_name": "VDDPI",
+            "type": "radar"
+        },
+        "VHVVD": {
+            "bands": [
+                "VH",
+                "VV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VH - VV",
+            "long_name": "VH-VV Difference",
+            "reference": "https://doi.org/10.3390/app9040655",
+            "short_name": "VHVVD",
+            "type": "radar"
+        },
+        "VHVVP": {
+            "bands": [
+                "VH",
+                "VV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VH * VV",
+            "long_name": "VH-VV Product",
+            "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
+            "short_name": "VHVVP",
+            "type": "radar"
+        },
+        "VHVVR": {
+            "bands": [
+                "VH",
+                "VV"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VH/VV",
+            "long_name": "VH-VV Ratio",
+            "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
+            "short_name": "VHVVR",
+            "type": "radar"
+        },
         "VI6T": {
             "bands": [
                 "N",
@@ -2403,6 +2481,45 @@
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VIG",
             "type": "vegetation"
+        },
+        "VVVHD": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VV - VH",
+            "long_name": "VV-VH Difference",
+            "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
+            "short_name": "VVVHD",
+            "type": "radar"
+        },
+        "VVVHR": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VV/VH",
+            "long_name": "VV-VH Ratio",
+            "reference": "https://doi.org/10.3390/app9040655",
+            "short_name": "VVVHR",
+            "type": "radar"
+        },
+        "VVVHS": {
+            "bands": [
+                "VV",
+                "VH"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "VV + VH",
+            "long_name": "VV-VH Sum",
+            "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
+            "short_name": "VVVHS",
+            "type": "radar"
         },
         "VgNIRBI": {
             "bands": [

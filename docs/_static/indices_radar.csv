@@ -1,5 +1,14 @@
 Index,Long Name,Equation
+DPDD,Dual-Pol Diagonal Distance [`ref <https://doi.org/10.1016/j.rse.2018.09.003>`_],:math:`(VV+VH)/2.0^{0.5}`
 DpRVIHH,Dual-Polarized Radar Vegetation Index HH [`ref <https://www.tandfonline.com/doi/abs/10.5589/m12-043>`_],:math:`(4.0\times HV)/(HH+HV)`
 DpRVIVV,Dual-Polarized Radar Vegetation Index VV [`ref <https://doi.org/10.3390/app9040655>`_],:math:`(4.0\times VH)/(VV+VH)`
+NDPolI,Normalized Difference Polarization Index [`ref <https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf>`_],:math:`(VV-VH)/(VV+VH)`
 QpRVI,Quad-Polarized Radar Vegetation Index [`ref <https://doi.org/10.1109/IGARSS.2001.976856>`_],:math:`(8.0\times HV)/(HH+VV+2.0\times HV)`
 RFDI,Radar Forest Degradation Index [`ref <https://doi.org/10.5194/bg-9-179-2012>`_],:math:`(HH-HV)/(HH+HV)`
+VDDPI,Vertical Dual De-Polarization Index [`ref <https://doi.org/10.1016/j.rse.2018.09.003>`_],:math:`(VV+VH)/VV`
+VHVVD,VH-VV Difference [`ref <https://doi.org/10.3390/app9040655>`_],:math:`VH-VV`
+VHVVP,VH-VV Product [`ref <https://doi.org/10.1109/IGARSS47720.2021.9554099>`_],:math:`VH\times VV`
+VHVVR,VH-VV Ratio [`ref <https://doi.org/10.1109/IGARSS47720.2021.9554099>`_],:math:`VH/VV`
+VVVHD,VV-VH Difference [`ref <https://doi.org/10.1109/IGARSS47720.2021.9554099>`_],:math:`VV-VH`
+VVVHR,VV-VH Ratio [`ref <https://doi.org/10.3390/app9040655>`_],:math:`VV/VH`
+VVVHS,VV-VH Sum [`ref <https://doi.org/10.1109/IGARSS47720.2021.9554099>`_],:math:`VV+VH`
