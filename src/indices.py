@@ -1692,5 +1692,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
+        DPDD=SpectralIndex(
+            short_name='DPDD',
+            long_name='Dual-Pol Diagonal Distance',
+            formula='(VV + VH)/2.0 ** 0.5',
+            reference='https://doi.org/10.1016/j.rse.2018.09.003',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        VDDPI=SpectralIndex(
+            short_name='VDDPI',
+            long_name='Vertical Dual De-Polarization Index',
+            formula='(VV + VH)/VV',
+            reference='https://doi.org/10.1016/j.rse.2018.09.003',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

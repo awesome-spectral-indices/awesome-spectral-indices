@@ -603,10 +603,12 @@ There is no deadline. The repository is continuously updated!
 
 ## RADAR 🛰️
 
+- [DPDD](https://doi.org/10.1016/j.rse.2018.09.003): Dual-Pol Diagonal Distance.
 - [DpRVIHH](https://www.tandfonline.com/doi/abs/10.5589/m12-043): Dual-Polarized Radar Vegetation Index HH.
 - [DpRVIVV](https://doi.org/10.3390/app9040655): Dual-Polarized Radar Vegetation Index VV.
 - [QpRVI](https://doi.org/10.1109/IGARSS.2001.976856): Quad-Polarized Radar Vegetation Index.
 - [RFDI](https://doi.org/10.5194/bg-9-179-2012): Radar Forest Degradation Index.
+- [VDDPI](https://doi.org/10.1016/j.rse.2018.09.003): Vertical Dual De-Polarization Index.
 
 # List
 
