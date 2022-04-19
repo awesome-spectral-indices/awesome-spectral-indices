@@ -267,6 +267,19 @@
             "short_name": "CIRE",
             "type": "vegetation"
         },
+        "CSI": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "N/S2",
+            "long_name": "Char Soil Index",
+            "reference": "https://doi.org/10.1016/j.rse.2005.04.014",
+            "short_name": "CSI",
+            "type": "burn"
+        },
         "CSIT": {
             "bands": [
                 "N",
@@ -890,6 +903,19 @@
             "short_name": "MGRVI",
             "type": "vegetation"
         },
+        "MIRBI": {
+            "bands": [
+                "S2",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "10.0 * S2 - 9.8 * S1 + 2.0",
+            "long_name": "Mid-Infrared Burn Index",
+            "reference": "https://doi.org/10.1080/01431160110053185",
+            "short_name": "MIRBI",
+            "type": "burn"
+        },
         "MNDVI": {
             "bands": [
                 "N",
@@ -1075,7 +1101,7 @@
             "date_of_addition": "2021-04-07",
             "formula": "(N - S2) / (N + S2)",
             "long_name": "Normalized Burn Ratio",
-            "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio",
+            "reference": "https://doi.org/10.3133/ofr0211",
             "short_name": "NBR",
             "type": "burn"
         },
@@ -1092,7 +1118,7 @@
             "short_name": "NBR2",
             "type": "burn"
         },
-        "NBRT": {
+        "NBRT1": {
             "bands": [
                 "N",
                 "S2",
@@ -1101,9 +1127,37 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))",
-            "long_name": "Normalized Burn Ratio Thermal",
+            "long_name": "Normalized Burn Ratio Thermal 1",
             "reference": "https://doi.org/10.1080/01431160500239008",
-            "short_name": "NBRT",
+            "short_name": "NBRT1",
+            "type": "burn"
+        },
+        "NBRT2": {
+            "bands": [
+                "N",
+                "T1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "((N / (T1 / 10000.0)) - S2) / ((N / (T1 / 10000.0)) + S2)",
+            "long_name": "Normalized Burn Ratio Thermal 2",
+            "reference": "https://doi.org/10.1080/01431160500239008",
+            "short_name": "NBRT2",
+            "type": "burn"
+        },
+        "NBRT3": {
+            "bands": [
+                "N",
+                "T1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "((N - (T1 / 10000.0)) - S2) / ((N - (T1 / 10000.0)) + S2)",
+            "long_name": "Normalized Burn Ratio Thermal 3",
+            "reference": "https://doi.org/10.1080/01431160500239008",
+            "short_name": "NBRT3",
             "type": "burn"
         },
         "NBSIMS": {
@@ -2310,6 +2364,19 @@
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VARI700",
             "type": "vegetation"
+        },
+        "VI6T": {
+            "bands": [
+                "N",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-19",
+            "formula": "(N - T1/10000.0)/(N + T1/10000.0)",
+            "long_name": "VI6T Index",
+            "reference": "https://doi.org/10.1080/01431160500239008",
+            "short_name": "VI6T",
+            "type": "burn"
         },
         "VI700": {
             "bands": [
