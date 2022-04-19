@@ -525,6 +525,7 @@ There is no deadline. The repository is continuously updated!
 
 - [BAI](https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf): Burned Area Index.
 - [BAIS2](https://doi.org/10.3390/ecrs-2-05177): Burned Area Index for Sentinel 2.
+- [CSI](https://doi.org/10.1016/j.rse.2005.04.014): Char Soil Index.
 - [CSIT](https://doi.org/10.1080/01431160600954704): Char Soil Index Thermal.
 - [NBR](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio): Normalized Burn Ratio.
 - [NBR2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2): Normalized Burn Ratio 2.

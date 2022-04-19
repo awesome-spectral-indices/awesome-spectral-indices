@@ -1647,5 +1647,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
+        CSI=SpectralIndex(
+            short_name='CSI',
+            long_name='Char Soil Index',
+            formula='N/S2',
+            reference='https://doi.org/10.1016/j.rse.2005.04.014',
+            type='burn',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
