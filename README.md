@@ -610,9 +610,11 @@ There is no deadline. The repository is continuously updated!
 - [QpRVI](https://doi.org/10.1109/IGARSS.2001.976856): Quad-Polarized Radar Vegetation Index.
 - [RFDI](https://doi.org/10.5194/bg-9-179-2012): Radar Forest Degradation Index.
 - [VDDPI](https://doi.org/10.1016/j.rse.2018.09.003): Vertical Dual De-Polarization Index.
+- [VHVVD](https://doi.org/10.3390/app9040655): VH-VV Difference.
 - [VHVVP](https://doi.org/10.1109/IGARSS47720.2021.9554099): VH-VV Product.
 - [VHVVR](https://doi.org/10.1109/IGARSS47720.2021.9554099): VH-VV Ratio.
 - [VVVHD](https://doi.org/10.1109/IGARSS47720.2021.9554099): VV-VH Difference.
+- [VVVHR](https://doi.org/10.3390/app9040655): VV-VH Ratio.
 - [VVVHS](https://doi.org/10.1109/IGARSS47720.2021.9554099): VV-VH Sum.
 
 # List
