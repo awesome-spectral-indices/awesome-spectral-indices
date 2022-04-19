@@ -529,7 +529,7 @@ There is no deadline. The repository is continuously updated!
 - [CSIT](https://doi.org/10.1080/01431160600954704): Char Soil Index Thermal.
 - [NBR](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio): Normalized Burn Ratio.
 - [NBR2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2): Normalized Burn Ratio 2.
-- [NBRT](https://doi.org/10.1080/01431160600954704): Normalized Burn Ratio Thermal.
+- [NBRT](https://doi.org/10.1080/01431160500239008): Normalized Burn Ratio Thermal.
 - [NDVIT](https://doi.org/10.1080/01431160600954704): Normalized Difference Vegetation Index Thermal.
 - [SAVIT](https://doi.org/10.1080/01431160600954704): Soil-Adjusted Vegetation Index Thermal.
 
