@@ -1719,5 +1719,41 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
+        VHVVR=SpectralIndex(
+            short_name='VHVVR',
+            long_name='VH-VV Ratio',
+            formula='VH/VV',
+            reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        VHVVP=SpectralIndex(
+            short_name='VHVVP',
+            long_name='VH-VV Product',
+            formula='VH * VV',
+            reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        VVVHD=SpectralIndex(
+            short_name='VVVHD',
+            long_name='VV-VH Difference',
+            formula='VV - VH',
+            reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        VVVHS=SpectralIndex(
+            short_name='VVVHS',
+            long_name='VV-VH Sum',
+            formula='VV + VH',
+            reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
