@@ -1683,5 +1683,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
+        MIRBI=SpectralIndex(
+            short_name='MIRBI',
+            long_name='Mid-Infrared Burn Index',
+            formula='10.0 * S2 - 9.8 * S1 + 2.0',
+            reference='https://doi.org/10.1080/01431160110053185',
+            type='burn',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
