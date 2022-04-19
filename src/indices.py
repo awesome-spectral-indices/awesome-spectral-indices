@@ -207,9 +207,9 @@ spindex = SpectralIndices(
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
-        NBRT=SpectralIndex(
-            short_name='NBRT',
-            long_name='Normalized Burn Ratio Thermal',
+        NBRT1=SpectralIndex(
+            short_name='NBRT1',
+            long_name='Normalized Burn Ratio Thermal 1',
             formula='(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))',
             reference='https://doi.org/10.1080/01431160500239008',
             type='burn',
@@ -1652,6 +1652,33 @@ spindex = SpectralIndices(
             long_name='Char Soil Index',
             formula='N/S2',
             reference='https://doi.org/10.1016/j.rse.2005.04.014',
+            type='burn',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        VI6T=SpectralIndex(
+            short_name='VI6T',
+            long_name='VI6T Index',
+            formula='(N - T1/10000.0)/(N + T1/10000.0)',
+            reference='https://doi.org/10.1080/01431160500239008',
+            type='burn',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        NBRT2=SpectralIndex(
+            short_name='NBRT2',
+            long_name='Normalized Burn Ratio Thermal 2',
+            formula='((N / (T1 / 10000.0)) - S2) / ((N / (T1 / 10000.0)) + S2)',
+            reference='https://doi.org/10.1080/01431160500239008',
+            type='burn',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
+        NBRT3=SpectralIndex(
+            short_name='NBRT3',
+            long_name='Normalized Burn Ratio Thermal 3',
+            formula='((N - (T1 / 10000.0)) - S2) / ((N - (T1 / 10000.0)) + S2)',
+            reference='https://doi.org/10.1080/01431160500239008',
             type='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
