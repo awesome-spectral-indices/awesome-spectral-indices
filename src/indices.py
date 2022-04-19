@@ -1710,5 +1710,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
+        NDPolI=SpectralIndex(
+            short_name='NDPolI',
+            long_name='Normalized Difference Polarization Index',
+            formula='(VV - VH)/(VV + VH)',
+            reference='https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf',
+            type='radar',
+            date_of_addition='2022-04-19',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
