@@ -25,6 +25,7 @@ class SpectralIndex(BaseModel):
     long_name: str
     formula: str
     bands: Optional[List]
+    platforms: Optional[List]
     type: str
     date_of_addition: date
     
