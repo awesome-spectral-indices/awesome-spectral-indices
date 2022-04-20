@@ -542,6 +542,7 @@ There is no deadline. The repository is continuously updated!
 
 - [AWEInsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index.
 - [AWEIsh](https://doi.org/10.1016/j.rse.2013.08.029): Automated Water Extraction Index with Shadows Elimination.
+- [LSWI](https://doi.org/10.1016/j.rse.2003.11.008): Land Surface Water Index.
 - [MBWI](https://doi.org/10.1016/j.jag.2018.01.018): Multi-Band Water Index.
 - [MNDWI](https://doi.org/10.1080/01431160600589179): Modified Normalized Difference Water Index.
 - [MuWIR](https://doi.org/10.3390/rs10101643): Revised Multi-Spectral Water Index.

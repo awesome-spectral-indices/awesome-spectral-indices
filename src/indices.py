@@ -1791,5 +1791,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
+        LSWI=SpectralIndex(
+            short_name='LSWI',
+            long_name='Land Surface Water Index',
+            formula='(N - S1)/(N + S1)',
+            reference='https://doi.org/10.1016/j.rse.2003.11.008',
+            type='water',
+            date_of_addition='2022-04-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
