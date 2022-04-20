@@ -116,6 +116,5 @@ VI700,Vegetation Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)002
 VIG,Vegetation Index Green [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(G-R)/(G+R)`
 WDRVI,Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.1078/0176-1617-01176>`_],:math:`(\alpha \times N-R)/(\alpha \times N+R)`
 WDVI,Weighted Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(89)90076-X>`_],:math:`N-sla\times R`
-kIPVI,Kernel Infrared Percentage Vegetation Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`kNN/(kNN+kNR)`
 mND705,"Modified Normalized Difference (705, 750 and 445 nm) [`ref <https://doi.org/10.1016/S0034-4257(02)00010-X>`_]",:math:`(RE2-RE1)/(RE2+RE1-A)`
 mSR705,Modified Simple Ratio (705 and 445 nm) [`ref <https://doi.org/10.1016/S0034-4257(02)00010-X>`_],:math:`(RE2-A)/(RE2+A)`

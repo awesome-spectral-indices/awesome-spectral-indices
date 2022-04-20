@@ -1,5 +1,6 @@
 Index,Long Name,Equation
 kEVI,Kernel Enhanced Vegetation Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`g\times (kNN-kNR)/(kNN+C1\times kNR-C2\times kNB+kNL)`
+kIPVI,Kernel Infrared Percentage Vegetation Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`kNN/(kNN+kNR)`
 kNDVI,Kernel Normalized Difference Vegetation Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`(kNN-kNR)/(kNN+kNR)`
 kRVI,Kernel Ratio Vegetation Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`kNN/kNR`
 kVARI,Kernel Visible Atmospherically Resistant Index [`ref <https://doi.org/10.1126/sciadv.abc7447>`_],:math:`(kGG-kGR)/(kGG+kGR-kGB)`

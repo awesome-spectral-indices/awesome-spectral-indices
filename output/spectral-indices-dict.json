@@ -3708,7 +3708,7 @@
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kIPVI",
-            "type": "vegetation"
+            "type": "kernel"
         },
         "kNDVI": {
             "bands": [

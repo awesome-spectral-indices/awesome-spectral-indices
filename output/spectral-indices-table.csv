@@ -194,7 +194,7 @@ WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.339
 WI2,Water Index 2,water,(B - S2) / (B + S2),"['B', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
 WRI,Water Ratio Index,water,(G + R)/(N + S1),"['G', 'R', 'N', 'S1']",https://doi.org/10.1109/GEOINFORMATICS.2010.5567762,https://github.com/davemlz,2022-01-17
 kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['g', 'kNN', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
-kIPVI,Kernel Infrared Percentage Vegetation Index,vegetation,kNN/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2022-04-08
+kIPVI,Kernel Infrared Percentage Vegetation Index,kernel,kNN/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2022-04-08
 kNDVI,Kernel Normalized Difference Vegetation Index,kernel,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
 kRVI,Kernel Ratio Vegetation Index,kernel,kNN / kNR,"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
 kVARI,Kernel Visible Atmospherically Resistant Index,kernel,(kGG - kGR) / (kGG + kGR - kGB),"['kGG', 'kGR', 'kGB']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
