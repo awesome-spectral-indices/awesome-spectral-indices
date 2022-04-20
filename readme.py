@@ -422,10 +422,10 @@ def filterByAppDomain():
 
 text = []
 for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
-    text.append(f"\n## {appDomain.capitalize()}\n\n")
+    text.append(f"\n## {appDomain.capitalize()}\n\n<table>")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            text.append(f'\n### {letter}\n<table>')
+            #text.append(f'\n### {letter}\n<table>')
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
@@ -437,7 +437,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
                             if platform in attributes['platforms']:
                                 text.append(f" {badge} ")
                         text.append("</td></tr>\n")
-            text.append("</table>\n")
+    text.append("</table>\n")
 
 with open('README.md', 'w') as f:
     f.write(previousText + "".join(text) + nextText)
