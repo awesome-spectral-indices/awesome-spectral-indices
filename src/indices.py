@@ -1782,5 +1782,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
+        SWM=SpectralIndex(
+            short_name='SWM',
+            long_name='Sentinel Water Mask',
+            formula='(B + G)/(N + S1)',
+            reference='https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf',
+            type='water',
+            date_of_addition='2022-04-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )

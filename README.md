@@ -550,6 +550,7 @@ There is no deadline. The repository is continuously updated!
 - [NDWIns](https://doi.org/10.3390/w12051339): Normalized Difference Water Index with no Snow Cover and Glaciers.
 - [NWI](https://doi.org/10.11873/j.issn.1004-0323.2009.2.167): New Water Index.
 - [S2WI](https://doi.org/10.3390/w13121647): Sentinel-2 Water Index.
+- [SWM](https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf): Sentinel Water Mask.
 - [WI1](https://doi.org/10.3390/rs11182186): Water Index 1.
 - [WI2](https://doi.org/10.3390/rs11182186): Water Index 2.
 - [WRI](https://doi.org/10.1109/GEOINFORMATICS.2010.5567762): Water Ratio Index.
