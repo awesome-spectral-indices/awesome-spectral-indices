@@ -1409,7 +1409,7 @@ spindex = SpectralIndices(
             long_name='Kernel Infrared Percentage Vegetation Index',
             formula='kNN/(kNN + kNR)',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='vegetation',
+            type='kernel',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
