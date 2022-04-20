@@ -57,6 +57,12 @@ previousText = """<p align="center">
 
 ---
 
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+
 # Spectral Indices
 
 Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
@@ -425,7 +431,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
     text.append(f"\n## {appDomain.capitalize()}\n\n")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            text.append(f'\n### {letter}\n<table style="width:100%;">')
+            text.append(f'\n### {letter}\n<table">')
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
