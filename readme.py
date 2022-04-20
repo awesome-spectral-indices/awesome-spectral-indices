@@ -70,6 +70,7 @@ All spectral indices follow a standard. Each item of the list has the following 
 - `long_name`: Long name of the index (e.g. `"Normalized Difference Water Index"`).
 - `formula`: Expression/formula of the index (e.g. `"(G - N)/(G + N)"`).
 - `bands`: List of required bands/parameters for the index computation (e.g. `["N","G"]`).
+- `platforms`: List of available platforms that can be used for the index computation (e.g. `["MODIS", "Landsat-457", "Landsat-89", "Sentinel-2"]`).
 - `reference`: Link to the index reference/paper/doi (e.g. `"https://doi.org/10.1080/01431169608948714"`).
 - `type`: Type/application of the index (e.g. `"water"`).
 - `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
