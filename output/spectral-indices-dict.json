@@ -140,6 +140,19 @@
             "short_name": "BAI",
             "type": "burn"
         },
+        "BAIM": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-20",
+            "formula": "1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)",
+            "long_name": "Burned Area Index adapted to MODIS",
+            "reference": "https://doi.org/10.1016/j.foreco.2006.08.248",
+            "short_name": "BAIM",
+            "type": "burn"
+        },
         "BAIS2": {
             "bands": [
                 "RE2",
@@ -787,6 +800,19 @@
             "short_name": "IRECI",
             "type": "vegetation"
         },
+        "LSWI": {
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-20",
+            "formula": "(N - S1)/(N + S1)",
+            "long_name": "Land Surface Water Index",
+            "reference": "https://doi.org/10.1016/j.rse.2003.11.008",
+            "short_name": "LSWI",
+            "type": "water"
+        },
         "MBI": {
             "bands": [
                 "S1",
@@ -928,6 +954,32 @@
             "reference": "https://doi.org/10.1080/01431160110053185",
             "short_name": "MIRBI",
             "type": "burn"
+        },
+        "MLSWI26": {
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-20",
+            "formula": "(1.0 - N - S1)/(1.0 - N + S1)",
+            "long_name": "Modified Land Surface Water Index (MODIS Bands 2 and 6)",
+            "reference": "https://doi.org/10.3390/rs71215805",
+            "short_name": "MLSWI26",
+            "type": "water"
+        },
+        "MLSWI27": {
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-20",
+            "formula": "(1.0 - N - S2)/(1.0 - N + S2)",
+            "long_name": "Modified Land Surface Water Index (MODIS Bands 2 and 7)",
+            "reference": "https://doi.org/10.3390/rs71215805",
+            "short_name": "MLSWI27",
+            "type": "water"
         },
         "MNDVI": {
             "bands": [
@@ -2182,6 +2234,21 @@
             "reference": "https://doi.org/10.3390/rs11232774",
             "short_name": "SWI",
             "type": "snow"
+        },
+        "SWM": {
+            "bands": [
+                "B",
+                "G",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-04-20",
+            "formula": "(B + G)/(N + S1)",
+            "long_name": "Sentinel Water Mask",
+            "reference": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
+            "short_name": "SWM",
+            "type": "water"
         },
         "SeLI": {
             "bands": [

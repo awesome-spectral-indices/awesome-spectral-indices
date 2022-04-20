@@ -1,5 +1,6 @@
 Index,Long Name,Equation
 BAI,Burned Area Index [`ref <https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf>`_],:math:`1.0/((0.1-R)^{2.0}+(0.06-N)^{2.0})`
+BAIM,Burned Area Index adapted to MODIS [`ref <https://doi.org/10.1016/j.foreco.2006.08.248>`_],:math:`1.0/((0.05-N)^{2.0})+((0.2-S2)^{2.0})`
 BAIS2,Burned Area Index for Sentinel 2 [`ref <https://doi.org/10.3390/ecrs-2-05177>`_],:math:`(1.0-((RE2\times RE3\times N2)/R)^{0.5})\times (((S2-N2)/(S2+N2)^{0.5})+1.0)`
 CSI,Char Soil Index [`ref <https://doi.org/10.1016/j.rse.2005.04.014>`_],:math:`N/S2`
 CSIT,Char Soil Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`N/(S2\times T1/10000.0)`
