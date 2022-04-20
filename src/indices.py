@@ -1773,5 +1773,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
+        BAIM=SpectralIndex(
+            short_name='BAIM',
+            long_name='Burned Area Index adapted to MODIS',
+            formula='1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)',
+            reference='https://doi.org/10.1016/j.foreco.2006.08.248',
+            type='burn',
+            date_of_addition='2022-04-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
