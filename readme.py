@@ -396,21 +396,37 @@ def filterByAppDomain():
                 indices.append(index)
     return indices
 
+#text = []
+#for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
+#    text.append(f"## {appDomain.capitalize()}\n\n")
+#    for letter in letters:
+#        if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
+#            text.append(f"### {letter}\n")
+#            for index, attributes in data["SpectralIndices"].items():        
+#                if attributes['type'] == appDomain:
+#                    if index.startswith(letter) or index.startswith(letter.lower()):
+#                        line = f"- [{index}]({attributes['reference']}): {attributes['long_name']}."
+#                        text.append(line)
+#                        for platform, badge in platformBadges.items():
+#                            if platform in attributes['platforms']:
+#                                text.append(f" {badge} ")
+#                        text.append("\n")
+
 text = []
 for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
     text.append(f"## {appDomain.capitalize()}\n\n")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            text.append(f"### {letter}\n")
+            text.append(f"### {letter}\n<table>")
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
-                        line = f"- [{index}]({attributes['reference']}): {attributes['long_name']}."
+                        line = f"<tr><td>[{index}]({attributes['reference']}): {attributes['long_name']}.</td><td>"
                         text.append(line)
                         for platform, badge in platformBadges.items():
                             if platform in attributes['platforms']:
                                 text.append(f" {badge} ")
-                        text.append("\n")
+                        text.append("</td></tr></table>\n")
 
 with open('README.md', 'w') as f:
     f.write(previousText + "".join(text) + nextText)
