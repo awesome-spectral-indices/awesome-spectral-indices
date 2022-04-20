@@ -1800,5 +1800,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
+        MLSWI26=SpectralIndex(
+            short_name='MLSWI26',
+            long_name='Modified Land Surface Water Index (MODIS Bands 2 and 6)',
+            formula='(1.0 - N - S1)/(1.0 - N + S1)',
+            reference='https://doi.org/10.3390/rs71215805',
+            type='water',
+            date_of_addition='2022-04-20',
+            contributor="https://github.com/davemlz"
+        ),
+        MLSWI27=SpectralIndex(
+            short_name='MLSWI27',
+            long_name='Modified Land Surface Water Index (MODIS Bands 2 and 7)',
+            formula='(1.0 - N - S2)/(1.0 - N + S2)',
+            reference='https://doi.org/10.3390/rs71215805',
+            type='water',
+            date_of_addition='2022-04-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
