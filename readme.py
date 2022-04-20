@@ -422,10 +422,10 @@ def filterByAppDomain():
 
 text = []
 for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
-    text.append(f"## {appDomain.capitalize()}\n\n")
+    text.append(f"\n## {appDomain.capitalize()}\n\n")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            text.append(f"### {letter}\n<table>")
+            text.append(f'\n### {letter}\n<table width="100%">')
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
