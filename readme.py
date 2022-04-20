@@ -387,6 +387,14 @@ platformBadges = {
     "Sentinel-2":"![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)",
 }
 
+platformBadgesHTML = {
+    "MODIS":'<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
+    "Landsat-457":'<img src="https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square" alt="Landsat-457">',
+    "Landsat-89":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-89">',
+    "Sentinel-1":'<img src="https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square" alt="Sentinel-1">',
+    "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
+}
+
 letters = list(map(chr, range(65, 91)))
 
 def filterByAppDomain():
@@ -421,12 +429,15 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
-                        line = f"<tr><td>[{index}]({attributes['reference']}): {attributes['long_name']}.</td><td>"
+                        link = attributes['reference']
+                        name = attributes['long_name']
+                        line = f'<tr><td><a href="{link}" target="_blank">{index}</a>: {name}.</td><td>'
                         text.append(line)
-                        for platform, badge in platformBadges.items():
+                        for platform, badge in platformBadgesHTML.items():
                             if platform in attributes['platforms']:
                                 text.append(f" {badge} ")
-                        text.append("</td></tr></table>\n")
+                        text.append("</td></tr>\n")
+            text.append("</table>")
 
 with open('README.md', 'w') as f:
     f.write(previousText + "".join(text) + nextText)
