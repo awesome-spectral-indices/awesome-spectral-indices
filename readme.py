@@ -431,7 +431,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
                     if index.startswith(letter) or index.startswith(letter.lower()):
                         link = attributes['reference']
                         name = attributes['long_name']
-                        line = f'<tr><td width="70%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="30%">'
+                        line = f'<tr><td width="60%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="40%">'
                         text.append(line)
                         for platform, badge in platformBadgesHTML.items():
                             if platform in attributes['platforms']:
