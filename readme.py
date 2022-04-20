@@ -57,12 +57,6 @@ previousText = """<p align="center">
 
 ---
 
-<style>
-    table {
-        width: 100%;
-    }
-</style>
-
 # Spectral Indices
 
 Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
@@ -437,7 +431,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
                     if index.startswith(letter) or index.startswith(letter.lower()):
                         link = attributes['reference']
                         name = attributes['long_name']
-                        line = f'<tr><td width="50%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="50%">'
+                        line = f'<tr><td width="50%"><a href="{link}" target="_blank">{index}</a>: {name}. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td width="50%">'
                         text.append(line)
                         for platform, badge in platformBadgesHTML.items():
                             if platform in attributes['platforms']:
