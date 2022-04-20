@@ -425,13 +425,13 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
     text.append(f"## {appDomain.capitalize()}\n\n")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            text.append(f"### {letter}\n<table style='table-layout:fixed;'>")
+            text.append(f"### {letter}\n<table>")
             for index, attributes in data["SpectralIndices"].items():        
                 if attributes['type'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
                         link = attributes['reference']
                         name = attributes['long_name']
-                        line = f'<tr><td><a href="{link}" target="_blank">{index}</a>: {name}.</td><td>'
+                        line = f'<tr><td width="50%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="50%">'
                         text.append(line)
                         for platform, badge in platformBadgesHTML.items():
                             if platform in attributes['platforms']:
