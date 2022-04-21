@@ -384,7 +384,8 @@ platformBadges = {
     "MODIS":"![MODIS](https://img.shields.io/badge/-MODIS-green?style=flat-square)",
     "Landsat-457":"![Landsat-457](https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square)",
     "Landsat-89":"![Landsat-89](https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square)",
-    "Sentinel-1":"![Sentinel-1](https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square)",
+    "Sentinel-1 (Dual Polarisation VV-VH)":"![Sentinel-1 (Dual Polarisation VV-VH)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square)",
+    "Sentinel-1 (Dual Polarisation HH-HV)":"![Sentinel-1 (Dual Polarisation HH-HV)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square)",
     "Sentinel-2":"![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)",
     "Planet-Fusion":"![Planet-Fusion](https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square)",
 }
@@ -393,7 +394,8 @@ platformBadgesHTML = {
     "MODIS":'<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
     "Landsat-457":'<img src="https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square" alt="Landsat-457">',
     "Landsat-89":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-89">',
-    "Sentinel-1":'<img src="https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square" alt="Sentinel-1">',
+    "Sentinel-1 (Dual Polarisation VV-VH)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)">',
+    "Sentinel-1 (Dual Polarisation HH-HV)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)">',
     "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
     "Planet-Fusion":'<img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion">',
 }

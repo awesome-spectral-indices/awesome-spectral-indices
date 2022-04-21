@@ -39,11 +39,13 @@ bandVars = [
 ]
 
 bandsPlatform = {
-    "Sentinel-1": [
-        'HV',
-        'HH',
+    "Sentinel-1 (Dual Polarisation VV-VH)": [
         'VV',
         'VH'
+    ],
+    "Sentinel-1 (Dual Polarisation HH-HV)": [
+        'HV',
+        'HH',
     ],
     "Sentinel-2": [
         'A',
