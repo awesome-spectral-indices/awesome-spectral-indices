@@ -86,7 +86,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/36.134076",
             "short_name": "ARVI",
@@ -107,7 +108,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(91)90009-U",
             "short_name": "ATSAVI",
@@ -126,7 +128,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
             "short_name": "AVI",
@@ -188,7 +191,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
             "short_name": "BAI",
@@ -246,7 +250,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
             "short_name": "BCC",
@@ -307,7 +312,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S1672-6308(07)60027-4",
             "short_name": "BNDVI",
@@ -327,7 +333,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2135/cropsci2007.01.0031",
             "short_name": "BWDRVI",
@@ -366,7 +373,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1078/0176-1617-00887",
             "short_name": "CIG",
@@ -439,7 +447,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.cabdirect.org/cabdirect/abstract/20073176046",
             "short_name": "CVI",
@@ -514,7 +523,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)00114-3",
             "short_name": "DVI",
@@ -537,7 +547,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
             "short_name": "DVIplus",
@@ -632,7 +643,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(96)00112-5",
             "short_name": "EVI",
@@ -653,7 +665,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
             "short_name": "EVI2",
@@ -673,7 +686,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.13031/2013.27838",
             "short_name": "ExG",
@@ -693,7 +707,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.compag.2008.03.009",
             "short_name": "ExGR",
@@ -712,7 +727,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1117/12.336896",
             "short_name": "ExR",
@@ -733,7 +749,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2020.111676",
             "short_name": "FCVI",
@@ -754,7 +771,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
             "short_name": "GARI",
@@ -774,7 +792,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
             "short_name": "GBNDVI",
@@ -794,7 +813,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
             "short_name": "GCC",
@@ -814,7 +834,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/rs6021211",
             "short_name": "GDVI",
@@ -833,7 +854,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1007/bf00031911",
             "short_name": "GEMI",
@@ -853,7 +875,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1080/10106040108542184",
             "short_name": "GLI",
@@ -904,7 +927,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(96)00072-7",
             "short_name": "GNDVI",
@@ -923,7 +947,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "GOSAVI",
@@ -943,7 +968,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=185",
             "short_name": "GRNDVI",
@@ -962,7 +988,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "GRVI",
@@ -982,7 +1009,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "GSAVI",
@@ -1022,7 +1050,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.jipb.net/EN/abstract/abstract23925.shtml",
             "short_name": "IAVI",
@@ -1063,7 +1092,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1006/anbo.1997.0544",
             "short_name": "IKAW",
@@ -1082,7 +1112,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(90)90085-Z",
             "short_name": "IPVI",
@@ -1199,7 +1230,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MCARI1",
@@ -1219,7 +1251,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MCARI2",
@@ -1290,7 +1323,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
             "short_name": "MGRVI",
@@ -1405,7 +1439,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/TGRS.2003.812910",
             "short_name": "MNLI",
@@ -1424,7 +1459,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/s20185055",
             "short_name": "MRBVI",
@@ -1443,7 +1479,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)90134-1",
             "short_name": "MSAVI",
@@ -1481,7 +1518,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/07038992.1996.10855178",
             "short_name": "MSR",
@@ -1534,7 +1572,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MTVI1",
@@ -1554,7 +1593,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MTVI2",
@@ -1801,7 +1841,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1029/2006GL029127",
             "short_name": "NDDI",
@@ -1824,7 +1865,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
             "short_name": "NDGI",
@@ -1843,7 +1885,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431160802385459",
             "short_name": "NDGlaI",
@@ -2067,7 +2110,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431160802385459",
             "short_name": "NDSII",
@@ -2144,7 +2188,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://ntrs.nasa.gov/citations/19740022614",
             "short_name": "NDVI",
@@ -2218,7 +2263,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169608948714",
             "short_name": "NDWI",
@@ -2238,7 +2284,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/w12051339",
             "short_name": "NDWIns",
@@ -2257,7 +2304,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2016.06.016",
             "short_name": "NDYI",
@@ -2276,7 +2324,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(79)90013-0",
             "short_name": "NGRDI",
@@ -2311,7 +2360,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.1602244",
             "short_name": "NIRv",
@@ -2333,7 +2383,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2021.112723",
             "short_name": "NIRvH2",
@@ -2353,7 +2404,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2021.112763",
             "short_name": "NIRvP",
@@ -2372,7 +2424,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/02757259409532252",
             "short_name": "NLI",
@@ -2490,7 +2543,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "NormG",
@@ -2510,7 +2564,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "NormNIR",
@@ -2530,7 +2585,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
             "short_name": "NormR",
@@ -2551,7 +2607,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1007/s11119-008-9075-z",
             "short_name": "OCVI",
@@ -2570,7 +2627,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(95)00186-7",
             "short_name": "OSAVI",
@@ -2589,7 +2647,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/rs10101521",
             "short_name": "PISI",
@@ -2643,7 +2702,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
             "short_name": "RCC",
@@ -2662,7 +2722,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)00114-3",
             "short_name": "RDVI",
@@ -2731,7 +2792,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
             "short_name": "RGBVI",
@@ -2750,7 +2812,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2014.03.018",
             "short_name": "RGRI",
@@ -2769,7 +2832,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://www.documentation.ird.fr/hor/fdi:34390",
             "short_name": "RI",
@@ -2860,7 +2924,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/36.134076",
             "short_name": "SARVI",
@@ -2880,7 +2945,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(88)90106-X",
             "short_name": "SAVI",
@@ -2901,7 +2967,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169008955053",
             "short_name": "SAVI2",
@@ -2940,7 +3007,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
             "short_name": "SI",
@@ -2977,7 +3045,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2307/1936256",
             "short_name": "SR",
@@ -2996,7 +3065,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169308904370",
             "short_name": "SR2",
@@ -3190,7 +3260,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2002.1026867",
             "short_name": "TDVI",
@@ -3210,7 +3281,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1016/j.jag.2012.07.020",
             "short_name": "TGI",
@@ -3248,7 +3320,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.1989.576128",
             "short_name": "TSAVI",
@@ -3284,7 +3357,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://ntrs.nasa.gov/citations/19740022614",
             "short_name": "TVI",
@@ -3304,7 +3378,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00197-8",
             "short_name": "TriVI",
@@ -3343,7 +3418,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VARI",
@@ -3476,7 +3552,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VIG",
@@ -3543,7 +3620,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
             "short_name": "VgNIRBI",
@@ -3562,7 +3640,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
             "short_name": "VrNIRBI",
@@ -3582,7 +3661,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1078/0176-1617-01176",
             "short_name": "WDRVI",
@@ -3602,7 +3682,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(89)90076-X",
             "short_name": "WDVI",
@@ -3685,7 +3766,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kEVI",
@@ -3704,7 +3786,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kIPVI",
@@ -3723,7 +3806,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kNDVI",
@@ -3742,7 +3826,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kRVI",
@@ -3762,7 +3847,8 @@
                 "Sentinel-2",
                 "Landsat-89",
                 "Landsat-457",
-                "MODIS"
+                "MODIS",
+                "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
             "short_name": "kVARI",
