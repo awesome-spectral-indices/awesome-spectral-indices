@@ -386,6 +386,7 @@ platformBadges = {
     "Landsat-89":"![Landsat-89](https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square)",
     "Sentinel-1":"![Sentinel-1](https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square)",
     "Sentinel-2":"![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)",
+    "Planet-Fusion":"![Planet-Fusion](https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square)",
 }
 
 platformBadgesHTML = {
@@ -394,6 +395,7 @@ platformBadgesHTML = {
     "Landsat-89":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-89">',
     "Sentinel-1":'<img src="https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square" alt="Sentinel-1">',
     "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
+    "Planet-Fusion":'<img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion">',
 }
 
 letters = list(map(chr, range(65, 91)))
@@ -432,7 +434,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
                     if index.startswith(letter) or index.startswith(letter.lower()):
                         link = attributes['reference']
                         name = attributes['long_name']
-                        line = f'<tr><td width="55%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="45%">'
+                        line = f'<tr><td width="50%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="50%">'
                         text.append(line)
                         for platform, badge in platformBadgesHTML.items():
                             if platform in attributes['platforms']:

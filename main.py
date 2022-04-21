@@ -142,6 +142,26 @@ bandsPlatform = {
         'kRL',
         'kLL'
     ],
+    "Planet-Fusion": [
+        'B',
+        'G',
+        'R',
+        'N',
+        'kNN',
+        'kNR',
+        'kNB',
+        'kNL',
+        'kGG',
+        'kGR',
+        'kGB',
+        'kBB',
+        'kBR',
+        'kBL',
+        'kRR',
+        'kRB',
+        'kRL',
+        'kLL'
+    ],
 } 
 
 bandsToCheck = list(Bands._value2member_map_.keys())
