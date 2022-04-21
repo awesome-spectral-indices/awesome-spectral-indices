@@ -504,7 +504,7 @@
             "formula": "(VV + VH)/2.0 ** 0.5",
             "long_name": "Dual-Pol Diagonal Distance",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
             "short_name": "DPDD",
@@ -564,7 +564,7 @@
             "formula": "(4.0 * HV)/(HH + HV)",
             "long_name": "Dual-Polarized Radar Vegetation Index HH",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation HH-HV)"
             ],
             "reference": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
             "short_name": "DpRVIHH",
@@ -580,7 +580,7 @@
             "formula": "(4.0 * VH)/(VV + VH)",
             "long_name": "Dual-Polarized Radar Vegetation Index VV",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
             "short_name": "DpRVIVV",
@@ -2056,7 +2056,7 @@
             "formula": "(VV - VH)/(VV + VH)",
             "long_name": "Normalized Difference Polarization Index",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
             "short_name": "NDPolI",
@@ -2681,9 +2681,7 @@
             "date_of_addition": "2021-12-24",
             "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
             "long_name": "Quad-Polarized Radar Vegetation Index",
-            "platforms": [
-                "Sentinel-1"
-            ],
+            "platforms": [],
             "reference": "https://doi.org/10.1109/IGARSS.2001.976856",
             "short_name": "QpRVI",
             "type": "radar"
@@ -2772,7 +2770,7 @@
             "formula": "(HH - HV)/(HH + HV)",
             "long_name": "Radar Forest Degradation Index",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation HH-HV)"
             ],
             "reference": "https://doi.org/10.5194/bg-9-179-2012",
             "short_name": "RFDI",
@@ -3452,7 +3450,7 @@
             "formula": "(VV + VH)/VV",
             "long_name": "Vertical Dual De-Polarization Index",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
             "short_name": "VDDPI",
@@ -3468,7 +3466,7 @@
             "formula": "VH - VV",
             "long_name": "VH-VV Difference",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
             "short_name": "VHVVD",
@@ -3484,7 +3482,7 @@
             "formula": "VH * VV",
             "long_name": "VH-VV Product",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
             "short_name": "VHVVP",
@@ -3500,7 +3498,7 @@
             "formula": "VH/VV",
             "long_name": "VH-VV Ratio",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
             "short_name": "VHVVR",
@@ -3569,7 +3567,7 @@
             "formula": "VV - VH",
             "long_name": "VV-VH Difference",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
             "short_name": "VVVHD",
@@ -3585,7 +3583,7 @@
             "formula": "VV/VH",
             "long_name": "VV-VH Ratio",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
             "short_name": "VVVHR",
@@ -3601,7 +3599,7 @@
             "formula": "VV + VH",
             "long_name": "VV-VH Sum",
             "platforms": [
-                "Sentinel-1"
+                "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
             "short_name": "VVVHS",
