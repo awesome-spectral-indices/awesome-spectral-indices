@@ -1,6 +1,7 @@
 {
     "SpectralIndices": {
         "AFRI1600": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S1"
@@ -16,10 +17,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
-            "short_name": "AFRI1600",
-            "type": "vegetation"
+            "short_name": "AFRI1600"
         },
         "AFRI2100": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S2"
@@ -35,10 +36,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
-            "short_name": "AFRI2100",
-            "type": "vegetation"
+            "short_name": "AFRI2100"
         },
         "ARI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "RE1"
@@ -51,10 +52,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2",
-            "short_name": "ARI",
-            "type": "vegetation"
+            "short_name": "ARI"
         },
         "ARI2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -68,10 +69,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2",
-            "short_name": "ARI2",
-            "type": "vegetation"
+            "short_name": "ARI2"
         },
         "ARVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -90,10 +91,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/36.134076",
-            "short_name": "ARVI",
-            "type": "vegetation"
+            "short_name": "ARVI"
         },
         "ATSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "sla",
                 "N",
@@ -112,10 +113,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(91)90009-U",
-            "short_name": "ATSAVI",
-            "type": "vegetation"
+            "short_name": "ATSAVI"
         },
         "AVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -131,11 +132,11 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
-            "short_name": "AVI",
-            "type": "vegetation"
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "short_name": "AVI"
         },
         "AWEInsh": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "S1",
@@ -153,10 +154,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
-            "short_name": "AWEInsh",
-            "type": "water"
+            "short_name": "AWEInsh"
         },
         "AWEIsh": {
+            "application_domain": "water",
             "bands": [
                 "B",
                 "G",
@@ -175,10 +176,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
-            "short_name": "AWEIsh",
-            "type": "water"
+            "short_name": "AWEIsh"
         },
         "BAI": {
+            "application_domain": "burn",
             "bands": [
                 "R",
                 "N"
@@ -195,10 +196,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
-            "short_name": "BAI",
-            "type": "burn"
+            "short_name": "BAI"
         },
         "BAIM": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "S2"
@@ -214,10 +215,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.foreco.2006.08.248",
-            "short_name": "BAIM",
-            "type": "burn"
+            "short_name": "BAIM"
         },
         "BAIS2": {
+            "application_domain": "burn",
             "bands": [
                 "RE2",
                 "RE3",
@@ -233,10 +234,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/ecrs-2-05177",
-            "short_name": "BAIS2",
-            "type": "burn"
+            "short_name": "BAIS2"
         },
         "BCC": {
+            "application_domain": "vegetation",
             "bands": [
                 "B",
                 "R",
@@ -254,10 +255,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
-            "short_name": "BCC",
-            "type": "vegetation"
+            "short_name": "BCC"
         },
         "BI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "R",
@@ -274,11 +275,11 @@
                 "Landsat-457",
                 "MODIS"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
-            "short_name": "BI",
-            "type": "urban"
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "short_name": "BI"
         },
         "BLFEI": {
+            "application_domain": "urban",
             "bands": [
                 "G",
                 "R",
@@ -296,10 +297,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/10106049.2018.1497094",
-            "short_name": "BLFEI",
-            "type": "urban"
+            "short_name": "BLFEI"
         },
         "BNDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "B"
@@ -316,10 +317,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S1672-6308(07)60027-4",
-            "short_name": "BNDVI",
-            "type": "vegetation"
+            "short_name": "BNDVI"
         },
         "BWDRVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "alpha",
                 "N",
@@ -337,10 +338,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2135/cropsci2007.01.0031",
-            "short_name": "BWDRVI",
-            "type": "vegetation"
+            "short_name": "BWDRVI"
         },
         "BaI": {
+            "application_domain": "urban",
             "bands": [
                 "R",
                 "S1",
@@ -357,10 +358,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2005.1525743",
-            "short_name": "BaI",
-            "type": "urban"
+            "short_name": "BaI"
         },
         "CIG": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G"
@@ -377,10 +378,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1078/0176-1617-00887",
-            "short_name": "CIG",
-            "type": "vegetation"
+            "short_name": "CIG"
         },
         "CIRE": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "RE1"
@@ -393,10 +394,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1078/0176-1617-00887",
-            "short_name": "CIRE",
-            "type": "vegetation"
+            "short_name": "CIRE"
         },
         "CSI": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "S2"
@@ -412,10 +413,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2005.04.014",
-            "short_name": "CSI",
-            "type": "burn"
+            "short_name": "CSI"
         },
         "CSIT": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "S2",
@@ -430,10 +431,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
-            "short_name": "CSIT",
-            "type": "burn"
+            "short_name": "CSIT"
         },
         "CVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -451,10 +452,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.cabdirect.org/cabdirect/abstract/20073176046",
-            "short_name": "CVI",
-            "type": "vegetation"
+            "short_name": "CVI"
         },
         "DBI": {
+            "application_domain": "urban",
             "bands": [
                 "B",
                 "T1",
@@ -470,10 +471,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.3390/land7030081",
-            "short_name": "DBI",
-            "type": "urban"
+            "short_name": "DBI"
         },
         "DBSI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "G",
@@ -491,10 +492,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land7030081",
-            "short_name": "DBSI",
-            "type": "urban"
+            "short_name": "DBSI"
         },
         "DPDD": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -507,10 +508,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
-            "short_name": "DPDD",
-            "type": "radar"
+            "short_name": "DPDD"
         },
         "DVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -527,10 +528,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)00114-3",
-            "short_name": "DVI",
-            "type": "vegetation"
+            "short_name": "DVI"
         },
         "DVIplus": {
+            "application_domain": "vegetation",
             "bands": [
                 "lambdaN",
                 "lambdaR",
@@ -551,10 +552,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
-            "short_name": "DVIplus",
-            "type": "vegetation"
+            "short_name": "DVIplus"
         },
         "DpRVIHH": {
+            "application_domain": "radar",
             "bands": [
                 "HV",
                 "HH"
@@ -567,10 +568,10 @@
                 "Sentinel-1 (Dual Polarisation HH-HV)"
             ],
             "reference": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
-            "short_name": "DpRVIHH",
-            "type": "radar"
+            "short_name": "DpRVIHH"
         },
         "DpRVIVV": {
+            "application_domain": "radar",
             "bands": [
                 "VH",
                 "VV"
@@ -583,10 +584,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
-            "short_name": "DpRVIVV",
-            "type": "radar"
+            "short_name": "DpRVIVV"
         },
         "EBBI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "N",
@@ -601,10 +602,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.3390/rs4102957",
-            "short_name": "EBBI",
-            "type": "urban"
+            "short_name": "EBBI"
         },
         "EMBI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "S2",
@@ -622,10 +623,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2022.102703",
-            "short_name": "EMBI",
-            "type": "urban"
+            "short_name": "EMBI"
         },
         "EVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "g",
                 "N",
@@ -647,10 +648,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(96)00112-5",
-            "short_name": "EVI",
-            "type": "vegetation"
+            "short_name": "EVI"
         },
         "EVI2": {
+            "application_domain": "vegetation",
             "bands": [
                 "g",
                 "N",
@@ -669,10 +670,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
-            "short_name": "EVI2",
-            "type": "vegetation"
+            "short_name": "EVI2"
         },
         "ExG": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R",
@@ -690,10 +691,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.13031/2013.27838",
-            "short_name": "ExG",
-            "type": "vegetation"
+            "short_name": "ExG"
         },
         "ExGR": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R",
@@ -711,10 +712,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.compag.2008.03.009",
-            "short_name": "ExGR",
-            "type": "vegetation"
+            "short_name": "ExGR"
         },
         "ExR": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "G"
@@ -731,10 +732,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1117/12.336896",
-            "short_name": "ExR",
-            "type": "vegetation"
+            "short_name": "ExR"
         },
         "FCVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -753,10 +754,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2020.111676",
-            "short_name": "FCVI",
-            "type": "vegetation"
+            "short_name": "FCVI"
         },
         "GARI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -775,10 +776,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
-            "short_name": "GARI",
-            "type": "vegetation"
+            "short_name": "GARI"
         },
         "GBNDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -796,10 +797,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
-            "short_name": "GBNDVI",
-            "type": "vegetation"
+            "short_name": "GBNDVI"
         },
         "GCC": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R",
@@ -817,10 +818,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
-            "short_name": "GCC",
-            "type": "vegetation"
+            "short_name": "GCC"
         },
         "GDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "nexp",
@@ -838,10 +839,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/rs6021211",
-            "short_name": "GDVI",
-            "type": "vegetation"
+            "short_name": "GDVI"
         },
         "GEMI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -858,10 +859,10 @@
                 "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1007/bf00031911",
-            "short_name": "GEMI",
-            "type": "vegetation"
+            "short_name": "GEMI"
         },
         "GLI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R",
@@ -879,10 +880,10 @@
                 "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1080/10106040108542184",
-            "short_name": "GLI",
-            "type": "vegetation"
+            "short_name": "GLI"
         },
         "GM1": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "G"
@@ -895,10 +896,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(96)80284-7",
-            "short_name": "GM1",
-            "type": "vegetation"
+            "short_name": "GM1"
         },
         "GM2": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -911,10 +912,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(96)80284-7",
-            "short_name": "GM2",
-            "type": "vegetation"
+            "short_name": "GM2"
         },
         "GNDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G"
@@ -931,10 +932,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(96)00072-7",
-            "short_name": "GNDVI",
-            "type": "vegetation"
+            "short_name": "GNDVI"
         },
         "GOSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G"
@@ -951,10 +952,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "GOSAVI",
-            "type": "vegetation"
+            "short_name": "GOSAVI"
         },
         "GRNDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -972,10 +973,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.indexdatabase.de/db/i-single.php?id=185",
-            "short_name": "GRNDVI",
-            "type": "vegetation"
+            "short_name": "GRNDVI"
         },
         "GRVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G"
@@ -992,10 +993,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "GRVI",
-            "type": "vegetation"
+            "short_name": "GRVI"
         },
         "GSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "L",
                 "N",
@@ -1013,10 +1014,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "GSAVI",
-            "type": "vegetation"
+            "short_name": "GSAVI"
         },
         "GVMI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S2"
@@ -1032,10 +1033,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00037-8",
-            "short_name": "GVMI",
-            "type": "vegetation"
+            "short_name": "GVMI"
         },
         "IAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -1054,10 +1055,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.jipb.net/EN/abstract/abstract23925.shtml",
-            "short_name": "IAVI",
-            "type": "vegetation"
+            "short_name": "IAVI"
         },
         "IBI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "N",
@@ -1076,10 +1077,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160802039957",
-            "short_name": "IBI",
-            "type": "urban"
+            "short_name": "IBI"
         },
         "IKAW": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "B"
@@ -1096,10 +1097,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1006/anbo.1997.0544",
-            "short_name": "IKAW",
-            "type": "vegetation"
+            "short_name": "IKAW"
         },
         "IPVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -1116,10 +1117,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(90)90085-Z",
-            "short_name": "IPVI",
-            "type": "vegetation"
+            "short_name": "IPVI"
         },
         "IRECI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE3",
                 "R",
@@ -1134,10 +1135,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.isprsjprs.2013.04.007",
-            "short_name": "IRECI",
-            "type": "vegetation"
+            "short_name": "IRECI"
         },
         "LSWI": {
+            "application_domain": "water",
             "bands": [
                 "N",
                 "S1"
@@ -1153,10 +1154,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.11.008",
-            "short_name": "LSWI",
-            "type": "water"
+            "short_name": "LSWI"
         },
         "MBI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "S2",
@@ -1173,10 +1174,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land10030231",
-            "short_name": "MBI",
-            "type": "urban"
+            "short_name": "MBI"
         },
         "MBWI": {
+            "application_domain": "water",
             "bands": [
                 "omega",
                 "G",
@@ -1196,10 +1197,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2018.01.018",
-            "short_name": "MBWI",
-            "type": "water"
+            "short_name": "MBWI"
         },
         "MCARI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R",
@@ -1213,10 +1214,10 @@
                 "Sentinel-2"
             ],
             "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00113-9",
-            "short_name": "MCARI",
-            "type": "vegetation"
+            "short_name": "MCARI"
         },
         "MCARI1": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -1234,10 +1235,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
-            "short_name": "MCARI1",
-            "type": "vegetation"
+            "short_name": "MCARI1"
         },
         "MCARI2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -1255,10 +1256,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
-            "short_name": "MCARI2",
-            "type": "vegetation"
+            "short_name": "MCARI2"
         },
         "MCARI705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1",
@@ -1272,10 +1273,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
-            "short_name": "MCARI705",
-            "type": "vegetation"
+            "short_name": "MCARI705"
         },
         "MCARIOSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R",
@@ -1290,10 +1291,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(00)00113-9",
-            "short_name": "MCARIOSAVI",
-            "type": "vegetation"
+            "short_name": "MCARIOSAVI"
         },
         "MCARIOSAVI705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1",
@@ -1307,10 +1308,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
-            "short_name": "MCARIOSAVI705",
-            "type": "vegetation"
+            "short_name": "MCARIOSAVI705"
         },
         "MGRVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R"
@@ -1327,10 +1328,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
-            "short_name": "MGRVI",
-            "type": "vegetation"
+            "short_name": "MGRVI"
         },
         "MIRBI": {
+            "application_domain": "burn",
             "bands": [
                 "S2",
                 "S1"
@@ -1346,10 +1347,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160110053185",
-            "short_name": "MIRBI",
-            "type": "burn"
+            "short_name": "MIRBI"
         },
         "MLSWI26": {
+            "application_domain": "water",
             "bands": [
                 "N",
                 "S1"
@@ -1365,10 +1366,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs71215805",
-            "short_name": "MLSWI26",
-            "type": "water"
+            "short_name": "MLSWI26"
         },
         "MLSWI27": {
+            "application_domain": "water",
             "bands": [
                 "N",
                 "S2"
@@ -1384,10 +1385,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs71215805",
-            "short_name": "MLSWI27",
-            "type": "water"
+            "short_name": "MLSWI27"
         },
         "MNDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S2"
@@ -1403,10 +1404,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/014311697216810",
-            "short_name": "MNDVI",
-            "type": "vegetation"
+            "short_name": "MNDVI"
         },
         "MNDWI": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "S1"
@@ -1422,10 +1423,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160600589179",
-            "short_name": "MNDWI",
-            "type": "water"
+            "short_name": "MNDWI"
         },
         "MNLI": {
+            "application_domain": "vegetation",
             "bands": [
                 "L",
                 "N",
@@ -1443,10 +1444,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/TGRS.2003.812910",
-            "short_name": "MNLI",
-            "type": "vegetation"
+            "short_name": "MNLI"
         },
         "MRBVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "B"
@@ -1463,10 +1464,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/s20185055",
-            "short_name": "MRBVI",
-            "type": "vegetation"
+            "short_name": "MRBVI"
         },
         "MSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -1483,10 +1484,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)90134-1",
-            "short_name": "MSAVI",
-            "type": "vegetation"
+            "short_name": "MSAVI"
         },
         "MSI": {
+            "application_domain": "vegetation",
             "bands": [
                 "S1",
                 "N"
@@ -1502,10 +1503,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(89)90046-1",
-            "short_name": "MSI",
-            "type": "vegetation"
+            "short_name": "MSI"
         },
         "MSR": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -1522,10 +1523,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/07038992.1996.10855178",
-            "short_name": "MSR",
-            "type": "vegetation"
+            "short_name": "MSR"
         },
         "MSR705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -1538,10 +1539,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
-            "short_name": "MSR705",
-            "type": "vegetation"
+            "short_name": "MSR705"
         },
         "MTCI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1",
@@ -1555,10 +1556,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1080/0143116042000274015",
-            "short_name": "MTCI",
-            "type": "vegetation"
+            "short_name": "MTCI"
         },
         "MTVI1": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -1576,10 +1577,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
-            "short_name": "MTVI1",
-            "type": "vegetation"
+            "short_name": "MTVI1"
         },
         "MTVI2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -1597,10 +1598,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
-            "short_name": "MTVI2",
-            "type": "vegetation"
+            "short_name": "MTVI2"
         },
         "MuWIR": {
+            "application_domain": "water",
             "bands": [
                 "B",
                 "G",
@@ -1619,10 +1620,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs10101643",
-            "short_name": "MuWIR",
-            "type": "water"
+            "short_name": "MuWIR"
         },
         "NBLI": {
+            "application_domain": "urban",
             "bands": [
                 "R",
                 "T1"
@@ -1636,10 +1637,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.3390/rs9030249",
-            "short_name": "NBLI",
-            "type": "urban"
+            "short_name": "NBLI"
         },
         "NBR": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "S2"
@@ -1655,10 +1656,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3133/ofr0211",
-            "short_name": "NBR",
-            "type": "burn"
+            "short_name": "NBR"
         },
         "NBR2": {
+            "application_domain": "burn",
             "bands": [
                 "S1",
                 "S2"
@@ -1674,10 +1675,10 @@
                 "MODIS"
             ],
             "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
-            "short_name": "NBR2",
-            "type": "burn"
+            "short_name": "NBR2"
         },
         "NBRT1": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "S2",
@@ -1692,10 +1693,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
-            "short_name": "NBRT1",
-            "type": "burn"
+            "short_name": "NBRT1"
         },
         "NBRT2": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "T1",
@@ -1710,10 +1711,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
-            "short_name": "NBRT2",
-            "type": "burn"
+            "short_name": "NBRT2"
         },
         "NBRT3": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "T1",
@@ -1728,10 +1729,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
-            "short_name": "NBRT3",
-            "type": "burn"
+            "short_name": "NBRT3"
         },
         "NBSIMS": {
+            "application_domain": "snow",
             "bands": [
                 "G",
                 "R",
@@ -1751,10 +1752,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13142777",
-            "short_name": "NBSIMS",
-            "type": "snow"
+            "short_name": "NBSIMS"
         },
         "NBUI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "N",
@@ -1772,10 +1773,10 @@
                 "Landsat-457"
             ],
             "reference": "https://hdl.handle.net/1959.11/29500",
-            "short_name": "NBUI",
-            "type": "urban"
+            "short_name": "NBUI"
         },
         "ND705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -1788,10 +1789,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
-            "short_name": "ND705",
-            "type": "vegetation"
+            "short_name": "ND705"
         },
         "NDBI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "N"
@@ -1807,10 +1808,10 @@
                 "MODIS"
             ],
             "reference": "http://dx.doi.org/10.1080/01431160304987",
-            "short_name": "NDBI",
-            "type": "urban"
+            "short_name": "NDBI"
         },
         "NDBaI": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "T1"
@@ -1824,10 +1825,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2005.1526319",
-            "short_name": "NDBaI",
-            "type": "urban"
+            "short_name": "NDBaI"
         },
         "NDDI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -1845,10 +1846,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1029/2006GL029127",
-            "short_name": "NDDI",
-            "type": "vegetation"
+            "short_name": "NDDI"
         },
         "NDGI": {
+            "application_domain": "vegetation",
             "bands": [
                 "lambdaN",
                 "lambdaR",
@@ -1869,10 +1870,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2019.03.028",
-            "short_name": "NDGI",
-            "type": "vegetation"
+            "short_name": "NDGI"
         },
         "NDGlaI": {
+            "application_domain": "snow",
             "bands": [
                 "G",
                 "R"
@@ -1889,10 +1890,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431160802385459",
-            "short_name": "NDGlaI",
-            "type": "snow"
+            "short_name": "NDGlaI"
         },
         "NDII": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S1"
@@ -1908,10 +1909,10 @@
                 "MODIS"
             ],
             "reference": "https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf",
-            "short_name": "NDII",
-            "type": "vegetation"
+            "short_name": "NDII"
         },
         "NDISIb": {
+            "application_domain": "urban",
             "bands": [
                 "T1",
                 "B",
@@ -1927,10 +1928,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
-            "short_name": "NDISIb",
-            "type": "urban"
+            "short_name": "NDISIb"
         },
         "NDISIg": {
+            "application_domain": "urban",
             "bands": [
                 "T1",
                 "G",
@@ -1946,10 +1947,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
-            "short_name": "NDISIg",
-            "type": "urban"
+            "short_name": "NDISIg"
         },
         "NDISImndwi": {
+            "application_domain": "urban",
             "bands": [
                 "T1",
                 "G",
@@ -1965,10 +1966,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
-            "short_name": "NDISImndwi",
-            "type": "urban"
+            "short_name": "NDISImndwi"
         },
         "NDISIndwi": {
+            "application_domain": "urban",
             "bands": [
                 "T1",
                 "G",
@@ -1984,10 +1985,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
-            "short_name": "NDISIndwi",
-            "type": "urban"
+            "short_name": "NDISIndwi"
         },
         "NDISIr": {
+            "application_domain": "urban",
             "bands": [
                 "T1",
                 "R",
@@ -2003,10 +2004,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
-            "short_name": "NDISIr",
-            "type": "urban"
+            "short_name": "NDISIr"
         },
         "NDMI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S1"
@@ -2022,10 +2023,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00318-2",
-            "short_name": "NDMI",
-            "type": "vegetation"
+            "short_name": "NDMI"
         },
         "NDPI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "alpha",
@@ -2043,10 +2044,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2017.04.031",
-            "short_name": "NDPI",
-            "type": "vegetation"
+            "short_name": "NDPI"
         },
         "NDPolI": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -2059,10 +2060,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
-            "short_name": "NDPolI",
-            "type": "radar"
+            "short_name": "NDPolI"
         },
         "NDREI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "RE1"
@@ -2075,10 +2076,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/1011-1344(93)06963-4",
-            "short_name": "NDREI",
-            "type": "vegetation"
+            "short_name": "NDREI"
         },
         "NDSI": {
+            "application_domain": "snow",
             "bands": [
                 "G",
                 "S1"
@@ -2094,10 +2095,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.1994.399618",
-            "short_name": "NDSI",
-            "type": "snow"
+            "short_name": "NDSI"
         },
         "NDSII": {
+            "application_domain": "snow",
             "bands": [
                 "G",
                 "N"
@@ -2114,10 +2115,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431160802385459",
-            "short_name": "NDSII",
-            "type": "snow"
+            "short_name": "NDSII"
         },
         "NDSInw": {
+            "application_domain": "snow",
             "bands": [
                 "N",
                 "S1",
@@ -2134,10 +2135,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/w12051339",
-            "short_name": "NDSInw",
-            "type": "snow"
+            "short_name": "NDSInw"
         },
         "NDSaII": {
+            "application_domain": "snow",
             "bands": [
                 "R",
                 "S1"
@@ -2153,10 +2154,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160119766",
-            "short_name": "NDSaII",
-            "type": "snow"
+            "short_name": "NDSaII"
         },
         "NDSoI": {
+            "application_domain": "urban",
             "bands": [
                 "S2",
                 "G"
@@ -2172,10 +2173,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.010",
-            "short_name": "NDSoiI",
-            "type": "urban"
+            "short_name": "NDSoiI"
         },
         "NDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -2192,10 +2193,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://ntrs.nasa.gov/citations/19740022614",
-            "short_name": "NDVI",
-            "type": "vegetation"
+            "short_name": "NDVI"
         },
         "NDVI705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -2208,10 +2209,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
-            "short_name": "NDVI705",
-            "type": "vegetation"
+            "short_name": "NDVI705"
         },
         "NDVIMNDWI": {
+            "application_domain": "water",
             "bands": [
                 "N",
                 "R",
@@ -2229,10 +2230,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1007/978-3-662-45737-5_51",
-            "short_name": "NDVIMNDWI",
-            "type": "water"
+            "short_name": "NDVIMNDWI"
         },
         "NDVIT": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "R",
@@ -2247,10 +2248,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
-            "short_name": "NDVIT",
-            "type": "burn"
+            "short_name": "NDVIT"
         },
         "NDWI": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "N"
@@ -2267,10 +2268,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169608948714",
-            "short_name": "NDWI",
-            "type": "water"
+            "short_name": "NDWI"
         },
         "NDWIns": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "alpha",
@@ -2288,10 +2289,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/w12051339",
-            "short_name": "NDWIns",
-            "type": "water"
+            "short_name": "NDWIns"
         },
         "NDYI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "B"
@@ -2308,10 +2309,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2016.06.016",
-            "short_name": "NDYI",
-            "type": "vegetation"
+            "short_name": "NDYI"
         },
         "NGRDI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R"
@@ -2328,10 +2329,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(79)90013-0",
-            "short_name": "NGRDI",
-            "type": "vegetation"
+            "short_name": "NGRDI"
         },
         "NHFD": {
+            "application_domain": "urban",
             "bands": [
                 "RE1",
                 "A"
@@ -2344,10 +2345,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
-            "short_name": "NHFD",
-            "type": "urban"
+            "short_name": "NHFD"
         },
         "NIRv": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -2364,10 +2365,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.1602244",
-            "short_name": "NIRv",
-            "type": "vegetation"
+            "short_name": "NIRv"
         },
         "NIRvH2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -2387,10 +2388,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2021.112723",
-            "short_name": "NIRvH2",
-            "type": "vegetation"
+            "short_name": "NIRvH2"
         },
         "NIRvP": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -2408,10 +2409,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2021.112763",
-            "short_name": "NIRvP",
-            "type": "vegetation"
+            "short_name": "NIRvP"
         },
         "NLI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -2428,10 +2429,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/02757259409532252",
-            "short_name": "NLI",
-            "type": "vegetation"
+            "short_name": "NLI"
         },
         "NMDI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "S1",
@@ -2448,10 +2449,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1029/2007GL031021",
-            "short_name": "NMDI",
-            "type": "vegetation"
+            "short_name": "NMDI"
         },
         "NRFIg": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "S2"
@@ -2467,10 +2468,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13010105",
-            "short_name": "NRFIg",
-            "type": "vegetation"
+            "short_name": "NRFIg"
         },
         "NRFIr": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "S2"
@@ -2486,10 +2487,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13010105",
-            "short_name": "NRFIr",
-            "type": "vegetation"
+            "short_name": "NRFIr"
         },
         "NSDS": {
+            "application_domain": "urban",
             "bands": [
                 "S1",
                 "S2"
@@ -2505,10 +2506,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land10030231",
-            "short_name": "NSDS",
-            "type": "urban"
+            "short_name": "NSDS"
         },
         "NWI": {
+            "application_domain": "water",
             "bands": [
                 "B",
                 "N",
@@ -2526,10 +2527,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.11873/j.issn.1004-0323.2009.2.167",
-            "short_name": "NWI",
-            "type": "water"
+            "short_name": "NWI"
         },
         "NormG": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "N",
@@ -2547,10 +2548,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "NormG",
-            "type": "vegetation"
+            "short_name": "NormG"
         },
         "NormNIR": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -2568,10 +2569,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "NormNIR",
-            "type": "vegetation"
+            "short_name": "NormNIR"
         },
         "NormR": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "N",
@@ -2589,10 +2590,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2134/agronj2004.0314",
-            "short_name": "NormR",
-            "type": "vegetation"
+            "short_name": "NormR"
         },
         "OCVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -2611,10 +2612,10 @@
                 "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1007/s11119-008-9075-z",
-            "short_name": "OCVI",
-            "type": "vegetation"
+            "short_name": "OCVI"
         },
         "OSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -2631,10 +2632,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(95)00186-7",
-            "short_name": "OSAVI",
-            "type": "vegetation"
+            "short_name": "OSAVI"
         },
         "PISI": {
+            "application_domain": "urban",
             "bands": [
                 "B",
                 "N"
@@ -2651,10 +2652,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.3390/rs10101521",
-            "short_name": "PISI",
-            "type": "urban"
+            "short_name": "PISI"
         },
         "PSRI": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "B",
@@ -2668,10 +2669,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
-            "short_name": "PSRI",
-            "type": "vegetation"
+            "short_name": "PSRI"
         },
         "QpRVI": {
+            "application_domain": "radar",
             "bands": [
                 "HV",
                 "HH",
@@ -2683,10 +2684,10 @@
             "long_name": "Quad-Polarized Radar Vegetation Index",
             "platforms": [],
             "reference": "https://doi.org/10.1109/IGARSS.2001.976856",
-            "short_name": "QpRVI",
-            "type": "radar"
+            "short_name": "QpRVI"
         },
         "RCC": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "G",
@@ -2704,10 +2705,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(87)90088-5",
-            "short_name": "RCC",
-            "type": "vegetation"
+            "short_name": "RCC"
         },
         "RDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -2724,10 +2725,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(94)00114-3",
-            "short_name": "RDVI",
-            "type": "vegetation"
+            "short_name": "RDVI"
         },
         "REDSI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE3",
                 "R",
@@ -2741,10 +2742,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/s18030868",
-            "short_name": "REDSI",
-            "type": "vegetation"
+            "short_name": "REDSI"
         },
         "RENDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -2757,10 +2758,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
-            "short_name": "RENDVI",
-            "type": "vegetation"
+            "short_name": "RENDVI"
         },
         "RFDI": {
+            "application_domain": "radar",
             "bands": [
                 "HH",
                 "HV"
@@ -2773,10 +2774,10 @@
                 "Sentinel-1 (Dual Polarisation HH-HV)"
             ],
             "reference": "https://doi.org/10.5194/bg-9-179-2012",
-            "short_name": "RFDI",
-            "type": "radar"
+            "short_name": "RFDI"
         },
         "RGBVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "B",
@@ -2794,10 +2795,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
-            "short_name": "RGBVI",
-            "type": "vegetation"
+            "short_name": "RGBVI"
         },
         "RGRI": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "G"
@@ -2814,10 +2815,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2014.03.018",
-            "short_name": "RGRI",
-            "type": "vegetation"
+            "short_name": "RGRI"
         },
         "RI": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "G"
@@ -2834,10 +2835,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://www.documentation.ird.fr/hor/fdi:34390",
-            "short_name": "RI",
-            "type": "vegetation"
+            "short_name": "RI"
         },
         "RVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "R"
@@ -2850,10 +2851,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.2134/agronj1968.00021962006000060016x",
-            "short_name": "RVI",
-            "type": "vegetation"
+            "short_name": "RVI"
         },
         "S2REP": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE3",
                 "R",
@@ -2868,10 +2869,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.isprsjprs.2013.04.007",
-            "short_name": "S2REP",
-            "type": "vegetation"
+            "short_name": "S2REP"
         },
         "S2WI": {
+            "application_domain": "water",
             "bands": [
                 "RE1",
                 "S2"
@@ -2884,10 +2885,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/w13121647",
-            "short_name": "S2WI",
-            "type": "water"
+            "short_name": "S2WI"
         },
         "S3": {
+            "application_domain": "snow",
             "bands": [
                 "N",
                 "R",
@@ -2904,10 +2905,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3178/jjshwr.12.28",
-            "short_name": "S3",
-            "type": "snow"
+            "short_name": "S3"
         },
         "SARVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "L",
                 "N",
@@ -2926,10 +2927,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/36.134076",
-            "short_name": "SARVI",
-            "type": "vegetation"
+            "short_name": "SARVI"
         },
         "SAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "L",
                 "N",
@@ -2947,10 +2948,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(88)90106-X",
-            "short_name": "SAVI",
-            "type": "vegetation"
+            "short_name": "SAVI"
         },
         "SAVI2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R",
@@ -2969,10 +2970,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169008955053",
-            "short_name": "SAVI2",
-            "type": "vegetation"
+            "short_name": "SAVI2"
         },
         "SAVIT": {
+            "application_domain": "burn",
             "bands": [
                 "L",
                 "N",
@@ -2988,10 +2989,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
-            "short_name": "SAVIT",
-            "type": "burn"
+            "short_name": "SAVIT"
         },
         "SI": {
+            "application_domain": "vegetation",
             "bands": [
                 "B",
                 "G",
@@ -3008,11 +3009,11 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
-            "short_name": "SI",
-            "type": "vegetation"
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "short_name": "SI"
         },
         "SIPI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "A",
@@ -3027,10 +3028,10 @@
                 "Landsat-89"
             ],
             "reference": "https://eurekamag.com/research/009/395/009395053.php",
-            "short_name": "SIPI",
-            "type": "vegetation"
+            "short_name": "SIPI"
         },
         "SR": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -3047,10 +3048,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.2307/1936256",
-            "short_name": "SR",
-            "type": "vegetation"
+            "short_name": "SR"
         },
         "SR2": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G"
@@ -3067,10 +3068,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1080/01431169308904370",
-            "short_name": "SR2",
-            "type": "vegetation"
+            "short_name": "SR2"
         },
         "SR3": {
+            "application_domain": "vegetation",
             "bands": [
                 "N2",
                 "G",
@@ -3084,10 +3085,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-            "short_name": "SR3",
-            "type": "vegetation"
+            "short_name": "SR3"
         },
         "SR555": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "G"
@@ -3100,10 +3101,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
-            "short_name": "SR555",
-            "type": "vegetation"
+            "short_name": "SR555"
         },
         "SR705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1"
@@ -3116,10 +3117,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
-            "short_name": "SR705",
-            "type": "vegetation"
+            "short_name": "SR705"
         },
         "SWI": {
+            "application_domain": "snow",
             "bands": [
                 "G",
                 "N",
@@ -3136,10 +3137,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11232774",
-            "short_name": "SWI",
-            "type": "snow"
+            "short_name": "SWI"
         },
         "SWM": {
+            "application_domain": "water",
             "bands": [
                 "B",
                 "G",
@@ -3157,10 +3158,10 @@
                 "MODIS"
             ],
             "reference": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
-            "short_name": "SWM",
-            "type": "water"
+            "short_name": "SWM"
         },
         "SeLI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N2",
                 "RE1"
@@ -3173,10 +3174,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/s19040904",
-            "short_name": "SeLI",
-            "type": "vegetation"
+            "short_name": "SeLI"
         },
         "TCARI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R",
@@ -3190,10 +3191,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
-            "short_name": "TCARI",
-            "type": "vegetation"
+            "short_name": "TCARI"
         },
         "TCARIOSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R",
@@ -3208,10 +3209,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00018-4",
-            "short_name": "TCARIOSAVI",
-            "type": "vegetation"
+            "short_name": "TCARIOSAVI"
         },
         "TCARIOSAVI705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1",
@@ -3225,10 +3226,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/j.agrformet.2008.03.005",
-            "short_name": "TCARIOSAVI705",
-            "type": "vegetation"
+            "short_name": "TCARIOSAVI705"
         },
         "TCI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "G",
@@ -3242,10 +3243,10 @@
                 "Sentinel-2"
             ],
             "reference": "http://dx.doi.org/10.1109/TGRS.2007.904836",
-            "short_name": "TCI",
-            "type": "vegetation"
+            "short_name": "TCI"
         },
         "TDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -3262,10 +3263,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2002.1026867",
-            "short_name": "TDVI",
-            "type": "vegetation"
+            "short_name": "TDVI"
         },
         "TGI": {
+            "application_domain": "vegetation",
             "bands": [
                 "R",
                 "G",
@@ -3283,10 +3284,10 @@
                 "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1016/j.jag.2012.07.020",
-            "short_name": "TGI",
-            "type": "vegetation"
+            "short_name": "TGI"
         },
         "TRRVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "R",
@@ -3300,10 +3301,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/rs12152359",
-            "short_name": "TRRVI",
-            "type": "vegetation"
+            "short_name": "TRRVI"
         },
         "TSAVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "sla",
                 "N",
@@ -3322,10 +3323,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.1989.576128",
-            "short_name": "TSAVI",
-            "type": "vegetation"
+            "short_name": "TSAVI"
         },
         "TTVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE3",
                 "RE2",
@@ -3339,10 +3340,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.3390/rs12010016",
-            "short_name": "TTVI",
-            "type": "vegetation"
+            "short_name": "TTVI"
         },
         "TVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "R"
@@ -3359,10 +3360,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://ntrs.nasa.gov/citations/19740022614",
-            "short_name": "TVI",
-            "type": "vegetation"
+            "short_name": "TVI"
         },
         "TriVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "G",
@@ -3380,10 +3381,10 @@
                 "Planet-Fusion"
             ],
             "reference": "http://dx.doi.org/10.1016/S0034-4257(00)00197-8",
-            "short_name": "TriVI",
-            "type": "vegetation"
+            "short_name": "TriVI"
         },
         "UI": {
+            "application_domain": "urban",
             "bands": [
                 "S2",
                 "N"
@@ -3399,10 +3400,10 @@
                 "MODIS"
             ],
             "reference": "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf",
-            "short_name": "UI",
-            "type": "urban"
+            "short_name": "UI"
         },
         "VARI": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R",
@@ -3420,10 +3421,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
-            "short_name": "VARI",
-            "type": "vegetation"
+            "short_name": "VARI"
         },
         "VARI700": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R",
@@ -3437,10 +3438,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
-            "short_name": "VARI700",
-            "type": "vegetation"
+            "short_name": "VARI700"
         },
         "VDDPI": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -3453,10 +3454,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2018.09.003",
-            "short_name": "VDDPI",
-            "type": "radar"
+            "short_name": "VDDPI"
         },
         "VHVVD": {
+            "application_domain": "radar",
             "bands": [
                 "VH",
                 "VV"
@@ -3469,10 +3470,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
-            "short_name": "VHVVD",
-            "type": "radar"
+            "short_name": "VHVVD"
         },
         "VHVVP": {
+            "application_domain": "radar",
             "bands": [
                 "VH",
                 "VV"
@@ -3485,10 +3486,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
-            "short_name": "VHVVP",
-            "type": "radar"
+            "short_name": "VHVVP"
         },
         "VHVVR": {
+            "application_domain": "radar",
             "bands": [
                 "VH",
                 "VV"
@@ -3501,10 +3502,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
-            "short_name": "VHVVR",
-            "type": "radar"
+            "short_name": "VHVVR"
         },
         "VI6T": {
+            "application_domain": "burn",
             "bands": [
                 "N",
                 "T1"
@@ -3518,10 +3519,10 @@
                 "Landsat-457"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
-            "short_name": "VI6T",
-            "type": "burn"
+            "short_name": "VI6T"
         },
         "VI700": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE1",
                 "R"
@@ -3534,10 +3535,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
-            "short_name": "VI700",
-            "type": "vegetation"
+            "short_name": "VI700"
         },
         "VIG": {
+            "application_domain": "vegetation",
             "bands": [
                 "G",
                 "R"
@@ -3554,10 +3555,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
-            "short_name": "VIG",
-            "type": "vegetation"
+            "short_name": "VIG"
         },
         "VVVHD": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -3570,10 +3571,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
-            "short_name": "VVVHD",
-            "type": "radar"
+            "short_name": "VVVHD"
         },
         "VVVHR": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -3586,10 +3587,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.3390/app9040655",
-            "short_name": "VVVHR",
-            "type": "radar"
+            "short_name": "VVVHR"
         },
         "VVVHS": {
+            "application_domain": "radar",
             "bands": [
                 "VV",
                 "VH"
@@ -3602,10 +3603,10 @@
                 "Sentinel-1 (Dual Polarisation VV-VH)"
             ],
             "reference": "https://doi.org/10.1109/IGARSS47720.2021.9554099",
-            "short_name": "VVVHS",
-            "type": "radar"
+            "short_name": "VVVHS"
         },
         "VgNIRBI": {
+            "application_domain": "urban",
             "bands": [
                 "G",
                 "N"
@@ -3622,10 +3623,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
-            "short_name": "VgNIRBI",
-            "type": "urban"
+            "short_name": "VgNIRBI"
         },
         "VrNIRBI": {
+            "application_domain": "urban",
             "bands": [
                 "R",
                 "N"
@@ -3642,10 +3643,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/j.ecolind.2015.03.037",
-            "short_name": "VrNIRBI",
-            "type": "urban"
+            "short_name": "VrNIRBI"
         },
         "WDRVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "alpha",
                 "N",
@@ -3663,10 +3664,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1078/0176-1617-01176",
-            "short_name": "WDRVI",
-            "type": "vegetation"
+            "short_name": "WDRVI"
         },
         "WDVI": {
+            "application_domain": "vegetation",
             "bands": [
                 "N",
                 "sla",
@@ -3684,10 +3685,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(89)90076-X",
-            "short_name": "WDVI",
-            "type": "vegetation"
+            "short_name": "WDVI"
         },
         "WI1": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "S2"
@@ -3703,10 +3704,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11182186",
-            "short_name": "WI1",
-            "type": "water"
+            "short_name": "WI1"
         },
         "WI2": {
+            "application_domain": "water",
             "bands": [
                 "B",
                 "S2"
@@ -3722,10 +3723,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11182186",
-            "short_name": "WI2",
-            "type": "water"
+            "short_name": "WI2"
         },
         "WRI": {
+            "application_domain": "water",
             "bands": [
                 "G",
                 "R",
@@ -3743,10 +3744,10 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762",
-            "short_name": "WRI",
-            "type": "water"
+            "short_name": "WRI"
         },
         "kEVI": {
+            "application_domain": "kernel",
             "bands": [
                 "g",
                 "kNN",
@@ -3768,10 +3769,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
-            "short_name": "kEVI",
-            "type": "kernel"
+            "short_name": "kEVI"
         },
         "kIPVI": {
+            "application_domain": "kernel",
             "bands": [
                 "kNN",
                 "kNR"
@@ -3788,10 +3789,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
-            "short_name": "kIPVI",
-            "type": "kernel"
+            "short_name": "kIPVI"
         },
         "kNDVI": {
+            "application_domain": "kernel",
             "bands": [
                 "kNN",
                 "kNR"
@@ -3808,10 +3809,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
-            "short_name": "kNDVI",
-            "type": "kernel"
+            "short_name": "kNDVI"
         },
         "kRVI": {
+            "application_domain": "kernel",
             "bands": [
                 "kNN",
                 "kNR"
@@ -3828,10 +3829,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
-            "short_name": "kRVI",
-            "type": "kernel"
+            "short_name": "kRVI"
         },
         "kVARI": {
+            "application_domain": "kernel",
             "bands": [
                 "kGG",
                 "kGR",
@@ -3849,10 +3850,10 @@
                 "Planet-Fusion"
             ],
             "reference": "https://doi.org/10.1126/sciadv.abc7447",
-            "short_name": "kVARI",
-            "type": "kernel"
+            "short_name": "kVARI"
         },
         "mND705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "RE1",
@@ -3866,10 +3867,10 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
-            "short_name": "mND705",
-            "type": "vegetation"
+            "short_name": "mND705"
         },
         "mSR705": {
+            "application_domain": "vegetation",
             "bands": [
                 "RE2",
                 "A"
@@ -3882,8 +3883,7 @@
                 "Sentinel-2"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
-            "short_name": "mSR705",
-            "type": "vegetation"
+            "short_name": "mSR705"
         }
     }
 }
