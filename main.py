@@ -200,7 +200,7 @@ with open('output/spectral-indices-dict.json', 'w') as fp:
 file = open('output/spectral-indices-dict.json')
 indices = json.load(file)
 df = pd.DataFrame(list(indices['SpectralIndices'].values()))
-df = df[["short_name","long_name","type","formula","bands","reference","contributor","date_of_addition"]]
+df = df[["short_name","long_name","application_domain","formula","bands","reference","contributor","date_of_addition"]]
 df.to_csv('output/spectral-indices-table.csv',index = False)
 
 # Save tables for Docs
@@ -226,4 +226,4 @@ df["Long Name"] = df["long_name"] + " [`ref <" + df["reference"] + ">`_]"
 df["Index"] = df["short_name"]
 for t in ["vegetation","burn","water","snow","urban","kernel","radar"]:
     name = "docs/_static/indices_" + t + ".csv"
-    df[df["type"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)
+    df[df["application_domain"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)

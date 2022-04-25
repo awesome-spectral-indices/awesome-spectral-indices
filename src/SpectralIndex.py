@@ -26,7 +26,7 @@ class SpectralIndex(BaseModel):
     formula: str
     bands: Optional[List]
     platforms: Optional[List]
-    type: str
+    application_domain: str
     date_of_addition: date
     
     
@@ -72,7 +72,7 @@ class SpectralIndex(BaseModel):
             raise ValueError("contributor is neither a GitHub profile nor an email.")
         return value
     
-    @validator('type')
+    @validator('application_domain')
     def check_type(cls, value):
         # Obtain names of IndexType enum.
         IndexTypeNames = ", ".join(IndexType._value2member_map_.keys())

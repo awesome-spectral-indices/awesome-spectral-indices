@@ -70,9 +70,9 @@ All spectral indices follow a standard. Each item of the list has the following 
 - `long_name`: Long name of the index (e.g. `"Normalized Difference Water Index"`).
 - `formula`: Expression/formula of the index (e.g. `"(G - N)/(G + N)"`).
 - `bands`: List of required bands/parameters for the index computation (e.g. `["N","G"]`).
-- `platforms`: List of available platforms that can be used for the index computation (e.g. `["MODIS", "Landsat-457", "Landsat-89", "Sentinel-2"]`).
+- `platforms`: List of platforms with the required bands for the index computation (e.g. `["MODIS", "Landsat-457", "Landsat-89", "Sentinel-2"]`).
 - `reference`: Link to the index reference/paper/doi (e.g. `"https://doi.org/10.1080/01431169608948714"`).
-- `type`: Type/application of the index (e.g. `"water"`).
+- `application_domain`: Application domain of the index (e.g. `"water"`).
 - `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
 - `contributor`: GitHub user link of the contributor (e.g. `"https://github.com/davemlz"`).
 
@@ -353,7 +353,7 @@ There is no deadline. The repository is continuously updated!
 
 - [rgeeExtra](https://github.com/r-earthengine/rgeeExtra): High-level functions to process spatial and simple Earth Engine objects.
 
-# Spectral Indices by Type
+# Spectral Indices by Application Domain
 
 """
 
@@ -405,7 +405,7 @@ letters = list(map(chr, range(65, 91)))
 def filterByAppDomain():
     indices = []
     for index, attributes in data["SpectralIndices"].items():        
-            if attributes['type'] == appDomain:
+            if attributes['application_domain'] == appDomain:
                 indices.append(index)
     return indices
 
@@ -432,7 +432,7 @@ for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
             #text.append(f'\n### {letter}\n<table>')
             for index, attributes in data["SpectralIndices"].items():        
-                if attributes['type'] == appDomain:
+                if attributes['application_domain'] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
                         link = attributes['reference']
                         name = attributes['long_name']

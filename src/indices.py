@@ -14,7 +14,7 @@ spindex = SpectralIndices(
             long_name='Blue Normalized Difference Vegetation Index',
             formula='(N - B)/(N + B)',            
             reference='https://doi.org/10.1016/S1672-6308(07)60027-4',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/MATRIX4284"
         ),
@@ -23,7 +23,7 @@ spindex = SpectralIndices(
             long_name='Chlorophyll Index Green',
             formula='(N / G) - 1.0',            
             reference='https://doi.org/10.1078/0176-1617-00887',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -32,7 +32,7 @@ spindex = SpectralIndices(
             long_name='Chlorophyll Vegetation Index',
             formula='(N * R) / (G ** 2.0)',            
             reference='https://www.cabdirect.org/cabdirect/abstract/20073176046',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -41,7 +41,7 @@ spindex = SpectralIndices(
             long_name='Enhanced Vegetation Index',
             formula='g * (N - R) / (N + C1 * R - C2 * B + L)',            
             reference='https://doi.org/10.1016/S0034-4257(96)00112-5',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -50,7 +50,7 @@ spindex = SpectralIndices(
             long_name='Two-Band Enhanced Vegetation Index',
             formula='g * (N - R) / (N + 2.4 * R + L)',
             reference='https://doi.org/10.1016/j.rse.2008.06.006',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -59,7 +59,7 @@ spindex = SpectralIndices(
             long_name='Green Atmospherically Resistant Vegetation Index',
             formula='(N - (G - (B - R))) / (N - (G + (B - R)))',
             reference='https://www.indexdatabase.de/db/i-single.php?id=363',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -68,7 +68,7 @@ spindex = SpectralIndices(
             long_name='Green-Blue Normalized Difference Vegetation Index',
             formula='(N - (G + B))/(N + (G + B))',
             reference='https://www.indexdatabase.de/db/i-single.php?id=186',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -77,7 +77,7 @@ spindex = SpectralIndices(
             long_name='Global Environment Monitoring Index',
             formula='((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))',
             reference='http://dx.doi.org/10.1007/bf00031911',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -86,7 +86,7 @@ spindex = SpectralIndices(
             long_name='Green Leaf Index',
             formula='(2.0 * G - R - B) / (2.0 * G + R + B)',
             reference='http://dx.doi.org/10.1080/10106040108542184',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -95,7 +95,7 @@ spindex = SpectralIndices(
             long_name='Green Normalized Difference Vegetation Index',
             formula='(N - G)/(N + G)',
             reference='https://doi.org/10.1016/S0034-4257(96)00072-7',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -104,7 +104,7 @@ spindex = SpectralIndices(
             long_name='Green-Red Normalized Difference Vegetation Index',
             formula='(N - (G + R))/(N + (G + R))',
             reference='https://www.indexdatabase.de/db/i-single.php?id=185',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -113,7 +113,7 @@ spindex = SpectralIndices(
             long_name='Global Vegetation Moisture Index',
             formula='((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))',
             reference='https://doi.org/10.1016/S0034-4257(02)00037-8',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -122,7 +122,7 @@ spindex = SpectralIndices(
             long_name='Modified Normalized Difference Vegetation Index',
             formula='(N - S2)/(N + S2)',
             reference='https://doi.org/10.1080/014311697216810',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -131,7 +131,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Vegetation Index',
             formula='(N - R)/(N + R)',
             reference='https://ntrs.nasa.gov/citations/19740022614',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -140,7 +140,7 @@ spindex = SpectralIndices(
             long_name='Normalized Green Red Difference Index',
             formula='(G - R) / (G + R)',
             reference='https://doi.org/10.1016/0034-4257(79)90013-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -149,7 +149,7 @@ spindex = SpectralIndices(
             long_name='Ratio Vegetation Index',
             formula='RE2 / R',
             reference='https://doi.org/10.2134/agronj1968.00021962006000060016x',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -158,7 +158,7 @@ spindex = SpectralIndices(
             long_name='Soil-Adjusted Vegetation Index',
             formula='(1.0 + L) * (N - R) / (N + R + L)',
             reference='https://doi.org/10.1016/0034-4257(88)90106-X',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -167,7 +167,7 @@ spindex = SpectralIndices(
             long_name='Visible Atmospherically Resistant Index',
             formula='(G - R) / (G + R - B)',
             reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -176,7 +176,7 @@ spindex = SpectralIndices(
             long_name='Burned Area Index',
             formula='1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)',
             reference='https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -185,7 +185,7 @@ spindex = SpectralIndices(
             long_name='Burned Area Index for Sentinel 2',
             formula='(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0)',
             reference='https://doi.org/10.3390/ecrs-2-05177',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -194,7 +194,7 @@ spindex = SpectralIndices(
             long_name='Char Soil Index Thermal',
             formula='N / (S2 * T1 / 10000.0)',
             reference='https://doi.org/10.1080/01431160600954704',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -203,7 +203,7 @@ spindex = SpectralIndices(
             long_name='Normalized Burn Ratio',
             formula='(N - S2) / (N + S2)',
             reference='https://doi.org/10.3133/ofr0211',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -212,7 +212,7 @@ spindex = SpectralIndices(
             long_name='Normalized Burn Ratio Thermal 1',
             formula='(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))',
             reference='https://doi.org/10.1080/01431160500239008',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -221,7 +221,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Vegetation Index Thermal',
             formula='(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0))',
             reference='https://doi.org/10.1080/01431160600954704',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -230,7 +230,7 @@ spindex = SpectralIndices(
             long_name='Soil-Adjusted Vegetation Index Thermal',
             formula='(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L)',
             reference='https://doi.org/10.1080/01431160600954704',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -239,7 +239,7 @@ spindex = SpectralIndices(
             long_name='Modified Normalized Difference Water Index',
             formula='(G - S1) / (G + S1)',
             reference='https://doi.org/10.1080/01431160600589179',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -248,7 +248,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Water Index',
             formula='(G - N) / (G + N)',
             reference='https://doi.org/10.1080/01431169608948714',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -257,7 +257,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Snow Index',
             formula='(G - S1) / (G + S1)',
             reference='https://doi.org/10.1109/IGARSS.1994.399618',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -266,7 +266,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Drought Index',
             formula='(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))',
             reference='https://doi.org/10.1029/2006GL029127',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -275,7 +275,7 @@ spindex = SpectralIndices(
             long_name='Kernel Enhanced Vegetation Index',
             formula='g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='kernel',
+            application_domain='kernel',
             date_of_addition='2021-05-10',
             contributor="https://github.com/davemlz"
         ),
@@ -284,7 +284,7 @@ spindex = SpectralIndices(
             long_name='Kernel Normalized Difference Vegetation Index',
             formula='(kNN - kNR)/(kNN + kNR)',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='kernel',
+            application_domain='kernel',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -293,7 +293,7 @@ spindex = SpectralIndices(
             long_name='Kernel Ratio Vegetation Index',
             formula='kNN / kNR',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='kernel',
+            application_domain='kernel',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
         ),
@@ -302,7 +302,7 @@ spindex = SpectralIndices(
             long_name='Kernel Visible Atmospherically Resistant Index',
             formula='(kGG - kGR) / (kGG + kGR - kGB)',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='kernel',
+            application_domain='kernel',
             date_of_addition='2021-05-10',
             contributor="https://github.com/davemlz"
         ),
@@ -311,7 +311,7 @@ spindex = SpectralIndices(
             long_name='Sentinel-2 LAI Green Index',
             formula='(N2 - RE1) / (N2 + RE1)',
             reference='https://doi.org/10.3390/s19040904',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -320,7 +320,7 @@ spindex = SpectralIndices(
             long_name='Optimized Soil-Adjusted Vegetation Index',
             formula='(N - R) / (N + R + 0.16)',
             reference='https://doi.org/10.1016/0034-4257(95)00186-7',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -329,7 +329,7 @@ spindex = SpectralIndices(
             long_name='Atmospherically Resistant Vegetation Index',
             formula='(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))',
             reference='https://doi.org/10.1109/36.134076',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -338,7 +338,7 @@ spindex = SpectralIndices(
             long_name='Soil Adjusted and Atmospherically Resistant Vegetation Index',
             formula='(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)',
             reference='https://doi.org/10.1109/36.134076',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -347,7 +347,7 @@ spindex = SpectralIndices(
             long_name='Non-Linear Vegetation Index',
             formula='((N ** 2) - R)/((N ** 2) + R)',
             reference='https://doi.org/10.1080/02757259409532252',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -356,7 +356,7 @@ spindex = SpectralIndices(
             long_name='Modified Non-Linear Vegetation Index',
             formula='(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)',
             reference='https://doi.org/10.1109/TGRS.2003.812910',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -365,7 +365,7 @@ spindex = SpectralIndices(
             long_name='Normalized Multi-band Drought Index',
             formula='(N - (S1 - S2))/(N + (S1 - S2))',
             reference='https://doi.org/10.1029/2007GL031021',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-11',
             contributor="https://github.com/davemlz"
         ),
@@ -374,7 +374,7 @@ spindex = SpectralIndices(
             long_name='Modified Soil-Adjusted Vegetation Index',
             formula='0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)',
             reference='https://doi.org/10.1016/0034-4257(94)90134-1',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -383,7 +383,7 @@ spindex = SpectralIndices(
             long_name='Modified Chlorophyll Absorption in Reflectance Index',
             formula='((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)',
             reference='http://dx.doi.org/10.1016/S0034-4257(00)00113-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -392,7 +392,7 @@ spindex = SpectralIndices(
             long_name='Optimized Chlorophyll Vegetation Index',
             formula='(N / G) * (R / G) ** cexp',            
             reference='http://dx.doi.org/10.1007/s11119-008-9075-z',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -401,7 +401,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Red Edge Index',
             formula='(N - RE1) / (N + RE1)',            
             reference='https://doi.org/10.1016/1011-1344(93)06963-4',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -410,7 +410,7 @@ spindex = SpectralIndices(
             long_name='Chlorophyll Index Red Edge',
             formula='(N / RE1) - 1',            
             reference='https://doi.org/10.1078/0176-1617-00887',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -419,7 +419,7 @@ spindex = SpectralIndices(
             long_name='MERIS Terrestrial Chlorophyll Index',
             formula='(RE2 - RE1) / (RE1 - R)',            
             reference='https://doi.org/10.1080/0143116042000274015',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -428,7 +428,7 @@ spindex = SpectralIndices(
             long_name='Transformed Chlorophyll Absorption in Reflectance Index',
             formula='3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))',
             reference='https://doi.org/10.1016/S0034-4257(02)00018-4',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-13',
             contributor="https://github.com/davemlz"
         ),
@@ -437,7 +437,7 @@ spindex = SpectralIndices(
             long_name='Generalized Difference Vegetation Index',
             formula='((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))',
             reference='https://doi.org/10.3390/rs6021211',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -446,7 +446,7 @@ spindex = SpectralIndices(
             long_name='Wide Dynamic Range Vegetation Index',
             formula='(alpha * N - R) / (alpha * N + R)',
             reference='https://doi.org/10.1078/0176-1617-01176',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -455,7 +455,7 @@ spindex = SpectralIndices(
             long_name='Modified Chlorophyll Absorption in Reflectance Index 1',
             formula='1.2 * (2.5 * (N - R) - 1.3 * (N - G))',
             reference='https://doi.org/10.1016/j.rse.2003.12.013',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -464,7 +464,7 @@ spindex = SpectralIndices(
             long_name='Modified Triangular Vegetation Index 1',
             formula='1.2 * (1.2 * (N - G) - 2.5 * (R - G))',
             reference='https://doi.org/10.1016/j.rse.2003.12.013',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -473,7 +473,7 @@ spindex = SpectralIndices(
             long_name='Modified Chlorophyll Absorption in Reflectance Index 2',
             formula='(1.5 * (2.5 * (N - R) - 1.3 * (N - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)',
             reference='https://doi.org/10.1016/j.rse.2003.12.013',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -482,7 +482,7 @@ spindex = SpectralIndices(
             long_name='Modified Triangular Vegetation Index 2',
             formula='(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)',
             reference='https://doi.org/10.1016/j.rse.2003.12.013',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -491,7 +491,7 @@ spindex = SpectralIndices(
             long_name='Triangular Vegetation Index',
             formula='0.5 * (120 * (N - G) - 200 * (R - G))',
             reference='http://dx.doi.org/10.1016/S0034-4257(00)00197-8',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -500,7 +500,7 @@ spindex = SpectralIndices(
             long_name='Modified Simple Ratio',
             formula='(N / R - 1) / ((N / R + 1) ** 0.5)',
             reference='https://doi.org/10.1080/07038992.1996.10855178',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -509,7 +509,7 @@ spindex = SpectralIndices(
             long_name='Renormalized Difference Vegetation Index',
             formula='(N - R) / ((N + R) ** 0.5)',
             reference='https://doi.org/10.1016/0034-4257(94)00114-3',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -518,7 +518,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Built-Up Index',
             formula='(S1 - N) / (S1 + N)',
             reference='http://dx.doi.org/10.1080/01431160304987',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -527,7 +527,7 @@ spindex = SpectralIndices(
             long_name='Modified Green Red Vegetation Index',
             formula='(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)',
             reference='https://doi.org/10.1016/j.jag.2015.02.012',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -536,7 +536,7 @@ spindex = SpectralIndices(
             long_name='Excess Green Index',
             formula='2 * G - R - B',
             reference='https://doi.org/10.13031/2013.27838',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -545,7 +545,7 @@ spindex = SpectralIndices(
             long_name='Difference Vegetation Index',
             formula='N - R',
             reference='https://doi.org/10.1016/0034-4257(94)00114-3',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -554,7 +554,7 @@ spindex = SpectralIndices(
             long_name='Weighted Difference Vegetation Index',
             formula='N - sla * R',
             reference='https://doi.org/10.1016/0034-4257(89)90076-X',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -563,7 +563,7 @@ spindex = SpectralIndices(
             long_name='Transformed Soil-Adjusted Vegetation Index',
             formula='sla * (N - sla * R - slb) / (sla * N + R - sla * slb)',
             reference='https://doi.org/10.1109/IGARSS.1989.576128',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -572,7 +572,7 @@ spindex = SpectralIndices(
             long_name='Adjusted Transformed Soil-Adjusted Vegetation Index',
             formula='sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))',
             reference='https://doi.org/10.1016/0034-4257(91)90009-U',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -581,7 +581,7 @@ spindex = SpectralIndices(
             long_name='Soil-Adjusted Vegetation Index 2',
             formula='N / (R + (slb / sla))',
             reference='https://doi.org/10.1080/01431169008955053',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -590,7 +590,7 @@ spindex = SpectralIndices(
             long_name='Triangular Chlorophyll Index',
             formula='1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5',
             reference='http://dx.doi.org/10.1109/TGRS.2007.904836',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -599,7 +599,7 @@ spindex = SpectralIndices(
             long_name='Triangular Greenness Index',
             formula='- 0.5 * (190 * (R - G) - 120 * (R - B))',
             reference='http://dx.doi.org/10.1016/j.jag.2012.07.020',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-05-14',
             contributor="https://github.com/davemlz"
         ),
@@ -608,7 +608,7 @@ spindex = SpectralIndices(
             long_name='Inverted Red-Edge Chlorophyll Index',
             formula='(RE3 - R) / (RE1 / RE2)',
             reference='https://doi.org/10.1016/j.isprsjprs.2013.04.007',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -617,7 +617,7 @@ spindex = SpectralIndices(
             long_name='Sentinel-2 Red-Edge Position',
             formula='705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1))',
             reference='https://doi.org/10.1016/j.isprsjprs.2013.04.007',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -626,7 +626,7 @@ spindex = SpectralIndices(
             long_name='Enhanced Built-Up and Bareness Index',
             formula='(S1 - N) / (10.0 * ((S1 + T1) ** 0.5))',
             reference='https://doi.org/10.3390/rs4102957',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -635,7 +635,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Bareness Index',
             formula='(S1 - T1) / (S1 + T1)',
             reference='https://doi.org/10.1109/IGARSS.2005.1526319',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -644,7 +644,7 @@ spindex = SpectralIndices(
             long_name='Structure Insensitive Pigment Index',
             formula='(N - A) / (N - R)',
             reference='https://eurekamag.com/research/009/395/009395053.php',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -653,7 +653,7 @@ spindex = SpectralIndices(
             long_name='Non-Homogeneous Feature Difference',
             formula='(RE1 - A) / (RE1 + A)',
             reference='https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -662,7 +662,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Yellowness Index',
             formula='(G - B) / (G + B)',
             reference='https://doi.org/10.1016/j.rse.2016.06.016',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -671,7 +671,7 @@ spindex = SpectralIndices(
             long_name='Normalized Rapeseed Flowering Index Red',
             formula='(R - S2) / (R + S2)',
             reference='https://doi.org/10.3390/rs13010105',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -680,7 +680,7 @@ spindex = SpectralIndices(
             long_name='Normalized Rapeseed Flowering Index Green',
             formula='(G - S2) / (G + S2)',
             reference='https://doi.org/10.3390/rs13010105',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -689,7 +689,7 @@ spindex = SpectralIndices(
             long_name='Transformed Red Range Vegetation Index',
             formula='((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)',
             reference='https://doi.org/10.3390/rs12152359',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -698,7 +698,7 @@ spindex = SpectralIndices(
             long_name='Transformed Triangular Vegetation Index',
             formula='0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))',
             reference='https://doi.org/10.3390/rs12010016',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -707,7 +707,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Snow and Ice Index',
             formula='(R - S1) / (R + S1)',
             reference='https://doi.org/10.1080/01431160119766',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -716,7 +716,7 @@ spindex = SpectralIndices(
             long_name='Snow Water Index',
             formula='(G * (N - S1)) / ((G + N) * (N + S1))',
             reference='https://doi.org/10.3390/rs11232774',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -725,7 +725,7 @@ spindex = SpectralIndices(
             long_name='S3 Snow Index',
             formula='(N * (R - S1)) / ((N + R) * (N + S1))',
             reference='https://doi.org/10.3178/jjshwr.12.28',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -734,7 +734,7 @@ spindex = SpectralIndices(
             long_name='Water Index 1',
             formula='(G - S2) / (G + S2)',
             reference='https://doi.org/10.3390/rs11182186',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -743,7 +743,7 @@ spindex = SpectralIndices(
             long_name='Water Index 2',
             formula='(B - S2) / (B + S2)',
             reference='https://doi.org/10.3390/rs11182186',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -752,7 +752,7 @@ spindex = SpectralIndices(
             long_name='Automated Water Extraction Index',
             formula='4.0 * (G - S1) - 0.25 * N + 2.75 * S2',
             reference='https://doi.org/10.1016/j.rse.2013.08.029',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -761,7 +761,7 @@ spindex = SpectralIndices(
             long_name='Automated Water Extraction Index with Shadows Elimination',
             formula='B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2',
             reference='https://doi.org/10.1016/j.rse.2013.08.029',
-            type='water',
+            application_domain='water',
             date_of_addition='2021-09-18',
             contributor="https://github.com/davemlz"
         ),
@@ -770,7 +770,7 @@ spindex = SpectralIndices(
             long_name='Normalized Burn Ratio 2',
             formula='(S1 - S2) / (S1 + S2)',
             reference='https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -779,7 +779,7 @@ spindex = SpectralIndices(
             long_name='Blue Wide Dynamic Range Vegetation Index',
             formula='(alpha * N - B) / (alpha * N + B)',
             reference='https://doi.org/10.2135/cropsci2007.01.0031',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -788,7 +788,7 @@ spindex = SpectralIndices(
             long_name='Anthocyanin Reflectance Index',
             formula='(1 / G) - (1 / RE1)',
             reference='https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -797,7 +797,7 @@ spindex = SpectralIndices(
             long_name='Vegetation Index Green',
             formula='(G - R) / (G + R)',
             reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -806,7 +806,7 @@ spindex = SpectralIndices(
             long_name='Vegetation Index (700 nm)',
             formula='(RE1 - R) / (RE1 + R)',
             reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -815,7 +815,7 @@ spindex = SpectralIndices(
             long_name='Visible Atmospherically Resistant Index (700 nm)',
             formula='(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)',
             reference='https://doi.org/10.1016/S0034-4257(01)00289-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-09-20',
             contributor="https://github.com/davemlz"
         ),
@@ -824,7 +824,7 @@ spindex = SpectralIndices(
             long_name='TCARI/OSAVI Ratio',
             formula='(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))',
             reference='https://doi.org/10.1016/S0034-4257(02)00018-4',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -833,7 +833,7 @@ spindex = SpectralIndices(
             long_name='MCARI/OSAVI Ratio',
             formula='(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))',
             reference='https://doi.org/10.1016/S0034-4257(00)00113-9',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -842,7 +842,7 @@ spindex = SpectralIndices(
             long_name='TCARI/OSAVI Ratio (705 and 750 nm)',
             formula='(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))',
             reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -851,7 +851,7 @@ spindex = SpectralIndices(
             long_name='MCARI/OSAVI Ratio (705 and 750 nm)',
             formula='(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))',
             reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -860,7 +860,7 @@ spindex = SpectralIndices(
             long_name='Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)',
             formula='((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)',
             reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -869,7 +869,7 @@ spindex = SpectralIndices(
             long_name='Modified Simple Ratio (705 and 750 nm)',
             formula='(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)',
             reference='https://doi.org/10.1016/j.agrformet.2008.03.005',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -878,7 +878,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Vegetation Index (705 and 750 nm)',
             formula='(RE2 - RE1) / (RE2 + RE1)',
             reference='https://doi.org/10.1016/S0176-1617(11)81633-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -887,7 +887,7 @@ spindex = SpectralIndices(
             long_name='Simple Ratio (705 and 750 nm)',
             formula='RE2 / RE1',
             reference='https://doi.org/10.1016/S0176-1617(11)81633-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -896,7 +896,7 @@ spindex = SpectralIndices(
             long_name='Simple Ratio (555 and 750 nm)',
             formula='RE2 / G',
             reference='https://doi.org/10.1016/S0176-1617(11)81633-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -905,7 +905,7 @@ spindex = SpectralIndices(
             long_name='Red-Edge Disease Stress Index',
             formula='((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)',
             reference='https://doi.org/10.3390/s18030868',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-06',
             contributor="https://github.com/davemlz"
         ),
@@ -914,7 +914,7 @@ spindex = SpectralIndices(
             long_name='Near-Infrared Reflectance of Vegetation',
             formula='((N - R) / (N + R)) * N',
             reference='https://doi.org/10.1126/sciadv.1602244',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-16',
             contributor="https://github.com/davemlz"
         ),
@@ -923,7 +923,7 @@ spindex = SpectralIndices(
             long_name='Aerosol Free Vegetation Index (2100 nm)',
             formula='(N - 0.5 * S2) / (N + 0.5 * S2)',
             reference='https://doi.org/10.1016/S0034-4257(01)00190-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-17',
             contributor="https://github.com/davemlz"
         ),
@@ -932,7 +932,7 @@ spindex = SpectralIndices(
             long_name='Aerosol Free Vegetation Index (1600 nm)',
             formula='(N - 0.66 * S1) / (N + 0.66 * S1)',
             reference='https://doi.org/10.1016/S0034-4257(01)00190-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-17',
             contributor="https://github.com/davemlz"
         ),
@@ -941,7 +941,7 @@ spindex = SpectralIndices(
             long_name='Near-Infrared Reflectance of Vegetation and Incoming PAR',
             formula='((N - R) / (N + R)) * N * PAR',
             reference='https://doi.org/10.1016/j.rse.2021.112763',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-11-18',
             contributor="https://github.com/davemlz"
         ),
@@ -950,7 +950,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Moisture Index',
             formula='(N - S1)/(N + S1)',
             reference='https://doi.org/10.1016/S0034-4257(01)00318-2',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2021-12-01',
             contributor="https://github.com/bpurinton"
         ),
@@ -959,7 +959,7 @@ spindex = SpectralIndices(
             long_name='Quad-Polarized Radar Vegetation Index',
             formula='(8.0 * HV)/(HH + VV + 2.0 * HV)',
             reference='https://doi.org/10.1109/IGARSS.2001.976856',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2021-12-24',
             contributor="https://github.com/davemlz"
         ),
@@ -968,7 +968,7 @@ spindex = SpectralIndices(
             long_name='Radar Forest Degradation Index',
             formula='(HH - HV)/(HH + HV)',
             reference='https://doi.org/10.5194/bg-9-179-2012',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2021-12-25',
             contributor="https://github.com/davemlz"
         ),
@@ -977,7 +977,7 @@ spindex = SpectralIndices(
             long_name='Dual-Polarized Radar Vegetation Index HH',
             formula='(4.0 * HV)/(HH + HV)',
             reference='https://www.tandfonline.com/doi/abs/10.5589/m12-043',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2021-12-25',
             contributor="https://github.com/davemlz"
         ),
@@ -986,7 +986,7 @@ spindex = SpectralIndices(
             long_name='Dual-Polarized Radar Vegetation Index VV',
             formula='(4.0 * VH)/(VV + VH)',
             reference='https://doi.org/10.3390/app9040655',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2021-12-25',
             contributor="https://github.com/davemlz"
         ),
@@ -995,7 +995,7 @@ spindex = SpectralIndices(
             long_name='New Water Index',
             formula='(B - (N + S1 + S2))/(B + (N + S1 + S2))',
             reference='https://doi.org/10.11873/j.issn.1004-0323.2009.2.167',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1004,7 +1004,7 @@ spindex = SpectralIndices(
             long_name='Water Ratio Index',
             formula='(G + R)/(N + S1)',
             reference='https://doi.org/10.1109/GEOINFORMATICS.2010.5567762',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1013,7 +1013,7 @@ spindex = SpectralIndices(
             long_name='NDVI-MNDWI Model',
             formula='((N - R)/(N + R)) - ((G - S1)/(G + S1))',
             reference='https://doi.org/10.1007/978-3-662-45737-5_51',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1022,7 +1022,7 @@ spindex = SpectralIndices(
             long_name='Multi-Band Water Index',
             formula='(omega * G) - R - N - S1 - S2',
             reference='https://doi.org/10.1016/j.jag.2018.01.018',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1031,7 +1031,7 @@ spindex = SpectralIndices(
             long_name='Green Chromatic Coordinate',
             formula='G / (R + G + B)',
             reference='https://doi.org/10.1016/0034-4257(87)90088-5',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1040,7 +1040,7 @@ spindex = SpectralIndices(
             long_name='Red Chromatic Coordinate',
             formula='R / (R + G + B)',
             reference='https://doi.org/10.1016/0034-4257(87)90088-5',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1049,7 +1049,7 @@ spindex = SpectralIndices(
             long_name='Blue Chromatic Coordinate',
             formula='B / (R + G + B)',
             reference='https://doi.org/10.1016/0034-4257(87)90088-5',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1058,7 +1058,7 @@ spindex = SpectralIndices(
             long_name='Hyperspectral Near-Infrared Reflectance of Vegetation',
             formula='N - R - k * (lambdaN - lambdaR)',
             reference='https://doi.org/10.1016/j.rse.2021.112723',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1067,7 +1067,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Phenology Index',
             formula='(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))',
             reference='https://doi.org/10.1016/j.rse.2017.04.031',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1076,7 +1076,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Infrared Index',
             formula='(N - S1)/(N + S1)',
             reference='https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1085,7 +1085,7 @@ spindex = SpectralIndices(
             long_name='Difference Vegetation Index Plus',
             formula='((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R',
             reference='https://doi.org/10.1016/j.rse.2019.03.028',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1094,7 +1094,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Greenness Index',
             formula='(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)',
             reference='https://doi.org/10.1016/j.rse.2019.03.028',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1103,7 +1103,7 @@ spindex = SpectralIndices(
             long_name='Fluorescence Correction Vegetation Index',
             formula='N - ((R + G + B)/3.0)',
             reference='https://doi.org/10.1016/j.rse.2020.111676',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-01-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1112,7 +1112,7 @@ spindex = SpectralIndices(
             long_name='Urban Index',
             formula='(S2 - N)/(S2 + N)',
             reference='https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-02-07',
             contributor="https://github.com/davemlz"
         ),
@@ -1121,7 +1121,7 @@ spindex = SpectralIndices(
             long_name='Visible Red-Based Built-Up Index',
             formula='(R - N)/(R + N)',
             reference='https://doi.org/10.1016/j.ecolind.2015.03.037',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1130,7 +1130,7 @@ spindex = SpectralIndices(
             long_name='Visible Green-Based Built-Up Index',
             formula='(G - N)/(G + N)',
             reference='https://doi.org/10.1016/j.ecolind.2015.03.037',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1139,7 +1139,7 @@ spindex = SpectralIndices(
             long_name='Index-Based Built-Up Index',
             formula='(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)',
             reference='https://doi.org/10.1080/01431160802039957',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1148,7 +1148,7 @@ spindex = SpectralIndices(
             long_name='Built-Up Land Features Extraction Index',
             formula='(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)',
             reference='https://doi.org/10.1080/10106049.2018.1497094',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-02-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1157,7 +1157,7 @@ spindex = SpectralIndices(
             long_name='Sentinel-2 Water Index',
             formula='(RE1 - S2)/(RE1 + S2)',
             reference='https://doi.org/10.3390/w13121647',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-03-06',
             contributor="https://github.com/MATRIX4284"
         ),
@@ -1166,7 +1166,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Water Index with no Snow Cover and Glaciers',
             formula='(G - alpha * N)/(G + N)',
             reference='https://doi.org/10.3390/w12051339',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1175,7 +1175,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Snow Index with no Water',
             formula='(N - S1 - beta)/(N + S1)',
             reference='https://doi.org/10.3390/w12051339',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1184,7 +1184,7 @@ spindex = SpectralIndices(
             long_name='ExG - ExR Vegetation Index',
             formula='(2.0 * G - R - B) - (1.3 * R - G)',
             reference='https://doi.org/10.1016/j.compag.2008.03.009',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1193,7 +1193,7 @@ spindex = SpectralIndices(
             long_name='Excess Red Index',
             formula='1.3 * R - G',
             reference='https://doi.org/10.1117/12.336896',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1202,7 +1202,7 @@ spindex = SpectralIndices(
             long_name='Modified Red Blue Vegetation Index',
             formula='(R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)',
             reference='https://doi.org/10.3390/s20185055',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1210,8 +1210,8 @@ spindex = SpectralIndices(
             short_name='AVI',
             long_name='Advanced Vegetation Index',
             formula='(N * (1.0 - R) * (N - R)) ** (1/3)',
-            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
-            type='vegetation',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1219,8 +1219,8 @@ spindex = SpectralIndices(
             short_name='BI',
             long_name='Bare Soil Index',
             formula='((S1 + R) - (N + B))/((S1 + R) + (N + B))',
-            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
-            type='urban',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf',
+            application_domain='urban',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1228,8 +1228,8 @@ spindex = SpectralIndices(
             short_name='SI',
             long_name='Shadow Index',
             formula='((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)',
-            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
-            type='vegetation',
+            reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1238,7 +1238,7 @@ spindex = SpectralIndices(
             long_name='Moisture Stress Index',
             formula='S1/N',
             reference='https://doi.org/10.1016/0034-4257(89)90046-1',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1247,7 +1247,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Glacier Index',
             formula='(G - R)/(G + R)',
             reference='https://doi.org/10.1080/01431160802385459',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1256,7 +1256,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Snow Ice Index',
             formula='(G - N)/(G + N)',
             reference='https://doi.org/10.1080/01431160802385459',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1265,7 +1265,7 @@ spindex = SpectralIndices(
             long_name='Kawashima Index',
             formula='(R - B)/(R + B)',
             reference='https://doi.org/10.1006/anbo.1997.0544',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1274,7 +1274,7 @@ spindex = SpectralIndices(
             long_name='Red-Green Ratio Index',
             formula='R/G',
             reference='https://doi.org/10.1016/j.jag.2014.03.018',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1283,7 +1283,7 @@ spindex = SpectralIndices(
             long_name='Red Green Blue Vegetation Index',
             formula='(G ** 2.0 - B * R)/(G ** 2.0 + B * R)',
             reference='https://doi.org/10.1016/j.jag.2015.02.012',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1292,7 +1292,7 @@ spindex = SpectralIndices(
             long_name='Anthocyanin Reflectance Index 2',
             formula='N * ((1 / G) - (1 / RE1))',
             reference='https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1301,7 +1301,7 @@ spindex = SpectralIndices(
             long_name='Normalized NIR',
             formula='N/(N + G + R)',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1310,7 +1310,7 @@ spindex = SpectralIndices(
             long_name='Normalized Red',
             formula='R/(N + G + R)',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1319,7 +1319,7 @@ spindex = SpectralIndices(
             long_name='Normalized Green',
             formula='G/(N + G + R)',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1328,7 +1328,7 @@ spindex = SpectralIndices(
             long_name='Green Ratio Vegetation Index',
             formula='N/G',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1337,7 +1337,7 @@ spindex = SpectralIndices(
             long_name='Green Soil Adjusted Vegetation Index',
             formula='(1.0 + L) * (N - G) / (N + G + L)',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1346,7 +1346,7 @@ spindex = SpectralIndices(
             long_name='Green Optimized Soil Adjusted Vegetation Index',
             formula='(N - G) / (N + G + 0.16)',
             reference='https://doi.org/10.2134/agronj2004.0314',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1355,7 +1355,7 @@ spindex = SpectralIndices(
             long_name='Simple Ratio',
             formula='N/R',
             reference='https://doi.org/10.2307/1936256',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1364,7 +1364,7 @@ spindex = SpectralIndices(
             long_name='Transformed Vegetation Index',
             formula='(((N - R)/(N + R)) + 0.5) ** 0.5',
             reference='https://ntrs.nasa.gov/citations/19740022614',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1373,7 +1373,7 @@ spindex = SpectralIndices(
             long_name='Gitelson and Merzlyak Index 1',
             formula='RE2/G',
             reference='https://doi.org/10.1016/S0176-1617(96)80284-7',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1382,7 +1382,7 @@ spindex = SpectralIndices(
             long_name='Gitelson and Merzlyak Index 2',
             formula='RE2/RE1',
             reference='https://doi.org/10.1016/S0176-1617(96)80284-7',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1391,7 +1391,7 @@ spindex = SpectralIndices(
             long_name='New Atmospherically Resistant Vegetation Index',
             formula='(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))',
             reference='https://www.jipb.net/EN/abstract/abstract23925.shtml',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1400,7 +1400,7 @@ spindex = SpectralIndices(
             long_name='Infrared Percentage Vegetation Index',
             formula='N/(N + R)',
             reference='https://doi.org/10.1016/0034-4257(90)90085-Z',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1409,7 +1409,7 @@ spindex = SpectralIndices(
             long_name='Kernel Infrared Percentage Vegetation Index',
             formula='kNN/(kNN + kNR)',
             reference='https://doi.org/10.1126/sciadv.abc7447',
-            type='kernel',
+            application_domain='kernel',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1418,7 +1418,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference (705 and 750 nm)',
             formula='(RE2 - RE1)/(RE2 + RE1)',
             reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1427,7 +1427,7 @@ spindex = SpectralIndices(
             long_name='Modified Simple Ratio (705 and 445 nm)',
             formula='(RE2 - A)/(RE2 + A)',
             reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1436,7 +1436,7 @@ spindex = SpectralIndices(
             long_name='Modified Normalized Difference (705, 750 and 445 nm)',
             formula='(RE2 - RE1)/(RE2 + RE1 - A)',
             reference='https://doi.org/10.1016/S0034-4257(02)00010-X',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1445,7 +1445,7 @@ spindex = SpectralIndices(
             long_name='Plant Senescing Reflectance Index',
             formula='(R - B)/RE2',
             reference='https://doi.org/10.1034/j.1399-3054.1999.106119.x',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1454,7 +1454,7 @@ spindex = SpectralIndices(
             long_name='Non-Binary Snow Index for Multi-Component Surfaces',
             formula='0.36 * (G + R + N) - (((B + S2)/G) + S1)',
             reference='https://doi.org/10.3390/rs13142777',
-            type='snow',
+            application_domain='snow',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1463,7 +1463,7 @@ spindex = SpectralIndices(
             long_name='Revised Multi-Spectral Water Index',
             formula='-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))',
             reference='https://doi.org/10.3390/rs10101643',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1472,7 +1472,7 @@ spindex = SpectralIndices(
             long_name='Red Edge Normalized Difference Vegetation Index',
             formula='(RE2 - RE1)/(RE2 + RE1)',
             reference='https://doi.org/10.1016/S0176-1617(11)81633-0',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1481,7 +1481,7 @@ spindex = SpectralIndices(
             long_name='Redness Index',
             formula='(R - G)/(R + G)',
             reference='https://www.documentation.ird.fr/hor/fdi:34390',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1490,7 +1490,7 @@ spindex = SpectralIndices(
             long_name='Simple Ratio (800 and 550 nm)',
             formula='N/G',
             reference='https://doi.org/10.1080/01431169308904370',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1499,7 +1499,7 @@ spindex = SpectralIndices(
             long_name='Simple Ratio (860, 550 and 708 nm)',
             formula='N2/(G * RE1)',
             reference='https://doi.org/10.1016/S0034-4257(98)00046-7',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1508,7 +1508,7 @@ spindex = SpectralIndices(
             long_name='Transformed Difference Vegetation Index',
             formula='1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))',
             reference='https://doi.org/10.1109/IGARSS.2002.1026867',
-            type='vegetation',
+            application_domain='vegetation',
             date_of_addition='2022-04-09',
             contributor="https://github.com/davemlz"
         ),
@@ -1517,7 +1517,7 @@ spindex = SpectralIndices(
             long_name='New Built-Up Index',
             formula='((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)',
             reference='https://hdl.handle.net/1959.11/29500',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1526,7 +1526,7 @@ spindex = SpectralIndices(
             long_name='Perpendicular Impervious Surface Index',
             formula='0.8192 * B - 0.5735 * N + 0.0750',
             reference='https://doi.org/10.3390/rs10101521',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1535,7 +1535,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Impervious Surface Index Red',
             formula='(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0)',
             reference='https://doi.org/10.14358/PERS.76.5.557',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1544,7 +1544,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Impervious Surface Index Green',
             formula='(T1 - (G + N + S1) / 3.0)/(T1 + (G + N + S1) / 3.0)',
             reference='https://doi.org/10.14358/PERS.76.5.557',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1553,7 +1553,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Impervious Surface Index Blue',
             formula='(T1 - (B + N + S1) / 3.0)/(T1 + (B + N + S1) / 3.0)',
             reference='https://doi.org/10.14358/PERS.76.5.557',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1562,7 +1562,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Impervious Surface Index with NDWI',
             formula='(T1 - (((G - N)/(G + N)) + N + S1) / 3.0)/(T1 + (((G - N)/(G + N)) + N + S1) / 3.0)',
             reference='https://doi.org/10.14358/PERS.76.5.557',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1571,7 +1571,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Impervious Surface Index with MNDWI',
             formula='(T1 - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T1 + (((G - S1)/(G + S1)) + N + S1) / 3.0)',
             reference='https://doi.org/10.14358/PERS.76.5.557',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1580,7 +1580,7 @@ spindex = SpectralIndices(
             long_name='Normalized Shortwave Infrared Difference Soil-Moisture',
             formula='(S1 - S2)/(S1 + S2)',
             reference='https://doi.org/10.3390/land10030231',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1589,7 +1589,7 @@ spindex = SpectralIndices(
             long_name='Modified Bare Soil Index',
             formula='((S1 - S2 - N)/(S1 + S2 + N)) + 0.5',
             reference='https://doi.org/10.3390/land10030231',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1598,7 +1598,7 @@ spindex = SpectralIndices(
             long_name='Enhanced Modified Bare Soil Index',
             formula='((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)',
             reference='https://doi.org/10.1016/j.jag.2022.102703',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1607,7 +1607,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Soil Index',
             formula='(S2 - G)/(S2 + G)',
             reference='https://doi.org/10.1016/j.jag.2015.02.010',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1616,7 +1616,7 @@ spindex = SpectralIndices(
             long_name='Bareness Index',
             formula='R + S1 - N',
             reference='https://doi.org/10.1109/IGARSS.2005.1525743',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1625,7 +1625,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Bare Land Index',
             formula='(R - T1)/(R + T1)',
             reference='https://doi.org/10.3390/rs9030249',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1634,7 +1634,7 @@ spindex = SpectralIndices(
             long_name='Dry Built-Up Index',
             formula='((B - T1)/(B + T1)) - ((N - R)/(N + R))',
             reference='https://doi.org/10.3390/land7030081',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1643,7 +1643,7 @@ spindex = SpectralIndices(
             long_name='Dry Bareness Index',
             formula='((S1 - G)/(S1 + G)) - ((N - R)/(N + R))',
             reference='https://doi.org/10.3390/land7030081',
-            type='urban',
+            application_domain='urban',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1652,7 +1652,7 @@ spindex = SpectralIndices(
             long_name='Char Soil Index',
             formula='N/S2',
             reference='https://doi.org/10.1016/j.rse.2005.04.014',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1661,7 +1661,7 @@ spindex = SpectralIndices(
             long_name='VI6T Index',
             formula='(N - T1/10000.0)/(N + T1/10000.0)',
             reference='https://doi.org/10.1080/01431160500239008',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1670,7 +1670,7 @@ spindex = SpectralIndices(
             long_name='Normalized Burn Ratio Thermal 2',
             formula='((N / (T1 / 10000.0)) - S2) / ((N / (T1 / 10000.0)) + S2)',
             reference='https://doi.org/10.1080/01431160500239008',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1679,7 +1679,7 @@ spindex = SpectralIndices(
             long_name='Normalized Burn Ratio Thermal 3',
             formula='((N - (T1 / 10000.0)) - S2) / ((N - (T1 / 10000.0)) + S2)',
             reference='https://doi.org/10.1080/01431160500239008',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1688,7 +1688,7 @@ spindex = SpectralIndices(
             long_name='Mid-Infrared Burn Index',
             formula='10.0 * S2 - 9.8 * S1 + 2.0',
             reference='https://doi.org/10.1080/01431160110053185',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1697,7 +1697,7 @@ spindex = SpectralIndices(
             long_name='Dual-Pol Diagonal Distance',
             formula='(VV + VH)/2.0 ** 0.5',
             reference='https://doi.org/10.1016/j.rse.2018.09.003',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1706,7 +1706,7 @@ spindex = SpectralIndices(
             long_name='Vertical Dual De-Polarization Index',
             formula='(VV + VH)/VV',
             reference='https://doi.org/10.1016/j.rse.2018.09.003',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1715,7 +1715,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Polarization Index',
             formula='(VV - VH)/(VV + VH)',
             reference='https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1724,7 +1724,7 @@ spindex = SpectralIndices(
             long_name='VH-VV Ratio',
             formula='VH/VV',
             reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1733,7 +1733,7 @@ spindex = SpectralIndices(
             long_name='VH-VV Product',
             formula='VH * VV',
             reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1742,7 +1742,7 @@ spindex = SpectralIndices(
             long_name='VV-VH Difference',
             formula='VV - VH',
             reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1751,7 +1751,7 @@ spindex = SpectralIndices(
             long_name='VV-VH Sum',
             formula='VV + VH',
             reference='https://doi.org/10.1109/IGARSS47720.2021.9554099',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1760,7 +1760,7 @@ spindex = SpectralIndices(
             long_name='VV-VH Ratio',
             formula='VV/VH',
             reference='https://doi.org/10.3390/app9040655',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1769,7 +1769,7 @@ spindex = SpectralIndices(
             long_name='VH-VV Difference',
             formula='VH - VV',
             reference='https://doi.org/10.3390/app9040655',
-            type='radar',
+            application_domain='radar',
             date_of_addition='2022-04-19',
             contributor="https://github.com/davemlz"
         ),
@@ -1778,7 +1778,7 @@ spindex = SpectralIndices(
             long_name='Burned Area Index adapted to MODIS',
             formula='1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)',
             reference='https://doi.org/10.1016/j.foreco.2006.08.248',
-            type='burn',
+            application_domain='burn',
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1787,7 +1787,7 @@ spindex = SpectralIndices(
             long_name='Sentinel Water Mask',
             formula='(B + G)/(N + S1)',
             reference='https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1796,7 +1796,7 @@ spindex = SpectralIndices(
             long_name='Land Surface Water Index',
             formula='(N - S1)/(N + S1)',
             reference='https://doi.org/10.1016/j.rse.2003.11.008',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1805,7 +1805,7 @@ spindex = SpectralIndices(
             long_name='Modified Land Surface Water Index (MODIS Bands 2 and 6)',
             formula='(1.0 - N - S1)/(1.0 - N + S1)',
             reference='https://doi.org/10.3390/rs71215805',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
@@ -1814,7 +1814,7 @@ spindex = SpectralIndices(
             long_name='Modified Land Surface Water Index (MODIS Bands 2 and 7)',
             formula='(1.0 - N - S2)/(1.0 - N + S2)',
             reference='https://doi.org/10.3390/rs71215805',
-            type='water',
+            application_domain='water',
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
