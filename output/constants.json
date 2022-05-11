@@ -1,0 +1,102 @@
+{
+    "C1": {
+        "default": 6.0,
+        "description": "Coefficient 1 for the aerosol resistance term",
+        "short_name": "C1"
+    },
+    "C2": {
+        "default": 7.5,
+        "description": "Coefficient 2 for the aerosol resistance term",
+        "short_name": "C2"
+    },
+    "L": {
+        "default": 1.0,
+        "description": "Canopy background adjustment",
+        "short_name": "L"
+    },
+    "PAR": {
+        "default": null,
+        "description": "Photosynthetically Active Radiation",
+        "short_name": "PAR"
+    },
+    "alpha": {
+        "default": 0.1,
+        "description": "Weighting coefficient used for WDRVI",
+        "short_name": "alpha"
+    },
+    "beta": {
+        "default": 0.05,
+        "description": "Calibration parameter used for NDSInw",
+        "short_name": "beta"
+    },
+    "c": {
+        "default": 1.0,
+        "description": "Trade-off parameter in the polynomial kernel",
+        "short_name": "c"
+    },
+    "cexp": {
+        "default": 1.16,
+        "description": "Exponent used for OCVI",
+        "short_name": "cexp"
+    },
+    "g": {
+        "default": 2.5,
+        "description": "Gain factor",
+        "short_name": "g"
+    },
+    "gamma": {
+        "default": 1.0,
+        "description": "Weighting coefficient used for ARVI",
+        "short_name": "gamma"
+    },
+    "k": {
+        "default": 0.0,
+        "description": "Slope parameter by soil used for NIRvH2",
+        "short_name": "k"
+    },
+    "lambdaG": {
+        "default": null,
+        "description": "Green wavelength (nm) used for NDGI",
+        "short_name": "lambdaG"
+    },
+    "lambdaN": {
+        "default": null,
+        "description": "NIR wavelength (nm) used for NIRvH2 and NDGI",
+        "short_name": "lambdaN"
+    },
+    "lambdaR": {
+        "default": null,
+        "description": "Red wavelength (nm) used for NIRvH2 and NDGI",
+        "short_name": "lambdaR"
+    },
+    "nexp": {
+        "default": 2.0,
+        "description": "Exponent used for GDVI",
+        "short_name": "nexp"
+    },
+    "omega": {
+        "default": 2.0,
+        "description": "Weighting coefficient used for MBWI",
+        "short_name": "omega"
+    },
+    "p": {
+        "default": 2.0,
+        "description": "Kernel degree in the polynomial kernel",
+        "short_name": "p"
+    },
+    "sigma": {
+        "default": 0.5,
+        "description": "Length-scale parameter in the RBF kernel",
+        "short_name": "sigma"
+    },
+    "sla": {
+        "default": 1.0,
+        "description": "Soil line slope",
+        "short_name": "sla"
+    },
+    "slb": {
+        "default": 0.0,
+        "description": "Soil line intercept",
+        "short_name": "slb"
+    }
+}
