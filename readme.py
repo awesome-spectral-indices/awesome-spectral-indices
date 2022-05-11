@@ -45,22 +45,22 @@ previousText = """<p align="center">
 
 ---
 
-**GitHub**: <a href="https://github.com/davemlz/awesome-ee-spectral-indices" target="_blank">github.com/davemlz/awesome-ee-spectral-indices</a>
+**GitHub**: <a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices" target="_blank">github.com/awesome-spectral-indices/awesome-spectral-indices</a>
 
 **Documentation**: <a href="https://awesome-ee-spectral-indices.readthedocs.io/" target="_blank">awesome-ee-spectral-indices.readthedocs.io</a>
 
-**Python Package**: <a href="https://github.com/davemlz/spyndex" target="_blank">github.com/davemlz/spyndex</a>
+**Python Package**: <a href="https://github.com/awesome-spectral-indices/spyndex" target="_blank">github.com/awesome-spectral-indices/spyndex</a>
 
-**Streamlit App**: <a href="https://github.com/davemlz/espectro" target="_blank">github.com/davemlz/espectro</a>
+**Streamlit App**: <a href="https://github.com/awesome-spectral-indices/espectro" target="_blank">github.com/awesome-spectral-indices/espectro</a>
 
-**Google Earth Engine**: <a href="https://github.com/davemlz/eemont" target="_blank">github.com/davemlz/eemont</a> (Python), <a href="https://github.com/davemlz/spectral" target="_blank">github.com/davemlz/spectral</a> (JavaScript) and <a href="https://github.com/r-earthengine/rgeeExtra" target="_blank">github.com/r-earthengine/rgeeExtra</a> (R)
+**Google Earth Engine**: <a href="https://github.com/davemlz/eemont" target="_blank">github.com/davemlz/eemont</a> (Python), <a href="https://github.com/awesome-spectral-indices/spectral" target="_blank">github.com/awesome-spectral-indices/spectral</a> (JavaScript) and <a href="https://github.com/r-earthengine/rgeeExtra" target="_blank">github.com/r-earthengine/rgeeExtra</a> (R)
 
 ---
 
 # Spectral Indices
 
 Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
-You can check the [curated list of spectral indices here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv), and if you want to use it in your environment, it is available in [CSV](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv) and [JSON](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json).
+You can check the [curated list of spectral indices here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv), and if you want to use it in your environment, it is available in [CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv) and [JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json).
 
 ## Attributes
 
@@ -392,8 +392,9 @@ platformBadges = {
 
 platformBadgesHTML = {
     "MODIS":'<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
-    "Landsat-457":'<img src="https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square" alt="Landsat-457">',
-    "Landsat-89":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-89">',
+    "Landsat-TM":'<img src="https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square" alt="Landsat-TM">',
+    "Landsat-ETM+":'<img src="https://img.shields.io/badge/-Landsat%20457-purple?style=flat-square" alt="Landsat-ETM+">',
+    "Landsat-OLI":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-OLI">',
     "Sentinel-1 (Dual Polarisation VV-VH)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)">',
     "Sentinel-1 (Dual Polarisation HH-HV)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)">',
     "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',

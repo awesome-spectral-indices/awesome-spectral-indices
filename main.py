@@ -76,7 +76,7 @@ bandsPlatform = {
         'kRL',
         'kLL'
     ],
-    "Landsat-89": [
+    "Landsat-OLI": [
         'A',
         'B',
         'G',
@@ -101,7 +101,30 @@ bandsPlatform = {
         'kRL',
         'kLL'
     ],
-    "Landsat-457": [
+    "Landsat-TM": [
+        'B',
+        'G',
+        'R',
+        'N',
+        'S1',
+        'S2',
+        'T1',
+        'kNN',
+        'kNR',
+        'kNB',
+        'kNL',
+        'kGG',
+        'kGR',
+        'kGB',
+        'kBB',
+        'kBR',
+        'kBL',
+        'kRR',
+        'kRB',
+        'kRL',
+        'kLL'
+    ],
+    "Landsat-ETM+": [
         'B',
         'G',
         'R',
