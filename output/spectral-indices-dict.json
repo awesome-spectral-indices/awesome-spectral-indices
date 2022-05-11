@@ -12,8 +12,9 @@
             "long_name": "Aerosol Free Vegetation Index (1600 nm)",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
@@ -31,8 +32,9 @@
             "long_name": "Aerosol Free Vegetation Index (2100 nm)",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
@@ -85,8 +87,9 @@
             "long_name": "Atmospherically Resistant Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -107,8 +110,9 @@
             "long_name": "Adjusted Transformed Soil-Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -127,8 +131,9 @@
             "long_name": "Advanced Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -149,8 +154,9 @@
             "long_name": "Automated Water Extraction Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
@@ -171,8 +177,9 @@
             "long_name": "Automated Water Extraction Index with Shadows Elimination",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2013.08.029",
@@ -190,8 +197,9 @@
             "long_name": "Burned Area Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -210,8 +218,9 @@
             "long_name": "Burned Area Index adapted to MODIS",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.foreco.2006.08.248",
@@ -249,8 +258,9 @@
             "long_name": "Blue Chromatic Coordinate",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -271,8 +281,9 @@
             "long_name": "Bare Soil Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
@@ -292,8 +303,9 @@
             "long_name": "Built-Up Land Features Extraction Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/10106049.2018.1497094",
@@ -311,8 +323,9 @@
             "long_name": "Blue Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -332,8 +345,9 @@
             "long_name": "Blue Wide Dynamic Range Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -353,8 +367,9 @@
             "long_name": "Bareness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2005.1525743",
@@ -372,8 +387,9 @@
             "long_name": "Chlorophyll Index Green",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -408,8 +424,9 @@
             "long_name": "Char Soil Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2005.04.014",
@@ -427,8 +444,9 @@
             "formula": "N / (S2 * T1 / 10000.0)",
             "long_name": "Char Soil Index Thermal",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "CSIT"
@@ -446,8 +464,9 @@
             "long_name": "Chlorophyll Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -467,8 +486,9 @@
             "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
             "long_name": "Dry Built-Up Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.3390/land7030081",
             "short_name": "DBI"
@@ -487,8 +507,9 @@
             "long_name": "Dry Bareness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land7030081",
@@ -522,8 +543,9 @@
             "long_name": "Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -546,8 +568,9 @@
             "long_name": "Difference Vegetation Index Plus",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -598,8 +621,9 @@
             "formula": "(S1 - N) / (10.0 * ((S1 + T1) ** 0.5))",
             "long_name": "Enhanced Built-Up and Bareness Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.3390/rs4102957",
             "short_name": "EBBI"
@@ -618,8 +642,9 @@
             "long_name": "Enhanced Modified Bare Soil Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2022.102703",
@@ -642,8 +667,9 @@
             "long_name": "Enhanced Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -664,8 +690,9 @@
             "long_name": "Two-Band Enhanced Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -685,8 +712,9 @@
             "long_name": "Excess Green Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -706,8 +734,9 @@
             "long_name": "ExG - ExR Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -726,8 +755,9 @@
             "long_name": "Excess Red Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -748,8 +778,9 @@
             "long_name": "Fluorescence Correction Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -770,8 +801,9 @@
             "long_name": "Green Atmospherically Resistant Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -791,8 +823,9 @@
             "long_name": "Green-Blue Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -812,8 +845,9 @@
             "long_name": "Green Chromatic Coordinate",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -833,8 +867,9 @@
             "long_name": "Generalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -853,8 +888,9 @@
             "long_name": "Global Environment Monitoring Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -874,8 +910,9 @@
             "long_name": "Green Leaf Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -926,8 +963,9 @@
             "long_name": "Green Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -946,8 +984,9 @@
             "long_name": "Green Optimized Soil Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -967,8 +1006,9 @@
             "long_name": "Green-Red Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -987,8 +1027,9 @@
             "long_name": "Green Ratio Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1008,8 +1049,9 @@
             "long_name": "Green Soil Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1028,8 +1070,9 @@
             "long_name": "Global Vegetation Moisture Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00037-8",
@@ -1049,8 +1092,9 @@
             "long_name": "New Atmospherically Resistant Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1072,8 +1116,9 @@
             "long_name": "Index-Based Built-Up Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160802039957",
@@ -1091,8 +1136,9 @@
             "long_name": "Kawashima Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1111,8 +1157,9 @@
             "long_name": "Infrared Percentage Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1149,8 +1196,9 @@
             "long_name": "Land Surface Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.11.008",
@@ -1169,8 +1217,9 @@
             "long_name": "Modified Bare Soil Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land10030231",
@@ -1192,8 +1241,9 @@
             "long_name": "Multi-Band Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2018.01.018",
@@ -1229,8 +1279,9 @@
             "long_name": "Modified Chlorophyll Absorption in Reflectance Index 1",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1250,8 +1301,9 @@
             "long_name": "Modified Chlorophyll Absorption in Reflectance Index 2",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1322,8 +1374,9 @@
             "long_name": "Modified Green Red Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1342,8 +1395,9 @@
             "long_name": "Mid-Infrared Burn Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160110053185",
@@ -1361,8 +1415,9 @@
             "long_name": "Modified Land Surface Water Index (MODIS Bands 2 and 6)",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs71215805",
@@ -1380,8 +1435,9 @@
             "long_name": "Modified Land Surface Water Index (MODIS Bands 2 and 7)",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs71215805",
@@ -1399,8 +1455,9 @@
             "long_name": "Modified Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/014311697216810",
@@ -1418,8 +1475,9 @@
             "long_name": "Modified Normalized Difference Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160600589179",
@@ -1438,8 +1496,9 @@
             "long_name": "Modified Non-Linear Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1458,8 +1517,9 @@
             "long_name": "Modified Red Blue Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1478,8 +1538,9 @@
             "long_name": "Modified Soil-Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1498,8 +1559,9 @@
             "long_name": "Moisture Stress Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/0034-4257(89)90046-1",
@@ -1517,8 +1579,9 @@
             "long_name": "Modified Simple Ratio",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1571,8 +1634,9 @@
             "long_name": "Modified Triangular Vegetation Index 1",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1592,8 +1656,9 @@
             "long_name": "Modified Triangular Vegetation Index 2",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1615,8 +1680,9 @@
             "long_name": "Revised Multi-Spectral Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs10101643",
@@ -1633,8 +1699,9 @@
             "formula": "(R - T1)/(R + T1)",
             "long_name": "Normalized Difference Bare Land Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.3390/rs9030249",
             "short_name": "NBLI"
@@ -1651,8 +1718,9 @@
             "long_name": "Normalized Burn Ratio",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3133/ofr0211",
@@ -1670,8 +1738,9 @@
             "long_name": "Normalized Burn Ratio 2",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
@@ -1689,8 +1758,9 @@
             "formula": "(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))",
             "long_name": "Normalized Burn Ratio Thermal 1",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT1"
@@ -1707,8 +1777,9 @@
             "formula": "((N / (T1 / 10000.0)) - S2) / ((N / (T1 / 10000.0)) + S2)",
             "long_name": "Normalized Burn Ratio Thermal 2",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT2"
@@ -1725,8 +1796,9 @@
             "formula": "((N - (T1 / 10000.0)) - S2) / ((N - (T1 / 10000.0)) + S2)",
             "long_name": "Normalized Burn Ratio Thermal 3",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT3"
@@ -1747,8 +1819,9 @@
             "long_name": "Non-Binary Snow Index for Multi-Component Surfaces",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13142777",
@@ -1769,8 +1842,9 @@
             "formula": "((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
             "long_name": "New Built-Up Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://hdl.handle.net/1959.11/29500",
             "short_name": "NBUI"
@@ -1803,8 +1877,9 @@
             "long_name": "Normalized Difference Built-Up Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "http://dx.doi.org/10.1080/01431160304987",
@@ -1821,8 +1896,9 @@
             "formula": "(S1 - T1) / (S1 + T1)",
             "long_name": "Normalized Difference Bareness Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2005.1526319",
             "short_name": "NDBaI"
@@ -1840,8 +1916,9 @@
             "long_name": "Normalized Difference Drought Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1864,8 +1941,9 @@
             "long_name": "Normalized Difference Greenness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1884,8 +1962,9 @@
             "long_name": "Normalized Difference Glacier Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -1904,8 +1983,9 @@
             "long_name": "Normalized Difference Infrared Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf",
@@ -1924,8 +2004,9 @@
             "formula": "(T1 - (B + N + S1) / 3.0)/(T1 + (B + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Blue",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIb"
@@ -1943,8 +2024,9 @@
             "formula": "(T1 - (G + N + S1) / 3.0)/(T1 + (G + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Green",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIg"
@@ -1962,8 +2044,9 @@
             "formula": "(T1 - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T1 + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index with MNDWI",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISImndwi"
@@ -1981,8 +2064,9 @@
             "formula": "(T1 - (((G - N)/(G + N)) + N + S1) / 3.0)/(T1 + (((G - N)/(G + N)) + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index with NDWI",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIndwi"
@@ -2000,8 +2084,9 @@
             "formula": "(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Red",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIr"
@@ -2018,8 +2103,9 @@
             "long_name": "Normalized Difference Moisture Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00318-2",
@@ -2039,8 +2125,9 @@
             "long_name": "Normalized Difference Phenology Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2017.04.031",
@@ -2090,8 +2177,9 @@
             "long_name": "Normalized Difference Snow Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.1994.399618",
@@ -2109,8 +2197,9 @@
             "long_name": "Normalized Difference Snow Ice Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2130,8 +2219,9 @@
             "long_name": "Normalized Difference Snow Index with no Water",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/w12051339",
@@ -2149,8 +2239,9 @@
             "long_name": "Normalized Difference Snow and Ice Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1080/01431160119766",
@@ -2168,8 +2259,9 @@
             "long_name": "Normalized Difference Soil Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.010",
@@ -2187,8 +2279,9 @@
             "long_name": "Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2225,8 +2318,9 @@
             "long_name": "NDVI-MNDWI Model",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1007/978-3-662-45737-5_51",
@@ -2244,8 +2338,9 @@
             "formula": "(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0))",
             "long_name": "Normalized Difference Vegetation Index Thermal",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "NDVIT"
@@ -2262,8 +2357,9 @@
             "long_name": "Normalized Difference Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2283,8 +2379,9 @@
             "long_name": "Normalized Difference Water Index with no Snow Cover and Glaciers",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2303,8 +2400,9 @@
             "long_name": "Normalized Difference Yellowness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2323,8 +2421,9 @@
             "long_name": "Normalized Green Red Difference Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2359,8 +2458,9 @@
             "long_name": "Near-Infrared Reflectance of Vegetation",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2382,8 +2482,9 @@
             "long_name": "Hyperspectral Near-Infrared Reflectance of Vegetation",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2403,8 +2504,9 @@
             "long_name": "Near-Infrared Reflectance of Vegetation and Incoming PAR",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2423,8 +2525,9 @@
             "long_name": "Non-Linear Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2444,8 +2547,9 @@
             "long_name": "Normalized Multi-band Drought Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1029/2007GL031021",
@@ -2463,8 +2567,9 @@
             "long_name": "Normalized Rapeseed Flowering Index Green",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13010105",
@@ -2482,8 +2587,9 @@
             "long_name": "Normalized Rapeseed Flowering Index Red",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs13010105",
@@ -2501,8 +2607,9 @@
             "long_name": "Normalized Shortwave Infrared Difference Soil-Moisture",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/land10030231",
@@ -2522,8 +2629,9 @@
             "long_name": "New Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.11873/j.issn.1004-0323.2009.2.167",
@@ -2542,8 +2650,9 @@
             "long_name": "Normalized Green",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2563,8 +2672,9 @@
             "long_name": "Normalized NIR",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2584,8 +2694,9 @@
             "long_name": "Normalized Red",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2606,8 +2717,9 @@
             "long_name": "Optimized Chlorophyll Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2626,8 +2738,9 @@
             "long_name": "Optimized Soil-Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2646,8 +2759,9 @@
             "long_name": "Perpendicular Impervious Surface Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2699,8 +2813,9 @@
             "long_name": "Red Chromatic Coordinate",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2719,8 +2834,9 @@
             "long_name": "Renormalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2789,8 +2905,9 @@
             "long_name": "Red Green Blue Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2809,8 +2926,9 @@
             "long_name": "Red-Green Ratio Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2829,8 +2947,9 @@
             "long_name": "Redness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2900,8 +3019,9 @@
             "long_name": "S3 Snow Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3178/jjshwr.12.28",
@@ -2921,8 +3041,9 @@
             "long_name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2942,8 +3063,9 @@
             "long_name": "Soil-Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2964,8 +3086,9 @@
             "long_name": "Soil-Adjusted Vegetation Index 2",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -2985,8 +3108,9 @@
             "formula": "(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L)",
             "long_name": "Soil-Adjusted Vegetation Index Thermal",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "SAVIT"
@@ -3004,8 +3128,9 @@
             "long_name": "Shadow Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3025,7 +3150,7 @@
             "long_name": "Structure Insensitive Pigment Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89"
+                "Landsat-OLI"
             ],
             "reference": "https://eurekamag.com/research/009/395/009395053.php",
             "short_name": "SIPI"
@@ -3042,8 +3167,9 @@
             "long_name": "Simple Ratio",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3062,8 +3188,9 @@
             "long_name": "Simple Ratio (800 and 550 nm)",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3132,8 +3259,9 @@
             "long_name": "Snow Water Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11232774",
@@ -3153,8 +3281,9 @@
             "long_name": "Sentinel Water Mask",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
@@ -3257,8 +3386,9 @@
             "long_name": "Transformed Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3278,8 +3408,9 @@
             "long_name": "Triangular Greenness Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3317,8 +3448,9 @@
             "long_name": "Transformed Soil-Adjusted Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3354,8 +3486,9 @@
             "long_name": "Transformed Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3375,8 +3508,9 @@
             "long_name": "Triangular Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3395,8 +3529,9 @@
             "long_name": "Urban Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf",
@@ -3415,8 +3550,9 @@
             "long_name": "Visible Atmospherically Resistant Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3515,8 +3651,9 @@
             "formula": "(N - T1/10000.0)/(N + T1/10000.0)",
             "long_name": "VI6T Index",
             "platforms": [
-                "Landsat-89",
-                "Landsat-457"
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "VI6T"
@@ -3549,8 +3686,9 @@
             "long_name": "Vegetation Index Green",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3617,8 +3755,9 @@
             "long_name": "Visible Green-Based Built-Up Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3637,8 +3776,9 @@
             "long_name": "Visible Red-Based Built-Up Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3658,8 +3798,9 @@
             "long_name": "Wide Dynamic Range Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3679,8 +3820,9 @@
             "long_name": "Weighted Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3699,8 +3841,9 @@
             "long_name": "Water Index 1",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11182186",
@@ -3718,8 +3861,9 @@
             "long_name": "Water Index 2",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.3390/rs11182186",
@@ -3739,8 +3883,9 @@
             "long_name": "Water Ratio Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762",
@@ -3763,8 +3908,9 @@
             "long_name": "Kernel Enhanced Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3783,8 +3929,9 @@
             "long_name": "Kernel Infrared Percentage Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3803,8 +3950,9 @@
             "long_name": "Kernel Normalized Difference Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3823,8 +3971,9 @@
             "long_name": "Kernel Ratio Vegetation Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
@@ -3844,8 +3993,9 @@
             "long_name": "Kernel Visible Atmospherically Resistant Index",
             "platforms": [
                 "Sentinel-2",
-                "Landsat-89",
-                "Landsat-457",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
                 "MODIS",
                 "Planet-Fusion"
             ],
