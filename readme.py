@@ -392,9 +392,9 @@ platformBadges = {
 
 platformBadgesHTML = {
     "MODIS":'<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
-    "Landsat-TM":'<img src="https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square" alt="Landsat-TM">',
-    "Landsat-ETM+":'<img src="https://img.shields.io/badge/-Landsat%20457-purple?style=flat-square" alt="Landsat-ETM+">',
-    "Landsat-OLI":'<img src="https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square" alt="Landsat-OLI">',
+    "Landsat-TM":'<img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">',
+    "Landsat-ETM+":'<img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">',
+    "Landsat-OLI":'<img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">',
     "Sentinel-1 (Dual Polarisation VV-VH)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)">',
     "Sentinel-1 (Dual Polarisation HH-HV)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)">',
     "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
