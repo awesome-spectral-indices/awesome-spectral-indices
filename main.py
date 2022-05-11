@@ -1,5 +1,7 @@
 from src.indices import spindex
 from src.utils import Bands
+from src.bands import bands
+from src.constants import constants
 from py_expression_eval import Parser
 import pandas as pd
 import json
@@ -195,6 +197,12 @@ for key in spindex.SpectralIndices:
 # Save results
 with open('output/spectral-indices-dict.json', 'w') as fp:
     fp.write(spindex.json(indent=4, sort_keys=True))
+
+with open('output/bands.json', 'w') as fp:
+    json.dump(bands, fp, indent=4, sort_keys=True)
+
+with open('output/constants.json', 'w') as fp:
+    json.dump(constants, fp, indent=4, sort_keys=True)
     
 # Convert to pandas and save CSV
 file = open('output/spectral-indices-dict.json')
