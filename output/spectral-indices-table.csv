@@ -47,7 +47,7 @@ GM1,Gitelson and Merzlyak Index 1,vegetation,RE2/G,"['RE2', 'G']",https://doi.or
 GM2,Gitelson and Merzlyak Index 2,vegetation,RE2/RE1,"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(96)80284-7,https://github.com/davemlz,2022-04-08
 GNDVI,Green Normalized Difference Vegetation Index,vegetation,(N - G)/(N + G),"['N', 'G']",https://doi.org/10.1016/S0034-4257(96)00072-7,https://github.com/davemlz,2021-04-07
 GOSAVI,Green Optimized Soil Adjusted Vegetation Index,vegetation,(N - G) / (N + G + 0.16),"['N', 'G']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
-GRNDVI,Green-Red Normalized Difference Vegetation Index,vegetation,(N - (G + R))/(N + (G + R)),"['N', 'G', 'R']",https://www.indexdatabase.de/db/i-single.php?id=185,https://github.com/davemlz,2021-04-07
+GRNDVI,Green-Red Normalized Difference Vegetation Index,vegetation,(N - (G + R))/(N + (G + R)),"['N', 'G', 'R']",https://doi.org/10.1016/S1672-6308(07)60027-4,https://github.com/davemlz,2021-04-07
 GRVI,Green Ratio Vegetation Index,vegetation,N/G,"['N', 'G']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
 GSAVI,Green Soil Adjusted Vegetation Index,vegetation,(1.0 + L) * (N - G) / (N + G + L),"['L', 'N', 'G']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
 GVMI,Global Vegetation Moisture Index,vegetation,((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02)),"['N', 'S2']",https://doi.org/10.1016/S0034-4257(02)00037-8,https://github.com/davemlz,2021-04-07

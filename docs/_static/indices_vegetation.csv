@@ -30,7 +30,7 @@ GM1,Gitelson and Merzlyak Index 1 [`ref <https://doi.org/10.1016/S0176-1617(96)8
 GM2,Gitelson and Merzlyak Index 2 [`ref <https://doi.org/10.1016/S0176-1617(96)80284-7>`_],:math:`RE2/RE1`
 GNDVI,Green Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00072-7>`_],:math:`(N-G)/(N+G)`
 GOSAVI,Green Optimized Soil Adjusted Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`(N-G)/(N+G+0.16)`
-GRNDVI,Green-Red Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=185>`_],:math:`(N-(G+R))/(N+(G+R))`
+GRNDVI,Green-Red Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S1672-6308(07)60027-4>`_],:math:`(N-(G+R))/(N+(G+R))`
 GRVI,Green Ratio Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`N/G`
 GSAVI,Green Soil Adjusted Vegetation Index [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`(1.0+L)\times (N-G)/(N+G+L)`
 GVMI,Global Vegetation Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(02)00037-8>`_],:math:`((N+0.1)-(S2+0.02))/((N+0.1)+(S2+0.02))`
