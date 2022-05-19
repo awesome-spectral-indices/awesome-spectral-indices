@@ -67,7 +67,7 @@ spindex = SpectralIndices(
             short_name='GBNDVI',
             long_name='Green-Blue Normalized Difference Vegetation Index',
             formula='(N - (G + B))/(N + (G + B))',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=186',
+            reference='https://doi.org/10.1016/S1672-6308(07)60027-4',
             application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
