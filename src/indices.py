@@ -103,7 +103,7 @@ spindex = SpectralIndices(
             short_name='GRNDVI',
             long_name='Green-Red Normalized Difference Vegetation Index',
             formula='(N - (G + R))/(N + (G + R))',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=185',
+            reference='https://doi.org/10.1016/S1672-6308(07)60027-4',
             application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
