@@ -470,7 +470,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "https://www.cabdirect.org/cabdirect/abstract/20073176046",
+            "reference": "https://doi.org/10.1007/s11119-010-9204-3",
             "short_name": "CVI"
         },
         "DBI": {

@@ -21,7 +21,7 @@ CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.or
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
 CSI,Char Soil Index,burn,N/S2,"['N', 'S2']",https://doi.org/10.1016/j.rse.2005.04.014,https://github.com/davemlz,2022-04-19
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
-CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://www.cabdirect.org/cabdirect/abstract/20073176046,https://github.com/davemlz,2021-04-07
+CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://doi.org/10.1007/s11119-010-9204-3,https://github.com/davemlz,2021-04-07
 DBI,Dry Built-Up Index,urban,((B - T1)/(B + T1)) - ((N - R)/(N + R)),"['B', 'T1', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
 DBSI,Dry Bareness Index,urban,((S1 - G)/(S1 + G)) - ((N - R)/(N + R)),"['S1', 'G', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
 DPDD,Dual-Pol Diagonal Distance,radar,(VV + VH)/2.0 ** 0.5,"['VV', 'VH']",https://doi.org/10.1016/j.rse.2018.09.003,https://github.com/davemlz,2022-04-19
