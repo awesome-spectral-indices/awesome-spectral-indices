@@ -58,7 +58,7 @@ spindex = SpectralIndices(
             short_name='GARI',
             long_name='Green Atmospherically Resistant Vegetation Index',
             formula='(N - (G - (B - R))) / (N - (G + (B - R)))',
-            reference='https://www.indexdatabase.de/db/i-single.php?id=363',
+            reference='https://doi.org/10.1016/S0034-4257(96)00072-7',
             application_domain='vegetation',
             date_of_addition='2021-04-07',
             contributor="https://github.com/davemlz"
