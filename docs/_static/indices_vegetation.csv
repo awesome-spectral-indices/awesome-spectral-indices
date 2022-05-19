@@ -20,8 +20,8 @@ ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\t
 ExGR,ExG - ExR Vegetation Index [`ref <https://doi.org/10.1016/j.compag.2008.03.009>`_],:math:`(2.0\times G-R-B)-(1.3\times R-G)`
 ExR,Excess Red Index [`ref <https://doi.org/10.1117/12.336896>`_],:math:`1.3\times R-G`
 FCVI,Fluorescence Correction Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2020.111676>`_],:math:`N-((R+G+B)/3.0)`
-GARI,Green Atmospherically Resistant Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=363>`_],:math:`(N-(G-(B-R)))/(N-(G+(B-R)))`
-GBNDVI,Green-Blue Normalized Difference Vegetation Index [`ref <https://www.indexdatabase.de/db/i-single.php?id=186>`_],:math:`(N-(G+B))/(N+(G+B))`
+GARI,Green Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00072-7>`_],:math:`(N-(G-(B-R)))/(N-(G+(B-R)))`
+GBNDVI,Green-Blue Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S1672-6308(07)60027-4>`_],:math:`(N-(G+B))/(N+(G+B))`
 GCC,Green Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`G/(R+G+B)`
 GDVI,Generalized Difference Vegetation Index [`ref <https://doi.org/10.3390/rs6021211>`_],:math:`((N^{n})-(R^{n}))/((N^{n})+(R^{n}))`
 GEMI,Global Environment Monitoring Index [`ref <http://dx.doi.org/10.1007/bf00031911>`_],:math:`((2.0\times ((N^{2.0})-(R^{2.0}))+1.5\times N+0.5\times R)/(N+R+0.5))\times (1.0-0.25\times ((2.0\times ((N^{2.0})-(R^2))+1.5\times N+0.5\times R)/(N+R+0.5)))-((R-0.125)/(1-R))`

@@ -807,7 +807,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=363",
+            "reference": "https://doi.org/10.1016/S0034-4257(96)00072-7",
             "short_name": "GARI"
         },
         "GBNDVI": {
@@ -829,7 +829,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "https://www.indexdatabase.de/db/i-single.php?id=186",
+            "reference": "https://doi.org/10.1016/S1672-6308(07)60027-4",
             "short_name": "GBNDVI"
         },
         "GCC": {
