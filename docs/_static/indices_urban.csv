@@ -1,5 +1,5 @@
 Index,Long Name,Equation
-BI,Bare Soil Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf>`_],:math:`((S1+R)-(N+B))/((S1+R)+(N+B))`
+BI,Bare Soil Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`((S1+R)-(N+B))/((S1+R)+(N+B))`
 BLFEI,Built-Up Land Features Extraction Index [`ref <https://doi.org/10.1080/10106049.2018.1497094>`_],:math:`(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)`
 BaI,Bareness Index [`ref <https://doi.org/10.1109/IGARSS.2005.1525743>`_],:math:`R+S1-N`
 DBI,Dry Built-Up Index [`ref <https://doi.org/10.3390/land7030081>`_],:math:`((B-T1)/(B+T1))-((N-R)/(N+R))`

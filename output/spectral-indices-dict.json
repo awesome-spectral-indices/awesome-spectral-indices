@@ -137,7 +137,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
             "short_name": "AVI"
         },
         "AWEInsh": {
@@ -286,7 +286,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
             "short_name": "BI"
         },
         "BLFEI": {
@@ -3134,7 +3134,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf",
+            "reference": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf",
             "short_name": "SI"
         },
         "SIPI": {

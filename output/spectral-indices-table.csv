@@ -5,14 +5,14 @@ ARI,Anthocyanin Reflectance Index,vegetation,(1 / G) - (1 / RE1),"['G', 'RE1']",
 ARI2,Anthocyanin Reflectance Index 2,vegetation,N * ((1 / G) - (1 / RE1)),"['N', 'G', 'RE1']",https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2,https://github.com/davemlz,2022-04-08
 ARVI,Atmospherically Resistant Vegetation Index,vegetation,(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B))),"['N', 'R', 'gamma', 'B']",https://doi.org/10.1109/36.134076,https://github.com/davemlz,2021-05-11
 ATSAVI,Adjusted Transformed Soil-Adjusted Vegetation Index,vegetation,sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0)),"['sla', 'N', 'R', 'slb']",https://doi.org/10.1016/0034-4257(91)90009-U,https://github.com/davemlz,2021-05-14
-AVI,Advanced Vegetation Index,vegetation,(N * (1.0 - R) * (N - R)) ** (1/3),"['N', 'R']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf,https://github.com/davemlz,2022-04-08
+AVI,Advanced Vegetation Index,vegetation,(N * (1.0 - R) * (N - R)) ** (1/3),"['N', 'R']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
 AWEInsh,Automated Water Extraction Index,water,4.0 * (G - S1) - 0.25 * N + 2.75 * S2,"['G', 'S1', 'N', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
 AWEIsh,Automated Water Extraction Index with Shadows Elimination,water,B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2,"['B', 'G', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.rse.2013.08.029,https://github.com/davemlz,2021-09-18
 BAI,Burned Area Index,burn,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['R', 'N']",https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf,https://github.com/davemlz,2021-04-07
 BAIM,Burned Area Index adapted to MODIS,burn,1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0),"['N', 'S2']",https://doi.org/10.1016/j.foreco.2006.08.248,https://github.com/davemlz,2022-04-20
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0),"['RE2', 'RE3', 'N2', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BCC,Blue Chromatic Coordinate,vegetation,B / (R + G + B),"['B', 'R', 'G']",https://doi.org/10.1016/0034-4257(87)90088-5,https://github.com/davemlz,2022-01-17
-BI,Bare Soil Index,urban,((S1 + R) - (N + B))/((S1 + R) + (N + B)),"['S1', 'R', 'N', 'B']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf,https://github.com/davemlz,2022-04-08
+BI,Bare Soil Index,urban,((S1 + R) - (N + B))/((S1 + R) + (N + B)),"['S1', 'R', 'N', 'B']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
 BLFEI,Built-Up Land Features Extraction Index,urban,(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1),"['G', 'R', 'S2', 'S1']",https://doi.org/10.1080/10106049.2018.1497094,https://github.com/davemlz,2022-02-09
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://doi.org/10.1016/S1672-6308(07)60027-4,https://github.com/MATRIX4284,2021-04-07
 BWDRVI,Blue Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - B) / (alpha * N + B),"['alpha', 'N', 'B']",https://doi.org/10.2135/cropsci2007.01.0031,https://github.com/davemlz,2021-09-20
@@ -152,7 +152,7 @@ SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index,vegetation,(1
 SAVI,Soil-Adjusted Vegetation Index,vegetation,(1.0 + L) * (N - R) / (N + R + L),"['L', 'N', 'R']",https://doi.org/10.1016/0034-4257(88)90106-X,https://github.com/davemlz,2021-04-07
 SAVI2,Soil-Adjusted Vegetation Index 2,vegetation,N / (R + (slb / sla)),"['N', 'R', 'slb', 'sla']",https://doi.org/10.1080/01431169008955053,https://github.com/davemlz,2021-05-14
 SAVIT,Soil-Adjusted Vegetation Index Thermal,burn,(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L),"['L', 'N', 'R', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
-SI,Shadow Index,vegetation,((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3),"['B', 'G', 'R']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&application_domain=pdf,https://github.com/davemlz,2022-04-08
+SI,Shadow Index,vegetation,((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3),"['B', 'G', 'R']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
 SIPI,Structure Insensitive Pigment Index,vegetation,(N - A) / (N - R),"['N', 'A', 'R']",https://eurekamag.com/research/009/395/009395053.php,https://github.com/davemlz,2021-09-17
 SR,Simple Ratio,vegetation,N/R,"['N', 'R']",https://doi.org/10.2307/1936256,https://github.com/davemlz,2022-04-08
 SR2,Simple Ratio (800 and 550 nm),vegetation,N/G,"['N', 'G']",https://doi.org/10.1080/01431169308904370,https://github.com/davemlz,2022-04-09
