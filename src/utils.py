@@ -31,6 +31,7 @@ class Bands(Enum):
     SOIL_LINE_INTERCEPT = "slb"
     PAR = "PAR"
     OMEGA = "omega"
+    F_DELTA = "fdelta"
     SLOPE_PARAMETER_SOIL = "k"
     WAVELENGTH_NIR = "lambdaN"
     WAVELENGTH_RED = "lambdaR"
