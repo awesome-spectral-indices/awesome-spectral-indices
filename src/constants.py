@@ -99,4 +99,9 @@ constants = {
         "description": "Trade-off parameter in the polynomial kernel",
         "default": 1.0,
     },
+    "fdelta": {
+        "short_name": "fdelta",
+        "description": "Adjustment factor used for SEVI",
+        "default": 0.581,
+    },
 }

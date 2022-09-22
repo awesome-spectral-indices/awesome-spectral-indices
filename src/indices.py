@@ -1818,5 +1818,77 @@ spindex = SpectralIndices(
             date_of_addition='2022-04-20',
             contributor="https://github.com/davemlz"
         ),
+        NBRplus=SpectralIndex(
+            short_name='NBRplus',
+            long_name='Normalized Burn Ratio Plus',
+            formula='(S2 - N2 - G - B)/(S2 + N2 + G + B)',
+            reference='https://doi.org/10.3390/rs14071727',
+            application_domain='burn',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        NBRSWIR=SpectralIndex(
+            short_name='NBRSWIR',
+            long_name='Normalized Burn Ratio SWIR',
+            formula='(S2 - S1 - 0.02)/(S2 + S1 + 0.1)',
+            reference='https://doi.org/10.1080/22797254.2020.1738900',
+            application_domain='burn',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        NDSWIR=SpectralIndex(
+            short_name='NDSWIR',
+            long_name='Normalized Difference SWIR',
+            formula='(N - S1)/(N + S1)',
+            reference='https://doi.org/10.1109/TGRS.2003.819190',
+            application_domain='burn',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        SEVI=SpectralIndex(
+            short_name='SEVI',
+            long_name='Shadow-Eliminated Vegetation Index',
+            formula='(N/R) + fdelta * (1.0/R)',
+            reference='https://doi.org/10.1080/17538947.2018.1495770',
+            application_domain='vegetation',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        ANDWI=SpectralIndex(
+            short_name='ANDWI',
+            long_name='Augmented Normalized Difference Water Index',
+            formula='(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)',
+            reference='https://doi.org/10.1016/j.envsoft.2021.105030',
+            application_domain='water',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        NBAI=SpectralIndex(
+            short_name='NBAI',
+            long_name='Normalized Built-up Area Index',
+            formula='((S2 - S1)/G)/((S2 + S1)/G)',
+            reference='https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf',
+            application_domain='urban',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        BRBA=SpectralIndex(
+            short_name='BRBA',
+            long_name='Band Ratio for Built-up Area',
+            formula='R/S1',
+            reference='https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf',
+            application_domain='urban',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
+        VIBI=SpectralIndex(
+            short_name='VIBI',
+            long_name='Vegetation Index Built-up Index',
+            formula='((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))',
+            reference='http://dx.doi.org/10.1080/01431161.2012.687842',
+            application_domain='urban',
+            date_of_addition='2022-09-22',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
