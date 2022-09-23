@@ -1,4 +1,5 @@
 Index,Long Name,Equation
+ANDWI,Augmented Normalized Difference Water Index [`ref <https://doi.org/10.1016/j.envsoft.2021.105030>`_],:math:`(B+G+R-N-S1-S2)/(B+G+R+N+S1+S2)`
 AWEInsh,Automated Water Extraction Index [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`4.0\times (G-S1)-0.25\times N+2.75\times S2`
 AWEIsh,Automated Water Extraction Index with Shadows Elimination [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`B+2.5\times G-1.5\times (N+S1)-0.25\times S2`
 LSWI,Land Surface Water Index [`ref <https://doi.org/10.1016/j.rse.2003.11.008>`_],:math:`(N-S1)/(N+S1)`

@@ -40,6 +40,30 @@
             "reference": "https://doi.org/10.1016/S0034-4257(01)00190-0",
             "short_name": "AFRI2100"
         },
+        "ANDWI": {
+            "application_domain": "water",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)",
+            "long_name": "Augmented Normalized Difference Water Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.envsoft.2021.105030",
+            "short_name": "ANDWI"
+        },
         "ARI": {
             "application_domain": "vegetation",
             "bands": [
@@ -331,6 +355,26 @@
             ],
             "reference": "https://doi.org/10.1016/S1672-6308(07)60027-4",
             "short_name": "BNDVI"
+        },
+        "BRBA": {
+            "application_domain": "urban",
+            "bands": [
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "R/S1",
+            "long_name": "Band Ratio for Built-up Area",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+            "short_name": "BRBA"
         },
         "BWDRVI": {
             "application_domain": "vegetation",
@@ -1688,6 +1732,27 @@
             "reference": "https://doi.org/10.3390/rs10101643",
             "short_name": "MuWIR"
         },
+        "NBAI": {
+            "application_domain": "urban",
+            "bands": [
+                "S2",
+                "S1",
+                "G"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "((S2 - S1)/G)/((S2 + S1)/G)",
+            "long_name": "Normalized Built-up Area Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+            "short_name": "NBAI"
+        },
         "NBLI": {
             "application_domain": "urban",
             "bands": [
@@ -1746,6 +1811,26 @@
             "reference": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
             "short_name": "NBR2"
         },
+        "NBRSWIR": {
+            "application_domain": "burn",
+            "bands": [
+                "S2",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "(S2 - S1 - 0.02)/(S2 + S1 + 0.1)",
+            "long_name": "Normalized Burn Ratio SWIR",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1080/22797254.2020.1738900",
+            "short_name": "NBRSWIR"
+        },
         "NBRT1": {
             "application_domain": "burn",
             "bands": [
@@ -1802,6 +1887,24 @@
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT3"
+        },
+        "NBRplus": {
+            "application_domain": "burn",
+            "bands": [
+                "S2",
+                "N2",
+                "G",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "(S2 - N2 - G - B)/(S2 + N2 + G + B)",
+            "long_name": "Normalized Burn Ratio Plus",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://doi.org/10.3390/rs14071727",
+            "short_name": "NBRplus"
         },
         "NBSIMS": {
             "application_domain": "snow",
@@ -2226,6 +2329,26 @@
             ],
             "reference": "https://doi.org/10.3390/w12051339",
             "short_name": "NDSInw"
+        },
+        "NDSWIR": {
+            "application_domain": "burn",
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "(N - S1)/(N + S1)",
+            "long_name": "Normalized Difference SWIR",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1109/TGRS.2003.819190",
+            "short_name": "NDSWIR"
         },
         "NDSaII": {
             "application_domain": "snow",
@@ -3115,6 +3238,28 @@
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "SAVIT"
         },
+        "SEVI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "fdelta"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "(N/R) + fdelta * (1.0/R)",
+            "long_name": "Shadow-Eliminated Vegetation Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1080/17538947.2018.1495770",
+            "short_name": "SEVI"
+        },
         "SI": {
             "application_domain": "vegetation",
             "bands": [
@@ -3673,6 +3818,27 @@
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(01)00289-9",
             "short_name": "VI700"
+        },
+        "VIBI": {
+            "application_domain": "urban",
+            "bands": [
+                "N",
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-09-22",
+            "formula": "((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))",
+            "long_name": "Vegetation Index Built-up Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "http://dx.doi.org/10.1080/01431161.2012.687842",
+            "short_name": "VIBI"
         },
         "VIG": {
             "application_domain": "vegetation",
