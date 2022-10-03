@@ -1890,5 +1890,32 @@ spindex = SpectralIndices(
             date_of_addition='2022-09-22',
             contributor="https://github.com/davemlz"
         ),
+        NSDSI1=SpectralIndex(
+            short_name='NSDSI1',
+            long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1',
+            formula='(S1-S2)/S1',
+            reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
+            application_domain='water',
+            date_of_addition='2022-10-03',
+            contributor="https://github.com/CvenGeo"
+        ),
+        NSDSI2=SpectralIndex(
+            short_name='NSDSI2',
+            long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2',
+            formula='(S1-S2)/S2',
+            reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
+            application_domain='water',
+            date_of_addition='2022-10-03',
+            contributor="https://github.com/CvenGeo"
+        ),
+        NSDSI3=SpectralIndex(
+            short_name='NSDSI3',
+            long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3',
+            formula='(S1-S2)/(S1+S2)',
+            reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
+            application_domain='water',
+            date_of_addition='2022-10-03',
+            contributor="https://github.com/CvenGeo"
+        ),
     )
 )
