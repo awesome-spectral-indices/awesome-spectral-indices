@@ -1917,5 +1917,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-03',
             contributor="https://github.com/CvenGeo"
         ),
+        NDTI=SpectralIndex(
+            short_name='NDTI',
+            long_name='Normalized Difference Turbidity Index',
+            formula='(R-G)/(R+G)',
+            reference='https://doi.org/10.1016/j.rse.2006.07.012',
+            application_domain='water',
+            date_of_addition='2022-10-03',
+            contributor="https://github.com/CvenGeo"
+        ),
+        NDPonI=SpectralIndex(
+            short_name='NDPonI',
+            long_name='Normalized Difference Pond Index',
+            formula='(S1-G)/(S1+G)',
+            reference='https://doi.org/10.1016/j.rse.2006.07.012',
+            application_domain='water',
+            date_of_addition='2022-10-03',
+            contributor="https://github.com/CvenGeo"
+        ),
     )
 )
