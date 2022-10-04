@@ -109,6 +109,7 @@ NDISIr,Normalized Difference Impervious Surface Index Red,urban,(T1 - (R + N + S
 NDMI,Normalized Difference Moisture Index,vegetation,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1016/S0034-4257(01)00318-2,https://github.com/bpurinton,2021-12-01
 NDPI,Normalized Difference Phenology Index,vegetation,(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1)),"['N', 'alpha', 'R', 'S1']",https://doi.org/10.1016/j.rse.2017.04.031,https://github.com/davemlz,2022-01-20
 NDPolI,Normalized Difference Polarization Index,radar,(VV - VH)/(VV + VH),"['VV', 'VH']",https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf,https://github.com/davemlz,2022-04-19
+NDPonI,Normalized Difference Pond Index,water,(S1-G)/(S1+G),"['S1', 'G']",https://doi.org/10.1016/j.rse.2006.07.012,https://github.com/CvenGeo,2022-10-03
 NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N', 'RE1']",https://doi.org/10.1016/1011-1344(93)06963-4,https://github.com/davemlz,2021-05-13
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07
 NDSII,Normalized Difference Snow Ice Index,snow,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1080/01431160802385459,https://github.com/davemlz,2022-04-08
@@ -116,6 +117,7 @@ NDSInw,Normalized Difference Snow Index with no Water,snow,(N - S1 - beta)/(N + 
 NDSWIR,Normalized Difference SWIR,burn,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1109/TGRS.2003.819190,https://github.com/davemlz,2022-09-22
 NDSaII,Normalized Difference Snow and Ice Index,snow,(R - S1) / (R + S1),"['R', 'S1']",https://doi.org/10.1080/01431160119766,https://github.com/davemlz,2021-09-18
 NDSoiI,Normalized Difference Soil Index,urban,(S2 - G)/(S2 + G),"['S2', 'G']",https://doi.org/10.1016/j.jag.2015.02.010,https://github.com/davemlz,2022-04-18
+NDTI,Normalized Difference Turbidity Index,water,(R-G)/(R+G),"['R', 'G']",https://doi.org/10.1016/j.rse.2006.07.012,https://github.com/CvenGeo,2022-10-03
 NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),"['N', 'R']",https://ntrs.nasa.gov/citations/19740022614,https://github.com/davemlz,2021-04-07
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm),vegetation,(RE2 - RE1) / (RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
 NDVIMNDWI,NDVI-MNDWI Model,water,((N - R)/(N + R)) - ((G - S1)/(G + S1)),"['N', 'R', 'G', 'S1']",https://doi.org/10.1007/978-3-662-45737-5_51,https://github.com/davemlz,2022-01-17
@@ -133,6 +135,9 @@ NMDI,Normalized Multi-band Drought Index,vegetation,(N - (S1 - S2))/(N + (S1 - S
 NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 NRFIr,Normalized Rapeseed Flowering Index Red,vegetation,(R - S2) / (R + S2),"['R', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 NSDS,Normalized Shortwave Infrared Difference Soil-Moisture,urban,(S1 - S2)/(S1 + S2),"['S1', 'S2']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
+NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1,water,(S1-S2)/S1,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2,water,(S1-S2)/S2,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3,water,(S1-S2)/(S1+S2),"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
 NWI,New Water Index,water,(B - (N + S1 + S2))/(B + (N + S1 + S2)),"['B', 'N', 'S1', 'S2']",https://doi.org/10.11873/j.issn.1004-0323.2009.2.167,https://github.com/davemlz,2022-01-17
 NormG,Normalized Green,vegetation,G/(N + G + R),"['G', 'N', 'R']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
 NormNIR,Normalized NIR,vegetation,N/(N + G + R),"['N', 'G', 'R']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08

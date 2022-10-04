@@ -8,9 +8,14 @@ MLSWI26,Modified Land Surface Water Index (MODIS Bands 2 and 6) [`ref <https://d
 MLSWI27,Modified Land Surface Water Index (MODIS Bands 2 and 7) [`ref <https://doi.org/10.3390/rs71215805>`_],:math:`(1.0-N-S2)/(1.0-N+S2)`
 MNDWI,Modified Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431160600589179>`_],:math:`(G-S1)/(G+S1)`
 MuWIR,Revised Multi-Spectral Water Index [`ref <https://doi.org/10.3390/rs10101643>`_],:math:`-4.0\times ((B-G)/(B+G))+2.0\times ((G-N)/(G+N))+2.0\times ((G-S2)/(G+S2))-((G-S1)/(G+S1))`
+NDPonI,Normalized Difference Pond Index [`ref <https://doi.org/10.1016/j.rse.2006.07.012>`_],:math:`(S1-G)/(S1+G)`
+NDTI,Normalized Difference Turbidity Index [`ref <https://doi.org/10.1016/j.rse.2006.07.012>`_],:math:`(R-G)/(R+G)`
 NDVIMNDWI,NDVI-MNDWI Model [`ref <https://doi.org/10.1007/978-3-662-45737-5_51>`_],:math:`((N-R)/(N+R))-((G-S1)/(G+S1))`
 NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
 NDWIns,Normalized Difference Water Index with no Snow Cover and Glaciers [`ref <https://doi.org/10.3390/w12051339>`_],:math:`(G-\alpha \times N)/(G+N)`
+NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/S1`
+NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/S2`
+NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/(S1+S2)`
 NWI,New Water Index [`ref <https://doi.org/10.11873/j.issn.1004-0323.2009.2.167>`_],:math:`(B-(N+S1+S2))/(B+(N+S1+S2))`
 S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`(RE1-S2)/(RE1+S2)`
 SWM,Sentinel Water Mask [`ref <https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf>`_],:math:`(B+G)/(N+S1)`
