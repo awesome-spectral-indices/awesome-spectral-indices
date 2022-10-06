@@ -2839,6 +2839,44 @@
             "reference": "https://doi.org/10.1016/j.isprsjprs.2019.06.012",
             "short_name": "NSDSI3"
         },
+        "NSTv1": {
+            "application_domain": "burn",
+            "bands": [
+                "N",
+                "S2",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-10-06",
+            "formula": "((N-S2)/(N+S2))*T1",
+            "long_name": "NIR-SWIR-Temperature Version 1",
+            "platforms": [
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
+            ],
+            "reference": "https://doi.org/10.1016/j.rse.2011.06.010",
+            "short_name": "NSTv1"
+        },
+        "NSTv2": {
+            "application_domain": "burn",
+            "bands": [
+                "N",
+                "S2",
+                "T1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2022-10-06",
+            "formula": "(N-(S2+T1))/(N+(S2+T1))",
+            "long_name": "NIR-SWIR-Temperature Version 2",
+            "platforms": [
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+"
+            ],
+            "reference": "https://doi.org/10.1016/j.rse.2011.06.010",
+            "short_name": "NSTv2"
+        },
         "NWI": {
             "application_domain": "water",
             "bands": [

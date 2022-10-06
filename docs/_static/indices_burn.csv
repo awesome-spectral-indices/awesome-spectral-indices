@@ -14,5 +14,7 @@ NBRT3,Normalized Burn Ratio Thermal 3 [`ref <https://doi.org/10.1080/01431160500
 NBRplus,Normalized Burn Ratio Plus [`ref <https://doi.org/10.3390/rs14071727>`_],:math:`(S2-N2-G-B)/(S2+N2+G+B)`
 NDSWIR,Normalized Difference SWIR [`ref <https://doi.org/10.1109/TGRS.2003.819190>`_],:math:`(N-S1)/(N+S1)`
 NDVIT,Normalized Difference Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(N-(R\times T1/10000.0))/(N+(R\times T1/10000.0))`
+NSTv1,NIR-SWIR-Temperature Version 1 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`((N-S2)/(N+S2))\times T1`
+NSTv2,NIR-SWIR-Temperature Version 2 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`(N-(S2+T1))/(N+(S2+T1))`
 SAVIT,Soil-Adjusted Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(1.0+L)\times (N-(R\times T1/10000.0))/(N+(R\times T1/10000.0)+L)`
 VI6T,VI6T Index [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`(N-T1/10000.0)/(N+T1/10000.0)`

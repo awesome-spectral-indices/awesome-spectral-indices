@@ -138,6 +138,8 @@ NSDS,Normalized Shortwave Infrared Difference Soil-Moisture,urban,(S1 - S2)/(S1 
 NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1,water,(S1-S2)/S1,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
 NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2,water,(S1-S2)/S2,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
 NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3,water,(S1-S2)/(S1+S2),"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSTv1,NIR-SWIR-Temperature Version 1,burn,((N-S2)/(N+S2))*T1,"['N', 'S2', 'T1']",https://doi.org/10.1016/j.rse.2011.06.010,https://github.com/davemlz,2022-10-06
+NSTv2,NIR-SWIR-Temperature Version 2,burn,(N-(S2+T1))/(N+(S2+T1)),"['N', 'S2', 'T1']",https://doi.org/10.1016/j.rse.2011.06.010,https://github.com/davemlz,2022-10-06
 NWI,New Water Index,water,(B - (N + S1 + S2))/(B + (N + S1 + S2)),"['B', 'N', 'S1', 'S2']",https://doi.org/10.11873/j.issn.1004-0323.2009.2.167,https://github.com/davemlz,2022-01-17
 NormG,Normalized Green,vegetation,G/(N + G + R),"['G', 'N', 'R']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
 NormNIR,Normalized NIR,vegetation,N/(N + G + R),"['N', 'G', 'R']",https://doi.org/10.2134/agronj2004.0314,https://github.com/davemlz,2022-04-08
