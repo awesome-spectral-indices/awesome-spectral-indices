@@ -1935,5 +1935,23 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-03',
             contributor="https://github.com/CvenGeo"
         ),
+        NSTv1=SpectralIndex(
+            short_name='NSTv1',
+            long_name='NIR-SWIR-Temperature Version 1',
+            formula='((N-S2)/(N+S2))*T1',
+            reference='https://doi.org/10.1016/j.rse.2011.06.010',
+            application_domain='burn',
+            date_of_addition='2022-10-06',
+            contributor="https://github.com/davemlz"
+        ),
+        NSTv2=SpectralIndex(
+            short_name='NSTv2',
+            long_name='NIR-SWIR-Temperature Version 2',
+            formula='(N-(S2+T1))/(N+(S2+T1))',
+            reference='https://doi.org/10.1016/j.rse.2011.06.010',
+            application_domain='burn',
+            date_of_addition='2022-10-06',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
