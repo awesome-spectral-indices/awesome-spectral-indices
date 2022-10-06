@@ -145,7 +145,7 @@ bands = {
         },
         "modis": {
             "platform": "Terra/Aqua: MODIS",
-            "band": "B3",
+            "band": "B4",
             "name": "Green",
             "wavelength": 555.0,
             "bandwidth": 20.0
@@ -337,7 +337,7 @@ bands = {
         },
         "modis": {
             "platform": "Terra/Aqua: MODIS",
-            "band": "B1",
+            "band": "B2",
             "name": "Near-Infrared (NIR)",
             "wavelength": 858.5,
             "bandwidth": 35.0
