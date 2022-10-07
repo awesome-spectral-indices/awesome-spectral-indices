@@ -129,7 +129,7 @@
         },
         "long_name": "Green",
         "modis": {
-            "band": "B3",
+            "band": "B4",
             "bandwidth": 20.0,
             "name": "Green",
             "platform": "Terra/Aqua: MODIS",
@@ -189,7 +189,7 @@
         },
         "long_name": "Near-Infrared (NIR)",
         "modis": {
-            "band": "B1",
+            "band": "B2",
             "bandwidth": 35.0,
             "name": "Near-Infrared (NIR)",
             "platform": "Terra/Aqua: MODIS",
