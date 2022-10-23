@@ -1953,5 +1953,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-06',
             contributor="https://github.com/davemlz"
         ),
+        NDCI=SpectralIndex(
+            short_name='NDCI',
+            long_name='Normalized difference chlorophyll index',
+            formula='(RE1 - R)/(RE1 + R)',
+            reference='https://doi.org/10.1016/j.rse.2011.10.016',
+            application_domain='water',
+            date_of_addition='2022-10-10',
+            contributor="https://github.com/kalab-oto"
+        ),
     )
 )
