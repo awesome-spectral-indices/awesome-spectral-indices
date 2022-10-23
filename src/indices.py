@@ -1955,7 +1955,7 @@ spindex = SpectralIndices(
         ),
         NDCI=SpectralIndex(
             short_name='NDCI',
-            long_name='Normalized difference chlorophyll index',
+            long_name='Normalized Difference Chlorophyll Index',
             formula='(RE1 - R)/(RE1 + R)',
             reference='https://doi.org/10.1016/j.rse.2011.10.016',
             application_domain='water',
