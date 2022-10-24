@@ -2006,6 +2006,22 @@
             "reference": "https://doi.org/10.1109/IGARSS.2005.1526319",
             "short_name": "NDBaI"
         },
+        "NDCI": {
+            "application_domain": "water",
+            "bands": [
+                "RE1",
+                "R"
+            ],
+            "contributor": "https://github.com/kalab-oto",
+            "date_of_addition": "2022-10-10",
+            "formula": "(RE1 - R)/(RE1 + R)",
+            "long_name": "Normalized Difference Chlorophyll Index",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://doi.org/10.1016/j.rse.2011.10.016",
+            "short_name": "NDCI"
+        },
         "NDDI": {
             "application_domain": "vegetation",
             "bands": [
