@@ -132,6 +132,18 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
+<td>Yellow</td>
+<td>Y</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
 <td>Red</td>
 <td>R</td>
 <td></td>

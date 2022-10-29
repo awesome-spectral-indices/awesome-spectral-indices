@@ -105,7 +105,14 @@ The formula of the index is presented as a string/expression (e.g. :code:`"(N - 
      - B3
      - B3
      - B2
-     - B4    
+     - B4 
+   * - Yellow
+     - Y
+     -
+     - 
+     - 
+     - 
+     -     
    * - Red
      - R
      -

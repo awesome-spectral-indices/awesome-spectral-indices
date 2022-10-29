@@ -8,6 +8,7 @@ class Bands(Enum):
     AEROSOL = "A"
     BLUE = "B"
     GREEN = "G"
+    YELLOW = "Y"
     RED = "R"
     NIR = "N"
     NIR2 = "N2"

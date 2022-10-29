@@ -151,6 +151,31 @@ bands = {
             "bandwidth": 20.0
         },
     },
+    "Y": {
+        "short_name": "Y",
+        "long_name": "Yellow",
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B5",
+            "name": "Yellow",
+            "wavelength": 610.0,
+            "bandwidth": 20.0
+        },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B4",
+            "name": "Yellow",
+            "wavelength": 605.0,
+            "bandwidth": 40.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B4",
+            "name": "Yellow",
+            "wavelength": 605.0,
+            "bandwidth": 40.0
+        },
+    },
     "R": {
         "short_name": "R",
         "long_name": "Red",
