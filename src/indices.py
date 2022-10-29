@@ -1962,5 +1962,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-10',
             contributor="https://github.com/kalab-oto"
         ),
+        WI2015=SpectralIndex(
+            short_name='WI2015',
+            long_name='Water Index 2015',
+            formula='1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2',
+            reference='https://doi.org/10.1016/j.rse.2015.12.055',
+            application_domain='water',
+            date_of_addition='2022-10-26',
+            contributor="https://github.com/remi-braun"
+        ),
     )
 )
