@@ -1971,5 +1971,50 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-26',
             contributor="https://github.com/remi-braun"
         ),
+        DSWI5=SpectralIndex(
+            short_name='DSWI5',
+            long_name='Disease-Water Stress Index 5',
+            formula='(N + G)/(S1 + R)',
+            reference='https://doi.org/10.1080/01431160310001618031',
+            application_domain='vegetation',
+            date_of_addition='2022-10-26',
+            contributor="https://github.com/remi-braun"
+        ),
+        DSWI1=SpectralIndex(
+            short_name='DSWI1',
+            long_name='Disease-Water Stress Index 1',
+            formula='N/S1',
+            reference='https://doi.org/10.1080/01431160310001618031',
+            application_domain='vegetation',
+            date_of_addition='2022-10-29',
+            contributor="https://github.com/davemlz"
+        ),
+        DSWI2=SpectralIndex(
+            short_name='DSWI2',
+            long_name='Disease-Water Stress Index 2',
+            formula='S1/G',
+            reference='https://doi.org/10.1080/01431160310001618031',
+            application_domain='vegetation',
+            date_of_addition='2022-10-29',
+            contributor="https://github.com/davemlz"
+        ),
+        DSWI3=SpectralIndex(
+            short_name='DSWI3',
+            long_name='Disease-Water Stress Index 3',
+            formula='S1/R',
+            reference='https://doi.org/10.1080/01431160310001618031',
+            application_domain='vegetation',
+            date_of_addition='2022-10-29',
+            contributor="https://github.com/davemlz"
+        ),
+        DSWI4=SpectralIndex(
+            short_name='DSWI4',
+            long_name='Disease-Water Stress Index 4',
+            formula='G/R',
+            reference='https://doi.org/10.1080/01431160310001618031',
+            application_domain='vegetation',
+            date_of_addition='2022-10-29',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
