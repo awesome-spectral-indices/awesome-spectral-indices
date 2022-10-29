@@ -208,6 +208,7 @@ WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * 
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
 WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
 WI2,Water Index 2,water,(B - S2) / (B + S2),"['B', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
+WI2015,Water Index 2015,water,1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2,"['G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.rse.2015.12.055,https://github.com/remi-braun,2022-10-26
 WRI,Water Ratio Index,water,(G + R)/(N + S1),"['G', 'R', 'N', 'S1']",https://doi.org/10.1109/GEOINFORMATICS.2010.5567762,https://github.com/davemlz,2022-01-17
 kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['g', 'kNN', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 kIPVI,Kernel Infrared Percentage Vegetation Index,kernel,kNN/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2022-04-08

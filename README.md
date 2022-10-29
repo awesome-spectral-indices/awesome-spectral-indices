@@ -127,6 +127,18 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
+<td>Yellow</td>
+<td>Y</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
 <td>Red</td>
 <td>R</td>
 <td></td>
@@ -500,6 +512,7 @@ There is no deadline. The repository is continuously updated!
 <tr><td width="50%"><a href="https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf" target="_blank">SWM</a>: Sentinel Water Mask.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.3390/rs11182186" target="_blank">WI1</a>: Water Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.3390/rs11182186" target="_blank">WI2</a>: Water Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
+<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2015.12.055" target="_blank">WI2015</a>: Water Index 2015.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.1109/GEOINFORMATICS.2010.5567762" target="_blank">WRI</a>: Water Ratio Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 </table>
 

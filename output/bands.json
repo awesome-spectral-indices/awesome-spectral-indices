@@ -519,5 +519,30 @@
         },
         "long_name": "Thermal Infrared 2",
         "short_name": "T2"
+    },
+    "Y": {
+        "long_name": "Yellow",
+        "planetscope": {
+            "band": "B5",
+            "bandwidth": 20.0,
+            "name": "Yellow",
+            "platform": "PlanetScope",
+            "wavelength": 610.0
+        },
+        "short_name": "Y",
+        "wv2": {
+            "band": "B4",
+            "bandwidth": 40.0,
+            "name": "Yellow",
+            "platform": "WorldView-2",
+            "wavelength": 605.0
+        },
+        "wv3": {
+            "band": "B4",
+            "bandwidth": 40.0,
+            "name": "Yellow",
+            "platform": "WorldView-3",
+            "wavelength": 605.0
+        }
     }
 }

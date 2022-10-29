@@ -4190,6 +4190,29 @@
             "reference": "https://doi.org/10.3390/rs11182186",
             "short_name": "WI2"
         },
+        "WI2015": {
+            "application_domain": "water",
+            "bands": [
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2022-10-26",
+            "formula": "1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2",
+            "long_name": "Water Index 2015",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.rse.2015.12.055",
+            "short_name": "WI2015"
+        },
         "WRI": {
             "application_domain": "water",
             "bands": [

@@ -22,4 +22,5 @@ S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`
 SWM,Sentinel Water Mask [`ref <https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf>`_],:math:`(B+G)/(N+S1)`
 WI1,Water Index 1 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(G-S2)/(G+S2)`
 WI2,Water Index 2 [`ref <https://doi.org/10.3390/rs11182186>`_],:math:`(B-S2)/(B+S2)`
+WI2015,Water Index 2015 [`ref <https://doi.org/10.1016/j.rse.2015.12.055>`_],:math:`1.7204+171\times G+3\times R-70\times N-45\times S1-71\times S2`
 WRI,Water Ratio Index [`ref <https://doi.org/10.1109/GEOINFORMATICS.2010.5567762>`_],:math:`(G+R)/(N+S1)`
