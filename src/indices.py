@@ -2016,5 +2016,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-29',
             contributor="https://github.com/davemlz"
         ),
+        DSI=SpectralIndex(
+            short_name='DSI',
+            long_name='Drought Stress Index',
+            formula='S1/N',
+            reference='https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf',
+            application_domain='vegetation',
+            date_of_addition='2022-10-26',
+            contributor="https://github.com/remi-braun"
+        ),
     )
 )
