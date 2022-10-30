@@ -12,6 +12,12 @@ BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/c
 CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/G)-1.0`
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`
 CVI,Chlorophyll Vegetation Index [`ref <https://doi.org/10.1007/s11119-010-9204-3>`_],:math:`(N\times R)/(G^{2.0})`
+DSI,Drought Stress Index [`ref <https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf>`_],:math:`S1/N`
+DSWI1,Disease-Water Stress Index 1 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`N/S1`
+DSWI2,Disease-Water Stress Index 2 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`S1/G`
+DSWI3,Disease-Water Stress Index 3 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`S1/R`
+DSWI4,Disease-Water Stress Index 4 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`G/R`
+DSWI5,Disease-Water Stress Index 5 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`(N+G)/(S1+R)`
 DVI,Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)00114-3>`_],:math:`N-R`
 DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N-R`
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
