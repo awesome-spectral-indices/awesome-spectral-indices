@@ -64,7 +64,7 @@ class IndexType(Enum):
     WATER = "water"
     BURN = "burn"
     SNOW = "snow"
-    DROUGHT = "drought"
+    SOIL = "soil"
     URBAN = "urban"
     KERNEL = "kernel"
     RADAR = "radar"

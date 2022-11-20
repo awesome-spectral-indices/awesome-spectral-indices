@@ -2025,5 +2025,32 @@ spindex = SpectralIndices(
             date_of_addition='2022-10-26',
             contributor="https://github.com/remi-braun"
         ),
+        BITM=SpectralIndex(
+            short_name='BITM',
+            long_name='Landsat TM-based Brightness Index',
+            formula='(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5',
+            reference='https://doi.org/10.1016/S0034-4257(98)00030-3',
+            application_domain='soil',
+            date_of_addition='2022-11-20',
+            contributor="https://github.com/davemlz"
+        ),
+        BIXS=SpectralIndex(
+            short_name='BIXS',
+            long_name='SPOT HRV XS-based Brightness Index',
+            formula='(((G**2.0)+(R**2.0))/2.0)**0.5',
+            reference='https://doi.org/10.1016/S0034-4257(98)00030-3',
+            application_domain='soil',
+            date_of_addition='2022-11-20',
+            contributor="https://github.com/remi-braun"
+        ),
+        RI4XS=SpectralIndex(
+            short_name='RI4XS',
+            long_name='SPOT HRV XS-based Redness Index 4',
+            formula='(R**2.0)/(G**4.0)',
+            reference='https://doi.org/10.1016/S0034-4257(98)00030-3',
+            application_domain='soil',
+            date_of_addition='2022-11-20',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
