@@ -442,7 +442,7 @@
             "short_name": "BWDRVI"
         },
         "BaI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "R",
                 "S1",
@@ -581,7 +581,7 @@
             "short_name": "DBI"
         },
         "DBSI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "G",
@@ -1920,7 +1920,7 @@
             "short_name": "NBAI"
         },
         "NBLI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "R",
                 "T1"
@@ -2155,7 +2155,7 @@
             "short_name": "NDBI"
         },
         "NDBaI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "T1"

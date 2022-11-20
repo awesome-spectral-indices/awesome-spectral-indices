@@ -20,14 +20,14 @@ BLFEI,Built-Up Land Features Extraction Index,urban,(((G+R+S2)/3.0)-S1)/(((G+R+S
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://doi.org/10.1016/S1672-6308(07)60027-4,https://github.com/MATRIX4284,2021-04-07
 BRBA,Band Ratio for Built-up Area,urban,R/S1,"['R', 'S1']",https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf,https://github.com/davemlz,2022-09-22
 BWDRVI,Blue Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - B) / (alpha * N + B),"['alpha', 'N', 'B']",https://doi.org/10.2135/cropsci2007.01.0031,https://github.com/davemlz,2021-09-20
-BaI,Bareness Index,urban,R + S1 - N,"['R', 'S1', 'N']",https://doi.org/10.1109/IGARSS.2005.1525743,https://github.com/davemlz,2022-04-18
+BaI,Bareness Index,soil,R + S1 - N,"['R', 'S1', 'N']",https://doi.org/10.1109/IGARSS.2005.1525743,https://github.com/davemlz,2022-04-18
 CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-04-07
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
 CSI,Char Soil Index,burn,N/S2,"['N', 'S2']",https://doi.org/10.1016/j.rse.2005.04.014,https://github.com/davemlz,2022-04-19
 CSIT,Char Soil Index Thermal,burn,N / (S2 * T1 / 10000.0),"['N', 'S2', 'T1']",https://doi.org/10.1080/01431160600954704,https://github.com/davemlz,2021-04-07
 CVI,Chlorophyll Vegetation Index,vegetation,(N * R) / (G ** 2.0),"['N', 'R', 'G']",https://doi.org/10.1007/s11119-010-9204-3,https://github.com/davemlz,2021-04-07
 DBI,Dry Built-Up Index,urban,((B - T1)/(B + T1)) - ((N - R)/(N + R)),"['B', 'T1', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
-DBSI,Dry Bareness Index,urban,((S1 - G)/(S1 + G)) - ((N - R)/(N + R)),"['S1', 'G', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
+DBSI,Dry Bareness Index,soil,((S1 - G)/(S1 + G)) - ((N - R)/(N + R)),"['S1', 'G', 'N', 'R']",https://doi.org/10.3390/land7030081,https://github.com/davemlz,2022-04-18
 DPDD,Dual-Pol Diagonal Distance,radar,(VV + VH)/2.0 ** 0.5,"['VV', 'VH']",https://doi.org/10.1016/j.rse.2018.09.003,https://github.com/davemlz,2022-04-19
 DSI,Drought Stress Index,vegetation,S1/N,"['S1', 'N']",https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf,https://github.com/remi-braun,2022-10-26
 DSWI1,Disease-Water Stress Index 1,vegetation,N/S1,"['N', 'S1']",https://doi.org/10.1080/01431160310001618031,https://github.com/davemlz,2022-10-29
@@ -92,7 +92,7 @@ MTVI1,Modified Triangular Vegetation Index 1,vegetation,1.2 * (1.2 * (N - G) - 2
 MTVI2,Modified Triangular Vegetation Index 2,vegetation,(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5),"['N', 'G', 'R']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14
 MuWIR,Revised Multi-Spectral Water Index,water,-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1)),"['B', 'G', 'N', 'S2', 'S1']",https://doi.org/10.3390/rs10101643,https://github.com/davemlz,2022-04-09
 NBAI,Normalized Built-up Area Index,urban,((S2 - S1)/G)/((S2 + S1)/G),"['S2', 'S1', 'G']",https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf,https://github.com/davemlz,2022-09-22
-NBLI,Normalized Difference Bare Land Index,urban,(R - T1)/(R + T1),"['R', 'T1']",https://doi.org/10.3390/rs9030249,https://github.com/davemlz,2022-04-18
+NBLI,Normalized Difference Bare Land Index,soil,(R - T1)/(R + T1),"['R', 'T1']",https://doi.org/10.3390/rs9030249,https://github.com/davemlz,2022-04-18
 NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),"['N', 'S2']",https://doi.org/10.3133/ofr0211,https://github.com/davemlz,2021-04-07
 NBR2,Normalized Burn Ratio 2,burn,(S1 - S2) / (S1 + S2),"['S1', 'S2']",https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2,https://github.com/davemlz,2021-09-20
 NBRSWIR,Normalized Burn Ratio SWIR,burn,(S2 - S1 - 0.02)/(S2 + S1 + 0.1),"['S2', 'S1']",https://doi.org/10.1080/22797254.2020.1738900,https://github.com/davemlz,2022-09-22
@@ -104,7 +104,7 @@ NBSIMS,Non-Binary Snow Index for Multi-Component Surfaces,snow,0.36 * (G + R + N
 NBUI,New Built-Up Index,urban,((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1),"['S1', 'N', 'T1', 'R', 'L', 'G']",https://hdl.handle.net/1959.11/29500,https://github.com/davemlz,2022-04-18
 ND705,Normalized Difference (705 and 750 nm),vegetation,(RE2 - RE1)/(RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0034-4257(02)00010-X,https://github.com/davemlz,2022-04-08
 NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),"['S1', 'N']",http://dx.doi.org/10.1080/01431160304987,https://github.com/davemlz,2021-05-14
-NDBaI,Normalized Difference Bareness Index,urban,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17
+NDBaI,Normalized Difference Bareness Index,soil,(S1 - T1) / (S1 + T1),"['S1', 'T1']",https://doi.org/10.1109/IGARSS.2005.1526319,https://github.com/davemlz,2021-09-17
 NDCI,Normalized Difference Chlorophyll Index,water,(RE1 - R)/(RE1 + R),"['RE1', 'R']",https://doi.org/10.1016/j.rse.2011.10.016,https://github.com/kalab-oto,2022-10-10
 NDDI,Normalized Difference Drought Index,vegetation,(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N))),"['N', 'R', 'G']",https://doi.org/10.1029/2006GL029127,https://github.com/davemlz,2021-04-07
 NDGI,Normalized Difference Greenness Index,vegetation,(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R),"['lambdaN', 'lambdaR', 'lambdaG', 'G', 'N', 'R']",https://doi.org/10.1016/j.rse.2019.03.028,https://github.com/davemlz,2022-01-20
