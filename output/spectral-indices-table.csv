@@ -14,6 +14,8 @@ BAIM,Burned Area Index adapted to MODIS,burn,1.0/((0.05 - N) ** 2.0) + ((0.2 - S
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0),"['RE2', 'RE3', 'N2', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BCC,Blue Chromatic Coordinate,vegetation,B / (R + G + B),"['B', 'R', 'G']",https://doi.org/10.1016/0034-4257(87)90088-5,https://github.com/davemlz,2022-01-17
 BI,Bare Soil Index,urban,((S1 + R) - (N + B))/((S1 + R) + (N + B)),"['S1', 'R', 'N', 'B']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
+BITM,Landsat TM-based Brightness Index,soil,(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5,"['B', 'G', 'R']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/davemlz,2022-11-20
+BIXS,SPOT HRV XS-based Brightness Index,soil,(((G**2.0)+(R**2.0))/2.0)**0.5,"['G', 'R']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/remi-braun,2022-11-20
 BLFEI,Built-Up Land Features Extraction Index,urban,(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1),"['G', 'R', 'S2', 'S1']",https://doi.org/10.1080/10106049.2018.1497094,https://github.com/davemlz,2022-02-09
 BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['N', 'B']",https://doi.org/10.1016/S1672-6308(07)60027-4,https://github.com/MATRIX4284,2021-04-07
 BRBA,Band Ratio for Built-up Area,urban,R/S1,"['R', 'S1']",https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf,https://github.com/davemlz,2022-09-22
@@ -164,6 +166,7 @@ RFDI,Radar Forest Degradation Index,radar,(HH - HV)/(HH + HV),"['HH', 'HV']",htt
 RGBVI,Red Green Blue Vegetation Index,vegetation,(G ** 2.0 - B * R)/(G ** 2.0 + B * R),"['G', 'B', 'R']",https://doi.org/10.1016/j.jag.2015.02.012,https://github.com/davemlz,2022-04-08
 RGRI,Red-Green Ratio Index,vegetation,R/G,"['R', 'G']",https://doi.org/10.1016/j.jag.2014.03.018,https://github.com/davemlz,2022-04-08
 RI,Redness Index,vegetation,(R - G)/(R + G),"['R', 'G']",https://www.documentation.ird.fr/hor/fdi:34390,https://github.com/davemlz,2022-04-09
+RI4XS,SPOT HRV XS-based Redness Index 4,soil,(R**2.0)/(G**4.0),"['R', 'G']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/davemlz,2022-11-20
 RVI,Ratio Vegetation Index,vegetation,RE2 / R,"['RE2', 'R']",https://doi.org/10.2134/agronj1968.00021962006000060016x,https://github.com/davemlz,2021-04-07
 S2REP,Sentinel-2 Red-Edge Position,vegetation,705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1)),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 S2WI,Sentinel-2 Water Index,water,(RE1 - S2)/(RE1 + S2),"['RE1', 'S2']",https://doi.org/10.3390/w13121647,https://github.com/MATRIX4284,2022-03-06

@@ -1,0 +1,4 @@
+Index,Long Name,Equation
+BITM,Landsat TM-based Brightness Index [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(((B^{2.0})+(G^{2.0})+(R^{2.0}))/3.0)^{0.5}`
+BIXS,SPOT HRV XS-based Brightness Index [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(((G^{2.0})+(R^{2.0}))/2.0)^{0.5}`
+RI4XS,SPOT HRV XS-based Redness Index 4 [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(R^{2.0})/(G^4.0)`
