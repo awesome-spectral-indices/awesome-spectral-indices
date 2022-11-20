@@ -439,7 +439,7 @@ def filterByAppDomain():
 #                        text.append("\n")
 
 text = []
-for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
+for appDomain in ["vegetation","water","burn","snow","urban","soil","kernel","radar"]:
     text.append(f"\n## {appDomain.capitalize()}\n\n<table>")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
