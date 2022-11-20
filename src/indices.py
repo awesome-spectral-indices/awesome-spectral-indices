@@ -2052,5 +2052,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-11-20',
             contributor="https://github.com/davemlz"
         ),
+        NDSIWV=SpectralIndex(
+            short_name='NDSIWV',
+            long_name='WorldView Normalized Difference Soil Index',
+            formula='(G - Y)/(G + Y)',
+            reference='https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4',
+            application_domain='soil',
+            date_of_addition='2022-11-20',
+            contributor="https://github.com/remi-braun"
+        ),
     )
 )
