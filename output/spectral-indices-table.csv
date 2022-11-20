@@ -13,7 +13,7 @@ BAI,Burned Area Index,burn,1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0),"['R', '
 BAIM,Burned Area Index adapted to MODIS,burn,1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0),"['N', 'S2']",https://doi.org/10.1016/j.foreco.2006.08.248,https://github.com/davemlz,2022-04-20
 BAIS2,Burned Area Index for Sentinel 2,burn,(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0),"['RE2', 'RE3', 'N2', 'R', 'S2']",https://doi.org/10.3390/ecrs-2-05177,https://github.com/davemlz,2021-04-07
 BCC,Blue Chromatic Coordinate,vegetation,B / (R + G + B),"['B', 'R', 'G']",https://doi.org/10.1016/0034-4257(87)90088-5,https://github.com/davemlz,2022-01-17
-BI,Bare Soil Index,urban,((S1 + R) - (N + B))/((S1 + R) + (N + B)),"['S1', 'R', 'N', 'B']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
+BI,Bare Soil Index,soil,((S1 + R) - (N + B))/((S1 + R) + (N + B)),"['S1', 'R', 'N', 'B']",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf,https://github.com/davemlz,2022-04-08
 BITM,Landsat TM-based Brightness Index,soil,(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5,"['B', 'G', 'R']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/davemlz,2022-11-20
 BIXS,SPOT HRV XS-based Brightness Index,soil,(((G**2.0)+(R**2.0))/2.0)**0.5,"['G', 'R']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/remi-braun,2022-11-20
 BLFEI,Built-Up Land Features Extraction Index,urban,(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1),"['G', 'R', 'S2', 'S1']",https://doi.org/10.1080/10106049.2018.1497094,https://github.com/davemlz,2022-02-09
@@ -40,7 +40,7 @@ DVIplus,Difference Vegetation Index Plus,vegetation,((lambdaN - lambdaR)/(lambda
 DpRVIHH,Dual-Polarized Radar Vegetation Index HH,radar,(4.0 * HV)/(HH + HV),"['HV', 'HH']",https://www.tandfonline.com/doi/abs/10.5589/m12-043,https://github.com/davemlz,2021-12-25
 DpRVIVV,Dual-Polarized Radar Vegetation Index VV,radar,(4.0 * VH)/(VV + VH),"['VH', 'VV']",https://doi.org/10.3390/app9040655,https://github.com/davemlz,2021-12-25
 EBBI,Enhanced Built-Up and Bareness Index,urban,(S1 - N) / (10.0 * ((S1 + T1) ** 0.5)),"['S1', 'N', 'T1']",https://doi.org/10.3390/rs4102957,https://github.com/davemlz,2021-09-17
-EMBI,Enhanced Modified Bare Soil Index,urban,((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5),"['S1', 'S2', 'N', 'G']",https://doi.org/10.1016/j.jag.2022.102703,https://github.com/davemlz,2022-04-18
+EMBI,Enhanced Modified Bare Soil Index,soil,((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5),"['S1', 'S2', 'N', 'G']",https://doi.org/10.1016/j.jag.2022.102703,https://github.com/davemlz,2022-04-18
 EVI,Enhanced Vegetation Index,vegetation,g * (N - R) / (N + C1 * R - C2 * B + L),"['g', 'N', 'R', 'C1', 'C2', 'B', 'L']",https://doi.org/10.1016/S0034-4257(96)00112-5,https://github.com/davemlz,2021-04-07
 EVI2,Two-Band Enhanced Vegetation Index,vegetation,g * (N - R) / (N + 2.4 * R + L),"['g', 'N', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,https://github.com/davemlz,2021-04-07
 ExG,Excess Green Index,vegetation,2 * G - R - B,"['G', 'R', 'B']",https://doi.org/10.13031/2013.27838,https://github.com/davemlz,2021-05-14
@@ -67,7 +67,7 @@ IKAW,Kawashima Index,vegetation,(R - B)/(R + B),"['R', 'B']",https://doi.org/10.
 IPVI,Infrared Percentage Vegetation Index,vegetation,N/(N + R),"['N', 'R']",https://doi.org/10.1016/0034-4257(90)90085-Z,https://github.com/davemlz,2022-04-08
 IRECI,Inverted Red-Edge Chlorophyll Index,vegetation,(RE3 - R) / (RE1 / RE2),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 LSWI,Land Surface Water Index,water,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1016/j.rse.2003.11.008,https://github.com/davemlz,2022-04-20
-MBI,Modified Bare Soil Index,urban,((S1 - S2 - N)/(S1 + S2 + N)) + 0.5,"['S1', 'S2', 'N']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
+MBI,Modified Bare Soil Index,soil,((S1 - S2 - N)/(S1 + S2 + N)) + 0.5,"['S1', 'S2', 'N']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
 MBWI,Multi-Band Water Index,water,(omega * G) - R - N - S1 - S2,"['omega', 'G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.jag.2018.01.018,https://github.com/davemlz,2022-01-17
 MCARI,Modified Chlorophyll Absorption in Reflectance Index,vegetation,((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R),"['RE1', 'R', 'G']",http://dx.doi.org/10.1016/S0034-4257(00)00113-9,https://github.com/davemlz,2021-05-13
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1,vegetation,1.2 * (2.5 * (N - R) - 1.3 * (N - G)),"['N', 'R', 'G']",https://doi.org/10.1016/j.rse.2003.12.013,https://github.com/davemlz,2021-05-14
@@ -122,10 +122,11 @@ NDPonI,Normalized Difference Pond Index,water,(S1-G)/(S1+G),"['S1', 'G']",https:
 NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N', 'RE1']",https://doi.org/10.1016/1011-1344(93)06963-4,https://github.com/davemlz,2021-05-13
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07
 NDSII,Normalized Difference Snow Ice Index,snow,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1080/01431160802385459,https://github.com/davemlz,2022-04-08
+NDSIWV,WorldView Normalized Difference Soil Index,soil,(G - Y)/(G + Y),"['G', 'Y']",https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4,https://github.com/remi-braun,2022-11-20
 NDSInw,Normalized Difference Snow Index with no Water,snow,(N - S1 - beta)/(N + S1),"['N', 'S1', 'beta']",https://doi.org/10.3390/w12051339,https://github.com/davemlz,2022-04-08
 NDSWIR,Normalized Difference SWIR,burn,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1109/TGRS.2003.819190,https://github.com/davemlz,2022-09-22
 NDSaII,Normalized Difference Snow and Ice Index,snow,(R - S1) / (R + S1),"['R', 'S1']",https://doi.org/10.1080/01431160119766,https://github.com/davemlz,2021-09-18
-NDSoiI,Normalized Difference Soil Index,urban,(S2 - G)/(S2 + G),"['S2', 'G']",https://doi.org/10.1016/j.jag.2015.02.010,https://github.com/davemlz,2022-04-18
+NDSoiI,Normalized Difference Soil Index,soil,(S2 - G)/(S2 + G),"['S2', 'G']",https://doi.org/10.1016/j.jag.2015.02.010,https://github.com/davemlz,2022-04-18
 NDTI,Normalized Difference Turbidity Index,water,(R-G)/(R+G),"['R', 'G']",https://doi.org/10.1016/j.rse.2006.07.012,https://github.com/CvenGeo,2022-10-03
 NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),"['N', 'R']",https://ntrs.nasa.gov/citations/19740022614,https://github.com/davemlz,2021-04-07
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm),vegetation,(RE2 - RE1) / (RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
@@ -143,10 +144,10 @@ NLI,Non-Linear Vegetation Index,vegetation,((N ** 2) - R)/((N ** 2) + R),"['N', 
 NMDI,Normalized Multi-band Drought Index,vegetation,(N - (S1 - S2))/(N + (S1 - S2)),"['N', 'S1', 'S2']",https://doi.org/10.1029/2007GL031021,https://github.com/davemlz,2021-05-11
 NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
 NRFIr,Normalized Rapeseed Flowering Index Red,vegetation,(R - S2) / (R + S2),"['R', 'S2']",https://doi.org/10.3390/rs13010105,https://github.com/davemlz,2021-09-18
-NSDS,Normalized Shortwave Infrared Difference Soil-Moisture,urban,(S1 - S2)/(S1 + S2),"['S1', 'S2']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
-NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1,water,(S1-S2)/S1,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
-NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2,water,(S1-S2)/S2,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
-NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3,water,(S1-S2)/(S1+S2),"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSDS,Normalized Shortwave Infrared Difference Soil-Moisture,soil,(S1 - S2)/(S1 + S2),"['S1', 'S2']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
+NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1,soil,(S1-S2)/S1,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2,soil,(S1-S2)/S2,"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
+NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3,soil,(S1-S2)/(S1+S2),"['S1', 'S2']",https://doi.org/10.1016/j.isprsjprs.2019.06.012,https://github.com/CvenGeo,2022-10-03
 NSTv1,NIR-SWIR-Temperature Version 1,burn,((N-S2)/(N+S2))*T1,"['N', 'S2', 'T1']",https://doi.org/10.1016/j.rse.2011.06.010,https://github.com/davemlz,2022-10-06
 NSTv2,NIR-SWIR-Temperature Version 2,burn,(N-(S2+T1))/(N+(S2+T1)),"['N', 'S2', 'T1']",https://doi.org/10.1016/j.rse.2011.06.010,https://github.com/davemlz,2022-10-06
 NWI,New Water Index,water,(B - (N + S1 + S2))/(B + (N + S1 + S2)),"['B', 'N', 'S1', 'S2']",https://doi.org/10.11873/j.issn.1004-0323.2009.2.167,https://github.com/davemlz,2022-01-17

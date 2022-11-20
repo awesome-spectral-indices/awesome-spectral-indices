@@ -292,7 +292,7 @@
             "short_name": "BCC"
         },
         "BI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "R",
@@ -839,7 +839,7 @@
             "short_name": "EBBI"
         },
         "EMBI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2",
@@ -1415,7 +1415,7 @@
             "short_name": "LSWI"
         },
         "MBI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2",
@@ -2511,6 +2511,27 @@
             "reference": "https://doi.org/10.1080/01431160802385459",
             "short_name": "NDSII"
         },
+        "NDSIWV": {
+            "application_domain": "soil",
+            "bands": [
+                "G",
+                "Y"
+            ],
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2022-11-20",
+            "formula": "(G - Y)/(G + Y)",
+            "long_name": "WorldView Normalized Difference Soil Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
+            "short_name": "NDSIWV"
+        },
         "NDSInw": {
             "application_domain": "snow",
             "bands": [
@@ -2573,7 +2594,7 @@
             "short_name": "NDSaII"
         },
         "NDSoI": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S2",
                 "G"
@@ -2942,7 +2963,7 @@
             "short_name": "NRFIr"
         },
         "NSDS": {
-            "application_domain": "urban",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2"
@@ -2962,7 +2983,7 @@
             "short_name": "NSDS"
         },
         "NSDSI1": {
-            "application_domain": "water",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2"
@@ -2982,7 +3003,7 @@
             "short_name": "NSDSI1"
         },
         "NSDSI2": {
-            "application_domain": "water",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2"
@@ -3002,7 +3023,7 @@
             "short_name": "NSDSI2"
         },
         "NSDSI3": {
-            "application_domain": "water",
+            "application_domain": "soil",
             "bands": [
                 "S1",
                 "S2"

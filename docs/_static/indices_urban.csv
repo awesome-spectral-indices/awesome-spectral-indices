@@ -1,14 +1,11 @@
 Index,Long Name,Equation
-BI,Bare Soil Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`((S1+R)-(N+B))/((S1+R)+(N+B))`
 BLFEI,Built-Up Land Features Extraction Index [`ref <https://doi.org/10.1080/10106049.2018.1497094>`_],:math:`(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)`
 BRBA,Band Ratio for Built-up Area [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`R/S1`
 BaI,Bareness Index [`ref <https://doi.org/10.1109/IGARSS.2005.1525743>`_],:math:`R+S1-N`
 DBI,Dry Built-Up Index [`ref <https://doi.org/10.3390/land7030081>`_],:math:`((B-T1)/(B+T1))-((N-R)/(N+R))`
 DBSI,Dry Bareness Index [`ref <https://doi.org/10.3390/land7030081>`_],:math:`((S1-G)/(S1+G))-((N-R)/(N+R))`
 EBBI,Enhanced Built-Up and Bareness Index [`ref <https://doi.org/10.3390/rs4102957>`_],:math:`(S1-N)/(10.0\times ((S1+T1)^{0.5}))`
-EMBI,Enhanced Modified Bare Soil Index [`ref <https://doi.org/10.1016/j.jag.2022.102703>`_],:math:`((((S1-S2-N)/(S1+S2+N))+0.5)-((G-S1)/(G+S1))-0.5)/((((S1-S2-N)/(S1+S2+N))+0.5)+((G-S1)/(G+S1))+1.5)`
 IBI,Index-Based Built-Up Index [`ref <https://doi.org/10.1080/01431160802039957>`_],:math:`(((S1-N)/(S1+N))-(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)`
-MBI,Modified Bare Soil Index [`ref <https://doi.org/10.3390/land10030231>`_],:math:`((S1-S2-N)/(S1+S2+N))+0.5`
 NBAI,Normalized Built-up Area Index [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`((S2-S1)/G)/((S2+S1)/G)`
 NBLI,Normalized Difference Bare Land Index [`ref <https://doi.org/10.3390/rs9030249>`_],:math:`(R-T1)/(R+T1)`
 NBUI,New Built-Up Index [`ref <https://hdl.handle.net/1959.11/29500>`_],:math:`((S1-N)/(10.0\times (T1+S1)^{0.5}))-(((N-R)\times (1.0+L))/(N-R+L))-(G-S1)/(G+S1)`
@@ -19,9 +16,7 @@ NDISIg,Normalized Difference Impervious Surface Index Green [`ref <https://doi.o
 NDISImndwi,Normalized Difference Impervious Surface Index with MNDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(((G-S1)/(G+S1))+N+S1)/3.0)/(T1+(((G-S1)/(G+S1))+N+S1)/3.0)`
 NDISIndwi,Normalized Difference Impervious Surface Index with NDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(((G-N)/(G+N))+N+S1)/3.0)/(T1+(((G-N)/(G+N))+N+S1)/3.0)`
 NDISIr,Normalized Difference Impervious Surface Index Red [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(R+N+S1)/3.0)/(T1+(R+N+S1)/3.0)`
-NDSoiI,Normalized Difference Soil Index [`ref <https://doi.org/10.1016/j.jag.2015.02.010>`_],:math:`(S2-G)/(S2+G)`
 NHFD,Non-Homogeneous Feature Difference [`ref <https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4>`_],:math:`(RE1-A)/(RE1+A)`
-NSDS,Normalized Shortwave Infrared Difference Soil-Moisture [`ref <https://doi.org/10.3390/land10030231>`_],:math:`(S1-S2)/(S1+S2)`
 PISI,Perpendicular Impervious Surface Index [`ref <https://doi.org/10.3390/rs10101521>`_],:math:`0.8192\times B-0.5735\times N+0.0750`
 UI,Urban Index [`ref <https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf>`_],:math:`(S2-N)/(S2+N)`
 VIBI,Vegetation Index Built-up Index [`ref <http://dx.doi.org/10.1080/01431161.2012.687842>`_],:math:`((N-R)/(N+R))/(((N-R)/(N+R))+((S1-N)/(S1+N)))`

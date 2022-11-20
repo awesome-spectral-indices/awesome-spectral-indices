@@ -1,4 +1,13 @@
 Index,Long Name,Equation
+BI,Bare Soil Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`((S1+R)-(N+B))/((S1+R)+(N+B))`
 BITM,Landsat TM-based Brightness Index [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(((B^{2.0})+(G^{2.0})+(R^{2.0}))/3.0)^{0.5}`
 BIXS,SPOT HRV XS-based Brightness Index [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(((G^{2.0})+(R^{2.0}))/2.0)^{0.5}`
+EMBI,Enhanced Modified Bare Soil Index [`ref <https://doi.org/10.1016/j.jag.2022.102703>`_],:math:`((((S1-S2-N)/(S1+S2+N))+0.5)-((G-S1)/(G+S1))-0.5)/((((S1-S2-N)/(S1+S2+N))+0.5)+((G-S1)/(G+S1))+1.5)`
+MBI,Modified Bare Soil Index [`ref <https://doi.org/10.3390/land10030231>`_],:math:`((S1-S2-N)/(S1+S2+N))+0.5`
+NDSIWV,WorldView Normalized Difference Soil Index [`ref <https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4>`_],:math:`(G-Y)/(G+Y)`
+NDSoiI,Normalized Difference Soil Index [`ref <https://doi.org/10.1016/j.jag.2015.02.010>`_],:math:`(S2-G)/(S2+G)`
+NSDS,Normalized Shortwave Infrared Difference Soil-Moisture [`ref <https://doi.org/10.3390/land10030231>`_],:math:`(S1-S2)/(S1+S2)`
+NSDSI1,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/S1`
+NSDSI2,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/S2`
+NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3 [`ref <https://doi.org/10.1016/j.isprsjprs.2019.06.012>`_],:math:`(S1-S2)/(S1+S2)`
 RI4XS,SPOT HRV XS-based Redness Index 4 [`ref <https://doi.org/10.1016/S0034-4257(98)00030-3>`_],:math:`(R^{2.0})/(G^4.0)`
