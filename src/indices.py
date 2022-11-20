@@ -635,7 +635,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Bareness Index',
             formula='(S1 - T1) / (S1 + T1)',
             reference='https://doi.org/10.1109/IGARSS.2005.1526319',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2021-09-17',
             contributor="https://github.com/davemlz"
         ),
@@ -1616,7 +1616,7 @@ spindex = SpectralIndices(
             long_name='Bareness Index',
             formula='R + S1 - N',
             reference='https://doi.org/10.1109/IGARSS.2005.1525743',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1625,7 +1625,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Bare Land Index',
             formula='(R - T1)/(R + T1)',
             reference='https://doi.org/10.3390/rs9030249',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1643,7 +1643,7 @@ spindex = SpectralIndices(
             long_name='Dry Bareness Index',
             formula='((S1 - G)/(S1 + G)) - ((N - R)/(N + R))',
             reference='https://doi.org/10.3390/land7030081',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
