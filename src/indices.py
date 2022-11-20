@@ -1220,7 +1220,7 @@ spindex = SpectralIndices(
             long_name='Bare Soil Index',
             formula='((S1 + R) - (N + B))/((S1 + R) + (N + B))',
             reference='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-08',
             contributor="https://github.com/davemlz"
         ),
@@ -1580,7 +1580,7 @@ spindex = SpectralIndices(
             long_name='Normalized Shortwave Infrared Difference Soil-Moisture',
             formula='(S1 - S2)/(S1 + S2)',
             reference='https://doi.org/10.3390/land10030231',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1589,7 +1589,7 @@ spindex = SpectralIndices(
             long_name='Modified Bare Soil Index',
             formula='((S1 - S2 - N)/(S1 + S2 + N)) + 0.5',
             reference='https://doi.org/10.3390/land10030231',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1598,7 +1598,7 @@ spindex = SpectralIndices(
             long_name='Enhanced Modified Bare Soil Index',
             formula='((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)',
             reference='https://doi.org/10.1016/j.jag.2022.102703',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1607,7 +1607,7 @@ spindex = SpectralIndices(
             long_name='Normalized Difference Soil Index',
             formula='(S2 - G)/(S2 + G)',
             reference='https://doi.org/10.1016/j.jag.2015.02.010',
-            application_domain='urban',
+            application_domain='soil',
             date_of_addition='2022-04-18',
             contributor="https://github.com/davemlz"
         ),
@@ -1895,7 +1895,7 @@ spindex = SpectralIndices(
             long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1',
             formula='(S1-S2)/S1',
             reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
-            application_domain='water',
+            application_domain='soil',
             date_of_addition='2022-10-03',
             contributor="https://github.com/CvenGeo"
         ),
@@ -1904,7 +1904,7 @@ spindex = SpectralIndices(
             long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2',
             formula='(S1-S2)/S2',
             reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
-            application_domain='water',
+            application_domain='soil',
             date_of_addition='2022-10-03',
             contributor="https://github.com/CvenGeo"
         ),
@@ -1913,7 +1913,7 @@ spindex = SpectralIndices(
             long_name='Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3',
             formula='(S1-S2)/(S1+S2)',
             reference='https://doi.org/10.1016/j.isprsjprs.2019.06.012',
-            application_domain='water',
+            application_domain='soil',
             date_of_addition='2022-10-03',
             contributor="https://github.com/CvenGeo"
         ),
