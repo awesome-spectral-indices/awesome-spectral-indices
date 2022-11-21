@@ -520,6 +520,24 @@
         "long_name": "Thermal Infrared 2",
         "short_name": "T2"
     },
+    "WV": {
+        "long_name": "Water Vapour",
+        "sentinel2a": {
+            "band": "B9",
+            "bandwidth": 20.0,
+            "name": "Water Vapour",
+            "platform": "Sentinel-2A",
+            "wavelength": 945.1
+        },
+        "sentinel2b": {
+            "band": "B9",
+            "bandwidth": 21.0,
+            "name": "Water Vapour",
+            "platform": "Sentinel-2B",
+            "wavelength": 943.2
+        },
+        "short_name": "WV"
+    },
     "Y": {
         "long_name": "Yellow",
         "planetscope": {

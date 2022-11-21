@@ -211,6 +211,18 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
+<td>Water Vapour</td>
+<td>WV</td>
+<td></td>
+<td>B9</td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
 <td>SWIR 1</td>
 <td>S1</td>
 <td></td>
@@ -588,7 +600,7 @@ There is no deadline. The repository is continuously updated!
 <tr><td width="50%"><a href="https://doi.org/10.3390/land10030231" target="_blank">MBI</a>: Modified Bare Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.3390/rs9030249" target="_blank">NBLI</a>: Normalized Difference Bare Land Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.2005.1526319" target="_blank">NDBaI</a>: Normalized Difference Bareness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI"> </td></tr>
-<tr><td width="50%"><a href="https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4" target="_blank">NDSIWV</a>: WorldView Normalized Difference Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
+<tr><td width="50%"><a href="https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4" target="_blank">NDSIWV</a>: WorldView Normalized Difference Soil Index.</td><td width="50%"></td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2015.02.010" target="_blank">NDSoI</a>: Normalized Difference Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.3390/land10030231" target="_blank">NSDS</a>: Normalized Shortwave Infrared Difference Soil-Moisture.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
 <tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2019.06.012" target="_blank">NSDSI1</a>: Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
