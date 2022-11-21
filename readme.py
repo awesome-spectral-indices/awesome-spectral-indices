@@ -216,6 +216,18 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
+<td>Water Vapour</td>
+<td>WV</td>
+<td></td>
+<td>B9</td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+<tr>
+
 <td>SWIR 1</td>
 <td>S1</td>
 <td></td>

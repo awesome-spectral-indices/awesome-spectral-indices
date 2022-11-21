@@ -12,6 +12,7 @@ class Bands(Enum):
     RED = "R"
     NIR = "N"
     NIR2 = "N2"
+    WATERVAPOUR = "WV"
     RED1 = "RE1"
     RED2 = "RE2"
     RED3 = "RE3"    

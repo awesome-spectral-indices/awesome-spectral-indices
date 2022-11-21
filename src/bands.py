@@ -368,6 +368,24 @@ bands = {
             "bandwidth": 35.0
         },
     },
+    "WV": {
+        "short_name": "WV",
+        "long_name": "Water Vapour",
+        "sentinel2a": {
+            "platform": "Sentinel-2A",
+            "band": "B9",
+            "name": "Water Vapour",
+            "wavelength": 945.1,
+            "bandwidth": 20.0
+        },
+        "sentinel2b": {
+            "platform": "Sentinel-2B",
+            "band": "B9",
+            "name": "Water Vapour",
+            "wavelength": 943.2,
+            "bandwidth": 21.0
+        },
+    },
     "S1": {
         "short_name": "S1",
         "long_name": "Short-wave Infrared (SWIR) 1",
