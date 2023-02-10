@@ -3996,6 +3996,26 @@
             "reference": "https://ntrs.nasa.gov/citations/19740022614",
             "short_name": "TVI"
         },
+        "TWI": {
+            "application_domain": "water",
+            "bands": [
+                "RE1",
+                "RE2",
+                "G",
+                "S2",
+                "B",
+                "N"
+            ],
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2023-02-10",
+            "formula": "(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))",
+            "long_name": "Triangle Water Index",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://doi.org/10.3390/rs14215289",
+            "short_name": "TWI"
+        },
         "TriVI": {
             "application_domain": "vegetation",
             "bands": [
