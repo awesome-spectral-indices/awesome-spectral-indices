@@ -2061,5 +2061,14 @@ spindex = SpectralIndices(
             date_of_addition='2022-11-20',
             contributor="https://github.com/remi-braun"
         ),
+        TWI=SpectralIndex(
+            short_name='TWI',
+            long_name='Triangle Water Index',
+            formula='(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))',
+            reference='https://doi.org/10.3390/rs14215289',
+            application_domain='water',
+            date_of_addition='2023-02-10',
+            contributor="https://github.com/remi-braun"
+        ),
     )
 )
