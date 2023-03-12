@@ -9,6 +9,7 @@ import json
 bandVars = [
     'A',
     'B',
+    'G1',
     'G',
     'Y',
     'R',
@@ -152,6 +153,7 @@ bandsPlatform = {
     ],
     "MODIS": [
         'B',
+        'G1',
         'G',
         'R',
         'N',
