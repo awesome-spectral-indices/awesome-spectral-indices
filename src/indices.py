@@ -2070,5 +2070,14 @@ spindex = SpectralIndices(
             date_of_addition='2023-02-10',
             contributor="https://github.com/remi-braun"
         ),
+        CCI=SpectralIndex(
+            short_name='CCI',
+            long_name='Chlorophyll Carotenoid Index',
+            formula='(G1 - R)/(G1 + R)',
+            reference='https://doi.org/10.1073/pnas.1606162113',
+            application_domain='vegetation',
+            date_of_addition='2023-03-12',
+            contributor="https://github.com/joanvlasschaert"
+        ),
     )
 )
