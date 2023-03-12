@@ -547,9 +547,7 @@
             "formula": "N / (S2 * T1 / 10000.0)",
             "long_name": "Char Soil Index Thermal",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "CSIT"
@@ -589,9 +587,7 @@
             "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
             "long_name": "Dry Built-Up Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.3390/land7030081",
             "short_name": "DBI"
@@ -847,9 +843,7 @@
             "formula": "(S1 - N) / (10.0 * ((S1 + T1) ** 0.5))",
             "long_name": "Enhanced Built-Up and Bareness Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.3390/rs4102957",
             "short_name": "EBBI"
@@ -1946,9 +1940,7 @@
             "formula": "(R - T1)/(R + T1)",
             "long_name": "Normalized Difference Bare Land Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.3390/rs9030249",
             "short_name": "NBLI"
@@ -2025,9 +2017,7 @@
             "formula": "(N - (S2 * T1 / 10000.0)) / (N + (S2 * T1 / 10000.0))",
             "long_name": "Normalized Burn Ratio Thermal 1",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT1"
@@ -2044,9 +2034,7 @@
             "formula": "((N / (T1 / 10000.0)) - S2) / ((N / (T1 / 10000.0)) + S2)",
             "long_name": "Normalized Burn Ratio Thermal 2",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT2"
@@ -2063,9 +2051,7 @@
             "formula": "((N - (T1 / 10000.0)) - S2) / ((N - (T1 / 10000.0)) + S2)",
             "long_name": "Normalized Burn Ratio Thermal 3",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "NBRT3"
@@ -2127,9 +2113,7 @@
             "formula": "((S1 - N)/(10.0 * (T1 + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
             "long_name": "New Built-Up Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://hdl.handle.net/1959.11/29500",
             "short_name": "NBUI"
@@ -2181,9 +2165,7 @@
             "formula": "(S1 - T1) / (S1 + T1)",
             "long_name": "Normalized Difference Bareness Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1109/IGARSS.2005.1526319",
             "short_name": "NDBaI"
@@ -2305,9 +2287,7 @@
             "formula": "(T1 - (B + N + S1) / 3.0)/(T1 + (B + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Blue",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIb"
@@ -2325,9 +2305,7 @@
             "formula": "(T1 - (G + N + S1) / 3.0)/(T1 + (G + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Green",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIg"
@@ -2345,9 +2323,7 @@
             "formula": "(T1 - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T1 + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index with MNDWI",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISImndwi"
@@ -2365,9 +2341,7 @@
             "formula": "(T1 - (((G - N)/(G + N)) + N + S1) / 3.0)/(T1 + (((G - N)/(G + N)) + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index with NDWI",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIndwi"
@@ -2385,9 +2359,7 @@
             "formula": "(T1 - (R + N + S1) / 3.0)/(T1 + (R + N + S1) / 3.0)",
             "long_name": "Normalized Difference Impervious Surface Index Red",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.14358/PERS.76.5.557",
             "short_name": "NDISIr"
@@ -2714,9 +2686,7 @@
             "formula": "(N - (R * T1 / 10000.0))/(N + (R * T1 / 10000.0))",
             "long_name": "Normalized Difference Vegetation Index Thermal",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "NDVIT"
@@ -3063,9 +3033,7 @@
             "formula": "((N-S2)/(N+S2))*T1",
             "long_name": "NIR-SWIR-Temperature Version 1",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2011.06.010",
             "short_name": "NSTv1"
@@ -3082,9 +3050,7 @@
             "formula": "(N-(S2+T1))/(N+(S2+T1))",
             "long_name": "NIR-SWIR-Temperature Version 2",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1016/j.rse.2011.06.010",
             "short_name": "NSTv2"
@@ -3603,9 +3569,7 @@
             "formula": "(1.0 + L) * (N - (R * T1 / 10000.0)) / (N + (R * T1 / 10000.0) + L)",
             "long_name": "Soil-Adjusted Vegetation Index Thermal",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160600954704",
             "short_name": "SAVIT"
@@ -4188,9 +4152,7 @@
             "formula": "(N - T1/10000.0)/(N + T1/10000.0)",
             "long_name": "VI6T Index",
             "platforms": [
-                "Landsat-OLI",
-                "Landsat-TM",
-                "Landsat-ETM+"
+                "Landsat-OLI"
             ],
             "reference": "https://doi.org/10.1080/01431160500239008",
             "short_name": "VI6T"
