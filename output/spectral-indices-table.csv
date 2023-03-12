@@ -21,6 +21,7 @@ BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),"['
 BRBA,Band Ratio for Built-up Area,urban,R/S1,"['R', 'S1']",https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf,https://github.com/davemlz,2022-09-22
 BWDRVI,Blue Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - B) / (alpha * N + B),"['alpha', 'N', 'B']",https://doi.org/10.2135/cropsci2007.01.0031,https://github.com/davemlz,2021-09-20
 BaI,Bareness Index,soil,R + S1 - N,"['R', 'S1', 'N']",https://doi.org/10.1109/IGARSS.2005.1525743,https://github.com/davemlz,2022-04-18
+CCI,Chlorophyll Carotenoid Index,vegetation,(G1 - R)/(G1 + R),"['G1', 'R']",https://doi.org/10.1073/pnas.1606162113,https://github.com/joanvlasschaert,2023-03-12
 CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-04-07
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
 CSI,Char Soil Index,burn,N/S2,"['N', 'S2']",https://doi.org/10.1016/j.rse.2005.04.014,https://github.com/davemlz,2022-04-19

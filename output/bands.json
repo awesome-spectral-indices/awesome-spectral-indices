@@ -1,5 +1,6 @@
 {
     "A": {
+        "common_name": "coastal",
         "landsat8": {
             "band": "B1",
             "bandwidth": 20.0,
@@ -15,6 +16,13 @@
             "wavelength": 440.0
         },
         "long_name": "Aersols",
+        "planetscope": {
+            "band": "B1",
+            "bandwidth": 21.0,
+            "name": "Coastal Blue",
+            "platform": "PlanetScope",
+            "wavelength": 441.5
+        },
         "sentinel2a": {
             "band": "B1",
             "bandwidth": 21,
@@ -29,9 +37,24 @@
             "platform": "Sentinel-2B",
             "wavelength": 442.3
         },
-        "short_name": "A"
+        "short_name": "A",
+        "wv2": {
+            "band": "B1",
+            "bandwidth": 50.0,
+            "name": "Coastal Blue",
+            "platform": "WorldView-2",
+            "wavelength": 425.0
+        },
+        "wv3": {
+            "band": "B1",
+            "bandwidth": 50.0,
+            "name": "Coastal Blue",
+            "platform": "WorldView-3",
+            "wavelength": 425.0
+        }
     },
     "B": {
+        "common_name": "blue",
         "landsat4": {
             "band": "B1",
             "bandwidth": 70.0,
@@ -75,6 +98,13 @@
             "platform": "Terra/Aqua: MODIS",
             "wavelength": 469.0
         },
+        "planetscope": {
+            "band": "B2",
+            "bandwidth": 50.0,
+            "name": "Blue",
+            "platform": "PlanetScope",
+            "wavelength": 490.0
+        },
         "sentinel2a": {
             "band": "B2",
             "bandwidth": 66.0,
@@ -89,9 +119,24 @@
             "platform": "Sentinel-2B",
             "wavelength": 492.1
         },
-        "short_name": "B"
+        "short_name": "B",
+        "wv2": {
+            "band": "B2",
+            "bandwidth": 60.0,
+            "name": "Blue",
+            "platform": "WorldView-2",
+            "wavelength": 480.0
+        },
+        "wv3": {
+            "band": "B2",
+            "bandwidth": 60.0,
+            "name": "Blue",
+            "platform": "WorldView-3",
+            "wavelength": 480.0
+        }
     },
     "G": {
+        "common_name": "green",
         "landsat4": {
             "band": "B2",
             "bandwidth": 80.0,
@@ -135,6 +180,13 @@
             "platform": "Terra/Aqua: MODIS",
             "wavelength": 555.0
         },
+        "planetscope": {
+            "band": "B4",
+            "bandwidth": 36.0,
+            "name": "Green",
+            "platform": "PlanetScope",
+            "wavelength": 565.0
+        },
         "sentinel2a": {
             "band": "B3",
             "bandwidth": 36.0,
@@ -149,9 +201,43 @@
             "platform": "Sentinel-2B",
             "wavelength": 559.0
         },
-        "short_name": "G"
+        "short_name": "G",
+        "wv2": {
+            "band": "B3",
+            "bandwidth": 70.0,
+            "name": "Green",
+            "platform": "WorldView-2",
+            "wavelength": 545.0
+        },
+        "wv3": {
+            "band": "B3",
+            "bandwidth": 70.0,
+            "name": "Green",
+            "platform": "WorldView-3",
+            "wavelength": 545.0
+        }
+    },
+    "G1": {
+        "common_name": "green",
+        "long_name": "Green 1",
+        "modis": {
+            "band": "B11",
+            "bandwidth": 10.0,
+            "name": "Green",
+            "platform": "Terra/Aqua: MODIS",
+            "wavelength": 531.0
+        },
+        "planetscope": {
+            "band": "B3",
+            "bandwidth": 36.0,
+            "name": "Green",
+            "platform": "PlanetScope",
+            "wavelength": 531.0
+        },
+        "short_name": "G1"
     },
     "N": {
+        "common_name": "nir",
         "landsat4": {
             "band": "B4",
             "bandwidth": 140.0,
@@ -195,6 +281,13 @@
             "platform": "Terra/Aqua: MODIS",
             "wavelength": 858.5
         },
+        "planetscope": {
+            "band": "B8",
+            "bandwidth": 40.0,
+            "name": "Near-Infrared (NIR)",
+            "platform": "PlanetScope",
+            "wavelength": 865.0
+        },
         "sentinel2a": {
             "band": "B8",
             "bandwidth": 106.0,
@@ -209,9 +302,24 @@
             "platform": "Sentinel-2B",
             "wavelength": 833.0
         },
-        "short_name": "N"
+        "short_name": "N",
+        "wv2": {
+            "band": "B7",
+            "bandwidth": 125.0,
+            "name": "Near-IR1",
+            "platform": "WorldView-2",
+            "wavelength": 832.5
+        },
+        "wv3": {
+            "band": "B7",
+            "bandwidth": 125.0,
+            "name": "Near-IR1",
+            "platform": "WorldView-3",
+            "wavelength": 832.5
+        }
     },
     "N2": {
+        "common_name": "nir08",
         "long_name": "Near-Infrared (NIR) 2",
         "sentinel2a": {
             "band": "B8A",
@@ -230,6 +338,7 @@
         "short_name": "N2"
     },
     "R": {
+        "common_name": "red",
         "landsat4": {
             "band": "B3",
             "bandwidth": 60.0,
@@ -273,6 +382,13 @@
             "platform": "Terra/Aqua: MODIS",
             "wavelength": 645.0
         },
+        "planetscope": {
+            "band": "B6",
+            "bandwidth": 30.0,
+            "name": "Red",
+            "platform": "PlanetScope",
+            "wavelength": 665.0
+        },
         "sentinel2a": {
             "band": "B4",
             "bandwidth": 31.0,
@@ -287,10 +403,32 @@
             "platform": "Sentinel-2B",
             "wavelength": 665.0
         },
-        "short_name": "R"
+        "short_name": "R",
+        "wv2": {
+            "band": "B5",
+            "bandwidth": 60.0,
+            "name": "Red",
+            "platform": "WorldView-2",
+            "wavelength": 660.0
+        },
+        "wv3": {
+            "band": "B5",
+            "bandwidth": 60.0,
+            "name": "Red",
+            "platform": "WorldView-3",
+            "wavelength": 660.0
+        }
     },
     "RE1": {
+        "common_name": "rededge",
         "long_name": "Red Edge 1",
+        "planetscope": {
+            "band": "B7",
+            "bandwidth": 16.0,
+            "name": "Red Edge",
+            "platform": "PlanetScope",
+            "wavelength": 705.0
+        },
         "sentinel2a": {
             "band": "B5",
             "bandwidth": 15.0,
@@ -308,6 +446,7 @@
         "short_name": "RE1"
     },
     "RE2": {
+        "common_name": "rededge",
         "long_name": "Red Edge 2",
         "sentinel2a": {
             "band": "B6",
@@ -326,6 +465,7 @@
         "short_name": "RE2"
     },
     "RE3": {
+        "common_name": "rededge",
         "long_name": "Red Edge 3",
         "sentinel2a": {
             "band": "B7",
@@ -344,6 +484,7 @@
         "short_name": "RE3"
     },
     "S1": {
+        "common_name": "swir16",
         "landsat4": {
             "band": "B5",
             "bandwidth": 200.0,
@@ -404,6 +545,7 @@
         "short_name": "S1"
     },
     "S2": {
+        "common_name": "swir22",
         "landsat4": {
             "band": "B7",
             "bandwidth": 270.0,
@@ -464,6 +606,7 @@
         "short_name": "S2"
     },
     "T1": {
+        "common_name": "lwir11",
         "landsat4": {
             "band": "B6",
             "bandwidth": 2100.0,
@@ -503,6 +646,7 @@
         "short_name": "T1"
     },
     "T2": {
+        "common_name": "lwir12",
         "landsat8": {
             "band": "B11",
             "bandwidth": 1010.0,
@@ -521,6 +665,7 @@
         "short_name": "T2"
     },
     "WV": {
+        "common_name": "nir09",
         "long_name": "Water Vapour",
         "sentinel2a": {
             "band": "B9",
@@ -539,6 +684,7 @@
         "short_name": "WV"
     },
     "Y": {
+        "common_name": "yellow",
         "long_name": "Yellow",
         "planetscope": {
             "band": "B5",

@@ -9,6 +9,7 @@ AVI,Advanced Vegetation Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/downlo
 BCC,Blue Chromatic Coordinate [`ref <https://doi.org/10.1016/0034-4257(87)90088-5>`_],:math:`B/(R+G+B)`
 BNDVI,Blue Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/S1672-6308(07)60027-4>`_],:math:`(N-B)/(N+B)`
 BWDRVI,Blue Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.2135/cropsci2007.01.0031>`_],:math:`(\alpha \times N-B)/(\alpha \times N+B)`
+CCI,Chlorophyll Carotenoid Index [`ref <https://doi.org/10.1073/pnas.1606162113>`_],:math:`(G1-R)/(G1+R)`
 CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/G)-1.0`
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`
 CVI,Chlorophyll Vegetation Index [`ref <https://doi.org/10.1007/s11119-010-9204-3>`_],:math:`(N\times R)/(G^{2.0})`
