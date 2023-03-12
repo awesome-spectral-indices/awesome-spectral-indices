@@ -7,6 +7,7 @@ class Bands(Enum):
     """
     AEROSOL = "A"
     BLUE = "B"
+    GREEN1 = "G1"
     GREEN = "G"
     YELLOW = "Y"
     RED = "R"
