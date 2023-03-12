@@ -2,16 +2,16 @@ Index,Long Name,Equation
 BLFEI,Built-Up Land Features Extraction Index [`ref <https://doi.org/10.1080/10106049.2018.1497094>`_],:math:`(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)`
 BRBA,Band Ratio for Built-up Area [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`R/S1`
 DBI,Dry Built-Up Index [`ref <https://doi.org/10.3390/land7030081>`_],:math:`((B-T1)/(B+T1))-((N-R)/(N+R))`
-EBBI,Enhanced Built-Up and Bareness Index [`ref <https://doi.org/10.3390/rs4102957>`_],:math:`(S1-N)/(10.0\times ((S1+T1)^{0.5}))`
+EBBI,Enhanced Built-Up and Bareness Index [`ref <https://doi.org/10.3390/rs4102957>`_],:math:`(S1-N)/(10.0\times ((S1+T)^{0.5}))`
 IBI,Index-Based Built-Up Index [`ref <https://doi.org/10.1080/01431160802039957>`_],:math:`(((S1-N)/(S1+N))-(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)`
 NBAI,Normalized Built-up Area Index [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`((S2-S1)/G)/((S2+S1)/G)`
-NBUI,New Built-Up Index [`ref <https://hdl.handle.net/1959.11/29500>`_],:math:`((S1-N)/(10.0\times (T1+S1)^{0.5}))-(((N-R)\times (1.0+L))/(N-R+L))-(G-S1)/(G+S1)`
+NBUI,New Built-Up Index [`ref <https://hdl.handle.net/1959.11/29500>`_],:math:`((S1-N)/(10.0\times (T+S1)^{0.5}))-(((N-R)\times (1.0+L))/(N-R+L))-(G-S1)/(G+S1)`
 NDBI,Normalized Difference Built-Up Index [`ref <http://dx.doi.org/10.1080/01431160304987>`_],:math:`(S1-N)/(S1+N)`
-NDISIb,Normalized Difference Impervious Surface Index Blue [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(B+N+S1)/3.0)/(T1+(B+N+S1)/3.0)`
-NDISIg,Normalized Difference Impervious Surface Index Green [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(G+N+S1)/3.0)/(T1+(G+N+S1)/3.0)`
-NDISImndwi,Normalized Difference Impervious Surface Index with MNDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(((G-S1)/(G+S1))+N+S1)/3.0)/(T1+(((G-S1)/(G+S1))+N+S1)/3.0)`
-NDISIndwi,Normalized Difference Impervious Surface Index with NDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(((G-N)/(G+N))+N+S1)/3.0)/(T1+(((G-N)/(G+N))+N+S1)/3.0)`
-NDISIr,Normalized Difference Impervious Surface Index Red [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T1-(R+N+S1)/3.0)/(T1+(R+N+S1)/3.0)`
+NDISIb,Normalized Difference Impervious Surface Index Blue [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(B+N+S1)/3.0)/(T+(B+N+S1)/3.0)`
+NDISIg,Normalized Difference Impervious Surface Index Green [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(G+N+S1)/3.0)/(T+(G+N+S1)/3.0)`
+NDISImndwi,Normalized Difference Impervious Surface Index with MNDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(((G-S1)/(G+S1))+N+S1)/3.0)/(T+(((G-S1)/(G+S1))+N+S1)/3.0)`
+NDISIndwi,Normalized Difference Impervious Surface Index with NDWI [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(((G-N)/(G+N))+N+S1)/3.0)/(T+(((G-N)/(G+N))+N+S1)/3.0)`
+NDISIr,Normalized Difference Impervious Surface Index Red [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(R+N+S1)/3.0)/(T+(R+N+S1)/3.0)`
 NHFD,Non-Homogeneous Feature Difference [`ref <https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4>`_],:math:`(RE1-A)/(RE1+A)`
 PISI,Perpendicular Impervious Surface Index [`ref <https://doi.org/10.3390/rs10101521>`_],:math:`0.8192\times B-0.5735\times N+0.0750`
 UI,Urban Index [`ref <https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf>`_],:math:`(S2-N)/(S2+N)`

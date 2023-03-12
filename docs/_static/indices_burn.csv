@@ -3,18 +3,18 @@ BAI,Burned Area Index [`ref <https://digital.csic.es/bitstream/10261/6426/1/Mart
 BAIM,Burned Area Index adapted to MODIS [`ref <https://doi.org/10.1016/j.foreco.2006.08.248>`_],:math:`1.0/((0.05-N)^{2.0})+((0.2-S2)^{2.0})`
 BAIS2,Burned Area Index for Sentinel 2 [`ref <https://doi.org/10.3390/ecrs-2-05177>`_],:math:`(1.0-((RE2\times RE3\times N2)/R)^{0.5})\times (((S2-N2)/(S2+N2)^{0.5})+1.0)`
 CSI,Char Soil Index [`ref <https://doi.org/10.1016/j.rse.2005.04.014>`_],:math:`N/S2`
-CSIT,Char Soil Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`N/(S2\times T1/10000.0)`
+CSIT,Char Soil Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`N/(S2\times T/10000.0)`
 MIRBI,Mid-Infrared Burn Index [`ref <https://doi.org/10.1080/01431160110053185>`_],:math:`10.0\times S2-9.8\times S1+2.0`
 NBR,Normalized Burn Ratio [`ref <https://doi.org/10.3133/ofr0211>`_],:math:`(N-S2)/(N+S2)`
 NBR2,Normalized Burn Ratio 2 [`ref <https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2>`_],:math:`(S1-S2)/(S1+S2)`
 NBRSWIR,Normalized Burn Ratio SWIR [`ref <https://doi.org/10.1080/22797254.2020.1738900>`_],:math:`(S2-S1-0.02)/(S2+S1+0.1)`
-NBRT1,Normalized Burn Ratio Thermal 1 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`(N-(S2\times T1/10000.0))/(N+(S2\times T1/10000.0))`
-NBRT2,Normalized Burn Ratio Thermal 2 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`((N/(T1/10000.0))-S2)/((N/(T1/10000.0))+S2)`
-NBRT3,Normalized Burn Ratio Thermal 3 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`((N-(T1/10000.0))-S2)/((N-(T1/10000.0))+S2)`
+NBRT1,Normalized Burn Ratio Thermal 1 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`(N-(S2\times T/10000.0))/(N+(S2\times T/10000.0))`
+NBRT2,Normalized Burn Ratio Thermal 2 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`((N/(T/10000.0))-S2)/((N/(T/10000.0))+S2)`
+NBRT3,Normalized Burn Ratio Thermal 3 [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`((N-(T/10000.0))-S2)/((N-(T/10000.0))+S2)`
 NBRplus,Normalized Burn Ratio Plus [`ref <https://doi.org/10.3390/rs14071727>`_],:math:`(S2-N2-G-B)/(S2+N2+G+B)`
 NDSWIR,Normalized Difference SWIR [`ref <https://doi.org/10.1109/TGRS.2003.819190>`_],:math:`(N-S1)/(N+S1)`
-NDVIT,Normalized Difference Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(N-(R\times T1/10000.0))/(N+(R\times T1/10000.0))`
-NSTv1,NIR-SWIR-Temperature Version 1 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`((N-S2)/(N+S2))\times T1`
-NSTv2,NIR-SWIR-Temperature Version 2 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`(N-(S2+T1))/(N+(S2+T1))`
-SAVIT,Soil-Adjusted Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(1.0+L)\times (N-(R\times T1/10000.0))/(N+(R\times T1/10000.0)+L)`
-VI6T,VI6T Index [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`(N-T1/10000.0)/(N+T1/10000.0)`
+NDVIT,Normalized Difference Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(N-(R\times T/10000.0))/(N+(R\times T/10000.0))`
+NSTv1,NIR-SWIR-Temperature Version 1 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`((N-S2)/(N+S2))\times T`
+NSTv2,NIR-SWIR-Temperature Version 2 [`ref <https://doi.org/10.1016/j.rse.2011.06.010>`_],:math:`(N-(S2+T))/(N+(S2+T))`
+SAVIT,Soil-Adjusted Vegetation Index Thermal [`ref <https://doi.org/10.1080/01431160600954704>`_],:math:`(1.0+L)\times (N-(R\times T/10000.0))/(N+(R\times T/10000.0)+L)`
+VI6T,VI6T Index [`ref <https://doi.org/10.1080/01431160500239008>`_],:math:`(N-T/10000.0)/(N+T/10000.0)`
