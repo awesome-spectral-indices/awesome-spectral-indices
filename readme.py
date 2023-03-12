@@ -86,6 +86,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <th> Description </th>
 <th> Standard </th>
+<th> Spectral Range (nm) </th>
 <th> Sentinel-2 </th>
 <th> Landsat-89 </th>
 <th> Landsat-457 </th>
@@ -97,6 +98,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Aerosols</td>
 <td>A</td>
+<td>400 - 455</td>
 <td>B1</td>
 <td>B1</td>
 <td></td>
@@ -108,6 +110,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Blue</td>
 <td>B</td>
+<td>450 - 530</td>
 <td>B2</td>
 <td>B2</td>
 <td>B1</td>
@@ -119,6 +122,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Green 1</td>
 <td>G1</td>
+<td>510 - 550</td>
 <td></td>
 <td></td>
 <td></td>
@@ -130,6 +134,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Green</td>
 <td>G</td>
+<td>510 - 600</td>
 <td>B3</td>
 <td>B3</td>
 <td>B2</td>
@@ -141,6 +146,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Yellow</td>
 <td>Y</td>
+<td>585 - 625</td>
 <td></td>
 <td></td>
 <td></td>
@@ -152,6 +158,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red</td>
 <td>R</td>
+<td>620 - 690</td>
 <td>B4</td>
 <td>B4</td>
 <td>B3</td>
@@ -163,6 +170,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 1</td>
 <td>RE1</td>
+<td>695 - 715</td>
 <td>B5</td>
 <td></td>
 <td></td>
@@ -174,6 +182,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 2</td>
 <td>RE2</td>
+<td>730 - 750</td>
 <td>B6</td>
 <td></td>
 <td></td>
@@ -185,6 +194,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Red Edge 3</td>
 <td>RE3</td>
+<td>765 - 795</td>
 <td>B7</td>
 <td></td>
 <td></td>
@@ -196,6 +206,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>NIR</td>
 <td>N</td>
+<td>760 - 900</td>
 <td>B8</td>
 <td>B5</td>
 <td>B4</td>
@@ -207,6 +218,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>NIR 2</td>
 <td>N2</td>
+<td>850 - 880</td>
 <td>B8A</td>
 <td></td>
 <td></td>
@@ -218,6 +230,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Water Vapour</td>
 <td>WV</td>
+<td>930 - 960</td>
 <td>B9</td>
 <td></td>
 <td></td>
@@ -229,6 +242,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>SWIR 1</td>
 <td>S1</td>
+<td>1550 - 1750</td>
 <td>B11</td>
 <td>B6</td>
 <td>B5</td>
@@ -240,6 +254,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>SWIR 2</td>
 <td>S2</td>
+<td>2080 - 2350</td>
 <td>B12</td>
 <td>B7</td>
 <td>B7</td>
@@ -251,6 +266,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Thermal</td>
 <td>T</td>
+<td>10400 - 12500</td>
 <td></td>
 <td></td>
 <td>B6</td>
@@ -262,6 +278,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Thermal 1</td>
 <td>T1</td>
+<td>10600 - 11190</td>
 <td></td>
 <td>B10</td>
 <td></td>
@@ -273,6 +290,7 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <td>Thermal 2</td>
 <td>T2</td>
+<td>11500 - 12510</td>
 <td></td>
 <td>B11</td>
 <td></td>
