@@ -283,8 +283,8 @@ bands = {
         },
         "planetscope": {
             "platform": "PlanetScope",
-            "band": "B6",
-            "name": "Red",
+            "band": "B7",
+            "name": "Red Edge",
             "wavelength": 705.0,
             "bandwidth": 16.0
         },
