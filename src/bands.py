@@ -2,6 +2,7 @@ bands = {
     "A": {
         "short_name": "A",
         "long_name": "Aersols",
+        "common_name": "coastal",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B1",
@@ -55,6 +56,7 @@ bands = {
     "B": {
         "short_name": "B",
         "long_name": "Blue",
+        "common_name": "blue",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B2",
@@ -136,6 +138,7 @@ bands = {
     "G": {
         "short_name": "G",
         "long_name": "Green",
+        "common_name": "green",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B3",
@@ -217,6 +220,7 @@ bands = {
     "Y": {
         "short_name": "Y",
         "long_name": "Yellow",
+        "common_name": "yellow",
         "planetscope": {
             "platform": "PlanetScope",
             "band": "B5",
@@ -242,6 +246,7 @@ bands = {
     "R": {
         "short_name": "R",
         "long_name": "Red",
+        "common_name": "red",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B4",
@@ -323,6 +328,7 @@ bands = {
     "RE1": {
         "short_name": "RE1",
         "long_name": "Red Edge 1",
+        "common_name": "rededge",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B5",
@@ -348,6 +354,7 @@ bands = {
     "RE2": {
         "short_name": "RE2",
         "long_name": "Red Edge 2",
+        "common_name": "rededge",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B6",
@@ -366,6 +373,7 @@ bands = {
     "RE3": {
         "short_name": "RE3",
         "long_name": "Red Edge 3",
+        "common_name": "rededge",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B7",
@@ -384,6 +392,7 @@ bands = {
     "N2": {
         "short_name": "N2",
         "long_name": "Near-Infrared (NIR) 2",
+        "common_name": "nir08",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B8A",
@@ -402,6 +411,7 @@ bands = {
     "N": {
         "short_name": "N",
         "long_name": "Near-Infrared (NIR)",
+        "common_name": "nir",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B8",
@@ -483,6 +493,7 @@ bands = {
     "WV": {
         "short_name": "WV",
         "long_name": "Water Vapour",
+        "common_name": "nir09",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B9",
@@ -501,6 +512,7 @@ bands = {
     "S1": {
         "short_name": "S1",
         "long_name": "Short-wave Infrared (SWIR) 1",
+        "common_name": "swir16",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B11",
@@ -561,6 +573,7 @@ bands = {
     "S2": {
         "short_name": "S2",
         "long_name": "Short-wave Infrared (SWIR) 2",
+        "common_name": "swir22",
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B12",
@@ -621,6 +634,7 @@ bands = {
     "T1": {
         "short_name": "T1",
         "long_name": "Thermal Infrared 1",
+        "common_name": "lwir11",
         "landsat4": {
             "platform": "Landsat 4",
             "band": "B6",
@@ -660,6 +674,7 @@ bands = {
     "T2": {
         "short_name": "T2",
         "long_name": "Thermal Infrared 2",
+        "common_name": "lwir12",
         "landsat8": {
             "platform": "Landsat 8",
             "band": "B11",
