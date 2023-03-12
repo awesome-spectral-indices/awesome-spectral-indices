@@ -135,6 +135,25 @@ bands = {
             "bandwidth": 60.0
         },
     },
+    "G1": {
+        "short_name": "G1",
+        "long_name": "Green 1",
+        "common_name": "green",
+        "modis": {
+            "platform": "Terra/Aqua: MODIS",
+            "band": "B11",
+            "name": "Green",
+            "wavelength": 531.0,
+            "bandwidth": 10.0
+        },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B3",
+            "name": "Green",
+            "wavelength": 531.0,
+            "bandwidth": 36.0
+        },
+    },
     "G": {
         "short_name": "G",
         "long_name": "Green",
