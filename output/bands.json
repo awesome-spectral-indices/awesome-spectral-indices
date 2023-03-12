@@ -16,6 +16,8 @@
             "wavelength": 440.0
         },
         "long_name": "Aersols",
+        "max_wavelength": 455,
+        "min_wavelength": 400,
         "planetscope": {
             "band": "B1",
             "bandwidth": 21.0,
@@ -91,6 +93,8 @@
             "wavelength": 480.0
         },
         "long_name": "Blue",
+        "max_wavelength": 530,
+        "min_wavelength": 450,
         "modis": {
             "band": "B3",
             "bandwidth": 20.0,
@@ -173,6 +177,8 @@
             "wavelength": 560.0
         },
         "long_name": "Green",
+        "max_wavelength": 600,
+        "min_wavelength": 510,
         "modis": {
             "band": "B4",
             "bandwidth": 20.0,
@@ -220,6 +226,8 @@
     "G1": {
         "common_name": "green",
         "long_name": "Green 1",
+        "max_wavelength": 550,
+        "min_wavelength": 510,
         "modis": {
             "band": "B11",
             "bandwidth": 10.0,
@@ -274,6 +282,8 @@
             "wavelength": 865.0
         },
         "long_name": "Near-Infrared (NIR)",
+        "max_wavelength": 900,
+        "min_wavelength": 760,
         "modis": {
             "band": "B2",
             "bandwidth": 35.0,
@@ -321,6 +331,8 @@
     "N2": {
         "common_name": "nir08",
         "long_name": "Near-Infrared (NIR) 2",
+        "max_wavelength": 880,
+        "min_wavelength": 850,
         "sentinel2a": {
             "band": "B8A",
             "bandwidth": 21.0,
@@ -375,6 +387,8 @@
             "wavelength": 655.0
         },
         "long_name": "Red",
+        "max_wavelength": 690,
+        "min_wavelength": 620,
         "modis": {
             "band": "B1",
             "bandwidth": 50.0,
@@ -422,6 +436,8 @@
     "RE1": {
         "common_name": "rededge",
         "long_name": "Red Edge 1",
+        "max_wavelength": 715,
+        "min_wavelength": 695,
         "planetscope": {
             "band": "B7",
             "bandwidth": 16.0,
@@ -448,6 +464,8 @@
     "RE2": {
         "common_name": "rededge",
         "long_name": "Red Edge 2",
+        "max_wavelength": 750,
+        "min_wavelength": 730,
         "sentinel2a": {
             "band": "B6",
             "bandwidth": 15.0,
@@ -467,6 +485,8 @@
     "RE3": {
         "common_name": "rededge",
         "long_name": "Red Edge 3",
+        "max_wavelength": 795,
+        "min_wavelength": 765,
         "sentinel2a": {
             "band": "B7",
             "bandwidth": 20.0,
@@ -521,6 +541,8 @@
             "wavelength": 1610.0
         },
         "long_name": "Short-wave Infrared (SWIR) 1",
+        "max_wavelength": 1750,
+        "min_wavelength": 1550,
         "modis": {
             "band": "B6",
             "bandwidth": 24.0,
@@ -582,6 +604,8 @@
             "wavelength": 2200.0
         },
         "long_name": "Short-wave Infrared (SWIR) 2",
+        "max_wavelength": 2350,
+        "min_wavelength": 2080,
         "modis": {
             "band": "B7",
             "bandwidth": 50.0,
@@ -629,6 +653,8 @@
             "wavelength": 11450.0
         },
         "long_name": "Thermal Infrared",
+        "max_wavelength": 12500,
+        "min_wavelength": 10400,
         "short_name": "T"
     },
     "T1": {
@@ -648,6 +674,8 @@
             "wavelength": 10895.0
         },
         "long_name": "Thermal Infrared 1",
+        "max_wavelength": 11190,
+        "min_wavelength": 10600,
         "short_name": "T1"
     },
     "T2": {
@@ -667,11 +695,15 @@
             "wavelength": 12005.0
         },
         "long_name": "Thermal Infrared 2",
+        "max_wavelength": 12510,
+        "min_wavelength": 11500,
         "short_name": "T2"
     },
     "WV": {
         "common_name": "nir09",
         "long_name": "Water Vapour",
+        "max_wavelength": 960,
+        "min_wavelength": 930,
         "sentinel2a": {
             "band": "B9",
             "bandwidth": 20.0,
@@ -691,6 +723,8 @@
     "Y": {
         "common_name": "yellow",
         "long_name": "Yellow",
+        "max_wavelength": 625,
+        "min_wavelength": 585,
         "planetscope": {
             "band": "B5",
             "bandwidth": 20.0,
