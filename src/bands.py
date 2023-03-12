@@ -30,6 +30,13 @@ bands = {
             "wavelength": 440.0,
             "bandwidth": 20.0
         },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B1",
+            "name": "Coastal Blue",
+            "wavelength": 441.5,
+            "bandwidth": 21.0
+        },
     },
     "B": {
         "short_name": "B",
@@ -90,6 +97,13 @@ bands = {
             "wavelength": 469.0,
             "bandwidth": 20.0
         },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B2",
+            "name": "Blue",
+            "wavelength": 490.0,
+            "bandwidth": 50.0
+        },
     },
     "G": {
         "short_name": "G",
@@ -149,6 +163,13 @@ bands = {
             "name": "Green",
             "wavelength": 555.0,
             "bandwidth": 20.0
+        },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B4",
+            "name": "Green",
+            "wavelength": 565.0,
+            "bandwidth": 36.0
         },
     },
     "Y": {
@@ -235,6 +256,13 @@ bands = {
             "wavelength": 645.0,
             "bandwidth": 50.0
         },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B6",
+            "name": "Red",
+            "wavelength": 665.0,
+            "bandwidth": 30.0
+        },
     },
     "RE1": {
         "short_name": "RE1",
@@ -252,6 +280,13 @@ bands = {
             "name": "Red Edge 1",
             "wavelength": 703.8,
             "bandwidth": 15.0
+        },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B6",
+            "name": "Red",
+            "wavelength": 705.0,
+            "bandwidth": 16.0
         },
     },
     "RE2": {
@@ -366,6 +401,13 @@ bands = {
             "name": "Near-Infrared (NIR)",
             "wavelength": 858.5,
             "bandwidth": 35.0
+        },
+        "planetscope": {
+            "platform": "PlanetScope",
+            "band": "B8",
+            "name": "Near-Infrared (NIR)",
+            "wavelength": 865.0,
+            "bandwidth": 40.0
         },
     },
     "WV": {
