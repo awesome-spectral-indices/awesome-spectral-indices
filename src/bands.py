@@ -37,6 +37,20 @@ bands = {
             "wavelength": 441.5,
             "bandwidth": 21.0
         },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B1",
+            "name": "Coastal Blue",
+            "wavelength": 425.0,
+            "bandwidth": 50.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B1",
+            "name": "Coastal Blue",
+            "wavelength": 425.0,
+            "bandwidth": 50.0
+        },
     },
     "B": {
         "short_name": "B",
@@ -104,6 +118,20 @@ bands = {
             "wavelength": 490.0,
             "bandwidth": 50.0
         },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B2",
+            "name": "Blue",
+            "wavelength": 480.0,
+            "bandwidth": 60.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B2",
+            "name": "Blue",
+            "wavelength": 480.0,
+            "bandwidth": 60.0
+        },
     },
     "G": {
         "short_name": "G",
@@ -170,6 +198,20 @@ bands = {
             "name": "Green",
             "wavelength": 565.0,
             "bandwidth": 36.0
+        },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B3",
+            "name": "Green",
+            "wavelength": 545.0,
+            "bandwidth": 70.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B3",
+            "name": "Green",
+            "wavelength": 545.0,
+            "bandwidth": 70.0
         },
     },
     "Y": {
@@ -262,6 +304,20 @@ bands = {
             "name": "Red",
             "wavelength": 665.0,
             "bandwidth": 30.0
+        },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B5",
+            "name": "Red",
+            "wavelength": 660.0,
+            "bandwidth": 60.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B5",
+            "name": "Red",
+            "wavelength": 660.0,
+            "bandwidth": 60.0
         },
     },
     "RE1": {
@@ -408,6 +464,20 @@ bands = {
             "name": "Near-Infrared (NIR)",
             "wavelength": 865.0,
             "bandwidth": 40.0
+        },
+        "wv3": {
+            "platform": "WorldView-3",
+            "band": "B7",
+            "name": "Near-IR1",
+            "wavelength": 832.5,
+            "bandwidth": 125.0
+        },
+        "wv2": {
+            "platform": "WorldView-2",
+            "band": "B7",
+            "name": "Near-IR1",
+            "wavelength": 832.5,
+            "bandwidth": 125.0
         },
     },
     "WV": {
