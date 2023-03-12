@@ -3,6 +3,8 @@ bands = {
         "short_name": "A",
         "long_name": "Aersols",
         "common_name": "coastal",
+        "min_wavelength": 400,
+        "max_wavelength": 455,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B1",
@@ -57,6 +59,8 @@ bands = {
         "short_name": "B",
         "long_name": "Blue",
         "common_name": "blue",
+        "min_wavelength": 450,
+        "max_wavelength": 530,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B2",
@@ -139,6 +143,8 @@ bands = {
         "short_name": "G1",
         "long_name": "Green 1",
         "common_name": "green",
+        "min_wavelength": 510,
+        "max_wavelength": 550,
         "modis": {
             "platform": "Terra/Aqua: MODIS",
             "band": "B11",
@@ -158,6 +164,8 @@ bands = {
         "short_name": "G",
         "long_name": "Green",
         "common_name": "green",
+        "min_wavelength": 510,
+        "max_wavelength": 600,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B3",
@@ -240,6 +248,8 @@ bands = {
         "short_name": "Y",
         "long_name": "Yellow",
         "common_name": "yellow",
+        "min_wavelength": 585,
+        "max_wavelength": 625,
         "planetscope": {
             "platform": "PlanetScope",
             "band": "B5",
@@ -266,6 +276,8 @@ bands = {
         "short_name": "R",
         "long_name": "Red",
         "common_name": "red",
+        "min_wavelength": 620,
+        "max_wavelength": 690,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B4",
@@ -348,6 +360,8 @@ bands = {
         "short_name": "RE1",
         "long_name": "Red Edge 1",
         "common_name": "rededge",
+        "min_wavelength": 695,
+        "max_wavelength": 715,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B5",
@@ -374,6 +388,8 @@ bands = {
         "short_name": "RE2",
         "long_name": "Red Edge 2",
         "common_name": "rededge",
+        "min_wavelength": 730,
+        "max_wavelength": 750,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B6",
@@ -393,6 +409,8 @@ bands = {
         "short_name": "RE3",
         "long_name": "Red Edge 3",
         "common_name": "rededge",
+        "min_wavelength": 765,
+        "max_wavelength": 795,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B7",
@@ -412,6 +430,8 @@ bands = {
         "short_name": "N2",
         "long_name": "Near-Infrared (NIR) 2",
         "common_name": "nir08",
+        "min_wavelength": 850,
+        "max_wavelength": 880,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B8A",
@@ -431,6 +451,8 @@ bands = {
         "short_name": "N",
         "long_name": "Near-Infrared (NIR)",
         "common_name": "nir",
+        "min_wavelength": 760,
+        "max_wavelength": 900,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B8",
@@ -513,6 +535,8 @@ bands = {
         "short_name": "WV",
         "long_name": "Water Vapour",
         "common_name": "nir09",
+        "min_wavelength": 930,
+        "max_wavelength": 960,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B9",
@@ -532,6 +556,8 @@ bands = {
         "short_name": "S1",
         "long_name": "Short-wave Infrared (SWIR) 1",
         "common_name": "swir16",
+        "min_wavelength": 1550,
+        "max_wavelength": 1750,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B11",
@@ -593,6 +619,8 @@ bands = {
         "short_name": "S2",
         "long_name": "Short-wave Infrared (SWIR) 2",
         "common_name": "swir22",
+        "min_wavelength": 2080,
+        "max_wavelength": 2350,
         "sentinel2a": {
             "platform": "Sentinel-2A",
             "band": "B12",
@@ -654,6 +682,8 @@ bands = {
         "short_name": "T",
         "long_name": "Thermal Infrared",
         "common_name": "lwir",
+        "min_wavelength": 10400,
+        "max_wavelength": 12500,
         "landsat4": {
             "platform": "Landsat 4",
             "band": "B6",
@@ -680,6 +710,8 @@ bands = {
         "short_name": "T1",
         "long_name": "Thermal Infrared 1",
         "common_name": "lwir11",
+        "min_wavelength": 10600,
+        "max_wavelength": 11190,
         "landsat8": {
             "platform": "Landsat 8",
             "band": "B10",
@@ -699,6 +731,8 @@ bands = {
         "short_name": "T2",
         "long_name": "Thermal Infrared 2",
         "common_name": "lwir12",
+        "min_wavelength": 11500,
+        "max_wavelength": 12510,
         "landsat8": {
             "platform": "Landsat 8",
             "band": "B11",
