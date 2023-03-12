@@ -2079,5 +2079,14 @@ spindex = SpectralIndices(
             date_of_addition='2023-03-12',
             contributor="https://github.com/joanvlasschaert"
         ),
+        NBLIOLI=SpectralIndex(
+            short_name='NBLIOLI',
+            long_name='Normalized Difference Bare Land Index for Landsat-OLI',
+            formula='(R - T1)/(R + T1)',
+            reference='https://doi.org/10.3390/rs9030249',
+            application_domain='soil',
+            date_of_addition='2023-03-12',
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
