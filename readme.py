@@ -249,11 +249,22 @@ The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N 
 
 <tr>
 
+<td>Thermal</td>
+<td>T</td>
+<td></td>
+<td></td>
+<td>B6</td>
+<td></td>
+
+</tr>
+
+<tr>
+
 <td>Thermal 1</td>
 <td>T1</td>
 <td></td>
 <td>B10</td>
-<td>B6</td>
+<td></td>
 <td></td>
 
 </tr>

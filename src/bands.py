@@ -650,31 +650,36 @@ bands = {
             "bandwidth": 50.0
         },
     },
-    "T1": {
-        "short_name": "T1",
-        "long_name": "Thermal Infrared 1",
-        "common_name": "lwir11",
+    "T": {
+        "short_name": "T",
+        "long_name": "Thermal Infrared",
+        "common_name": "lwir",
         "landsat4": {
             "platform": "Landsat 4",
             "band": "B6",
-            "name": "Thermal Infrared 1",
+            "name": "Thermal Infrared",
             "wavelength": 11450.0,
             "bandwidth": 2100.0
         },
         "landsat5": {
             "platform": "Landsat 5",
             "band": "B6",
-            "name": "Thermal Infrared 1",
+            "name": "Thermal Infrared",
             "wavelength": 11450.0,
             "bandwidth": 2100.0
         },
         "landsat7": {
             "platform": "Landsat 7",
             "band": "B6",
-            "name": "Thermal Infrared 1",
+            "name": "Thermal Infrared",
             "wavelength": 11450.0,
             "bandwidth": 2100.0
         },
+    },
+    "T1": {
+        "short_name": "T1",
+        "long_name": "Thermal Infrared 1",
+        "common_name": "lwir11",
         "landsat8": {
             "platform": "Landsat 8",
             "band": "B10",

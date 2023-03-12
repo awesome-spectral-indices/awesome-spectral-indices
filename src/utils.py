@@ -19,6 +19,7 @@ class Bands(Enum):
     RED3 = "RE3"    
     SWIR1 = "S1"
     SWIR2 = "S2"
+    TIR = "T"
     TIR1 = "T1"
     TIR2 = "T2"
     GAIN_FACTOR = "g"
