@@ -51,6 +51,8 @@ previousText = """<p align="center">
 
 **Python Package**: <a href="https://github.com/awesome-spectral-indices/spyndex" target="_blank">github.com/awesome-spectral-indices/spyndex</a>
 
+**Paper**: <a href="https://doi.org/10.1038/s41597-023-02096-0" target="_blank">doi.org/10.1038/s41597-023-02096-0</a>
+
 **Streamlit App**: <a href="https://github.com/awesome-spectral-indices/espectro" target="_blank">github.com/awesome-spectral-indices/espectro</a>
 
 **Google Earth Engine**: <a href="https://github.com/davemlz/eemont" target="_blank">github.com/davemlz/eemont</a> (Python), <a href="https://github.com/awesome-spectral-indices/spectral" target="_blank">github.com/awesome-spectral-indices/spectral</a> (JavaScript) and <a href="https://github.com/r-earthengine/rgeeExtra" target="_blank">github.com/r-earthengine/rgeeExtra</a> (R)
