@@ -39,6 +39,11 @@
         "description": "Exponent used for OCVI",
         "short_name": "cexp"
     },
+    "epsilon": {
+        "default": 1,
+        "description": "Adjustment constant used for EBI",
+        "short_name": "epsilon"
+    },
     "fdelta": {
         "default": 0.581,
         "description": "Adjustment factor used for SEVI",
