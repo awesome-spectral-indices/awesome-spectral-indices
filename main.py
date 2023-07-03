@@ -225,7 +225,7 @@ for key in spindex.SpectralIndices:
 
 # Save results
 with open('output/spectral-indices-dict.json', 'w') as fp:
-    fp.write(spindex.json(indent=4, sort_keys=True))
+    json.dump(json.loads(spindex.model_dump_json(indent=4)),fp, indent=4, sort_keys=True)
 
 with open('output/bands.json', 'w') as fp:
     json.dump(bands, fp, indent=4, sort_keys=True)
