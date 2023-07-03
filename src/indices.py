@@ -2088,5 +2088,14 @@ spindex = SpectralIndices(
             date_of_addition="2023-03-12",
             contributor="https://github.com/davemlz",
         ),
+        SLAVI=SpectralIndex(
+            short_name="SLAVI",
+            long_name="Specific Leaf Area Vegetation Index",
+            formula="N/(R + S2)",
+            reference="https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf",
+            application_domain="vegetation",
+            date_of_addition="2023-07-03",
+            contributor="https://github.com/geoSanjeeb",
+        ),
     )
 )
