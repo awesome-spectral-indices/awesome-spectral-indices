@@ -32,11 +32,11 @@ Snow
    :file: _static/indices_snow.csv   
    :header-rows: 1
    
-Drought
+Soil
 --------------
    
-.. csv-table:: Drought Spectral Indices
-   :file: _static/indices_drought.csv   
+.. csv-table:: Soil Spectral Indices
+   :file: _static/indices_soil.csv   
    :header-rows: 1
    
 Urban
