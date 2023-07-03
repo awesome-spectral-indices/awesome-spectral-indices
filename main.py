@@ -7,198 +7,196 @@ import pandas as pd
 import json
 
 bandVars = [
-    'A',
-    'B',
-    'G1',
-    'G',
-    'Y',
-    'R',
-    'N',
-    'N2',
-    'WV',
-    'RE1',
-    'RE2',
-    'RE3',
-    'S1',
-    'S2',
-    'T',
-    'T1',
-    'T2',
-    'HV',
-    'HH',
-    'VV',
-    'VH',
-    'kNN',
-    'kNR',
-    'kNB',
-    'kNL',
-    'kGG',
-    'kGR',
-    'kGB',
-    'kBB',
-    'kBR',
-    'kBL',
-    'kRR',
-    'kRB',
-    'kRL',
-    'kLL'
+    "A",
+    "B",
+    "G1",
+    "G",
+    "Y",
+    "R",
+    "N",
+    "N2",
+    "WV",
+    "RE1",
+    "RE2",
+    "RE3",
+    "S1",
+    "S2",
+    "T",
+    "T1",
+    "T2",
+    "HV",
+    "HH",
+    "VV",
+    "VH",
+    "kNN",
+    "kNR",
+    "kNB",
+    "kNL",
+    "kGG",
+    "kGR",
+    "kGB",
+    "kBB",
+    "kBR",
+    "kBL",
+    "kRR",
+    "kRB",
+    "kRL",
+    "kLL",
 ]
 
 bandsPlatform = {
-    "Sentinel-1 (Dual Polarisation VV-VH)": [
-        'VV',
-        'VH'
-    ],
+    "Sentinel-1 (Dual Polarisation VV-VH)": ["VV", "VH"],
     "Sentinel-1 (Dual Polarisation HH-HV)": [
-        'HV',
-        'HH',
+        "HV",
+        "HH",
     ],
     "Sentinel-2": [
-        'A',
-        'B',
-        'G',
-        'R',
-        'N',
-        'N2',
-        'RE1',
-        'RE2',
-        'RE3',
-        'WV',
-        'S1',
-        'S2',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "A",
+        "B",
+        "G",
+        "R",
+        "N",
+        "N2",
+        "RE1",
+        "RE2",
+        "RE3",
+        "WV",
+        "S1",
+        "S2",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
     "Landsat-OLI": [
-        'A',
-        'B',
-        'G',
-        'R',
-        'N',
-        'S1',
-        'S2',
-        'T1',
-        'T2',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "A",
+        "B",
+        "G",
+        "R",
+        "N",
+        "S1",
+        "S2",
+        "T1",
+        "T2",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
     "Landsat-TM": [
-        'B',
-        'G',
-        'R',
-        'N',
-        'S1',
-        'S2',
-        'T',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "B",
+        "G",
+        "R",
+        "N",
+        "S1",
+        "S2",
+        "T",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
     "Landsat-ETM+": [
-        'B',
-        'G',
-        'R',
-        'N',
-        'S1',
-        'S2',
-        'T',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "B",
+        "G",
+        "R",
+        "N",
+        "S1",
+        "S2",
+        "T",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
     "MODIS": [
-        'B',
-        'G1',
-        'G',
-        'R',
-        'N',
-        'S1',
-        'S2',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "B",
+        "G1",
+        "G",
+        "R",
+        "N",
+        "S1",
+        "S2",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
     "Planet-Fusion": [
-        'B',
-        'G',
-        'R',
-        'N',
-        'kNN',
-        'kNR',
-        'kNB',
-        'kNL',
-        'kGG',
-        'kGR',
-        'kGB',
-        'kBB',
-        'kBR',
-        'kBL',
-        'kRR',
-        'kRB',
-        'kRL',
-        'kLL'
+        "B",
+        "G",
+        "R",
+        "N",
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
     ],
-} 
+}
 
 bandsToCheck = list(Bands._value2member_map_.keys())
 [bandsToCheck.remove(i) for i in bandVars]
+
 
 def checkPlatforms(bandsSpindex):
     availablePlatforms = []
@@ -206,6 +204,7 @@ def checkPlatforms(bandsSpindex):
         if all([x in bandsToCheck + bandList for x in bandsSpindex]):
             availablePlatforms.append(platform)
     return availablePlatforms
+
 
 parser = Parser()
 
@@ -224,43 +223,61 @@ for key in spindex.SpectralIndices:
 # ![MODIS](https://img.shields.io/badge/-MODIS-green?style=flat-square)
 
 # Save results
-with open('output/spectral-indices-dict.json', 'w') as fp:
-    json.dump(json.loads(spindex.model_dump_json(indent=4)),fp, indent=4, sort_keys=True)
+with open("output/spectral-indices-dict.json", "w") as fp:
+    json.dump(
+        json.loads(spindex.model_dump_json(indent=4)), fp, indent=4, sort_keys=True
+    )
 
-with open('output/bands.json', 'w') as fp:
+with open("output/bands.json", "w") as fp:
     json.dump(bands, fp, indent=4, sort_keys=True)
 
-with open('output/constants.json', 'w') as fp:
+with open("output/constants.json", "w") as fp:
     json.dump(constants, fp, indent=4, sort_keys=True)
-    
+
 # Convert to pandas and save CSV
-file = open('output/spectral-indices-dict.json')
+file = open("output/spectral-indices-dict.json")
 indices = json.load(file)
-df = pd.DataFrame(list(indices['SpectralIndices'].values()))
-df = df[["short_name","long_name","application_domain","formula","bands","reference","contributor","date_of_addition"]]
-df.to_csv('output/spectral-indices-table.csv',index = False)
+df = pd.DataFrame(list(indices["SpectralIndices"].values()))
+df = df[
+    [
+        "short_name",
+        "long_name",
+        "application_domain",
+        "formula",
+        "bands",
+        "reference",
+        "contributor",
+        "date_of_addition",
+    ]
+]
+df.to_csv("output/spectral-indices-table.csv", index=False)
+
 
 # Save tables for Docs
 def toMath(x):
-    x = x.replace(" ","")
-    x = x.replace("**","^")
-    x = x.replace("^2.0","^{2.0}")
-    x = x.replace("^0.5","^{0.5}")
-    x = x.replace("^nexp","^{n}")
-    x = x.replace("^cexp","^{c}")
-    x = x.replace("gamma","\\gamma ")
-    x = x.replace("alpha","\\alpha ")
-    x = x.replace("beta","\\beta ")
-    x = x.replace("omega","\\omega ")
-    x = x.replace("lambdaN","\\lambda_{N} ")
-    x = x.replace("lambdaR","\\lambda_{R} ")
-    x = x.replace("lambdaG","\\lambda_{G} ")
-    x = x.replace("*","\\times ")
+    x = x.replace(" ", "")
+    x = x.replace("**", "^")
+    x = x.replace("^2.0", "^{2.0}")
+    x = x.replace("^0.5", "^{0.5}")
+    x = x.replace("^nexp", "^{n}")
+    x = x.replace("^cexp", "^{c}")
+    x = x.replace("gamma", "\\gamma ")
+    x = x.replace("alpha", "\\alpha ")
+    x = x.replace("beta", "\\beta ")
+    x = x.replace("omega", "\\omega ")
+    x = x.replace("lambdaN", "\\lambda_{N} ")
+    x = x.replace("lambdaR", "\\lambda_{R} ")
+    x = x.replace("lambdaG", "\\lambda_{G} ")
+    x = x.replace("*", "\\times ")
     x = f":math:`{x}`"
     return x
+
+
 df["Equation"] = df["formula"].apply(toMath)
 df["Long Name"] = df["long_name"] + " [`ref <" + df["reference"] + ">`_]"
 df["Index"] = df["short_name"]
-for t in ["vegetation","burn","water","snow","urban","soil","kernel","radar"]:
+for t in ["vegetation", "burn", "water", "snow", "urban", "soil", "kernel", "radar"]:
     name = "docs/_static/indices_" + t + ".csv"
-    df[df["application_domain"] == t][["Index","Long Name","Equation"]].to_csv(name,index = False)
+    df[df["application_domain"] == t][["Index", "Long Name", "Equation"]].to_csv(
+        name, index=False
+    )

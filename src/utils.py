@@ -1,10 +1,12 @@
 from enum import Enum, unique
 
+
 @unique
 class Bands(Enum):
     """
     Bands supported by SpectralIndex DataClass
     """
+
     AEROSOL = "A"
     BLUE = "B"
     GREEN1 = "G1"
@@ -16,7 +18,7 @@ class Bands(Enum):
     WATERVAPOUR = "WV"
     RED1 = "RE1"
     RED2 = "RE2"
-    RED3 = "RE3"    
+    RED3 = "RE3"
     SWIR1 = "S1"
     SWIR2 = "S2"
     TIR = "T"
@@ -59,10 +61,12 @@ class Bands(Enum):
     KRL = "kRL"
     KLL = "kLL"
 
+
 class IndexType(Enum):
     """
     IndexType supported by SpectralIndex DataClass
-    """    
+    """
+
     VEGETATION = "vegetation"
     WATER = "water"
     BURN = "burn"

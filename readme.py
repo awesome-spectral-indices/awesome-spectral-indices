@@ -1,6 +1,6 @@
 import json
 
-with open('output/spectral-indices-dict.json', 'r') as f:
+with open("output/spectral-indices-dict.json", "r") as f:
     data = json.load(f)
 
 previousText = """<p align="center">
@@ -432,42 +432,44 @@ Or you can download the single files here (right-click > Save link as...):
 """
 
 platformBadges = {
-    "MODIS":"![MODIS](https://img.shields.io/badge/-MODIS-green?style=flat-square)",
-    "Landsat-457":"![Landsat-457](https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square)",
-    "Landsat-89":"![Landsat-89](https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square)",
-    "Sentinel-1 (Dual Polarisation VV-VH)":"![Sentinel-1 (Dual Polarisation VV-VH)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square)",
-    "Sentinel-1 (Dual Polarisation HH-HV)":"![Sentinel-1 (Dual Polarisation HH-HV)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square)",
-    "Sentinel-2":"![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)",
-    "Planet-Fusion":"![Planet-Fusion](https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square)",
+    "MODIS": "![MODIS](https://img.shields.io/badge/-MODIS-green?style=flat-square)",
+    "Landsat-457": "![Landsat-457](https://img.shields.io/badge/-Landsat%20457-blueviolet?style=flat-square)",
+    "Landsat-89": "![Landsat-89](https://img.shields.io/badge/-Landsat%2089-blue?style=flat-square)",
+    "Sentinel-1 (Dual Polarisation VV-VH)": "![Sentinel-1 (Dual Polarisation VV-VH)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square)",
+    "Sentinel-1 (Dual Polarisation HH-HV)": "![Sentinel-1 (Dual Polarisation HH-HV)](https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square)",
+    "Sentinel-2": "![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)",
+    "Planet-Fusion": "![Planet-Fusion](https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square)",
 }
 
 platformBadgesHTML = {
-    "MODIS":'<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
-    "Landsat-TM":'<img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">',
-    "Landsat-ETM+":'<img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">',
-    "Landsat-OLI":'<img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">',
-    "Sentinel-1 (Dual Polarisation VV-VH)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)">',
-    "Sentinel-1 (Dual Polarisation HH-HV)":'<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)">',
-    "Sentinel-2":'<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
-    "Planet-Fusion":'<img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion">',
+    "MODIS": '<img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">',
+    "Landsat-TM": '<img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">',
+    "Landsat-ETM+": '<img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">',
+    "Landsat-OLI": '<img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">',
+    "Sentinel-1 (Dual Polarisation VV-VH)": '<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)">',
+    "Sentinel-1 (Dual Polarisation HH-HV)": '<img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)">',
+    "Sentinel-2": '<img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">',
+    "Planet-Fusion": '<img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion">',
 }
 
 letters = list(map(chr, range(65, 91)))
 
+
 def filterByAppDomain():
     indices = []
-    for index, attributes in data["SpectralIndices"].items():        
-            if attributes['application_domain'] == appDomain:
-                indices.append(index)
+    for index, attributes in data["SpectralIndices"].items():
+        if attributes["application_domain"] == appDomain:
+            indices.append(index)
     return indices
 
-#text = []
-#for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
+
+# text = []
+# for appDomain in ["vegetation","water","burn","snow","urban","kernel","radar"]:
 #    text.append(f"## {appDomain.capitalize()}\n\n")
 #    for letter in letters:
 #        if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
 #            text.append(f"### {letter}\n")
-#            for index, attributes in data["SpectralIndices"].items():        
+#            for index, attributes in data["SpectralIndices"].items():
 #                if attributes['type'] == appDomain:
 #                    if index.startswith(letter) or index.startswith(letter.lower()):
 #                        line = f"- [{index}]({attributes['reference']}): {attributes['long_name']}."
@@ -478,23 +480,32 @@ def filterByAppDomain():
 #                        text.append("\n")
 
 text = []
-for appDomain in ["vegetation","water","burn","snow","urban","soil","kernel","radar"]:
+for appDomain in [
+    "vegetation",
+    "water",
+    "burn",
+    "snow",
+    "urban",
+    "soil",
+    "kernel",
+    "radar",
+]:
     text.append(f"\n## {appDomain.capitalize()}\n\n<table>")
     for letter in letters:
         if any([x.upper().startswith(letter) for x in filterByAppDomain()]):
-            #text.append(f'\n### {letter}\n<table>')
-            for index, attributes in data["SpectralIndices"].items():        
-                if attributes['application_domain'] == appDomain:
+            # text.append(f'\n### {letter}\n<table>')
+            for index, attributes in data["SpectralIndices"].items():
+                if attributes["application_domain"] == appDomain:
                     if index.startswith(letter) or index.startswith(letter.lower()):
-                        link = attributes['reference']
-                        name = attributes['long_name']
+                        link = attributes["reference"]
+                        name = attributes["long_name"]
                         line = f'<tr><td width="50%"><a href="{link}" target="_blank">{index}</a>: {name}.</td><td width="50%">'
                         text.append(line)
                         for platform, badge in platformBadgesHTML.items():
-                            if platform in attributes['platforms']:
+                            if platform in attributes["platforms"]:
                                 text.append(f" {badge} ")
                         text.append("</td></tr>\n")
     text.append("</table>\n")
 
-with open('README.md', 'w') as f:
+with open("README.md", "w") as f:
     f.write(previousText + "".join(text) + nextText)

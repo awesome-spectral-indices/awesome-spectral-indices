@@ -4,11 +4,7 @@ constants = {
         "description": "Canopy background adjustment",
         "default": 1.0,
     },
-    "g": {
-        "short_name": "g",
-        "description": "Gain factor",
-        "default": 2.5
-    },
+    "g": {"short_name": "g", "description": "Gain factor", "default": 2.5},
     "C1": {
         "short_name": "C1",
         "description": "Coefficient 1 for the aerosol resistance term",
