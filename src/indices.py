@@ -2097,5 +2097,14 @@ spindex = SpectralIndices(
             date_of_addition="2023-07-03",
             contributor="https://github.com/geoSanjeeb",
         ),
+        EBI=SpectralIndex(
+            short_name="EBI",
+            long_name="Enhanced Bloom Index",
+            formula="(R + G + B)/((G/B) * (R - B - epsilon))",
+            reference="https://doi.org/10.1016/j.isprsjprs.2019.08.006",
+            application_domain="vegetation",
+            date_of_addition="2023-07-03",
+            contributor="https://github.com/geoSanjeeb",
+        ),
     )
 )

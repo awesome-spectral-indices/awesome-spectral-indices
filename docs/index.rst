@@ -224,6 +224,7 @@ Additional index parameters also follow a standard:
 - :code:`beta`: Calibration parameter used for NDSIns.
 - :code:`gamma`: Weighting coefficient used for ARVI.
 - :code:`omega`: Weighting coefficient used for MBWI.
+- :code:`epsilon`: Adjustment constant used for EBI.
 - :code:`sla`: Soil line slope.
 - :code:`slb`: Soil line intercept.
 - :code:`PAR`: Photosynthetically Active Radiation.

@@ -38,6 +38,7 @@ class Bands(Enum):
     PAR = "PAR"
     OMEGA = "omega"
     F_DELTA = "fdelta"
+    EPSILON = "epsilon"
     SLOPE_PARAMETER_SOIL = "k"
     WAVELENGTH_NIR = "lambdaN"
     WAVELENGTH_RED = "lambdaR"

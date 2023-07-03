@@ -100,4 +100,9 @@ constants = {
         "description": "Adjustment factor used for SEVI",
         "default": 0.581,
     },
+    "epsilon": {
+        "short_name": "epsilon",
+        "description": "Adjustment constant used for EBI",
+        "default": 1,
+    },
 }
