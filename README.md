@@ -59,6 +59,23 @@
 Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
 You can check the [curated list of spectral indices here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv), and if you want to use it in your environment, it is available in [CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv) and [JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json).
 
+## Citation
+
+If you use this work, please consider citing the following paper:
+
+```bibtex
+@article{montero2023standardized,
+  title={A standardized catalogue of spectral indices to advance the use of remote sensing in Earth system research},
+  author={Montero, David and Aybar, C{'e}sar and Mahecha, Miguel D and Martinuzzi, Francesco and S{"o}chting, Maximilian and Wieneke, Sebastian},
+  journal={Scientific Data},
+  volume={10},
+  number={1},
+  pages={197},
+  year={2023},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
 ## Attributes
 
 All spectral indices follow a standard. Each item of the list has the following attributes:
