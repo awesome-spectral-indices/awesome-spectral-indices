@@ -412,6 +412,10 @@ There is no deadline. The repository is continuously updated!
 - [Espectro](https://github.com/davemlz/espectro): The Awesome Spectral Indices Streamlit App.
 - [spyndex](https://github.com/davemlz/spyndex): Awesome Spectral Indices in Python.
 
+## Julia
+
+- [SpectralIndices.jl](https://github.com/awesome-spectral-indices/SpectralIndices.jl): Awesome Spectral Indices in Julia.
+
 ## R
 
 - [rgeeExtra](https://github.com/r-earthengine/rgeeExtra): High-level functions to process spatial and simple Earth Engine objects.
