@@ -1603,7 +1603,7 @@ spindex = SpectralIndices(
             contributor="https://github.com/davemlz",
         ),
         NDSoI=SpectralIndex(
-            short_name="NDSoiI",
+            short_name="NDSoI",
             long_name="Normalized Difference Soil Index",
             formula="(S2 - G)/(S2 + G)",
             reference="https://doi.org/10.1016/j.jag.2015.02.010",
