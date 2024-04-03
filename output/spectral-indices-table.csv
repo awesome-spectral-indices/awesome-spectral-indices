@@ -129,7 +129,7 @@ NDSIWV,WorldView Normalized Difference Soil Index,soil,(G - Y)/(G + Y),"['G', 'Y
 NDSInw,Normalized Difference Snow Index with no Water,snow,(N - S1 - beta)/(N + S1),"['N', 'S1', 'beta']",https://doi.org/10.3390/w12051339,https://github.com/davemlz,2022-04-08
 NDSWIR,Normalized Difference SWIR,burn,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1109/TGRS.2003.819190,https://github.com/davemlz,2022-09-22
 NDSaII,Normalized Difference Snow and Ice Index,snow,(R - S1) / (R + S1),"['R', 'S1']",https://doi.org/10.1080/01431160119766,https://github.com/davemlz,2021-09-18
-NDSoiI,Normalized Difference Soil Index,soil,(S2 - G)/(S2 + G),"['S2', 'G']",https://doi.org/10.1016/j.jag.2015.02.010,https://github.com/davemlz,2022-04-18
+NDSoI,Normalized Difference Soil Index,soil,(S2 - G)/(S2 + G),"['S2', 'G']",https://doi.org/10.1016/j.jag.2015.02.010,https://github.com/davemlz,2022-04-18
 NDTI,Normalized Difference Turbidity Index,water,(R-G)/(R+G),"['R', 'G']",https://doi.org/10.1016/j.rse.2006.07.012,https://github.com/CvenGeo,2022-10-03
 NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),"['N', 'R']",https://ntrs.nasa.gov/citations/19740022614,https://github.com/davemlz,2021-04-07
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm),vegetation,(RE2 - RE1) / (RE2 + RE1),"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06

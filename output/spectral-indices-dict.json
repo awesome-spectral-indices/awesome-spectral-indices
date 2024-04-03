@@ -2644,7 +2644,7 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.010",
-            "short_name": "NDSoiI"
+            "short_name": "NDSoI"
         },
         "NDTI": {
             "application_domain": "water",
