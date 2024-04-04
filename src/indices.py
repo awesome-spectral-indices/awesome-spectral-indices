@@ -432,8 +432,8 @@ spindex = SpectralIndices(
             date_of_addition="2021-05-13",
             contributor="https://github.com/davemlz",
         ),
-        GDVI=SpectralIndex(
-            short_name="GDVI",
+        =SpectralIndex(
+            short_name="",
             long_name="Generalized Difference Vegetation Index",
             formula="((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))",
             reference="https://doi.org/10.3390/rs6021211",
@@ -2105,6 +2105,15 @@ spindex = SpectralIndices(
             application_domain="vegetation",
             date_of_addition="2023-07-03",
             contributor="https://github.com/geoSanjeeb",
+        ),
+        GDVI=SpectralIndex(
+    short_name='GDVI',
+    long_name='Generalized Difference Vegetation Index ',
+    formula='N-G',
+    reference='https://doi.org/10.3390/rs6021211',
+    type='vegetation',
+    date_of_addition='2024-04-04',
+    contributor="https://github.com/j-miszczyszyn"
         ),
     )
 )
