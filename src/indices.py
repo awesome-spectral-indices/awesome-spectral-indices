@@ -2106,5 +2106,41 @@ spindex = SpectralIndices(
             date_of_addition="2023-07-03",
             contributor="https://github.com/geoSanjeeb",
         ),
+        GDVI_Trucker=SpectralIndex(
+    short_name='GDVI_Trucker',
+    long_name='Green Difference Vegetation Index ',
+    formula='N-G',
+    reference='https://doi.org/10.1016/0034-4257(79)90004-X',
+    type='vegetation',
+    date_of_addition='2024-04-04',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
+        MSAVI2=SpectralIndex(
+    short_name='MSAVI2',
+    long_name='Modified Soil-Adjusted Vegetation Index 2',
+    formula='((2*N+1)-(sqrt(((2*N+1)^2)-8*(N-R))))/2',
+    reference='https://doi.org/10.1016/0034-4257(79)90013-0',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
+          LAI=SpectralIndex(
+    short_name='LAI',
+    long_name='Leaf Area Index',
+    formula='3.618*(g * (N - R) / (N + C1 * R - C2 * B + L))-0.118',
+    reference=' 10.1016/S0034-4257(01)00342-X',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
+        LCI=SpectralIndex(
+    short_name='LCI',
+    long_name='Leaf Chlorophyll Index',
+    formula='(N-RE1)/(N-R)',
+    reference=' 10.1016/S0034-4257(01)00342-X',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
     )
 )
