@@ -2124,5 +2124,14 @@ spindex = SpectralIndices(
     date_of_addition='2024-04-05',
     contributor="https://github.com/j-miszczyszyn"
         ),
+          LAI=SpectralIndex(
+    short_name='LAI',
+    long_name='Leaf Area Index',
+    formula='3.618*(g * (N - R) / (N + C1 * R - C2 * B + L))-0.118',
+    reference=' 10.1016/S0034-4257(01)00342-X',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
     )
 )
