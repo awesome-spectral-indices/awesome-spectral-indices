@@ -2115,5 +2115,14 @@ spindex = SpectralIndices(
     date_of_addition='2024-04-04',
     contributor="https://github.com/j-miszczyszyn"
         ),
+        MSAVI2=SpectralIndex(
+    short_name='MSAVI2',
+    long_name='Modified Soil-Adjusted Vegetation Index 2',
+    formula='((2*N+1)-(sqrt(((2*N+1)^2)-8*(N-R))))/2',
+    reference='https://doi.org/10.1016/0034-4257(79)90013-0',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
     )
 )
