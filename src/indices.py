@@ -2133,5 +2133,14 @@ spindex = SpectralIndices(
     date_of_addition='2024-04-05',
     contributor="https://github.com/j-miszczyszyn"
         ),
+        LCI=SpectralIndex(
+    short_name='LCI',
+    long_name='Leaf Chlorophyll Index',
+    formula='(N-RE1)/(N-R)',
+    reference=' 10.1016/S0034-4257(01)00342-X',
+    type='vegetation',
+    date_of_addition='2024-04-05',
+    contributor="https://github.com/j-miszczyszyn"
+        ),
     )
 )
