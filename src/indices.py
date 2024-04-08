@@ -2106,5 +2106,14 @@ spindex = SpectralIndices(
             date_of_addition="2023-07-03",
             contributor="https://github.com/geoSanjeeb",
         ),
+        ENDVI=SpectralIndex(
+            short_name="ENDVI",
+            long_name="Enhanced Normalized Difference Vegetation Index",
+            formula="((N + G) - (2 * B)) / ((N + G) + (2 * B))",
+            reference="https://doi.org/10.1371/journal.pone.0186193",
+            application_domain="vegetation",
+            date_of_addition="2024-04-08",
+            contributor="https://github.com/gagev",
+        ),
     )
 )
