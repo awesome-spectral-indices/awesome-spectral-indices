@@ -22,6 +22,7 @@ DSWI5,Disease-Water Stress Index 5 [`ref <https://doi.org/10.1080/01431160310001
 DVI,Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(94)00114-3>`_],:math:`N-R`
 DVIplus,Difference Vegetation Index Plus [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N-R`
 EBI,Enhanced Bloom Index [`ref <https://doi.org/10.1016/j.isprsjprs.2019.08.006>`_],:math:`(R+G+B)/((G/B)\times (R-B+epsilon))`
+ENDVI,Enhanced Normalized Difference Vegetation Index [`ref <https://doi.org/10.1371/journal.pone.0186193>`_],:math:`((N+G)-(2\times B))/((N+G)+(2\times B))`
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
 EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2008.06.006>`_],:math:`g\times (N-R)/(N+2.4\times R+L)`
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
