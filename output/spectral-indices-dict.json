@@ -1964,7 +1964,7 @@
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
-            "formula": "((S2 - S1)/G)/((S2 + S1)/G)",
+            "formula": "(S2 - S1/G)/(S2 + S1/G)",
             "long_name": "Normalized Built-up Area Index",
             "platforms": [
                 "Sentinel-2",

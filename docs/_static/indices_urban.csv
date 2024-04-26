@@ -4,7 +4,7 @@ BRBA,Band Ratio for Built-up Area [`ref <https://www.omicsonline.org/scientific-
 DBI,Dry Built-Up Index [`ref <https://doi.org/10.3390/land7030081>`_],:math:`((B-T1)/(B+T1))-((N-R)/(N+R))`
 EBBI,Enhanced Built-Up and Bareness Index [`ref <https://doi.org/10.3390/rs4102957>`_],:math:`(S1-N)/(10.0\times ((S1+T)^{0.5}))`
 IBI,Index-Based Built-Up Index [`ref <https://doi.org/10.1080/01431160802039957>`_],:math:`(((S1-N)/(S1+N))-(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)\times (1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)`
-NBAI,Normalized Built-up Area Index [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`((S2-S1)/G)/((S2+S1)/G)`
+NBAI,Normalized Built-up Area Index [`ref <https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf>`_],:math:`(S2-S1/G)/(S2+S1/G)`
 NBUI,New Built-Up Index [`ref <https://hdl.handle.net/1959.11/29500>`_],:math:`((S1-N)/(10.0\times (T+S1)^{0.5}))-(((N-R)\times (1.0+L))/(N-R+L))-(G-S1)/(G+S1)`
 NDBI,Normalized Difference Built-Up Index [`ref <http://dx.doi.org/10.1080/01431160304987>`_],:math:`(S1-N)/(S1+N)`
 NDISIb,Normalized Difference Impervious Surface Index Blue [`ref <https://doi.org/10.14358/PERS.76.5.557>`_],:math:`(T-(B+N+S1)/3.0)/(T+(B+N+S1)/3.0)`
