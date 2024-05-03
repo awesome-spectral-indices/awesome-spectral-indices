@@ -2115,5 +2115,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-04-08",
             contributor="https://github.com/gagev",
         ),
+        OSI=SpectralIndex(
+            short_name="OSI",
+            long_name="Oil Spill Index",
+            formula="(G + R)/B",
+            reference="https://doi.org/10.29117/quarfe.2021.0020",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
+        ),
     )
 )
