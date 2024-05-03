@@ -379,9 +379,10 @@ Additional index parameters also follow a standard:
 - `slb`: Soil line intercept.
 - `PAR`: Photosynthetically Active Radiation.
 - `k`: Slope parameter by soil used for NIRvH2.
-- `lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
-- `lambdaR`: Red wavelength used for NIRvH2 and NDGI.
-- `lambdaG`: Green wavelength used for NDGI.
+- `lambdaN`: NIR central wavelength.
+- `lambdaR`: Red central wavelength.
+- `lambdaG`: Green central wavelength.
+- `lambdaS1`: SWIR1 central wavelength.
 
 The kernel indices are constructed using a special type of parameters:
 
