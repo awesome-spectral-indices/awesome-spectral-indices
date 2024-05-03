@@ -2124,5 +2124,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-05-03",
             contributor="https://github.com/emanuelcastanho",
         ),
+        PI=SpectralIndex(
+            short_name="PI",
+            long_name="Plastic Index",
+            formula="N/(N + R)",
+            reference="https://doi.org/10.3390/rs12162648",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
+        ),
     )
 )
