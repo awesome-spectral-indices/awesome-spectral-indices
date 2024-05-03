@@ -2133,5 +2133,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-05-03",
             contributor="https://github.com/emanuelcastanho",
         ),
+        FAI=SpectralIndex(
+            short_name="FAI",
+            long_name="Floating Algae Index",
+            formula="N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
+            reference="https://doi.org/10.1016/j.rse.2009.05.012",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
+        ),
     )
 )
