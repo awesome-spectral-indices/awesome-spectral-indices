@@ -966,6 +966,28 @@
             "reference": "https://doi.org/10.1016/j.rse.2008.06.006",
             "short_name": "EVI2"
         },
+        "EVIv": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N",
+            "long_name": "Enhanced Vegetation Index of Vegetation",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "EVIv"
+        },
         "ExG": {
             "application_domain": "vegetation",
             "bands": [
@@ -4534,6 +4556,27 @@
             "reference": "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762",
             "short_name": "WRI"
         },
+        "bNIRv": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "((N - B)/(N + B)) * N",
+            "long_name": "Blue Near-Infrared Reflectance of Vegetation",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "bNIRv"
+        },
         "kEVI": {
             "application_domain": "kernel",
             "bands": [
@@ -4677,6 +4720,111 @@
             ],
             "reference": "https://doi.org/10.1016/S0034-4257(02)00010-X",
             "short_name": "mSR705"
+        },
+        "sNIRvLSWI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "((N - S2)/(N + S2)) * N",
+            "long_name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "sNIRvLSWI"
+        },
+        "sNIRvNDPI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "alpha",
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
+            "long_name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "sNIRvNDPI"
+        },
+        "sNIRvNDVILSWIP": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
+            "long_name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "sNIRvNDVIxLSWI"
+        },
+        "sNIRvNDVILSWIS": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
+            "long_name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "sNIRvNDVIxLSWI"
+        },
+        "sNIRvSWIR": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "S2"
+            ],
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2024-05-14",
+            "formula": "((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N",
+            "long_name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "short_name": "sNIRvSWIR"
         }
     }
 }
