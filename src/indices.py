@@ -2177,6 +2177,32 @@ spindex = SpectralIndices(
             application_domain="vegetation",
             date_of_addition="2024-05-16",
             contributor="https://github.com/davemlz",
+        OSI=SpectralIndex(
+            short_name="OSI",
+            long_name="Oil Spill Index",
+            formula="(G + R)/B",
+            reference="https://doi.org/10.1016/j.mex.2021.101327",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
+        ),
+        PI=SpectralIndex(
+            short_name="PI",
+            long_name="Plastic Index",
+            formula="N/(N + R)",
+            reference="https://doi.org/10.3390/rs12162648",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
+        ),
+        FAI=SpectralIndex(
+            short_name="FAI",
+            long_name="Floating Algae Index",
+            formula="N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
+            reference="https://doi.org/10.1016/j.rse.2009.05.012",
+            application_domain="water",
+            date_of_addition="2024-05-03",
+            contributor="https://github.com/emanuelcastanho",
         ),
     )
 )
