@@ -2177,6 +2177,7 @@ spindex = SpectralIndices(
             application_domain="vegetation",
             date_of_addition="2024-05-16",
             contributor="https://github.com/davemlz",
+        ),
         OSI=SpectralIndex(
             short_name="OSI",
             long_name="Oil Spill Index",
