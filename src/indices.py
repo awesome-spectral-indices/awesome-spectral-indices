@@ -2205,5 +2205,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-05-03",
             contributor="https://github.com/emanuelcastanho",
         ),
+        RNDVI=SpectralIndex(
+            short_name="RNDVI",
+            long_name="Reversed Normalized Difference Vegetation Index",
+            formula="(R - N)/(R + N)",
+            reference="https://doi.org/10.3390/rs12162648",
+            application_domain="water",
+            date_of_addition="2024-05-16",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )
