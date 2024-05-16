@@ -18,6 +18,7 @@ NDWIns,Normalized Difference Water Index with no Snow Cover and Glaciers [`ref <
 NWI,New Water Index [`ref <https://doi.org/10.11873/j.issn.1004-0323.2009.2.167>`_],:math:`(B-(N+S1+S2))/(B+(N+S1+S2))`
 OSI,Oil Spill Index [`ref <https://doi.org/10.1016/j.mex.2021.101327>`_],:math:`(G+R)/B`
 PI,Plastic Index [`ref <https://doi.org/10.3390/rs12162648>`_],:math:`N/(N+R)`
+RNDVI,Reversed Normalized Difference Vegetation Index [`ref <https://doi.org/10.3390/rs12162648>`_],:math:`(R-N)/(R+N)`
 S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`(RE1-S2)/(RE1+S2)`
 SWM,Sentinel Water Mask [`ref <https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf>`_],:math:`(B+G)/(N+S1)`
 TWI,Triangle Water Index [`ref <https://doi.org/10.3390/rs14215289>`_],:math:`(2.84\times (RE1-RE2)/(G+S2))+((1.25\times (G-B)-(N-B))/(N+1.25\times G-0.25\times B))`

@@ -3583,6 +3583,27 @@
             "reference": "https://doi.org/10.1016/S0034-4257(98)00030-3",
             "short_name": "RI4XS"
         },
+        "RNDVI": {
+            "application_domain": "water",
+            "bands": [
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2024-05-16",
+            "formula": "(R - N)/(R + N)",
+            "long_name": "Reversed Normalized Difference Vegetation Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.3390/rs12162648",
+            "short_name": "RNDVI"
+        },
         "RVI": {
             "application_domain": "vegetation",
             "bands": [

@@ -176,6 +176,7 @@ RGBVI,Red Green Blue Vegetation Index,vegetation,(G ** 2.0 - B * R)/(G ** 2.0 + 
 RGRI,Red-Green Ratio Index,vegetation,R/G,"['R', 'G']",https://doi.org/10.1016/j.jag.2014.03.018,https://github.com/davemlz,2022-04-08
 RI,Redness Index,vegetation,(R - G)/(R + G),"['R', 'G']",https://www.documentation.ird.fr/hor/fdi:34390,https://github.com/davemlz,2022-04-09
 RI4XS,SPOT HRV XS-based Redness Index 4,soil,(R**2.0)/(G**4.0),"['R', 'G']",https://doi.org/10.1016/S0034-4257(98)00030-3,https://github.com/davemlz,2022-11-20
+RNDVI,Reversed Normalized Difference Vegetation Index,water,(R - N)/(R + N),"['R', 'N']",https://doi.org/10.3390/rs12162648,https://github.com/davemlz,2024-05-16
 RVI,Ratio Vegetation Index,vegetation,RE2 / R,"['RE2', 'R']",https://doi.org/10.2134/agronj1968.00021962006000060016x,https://github.com/davemlz,2021-04-07
 S2REP,Sentinel-2 Red-Edge Position,vegetation,705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1)),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 S2WI,Sentinel-2 Water Index,water,(RE1 - S2)/(RE1 + S2),"['RE1', 'S2']",https://doi.org/10.3390/w13121647,https://github.com/MATRIX4284,2022-03-06
