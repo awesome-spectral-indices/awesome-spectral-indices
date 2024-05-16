@@ -2,6 +2,7 @@ Index,Long Name,Equation
 ANDWI,Augmented Normalized Difference Water Index [`ref <https://doi.org/10.1016/j.envsoft.2021.105030>`_],:math:`(B+G+R-N-S1-S2)/(B+G+R+N+S1+S2)`
 AWEInsh,Automated Water Extraction Index [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`4.0\times (G-S1)-0.25\times N+2.75\times S2`
 AWEIsh,Automated Water Extraction Index with Shadows Elimination [`ref <https://doi.org/10.1016/j.rse.2013.08.029>`_],:math:`B+2.5\times G-1.5\times (N+S1)-0.25\times S2`
+FAI,Floating Algae Index [`ref <https://doi.org/10.1016/j.rse.2009.05.012>`_],:math:`N-(R+(S1-R)\times ((\lambda_{N} -\lambda_{R} )/(lambdaS1-\lambda_{R} )))`
 LSWI,Land Surface Water Index [`ref <https://doi.org/10.1016/j.rse.2003.11.008>`_],:math:`(N-S1)/(N+S1)`
 MBWI,Multi-Band Water Index [`ref <https://doi.org/10.1016/j.jag.2018.01.018>`_],:math:`(\omega \times G)-R-N-S1-S2`
 MLSWI26,Modified Land Surface Water Index (MODIS Bands 2 and 6) [`ref <https://doi.org/10.3390/rs71215805>`_],:math:`(1.0-N-S1)/(1.0-N+S1)`
@@ -15,6 +16,8 @@ NDVIMNDWI,NDVI-MNDWI Model [`ref <https://doi.org/10.1007/978-3-662-45737-5_51>`
 NDWI,Normalized Difference Water Index [`ref <https://doi.org/10.1080/01431169608948714>`_],:math:`(G-N)/(G+N)`
 NDWIns,Normalized Difference Water Index with no Snow Cover and Glaciers [`ref <https://doi.org/10.3390/w12051339>`_],:math:`(G-\alpha \times N)/(G+N)`
 NWI,New Water Index [`ref <https://doi.org/10.11873/j.issn.1004-0323.2009.2.167>`_],:math:`(B-(N+S1+S2))/(B+(N+S1+S2))`
+OSI,Oil Spill Index [`ref <https://doi.org/10.1016/j.mex.2021.101327>`_],:math:`(G+R)/B`
+PI,Plastic Index [`ref <https://doi.org/10.3390/rs12162648>`_],:math:`N/(N+R)`
 S2WI,Sentinel-2 Water Index [`ref <https://doi.org/10.3390/w13121647>`_],:math:`(RE1-S2)/(RE1+S2)`
 SWM,Sentinel Water Mask [`ref <https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf>`_],:math:`(B+G)/(N+S1)`
 TWI,Triangle Water Index [`ref <https://doi.org/10.3390/rs14215289>`_],:math:`(2.84\times (RE1-RE2)/(G+S2))+((1.25\times (G-B)-(N-B))/(N+1.25\times G-0.25\times B))`
