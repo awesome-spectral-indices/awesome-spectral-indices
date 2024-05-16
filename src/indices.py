@@ -2161,7 +2161,7 @@ spindex = SpectralIndices(
             contributor="https://github.com/MartinuzziFrancesco",
         ),
         sNIRvNDVILSWIP=SpectralIndex(
-            short_name="sNIRvNDVIxLSWI",
+            short_name="sNIRvNDVILSWIP",
             long_name="SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product",
             formula="((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
             reference="https://doi.org/10.22541/essoar.171561872.22414664/v1",
@@ -2170,7 +2170,7 @@ spindex = SpectralIndices(
             contributor="https://github.com/davemlz",
         ),
         sNIRvNDVILSWIS=SpectralIndex(
-            short_name="sNIRvNDVIxLSWI",
+            short_name="sNIRvNDVILSWIS",
             long_name="SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum",
             formula="(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
             reference="https://doi.org/10.22541/essoar.171561872.22414664/v1",
