@@ -4870,7 +4870,7 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
-            "short_name": "sNIRvNDVIxLSWI"
+            "short_name": "sNIRvNDVILSWIP"
         },
         "sNIRvNDVILSWIS": {
             "application_domain": "vegetation",
@@ -4891,7 +4891,7 @@
                 "MODIS"
             ],
             "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
-            "short_name": "sNIRvNDVIxLSWI"
+            "short_name": "sNIRvNDVILSWIS"
         },
         "sNIRvSWIR": {
             "application_domain": "vegetation",
