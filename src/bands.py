@@ -146,7 +146,7 @@ bands = {
     "G1": {
         "short_name": "G1",
         "long_name": "Green 1",
-        "common_name": "green",
+        "common_name": "green05",
         "min_wavelength": 510,
         "max_wavelength": 550,
         "platforms": {
@@ -371,7 +371,7 @@ bands = {
     "RE1": {
         "short_name": "RE1",
         "long_name": "Red Edge 1",
-        "common_name": "rededge",
+        "common_name": "rededge071",
         "min_wavelength": 695,
         "max_wavelength": 715,
         "platforms": {
@@ -401,7 +401,7 @@ bands = {
     "RE2": {
         "short_name": "RE2",
         "long_name": "Red Edge 2",
-        "common_name": "rededge",
+        "common_name": "rededge075",
         "min_wavelength": 730,
         "max_wavelength": 750,
         "platforms": {
@@ -424,7 +424,7 @@ bands = {
     "RE3": {
         "short_name": "RE3",
         "long_name": "Red Edge 3",
-        "common_name": "rededge",
+        "common_name": "rededge078",
         "min_wavelength": 765,
         "max_wavelength": 795,
         "platforms": {
@@ -464,6 +464,34 @@ bands = {
                 "name": "Near-Infrared (NIR) 2 (Red Edge 4 in Google Earth Engine)",
                 "wavelength": 864.0,
                 "bandwidth": 21.0,
+            },
+            "landsat8": {
+                "platform": "Landsat 8",
+                "band": "B5",
+                "name": "Near-Infrared (NIR)",
+                "wavelength": 865.0,
+                "bandwidth": 30.0,
+            },
+            "landsat9": {
+                "platform": "Landsat 9",
+                "band": "B5",
+                "name": "Near-Infrared (NIR)",
+                "wavelength": 865.0,
+                "bandwidth": 30.0,
+            },
+            "modis": {
+                "platform": "Terra/Aqua: MODIS",
+                "band": "B2",
+                "name": "Near-Infrared (NIR)",
+                "wavelength": 858.5,
+                "bandwidth": 35.0,
+            },
+            "planetscope": {
+                "platform": "PlanetScope",
+                "band": "B8",
+                "name": "Near-Infrared (NIR)",
+                "wavelength": 865.0,
+                "bandwidth": 40.0,
             },
         },
     },
@@ -508,34 +536,6 @@ bands = {
                 "name": "Near-Infrared (NIR)",
                 "wavelength": 835.0,
                 "bandwidth": 130.0,
-            },
-            "landsat8": {
-                "platform": "Landsat 8",
-                "band": "B5",
-                "name": "Near-Infrared (NIR)",
-                "wavelength": 865.0,
-                "bandwidth": 30.0,
-            },
-            "landsat9": {
-                "platform": "Landsat 9",
-                "band": "B5",
-                "name": "Near-Infrared (NIR)",
-                "wavelength": 865.0,
-                "bandwidth": 30.0,
-            },
-            "modis": {
-                "platform": "Terra/Aqua: MODIS",
-                "band": "B2",
-                "name": "Near-Infrared (NIR)",
-                "wavelength": 858.5,
-                "bandwidth": 35.0,
-            },
-            "planetscope": {
-                "platform": "PlanetScope",
-                "band": "B8",
-                "name": "Near-Infrared (NIR)",
-                "wavelength": 865.0,
-                "bandwidth": 40.0,
             },
             "wv3": {
                 "platform": "WorldView-3",
