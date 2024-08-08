@@ -2214,5 +2214,23 @@ spindex = SpectralIndices(
             date_of_addition="2024-05-16",
             contributor="https://github.com/davemlz",
         ),
+        CRI550=SpectralIndex(
+            short_name="CRI550",
+            long_name="Carotenoid Reflectance Index using 550 nm",
+            formula="(1.0 / B) - (1.0 / G)",
+            reference="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
+            application_domain="vegetation",
+            date_of_addition="2024-08-08",
+            contributor="https://github.com/eomasters-repos"
+        ),
+        CRI700=SpectralIndex(
+            short_name="CRI700",
+            long_name="Carotenoid Reflectance Index using 700 nm",
+            formula="(1.0 / B) - (1.0 / RE1)",
+            reference="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
+            application_domain="vegetation",
+            date_of_addition="2024-08-08",
+            contributor="https://github.com/eomasters-repos"
+        ),
     )
 )
