@@ -515,6 +515,43 @@
             "reference": "https://doi.org/10.1078/0176-1617-00887",
             "short_name": "CIRE"
         },
+        "CRI550": {
+            "application_domain": "vegetation",
+            "bands": [
+                "B",
+                "G"
+            ],
+            "contributor": "https://github.com/eomasters-repos",
+            "date_of_addition": "2024-08-08",
+            "formula": "(1.0 / B) - (1.0 / G)",
+            "long_name": "Carotenoid Reflectance Index using 550 nm",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
+            "short_name": "CRI550"
+        },
+        "CRI700": {
+            "application_domain": "vegetation",
+            "bands": [
+                "B",
+                "RE1"
+            ],
+            "contributor": "https://github.com/eomasters-repos",
+            "date_of_addition": "2024-08-08",
+            "formula": "(1.0 / B) - (1.0 / RE1)",
+            "long_name": "Carotenoid Reflectance Index using 700 nm",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
+            "short_name": "CRI700"
+        },
         "CSI": {
             "application_domain": "burn",
             "bands": [
