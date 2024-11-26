@@ -1022,7 +1022,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "EVIv"
         },
         "ExG": {
@@ -4699,7 +4699,7 @@
                 "MODIS",
                 "Planet-Fusion"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "bNIRv"
         },
         "kEVI": {
@@ -4863,7 +4863,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "sNIRvLSWI"
         },
         "sNIRvNDPI": {
@@ -4885,7 +4885,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "sNIRvNDPI"
         },
         "sNIRvNDVILSWIP": {
@@ -4906,7 +4906,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "sNIRvNDVILSWIP"
         },
         "sNIRvNDVILSWIS": {
@@ -4927,7 +4927,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "sNIRvNDVILSWIS"
         },
         "sNIRvSWIR": {
@@ -4948,7 +4948,7 @@
                 "Landsat-ETM+",
                 "MODIS"
             ],
-            "reference": "https://doi.org/10.22541/essoar.171561872.22414664/v1",
+            "reference": "https://doi.org/10.1029/2024JG008240",
             "short_name": "sNIRvSWIR"
         }
     }

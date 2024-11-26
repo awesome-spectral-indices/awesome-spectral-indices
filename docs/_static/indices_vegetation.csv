@@ -27,7 +27,7 @@ EBI,Enhanced Bloom Index [`ref <https://doi.org/10.1016/j.isprsjprs.2019.08.006>
 ENDVI,Enhanced Normalized Difference Vegetation Index [`ref <https://doi.org/10.1371/journal.pone.0186193>`_],:math:`((N+G)-(2\times B))/((N+G)+(2\times B))`
 EVI,Enhanced Vegetation Index [`ref <https://doi.org/10.1016/S0034-4257(96)00112-5>`_],:math:`g\times (N-R)/(N+C1\times R-C2\times B+L)`
 EVI2,Two-Band Enhanced Vegetation Index [`ref <https://doi.org/10.1016/j.rse.2008.06.006>`_],:math:`g\times (N-R)/(N+2.4\times R+L)`
-EVIv,Enhanced Vegetation Index of Vegetation [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`2.5\times ((N-R)/(N+6\times R-7.5\times B+1.0))\times N`
+EVIv,Enhanced Vegetation Index of Vegetation [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`2.5\times ((N-R)/(N+6\times R-7.5\times B+1.0))\times N`
 ExG,Excess Green Index [`ref <https://doi.org/10.13031/2013.27838>`_],:math:`2\times G-R-B`
 ExGR,ExG - ExR Vegetation Index [`ref <https://doi.org/10.1016/j.compag.2008.03.009>`_],:math:`(2.0\times G-R-B)-(1.3\times R-G)`
 ExR,Excess Red Index [`ref <https://doi.org/10.1117/12.336896>`_],:math:`1.3\times R-G`
@@ -130,11 +130,11 @@ VI700,Vegetation Index (700 nm) [`ref <https://doi.org/10.1016/S0034-4257(01)002
 VIG,Vegetation Index Green [`ref <https://doi.org/10.1016/S0034-4257(01)00289-9>`_],:math:`(G-R)/(G+R)`
 WDRVI,Wide Dynamic Range Vegetation Index [`ref <https://doi.org/10.1078/0176-1617-01176>`_],:math:`(\alpha \times N-R)/(\alpha \times N+R)`
 WDVI,Weighted Difference Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(89)90076-X>`_],:math:`N-sla\times R`
-bNIRv,Blue Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`((N-B)/(N+B))\times N`
+bNIRv,Blue Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`((N-B)/(N+B))\times N`
 mND705,"Modified Normalized Difference (705, 750 and 445 nm) [`ref <https://doi.org/10.1016/S0034-4257(02)00010-X>`_]",:math:`(RE2-RE1)/(RE2+RE1-A)`
 mSR705,Modified Simple Ratio (705 and 445 nm) [`ref <https://doi.org/10.1016/S0034-4257(02)00010-X>`_],:math:`(RE2-A)/(RE2+A)`
-sNIRvLSWI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`((N-S2)/(N+S2))\times N`
-sNIRvNDPI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`(N-(\alpha \times R+(1.0-\alpha )\times S2))/(N+(\alpha \times R+(1.0-\alpha )\times S2))\times N`
-sNIRvNDVILSWIP,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`((N-R)/(N+R))\times ((N-S2)/(N+S2))\times N`
-sNIRvNDVILSWIS,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`(((N-R)/(N+R))+((N-S2)/(N+S2)))\times N`
-sNIRvSWIR,SWIR-enhanced Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.22541/essoar.171561872.22414664/v1>`_],:math:`((N-R-S2^{2.0})/(N+R+S2^{2.0}))\times N`
+sNIRvLSWI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`((N-S2)/(N+S2))\times N`
+sNIRvNDPI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`(N-(\alpha \times R+(1.0-\alpha )\times S2))/(N+(\alpha \times R+(1.0-\alpha )\times S2))\times N`
+sNIRvNDVILSWIP,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`((N-R)/(N+R))\times ((N-S2)/(N+S2))\times N`
+sNIRvNDVILSWIS,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`(((N-R)/(N+R))+((N-S2)/(N+S2)))\times N`
+sNIRvSWIR,SWIR-enhanced Near-Infrared Reflectance of Vegetation [`ref <https://doi.org/10.1029/2024JG008240>`_],:math:`((N-R-S2^{2.0})/(N+R+S2^{2.0}))\times N`

@@ -48,7 +48,7 @@ EMBI,Enhanced Modified Bare Soil Index,soil,((((S1 - S2 - N)/(S1 + S2 + N)) + 0.
 ENDVI,Enhanced Normalized Difference Vegetation Index,vegetation,((N + G) - (2 * B)) / ((N + G) + (2 * B)),"['N', 'G', 'B']",https://doi.org/10.1371/journal.pone.0186193,https://github.com/gagev,2024-04-08
 EVI,Enhanced Vegetation Index,vegetation,g * (N - R) / (N + C1 * R - C2 * B + L),"['g', 'N', 'R', 'C1', 'C2', 'B', 'L']",https://doi.org/10.1016/S0034-4257(96)00112-5,https://github.com/davemlz,2021-04-07
 EVI2,Two-Band Enhanced Vegetation Index,vegetation,g * (N - R) / (N + 2.4 * R + L),"['g', 'N', 'R', 'L']",https://doi.org/10.1016/j.rse.2008.06.006,https://github.com/davemlz,2021-04-07
-EVIv,Enhanced Vegetation Index of Vegetation,vegetation,2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N,"['N', 'R', 'B']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
+EVIv,Enhanced Vegetation Index of Vegetation,vegetation,2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N,"['N', 'R', 'B']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
 ExG,Excess Green Index,vegetation,2 * G - R - B,"['G', 'R', 'B']",https://doi.org/10.13031/2013.27838,https://github.com/davemlz,2021-05-14
 ExGR,ExG - ExR Vegetation Index,vegetation,(2.0 * G - R - B) - (1.3 * R - G),"['G', 'R', 'B']",https://doi.org/10.1016/j.compag.2008.03.009,https://github.com/davemlz,2022-04-08
 ExR,Excess Red Index,vegetation,1.3 * R - G,"['R', 'G']",https://doi.org/10.1117/12.336896,https://github.com/davemlz,2022-04-08
@@ -233,7 +233,7 @@ WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.339
 WI2,Water Index 2,water,(B - S2) / (B + S2),"['B', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
 WI2015,Water Index 2015,water,1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2,"['G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.rse.2015.12.055,https://github.com/remi-braun,2022-10-26
 WRI,Water Ratio Index,water,(G + R)/(N + S1),"['G', 'R', 'N', 'S1']",https://doi.org/10.1109/GEOINFORMATICS.2010.5567762,https://github.com/davemlz,2022-01-17
-bNIRv,Blue Near-Infrared Reflectance of Vegetation,vegetation,((N - B)/(N + B)) * N,"['N', 'B']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
+bNIRv,Blue Near-Infrared Reflectance of Vegetation,vegetation,((N - B)/(N + B)) * N,"['N', 'B']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
 kEVI,Kernel Enhanced Vegetation Index,kernel,g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL),"['g', 'kNN', 'kNR', 'C1', 'C2', 'kNB', 'kNL']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 kIPVI,Kernel Infrared Percentage Vegetation Index,kernel,kNN/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2022-04-08
 kNDVI,Kernel Normalized Difference Vegetation Index,kernel,(kNN - kNR)/(kNN + kNR),"['kNN', 'kNR']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-04-07
@@ -241,8 +241,8 @@ kRVI,Kernel Ratio Vegetation Index,kernel,kNN / kNR,"['kNN', 'kNR']",https://doi
 kVARI,Kernel Visible Atmospherically Resistant Index,kernel,(kGG - kGR) / (kGG + kGR - kGB),"['kGG', 'kGR', 'kGB']",https://doi.org/10.1126/sciadv.abc7447,https://github.com/davemlz,2021-05-10
 mND705,"Modified Normalized Difference (705, 750 and 445 nm)",vegetation,(RE2 - RE1)/(RE2 + RE1 - A),"['RE2', 'RE1', 'A']",https://doi.org/10.1016/S0034-4257(02)00010-X,https://github.com/davemlz,2022-04-08
 mSR705,Modified Simple Ratio (705 and 445 nm),vegetation,(RE2 - A)/(RE2 + A),"['RE2', 'A']",https://doi.org/10.1016/S0034-4257(02)00010-X,https://github.com/davemlz,2022-04-08
-sNIRvLSWI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI,vegetation,((N - S2)/(N + S2)) * N,"['N', 'S2']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
-sNIRvNDPI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI,vegetation,(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N,"['N', 'alpha', 'R', 'S2']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
-sNIRvNDVILSWIP,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product,vegetation,((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N,"['N', 'R', 'S2']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
-sNIRvNDVILSWIS,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum,vegetation,(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N,"['N', 'R', 'S2']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/davemlz,2024-05-16
-sNIRvSWIR,SWIR-enhanced Near-Infrared Reflectance of Vegetation,vegetation,((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N,"['N', 'R', 'S2']",https://doi.org/10.22541/essoar.171561872.22414664/v1,https://github.com/MartinuzziFrancesco,2024-05-14
+sNIRvLSWI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI,vegetation,((N - S2)/(N + S2)) * N,"['N', 'S2']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
+sNIRvNDPI,SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI,vegetation,(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N,"['N', 'alpha', 'R', 'S2']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
+sNIRvNDVILSWIP,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product,vegetation,((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N,"['N', 'R', 'S2']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
+sNIRvNDVILSWIS,SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum,vegetation,(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N,"['N', 'R', 'S2']",https://doi.org/10.1029/2024JG008240,https://github.com/davemlz,2024-05-16
+sNIRvSWIR,SWIR-enhanced Near-Infrared Reflectance of Vegetation,vegetation,((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N,"['N', 'R', 'S2']",https://doi.org/10.1029/2024JG008240,https://github.com/MartinuzziFrancesco,2024-05-14
