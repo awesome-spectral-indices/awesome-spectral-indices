@@ -57,6 +57,7 @@ previousText = """<p align="center">
 
 **Google Earth Engine**: <a href="https://github.com/davemlz/eemont" target="_blank">github.com/davemlz/eemont</a> (Python), <a href="https://github.com/awesome-spectral-indices/spectral" target="_blank">github.com/awesome-spectral-indices/spectral</a> (JavaScript) and <a href="https://github.com/r-earthengine/rgeeExtra" target="_blank">github.com/r-earthengine/rgeeExtra</a> (R)
 
+**Julia Package**: <a href="https://github.com/awesome-spectral-indices/SpectralIndices.jl" target="_blank">github.com/awesome-spectral-indices/SpectralIndices.jl</a>
 ---
 
 # Spectral Indices
