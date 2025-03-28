@@ -2232,5 +2232,32 @@ spindex = SpectralIndices(
             date_of_addition="2024-08-08",
             contributor="https://github.com/eomasters-repos"
         ),
+        NDLI=SpectralIndex(
+            short_name='NDLI',
+            long_name='Normalized Difference Lignin Index',
+            formula='(log(1 / S2) - log(1 / N)) / (log(1 / S2) + log(1 / N))',
+            reference='https://doi.org/10.1016/S0034-4257(02)00011-1',
+            application_domain='vegetation',
+            date_of_addition='2025-03-19',
+            contributor="https://github.com/MartinuzziFrancesco"
+        ),
+        NDNI=SpectralIndex(
+            short_name='NDNI',
+            long_name='Normalized Difference Nitrogen Index',
+            formula='(log(1 / S1) - log(1 / N)) / (log(1 / S1) + log(1 / N))',
+            reference='https://doi.org/10.1016/S0034-4257(02)00011-1',
+            application_domain='vegetation',
+            date_of_addition='2025-03-19',
+            contributor="https://github.com/MartinuzziFrancesco"
+        ),
+        NPCI=SpectralIndex(
+            short_name='NPCI',
+            long_name='Normalized Pigment Chlorophyll Ratio Index',
+            formula = '(R - A) / (R + A)',
+            reference='https://doi.org/10.1016/0034-4257(94)90136-8',
+            application_domain='vegetation',
+            date_of_addition='2025-03-19',
+            contributor="https://github.com/MartinuzziFrancesco"
+        ),
     )
 )
