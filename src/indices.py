@@ -2232,5 +2232,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-08-08",
             contributor="https://github.com/eomasters-repos"
         ),
+        FWEI=SpectralIndex(
+            short_name="FWEI",
+            long_name="Flood/water extraction index",
+            formula="((B + G + R)/3 - N)/((B + G + R)/3 + N)",
+            reference="https://doi.org/10.1007/s00477-024-02660-z",
+            application_domain="water",
+            date_of_addition="2025-04-15",
+            contributor="https://github.com/kalab-oto",
+        )
     )
 )
