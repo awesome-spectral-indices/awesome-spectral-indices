@@ -2277,5 +2277,14 @@ spindex = SpectralIndices(
             date_of_addition="2025-07-11",
             contributor="https://github.com/davemlz"
         ),
+        IRGBVI=SpectralIndex(
+            short_name="IRGBVI",
+            long_name="Improved-Red-Green-Blue Vegetation Index",
+            formula="(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))",
+            reference="https://doi.org/10.1016/j.jag.2024.103668",
+            application_domain="vegetation",
+            date_of_addition="2025-07-11",
+            contributor="https://github.com/davemlz"
+        ),
     )
 )
