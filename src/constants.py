@@ -70,9 +70,19 @@ constants = {
         "description": "NIR central wavelength (nm)",
         "default": None,
     },
+    "lambdaN2": {
+        "short_name": "lambdaN2",
+        "description": "NIR2 central wavelength (nm)",
+        "default": None,
+    },
     "lambdaS1": {
         "short_name": "lambdaS1",
         "description": "SWIR1 central wavelength (nm)",
+        "default": None,
+    },
+    "lambdaS2": {
+        "short_name": "lambdaS2",
+        "description": "SWIR2 central wavelength (nm)",
         "default": None,
     },
     "sla": {
