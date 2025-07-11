@@ -74,6 +74,11 @@
         "description": "NIR central wavelength (nm)",
         "short_name": "lambdaN"
     },
+    "lambdaN2": {
+        "default": null,
+        "description": "NIR2 central wavelength (nm)",
+        "short_name": "lambdaN2"
+    },
     "lambdaR": {
         "default": null,
         "description": "Red central wavelength (nm)",
@@ -83,6 +88,11 @@
         "default": null,
         "description": "SWIR1 central wavelength (nm)",
         "short_name": "lambdaS1"
+    },
+    "lambdaS2": {
+        "default": null,
+        "description": "SWIR2 central wavelength (nm)",
+        "short_name": "lambdaS2"
     },
     "nexp": {
         "default": 2.0,

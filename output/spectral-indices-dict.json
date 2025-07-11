@@ -552,6 +552,26 @@
             "reference": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
             "short_name": "CRI700"
         },
+        "CRSWIR": {
+            "application_domain": "vegetation",
+            "bands": [
+                "S1",
+                "N2",
+                "S2",
+                "lambdaS2",
+                "lambdaN2",
+                "lambdaS1"
+            ],
+            "contributor": "https://github.com/kenoz",
+            "date_of_addition": "2025-06-23",
+            "formula": "S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
+            "long_name": "Continuum Removal SWIR",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html",
+            "short_name": "CRSWIR"
+        },
         "CSI": {
             "application_domain": "burn",
             "bands": [
@@ -1137,6 +1157,29 @@
             "reference": "https://doi.org/10.1016/j.rse.2020.111676",
             "short_name": "FCVI"
         },
+        "FWEI": {
+            "application_domain": "water",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/kalab-oto",
+            "date_of_addition": "2025-04-15",
+            "formula": "(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)",
+            "long_name": "Flood/Water Extraction Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1007/s00477-024-02660-z",
+            "short_name": "FWEI"
+        },
         "GARI": {
             "application_domain": "vegetation",
             "bands": [
@@ -1534,6 +1577,28 @@
             "reference": "https://doi.org/10.1016/j.isprsjprs.2013.04.007",
             "short_name": "IRECI"
         },
+        "IRGBVI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "G",
+                "R",
+                "B"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2025-07-11",
+            "formula": "(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))",
+            "long_name": "Improved-Red-Green-Blue Vegetation Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1016/j.jag.2024.103668",
+            "short_name": "IRGBVI"
+        },
         "LSWI": {
             "application_domain": "water",
             "bands": [
@@ -1732,6 +1797,26 @@
             ],
             "reference": "https://doi.org/10.1016/j.jag.2015.02.012",
             "short_name": "MGRVI"
+        },
+        "MI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2025-07-11",
+            "formula": "(N - S1) / (N * S1)",
+            "long_name": "Mangrove Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://www.researchgate.net/profile/Gathot-Winarso/publication/277137915_NEW_MANGROVE_INDEX_AS_DEGRADATIONHEALTH_INDICATOR_USING_REMOTE_SENSING_DATA_SEGARA_ANAKAN_AND_ALAS_PURWO_CASE_STUDY/links/5562d90c08ae8c0cab333ab4/NEW-MANGROVE-INDEX-AS-DEGRADATION-HEALTH-INDICATOR-USING-REMOTE-SENSING-DATA-SEGARA-ANAKAN-AND-ALAS-PURWO-CASE-STUDY.pdf",
+            "short_name": "MI"
         },
         "MIRBI": {
             "application_domain": "burn",
@@ -2014,6 +2099,27 @@
             ],
             "reference": "https://doi.org/10.1016/j.rse.2003.12.013",
             "short_name": "MTVI2"
+        },
+        "MVI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "G",
+                "S1"
+            ],
+            "contributor": "https://github.com/delatorredm",
+            "date_of_addition": "2025-04-08",
+            "formula": "(N - G) / (S1 - G)",
+            "long_name": "Mangrove Vegetation Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2020.06.001",
+            "short_name": "MVI"
         },
         "MuWIR": {
             "application_domain": "water",
@@ -3058,6 +3164,23 @@
             ],
             "reference": "https://doi.org/10.1029/2007GL031021",
             "short_name": "NMDI"
+        },
+        "NPCI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "R",
+                "A"
+            ],
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2025-03-19",
+            "formula": "(R - A) / (R + A)",
+            "long_name": "Normalized Pigments Chlorophyll Ratio Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI"
+            ],
+            "reference": "https://doi.org/10.1016/0034-4257(94)90136-8",
+            "short_name": "NPCI"
         },
         "NRFIg": {
             "application_domain": "vegetation",

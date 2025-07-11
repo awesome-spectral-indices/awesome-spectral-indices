@@ -14,6 +14,7 @@ CIG,Chlorophyll Index Green [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:
 CIRE,Chlorophyll Index Red Edge [`ref <https://doi.org/10.1078/0176-1617-00887>`_],:math:`(N/RE1)-1`
 CRI550,Carotenoid Reflectance Index using 550 nm [`ref <https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2>`_],:math:`(1.0/B)-(1.0/G)`
 CRI700,Carotenoid Reflectance Index using 700 nm [`ref <https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2>`_],:math:`(1.0/B)-(1.0/RE1)`
+CRSWIR,Continuum Removal SWIR [`ref <https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html>`_],:math:`S1/(N2+((S2-N2)/(lambdaS2-\lambda_{N} 2))\times (lambdaS1-\lambda_{N} 2))`
 CVI,Chlorophyll Vegetation Index [`ref <https://doi.org/10.1007/s11119-010-9204-3>`_],:math:`(N\times R)/(G^{2.0})`
 DSI,Drought Stress Index [`ref <https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf>`_],:math:`S1/N`
 DSWI1,Disease-Water Stress Index 1 [`ref <https://doi.org/10.1080/01431160310001618031>`_],:math:`N/S1`
@@ -50,6 +51,7 @@ IAVI,New Atmospherically Resistant Vegetation Index [`ref <https://www.jipb.net/
 IKAW,Kawashima Index [`ref <https://doi.org/10.1006/anbo.1997.0544>`_],:math:`(R-B)/(R+B)`
 IPVI,Infrared Percentage Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(90)90085-Z>`_],:math:`N/(N+R)`
 IRECI,Inverted Red-Edge Chlorophyll Index [`ref <https://doi.org/10.1016/j.isprsjprs.2013.04.007>`_],:math:`(RE3-R)/(RE1/RE2)`
+IRGBVI,Improved-Red-Green-Blue Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2024.103668>`_],:math:`(5.0\times (G^{2.0})-2.0\times (R^{2.0})-5.0\times (B^{2.0}))/(5.0\times (G^{2.0})+2.0\times (R^{2.0})+5.0\times (B^{2.0}))`
 MCARI,Modified Chlorophyll Absorption in Reflectance Index [`ref <http://dx.doi.org/10.1016/S0034-4257(00)00113-9>`_],:math:`((RE1-R)-0.2\times (RE1-G))\times (RE1/R)`
 MCARI1,Modified Chlorophyll Absorption in Reflectance Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (2.5\times (N-R)-1.3\times (N-G))`
 MCARI2,Modified Chlorophyll Absorption in Reflectance Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (2.5\times (N-R)-1.3\times (N-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
@@ -57,6 +59,7 @@ MCARI705,Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm) [
 MCARIOSAVI,MCARI/OSAVI Ratio [`ref <https://doi.org/10.1016/S0034-4257(00)00113-9>`_],:math:`(((RE1-R)-0.2\times (RE1-G))\times (RE1/R))/(1.16\times (N-R)/(N+R+0.16))`
 MCARIOSAVI705,MCARI/OSAVI Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.agrformet.2008.03.005>`_],:math:`(((RE2-RE1)-0.2\times (RE2-G))\times (RE2/RE1))/(1.16\times (RE2-RE1)/(RE2+RE1+0.16))`
 MGRVI,Modified Green Red Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2015.02.012>`_],:math:`(G^{2.0}-R^{2.0})/(G^{2.0}+R^{2.0})`
+MI,Mangrove Index [`ref <https://www.researchgate.net/profile/Gathot-Winarso/publication/277137915_NEW_MANGROVE_INDEX_AS_DEGRADATIONHEALTH_INDICATOR_USING_REMOTE_SENSING_DATA_SEGARA_ANAKAN_AND_ALAS_PURWO_CASE_STUDY/links/5562d90c08ae8c0cab333ab4/NEW-MANGROVE-INDEX-AS-DEGRADATION-HEALTH-INDICATOR-USING-REMOTE-SENSING-DATA-SEGARA-ANAKAN-AND-ALAS-PURWO-CASE-STUDY.pdf>`_],:math:`(N-S1)/(N\times S1)`
 MNDVI,Modified Normalized Difference Vegetation Index [`ref <https://doi.org/10.1080/014311697216810>`_],:math:`(N-S2)/(N+S2)`
 MNLI,Modified Non-Linear Vegetation Index [`ref <https://doi.org/10.1109/TGRS.2003.812910>`_],:math:`(1+L)\times ((N^2)-R)/((N^2)+R+L)`
 MRBVI,Modified Red Blue Vegetation Index [`ref <https://doi.org/10.3390/s20185055>`_],:math:`(R^{2.0}-B^{2.0})/(R^{2.0}+B^{2.0})`
@@ -67,6 +70,7 @@ MSR705,Modified Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/j.a
 MTCI,MERIS Terrestrial Chlorophyll Index [`ref <https://doi.org/10.1080/0143116042000274015>`_],:math:`(RE2-RE1)/(RE1-R)`
 MTVI1,Modified Triangular Vegetation Index 1 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`1.2\times (1.2\times (N-G)-2.5\times (R-G))`
 MTVI2,Modified Triangular Vegetation Index 2 [`ref <https://doi.org/10.1016/j.rse.2003.12.013>`_],:math:`(1.5\times (1.2\times (N-G)-2.5\times (R-G)))/((((2.0\times N+1)^2)-(6.0\times N-5\times (R^{0.5}))-0.5)^{0.5})`
+MVI,Mangrove Vegetation Index [`ref <https://doi.org/10.1016/j.isprsjprs.2020.06.001>`_],:math:`(N-G)/(S1-G)`
 ND705,Normalized Difference (705 and 750 nm) [`ref <https://doi.org/10.1016/S0034-4257(02)00010-X>`_],:math:`(RE2-RE1)/(RE2+RE1)`
 NDDI,Normalized Difference Drought Index [`ref <https://doi.org/10.1029/2006GL029127>`_],:math:`(((N-R)/(N+R))-((G-N)/(G+N)))/(((N-R)/(N+R))+((G-N)/(G+N)))`
 NDGI,Normalized Difference Greenness Index [`ref <https://doi.org/10.1016/j.rse.2019.03.028>`_],:math:`(((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N-R)/(((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} ))\times G+(1.0-((\lambda_{N} -\lambda_{R} )/(\lambda_{N} -\lambda_{G} )))\times N+R)`
@@ -83,6 +87,7 @@ NIRvH2,Hyperspectral Near-Infrared Reflectance of Vegetation [`ref <https://doi.
 NIRvP,Near-Infrared Reflectance of Vegetation and Incoming PAR [`ref <https://doi.org/10.1016/j.rse.2021.112763>`_],:math:`((N-R)/(N+R))\times N\times PAR`
 NLI,Non-Linear Vegetation Index [`ref <https://doi.org/10.1080/02757259409532252>`_],:math:`((N^2)-R)/((N^2)+R)`
 NMDI,Normalized Multi-band Drought Index [`ref <https://doi.org/10.1029/2007GL031021>`_],:math:`(N-(S1-S2))/(N+(S1-S2))`
+NPCI,Normalized Pigments Chlorophyll Ratio Index [`ref <https://doi.org/10.1016/0034-4257(94)90136-8>`_],:math:`(R-A)/(R+A)`
 NRFIg,Normalized Rapeseed Flowering Index Green [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(G-S2)/(G+S2)`
 NRFIr,Normalized Rapeseed Flowering Index Red [`ref <https://doi.org/10.3390/rs13010105>`_],:math:`(R-S2)/(R+S2)`
 NormG,Normalized Green [`ref <https://doi.org/10.2134/agronj2004.0314>`_],:math:`G/(N+G+R)`
