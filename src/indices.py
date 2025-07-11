@@ -2232,5 +2232,14 @@ spindex = SpectralIndices(
             date_of_addition="2024-08-08",
             contributor="https://github.com/eomasters-repos"
         ),
+        NPCI=SpectralIndex(
+            short_name="NPCI",
+            long_name="Normalized Pigments Chlorophyll Ratio Index",
+            formula="(R - A) / (R + A)",
+            reference="https://doi.org/10.1016/0034-4257(94)90136-8",
+            application_domain="vegetation",
+            date_of_addition="2025-03-19",
+            contributor="https://github.com/MartinuzziFrancesco"
+        ),
     )
 )
