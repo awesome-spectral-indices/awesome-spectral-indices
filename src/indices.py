@@ -2232,6 +2232,24 @@ spindex = SpectralIndices(
             date_of_addition="2024-08-08",
             contributor="https://github.com/eomasters-repos"
         ),
+        NPCI=SpectralIndex(
+            short_name="NPCI",
+            long_name="Normalized Pigments Chlorophyll Ratio Index",
+            formula="(R - A) / (R + A)",
+            reference="https://doi.org/10.1016/0034-4257(94)90136-8",
+            application_domain="vegetation",
+            date_of_addition="2025-03-19",
+            contributor="https://github.com/MartinuzziFrancesco"
+        ),
+        FWEI=SpectralIndex(
+            short_name="FWEI",
+            long_name="Flood/Water Extraction Index",
+            formula="(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)",
+            reference="https://doi.org/10.1007/s00477-024-02660-z",
+            application_domain="water",
+            date_of_addition="2025-04-15",
+            contributor="https://github.com/kalab-oto"
+        ),
         CRSWIR=SpectralIndex(
             short_name="CRSWIR",
             long_name="Continuum Removal SWIR",
