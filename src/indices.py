@@ -2249,6 +2249,6 @@ spindex = SpectralIndices(
             application_domain="water",
             date_of_addition="2025-04-15",
             contributor="https://github.com/kalab-oto"
-        )
+        ),
     )
 )
