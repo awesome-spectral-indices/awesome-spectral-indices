@@ -2250,5 +2250,14 @@ spindex = SpectralIndices(
             date_of_addition="2025-04-15",
             contributor="https://github.com/kalab-oto"
         ),
+        CRSWIR=SpectralIndex(
+            short_name="CRSWIR",
+            long_name="Continuum Removal SWIR",
+            formula="S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
+            reference="https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html",
+            application_domain="vegetation",
+            date_of_addition="2025-06-23",
+            contributor="https://github.com/kenoz"
+        ),
     )
 )
