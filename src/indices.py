@@ -2259,5 +2259,14 @@ spindex = SpectralIndices(
             date_of_addition="2025-06-23",
             contributor="https://github.com/kenoz"
         ),
+        MVI=SpectralIndex(
+            short_name="MVI",
+            long_name="Mangrove Vegetation Index",
+            formula="(N - G) / (S1 - G)",
+            reference="https://doi.org/10.1016/j.isprsjprs.2020.06.001",
+            application_domain="vegetation",
+            date_of_addition="2025-04-08",
+            contributor="https://github.com/delatorredm"
+        ),
     )
 )
