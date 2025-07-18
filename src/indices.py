@@ -1,6 +1,8 @@
-from src.SpectralIndex import SpectralIndex
 from typing import Dict
+
 from pydantic import BaseModel
+
+from src.SpectralIndex import SpectralIndex
 
 
 class SpectralIndices(BaseModel):
@@ -2221,7 +2223,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
             application_domain="vegetation",
             date_of_addition="2024-08-08",
-            contributor="https://github.com/eomasters-repos"
+            contributor="https://github.com/eomasters-repos",
         ),
         CRI700=SpectralIndex(
             short_name="CRI700",
@@ -2230,7 +2232,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
             application_domain="vegetation",
             date_of_addition="2024-08-08",
-            contributor="https://github.com/eomasters-repos"
+            contributor="https://github.com/eomasters-repos",
         ),
         NPCI=SpectralIndex(
             short_name="NPCI",
@@ -2239,7 +2241,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1016/0034-4257(94)90136-8",
             application_domain="vegetation",
             date_of_addition="2025-03-19",
-            contributor="https://github.com/MartinuzziFrancesco"
+            contributor="https://github.com/MartinuzziFrancesco",
         ),
         FWEI=SpectralIndex(
             short_name="FWEI",
@@ -2248,7 +2250,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1007/s00477-024-02660-z",
             application_domain="water",
             date_of_addition="2025-04-15",
-            contributor="https://github.com/kalab-oto"
+            contributor="https://github.com/kalab-oto",
         ),
         CRSWIR=SpectralIndex(
             short_name="CRSWIR",
@@ -2257,7 +2259,7 @@ spindex = SpectralIndices(
             reference="https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html",
             application_domain="vegetation",
             date_of_addition="2025-06-23",
-            contributor="https://github.com/kenoz"
+            contributor="https://github.com/kenoz",
         ),
         MVI=SpectralIndex(
             short_name="MVI",
@@ -2266,7 +2268,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1016/j.isprsjprs.2020.06.001",
             application_domain="vegetation",
             date_of_addition="2025-04-08",
-            contributor="https://github.com/delatorredm"
+            contributor="https://github.com/delatorredm",
         ),
         MI=SpectralIndex(
             short_name="MI",
@@ -2275,7 +2277,7 @@ spindex = SpectralIndices(
             reference="https://www.researchgate.net/profile/Gathot-Winarso/publication/277137915_NEW_MANGROVE_INDEX_AS_DEGRADATIONHEALTH_INDICATOR_USING_REMOTE_SENSING_DATA_SEGARA_ANAKAN_AND_ALAS_PURWO_CASE_STUDY/links/5562d90c08ae8c0cab333ab4/NEW-MANGROVE-INDEX-AS-DEGRADATION-HEALTH-INDICATOR-USING-REMOTE-SENSING-DATA-SEGARA-ANAKAN-AND-ALAS-PURWO-CASE-STUDY.pdf",
             application_domain="vegetation",
             date_of_addition="2025-07-11",
-            contributor="https://github.com/davemlz"
+            contributor="https://github.com/davemlz",
         ),
         IRGBVI=SpectralIndex(
             short_name="IRGBVI",
@@ -2284,7 +2286,7 @@ spindex = SpectralIndices(
             reference="https://doi.org/10.1016/j.jag.2024.103668",
             application_domain="vegetation",
             date_of_addition="2025-07-11",
-            contributor="https://github.com/davemlz"
+            contributor="https://github.com/davemlz",
         ),
     )
 )
