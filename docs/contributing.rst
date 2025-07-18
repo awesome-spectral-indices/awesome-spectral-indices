@@ -114,7 +114,7 @@ The not so hard way
         long_name='Sentinel-2 LAI Green Index',
         formula='(RE4 - RE1) / (RE4 + RE1)',
         reference='https://doi.org/10.3390/s19040904',
-        type='vegetation',
+        application_domain='vegetation',
         date_of_addition='2021-04-08',
         contributor="https://github.com/davemlz"
     )
