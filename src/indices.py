@@ -2288,5 +2288,14 @@ spindex = SpectralIndices(
             date_of_addition="2025-07-11",
             contributor="https://github.com/davemlz",
         ),
+        FDI=SpectralIndex(
+            short_name="FDI",
+            long_name="Floating Debris Index",
+            formula="N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
+            reference="https://doi.org/10.1038/s41598-020-62298-z",
+            application_domain="water",
+            date_of_addition="2025-07-18",
+            contributor="https://github.com/guillemc23",
+        ),
     )
 )
