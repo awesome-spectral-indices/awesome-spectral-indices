@@ -1157,6 +1157,26 @@
             "reference": "https://doi.org/10.1016/j.rse.2020.111676",
             "short_name": "FCVI"
         },
+        "FDI": {
+            "application_domain": "water",
+            "bands": [
+                "N",
+                "RE2",
+                "S1",
+                "lambdaN",
+                "lambdaR",
+                "lambdaS1"
+            ],
+            "contributor": "https://github.com/guillemc23",
+            "date_of_addition": "2025-07-18",
+            "formula": "N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
+            "long_name": "Floating Debris Index",
+            "platforms": [
+                "Sentinel-2"
+            ],
+            "reference": "https://doi.org/10.1038/s41598-020-62298-z",
+            "short_name": "FDI"
+        },
         "FWEI": {
             "application_domain": "water",
             "bands": [

@@ -55,6 +55,7 @@ ExGR,ExG - ExR Vegetation Index,vegetation,(2.0 * G - R - B) - (1.3 * R - G),"['
 ExR,Excess Red Index,vegetation,1.3 * R - G,"['R', 'G']",https://doi.org/10.1117/12.336896,https://github.com/davemlz,2022-04-08
 FAI,Floating Algae Index,water,N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR))),"['N', 'R', 'S1', 'lambdaN', 'lambdaR', 'lambdaS1']",https://doi.org/10.1016/j.rse.2009.05.012,https://github.com/emanuelcastanho,2024-05-03
 FCVI,Fluorescence Correction Vegetation Index,vegetation,N - ((R + G + B)/3.0),"['N', 'R', 'G', 'B']",https://doi.org/10.1016/j.rse.2020.111676,https://github.com/davemlz,2022-01-20
+FDI,Floating Debris Index,water,N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR)),"['N', 'RE2', 'S1', 'lambdaN', 'lambdaR', 'lambdaS1']",https://doi.org/10.1038/s41598-020-62298-z,https://github.com/guillemc23,2025-07-18
 FWEI,Flood/Water Extraction Index,water,(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N),"['B', 'G', 'R', 'N']",https://doi.org/10.1007/s00477-024-02660-z,https://github.com/kalab-oto,2025-04-15
 GARI,Green Atmospherically Resistant Vegetation Index,vegetation,(N - (G - (B - R))) / (N - (G + (B - R))),"['N', 'G', 'B', 'R']",https://doi.org/10.1016/S0034-4257(96)00072-7,https://github.com/davemlz,2021-04-07
 GBNDVI,Green-Blue Normalized Difference Vegetation Index,vegetation,(N - (G + B))/(N + (G + B)),"['N', 'G', 'B']",https://doi.org/10.1016/S1672-6308(07)60027-4,https://github.com/davemlz,2021-04-07
