@@ -421,7 +421,7 @@ There is no deadline. The repository is continuously updated!
 ## R
 
 - [rgeeExtra](https://github.com/r-earthengine/rgeeExtra): High-level functions to process spatial and simple Earth Engine objects.
-- [rsi](https://cran.r-project.org/package=rsi): Efficiently Retrieve and Process Satellite Imagery
+- [rsi](https://cran.r-project.org/package=rsi): Efficiently Retrieve and Process Satellite Imagery.
 
 # Spectral Indices by Application Domain
 
