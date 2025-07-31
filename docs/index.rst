@@ -258,6 +258,11 @@ JavaScript
 
 - `spectral <https://github.com/davemlz/spectral>`_: Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
 
+Julia
+~~~~~
+
+- `SpectralIndices.jl <https://github.com/awesome-spectral-indices/SpectralIndices.jl>`_: Access and computation of any spectral index in the Awesome Spectral Indices collection natively in Julia.
+
 Python
 ~~~~~~
 
