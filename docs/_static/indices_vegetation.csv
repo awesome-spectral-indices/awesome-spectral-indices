@@ -78,7 +78,9 @@ NDII,Normalized Difference Infrared Index [`ref <https://www.asprs.org/wp-conten
 NDMI,Normalized Difference Moisture Index [`ref <https://doi.org/10.1016/S0034-4257(01)00318-2>`_],:math:`(N-S1)/(N+S1)`
 NDPI,Normalized Difference Phenology Index [`ref <https://doi.org/10.1016/j.rse.2017.04.031>`_],:math:`(N-(\alpha \times R+(1.0-\alpha )\times S1))/(N+(\alpha \times R+(1.0-\alpha )\times S1))`
 NDREI,Normalized Difference Red Edge Index [`ref <https://doi.org/10.1016/1011-1344(93)06963-4>`_],:math:`(N-RE1)/(N+RE1)`
+NDTI4RE,4-band Red Edge Normalized Difference Tillage Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`\gamma \times (S1-S2)/(S1+S2)+(1-\gamma )\times (N-RE3)/(N+RE3)`
 NDVI,Normalized Difference Vegetation Index [`ref <https://ntrs.nasa.gov/citations/19740022614>`_],:math:`(N-R)/(N+R)`
+NDVI4RE,4-band Red Edge Normalized Difference Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`((\alpha \times RE3+(1-\alpha )\times RE2)-(\beta \times R+(1-\beta )\times RE1))/((\alpha \times RE3+(1-\alpha )\times RE2)+(\beta \times R+(1-\beta )\times RE1))`
 NDVI705,Normalized Difference Vegetation Index (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`(RE2-RE1)/(RE2+RE1)`
 NDYI,Normalized Difference Yellowness Index [`ref <https://doi.org/10.1016/j.rse.2016.06.016>`_],:math:`(G-B)/(G+B)`
 NGRDI,Normalized Green Red Difference Index [`ref <https://doi.org/10.1016/0034-4257(79)90013-0>`_],:math:`(G-R)/(G+R)`
@@ -104,19 +106,23 @@ RGBVI,Red Green Blue Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2015.
 RGRI,Red-Green Ratio Index [`ref <https://doi.org/10.1016/j.jag.2014.03.018>`_],:math:`R/G`
 RI,Redness Index [`ref <https://www.documentation.ird.fr/hor/fdi:34390>`_],:math:`(R-G)/(R+G)`
 RVI,Ratio Vegetation Index [`ref <https://doi.org/10.2134/agronj1968.00021962006000060016x>`_],:math:`RE2/R`
+RVI4RE,4-band Red Edge Ratio Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`(\alpha \times RE3+(1-\alpha )\times RE2)/(\beta \times R+(1-\beta )\times RE1)`
 S2REP,Sentinel-2 Red-Edge Position [`ref <https://doi.org/10.1016/j.isprsjprs.2013.04.007>`_],:math:`705.0+35.0\times ((((RE3+R)/2.0)-RE1)/(RE2-RE1))`
 SARVI,Soil Adjusted and Atmospherically Resistant Vegetation Index [`ref <https://doi.org/10.1109/36.134076>`_],:math:`(1+L)\times (N-(R-(R-B)))/(N+(R-(R-B))+L)`
 SAVI,Soil-Adjusted Vegetation Index [`ref <https://doi.org/10.1016/0034-4257(88)90106-X>`_],:math:`(1.0+L)\times (N-R)/(N+R+L)`
 SAVI2,Soil-Adjusted Vegetation Index 2 [`ref <https://doi.org/10.1080/01431169008955053>`_],:math:`N/(R+(slb/sla))`
+SAVI4RE,4-band Red Edge Soil Adjusted Vegetation Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`2.0\times ((\alpha \times RE3+(1-\alpha )\times RE2)-(\beta \times R+(1-\beta )\times RE1))/((\alpha \times RE3+(1-\alpha )\times RE2)+(\beta \times R+(1-\beta )\times RE1+1))`
 SEVI,Shadow-Eliminated Vegetation Index [`ref <https://doi.org/10.1080/17538947.2018.1495770>`_],:math:`(N/R)+fdelta\times (1.0/R)`
 SI,Shadow Index [`ref <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf>`_],:math:`((1.0-B)\times (1.0-G)\times (1.0-R))^(1/3)`
 SIPI,Structure Insensitive Pigment Index [`ref <https://eurekamag.com/research/009/395/009395053.php>`_],:math:`(N-A)/(N-R)`
 SLAVI,Specific Leaf Area Vegetation Index [`ref <https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf>`_],:math:`N/(R+S2)`
+SNDTI4RE,4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`\gamma \times ((S1-S2)\times 2.0)/(S1+S2+1.0)+(1-\gamma )\times ((N-RE3)\times 2.0)/(N+RE3+1.0)`
 SR,Simple Ratio [`ref <https://doi.org/10.2307/1936256>`_],:math:`N/R`
 SR2,Simple Ratio (800 and 550 nm) [`ref <https://doi.org/10.1080/01431169308904370>`_],:math:`N/G`
 SR3,"Simple Ratio (860, 550 and 708 nm) [`ref <https://doi.org/10.1016/S0034-4257(98)00046-7>`_]",:math:`N2/(G\times RE1)`
 SR555,Simple Ratio (555 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/G`
 SR705,Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/RE1`
+STI4RE,4-band Red Edge Soil Tillage Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`\gamma \times S1/S2+(1-\gamma )\times N/RE3`
 SeLI,Sentinel-2 LAI Green Index [`ref <https://doi.org/10.3390/s19040904>`_],:math:`(N2-RE1)/(N2+RE1)`
 TCARI,Transformed Chlorophyll Absorption in Reflectance Index [`ref <https://doi.org/10.1016/S0034-4257(02)00018-4>`_],:math:`3\times ((RE1-R)-0.2\times (RE1-G)\times (RE1/R))`
 TCARIOSAVI,TCARI/OSAVI Ratio [`ref <https://doi.org/10.1016/S0034-4257(02)00018-4>`_],:math:`(3\times ((RE1-R)-0.2\times (RE1-G)\times (RE1/R)))/(1.16\times (N-R)/(N+R+0.16))`
