@@ -2917,6 +2917,26 @@
             "reference": "https://doi.org/10.1016/j.jag.2022.102793",
             "short_name": "NDTI4RE"
         },
+        "NDTillI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2025-10-11",
+            "formula": "(S1 - S2)/(S1 + S2)",
+            "long_name": "Normalized Difference Tillage Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf",
+            "short_name": "NDTillI"
+        },
         "NDVI": {
             "application_domain": "vegetation",
             "bands": [
@@ -4104,6 +4124,27 @@
             "reference": "https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf",
             "short_name": "SLAVI"
         },
+        "SNDTI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "L",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2025-10-11",
+            "formula": "(1.0 + L) * (S1 - S2) / (S1 + S2 + L)",
+            "long_name": "Soil-Adjusted Normalized Difference Tillage Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1080/22797254.2017.1418186",
+            "short_name": "SNDTI"
+        },
         "SNDTI4RE": {
             "application_domain": "vegetation",
             "bands": [
@@ -4213,6 +4254,26 @@
             ],
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
             "short_name": "SR705"
+        },
+        "STI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2025-10-11",
+            "formula": "S1 / S2",
+            "long_name": "Simple Tillage Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf",
+            "short_name": "STI"
         },
         "STI4RE": {
             "application_domain": "vegetation",
