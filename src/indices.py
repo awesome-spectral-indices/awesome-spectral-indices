@@ -2351,5 +2351,23 @@ spindex = SpectralIndices(
             date_of_addition="2025-09-30",
             contributor="https://github.com/davemlz",
         ),
+        STI=SpectralIndex(
+            short_name="STI",
+            long_name="Simple Tillage Index",
+            formula="S1 / S2",
+            reference="https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf",
+            application_domain="soil",
+            date_of_addition="2025-10-11",
+            contributor="https://github.com/davemlz",
+        ),
+        NDTillI=SpectralIndex(
+            short_name="NDTillI",
+            long_name="Normalized Difference Tillage Index",
+            formula="(S1 - S2)/(S1 + S2)",
+            reference="https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf",
+            application_domain="soil",
+            date_of_addition="2025-10-11",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )
