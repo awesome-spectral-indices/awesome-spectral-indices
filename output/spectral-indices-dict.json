@@ -2782,6 +2782,26 @@
             "reference": "https://doi.org/10.1080/01431160802385459",
             "short_name": "NDSII"
         },
+        "NDSIITM": {
+            "application_domain": "snow",
+            "bands": [
+                "R",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-01-10",
+            "formula": "(R - S1)/(R + S1)",
+            "long_name": "Normalized Difference Snow/Ice Index for Landsat TM",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1080/01431160119766",
+            "short_name": "NDSIITM"
+        },
         "NDSIWV": {
             "application_domain": "soil",
             "bands": [

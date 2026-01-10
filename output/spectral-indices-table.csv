@@ -136,6 +136,7 @@ NDPonI,Normalized Difference Pond Index,water,(S1-G)/(S1+G),"['S1', 'G']",https:
 NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),"['N', 'RE1']",https://doi.org/10.1016/1011-1344(93)06963-4,https://github.com/davemlz,2021-05-13
 NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),"['G', 'S1']",https://doi.org/10.1109/IGARSS.1994.399618,https://github.com/davemlz,2021-04-07
 NDSII,Normalized Difference Snow Ice Index,snow,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1080/01431160802385459,https://github.com/davemlz,2022-04-08
+NDSIITM,Normalized Difference Snow/Ice Index for Landsat TM,snow,(R - S1)/(R + S1),"['R', 'S1']",https://doi.org/10.1080/01431160119766,https://github.com/davemlz,2026-01-10
 NDSIWV,WorldView Normalized Difference Soil Index,soil,(G - Y)/(G + Y),"['G', 'Y']",https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4,https://github.com/remi-braun,2022-11-20
 NDSInw,Normalized Difference Snow Index with no Water,snow,(N - S1 - beta)/(N + S1),"['N', 'S1', 'beta']",https://doi.org/10.3390/w12051339,https://github.com/davemlz,2022-04-08
 NDSWIR,Normalized Difference SWIR,burn,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1109/TGRS.2003.819190,https://github.com/davemlz,2022-09-22
