@@ -2378,5 +2378,14 @@ spindex = SpectralIndices(
             date_of_addition="2025-10-11",
             contributor="https://github.com/davemlz",
         ),
+        NDSIITM=SpectralIndex(
+            short_name="NDSIITM",
+            long_name="Normalized Difference Snow/Ice Index for Landsat TM",
+            formula="(R - S1)/(R + S1)",
+            reference="https://doi.org/10.1080/01431160119766",
+            application_domain="snow",
+            date_of_addition="2026-01-10",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )
