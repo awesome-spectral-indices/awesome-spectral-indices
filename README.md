@@ -704,6 +704,11 @@ There is no deadline. The repository is continuously updated!
 <tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kVARI</a>: Kernel Visible Atmospherically Resistant Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
 </table>
 
+## Clouds
+
+<table><tr><td width="50%"><a href="https://doi.org/10.1016/j.rsase.2026.101990" target="_blank">CLOSDI</a>: Cloud Shadow Detection Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
+</table>
+
 ## Radar
 
 <table><tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2018.09.003" target="_blank">DPDD</a>: Dual-Pol Diagonal Distance.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>

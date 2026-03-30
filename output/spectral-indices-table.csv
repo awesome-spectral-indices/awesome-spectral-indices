@@ -24,6 +24,7 @@ BaI,Bareness Index,soil,R + S1 - N,"['R', 'S1', 'N']",https://doi.org/10.1109/IG
 CCI,Chlorophyll Carotenoid Index,vegetation,(G1 - R)/(G1 + R),"['G1', 'R']",https://doi.org/10.1073/pnas.1606162113,https://github.com/joanvlasschaert,2023-03-12
 CIG,Chlorophyll Index Green,vegetation,(N / G) - 1.0,"['N', 'G']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-04-07
 CIRE,Chlorophyll Index Red Edge,vegetation,(N / RE1) - 1,"['N', 'RE1']",https://doi.org/10.1078/0176-1617-00887,https://github.com/davemlz,2021-05-13
+CLOSDI,Cloud Shadow Detection Index,clouds,(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R),"['N', 'R']",https://doi.org/10.1016/j.rsase.2026.101990,https://github.com/atca1977,2026-03-30
 CRI550,Carotenoid Reflectance Index using 550 nm,vegetation,(1.0 / B) - (1.0 / G),"['B', 'G']",https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2,https://github.com/eomasters-repos,2024-08-08
 CRI700,Carotenoid Reflectance Index using 700 nm,vegetation,(1.0 / B) - (1.0 / RE1),"['B', 'RE1']",https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2,https://github.com/eomasters-repos,2024-08-08
 CRSWIR,Continuum Removal SWIR,vegetation,S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2)),"['S1', 'N2', 'S2', 'lambdaS2', 'lambdaN2', 'lambdaS1']",https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html,https://github.com/kenoz,2025-06-23
