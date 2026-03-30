@@ -478,6 +478,99 @@
             "reference": "https://doi.org/10.1073/pnas.1606162113",
             "short_name": "CCI"
         },
+        "CI1A": {
+            "application_domain": "clouds",
+            "bands": [
+                "N",
+                "S1",
+                "B",
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "(N + 2.0 * S1) / (B + G + R)",
+            "long_name": "Cloud Index (Form 1, Option A: with SWIR 1)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CI1A"
+        },
+        "CI1B": {
+            "application_domain": "clouds",
+            "bands": [
+                "N",
+                "B",
+                "G",
+                "R"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "(3.0 * N) / (B + G + R)",
+            "long_name": "Cloud Index (Form 1, Option B: without SWIR bands)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CI1B"
+        },
+        "CI2A": {
+            "application_domain": "clouds",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "(B + G + R + N + S1 + S2) / 6.0",
+            "long_name": "Cloud Index (Form 2, Option A: with SWIR bands)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CI2A"
+        },
+        "CI2B": {
+            "application_domain": "clouds",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "(B + G + R + N) / 4.0",
+            "long_name": "Cloud Index (Form 2, Option B: without SWIR bands)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CI2B"
+        },
         "CIG": {
             "application_domain": "vegetation",
             "bands": [
@@ -612,6 +705,46 @@
             ],
             "reference": "https://doi.org/10.1016/j.rse.2005.04.014",
             "short_name": "CSI"
+        },
+        "CSIA": {
+            "application_domain": "clouds",
+            "bands": [
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "(N + S1) / 2.0",
+            "long_name": "Cloud Shadow Index (Option A: with SWIR 1)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CSIA"
+        },
+        "CSIB": {
+            "application_domain": "clouds",
+            "bands": [
+                "N"
+            ],
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-03-30",
+            "formula": "N",
+            "long_name": "Cloud Shadow Index (Option B: without SWIR bands)",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS",
+                "Planet-Fusion"
+            ],
+            "reference": "https://doi.org/10.1016/j.isprsjprs.2018.07.006",
+            "short_name": "CSIB"
         },
         "CSIT": {
             "application_domain": "burn",
