@@ -2387,5 +2387,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-01-10",
             contributor="https://github.com/davemlz",
         ),
+        CLOSDI=SpectralIndex(
+            short_name="CLOSDI",
+            long_name="Cloud Shadow Detection Index",
+            formula="(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)",
+            reference="https://doi.org/10.1016/j.rsase.2026.101990",
+            application_domain="clouds",
+            date_of_addition="2026-03-30",
+            contributor="https://github.com/atca1977",
+        ),
     )
 )
