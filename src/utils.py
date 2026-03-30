@@ -78,4 +78,5 @@ class IndexType(Enum):
     SOIL = "soil"
     URBAN = "urban"
     KERNEL = "kernel"
+    CLOUDS = "clouds"
     RADAR = "radar"

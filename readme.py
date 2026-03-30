@@ -511,6 +511,7 @@ for appDomain in [
     "urban",
     "soil",
     "kernel",
+    "clouds",
     "radar",
 ]:
     text.append(f"\n## {appDomain.capitalize()}\n\n<table>")
