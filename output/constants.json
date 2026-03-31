@@ -94,6 +94,11 @@
         "description": "SWIR2 central wavelength (nm)",
         "short_name": "lambdaS2"
     },
+    "n": {
+        "default": 5,
+        "description": "Adjustment factor used for RWI. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)",
+        "short_name": "n"
+    },
     "nexp": {
         "default": 2.0,
         "description": "Exponent used for GDVI",
