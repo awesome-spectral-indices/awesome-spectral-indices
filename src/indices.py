@@ -2459,5 +2459,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-03-31",
             contributor="https://github.com/cmayet",
         ),
+        RWI=SpectralIndex(
+            short_name="RWI",
+            long_name="Rescaled Water Index",
+            formula="((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)",
+            reference="https://doi.org/10.1109/JSTARS.2025.3562089",
+            application_domain="water",
+            date_of_addition="2026-03-31",
+            contributor="https://github.com/edujusti",
+        ),
     )
 )

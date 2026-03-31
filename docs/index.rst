@@ -229,6 +229,7 @@ Additional index parameters also follow a standard:
 - :code:`slb`: Soil line intercept.
 - :code:`PAR`: Photosynthetically Active Radiation.
 - :code:`k`: Slope parameter by soil used for NIRvH2.
+- :code:`n`: Adjustment factor used for RWI.
 - :code:`lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
 - :code:`lambdaR`: Red wavelength used for NIRvH2 and NDGI.
 - :code:`lambdaG`: Green wavelength used for NDGI.

@@ -120,4 +120,9 @@ constants = {
         "description": "Adjustment constant used for EBI",
         "default": 1,
     },
+    "n": {
+        "short_name": "n",
+        "description": "Adjustment factor used for RWI",
+        "default": 5,
+    },
 }

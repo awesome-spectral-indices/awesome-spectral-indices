@@ -40,6 +40,7 @@ class Bands(Enum):
     F_DELTA = "fdelta"
     EPSILON = "epsilon"
     SLOPE_PARAMETER_SOIL = "k"
+    N_FACTOR = "n"
     CENTRAL_WAVELENGTH_NIR = "lambdaN"
     CENTRAL_WAVELENGTH_NIR2 = "lambdaN2"
     CENTRAL_WAVELENGTH_RED = "lambdaR"
