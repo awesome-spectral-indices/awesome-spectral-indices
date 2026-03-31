@@ -2450,5 +2450,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-03-30",
             contributor="https://github.com/davemlz",
         ),
+        SCoWI=SpectralIndex(
+            short_name="SCoWI",
+            long_name="Subtractive Coastal Water Index",
+            formula="B + 2.0 * (G - N) - 0.75 * S1 - 0.5 * S2",
+            reference="https://doi.org/10.3390/rs16152795",
+            application_domain="water",
+            date_of_addition="2026-03-26",
+            contributor="https://github.com/cmayet",
+        ),
     )
 )
