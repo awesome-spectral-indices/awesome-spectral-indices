@@ -45,6 +45,13 @@ Urban
 .. csv-table:: Urban Spectral Indices
    :file: _static/indices_urban.csv   
    :header-rows: 1
+
+Clouds
+--------------
+   
+.. csv-table:: Clouds Spectral Indices
+   :file: _static/indices_clouds.csv   
+   :header-rows: 1
    
 Kernel
 --------------
