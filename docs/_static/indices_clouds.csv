@@ -1,0 +1,8 @@
+Index,Long Name,Equation
+CI1SWIR,Cloud Index Form 1 with SWIR 1 [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`(N+2.0\times S1)/(B+G+R)`
+CI1woSWIR,Cloud Index Form 1 without SWIR bands [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`(3.0\times N)/(B+G+R)`
+CI2SWIR,Cloud Index Form 2 with SWIR bands [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`(B+G+R+N+S1+S2)/6.0`
+CI2woSWIR,Cloud Index Form 2 without SWIR bands [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`(B+G+R+N)/4.0`
+CLOSDI,Cloud Shadow Detection Index [`ref <https://doi.org/10.1016/j.rsase.2026.101990>`_],:math:`(1.0-1.5\times N-0.1\times R)/(1.0+3.5\times N+4.9\times R)`
+CSISWIR,Cloud Shadow Index with SWIR 1 [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`(N+S1)/2.0`
+CSIwoSWIR,Cloud Shadow Index without SWIR bands [`ref <https://doi.org/10.1016/j.isprsjprs.2018.07.006>`_],:math:`N`
