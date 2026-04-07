@@ -1,5 +1,0 @@
-name: awesome_ee_spectral_indices
-type: sphinx
-python:
-  version: 3.7  
-requirements_file: docs/docs-requirements.txt
