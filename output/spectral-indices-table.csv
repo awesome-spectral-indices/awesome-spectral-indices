@@ -220,6 +220,8 @@ SR2,Simple Ratio (800 and 550 nm),vegetation,N/G,"['N', 'G']",https://doi.org/10
 SR3,"Simple Ratio (860, 550 and 708 nm)",vegetation,N2/(G * RE1),"['N2', 'G', 'RE1']",https://doi.org/10.1016/S0034-4257(98)00046-7,https://github.com/davemlz,2022-04-09
 SR555,Simple Ratio (555 and 750 nm),vegetation,RE2 / G,"['RE2', 'G']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
 SR705,Simple Ratio (705 and 750 nm),vegetation,RE2 / RE1,"['RE2', 'RE1']",https://doi.org/10.1016/S0176-1617(11)81633-0,https://github.com/davemlz,2021-11-06
+SRVI,Symbolic Regression Vegetation Index,vegetation,(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1)),"['N', 'R', 'G', 'S1']",https://doi.org/10.1038/s41598-025-34720-x,https://github.com/c-chrysostomou,2026-05-25
+SRWI,Symbolic Regression Water Index,water,((G + B) - (N + S1)) / ((G + B) + (N + S1)),"['G', 'B', 'N', 'S1']",https://doi.org/10.1038/s41598-025-34720-x,https://github.com/c-chrysostomou,2026-05-25
 STI,Simple Tillage Index,vegetation,S1 / S2,"['S1', 'S2']",https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf,https://github.com/davemlz,2025-10-11
 STI4RE,4-band Red Edge Soil Tillage Index,vegetation,gamma * S1/S2 + (1 - gamma) * N/RE3,"['gamma', 'S1', 'S2', 'N', 'RE3']",https://doi.org/10.1016/j.jag.2022.102793,https://github.com/davemlz,2025-09-30
 SWI,Snow Water Index,snow,(G * (N - S1)) / ((G + N) * (N + S1)),"['G', 'N', 'S1']",https://doi.org/10.3390/rs11232774,https://github.com/davemlz,2021-09-18

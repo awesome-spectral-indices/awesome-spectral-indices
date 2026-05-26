@@ -124,6 +124,7 @@ SR2,Simple Ratio (800 and 550 nm) [`ref <https://doi.org/10.1080/014311693089043
 SR3,"Simple Ratio (860, 550 and 708 nm) [`ref <https://doi.org/10.1016/S0034-4257(98)00046-7>`_]",:math:`N2/(G\times RE1)`
 SR555,Simple Ratio (555 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/G`
 SR705,Simple Ratio (705 and 750 nm) [`ref <https://doi.org/10.1016/S0176-1617(11)81633-0>`_],:math:`RE2/RE1`
+SRVI,Symbolic Regression Vegetation Index [`ref <https://doi.org/10.1038/s41598-025-34720-x>`_],:math:`(2.0\times N-3.0\times R)/(N+R+0.5\times (G+S1))`
 STI,Simple Tillage Index [`ref <https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf>`_],:math:`S1/S2`
 STI4RE,4-band Red Edge Soil Tillage Index [`ref <https://doi.org/10.1016/j.jag.2022.102793>`_],:math:`\gamma \times S1/S2+(1-\gamma )\times N/RE3`
 SeLI,Sentinel-2 LAI Green Index [`ref <https://doi.org/10.3390/s19040904>`_],:math:`(N2-RE1)/(N2+RE1)`

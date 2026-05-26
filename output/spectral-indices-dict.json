@@ -4473,6 +4473,50 @@
             "reference": "https://doi.org/10.1016/S0176-1617(11)81633-0",
             "short_name": "SR705"
         },
+        "SRVI": {
+            "application_domain": "vegetation",
+            "bands": [
+                "N",
+                "R",
+                "G",
+                "S1"
+            ],
+            "contributor": "https://github.com/c-chrysostomou",
+            "date_of_addition": "2026-05-25",
+            "formula": "(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))",
+            "long_name": "Symbolic Regression Vegetation Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1038/s41598-025-34720-x",
+            "short_name": "SRVI"
+        },
+        "SRWI": {
+            "application_domain": "water",
+            "bands": [
+                "G",
+                "B",
+                "N",
+                "S1"
+            ],
+            "contributor": "https://github.com/c-chrysostomou",
+            "date_of_addition": "2026-05-25",
+            "formula": "((G + B) - (N + S1)) / ((G + B) + (N + S1))",
+            "long_name": "Symbolic Regression Water Index",
+            "platforms": [
+                "Sentinel-2",
+                "Landsat-OLI",
+                "Landsat-TM",
+                "Landsat-ETM+",
+                "MODIS"
+            ],
+            "reference": "https://doi.org/10.1038/s41598-025-34720-x",
+            "short_name": "SRWI"
+        },
         "STI": {
             "application_domain": "vegetation",
             "bands": [
