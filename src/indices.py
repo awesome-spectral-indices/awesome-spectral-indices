@@ -2468,5 +2468,23 @@ spindex = SpectralIndices(
             date_of_addition="2026-03-31",
             contributor="https://github.com/edujusti",
         ),
+        SRVI=SpectralIndex(
+            short_name="SRVI",
+            long_name="Symbolic Regression Vegetation Index",
+            formula="(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))",
+            reference="https://doi.org/10.1038/s41598-025-34720-x",
+            application_domain="vegetation",
+            date_of_addition="2026-05-25",
+            contributor="https://github.com/c-chrysostomou",
+        ),
+        SRWI=SpectralIndex(
+            short_name="SRWI",
+            long_name="Symbolic Regression Water Index",
+            formula="((G + B) - (N + S1)) / ((G + B) + (N + S1))",
+            reference="https://doi.org/10.1038/s41598-025-34720-x",
+            application_domain="water",
+            date_of_addition="2026-05-25",
+            contributor="https://github.com/c-chrysostomou",
+        ),
     )
 )
