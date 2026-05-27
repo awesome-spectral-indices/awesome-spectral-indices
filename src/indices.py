@@ -2486,5 +2486,32 @@ spindex = SpectralIndices(
             date_of_addition="2026-05-25",
             contributor="https://github.com/c-chrysostomou",
         ),
+        KDI=SpectralIndex(
+            short_name="KDI",
+            long_name="Kochia Detection Index",
+            formula="((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N))",
+            reference="https://doi.org/10.1016/j.mlwa.2026.100914",
+            application_domain="vegetation",
+            date_of_addition="2026-05-27",
+            contributor="https://github.com/davemlz",
+        ),
+        WCI1=SpectralIndex(
+            short_name="WCI1",
+            long_name="Wheat Canopy Index (Growth Stage 1)",
+            formula="-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon))",
+            reference="https://doi.org/10.1016/j.mlwa.2026.100914",
+            application_domain="vegetation",
+            date_of_addition="2026-05-27",
+            contributor="https://github.com/davemlz",
+        ),
+        WCI2=SpectralIndex(
+            short_name="WCI2",
+            long_name="Wheat Canopy Index (Growth Stage 2)",
+            formula="-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))",
+            reference="https://doi.org/10.1016/j.mlwa.2026.100914",
+            application_domain="vegetation",
+            date_of_addition="2026-05-27",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

@@ -117,7 +117,7 @@ constants = {
     },
     "epsilon": {
         "short_name": "epsilon",
-        "description": "Adjustment constant used for EBI",
+        "description": "Adjustment constant used for EBI, WC1 and WC2. For WCx indices use epsilon = 1e-10",
         "default": 1,
     },
     "n": {
