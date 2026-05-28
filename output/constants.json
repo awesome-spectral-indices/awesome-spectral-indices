@@ -41,7 +41,7 @@
     },
     "epsilon": {
         "default": 1,
-        "description": "Adjustment constant used for EBI",
+        "description": "Adjustment constant used for EBI, WC1 and WC2. For WCx indices use epsilon = 1e-10",
         "short_name": "epsilon"
     },
     "fdelta": {

@@ -84,6 +84,7 @@ IKAW,Kawashima Index,vegetation,(R - B)/(R + B),"['R', 'B']",https://doi.org/10.
 IPVI,Infrared Percentage Vegetation Index,vegetation,N/(N + R),"['N', 'R']",https://doi.org/10.1016/0034-4257(90)90085-Z,https://github.com/davemlz,2022-04-08
 IRECI,Inverted Red-Edge Chlorophyll Index,vegetation,(RE3 - R) / (RE1 / RE2),"['RE3', 'R', 'RE1', 'RE2']",https://doi.org/10.1016/j.isprsjprs.2013.04.007,https://github.com/davemlz,2021-09-17
 IRGBVI,Improved-Red-Green-Blue Vegetation Index,vegetation,(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0)),"['G', 'R', 'B']",https://doi.org/10.1016/j.jag.2024.103668,https://github.com/davemlz,2025-07-11
+KDI,Kochia Detection Index,vegetation,((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N)),"['N', 'S1', 'RE3', 'RE1']",https://doi.org/10.1016/j.mlwa.2026.100914,https://github.com/davemlz,2026-05-27
 LSWI,Land Surface Water Index,water,(N - S1)/(N + S1),"['N', 'S1']",https://doi.org/10.1016/j.rse.2003.11.008,https://github.com/davemlz,2022-04-20
 MBI,Modified Bare Soil Index,soil,((S1 - S2 - N)/(S1 + S2 + N)) + 0.5,"['S1', 'S2', 'N']",https://doi.org/10.3390/land10030231,https://github.com/davemlz,2022-04-18
 MBWI,Multi-Band Water Index,water,(omega * G) - R - N - S1 - S2,"['omega', 'G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.jag.2018.01.018,https://github.com/davemlz,2022-01-17
@@ -255,6 +256,8 @@ VVVHR,VV-VH Ratio,radar,VV/VH,"['VV', 'VH']",https://doi.org/10.3390/app9040655,
 VVVHS,VV-VH Sum,radar,VV + VH,"['VV', 'VH']",https://doi.org/10.1109/IGARSS47720.2021.9554099,https://github.com/davemlz,2022-04-19
 VgNIRBI,Visible Green-Based Built-Up Index,urban,(G - N)/(G + N),"['G', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
 VrNIRBI,Visible Red-Based Built-Up Index,urban,(R - N)/(R + N),"['R', 'N']",https://doi.org/10.1016/j.ecolind.2015.03.037,https://github.com/davemlz,2022-02-09
+WCI1,Wheat Canopy Index (Growth Stage 1),vegetation,-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon)),"['B', 'R', 'RE1', 'epsilon', 'G', 'N']",https://doi.org/10.1016/j.mlwa.2026.100914,https://github.com/davemlz,2026-05-27
+WCI2,Wheat Canopy Index (Growth Stage 2),vegetation,-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon)),"['B', 'G', 'RE1', 'R', 'epsilon', 'N']",https://doi.org/10.1016/j.mlwa.2026.100914,https://github.com/davemlz,2026-05-27
 WDRVI,Wide Dynamic Range Vegetation Index,vegetation,(alpha * N - R) / (alpha * N + R),"['alpha', 'N', 'R']",https://doi.org/10.1078/0176-1617-01176,https://github.com/davemlz,2021-05-14
 WDVI,Weighted Difference Vegetation Index,vegetation,N - sla * R,"['N', 'sla', 'R']",https://doi.org/10.1016/0034-4257(89)90076-X,https://github.com/davemlz,2021-05-14
 WI1,Water Index 1,water,(G - S2) / (G + S2),"['G', 'S2']",https://doi.org/10.3390/rs11182186,https://github.com/davemlz,2021-09-18
