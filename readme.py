@@ -61,6 +61,13 @@ previousText = """<p align="center">
 
 ---
 
+> [!WARNING]
+> Due to recent submissions of automatically generated spectral indices lacking scientific validation, Awesome Spectral Indices has adopted a new AI and Scientific Validation Policy.
+>
+> The use of AI is **not prohibited**, but AI-generated formulas, hypotheses, repositories, preprints, or DOI records are **not considered evidence of scientific validity on their own**.
+>
+> Before submitting a new index, please review our [AI Policy](AI%20POLICY.md). Submissions that lack sufficient scientific justification, validation, or reproducibility may be rejected.
+
 # Spectral Indices
 
 Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
