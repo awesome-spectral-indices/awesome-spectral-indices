@@ -19,7 +19,6 @@ jobs:
           pip install pydantic
           pip install typing
           pip install orjson
-          pip install py_expression_eval
       - name: test        
         run: |
           pytest test
