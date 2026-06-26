@@ -2,7 +2,7 @@ from src.indices import spindex
 from src.utils import Bands
 from src.bands import bands
 from src.constants import constants
-from py_expression_eval import Parser
+from src.SpectralIndex import parse_formula_variables
 import pandas as pd
 import json
 
@@ -206,13 +206,10 @@ def checkPlatforms(bandsSpindex):
     return availablePlatforms
 
 
-parser = Parser()
-
 # Adding band attribute
 for key in spindex.SpectralIndices:
     SpectralIndex = spindex.SpectralIndices[key]
-    formula = parser.parse(SpectralIndex.formula)
-    SpectralIndex.bands = formula.variables()
+    SpectralIndex.bands = parse_formula_variables(SpectralIndex.formula)
     SpectralIndex.platforms = checkPlatforms(SpectralIndex.bands)
     spindex.SpectralIndices[key] = SpectralIndex
 

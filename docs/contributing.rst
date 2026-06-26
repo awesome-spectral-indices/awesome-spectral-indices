@@ -96,7 +96,6 @@ The not so hard way
     pydantic
     typing
     orjson
-    py_expression_eval
 
 2. Fork the repository and clone it to your local machine.
 3. Create a development branch:
