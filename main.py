@@ -1,12 +1,23 @@
-from src.indices import spindex
-from src.utils import Bands
+"""Build the Awesome Spectral Indices catalogue outputs."""
+
+import json
+from pathlib import Path
+
+import pandas as pd
+
+from src.SpectralIndex import parse_formula_variables
 from src.bands import bands
 from src.constants import constants
-from src.SpectralIndex import parse_formula_variables
-import pandas as pd
-import json
+from src.indices import spindex
+from src.utils import Bands
 
-bandVars = [
+
+OUTPUT_DIR = Path("output")
+DOCS_STATIC_DIR = Path("docs/_static")
+SPECTRAL_INDICES_JSON = OUTPUT_DIR / "spectral-indices-dict.json"
+SPECTRAL_INDICES_TABLE = OUTPUT_DIR / "spectral-indices-table.csv"
+
+BAND_VARIABLES = [
     "A",
     "B",
     "G1",
@@ -44,12 +55,9 @@ bandVars = [
     "kLL",
 ]
 
-bandsPlatform = {
+PLATFORM_BANDS = {
     "Sentinel-1 (Dual Polarisation VV-VH)": ["VV", "VH"],
-    "Sentinel-1 (Dual Polarisation HH-HV)": [
-        "HV",
-        "HH",
-    ],
+    "Sentinel-1 (Dual Polarisation HH-HV)": ["HV", "HH"],
     "Sentinel-2": [
         "A",
         "B",
@@ -194,87 +202,133 @@ bandsPlatform = {
     ],
 }
 
-bandsToCheck = list(Bands._value2member_map_.keys())
-[bandsToCheck.remove(i) for i in bandVars]
-
-
-def checkPlatforms(bandsSpindex):
-    availablePlatforms = []
-    for platform, bandList in bandsPlatform.items():
-        if all([x in bandsToCheck + bandList for x in bandsSpindex]):
-            availablePlatforms.append(platform)
-    return availablePlatforms
-
-
-# Adding band attribute
-for key in spindex.SpectralIndices:
-    SpectralIndex = spindex.SpectralIndices[key]
-    SpectralIndex.bands = parse_formula_variables(SpectralIndex.formula)
-    SpectralIndex.platforms = checkPlatforms(SpectralIndex.bands)
-    spindex.SpectralIndices[key] = SpectralIndex
-
-# ![Sentinel-1](https://img.shields.io/badge/-Sentinel%201-gray?style=flat-square)
-# ![Sentinel-2](https://img.shields.io/badge/-Sentinel%202-red?style=flat-square)
-# ![Landsat-89](https://img.shields.io/badge/-Landsat%208,%209-blue?style=flat-square)
-# ![Landsat-457](https://img.shields.io/badge/-Landsat%204,%205,%207-blueviolet?style=flat-square)
-# ![MODIS](https://img.shields.io/badge/-MODIS-green?style=flat-square)
-
-# Save results
-with open("output/spectral-indices-dict.json", "w") as fp:
-    json.dump(
-        json.loads(spindex.model_dump_json(indent=4)), fp, indent=4, sort_keys=True
-    )
-
-with open("output/bands.json", "w") as fp:
-    json.dump(bands, fp, indent=4, sort_keys=True)
-
-with open("output/constants.json", "w") as fp:
-    json.dump(constants, fp, indent=4, sort_keys=True)
-
-# Convert to pandas and save CSV
-file = open("output/spectral-indices-dict.json")
-indices = json.load(file)
-df = pd.DataFrame(list(indices["SpectralIndices"].values()))
-df = df[
-    [
-        "short_name",
-        "long_name",
-        "application_domain",
-        "formula",
-        "bands",
-        "reference",
-        "contributor",
-        "date_of_addition",
-    ]
+DOC_TABLE_DOMAINS = [
+    "vegetation",
+    "burn",
+    "water",
+    "snow",
+    "urban",
+    "soil",
+    "clouds",
+    "kernel",
+    "radar",
 ]
-df.to_csv("output/spectral-indices-table.csv", index=False)
+
+TABLE_COLUMNS = [
+    "short_name",
+    "long_name",
+    "application_domain",
+    "formula",
+    "bands",
+    "reference",
+    "contributor",
+    "date_of_addition",
+]
+
+NON_PLATFORM_VARIABLES = [
+    variable
+    for variable in Bands._value2member_map_.keys()
+    if variable not in BAND_VARIABLES
+]
 
 
-# Save tables for Docs
-def toMath(x):
-    x = x.replace(" ", "")
-    x = x.replace("**", "^")
-    x = x.replace("^2.0", "^{2.0}")
-    x = x.replace("^0.5", "^{0.5}")
-    x = x.replace("^nexp", "^{n}")
-    x = x.replace("^cexp", "^{c}")
-    x = x.replace("gamma", "\\gamma ")
-    x = x.replace("alpha", "\\alpha ")
-    x = x.replace("beta", "\\beta ")
-    x = x.replace("omega", "\\omega ")
-    x = x.replace("lambdaN", "\\lambda_{N} ")
-    x = x.replace("lambdaR", "\\lambda_{R} ")
-    x = x.replace("lambdaG", "\\lambda_{G} ")
-    x = x.replace("*", "\\times ")
-    x = f":math:`{x}`"
-    return x
+def get_available_platforms(index_bands):
+    """Return platforms whose bands can support an index formula."""
+    available_platforms = []
+
+    for platform, platform_bands in PLATFORM_BANDS.items():
+        supported_variables = NON_PLATFORM_VARIABLES + platform_bands
+        if all(band in supported_variables for band in index_bands):
+            available_platforms.append(platform)
+
+    return available_platforms
 
 
-df["Equation"] = df["formula"].apply(toMath)
-df["Long Name"] = df["long_name"] + " [`ref <" + df["reference"] + ">`_]"
-df["Index"] = df["short_name"]
-for t in ["vegetation", "burn", "water", "snow", "urban", "soil", "clouds", "kernel", "radar"]:
-    name = "docs/_static/indices_" + t + ".csv"
-    df[df["application_domain"] == t][["Index", "Long Name", "Equation"]].to_csv(
-        name, index=False
+def add_formula_metadata(index_catalog):
+    """Populate each spectral index with parsed bands and supported platforms."""
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        spectral_index.bands = parse_formula_variables(spectral_index.formula)
+        spectral_index.platforms = get_available_platforms(spectral_index.bands)
+        index_catalog.SpectralIndices[key] = spectral_index
+
+    return index_catalog
+
+
+def write_json_outputs(index_catalog):
+    """Write the catalogue, band metadata, and constants metadata as JSON."""
+    with SPECTRAL_INDICES_JSON.open("w") as fp:
+        json.dump(
+            json.loads(index_catalog.model_dump_json(indent=4)),
+            fp,
+            indent=4,
+            sort_keys=True,
+        )
+
+    with (OUTPUT_DIR / "bands.json").open("w") as fp:
+        json.dump(bands, fp, indent=4, sort_keys=True)
+
+    with (OUTPUT_DIR / "constants.json").open("w") as fp:
+        json.dump(constants, fp, indent=4, sort_keys=True)
+
+
+def build_indices_dataframe(path=SPECTRAL_INDICES_JSON):
+    """Build the public CSV dataframe from the generated catalogue JSON."""
+    with path.open() as fp:
+        indices = json.load(fp)
+
+    df = pd.DataFrame(list(indices["SpectralIndices"].values()))
+    return df[TABLE_COLUMNS]
+
+
+def formula_to_rst_math(formula):
+    """Convert a Python-like formula string to the docs' RST math format."""
+    formula = formula.replace(" ", "")
+    formula = formula.replace("**", "^")
+    formula = formula.replace("^2.0", "^{2.0}")
+    formula = formula.replace("^0.5", "^{0.5}")
+    formula = formula.replace("^nexp", "^{n}")
+    formula = formula.replace("^cexp", "^{c}")
+    formula = formula.replace("gamma", "\\gamma ")
+    formula = formula.replace("alpha", "\\alpha ")
+    formula = formula.replace("beta", "\\beta ")
+    formula = formula.replace("omega", "\\omega ")
+    formula = formula.replace("lambdaN", "\\lambda_{N} ")
+    formula = formula.replace("lambdaR", "\\lambda_{R} ")
+    formula = formula.replace("lambdaG", "\\lambda_{G} ")
+    formula = formula.replace("*", "\\times ")
+    return f":math:`{formula}`"
+
+
+def write_spectral_indices_table(df):
+    """Write the flat CSV table used as a machine-readable output."""
+    df.to_csv(SPECTRAL_INDICES_TABLE, index=False)
+
+
+def write_docs_tables(df):
+    """Write one docs CSV table for each application domain."""
+    docs_df = df.copy()
+    docs_df["Equation"] = docs_df["formula"].apply(formula_to_rst_math)
+    docs_df["Long Name"] = (
+        docs_df["long_name"] + " [`ref <" + docs_df["reference"] + ">`_]"
     )
+    docs_df["Index"] = docs_df["short_name"]
+
+    for domain in DOC_TABLE_DOMAINS:
+        path = DOCS_STATIC_DIR / f"indices_{domain}.csv"
+        docs_df[docs_df["application_domain"] == domain][
+            ["Index", "Long Name", "Equation"]
+        ].to_csv(path, index=False)
+
+
+def main():
+    """Generate all catalogue JSON, CSV, and docs-table outputs."""
+    index_catalog = add_formula_metadata(spindex)
+    write_json_outputs(index_catalog)
+
+    df = build_indices_dataframe()
+    write_spectral_indices_table(df)
+    write_docs_tables(df)
+
+
+if __name__ == "__main__":
+    main()
