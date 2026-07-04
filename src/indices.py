@@ -2513,5 +2513,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-05-27",
             contributor="https://github.com/davemlz",
         ),
+        AshburnVI=SpectralIndex(
+            short_name="AshburnVI",
+            long_name="Ashburn Vegetation Index",
+            formula="2.0 * N2 - R",
+            reference="https://ntrs.nasa.gov/citations/19800007243",
+            application_domain="vegetation",
+            date_of_addition="2026-07-04",
+            contributor="https://github.com/MartinuzziFrancesco",
+        ),
     )
 )
