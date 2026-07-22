@@ -391,7 +391,7 @@ Additional index parameters also follow a standard:
 - `epsilon`: Adjustment constant used for EBI, WC1 and WC2.
 - `n`: Adjustment factor used for RWI.
 - `eta`: Mix of green and red reflectances in GRARI.
-- `lambda`: Parameter that controls the atmospheric correction in GRARI.
+- `lmb`: Parameter that controls the atmospheric correction in GRARI.
 - `lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
 - `lambdaR`: Red wavelength used for NIRvH2 and NDGI.
 - `lambdaG`: Green wavelength used for NDGI.

@@ -130,8 +130,8 @@ constants = {
         "description": "Mix of green and red reflectances in GRARI",
         "default": 0.5,
     },
-    "lambda": {
-        "short_name": "lambda",
+    "lmb": {
+        "short_name": "lmb",
         "description": "Parameter that controls the atmospheric correction in GRARI",
         "default": 1,
     },
