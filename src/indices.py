@@ -2522,5 +2522,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-07-04",
             contributor="https://github.com/MartinuzziFrancesco",
         ),
+        GRARI=SpectralIndex(
+            short_name="GRARI",
+            long_name="Atmospheric Resistant Green-Red Index",
+            formula="(N - (eta * G + (1.0 - eta) * R - lambda * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lambda * (B - R)))",
+            reference="https://doi.org/10.1016/S0034-4257(96)00072-7",
+            application_domain="vegetation",
+            date_of_addition="2026-07-22",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

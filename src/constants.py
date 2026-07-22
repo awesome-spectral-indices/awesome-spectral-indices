@@ -125,4 +125,14 @@ constants = {
         "description": "Adjustment factor used for RWI. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)",
         "default": 5,
     },
+    "eta": {
+        "short_name": "eta",
+        "description": "Mix of green and red reflectances in GRARI",
+        "default": 0.5,
+    },
+    "lambda": {
+        "short_name": "lambda",
+        "description": "Parameter that controls the atmospheric correction in GRARI",
+        "default": 1,
+    },
 }
