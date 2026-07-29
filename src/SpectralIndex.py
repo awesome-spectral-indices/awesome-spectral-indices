@@ -1,18 +1,11 @@
 import ast
 import re
-import orjson
-
-from pydantic import BaseModel, validator
-from src.utils import Bands, IndexType
 from datetime import date
-from typing import Optional, List
+from typing import List, Optional
 
+from pydantic import BaseModel, ConfigDict, field_validator
 
-def orjson_dumps(value, *, default):
-    """
-    orjson.dumps returns bytes, to match standard json.dumps we need to decode
-    """
-    return orjson.dumps(value, default=default).decode()
+from src.utils import Bands, IndexType
 
 
 class FormulaVisitor(ast.NodeVisitor):
@@ -105,24 +98,23 @@ class SpectralIndex(BaseModel):
     reference: str
     long_name: str
     formula: str
-    bands: Optional[List] = None
-    platforms: Optional[List] = None
+    bands: Optional[List[str]] = None
+    platforms: Optional[List[str]] = None
     application_domain: str
     date_of_addition: date
 
-    class Config:
-        extra = "forbid"
-        json_loads = orjson.loads
-        json_dumps = orjson_dumps
+    model_config = ConfigDict(extra="forbid")
 
-    @validator("short_name")
+    @field_validator("short_name")
+    @classmethod
     def check_short_name(cls, value):
         """Ensure the short index identifier does not contain whitespace."""
         if re.search(r"\s+", value):
             raise ValueError("short_name must not contain spaces.")
         return value
 
-    @validator("formula")
+    @field_validator("formula")
+    @classmethod
     def check_formula(cls, value):
         """Validate formula syntax and ensure all variables are supported bands."""
         variables = parse_formula_variables(value)  # obtain band names (e.g. ["R", "G"])
@@ -137,7 +129,8 @@ class SpectralIndex(BaseModel):
 
         return value
 
-    @validator("contributor")
+    @field_validator("contributor")
+    @classmethod
     def check_contributor(cls, value):
         """Ensure the contributor is provided as an email or GitHub profile URL."""
         # regex to detect emails or github profiles.
@@ -149,7 +142,8 @@ class SpectralIndex(BaseModel):
             raise ValueError("contributor is neither a GitHub profile nor an email.")
         return value
 
-    @validator("application_domain")
+    @field_validator("application_domain")
+    @classmethod
     def check_type(cls, value):
         """Ensure the application domain is one of the supported index types."""
         # Obtain names of IndexType enum.
