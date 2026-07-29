@@ -23,12 +23,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-      - name: execute        
+      - name: generate v0
         run: |
-          python main.py
-      - name: readme        
+          python -m src.main_v0
+      - name: generate v1
         run: |
-          python readme.py
+          python -m src.v1.main_v1
+      - name: readme
+        run: |
+          python -m readme.readme
       - name: jq
         run: sudo apt-get update -y && sudo apt-get install -y jq
       - name: counting

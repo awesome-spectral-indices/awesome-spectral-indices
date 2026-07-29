@@ -51,6 +51,11 @@
 
 ---
 
+> [!IMPORTANT]
+> As of 2026-07-29, the old Read the Docs website is no longer available, and Awesome Spectral Indices has started its migration to v1.
+>
+> The existing API will not change during this process and can continue to be used as usual. It will be migrated fully to v1 at a later stage. More details and a new website are coming soon.
+
 > [!WARNING]
 > Due to recent submissions of automatically generated spectral indices lacking scientific validation, Awesome Spectral Indices has adopted a new AI and Scientific Validation Policy.
 >

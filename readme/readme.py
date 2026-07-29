@@ -5,9 +5,10 @@ import string
 from pathlib import Path
 
 
-CATALOGUE_PATH = Path("output/spectral-indices-dict.json")
-README_PATH = Path("README.md")
-README_PARTS_DIR = Path("readme")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CATALOGUE_PATH = REPO_ROOT / "output/spectral-indices-dict.json"
+README_PATH = REPO_ROOT / "README.md"
+README_PARTS_DIR = REPO_ROOT / "readme"
 INTRO_PATH = README_PARTS_DIR / "intro.md"
 OUTRO_PATH = README_PARTS_DIR / "outro.md"
 
