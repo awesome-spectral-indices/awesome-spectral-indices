@@ -3,6 +3,9 @@
 Contributing to the catalogue is straightforward. You can propose an index
 through a GitHub issue or add it directly in a code contribution.
 
+Before proposing a new index, read the
+[AI and Scientific Validation Policy](AI%20POLICY.md).
+
 ## The easiest way
 
 Open a [new spectral index issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=new-spectral-index.md)

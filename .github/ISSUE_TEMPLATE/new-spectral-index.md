@@ -9,13 +9,20 @@ assignees: ''
 
 Please, complete the following information:
 
+Before submitting, review the
+[Contribution Guidelines](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/CONTRIBUTING.md)
+and the
+[AI and Scientific Validation Policy](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/AI%20POLICY.md).
+
+## Index definition
+
 ```python
 short-name-of-index=SpectralIndex(
     short_name='short-name-of-index',
     long_name='long-name-of-index',
     formula='expression-formula (please see the README for more info)',
-    reference='link-to-reference-doi-paper',
-    application_domain='type-of-index (one of [vegetation, burn, water, snow, kernel])',
+    reference='link-to-original-reference-or-doi',
+    application_domain='one of [vegetation, burn, water, snow, urban, soil, clouds, kernel, radar]',
     date_of_addition='yyyy-mm-dd',
     contributor="github-user-page"
 )

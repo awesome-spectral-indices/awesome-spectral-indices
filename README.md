@@ -8,14 +8,14 @@
 <a href="https://github.com/sindresorhus/awesome" target="_blank">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
 </a>
-<a href="https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-dict.json" target="_blank">
+<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-dict.json" target="_blank">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
 </a>
 <a href="https://share.streamlit.io/davemlz/espectro/main/espectro.py" target="_blank">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit">
 </a>
-<a href="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml" target="_blank">
-    <img src="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg" alt="Tests">
+<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/actions/workflows/tests.yml" target="_blank">
+    <img src="https://github.com/awesome-spectral-indices/awesome-spectral-indices/actions/workflows/tests.yml/badge.svg" alt="Tests">
 </a>
 <a href="https://zenodo.org/badge/latestdoi/355720108"><img src="https://zenodo.org/badge/355720108.svg" alt="DOI"></a>
 <a href="https://github.com/sponsors/davemlz" target="_blank">
@@ -411,14 +411,14 @@ There is no deadline. The repository is continuously updated!
 
 ## JavaScript
 
-- [spectral](https://github.com/davemlz/spectral): Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
+- [spectral](https://github.com/awesome-spectral-indices/spectral): Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
 
 ## Python
 
 - [eemont](https://github.com/davemlz/eemont): A Python package that extends Google Earth Engine.
 - [eeExtra](https://github.com/r-earthengine/ee_extra): A Python package that unifies the Google Earth Engine ecosystem.
 - [Espectro](https://github.com/davemlz/espectro): The Awesome Spectral Indices Streamlit App.
-- [spyndex](https://github.com/davemlz/spyndex): Awesome Spectral Indices in Python.
+- [spyndex](https://github.com/awesome-spectral-indices/spyndex): Awesome Spectral Indices in Python.
 
 ## Julia
 
@@ -749,20 +749,20 @@ There is no deadline. The repository is continuously updated!
 
 # List
 
-Check the full list of spectral indices with their formulas [here](https://github.com/davemlz/awesome-ee-spectral-indices/blob/main/output/spectral-indices-table.csv).
+Check the full list of spectral indices with their formulas [here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv).
 
 # Download Raw Files
 
 You can download or clone the repository:
 
 ```
-git clone https://github.com/davemlz/awesome-ee-spectral-indices.git
+git clone https://github.com/awesome-spectral-indices/awesome-spectral-indices.git
 ```
 
 Or you can download the single files here (right-click > Save link as...):
 
-- JSON: [Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-dict.json)
-- CSV: [Raw list](https://raw.githubusercontent.com/davemlz/awesome-ee-spectral-indices/main/output/spectral-indices-table.csv)
+- JSON: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json)
+- CSV: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv)
 
 # Credits
 
