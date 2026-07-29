@@ -1,7 +1,7 @@
 bands = {
     "A": {
         "short_name": "A",
-        "long_name": "Aersols",
+        "long_name": "Aerosols",
         "common_name": "coastal",
         "min_wavelength": 400,
         "max_wavelength": 455,
@@ -28,7 +28,7 @@ bands = {
                 "bandwidth": 20.0,
             },
             "landsat9": {
-                "platform": "Landsat 8",
+                "platform": "Landsat 9",
                 "band": "B1",
                 "name": "Coastal Aerosol",
                 "wavelength": 440.0,
