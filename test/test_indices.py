@@ -1,7 +1,5 @@
-import sys
 import unittest
 
-sys.path.append("./")
 from src.indices import spindex, SpectralIndices
 from src.SpectralIndex import parse_formula_variables
 
