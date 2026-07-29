@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/davemlz/awesome-spectral-indices"><img src="https://raw.githubusercontent.com/davemlz/awesome-spectral-indices/main/docs/_static/asi.png" alt="Awesome Spectral Indices"></a>
+  <a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices"><img src="docs/public/asi.png" alt="Awesome Spectral Indices"></a>
 </p>
 <p align="center">
     <em>A ready-to-use curated list of Spectral Indices for Remote Sensing applications.</em>
@@ -16,9 +16,6 @@
 </a>
 <a href="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml" target="_blank">
     <img src="https://github.com/davemlz/awesome-ee-spectral-indices/actions/workflows/tests.yml/badge.svg" alt="Tests">
-</a>
-<a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/?badge=latest" target="_blank">
-    <img src="https://readthedocs.org/projects/awesome-ee-spectral-indices/badge/?version=latest" alt="Documentation">
 </a>
 <a href="https://zenodo.org/badge/latestdoi/355720108"><img src="https://zenodo.org/badge/355720108.svg" alt="DOI"></a>
 <a href="https://github.com/sponsors/davemlz" target="_blank">
@@ -41,8 +38,6 @@
 ---
 
 **GitHub**: <a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices" target="_blank">github.com/awesome-spectral-indices/awesome-spectral-indices</a>
-
-**Documentation**: <a href="https://awesome-ee-spectral-indices.readthedocs.io/" target="_blank">awesome-ee-spectral-indices.readthedocs.io</a>
 
 **Python Package**: <a href="https://github.com/awesome-spectral-indices/spyndex" target="_blank">github.com/awesome-spectral-indices/spyndex</a>
 
@@ -404,11 +399,11 @@ The kernel indices are constructed using a special type of parameters:
 
 # Call for Indices! :rotating_light:
 
-Researchers that have published (or aim to publish) their novel spectral indices are encouraged to add them to this repository! The list of spectral indices is used as a source for different resources that allow spectral indices computation in different environments (such as Python and Google Earth Engine). To add an index, please follow the [Contribution Guidelines](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html).
+Researchers that have published (or aim to publish) their novel spectral indices are encouraged to add them to this repository! The list of spectral indices is used as a source for different resources that allow spectral indices computation in different environments (such as Python and Google Earth Engine). To add an index, please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
-In the same line, if you know an spectral index that is not included in this repository, you are encouraged to add it! Please follow the [Contribution Guidelines](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html) in order to add it.
+In the same line, if you know an spectral index that is not included in this repository, you are encouraged to follow the [Contribution Guidelines](CONTRIBUTING.md).
 
-And one more thing: If you see an error in one or several indices, please report it or update the index (indices) by following the [Contribution Guidelines](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/contributing.html)!
+And one more thing: If you see an error in one or several indices, please [open an issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new)!
 
 There is no deadline. The repository is continuously updated!
 

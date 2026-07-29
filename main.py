@@ -13,7 +13,6 @@ from src.utils import Bands
 
 
 OUTPUT_DIR = Path("output")
-DOCS_STATIC_DIR = Path("docs/_static")
 SPECTRAL_INDICES_JSON = OUTPUT_DIR / "spectral-indices-dict.json"
 SPECTRAL_INDICES_TABLE = OUTPUT_DIR / "spectral-indices-table.csv"
 
@@ -202,18 +201,6 @@ PLATFORM_BANDS = {
     ],
 }
 
-DOC_TABLE_DOMAINS = [
-    "vegetation",
-    "burn",
-    "water",
-    "snow",
-    "urban",
-    "soil",
-    "clouds",
-    "kernel",
-    "radar",
-]
-
 TABLE_COLUMNS = [
     "short_name",
     "long_name",
@@ -280,54 +267,18 @@ def build_indices_dataframe(path=SPECTRAL_INDICES_JSON):
     return df[TABLE_COLUMNS]
 
 
-def formula_to_rst_math(formula):
-    """Convert a Python-like formula string to the docs' RST math format."""
-    formula = formula.replace(" ", "")
-    formula = formula.replace("**", "^")
-    formula = formula.replace("^2.0", "^{2.0}")
-    formula = formula.replace("^0.5", "^{0.5}")
-    formula = formula.replace("^nexp", "^{n}")
-    formula = formula.replace("^cexp", "^{c}")
-    formula = formula.replace("gamma", "\\gamma ")
-    formula = formula.replace("alpha", "\\alpha ")
-    formula = formula.replace("beta", "\\beta ")
-    formula = formula.replace("omega", "\\omega ")
-    formula = formula.replace("lambdaN", "\\lambda_{N} ")
-    formula = formula.replace("lambdaR", "\\lambda_{R} ")
-    formula = formula.replace("lambdaG", "\\lambda_{G} ")
-    formula = formula.replace("*", "\\times ")
-    return f":math:`{formula}`"
-
-
 def write_spectral_indices_table(df):
     """Write the flat CSV table used as a machine-readable output."""
     df.to_csv(SPECTRAL_INDICES_TABLE, index=False)
 
 
-def write_docs_tables(df):
-    """Write one docs CSV table for each application domain."""
-    docs_df = df.copy()
-    docs_df["Equation"] = docs_df["formula"].apply(formula_to_rst_math)
-    docs_df["Long Name"] = (
-        docs_df["long_name"] + " [`ref <" + docs_df["reference"] + ">`_]"
-    )
-    docs_df["Index"] = docs_df["short_name"]
-
-    for domain in DOC_TABLE_DOMAINS:
-        path = DOCS_STATIC_DIR / f"indices_{domain}.csv"
-        docs_df[docs_df["application_domain"] == domain][
-            ["Index", "Long Name", "Equation"]
-        ].to_csv(path, index=False)
-
-
 def main():
-    """Generate all catalogue JSON, CSV, and docs-table outputs."""
+    """Generate all catalogue JSON and CSV outputs."""
     index_catalog = add_formula_metadata(spindex)
     write_json_outputs(index_catalog)
 
     df = build_indices_dataframe()
     write_spectral_indices_table(df)
-    write_docs_tables(df)
 
 
 if __name__ == "__main__":
