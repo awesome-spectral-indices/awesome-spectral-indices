@@ -14,11 +14,8 @@ jobs:
           python-version: '3.8'          
       - name: dependencies
         run: |
-          python -m pip install --upgrade pip          
-          pip install pytest
-          pip install pydantic
-          pip install typing
-          pip install orjson
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-test.txt
       - name: test        
         run: |
           pytest test

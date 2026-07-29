@@ -17,10 +17,7 @@ jobs:
       - name: dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install py_expression_eval
-          pip install pydantic
-          pip install orjson
-          pip install pandas
+          python -m pip install -r requirements.txt
       - name: execute        
         run: |
           python main.py
