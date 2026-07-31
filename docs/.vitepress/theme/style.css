@@ -180,7 +180,7 @@
 }
 
 .domain-vegetation {
-  --domain-hero-image: url("/vegetation.png");
+  --domain-hero-image: url("/vegetation.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -193,7 +193,7 @@
 }
 
 .domain-vegetation-original {
-  --domain-hero-image: url("/vegetation.png");
+  --domain-hero-image: url("/vegetation.webp");
   --domain-bg: #455423;
   --domain-accent: #a7c957;
   --domain-accent-2: #6a994e;
@@ -216,7 +216,7 @@
 }
 
 .domain-water {
-  --domain-hero-image: url("/water.png");
+  --domain-hero-image: url("/water.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -229,7 +229,7 @@
 }
 
 .domain-water-original {
-  --domain-hero-image: url("/water.png");
+  --domain-hero-image: url("/water.webp");
   --domain-bg: #001219;
   --domain-accent: #0a9396;
   --domain-accent-2: #005f73;
@@ -241,7 +241,7 @@
 }
 
 .domain-burn {
-  --domain-hero-image: url("/burn.png");
+  --domain-hero-image: url("/burn.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -254,7 +254,7 @@
 }
 
 .domain-burn-original {
-  --domain-hero-image: url("/burn.png");
+  --domain-hero-image: url("/burn.webp");
   --domain-bg: #03071e;
   --domain-accent: #ffba08;
   --domain-accent-2: #d00000;
@@ -266,7 +266,7 @@
 }
 
 .domain-snow {
-  --domain-hero-image: url("/snow.png");
+  --domain-hero-image: url("/snow.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -291,7 +291,7 @@
 }
 
 .domain-urban {
-  --domain-hero-image: url("/urban.png");
+  --domain-hero-image: url("/urban.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -304,7 +304,7 @@
 }
 
 .domain-urban-original {
-  --domain-hero-image: url("/urban.png");
+  --domain-hero-image: url("/urban.webp");
   --domain-bg: #000814;
   --domain-accent: #012649;
   --domain-accent-2: #003566;
@@ -328,7 +328,7 @@
 
 
 .domain-soil {
-  --domain-hero-image: url("/soil.png");
+  --domain-hero-image: url("/soil.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -341,7 +341,7 @@
 }
 
 .domain-soil-original {
-  --domain-hero-image: url("/soil.png");
+  --domain-hero-image: url("/soil.webp");
   --domain-bg: #432818;
   --domain-accent: #ffe6a7;
   --domain-accent-2: #99582a;
@@ -353,7 +353,7 @@
 }
 
 .domain-clouds {
-  --domain-hero-image: url("/clouds.png");
+  --domain-hero-image: url("/clouds.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -366,7 +366,7 @@
 }
 
 .domain-clouds-original {
-  --domain-hero-image: url("/clouds.png");
+  --domain-hero-image: url("/clouds.webp");
   --domain-bg: #0077b6;
   --domain-accent: #caf0f8;
   --domain-accent-2: #90e0ef;
@@ -389,7 +389,7 @@
 }
 
 .domain-kernel {
-  --domain-hero-image: url("/kernel.png");
+  --domain-hero-image: url("/kernel.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -402,7 +402,7 @@
 }
 
 .domain-kernel-original {
-  --domain-hero-image: url("/kernel.png");
+  --domain-hero-image: url("/kernel.webp");
   --domain-bg: #3a0ca3;
   --domain-accent: #4cc9f0;
   --domain-accent-2: #f72585;
@@ -414,7 +414,7 @@
 }
 
 .domain-radar {
-  --domain-hero-image: url("/radar.jpg");
+  --domain-hero-image: url("/radar.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
@@ -427,7 +427,7 @@
 }
 
 .domain-radar-original {
-  --domain-hero-image: url("/radar.jpg");
+  --domain-hero-image: url("/radar.webp");
   --domain-bg: #9f9f9f;
   --domain-accent: #ffffff;
   --domain-accent-2: #f3f4f6;
