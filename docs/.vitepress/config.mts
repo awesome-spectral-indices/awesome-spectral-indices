@@ -54,6 +54,7 @@ export default defineConfig({
           { text: 'Julia', link: 'https://github.com/awesome-spectral-indices/SpectralIndices.jl' }
         ]
       },
+      { text: 'People', link: '/people' },
     ],
 
     socialLinks: [

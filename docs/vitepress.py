@@ -1,9 +1,11 @@
 """Generate VitePress content from the Awesome Spectral Indices v1 catalogue."""
 
+import hashlib
 import json
 import re
 import shutil
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -13,8 +15,19 @@ CATALOGUE_PATH = REPO_ROOT / "output/v1/spectral-indices-dict.json"
 BANDS_PATH = REPO_ROOT / "output/v1/bands.json"
 CONSTANTS_PATH = REPO_ROOT / "output/v1/constants.json"
 CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
+PEOPLE_CONTRIBUTORS_PATH = (
+    DOCS_DIR / ".vitepress/data/index-contributors.json"
+)
 
 SAFE_FILENAME = re.compile(r"^[A-Za-z0-9._+-]+$")
+EMAIL_ADDRESS = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+EMAIL_ICON = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
+    '<path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 '
+    '0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 '
+    '5 8-5v2Z"/></svg>'
+)
 
 VARIABLE_DESCRIPTIONS = {
     "HH": "Horizontal transmit, horizontal receive radar polarization",
@@ -152,6 +165,71 @@ def copy_contributing_guide():
     shutil.copy2(CONTRIBUTING_PATH, DOCS_DIR / "CONTRIBUTING.md")
 
 
+def contributor_member(value):
+    """Convert a catalogue contributor URL or email into a team member."""
+    value = str(value).strip()
+    parsed = urlsplit(value)
+    path_parts = [part for part in parsed.path.split("/") if part]
+
+    if (
+        parsed.scheme in {"http", "https"}
+        and parsed.netloc.lower() in {"github.com", "www.github.com"}
+        and len(path_parts) == 1
+    ):
+        username = path_parts[0]
+        profile = f"https://github.com/{username}"
+        return {
+            "avatar": f"{profile}.png",
+            "name": username,
+            "title": "Index Contributor",
+            "links": [{"icon": "github", "link": profile}],
+        }
+
+    if EMAIL_ADDRESS.fullmatch(value):
+        normalized_email = value.casefold()
+        avatar_hash = hashlib.md5(
+            normalized_email.encode(), usedforsecurity=False
+        ).hexdigest()
+        return {
+            "avatar": (
+                f"https://www.gravatar.com/avatar/{avatar_hash}?d=identicon"
+            ),
+            "name": value,
+            "title": "Index Contributor",
+            "links": [
+                {
+                    "icon": {"svg": EMAIL_ICON},
+                    "link": f"mailto:{value}",
+                }
+            ],
+        }
+
+    raise ValueError(
+        "Contributor must be a GitHub profile URL or email address: "
+        f"{value!r}"
+    )
+
+
+def generate_people_contributors():
+    """Generate deduplicated People-page members from the v1 catalogue."""
+    catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
+    members_by_profile = {}
+
+    for index in catalogue.values():
+        member = contributor_member(index["contributor"])
+        profile_link = member["links"][0]["link"].casefold()
+        members_by_profile.setdefault(profile_link, member)
+
+    members = sorted(
+        members_by_profile.values(), key=lambda member: member["name"].casefold()
+    )
+    PEOPLE_CONTRIBUTORS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PEOPLE_CONTRIBUTORS_PATH.write_text(
+        json.dumps(members, indent=2, ensure_ascii=False) + "\n"
+    )
+    return len(members)
+
+
 def generate_index_pages():
     """Generate one Markdown page for every v1 spectral index."""
     catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
@@ -181,7 +259,9 @@ def main():
     """Generate all catalogue-driven VitePress content."""
     copy_contributing_guide()
     count = generate_index_pages()
+    contributor_count = generate_people_contributors()
     print(f"Generated {count} spectral-index pages.")
+    print(f"Generated {contributor_count} People-page contributors.")
 
 
 if __name__ == "__main__":
