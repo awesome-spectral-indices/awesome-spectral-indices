@@ -8,6 +8,7 @@
     </picture>
   </a>
   <br>
+  <br>
 </p>
 <p align="center">
     <em>A ready-to-use curated list of Spectral Indices for Remote Sensing applications.</em>
