@@ -39,6 +39,8 @@
 
 **GitHub**: <a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices" target="_blank">github.com/awesome-spectral-indices/awesome-spectral-indices</a>
 
+**Website**: <a href="https://awesome-spectral-indices.github.io/awesome-spectral-indices/" target="_blank">awesome-spectral-indices.github.io/awesome-spectral-indices/</a>
+
 **Python Package**: <a href="https://github.com/awesome-spectral-indices/spyndex" target="_blank">github.com/awesome-spectral-indices/spyndex</a>
 
 **Paper**: <a href="https://doi.org/10.1038/s41597-023-02096-0" target="_blank">doi.org/10.1038/s41597-023-02096-0</a>
@@ -52,9 +54,9 @@
 ---
 
 > [!IMPORTANT]
-> As of 2026-07-29, the old Read the Docs website is no longer available, and Awesome Spectral Indices has started its migration to v1.
+> As of 2026-07-29, the old Read the Docs website is no longer available, and Awesome Spectral Indices has started its migration to v1. You can find the new website here: https://awesome-spectral-indices.github.io/awesome-spectral-indices/
 >
-> The existing API will not change during this process and can continue to be used as usual, and new spectral indices can still be submitted as usual. It will be migrated fully to v1 at a later stage. More details and a new website are coming soon.
+> The existing API will not change during this process and can continue to be used as usual, and new spectral indices can still be submitted as usual. It will be migrated fully to v1 at a later stage. More details [here](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
 
 > [!WARNING]
 > Due to recent submissions of automatically generated spectral indices lacking scientific validation, Awesome Spectral Indices has adopted a new AI and Scientific Validation Policy.
