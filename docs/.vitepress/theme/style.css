@@ -3,16 +3,42 @@
  *
  * Each page receives `index-page domain-<application_domain>` from
  * docs/vitepress.py. The catalogue search and other documentation pages keep
- * the general green theme.
+ * the general neutral theme.
  */
 
 :root {
-  --vp-c-brand-1: #386641;
-  --vp-c-brand-2: #4f7f4a;
-  --vp-c-brand-3: #386641;
-  --vp-c-brand-soft: rgb(106 153 78 / 14%);
-  --asi-accent: #6a994e;
-  --asi-accent-bright: #a7c957;
+  --vp-c-brand-1: #495057;
+  --vp-c-brand-2: #343a40;
+  --vp-c-brand-3: #343a40;
+  --vp-c-brand-soft: rgb(108 117 125 / 14%);
+  --vp-button-brand-border: #343a40;
+  --vp-button-brand-text: #f8f9fa;
+  --vp-button-brand-bg: #343a40;
+  --vp-button-brand-hover-border: #495057;
+  --vp-button-brand-hover-text: #f8f9fa;
+  --vp-button-brand-hover-bg: #495057;
+  --vp-button-brand-active-border: #212529;
+  --vp-button-brand-active-text: #f8f9fa;
+  --vp-button-brand-active-bg: #212529;
+  --vp-button-alt-text: #212529;
+  --vp-button-alt-bg: #e9ecef;
+  --vp-button-alt-hover-text: #212529;
+  --vp-button-alt-hover-bg: #dee2e6;
+  --vp-button-alt-active-text: #212529;
+  --vp-button-alt-active-bg: #ced4da;
+  --asi-accent: #6c757d;
+  --asi-accent-bright: #dee2e6;
+  --asi-spectral-gradient: linear-gradient(
+    90deg,
+    #7209b7,
+    #4361ee,
+    #4cc9f0,
+    #2fb47c,
+    #a7c957,
+    #ffd60a,
+    #f48c06,
+    #d00000
+  );
   --asi-navbar-surface: color-mix(
     in srgb,
     var(--vp-c-bg) 72%,
@@ -21,12 +47,27 @@
 }
 
 .dark {
-  --vp-c-brand-1: #a7c957;
-  --vp-c-brand-2: #8fb84f;
-  --vp-c-brand-3: #527f42;
-  --vp-c-brand-soft: rgb(167 201 87 / 16%);
-  --asi-accent: #a7c957;
-  --asi-accent-bright: #c5df82;
+  --vp-c-brand-1: #dee2e6;
+  --vp-c-brand-2: #f8f9fa;
+  --vp-c-brand-3: #495057;
+  --vp-c-brand-soft: rgb(222 226 230 / 16%);
+  --vp-button-brand-border: #dee2e6;
+  --vp-button-brand-text: #212529;
+  --vp-button-brand-bg: #dee2e6;
+  --vp-button-brand-hover-border: #f8f9fa;
+  --vp-button-brand-hover-text: #212529;
+  --vp-button-brand-hover-bg: #f8f9fa;
+  --vp-button-brand-active-border: #ced4da;
+  --vp-button-brand-active-text: #212529;
+  --vp-button-brand-active-bg: #ced4da;
+  --vp-button-alt-text: #f8f9fa;
+  --vp-button-alt-bg: #343a40;
+  --vp-button-alt-hover-text: #f8f9fa;
+  --vp-button-alt-hover-bg: #495057;
+  --vp-button-alt-active-text: #f8f9fa;
+  --vp-button-alt-active-bg: #212529;
+  --asi-accent: #adb5bd;
+  --asi-accent-bright: #f8f9fa;
 }
 
 ::selection {
@@ -116,6 +157,57 @@
   left: 125%;
 }
 
+.landing-page {
+  --landing-hero-bg: #f8f9fa;
+  --landing-hero-accent: #dee2e6;
+  --landing-hero-accent-2: #e9ecef;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      color-mix(in srgb, var(--landing-hero-accent) 24%, transparent),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 8% 92%,
+      color-mix(in srgb, var(--landing-hero-accent-2) 26%, transparent),
+      transparent 30%
+    ),
+    var(--landing-hero-bg);
+}
+
+.dark .landing-page {
+  --landing-hero-bg: #16181d;
+  --landing-hero-accent: #495057;
+  --landing-hero-accent-2: #343a40;
+}
+
+.landing-page .VPContent,
+.landing-page .VPHome,
+.landing-page .VPHomeHero {
+  background: transparent;
+}
+
+.landing-page .VPHome {
+  margin-bottom: 0;
+}
+
+.landing-page .VPHome > .vp-doc.container {
+  display: none;
+}
+
+.landing-page .VPFooter {
+  border-top-color: color-mix(
+    in srgb,
+    var(--landing-hero-accent) 45%,
+    transparent
+  );
+  background: transparent;
+}
+
+.landing-page .VPHero {
+  --landing-logo-gap: clamp(3.25rem, 6vw, 5rem);
+}
+
 .landing-page .VPHero .container {
   flex-direction: column;
   align-items: center;
@@ -134,13 +226,47 @@
 }
 
 .landing-page .VPHero .actions {
+  align-items: flex-start;
   justify-content: center;
+  padding-top: var(--landing-logo-gap);
+}
+
+.landing-page .VPHero .action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-page .VPHero .action:nth-child(2)::after,
+.landing-page .VPHero .action:nth-child(3)::after {
+  margin-top: 7px;
+  color: color-mix(in srgb, var(--vp-c-text-2) 72%, transparent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.landing-page .VPHero .action:nth-child(2) .VPButton,
+.landing-page .VPHero .action:nth-child(3) .VPButton {
+  min-width: 168px;
+  text-align: center;
+}
+
+.landing-page .VPHero .action:nth-child(2)::after {
+  content: "Experimental";
+}
+
+.landing-page .VPHero .action:nth-child(3)::after {
+  content: "Nature / sdata";
 }
 
 .landing-page .VPHero .image {
   order: 1;
   flex-grow: 0;
   margin: 0;
+  padding-top: var(--landing-logo-gap);
   width: 100%;
   min-height: 0;
 }
@@ -164,6 +290,34 @@
   max-width: min(100%, 960px);
   max-height: none;
   transform: none;
+}
+
+.landing-page .VPHero .VPButton.brand {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(
+      var(--vp-button-brand-bg),
+      var(--vp-button-brand-bg)
+    ) padding-box,
+    var(--asi-spectral-gradient) border-box;
+}
+
+.landing-page .VPHero .VPButton.brand:hover {
+  background:
+    linear-gradient(
+      var(--vp-button-brand-hover-bg),
+      var(--vp-button-brand-hover-bg)
+    ) padding-box,
+    var(--asi-spectral-gradient) border-box;
+}
+
+.landing-page .VPHero .VPButton.brand:active {
+  background:
+    linear-gradient(
+      var(--vp-button-brand-active-bg),
+      var(--vp-button-brand-active-bg)
+    ) padding-box,
+    var(--asi-spectral-gradient) border-box;
 }
 
 .index-page {

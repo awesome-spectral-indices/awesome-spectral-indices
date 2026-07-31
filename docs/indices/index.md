@@ -308,10 +308,10 @@ formula variables.
 .advanced-button,
 .clear-button {
   min-height: 2.75rem;
-  border: 1px solid var(--vp-c-brand-1);
+  border: 1px solid var(--vp-button-brand-border);
   border-radius: 12px;
-  background: var(--vp-c-brand-1);
-  color: var(--vp-c-white);
+  background: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
   padding: 0.65rem 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -341,7 +341,7 @@ formula variables.
       transparent 36%,
       color-mix(in srgb, var(--asi-accent-bright) 18%, transparent)
     ),
-    color-mix(in srgb, var(--vp-c-brand-1) 84%, transparent);
+    color-mix(in srgb, var(--vp-button-brand-bg) 84%, transparent);
   box-shadow:
     0 0 18px color-mix(in srgb, var(--asi-accent) 24%, transparent),
     inset 0 1px 0 rgb(255 255 255 / 34%),
@@ -372,8 +372,9 @@ formula variables.
 
 .advanced-button:hover,
 .clear-button:hover {
-  border-color: var(--vp-c-brand-2);
-  background: var(--vp-c-brand-2);
+  border-color: var(--vp-button-brand-hover-border);
+  background: var(--vp-button-brand-hover-bg);
+  color: var(--vp-button-brand-hover-text);
   box-shadow: 0 0 26px color-mix(
     in srgb,
     var(--asi-accent) 42%,
@@ -389,7 +390,7 @@ formula variables.
       transparent 38%,
       color-mix(in srgb, var(--asi-accent-bright) 24%, transparent)
     ),
-    color-mix(in srgb, var(--vp-c-brand-2) 88%, transparent);
+    color-mix(in srgb, var(--vp-button-brand-hover-bg) 88%, transparent);
   box-shadow:
     0 0 32px color-mix(in srgb, var(--asi-accent-bright) 48%, transparent),
     inset 0 1px 0 rgb(255 255 255 / 42%);

@@ -5,14 +5,15 @@ pageClass: landing-page
 
 hero:
   image:
-    src: /asi.png
+    light: /logo.png
+    dark: /logo-dark.png
     alt: Awesome Spectral Indices
   actions:
     - theme: brand
       text: Search Indices
       link: /indices/index
     - theme: alt
-      text: Explore the upcoming version
+      text: Explore v1
       link: /v1
     - theme: alt
       text: Read the paper 🡕

@@ -45,10 +45,6 @@ submitted through the usual contribution process.
 - Added one generated documentation page for every spectral index. Each page
   includes its formula, required variables, constants, reference, contributor,
   and date of addition.
-- Added application-domain styling and artwork for vegetation, water, burn,
-  snow, urban, soil, clouds, kernel, and radar index pages.
-- Added a responsive green visual theme with translucent navigation, liquid
-  highlights, and light and dark mode support.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.
@@ -80,7 +76,8 @@ submitted through the usual contribution process.
   explicit write permissions.
 - Updated README links and badges to use the
   `awesome-spectral-indices/awesome-spectral-indices` organization repository.
-- Updated the README logo to use `docs/public/asi.png`.
+- Updated the README and website to use theme-aware light and dark logo assets,
+  and retained the previous artwork as `docs/public/legacy-logo.png`.
 - Added a README migration notice explaining that the old website is no longer
   available, the existing API remains usable, and index submissions remain
   open.

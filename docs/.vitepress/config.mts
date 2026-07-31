@@ -1,10 +1,26 @@
 import { defineConfig } from 'vitepress'
 
+const base = '/awesome-spectral-indices/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Awesome Spectral Indices",
   description: "Awesome Spectral Indices",
-  base: '/awesome-spectral-indices/',
+  base,
+  head: [
+    ['link', {
+      rel: 'icon',
+      type: 'image/png',
+      media: '(prefers-color-scheme: light)',
+      href: `${base}icon.png`
+    }],
+    ['link', {
+      rel: 'icon',
+      type: 'image/png',
+      media: '(prefers-color-scheme: dark)',
+      href: `${base}icon-dark.png`
+    }]
+  ],
   ignoreDeadLinks: [
     /AI%20POLICY/,
     /src\/utils\.py/,
@@ -17,10 +33,15 @@ export default defineConfig({
     'indices/mSR705.md'
   ],
   themeConfig: {
+    logo: {
+      light: '/icon.png',
+      dark: '/icon-dark.png',
+      alt: 'Awesome Spectral Indices'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Catalogue Search', link: '/indices/index' },
+      { text: 'Search Indices', link: '/indices/index' },
       { text: 'Contributing', link: '/CONTRIBUTING' },
       { text: 'Changelog', link: '/CHANGELOG' },
       { text: 'v1 Explained', link: '/v1' },
