@@ -55,6 +55,7 @@ const apiDevelopers = [{
     title: 'Julia API: SpectralIndices.jl',
     links: [
       { icon: 'github', link: 'https://github.com/MartinuzziFrancesco' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/francesco-martinuzzi-259a16215/' }
     ]
   },
 ]
