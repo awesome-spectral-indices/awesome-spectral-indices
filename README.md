@@ -1,11 +1,13 @@
 <p align="center">
+  <br>
   <a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/public/logo-dark.png">
       <source media="(prefers-color-scheme: light)" srcset="docs/public/logo.png">
-      <img src="docs/public/logo.png" alt="Awesome Spectral Indices">
+      <img src="docs/public/logo.png" alt="Awesome Spectral Indices" width="70%">
     </picture>
   </a>
+  <br>
 </p>
 <p align="center">
     <em>A ready-to-use curated list of Spectral Indices for Remote Sensing applications.</em>
