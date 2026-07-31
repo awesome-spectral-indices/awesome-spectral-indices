@@ -1,0 +1,617 @@
+/*
+ * Application-domain palettes for generated spectral-index pages.
+ *
+ * Each page receives `index-page domain-<application_domain>` from
+ * docs/vitepress.py. The catalogue search and other documentation pages keep
+ * the general green theme.
+ */
+
+:root {
+  --vp-c-brand-1: #386641;
+  --vp-c-brand-2: #4f7f4a;
+  --vp-c-brand-3: #386641;
+  --vp-c-brand-soft: rgb(106 153 78 / 14%);
+  --asi-accent: #6a994e;
+  --asi-accent-bright: #a7c957;
+  --asi-navbar-surface: color-mix(
+    in srgb,
+    var(--vp-c-bg) 72%,
+    transparent
+  );
+}
+
+.dark {
+  --vp-c-brand-1: #a7c957;
+  --vp-c-brand-2: #8fb84f;
+  --vp-c-brand-3: #527f42;
+  --vp-c-brand-soft: rgb(167 201 87 / 16%);
+  --asi-accent: #a7c957;
+  --asi-accent-bright: #c5df82;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--asi-accent) 28%, transparent);
+}
+
+.VPNavBar {
+  border-bottom: 0.5px solid rgb(255 255 255 / 20%);
+  background:
+    linear-gradient(
+      115deg,
+      rgb(255 255 255 / 22%),
+      transparent 34%,
+      rgb(255 255 255 / 8%) 72%,
+      rgb(255 255 255 / 16%)
+    ),
+    var(--asi-navbar-surface) !important;
+  box-shadow:
+    0 6px 24px rgb(0 0 0 / 10%),
+    inset 0 1px 0 rgb(255 255 255 / 32%),
+    inset 0 -1px 0 rgb(255 255 255 / 8%);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+
+.VPNavBar .divider {
+  display: none;
+}
+
+.VPFeature {
+  border-color: color-mix(
+    in srgb,
+    var(--asi-accent) 18%,
+    var(--vp-c-divider)
+  ) !important;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--asi-accent) 8%, transparent),
+      transparent 58%
+    ),
+    color-mix(in srgb, var(--vp-c-bg-soft) 78%, transparent) !important;
+  box-shadow:
+    0 12px 30px rgb(26 55 32 / 7%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+}
+
+.VPButton {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.VPButton::after {
+  position: absolute;
+  top: -70%;
+  left: -45%;
+  width: 28%;
+  height: 240%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(255 255 255 / 56%),
+    transparent
+  );
+  content: "";
+  pointer-events: none;
+  transform: skewX(-20deg);
+}
+
+.VPButton:hover {
+  box-shadow: 0 0 26px color-mix(
+    in srgb,
+    var(--asi-accent) 38%,
+    transparent
+  );
+}
+
+.VPButton:hover::after {
+  left: 125%;
+}
+
+.landing-page .VPHero .container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-page .VPHero .main {
+  order: 2;
+  flex-grow: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.landing-page .VPHero .heading {
+  display: none;
+}
+
+.landing-page .VPHero .actions {
+  justify-content: center;
+}
+
+.landing-page .VPHero .image {
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 0;
+}
+
+.landing-page .VPHero .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  transform: none;
+}
+
+.landing-page .VPHero .image-bg {
+  display: none;
+}
+
+.landing-page .VPHero .image-src {
+  position: static;
+  width: min(100%, 960px);
+  max-width: min(100%, 960px);
+  max-height: none;
+  transform: none;
+}
+
+.index-page {
+  --domain-bg: #1f2937;
+  --domain-accent: #d1d5db;
+  --domain-accent-2: #f3f4f6;
+  --domain-link: #4b5563;
+  --domain-link-dark: #f3f4f6;
+  --domain-hero-text: #ffffff;
+  --domain-action: #f3f4f6;
+  --domain-action-text: #111827;
+  --domain-title-gradient: linear-gradient(120deg, #f3f4f6, #ffffff);
+  --vp-home-hero-name-background: var(--domain-title-gradient);
+}
+
+.domain-vegetation {
+  --domain-hero-image: url("/vegetation.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #386641;
+  --domain-link-dark: #a7c957;
+  --domain-hero-text: #212529;
+  --domain-action: #a7c957;
+  --domain-action-text: #17210f;
+  --domain-title-gradient: linear-gradient(120deg, #e7ffae, #a7c957 52%, #7eb55e);
+}
+
+.domain-vegetation-original {
+  --domain-hero-image: url("/vegetation.png");
+  --domain-bg: #455423;
+  --domain-accent: #a7c957;
+  --domain-accent-2: #6a994e;
+  --domain-link: #386641;
+  --domain-link-dark: #a7c957;
+  --domain-action: #a7c957;
+  --domain-action-text: #17210f;
+  --domain-title-gradient: linear-gradient(120deg, #e7ffae, #a7c957 52%, #7eb55e);
+}
+
+.domain-vegetation-prev {
+  --domain-bg: #386641;
+  --domain-accent: #a7c957;
+  --domain-accent-2: #6a994e;
+  --domain-link: #386641;
+  --domain-link-dark: #a7c957;
+  --domain-action: #a7c957;
+  --domain-action-text: #17210f;
+  --domain-title-gradient: linear-gradient(120deg, #a7c957, #ffffff 52%, #6a994e);
+}
+
+.domain-water {
+  --domain-hero-image: url("/water.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #005f73;
+  --domain-link-dark: #5fd6d8;
+  --domain-hero-text: #212529;
+  --domain-action: #0a9396;
+  --domain-action-text: #001219;
+  --domain-title-gradient: linear-gradient(120deg, #79cdcf, #0a9396 55%, #005f73);
+}
+
+.domain-water-original {
+  --domain-hero-image: url("/water.png");
+  --domain-bg: #001219;
+  --domain-accent: #0a9396;
+  --domain-accent-2: #005f73;
+  --domain-link: #005f73;
+  --domain-link-dark: #5fd6d8;
+  --domain-action: #0a9396;
+  --domain-action-text: #001219;
+  --domain-title-gradient: linear-gradient(120deg, #0a9396, #ffffff 55%, #005f73);
+}
+
+.domain-burn {
+  --domain-hero-image: url("/burn.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #d00000;
+  --domain-link-dark: #ffba08;
+  --domain-hero-text: #212529;
+  --domain-action: #f48c06;
+  --domain-action-text: #03071e;
+  --domain-title-gradient: linear-gradient(110deg, #d00000, #f48c06 55%, #ffba08);
+}
+
+.domain-burn-original {
+  --domain-hero-image: url("/burn.png");
+  --domain-bg: #03071e;
+  --domain-accent: #ffba08;
+  --domain-accent-2: #d00000;
+  --domain-link: #d00000;
+  --domain-link-dark: #ffba08;
+  --domain-action: #f48c06;
+  --domain-action-text: #03071e;
+  --domain-title-gradient: linear-gradient(110deg, #d00000, #f48c06 55%, #ffba08);
+}
+
+.domain-snow {
+  --domain-hero-image: url("/snow.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #495057;
+  --domain-link-dark: #dee2e6;
+  --domain-hero-text: #212529;
+  --domain-action: #343a40;
+  --domain-action-text: #f8f9fa;
+  --domain-title-gradient: linear-gradient(115deg, #54595e, #6c757d 55%, #b1b6bb);
+}
+
+.domain-snow-prev {
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #495057;
+  --domain-link-dark: #dee2e6;
+  --domain-hero-text: #212529;
+  --domain-action: #343a40;
+  --domain-action-text: #f8f9fa;
+  --domain-title-gradient: linear-gradient(115deg, #212529, #6c757d 55%, #dee2e6);
+}
+
+.domain-urban {
+  --domain-hero-image: url("/urban.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #003566;
+  --domain-link-dark: #ffd60a;
+  --domain-hero-text: #212529;
+  --domain-action: #ffd60a;
+  --domain-action-text: #000814;
+  --domain-title-gradient: linear-gradient(120deg, #ffe978, #ffd60a 52%, #d3b000);
+}
+
+.domain-urban-original {
+  --domain-hero-image: url("/urban.png");
+  --domain-bg: #000814;
+  --domain-accent: #012649;
+  --domain-accent-2: #003566;
+  --domain-link: #003566;
+  --domain-link-dark: #ffd60a;
+  --domain-action: #ffd60a;
+  --domain-action-text: #000814;
+  --domain-title-gradient: linear-gradient(120deg, #ffe978, #ffd60a 52%, #d3b000);
+}
+
+.domain-urban-prev {
+  --domain-bg: #000814;
+  --domain-accent: #ffd60a;
+  --domain-accent-2: #003566;
+  --domain-link: #003566;
+  --domain-link-dark: #ffd60a;
+  --domain-action: #ffd60a;
+  --domain-action-text: #000814;
+  --domain-title-gradient: linear-gradient(120deg, #ffd60a, #ffffff 52%, #003566);
+}
+
+
+.domain-soil {
+  --domain-hero-image: url("/soil.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #99582a;
+  --domain-link-dark: #ffe6a7;
+  --domain-hero-text: #212529;
+  --domain-action: #bb9457;
+  --domain-action-text: #28170d;
+  --domain-title-gradient: linear-gradient(115deg, #ffe6a7, #bb9457 55%, #99582a);
+}
+
+.domain-soil-original {
+  --domain-hero-image: url("/soil.png");
+  --domain-bg: #432818;
+  --domain-accent: #ffe6a7;
+  --domain-accent-2: #99582a;
+  --domain-link: #99582a;
+  --domain-link-dark: #ffe6a7;
+  --domain-action: #bb9457;
+  --domain-action-text: #28170d;
+  --domain-title-gradient: linear-gradient(115deg, #ffe6a7, #bb9457 55%, #99582a);
+}
+
+.domain-clouds {
+  --domain-hero-image: url("/clouds.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #0077b6;
+  --domain-link-dark: #90e0ef;
+  --domain-hero-text: #212529;
+  --domain-action: #90e0ef;
+  --domain-action-text: #023047;
+  --domain-title-gradient: linear-gradient(120deg, #abf1ff, #8aebff 48%, #60e1f7);
+}
+
+.domain-clouds-original {
+  --domain-hero-image: url("/clouds.png");
+  --domain-bg: #0077b6;
+  --domain-accent: #caf0f8;
+  --domain-accent-2: #90e0ef;
+  --domain-link: #0077b6;
+  --domain-link-dark: #90e0ef;
+  --domain-action: #90e0ef;
+  --domain-action-text: #023047;
+  --domain-title-gradient: linear-gradient(120deg, #daf9ff, #caf0f8 48%, #90e0ef);
+}
+
+.domain-clouds-prev {
+  --domain-bg: #0077b6;
+  --domain-accent: #caf0f8;
+  --domain-accent-2: #90e0ef;
+  --domain-link: #0077b6;
+  --domain-link-dark: #90e0ef;
+  --domain-action: #90e0ef;
+  --domain-action-text: #023047;
+  --domain-title-gradient: linear-gradient(120deg, #ffffff, #caf0f8 48%, #90e0ef);
+}
+
+.domain-kernel {
+  --domain-hero-image: url("/kernel.png");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #3a0ca3;
+  --domain-link-dark: #4cc9f0;
+  --domain-hero-text: #212529;
+  --domain-action: #f72585;
+  --domain-action-text: #ffffff;
+  --domain-title-gradient: linear-gradient(110deg, #ff9fca, #f72585 50%, #3a0ca3);
+}
+
+.domain-kernel-original {
+  --domain-hero-image: url("/kernel.png");
+  --domain-bg: #3a0ca3;
+  --domain-accent: #4cc9f0;
+  --domain-accent-2: #f72585;
+  --domain-link: #3a0ca3;
+  --domain-link-dark: #4cc9f0;
+  --domain-action: #f72585;
+  --domain-action-text: #ffffff;
+  --domain-title-gradient: linear-gradient(110deg, #f72585, #ffffff 50%, #4cc9f0);
+}
+
+.domain-radar {
+  --domain-hero-image: url("/radar.jpg");
+  --domain-bg: #f8f9fa;
+  --domain-accent: #dee2e6;
+  --domain-accent-2: #e9ecef;
+  --domain-link: #495057;
+  --domain-link-dark: #dee2e6;
+  --domain-hero-text: #212529;
+  --domain-action: #343a40;
+  --domain-action-text: #f8f9fa;
+  --domain-title-gradient: linear-gradient(115deg, #54595e, #6c757d 55%, #b1b6bb);
+}
+
+.domain-radar-original {
+  --domain-hero-image: url("/radar.jpg");
+  --domain-bg: #9f9f9f;
+  --domain-accent: #ffffff;
+  --domain-accent-2: #f3f4f6;
+  --domain-link: #4b5563;
+  --domain-link-dark: #f3f4f6;
+  --domain-action: #f3f4f6;
+  --domain-action-text: #111827;
+  --domain-title-gradient: linear-gradient(120deg, #3a445a, #1a1e27 55%, #111827);
+}
+
+.domain-radar-prev {
+  --domain-bg: #6b7280;
+  --domain-accent: #ffffff;
+  --domain-accent-2: #f3f4f6;
+  --domain-link: #4b5563;
+  --domain-link-dark: #f3f4f6;
+  --domain-action: #f3f4f6;
+  --domain-action-text: #111827;
+  --domain-title-gradient: linear-gradient(120deg, #ffffff, #f3f4f6 55%, #d1d5db);
+}
+
+.index-page .VPNavBar {
+  --asi-navbar-surface: rgb(255 255 255 / 10%);
+  --vp-c-text-1: var(--domain-hero-text);
+  --vp-c-text-2: color-mix(
+    in srgb,
+    var(--domain-hero-text) 78%,
+    transparent
+  );
+}
+
+.index-page .VPHomeHero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      color-mix(in srgb, var(--domain-accent) 24%, transparent),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 8% 92%,
+      color-mix(in srgb, var(--domain-accent-2) 26%, transparent),
+      transparent 30%
+    ),
+    var(--domain-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--domain-accent) 45%, transparent);
+}
+
+.index-page .VPHomeHero::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  background-image: var(--domain-hero-image);
+  background-position: center;
+  background-size: cover;
+  content: "";
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(0 0 0 / 12%) 18%,
+    #000 52%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(0 0 0 / 12%) 18%,
+    #000 52%
+  );
+}
+
+.domain-radar .VPHomeHero::before {
+  transform: scaleX(-1);
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    rgb(0 0 0 / 12%) 18%,
+    #000 52%
+  );
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    rgb(0 0 0 / 12%) 18%,
+    #000 52%
+  );
+}
+
+.index-page .VPHomeHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.index-page .VPHero .name {
+  background-image: var(--domain-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.index-page .VPHero .text,
+.index-page .VPHero .tagline {
+  color: var(--domain-hero-text);
+}
+
+.index-page .VPHero .tagline {
+  opacity: 0.82;
+}
+
+.index-page .VPHero .VPButton.brand {
+  border-color: var(--domain-action);
+  background: var(--domain-action);
+  color: var(--domain-action-text);
+}
+
+.index-page .VPHero .VPButton.brand:hover {
+  border-color: color-mix(in srgb, var(--domain-action) 76%, white);
+  background: color-mix(in srgb, var(--domain-action) 84%, white);
+}
+
+.index-page .VPHero .VPButton.alt {
+  border-color: color-mix(in srgb, var(--domain-hero-text) 34%, transparent);
+  background: color-mix(in srgb, var(--domain-bg) 68%, transparent);
+  color: var(--domain-hero-text);
+  backdrop-filter: blur(8px);
+}
+
+.index-page .VPHero .VPButton.alt:hover {
+  border-color: color-mix(in srgb, var(--domain-accent) 70%, transparent);
+  background: color-mix(in srgb, var(--domain-accent) 18%, var(--domain-bg));
+}
+
+.index-page .VPHero .VPButton:hover {
+  box-shadow: 0 0 28px color-mix(
+    in srgb,
+    var(--domain-accent) 42%,
+    transparent
+  );
+}
+
+.index-page .vp-doc h2,
+.index-page .vp-doc h3 {
+  color: var(--domain-link);
+}
+
+.index-page .vp-doc a {
+  color: var(--domain-link);
+  text-decoration-color: color-mix(in srgb, var(--domain-link) 40%, transparent);
+  text-underline-offset: 3px;
+}
+
+.index-page .vp-doc a:hover {
+  color: color-mix(in srgb, var(--domain-link) 76%, var(--vp-c-text-1));
+}
+
+.dark .index-page .vp-doc h2,
+.dark .index-page .vp-doc h3,
+.dark .index-page .vp-doc a {
+  color: var(--domain-link-dark);
+}
+
+@media (max-width: 640px) {
+  .index-page .VPHomeHero {
+    background:
+      radial-gradient(
+        circle at 90% 12%,
+        color-mix(in srgb, var(--domain-accent) 20%, transparent),
+        transparent 32%
+      ),
+      var(--domain-bg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .VPButton::after {
+    transition: left 0.55s ease;
+  }
+
+  .index-page .vp-doc a {
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+}

@@ -1,3 +1,6 @@
 __pycache__
 .ipynb_checkpoints
 .venv/
+node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/

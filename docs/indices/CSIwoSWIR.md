@@ -1,0 +1,35 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+pageClass: "index-page domain-clouds"
+
+hero:
+  name: "CSIwoSWIR"
+  text: "Cloud Shadow Index without SWIR bands"
+  tagline: "Clouds"
+  actions:
+    - theme: brand
+      text: 🡰 Back to Catalogue Search
+      link: /indices/index
+    - theme: alt
+      text: Read the paper 🡕
+      link: "https://doi.org/10.1016/j.isprsjprs.2018.07.006"
+---
+
+## Formula
+
+```
+N
+```
+
+### Bands
+
+- `N`: Near-Infrared (NIR).
+
+### Constants
+
+No constants are used in this index.
+
+## Contributor
+
+Index contributed by https://github.com/davemlz on 2026-03-30.

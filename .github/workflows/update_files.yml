@@ -29,6 +29,9 @@ jobs:
       - name: generate v1
         run: |
           python -m src.v1.main_v1
+      - name: generate VitePress pages
+        run: |
+          python docs/vitepress.py
       - name: readme
         run: |
           python -m readme.readme

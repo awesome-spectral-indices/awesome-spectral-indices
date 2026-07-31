@@ -1,0 +1,36 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+pageClass: "index-page domain-vegetation"
+
+hero:
+  name: "BNDVI"
+  text: "Blue Normalized Difference Vegetation Index"
+  tagline: "Vegetation"
+  actions:
+    - theme: brand
+      text: 🡰 Back to Catalogue Search
+      link: /indices/index
+    - theme: alt
+      text: Read the paper 🡕
+      link: "https://doi.org/10.1016/S1672-6308(07)60027-4"
+---
+
+## Formula
+
+```
+(N - B)/(N + B)
+```
+
+### Bands
+
+- `N`: Near-Infrared (NIR).
+- `B`: Blue.
+
+### Constants
+
+No constants are used in this index.
+
+## Contributor
+
+Index contributed by https://github.com/MATRIX4284 on 2021-04-07.

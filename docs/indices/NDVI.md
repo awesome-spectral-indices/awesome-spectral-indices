@@ -1,0 +1,36 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+pageClass: "index-page domain-vegetation"
+
+hero:
+  name: "NDVI"
+  text: "Normalized Difference Vegetation Index"
+  tagline: "Vegetation"
+  actions:
+    - theme: brand
+      text: 🡰 Back to Catalogue Search
+      link: /indices/index
+    - theme: alt
+      text: Read the paper 🡕
+      link: "https://ntrs.nasa.gov/citations/19740022614"
+---
+
+## Formula
+
+```
+(N - R)/(N + R)
+```
+
+### Bands
+
+- `N`: Near-Infrared (NIR).
+- `R`: Red.
+
+### Constants
+
+No constants are used in this index.
+
+## Contributor
+
+Index contributed by https://github.com/davemlz on 2021-04-07.

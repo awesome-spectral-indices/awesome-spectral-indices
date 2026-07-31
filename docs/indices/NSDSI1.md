@@ -1,0 +1,36 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+pageClass: "index-page domain-soil"
+
+hero:
+  name: "NSDSI1"
+  text: "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1"
+  tagline: "Soil"
+  actions:
+    - theme: brand
+      text: 🡰 Back to Catalogue Search
+      link: /indices/index
+    - theme: alt
+      text: Read the paper 🡕
+      link: "https://doi.org/10.1016/j.isprsjprs.2019.06.012"
+---
+
+## Formula
+
+```
+(S1-S2)/S1
+```
+
+### Bands
+
+- `S1`: Short-wave Infrared (SWIR) 1.
+- `S2`: Short-wave Infrared (SWIR) 2.
+
+### Constants
+
+No constants are used in this index.
+
+## Contributor
+
+Index contributed by https://github.com/CvenGeo on 2022-10-03.
