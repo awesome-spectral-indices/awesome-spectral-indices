@@ -43,9 +43,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Search Indices', link: '/indices/index' },
       { text: 'Contributing', link: '/CONTRIBUTING' },
-      { text: 'Changelog', link: '/CHANGELOG' },
-      { text: 'v1 Explained', link: '/v1' },
-      { text: 'How to cite', link: '/citation' },
+      { text: 'v1 Explained', link: '/v1' },      
       {
         text: 'APIs',
         items: [
@@ -54,7 +52,14 @@ export default defineConfig({
           { text: 'Julia', link: 'https://github.com/awesome-spectral-indices/SpectralIndices.jl' }
         ]
       },
-      { text: 'People', link: '/people' },
+      { text: 'Changelog', link: '/CHANGELOG' },
+      {
+        text: 'More',
+        items: [
+          { text: 'How to cite', link: '/citation' },
+          { text: 'People', link: '/people' }
+        ]
+      },      
     ],
 
     socialLinks: [
