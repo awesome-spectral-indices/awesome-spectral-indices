@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://www.tandfonline.com/doi/abs/10.5589/m12-043"
 ---
 

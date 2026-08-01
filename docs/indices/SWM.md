@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf"
 ---
 

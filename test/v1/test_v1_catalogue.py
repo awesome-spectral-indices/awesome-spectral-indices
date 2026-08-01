@@ -10,10 +10,19 @@ REQUIRED_TEXT_FIELDS = (
     "acronym",
     "name",
     "formula",
-    "reference",
     "application_domain",
     "contributor",
 )
+
+SOURCE_TYPES = {
+    "article",
+    "book",
+    "book_chapter",
+    "conference_paper",
+    "poster",
+    "report",
+    "preprint",
+}
 
 
 def test_required_catalogue_metadata_is_present_and_well_formed():
@@ -23,9 +32,13 @@ def test_required_catalogue_metadata_is_present_and_well_formed():
             assert isinstance(value, str)
             assert value.strip(), f"{index.acronym}.{field} is empty"
 
-        reference = urlparse(index.reference)
-        assert reference.scheme in {"http", "https"}
-        assert reference.netloc
+        source_link = urlparse(index.source.source_link)
+        assert source_link.scheme in {"http", "https"}
+        assert source_link.netloc
+        assert index.source.source_link_type in {"doi", "other"}
+        assert (
+            index.source.source_type is None or index.source.source_type in SOURCE_TYPES
+        )
         assert isinstance(index.date_of_addition, date)
 
 
@@ -34,8 +47,23 @@ def test_acronym_and_name_are_required_v1_fields():
 
     assert fields["acronym"].is_required()
     assert fields["name"].is_required()
+    assert fields["source"].is_required()
     assert "short_name" not in fields
     assert "long_name" not in fields
+    assert "reference" not in fields
+
+    source_fields = next(iter(spindex.SpectralIndices.values())).source.model_fields
+    assert source_fields["source_link"].is_required()
+    assert not source_fields["source_type"].is_required()
+
+
+def test_ndvi_and_tvi_are_conference_papers():
+    assert spindex.SpectralIndices["NDVI"].source.source_type == "conference_paper"
+    assert spindex.SpectralIndices["TVI"].source.source_type == "conference_paper"
+
+
+def test_evi_is_an_article():
+    assert spindex.SpectralIndices["EVI"].source.source_type == "article"
 
 
 def test_catalogue_domains_and_formula_variables_are_supported():

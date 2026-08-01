@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2"
 ---
 

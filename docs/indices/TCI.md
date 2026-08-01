@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "http://dx.doi.org/10.1109/TGRS.2007.904836"
 ---
 

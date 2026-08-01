@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf"
 ---
 

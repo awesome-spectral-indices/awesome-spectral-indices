@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf"
 ---
 

@@ -1,9 +1,16 @@
 import ast
 import re
 from datetime import date
-from typing import List, Optional
+from typing import List, Literal, Optional
+from urllib.parse import urlsplit
 
-from pydantic import BaseModel, ConfigDict, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    PrivateAttr,
+    computed_field,
+    field_validator,
+)
 
 from src.v1.utils import Bands, IndexType
 
@@ -53,7 +60,10 @@ class FormulaVisitor(ast.NodeVisitor):
 
     def visit_Call(self, node):
         """Validate allowed function calls and visit their positional arguments."""
-        if not isinstance(node.func, ast.Name) or node.func.id not in self.allowed_functions:
+        if (
+            not isinstance(node.func, ast.Name)
+            or node.func.id not in self.allowed_functions
+        ):
             raise ValueError("Invalid formula.")
         if node.keywords:
             raise ValueError("Invalid formula.")
@@ -88,6 +98,59 @@ def parse_formula_variables(value):
     return visitor.variables
 
 
+class Source(BaseModel):
+    """Scientific source metadata for a spectral index."""
+
+    source_link: str
+    source_type: Optional[
+        Literal[
+            "article",
+            "book",
+            "book_chapter",
+            "conference_paper",
+            "poster",
+            "report",
+            "preprint",
+        ]
+    ] = None
+
+    _source_link_status: Optional[Literal["operational", "down"]] = PrivateAttr(
+        default=None
+    )
+
+    model_config = ConfigDict(extra="forbid")
+
+    @field_validator("source_link")
+    @classmethod
+    def check_source_link(cls, value):
+        """Require an HTTP(S) source link while preserving its original form."""
+        parsed = urlsplit(value)
+        if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+            raise ValueError("source_link must be a valid HTTP(S) URL.")
+        return value
+
+    @computed_field
+    @property
+    def source_link_status(self) -> Optional[Literal["operational", "down"]]:
+        """Return the availability status populated by the v1 generator."""
+        return self._source_link_status
+
+    @computed_field
+    @property
+    def source_link_type(self) -> Literal["doi", "other"]:
+        """Classify DOI resolver links separately from other source URLs."""
+        hostname = (urlsplit(self.source_link).hostname or "").lower()
+        if hostname in {"doi.org", "dx.doi.org", "www.doi.org"}:
+            return "doi"
+        return "other"
+
+    def set_source_link_status(self, status):
+        """Set the generated availability status after checking the URL."""
+        if status not in {"operational", "down"}:
+            raise ValueError("Invalid source_link_status.")
+        self._source_link_status = status
+
+
 class SpectralIndex(BaseModel):
     """
     Python dataclass for Spectral Indices
@@ -95,7 +158,7 @@ class SpectralIndex(BaseModel):
 
     contributor: str
     acronym: str
-    reference: str
+    source: Source
     name: str
     formula: str
     bands: Optional[List[str]] = None
@@ -116,7 +179,9 @@ class SpectralIndex(BaseModel):
     @classmethod
     def check_formula(cls, value):
         """Validate formula syntax and ensure all variables are supported bands."""
-        variables = parse_formula_variables(value)  # obtain band names (e.g. ["R", "G"])
+        variables = parse_formula_variables(
+            value
+        )  # obtain band names (e.g. ["R", "G"])
 
         # check if the variables are in "Bands".
         if not all(elem in Bands._value2member_map_ for elem in variables):

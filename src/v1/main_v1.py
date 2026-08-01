@@ -1,7 +1,10 @@
 """Build the Awesome Spectral Indices v1 catalogue outputs."""
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 import pandas as pd
 
@@ -22,10 +25,44 @@ TABLE_COLUMNS = [
     "application_domain",
     "formula",
     "bands",
-    "reference",
+    "source",
     "contributor",
     "date_of_addition",
 ]
+
+SOURCE_CHECK_TIMEOUT = 12
+SOURCE_CHECK_WORKERS = 16
+SOURCE_CHECK_ATTEMPTS = 2
+SOURCE_CHECK_USER_AGENT = (
+    "Awesome-Spectral-Indices/1.0 "
+    "(+https://github.com/awesome-spectral-indices/awesome-spectral-indices)"
+)
+
+
+def check_source_link(source_link, timeout=SOURCE_CHECK_TIMEOUT):
+    """Return whether an HTTP source link is operational or down."""
+    request = Request(
+        source_link,
+        headers={
+            "User-Agent": SOURCE_CHECK_USER_AGENT,
+            "Range": "bytes=0-0",
+        },
+    )
+
+    for _ in range(SOURCE_CHECK_ATTEMPTS):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                status = response.getcode()
+                if status is None or status < 400:
+                    return "operational"
+        except HTTPError as exc:
+            if exc.code not in {404, 410} and exc.code < 500:
+                return "operational"
+        except (TimeoutError, URLError, OSError):
+            pass
+
+    return "down"
+
 
 def add_formula_metadata(index_catalog):
     """Populate each spectral index with its parsed formula variables."""
@@ -33,6 +70,31 @@ def add_formula_metadata(index_catalog):
         spectral_index.bands = parse_formula_variables(spectral_index.formula)
         index_catalog.SpectralIndices[key] = spectral_index
 
+    return index_catalog
+
+
+def add_source_metadata(index_catalog, checker=check_source_link):
+    """Check each unique source link and populate its generated status."""
+    source_links = sorted(
+        {
+            spectral_index.source.source_link
+            for spectral_index in index_catalog.SpectralIndices.values()
+        }
+    )
+    worker_count = max(1, min(SOURCE_CHECK_WORKERS, len(source_links)))
+
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        statuses = dict(zip(source_links, executor.map(checker, source_links)))
+
+    for spectral_index in index_catalog.SpectralIndices.values():
+        status = statuses[spectral_index.source.source_link]
+        spectral_index.source.set_source_link_status(status)
+
+    operational = sum(status == "operational" for status in statuses.values())
+    print(
+        f"Checked {len(statuses)} unique source links: "
+        f"{operational} operational, {len(statuses) - operational} down."
+    )
     return index_catalog
 
 
@@ -72,6 +134,7 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     index_catalog = add_formula_metadata(spindex)
+    index_catalog = add_source_metadata(index_catalog)
     write_json_outputs(index_catalog)
 
     df = build_indices_dataframe()

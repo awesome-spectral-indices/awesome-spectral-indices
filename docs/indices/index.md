@@ -46,7 +46,10 @@ const advanced = reactive({
   applicationDomain: '',
   formula: '',
   contributor: '',
-  reference: '',
+  sourceLink: '',
+  sourceLinkStatus: '',
+  sourceLinkType: '',
+  sourceType: '',
   dateOfAddition: '',
   bands: []
 })
@@ -86,7 +89,22 @@ const filteredIndices = computed(() => {
     }
     if (!includesText(index.formula, advanced.formula)) return false
     if (!includesText(index.contributor, advanced.contributor)) return false
-    if (!includesText(index.reference, advanced.reference)) return false
+    if (!includesText(index.source.source_link, advanced.sourceLink)) return false
+    if (
+      advanced.sourceLinkStatus &&
+      index.source.source_link_status !== advanced.sourceLinkStatus
+    ) {
+      return false
+    }
+    if (
+      advanced.sourceLinkType &&
+      index.source.source_link_type !== advanced.sourceLinkType
+    ) {
+      return false
+    }
+    if (advanced.sourceType && index.source.source_type !== advanced.sourceType) {
+      return false
+    }
     if (!includesText(index.date_of_addition, advanced.dateOfAddition)) {
       return false
     }
@@ -116,7 +134,10 @@ function clearFilters() {
   advanced.applicationDomain = ''
   advanced.formula = ''
   advanced.contributor = ''
-  advanced.reference = ''
+  advanced.sourceLink = ''
+  advanced.sourceLinkStatus = ''
+  advanced.sourceLinkType = ''
+  advanced.sourceType = ''
   advanced.dateOfAddition = ''
   advanced.bands = []
 }
@@ -188,8 +209,37 @@ formula variables.
         <input v-model="advanced.contributor" type="search" placeholder="GitHub user or email">
       </label>
       <label>
-        Reference
-        <input v-model="advanced.reference" type="search" placeholder="DOI or URL">
+        Source link
+        <input v-model="advanced.sourceLink" type="search" placeholder="DOI or URL">
+      </label>
+      <label>
+        Source link status
+        <select v-model="advanced.sourceLinkStatus">
+          <option value="">Any status</option>
+          <option value="operational">Operational</option>
+          <option value="down">Down</option>
+        </select>
+      </label>
+      <label>
+        Source link type
+        <select v-model="advanced.sourceLinkType">
+          <option value="">Any link type</option>
+          <option value="doi">DOI</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>
+        Source type
+        <select v-model="advanced.sourceType">
+          <option value="">Any source type</option>
+          <option value="article">Article</option>
+          <option value="book">Book</option>
+          <option value="book_chapter">Book chapter</option>
+          <option value="conference_paper">Conference paper</option>
+          <option value="poster">Poster</option>
+          <option value="report">Report</option>
+          <option value="preprint">Preprint</option>
+        </select>
       </label>
       <label>
         Date added

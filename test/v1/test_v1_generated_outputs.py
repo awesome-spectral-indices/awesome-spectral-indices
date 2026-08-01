@@ -37,3 +37,23 @@ def test_v1_indices_do_not_define_or_serialize_platforms():
 
     for index in json_catalogue.values():
         assert "platforms" not in index
+
+
+def test_v1_outputs_contain_generated_source_metadata():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+
+    for index in json_catalogue.values():
+        assert "reference" not in index
+        assert set(index["source"]) == {
+            "source_link",
+            "source_link_status",
+            "source_link_type",
+            "source_type",
+        }
+        assert index["source"]["source_link_status"] in {"operational", "down"}
+        assert index["source"]["source_link_type"] in {"doi", "other"}
+
+    assert json_catalogue["EVI"]["source"]["source_type"] == "article"
+    assert json_catalogue["NDVI"]["source"]["source_type"] == "conference_paper"
+    assert json_catalogue["TVI"]["source"]["source_type"] == "conference_paper"

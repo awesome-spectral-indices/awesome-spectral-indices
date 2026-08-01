@@ -12,7 +12,7 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
+      text: View source 🡕
       link: "https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf"
 ---
 

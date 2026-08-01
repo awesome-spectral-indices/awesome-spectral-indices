@@ -136,8 +136,8 @@ hero:
       text: 🡰 Back to Catalogue Search
       link: /indices/index
     - theme: alt
-      text: Read the paper 🡕
-      link: {yaml_string(index["reference"])}
+      text: View source 🡕
+      link: {yaml_string(index["source"]["source_link"])}
 ---
 
 ## Formula

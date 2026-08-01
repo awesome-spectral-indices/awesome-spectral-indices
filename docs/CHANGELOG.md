@@ -38,12 +38,13 @@ submitted through the usual contribution process.
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
   - an advanced search panel for individual metadata fields;
+  - filtering by source link, link status, link type, and source type;
   - filtering by required bands, parameters, radar polarizations, and kernel
     variables;
   - results grouped by application domain; and
   - a live filtered-versus-total result count.
 - Added one generated documentation page for every spectral index. Each page
-  includes its formula, required variables, constants, reference, contributor,
+  includes its formula, required variables, constants, source, contributor,
   and date of addition.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
@@ -58,6 +59,12 @@ submitted through the usual contribution process.
 
 - Renamed the required v1 spectral-index properties `short_name` to `acronym`
   and `long_name` to `name`. Neither property is required to be unique.
+- Replaced the v1 `reference` string with a structured `source` object. The
+  contributor provides its required `source_link` and optional constrained
+  `source_type`, while generation adds `source_link_status` and
+  `source_link_type`.
+- Classified EVI as an article and NDVI and TVI as conference-paper sources in
+  the v1 catalogue.
 - Migrated catalogue validation from Pydantic 1 to Pydantic 2.
 - Replaced legacy Pydantic validators and configuration with
   `field_validator`, `ConfigDict`, and Pydantic 2 serialization.
