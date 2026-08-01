@@ -49,6 +49,9 @@ submitted through the usual contribution process.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.
+- Added a catalogue status dashboard with interactive summaries of source-link
+  availability and source-type completeness, plus expandable affected-index
+  lists.
 - Added a VitePress content generator that:
   - copies `CONTRIBUTING.md` into the website;
   - reads the generated v1 catalogue and metadata;
