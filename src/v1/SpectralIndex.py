@@ -94,9 +94,9 @@ class SpectralIndex(BaseModel):
     """
 
     contributor: str
-    short_name: str
+    acronym: str
     reference: str
-    long_name: str
+    name: str
     formula: str
     bands: Optional[List[str]] = None
     application_domain: str
@@ -104,12 +104,12 @@ class SpectralIndex(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    @field_validator("short_name")
+    @field_validator("acronym")
     @classmethod
-    def check_short_name(cls, value):
-        """Ensure the short index identifier does not contain whitespace."""
+    def check_acronym(cls, value):
+        """Ensure the index acronym does not contain whitespace."""
         if re.search(r"\s+", value):
-            raise ValueError("short_name must not contain spaces.")
+            raise ValueError("acronym must not contain spaces.")
         return value
 
     @field_validator("formula")

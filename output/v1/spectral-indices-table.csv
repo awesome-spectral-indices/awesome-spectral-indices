@@ -1,4 +1,4 @@
-short_name,long_name,application_domain,formula,bands,reference,contributor,date_of_addition
+acronym,name,application_domain,formula,bands,reference,contributor,date_of_addition
 AFRI1600,Aerosol Free Vegetation Index (1600 nm),vegetation,(N - 0.66 * S1) / (N + 0.66 * S1),"['N', 'S1']",https://doi.org/10.1016/S0034-4257(01)00190-0,https://github.com/davemlz,2021-11-17
 AFRI2100,Aerosol Free Vegetation Index (2100 nm),vegetation,(N - 0.5 * S2) / (N + 0.5 * S2),"['N', 'S2']",https://doi.org/10.1016/S0034-4257(01)00190-0,https://github.com/davemlz,2021-11-17
 ANDWI,Augmented Normalized Difference Water Index,water,(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2),"['B', 'G', 'R', 'N', 'S1', 'S2']",https://doi.org/10.1016/j.envsoft.2021.105030,https://github.com/davemlz,2022-09-22

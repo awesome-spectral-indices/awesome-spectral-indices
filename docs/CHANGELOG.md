@@ -35,7 +35,7 @@ submitted through the usual contribution process.
 - Added a new VitePress website as the foundation for the v1 documentation.
 - Added VitePress support for mathematical notation through MathJax.
 - Added a catalogue search page with:
-  - immediate filtering by catalogue key, short name, long name, and
+  - immediate filtering by catalogue key, acronym, name, and
     application domain;
   - an advanced search panel for individual metadata fields;
   - filtering by required bands, parameters, radar polarizations, and kernel
@@ -56,6 +56,8 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Renamed the required v1 spectral-index properties `short_name` to `acronym`
+  and `long_name` to `name`. Neither property is required to be unique.
 - Migrated catalogue validation from Pydantic 1 to Pydantic 2.
 - Replaced legacy Pydantic validators and configuration with
   `field_validator`, `ConfigDict`, and Pydantic 2 serialization.

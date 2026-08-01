@@ -41,8 +41,8 @@ const indices = Object.entries(catalogue.SpectralIndices)
 const query = ref('')
 const advancedOpen = ref(false)
 const advanced = reactive({
-  shortName: '',
-  longName: '',
+  acronym: '',
+  name: '',
   applicationDomain: '',
   formula: '',
   contributor: '',
@@ -64,8 +64,8 @@ const filteredIndices = computed(() => {
   return indices.filter((index) => {
     const basicFields = [
       index.key,
-      index.short_name,
-      index.long_name,
+      index.acronym,
+      index.name,
       index.application_domain
     ]
 
@@ -76,8 +76,8 @@ const filteredIndices = computed(() => {
       return false
     }
 
-    if (!includesText(index.short_name, advanced.shortName)) return false
-    if (!includesText(index.long_name, advanced.longName)) return false
+    if (!includesText(index.acronym, advanced.acronym)) return false
+    if (!includesText(index.name, advanced.name)) return false
     if (
       advanced.applicationDomain &&
       index.application_domain !== advanced.applicationDomain
@@ -111,8 +111,8 @@ const groupedIndices = computed(() =>
 
 function clearFilters() {
   query.value = ''
-  advanced.shortName = ''
-  advanced.longName = ''
+  advanced.acronym = ''
+  advanced.name = ''
   advanced.applicationDomain = ''
   advanced.formula = ''
   advanced.contributor = ''
@@ -142,7 +142,7 @@ formula variables.
       id="catalogue-query"
       v-model="query"
       type="search"
-      placeholder="Search short name, long name, or application domain…"
+      placeholder="Search acronym, name, or application domain…"
       autocomplete="off"
     >
     <button
@@ -163,12 +163,12 @@ formula variables.
   >
     <div class="field-grid">
       <label>
-        Short name
-        <input v-model="advanced.shortName" type="search" placeholder="e.g. NDVI">
+        Acronym
+        <input v-model="advanced.acronym" type="search" placeholder="e.g. NDVI">
       </label>
       <label>
-        Long name
-        <input v-model="advanced.longName" type="search" placeholder="e.g. vegetation">
+        Name
+        <input v-model="advanced.name" type="search" placeholder="e.g. vegetation">
       </label>
       <label>
         Application domain
@@ -233,9 +233,9 @@ formula variables.
     <div class="index-grid">
       <article v-for="index in group.indices" :key="index.key" class="index-card">
         <h3>
-          <a :href="indexLink(index.key)">{{ index.short_name }}</a>
+          <a :href="indexLink(index.key)">{{ index.acronym }}</a>
         </h3>
-        <p>{{ index.long_name }}</p>
+        <p>{{ index.name }}</p>
         <div class="index-bands">
           <code v-for="band in index.bands" :key="band">{{ band }}</code>
         </div>

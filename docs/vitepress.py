@@ -128,8 +128,8 @@ layout: home
 pageClass: {yaml_string(f'index-page domain-{index["application_domain"]}')}
 
 hero:
-  name: {yaml_string(index["short_name"])}
-  text: {yaml_string(index["long_name"])}
+  name: {yaml_string(index["acronym"])}
+  text: {yaml_string(index["name"])}
   tagline: {yaml_string(domain)}
   actions:
     - theme: brand

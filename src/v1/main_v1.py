@@ -17,8 +17,8 @@ SPECTRAL_INDICES_JSON = OUTPUT_DIR / "spectral-indices-dict.json"
 SPECTRAL_INDICES_TABLE = OUTPUT_DIR / "spectral-indices-table.csv"
 
 TABLE_COLUMNS = [
-    "short_name",
-    "long_name",
+    "acronym",
+    "name",
     "application_domain",
     "formula",
     "bands",
