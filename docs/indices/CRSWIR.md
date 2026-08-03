@@ -30,9 +30,9 @@ S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))
 
 ### Constants
 
-- `lambdaS2`: SWIR2 central wavelength (nm).
 - `lambdaN2`: NIR2 central wavelength (nm).
 - `lambdaS1`: SWIR1 central wavelength (nm).
+- `lambdaS2`: SWIR2 central wavelength (nm).
 
 ## Contributor
 

@@ -12,6 +12,7 @@ from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.bands import bands
 from src.v1.constants import constants
 from src.v1.indices import spindex
+from src.v1.utils import Bands, Constants
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -25,6 +26,7 @@ TABLE_COLUMNS = [
     "application_domain",
     "formula",
     "bands",
+    "constants",
     "source",
     "contributor",
     "date_of_addition",
@@ -65,9 +67,20 @@ def check_source_link(source_link, timeout=SOURCE_CHECK_TIMEOUT):
 
 
 def add_formula_metadata(index_catalog):
-    """Populate each spectral index with its parsed formula variables."""
+    """Populate each index with its bands and constant defaults."""
+    band_names = set(Bands._value2member_map_)
+    constant_names = set(Constants._value2member_map_)
+
     for key, spectral_index in index_catalog.SpectralIndices.items():
-        spectral_index.bands = parse_formula_variables(spectral_index.formula)
+        variables = parse_formula_variables(spectral_index.formula)
+        spectral_index.bands = [
+            variable for variable in variables if variable in band_names
+        ]
+        spectral_index.constants = {
+            variable: constants[variable]["default"]
+            for variable in variables
+            if variable in constant_names
+        }
         index_catalog.SpectralIndices[key] = spectral_index
 
     return index_catalog

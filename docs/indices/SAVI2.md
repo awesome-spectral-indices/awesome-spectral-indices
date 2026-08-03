@@ -29,8 +29,8 @@ N / (R + (slb / sla))
 
 ### Constants
 
-- `slb`: Soil line intercept. Default: `0.0`.
 - `sla`: Soil line slope. Default: `1.0`.
+- `slb`: Soil line intercept. Default: `0.0`.
 
 ## Contributor
 

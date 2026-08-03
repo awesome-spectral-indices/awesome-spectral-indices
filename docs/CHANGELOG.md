@@ -39,8 +39,8 @@ submitted through the usual contribution process.
     application domain;
   - an advanced search panel for individual metadata fields;
   - filtering by source link, link status, link type, and source type;
-  - filtering by required bands, parameters, radar polarizations, and kernel
-    variables;
+  - filtering independently by required bands, constants, radar polarizations,
+    and kernel variables;
   - results grouped by application domain; and
   - a live filtered-versus-total result count.
 - Added one generated documentation page for every spectral index. Each page
@@ -68,6 +68,9 @@ submitted through the usual contribution process.
   `source_link_type`.
 - Classified EVI as an article and NDVI and TVI as conference-paper sources in
   the v1 catalogue.
+- Split formula constants from bands in v1. Constants now have a dedicated
+  registry and each generated index exposes a `constants` mapping containing
+  its catalogue defaults, while `bands` contains only non-constant inputs.
 - Migrated catalogue validation from Pydantic 1 to Pydantic 2.
 - Replaced legacy Pydantic validators and configuration with
   `field_validator`, `ConfigDict`, and Pydantic 2 serialization.

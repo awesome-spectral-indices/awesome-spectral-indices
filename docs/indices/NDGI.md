@@ -30,9 +30,9 @@ hero:
 
 ### Constants
 
+- `lambdaG`: Green central wavelength (nm).
 - `lambdaN`: NIR central wavelength (nm).
 - `lambdaR`: Red central wavelength (nm).
-- `lambdaG`: Green central wavelength (nm).
 
 ## Contributor
 

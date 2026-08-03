@@ -31,9 +31,9 @@ g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)
 
 ### Constants
 
-- `g`: Gain factor. Default: `2.5`.
 - `C1`: Coefficient 1 for the aerosol resistance term. Default: `6.0`.
 - `C2`: Coefficient 2 for the aerosol resistance term. Default: `7.5`.
+- `g`: Gain factor. Default: `2.5`.
 
 ## Contributor
 

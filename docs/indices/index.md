@@ -51,7 +51,8 @@ const advanced = reactive({
   sourceLinkType: '',
   sourceType: '',
   dateOfAddition: '',
-  bands: []
+  bands: [],
+  constants: []
 })
 
 const normalize = (value) => String(value ?? '').toLocaleLowerCase()
@@ -60,6 +61,10 @@ const includesText = (value, filter) =>
 
 const allBands = [...new Set(indices.flatMap((index) => index.bands))]
   .sort((left, right) => left.localeCompare(right))
+
+const allConstants = [
+  ...new Set(indices.flatMap((index) => Object.keys(index.constants)))
+].sort((left, right) => left.localeCompare(right))
 
 const filteredIndices = computed(() => {
   const basicQuery = normalize(query.value).trim()
@@ -111,6 +116,11 @@ const filteredIndices = computed(() => {
     if (!advanced.bands.every((band) => index.bands.includes(band))) {
       return false
     }
+    if (
+      !advanced.constants.every((constant) => constant in index.constants)
+    ) {
+      return false
+    }
 
     return true
   })
@@ -140,6 +150,7 @@ function clearFilters() {
   advanced.sourceType = ''
   advanced.dateOfAddition = ''
   advanced.bands = []
+  advanced.constants = []
 }
 
 function indexLink(key) {
@@ -247,7 +258,7 @@ formula variables.
       </label>
     </div>
     <fieldset class="band-filter">
-      <legend>Includes all selected bands or parameters</legend>
+      <legend>Includes all selected bands</legend>
       <div class="band-options">
         <label
           v-for="band in allBands"
@@ -257,6 +268,20 @@ formula variables.
         >
           <input v-model="advanced.bands" type="checkbox" :value="band">
           <code>{{ band }}</code>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="band-filter">
+      <legend>Includes all selected constants</legend>
+      <div class="band-options">
+        <label
+          v-for="constant in allConstants"
+          :key="constant"
+          class="band-option"
+          :class="{ selected: advanced.constants.includes(constant) }"
+        >
+          <input v-model="advanced.constants" type="checkbox" :value="constant">
+          <code>{{ constant }}</code>
         </label>
       </div>
     </fieldset>

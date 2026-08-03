@@ -7,6 +7,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-17",
             "formula": "(N - 0.66 * S1) / (N + 0.66 * S1)",
@@ -25,6 +26,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-17",
             "formula": "(N - 0.5 * S2) / (N + 0.5 * S2)",
@@ -47,6 +49,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)",
@@ -65,6 +68,7 @@
                 "G",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(1 / G) - (1 / RE1)",
@@ -84,6 +88,7 @@
                 "G",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "N * ((1 / G) - (1 / RE1))",
@@ -101,9 +106,11 @@
             "bands": [
                 "N",
                 "R",
-                "gamma",
                 "B"
             ],
+            "constants": {
+                "gamma": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
@@ -119,11 +126,13 @@
             "acronym": "ATSAVI",
             "application_domain": "vegetation",
             "bands": [
-                "sla",
                 "N",
-                "R",
-                "slb"
+                "R"
             ],
+            "constants": {
+                "sla": 1.0,
+                "slb": 0.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))",
@@ -142,6 +151,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(N * (1.0 - R) * (N - R)) ** (1/3)",
@@ -162,6 +172,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "4.0 * (G - S1) - 0.25 * N + 2.75 * S2",
@@ -183,6 +194,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2",
@@ -201,6 +213,7 @@
                 "N2",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2026-07-04",
             "formula": "2.0 * N2 - R",
@@ -219,6 +232,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)",
@@ -237,6 +251,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
             "formula": "1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)",
@@ -258,6 +273,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0)",
@@ -277,6 +293,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "B / (R + G + B)",
@@ -297,6 +314,7 @@
                 "N",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "((S1 + R) - (N + B))/((S1 + R) + (N + B))",
@@ -316,6 +334,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-11-20",
             "formula": "(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5",
@@ -334,6 +353,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-11-20",
             "formula": "(((G**2.0)+(R**2.0))/2.0)**0.5",
@@ -354,6 +374,7 @@
                 "S2",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
             "formula": "(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)",
@@ -372,6 +393,7 @@
                 "N",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/MATRIX4284",
             "date_of_addition": "2021-04-07",
             "formula": "(N - B)/(N + B)",
@@ -390,6 +412,7 @@
                 "R",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "R/S1",
@@ -405,10 +428,12 @@
             "acronym": "BWDRVI",
             "application_domain": "vegetation",
             "bands": [
-                "alpha",
                 "N",
                 "B"
             ],
+            "constants": {
+                "alpha": 0.1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(alpha * N - B) / (alpha * N + B)",
@@ -428,6 +453,7 @@
                 "S1",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "R + S1 - N",
@@ -446,6 +472,7 @@
                 "G1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/joanvlasschaert",
             "date_of_addition": "2023-03-12",
             "formula": "(G1 - R)/(G1 + R)",
@@ -467,6 +494,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "(N + 2.0 * S1) / (B + G + R)",
@@ -487,6 +515,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "(3.0 * N) / (B + G + R)",
@@ -509,6 +538,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "(B + G + R + N + S1 + S2) / 6.0",
@@ -529,6 +559,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "(B + G + R + N) / 4.0",
@@ -547,6 +578,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N / G) - 1.0",
@@ -565,6 +597,7 @@
                 "N",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "(N / RE1) - 1",
@@ -583,6 +616,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/atca1977",
             "date_of_addition": "2026-03-30",
             "formula": "(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)",
@@ -601,6 +635,7 @@
                 "B",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/eomasters-repos",
             "date_of_addition": "2024-08-08",
             "formula": "(1.0 / B) - (1.0 / G)",
@@ -619,6 +654,7 @@
                 "B",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/eomasters-repos",
             "date_of_addition": "2024-08-08",
             "formula": "(1.0 / B) - (1.0 / RE1)",
@@ -636,11 +672,13 @@
             "bands": [
                 "S1",
                 "N2",
-                "S2",
-                "lambdaS2",
-                "lambdaN2",
-                "lambdaS1"
+                "S2"
             ],
+            "constants": {
+                "lambdaN2": null,
+                "lambdaS1": null,
+                "lambdaS2": null
+            },
             "contributor": "https://github.com/kenoz",
             "date_of_addition": "2025-06-23",
             "formula": "S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
@@ -659,6 +697,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "N/S2",
@@ -677,6 +716,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "(N + S1) / 2.0",
@@ -696,6 +736,7 @@
                 "S2",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "N / (S2 * T / 10000.0)",
@@ -713,6 +754,7 @@
             "bands": [
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
             "formula": "N",
@@ -732,6 +774,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N * R) / (G ** 2.0)",
@@ -752,6 +795,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
@@ -772,6 +816,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "((S1 - G)/(S1 + G)) - ((N - R)/(N + R))",
@@ -790,6 +835,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "(VV + VH)/2.0 ** 0.5",
@@ -808,6 +854,7 @@
                 "S1",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
             "formula": "S1/N",
@@ -826,6 +873,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
             "formula": "N/S1",
@@ -844,6 +892,7 @@
                 "S1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
             "formula": "S1/G",
@@ -862,6 +911,7 @@
                 "S1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
             "formula": "S1/R",
@@ -880,6 +930,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
             "formula": "G/R",
@@ -900,6 +951,7 @@
                 "S1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
             "formula": "(N + G)/(S1 + R)",
@@ -918,6 +970,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "N - R",
@@ -933,13 +986,15 @@
             "acronym": "DVIplus",
             "application_domain": "vegetation",
             "bands": [
-                "lambdaN",
-                "lambdaR",
-                "lambdaG",
                 "G",
                 "N",
                 "R"
             ],
+            "constants": {
+                "lambdaG": null,
+                "lambdaN": null,
+                "lambdaR": null
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
             "formula": "((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R",
@@ -958,6 +1013,7 @@
                 "HV",
                 "HH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
             "formula": "(4.0 * HV)/(HH + HV)",
@@ -976,6 +1032,7 @@
                 "VH",
                 "VV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
             "formula": "(4.0 * VH)/(VV + VH)",
@@ -995,6 +1052,7 @@
                 "N",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "(S1 - N) / (10.0 * ((S1 + T) ** 0.5))",
@@ -1012,9 +1070,11 @@
             "bands": [
                 "R",
                 "G",
-                "B",
-                "epsilon"
+                "B"
             ],
+            "constants": {
+                "epsilon": 1
+            },
             "contributor": "https://github.com/geoSanjeeb",
             "date_of_addition": "2023-07-03",
             "formula": "(R + G + B)/((G/B) * (R - B + epsilon))",
@@ -1035,6 +1095,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)",
@@ -1054,6 +1115,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/gagev",
             "date_of_addition": "2024-04-08",
             "formula": "((N + G) - (2 * B)) / ((N + G) + (2 * B))",
@@ -1069,14 +1131,16 @@
             "acronym": "EVI",
             "application_domain": "vegetation",
             "bands": [
-                "g",
                 "N",
                 "R",
-                "C1",
-                "C2",
-                "B",
-                "L"
+                "B"
             ],
+            "constants": {
+                "C1": 6.0,
+                "C2": 7.5,
+                "L": 1.0,
+                "g": 2.5
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
@@ -1092,11 +1156,13 @@
             "acronym": "EVI2",
             "application_domain": "vegetation",
             "bands": [
-                "g",
                 "N",
-                "R",
-                "L"
+                "R"
             ],
+            "constants": {
+                "L": 1.0,
+                "g": 2.5
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "g * (N - R) / (N + 2.4 * R + L)",
@@ -1116,6 +1182,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N",
@@ -1135,6 +1202,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "2 * G - R - B",
@@ -1154,6 +1222,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(2.0 * G - R - B) - (1.3 * R - G)",
@@ -1172,6 +1241,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "1.3 * R - G",
@@ -1189,11 +1259,13 @@
             "bands": [
                 "N",
                 "R",
-                "S1",
-                "lambdaN",
-                "lambdaR",
-                "lambdaS1"
+                "S1"
             ],
+            "constants": {
+                "lambdaN": null,
+                "lambdaR": null,
+                "lambdaS1": null
+            },
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
             "formula": "N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
@@ -1214,6 +1286,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
             "formula": "N - ((R + G + B)/3.0)",
@@ -1231,11 +1304,13 @@
             "bands": [
                 "N",
                 "RE2",
-                "S1",
-                "lambdaN",
-                "lambdaR",
-                "lambdaS1"
+                "S1"
             ],
+            "constants": {
+                "lambdaN": null,
+                "lambdaR": null,
+                "lambdaS1": null
+            },
             "contributor": "https://github.com/guillemc23",
             "date_of_addition": "2025-07-18",
             "formula": "N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
@@ -1256,6 +1331,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/kalab-oto",
             "date_of_addition": "2025-04-15",
             "formula": "(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)",
@@ -1276,6 +1352,7 @@
                 "B",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (G - (B - R))) / (N + (G - (B - R)))",
@@ -1295,6 +1372,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (G + B))/(N + (G + B))",
@@ -1314,6 +1392,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "G / (R + G + B)",
@@ -1330,9 +1409,11 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "nexp",
                 "R"
             ],
+            "constants": {
+                "nexp": 2.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))",
@@ -1351,6 +1432,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))",
@@ -1370,6 +1452,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
@@ -1388,6 +1471,7 @@
                 "RE2",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "RE2/G",
@@ -1406,6 +1490,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "RE2/RE1",
@@ -1424,6 +1509,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - G)/(N + G)",
@@ -1442,6 +1528,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(N - G) / (N + G + 0.16)",
@@ -1458,12 +1545,14 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "eta",
                 "G",
                 "R",
-                "lmb",
                 "B"
             ],
+            "constants": {
+                "eta": 0.5,
+                "lmb": 1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-07-22",
             "formula": "(N - (eta * G + (1.0 - eta) * R - lmb * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lmb * (B - R)))",
@@ -1483,6 +1572,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (G + R))/(N + (G + R))",
@@ -1501,6 +1591,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "N/G",
@@ -1516,10 +1607,12 @@
             "acronym": "GSAVI",
             "application_domain": "vegetation",
             "bands": [
-                "L",
                 "N",
                 "G"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(1.0 + L) * (N - G) / (N + G + L)",
@@ -1538,6 +1631,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))",
@@ -1555,9 +1649,11 @@
             "bands": [
                 "N",
                 "R",
-                "gamma",
                 "B"
             ],
+            "constants": {
+                "gamma": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))",
@@ -1576,9 +1672,11 @@
                 "S1",
                 "N",
                 "R",
-                "L",
                 "G"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
             "formula": "(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)",
@@ -1597,6 +1695,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(R - B)/(R + B)",
@@ -1615,6 +1714,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "N/(N + R)",
@@ -1635,6 +1735,7 @@
                 "RE1",
                 "RE2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "(RE3 - R) / (RE1 / RE2)",
@@ -1654,6 +1755,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-07-11",
             "formula": "(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))",
@@ -1674,6 +1776,7 @@
                 "RE3",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
             "formula": "((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N))",
@@ -1692,6 +1795,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
             "formula": "(N - S1)/(N + S1)",
@@ -1711,6 +1815,7 @@
                 "S2",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "((S1 - S2 - N)/(S1 + S2 + N)) + 0.5",
@@ -1726,13 +1831,15 @@
             "acronym": "MBWI",
             "application_domain": "water",
             "bands": [
-                "omega",
                 "G",
                 "R",
                 "N",
                 "S1",
                 "S2"
             ],
+            "constants": {
+                "omega": 2.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "(omega * G) - R - N - S1 - S2",
@@ -1752,6 +1859,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)",
@@ -1771,6 +1879,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "1.2 * (2.5 * (N - R) - 1.3 * (N - G))",
@@ -1790,6 +1899,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(1.5 * (2.5 * (N - R) - 1.3 * (N - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
@@ -1809,6 +1919,7 @@
                 "RE1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)",
@@ -1829,6 +1940,7 @@
                 "G",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))",
@@ -1848,6 +1960,7 @@
                 "RE1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
@@ -1866,6 +1979,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)",
@@ -1884,6 +1998,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-07-11",
             "formula": "(N - S1) / (N * S1)",
@@ -1902,6 +2017,7 @@
                 "S2",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "10.0 * S2 - 9.8 * S1 + 2.0",
@@ -1920,6 +2036,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
             "formula": "(1.0 - N - S1)/(1.0 - N + S1)",
@@ -1938,6 +2055,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
             "formula": "(1.0 - N - S2)/(1.0 - N + S2)",
@@ -1956,6 +2074,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - S2)/(N + S2)",
@@ -1974,6 +2093,7 @@
                 "G",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(G - S1) / (G + S1)",
@@ -1989,10 +2109,12 @@
             "acronym": "MNLI",
             "application_domain": "vegetation",
             "bands": [
-                "L",
                 "N",
                 "R"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)",
@@ -2011,6 +2133,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)",
@@ -2029,6 +2152,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)",
@@ -2047,6 +2171,7 @@
                 "S1",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "S1/N",
@@ -2065,6 +2190,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(N / R - 1) / ((N / R + 1) ** 0.5)",
@@ -2083,6 +2209,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)",
@@ -2102,6 +2229,7 @@
                 "RE1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "(RE2 - RE1) / (RE1 - R)",
@@ -2121,6 +2249,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "1.2 * (1.2 * (N - G) - 2.5 * (R - G))",
@@ -2140,6 +2269,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
@@ -2159,6 +2289,7 @@
                 "G",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/delatorredm",
             "date_of_addition": "2025-04-08",
             "formula": "(N - G) / (S1 - G)",
@@ -2180,6 +2311,7 @@
                 "S2",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))",
@@ -2199,6 +2331,7 @@
                 "S1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(S2 - S1/G)/(S2 + S1/G)",
@@ -2217,6 +2350,7 @@
                 "R",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(R - T)/(R + T)",
@@ -2235,6 +2369,7 @@
                 "R",
                 "T1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2023-03-12",
             "formula": "(R - T1)/(R + T1)",
@@ -2253,6 +2388,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - S2) / (N + S2)",
@@ -2271,6 +2407,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(S1 - S2) / (S1 + S2)",
@@ -2289,6 +2426,7 @@
                 "S2",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(S2 - S1 - 0.02)/(S2 + S1 + 0.1)",
@@ -2308,6 +2446,7 @@
                 "S2",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (S2 * T / 10000.0)) / (N + (S2 * T / 10000.0))",
@@ -2327,6 +2466,7 @@
                 "T",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "((N / (T / 10000.0)) - S2) / ((N / (T / 10000.0)) + S2)",
@@ -2346,6 +2486,7 @@
                 "T",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "((N - (T / 10000.0)) - S2) / ((N - (T / 10000.0)) + S2)",
@@ -2366,6 +2507,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(S2 - N2 - G - B)/(S2 + N2 + G + B)",
@@ -2388,6 +2530,7 @@
                 "S2",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "0.36 * (G + R + N) - (((B + S2)/G) + S1)",
@@ -2407,9 +2550,11 @@
                 "N",
                 "T",
                 "R",
-                "L",
                 "G"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "((S1 - N)/(10.0 * (T + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
@@ -2428,6 +2573,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
@@ -2446,6 +2592,7 @@
                 "S1",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(S1 - N) / (S1 + N)",
@@ -2464,6 +2611,7 @@
                 "S1",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "(S1 - T) / (S1 + T)",
@@ -2482,6 +2630,7 @@
                 "RE1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/kalab-oto",
             "date_of_addition": "2022-10-10",
             "formula": "(RE1 - R)/(RE1 + R)",
@@ -2501,6 +2650,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))",
@@ -2516,13 +2666,15 @@
             "acronym": "NDGI",
             "application_domain": "vegetation",
             "bands": [
-                "lambdaN",
-                "lambdaR",
-                "lambdaG",
                 "G",
                 "N",
                 "R"
             ],
+            "constants": {
+                "lambdaG": null,
+                "lambdaN": null,
+                "lambdaR": null
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
             "formula": "(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)",
@@ -2541,6 +2693,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(G - R)/(G + R)",
@@ -2559,6 +2712,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
             "formula": "(N - S1)/(N + S1)",
@@ -2579,6 +2733,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(T - (B + N + S1) / 3.0)/(T + (B + N + S1) / 3.0)",
@@ -2599,6 +2754,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(T - (G + N + S1) / 3.0)/(T + (G + N + S1) / 3.0)",
@@ -2619,6 +2775,7 @@
                 "S1",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(T - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
@@ -2639,6 +2796,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(T - (((G - N)/(G + N)) + N + S1) / 3.0)/(T + (((G - N)/(G + N)) + N + S1) / 3.0)",
@@ -2659,6 +2817,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(T - (R + N + S1) / 3.0)/(T + (R + N + S1) / 3.0)",
@@ -2677,6 +2836,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/bpurinton",
             "date_of_addition": "2021-12-01",
             "formula": "(N - S1)/(N + S1)",
@@ -2693,10 +2853,12 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "alpha",
                 "R",
                 "S1"
             ],
+            "constants": {
+                "alpha": 0.1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
             "formula": "(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))",
@@ -2715,6 +2877,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "(VV - VH)/(VV + VH)",
@@ -2733,6 +2896,7 @@
                 "S1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
             "formula": "(S1-G)/(S1+G)",
@@ -2751,6 +2915,7 @@
                 "N",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "(N - RE1) / (N + RE1)",
@@ -2769,6 +2934,7 @@
                 "G",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(G - S1) / (G + S1)",
@@ -2787,6 +2953,7 @@
                 "G",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(G - N)/(G + N)",
@@ -2805,6 +2972,7 @@
                 "R",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-01-10",
             "formula": "(R - S1)/(R + S1)",
@@ -2823,6 +2991,7 @@
                 "G",
                 "Y"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-11-20",
             "formula": "(G - Y)/(G + Y)",
@@ -2839,9 +3008,11 @@
             "application_domain": "snow",
             "bands": [
                 "N",
-                "S1",
-                "beta"
+                "S1"
             ],
+            "constants": {
+                "beta": 0.05
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(N - S1 - beta)/(N + S1)",
@@ -2860,6 +3031,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(N - S1)/(N + S1)",
@@ -2878,6 +3050,7 @@
                 "R",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(R - S1) / (R + S1)",
@@ -2896,6 +3069,7 @@
                 "S2",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(S2 - G)/(S2 + G)",
@@ -2914,6 +3088,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
             "formula": "(R-G)/(R+G)",
@@ -2929,12 +3104,14 @@
             "acronym": "NDTI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "gamma",
                 "S1",
                 "S2",
                 "N",
                 "RE3"
             ],
+            "constants": {
+                "gamma": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "gamma * (S1 - S2)/(S1 + S2) + (1 - gamma) * (N - RE3)/(N + RE3)",
@@ -2953,6 +3130,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
             "formula": "(S1 - S2)/(S1 + S2)",
@@ -2971,6 +3149,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - R)/(N + R)",
@@ -2986,13 +3165,15 @@
             "acronym": "NDVI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "alpha",
                 "RE3",
                 "RE2",
-                "beta",
                 "R",
                 "RE1"
             ],
+            "constants": {
+                "alpha": 0.1,
+                "beta": 0.05
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1))",
@@ -3011,6 +3192,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(RE2 - RE1) / (RE2 + RE1)",
@@ -3031,6 +3213,7 @@
                 "G",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "((N - R)/(N + R)) - ((G - S1)/(G + S1))",
@@ -3050,6 +3233,7 @@
                 "R",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(N - (R * T / 10000.0))/(N + (R * T / 10000.0))",
@@ -3068,6 +3252,7 @@
                 "G",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(G - N) / (G + N)",
@@ -3084,9 +3269,11 @@
             "application_domain": "water",
             "bands": [
                 "G",
-                "alpha",
                 "N"
             ],
+            "constants": {
+                "alpha": 0.1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(G - alpha * N)/(G + N)",
@@ -3105,6 +3292,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(G - B) / (G + B)",
@@ -3123,6 +3311,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(G - R) / (G + R)",
@@ -3141,6 +3330,7 @@
                 "RE1",
                 "A"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "(RE1 - A) / (RE1 + A)",
@@ -3159,6 +3349,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-16",
             "formula": "((N - R) / (N + R)) * N",
@@ -3175,11 +3366,13 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "R",
-                "k",
-                "lambdaN",
-                "lambdaR"
+                "R"
             ],
+            "constants": {
+                "k": 0.0,
+                "lambdaN": null,
+                "lambdaR": null
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "N - R - k * (lambdaN - lambdaR)",
@@ -3196,9 +3389,11 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "R",
-                "PAR"
+                "R"
             ],
+            "constants": {
+                "PAR": null
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-18",
             "formula": "((N - R) / (N + R)) * N * PAR",
@@ -3217,6 +3412,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "((N ** 2) - R)/((N ** 2) + R)",
@@ -3236,6 +3432,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(N - (S1 - S2))/(N + (S1 - S2))",
@@ -3254,6 +3451,7 @@
                 "R",
                 "A"
             ],
+            "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2025-03-19",
             "formula": "(R - A) / (R + A)",
@@ -3272,6 +3470,7 @@
                 "G",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(G - S2) / (G + S2)",
@@ -3290,6 +3489,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(R - S2) / (R + S2)",
@@ -3308,6 +3508,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "(S1 - S2)/(S1 + S2)",
@@ -3326,6 +3527,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
             "formula": "(S1-S2)/S1",
@@ -3344,6 +3546,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
             "formula": "(S1-S2)/S2",
@@ -3362,6 +3565,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
             "formula": "(S1-S2)/(S1+S2)",
@@ -3381,6 +3585,7 @@
                 "S2",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-06",
             "formula": "((N-S2)/(N+S2))*T",
@@ -3400,6 +3605,7 @@
                 "S2",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-06",
             "formula": "(N-(S2+T))/(N+(S2+T))",
@@ -3420,6 +3626,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "(B - (N + S1 + S2))/(B + (N + S1 + S2))",
@@ -3439,6 +3646,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "G/(N + G + R)",
@@ -3458,6 +3666,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "N/(N + G + R)",
@@ -3477,6 +3686,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "R/(N + G + R)",
@@ -3494,9 +3704,11 @@
             "bands": [
                 "N",
                 "G",
-                "R",
-                "cexp"
+                "R"
             ],
+            "constants": {
+                "cexp": 1.16
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "(N / G) * (R / G) ** cexp",
@@ -3515,6 +3727,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(N - R) / (N + R + 0.16)",
@@ -3534,6 +3747,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
             "formula": "(G + R)/B",
@@ -3552,6 +3766,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
             "formula": "N/(N + R)",
@@ -3570,6 +3785,7 @@
                 "B",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
             "formula": "0.8192 * B - 0.5735 * N + 0.0750",
@@ -3589,6 +3805,7 @@
                 "B",
                 "RE2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(R - B)/RE2",
@@ -3608,6 +3825,7 @@
                 "HH",
                 "VV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-24",
             "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
@@ -3627,6 +3845,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "R / (R + G + B)",
@@ -3645,6 +3864,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(N - R) / ((N + R) ** 0.5)",
@@ -3664,6 +3884,7 @@
                 "R",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)",
@@ -3682,6 +3903,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
@@ -3700,6 +3922,7 @@
                 "HH",
                 "HV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
             "formula": "(HH - HV)/(HH + HV)",
@@ -3719,6 +3942,7 @@
                 "B",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(G ** 2.0 - B * R)/(G ** 2.0 + B * R)",
@@ -3737,6 +3961,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "R/G",
@@ -3755,6 +3980,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "(R - G)/(R + G)",
@@ -3773,6 +3999,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-11-20",
             "formula": "(R**2.0)/(G**4.0)",
@@ -3791,6 +4018,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "(R - N)/(R + N)",
@@ -3809,6 +4037,7 @@
                 "RE2",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "RE2 / R",
@@ -3824,13 +4053,15 @@
             "acronym": "RVI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "alpha",
                 "RE3",
                 "RE2",
-                "beta",
                 "R",
                 "RE1"
             ],
+            "constants": {
+                "alpha": 0.1,
+                "beta": 0.05
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "(alpha * RE3 + (1 - alpha) * RE2)/(beta * R + (1 - beta) * RE1)",
@@ -3847,9 +4078,11 @@
             "application_domain": "water",
             "bands": [
                 "G",
-                "n",
                 "S1"
             ],
+            "constants": {
+                "n": 5
+            },
             "contributor": "https://github.com/edujusti",
             "date_of_addition": "2026-03-31",
             "formula": "((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)",
@@ -3870,6 +4103,7 @@
                 "RE1",
                 "RE2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1))",
@@ -3888,6 +4122,7 @@
                 "RE1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/MATRIX4284",
             "date_of_addition": "2022-03-06",
             "formula": "(RE1 - S2)/(RE1 + S2)",
@@ -3907,6 +4142,7 @@
                 "R",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(N * (R - S1)) / ((N + R) * (N + S1))",
@@ -3922,11 +4158,13 @@
             "acronym": "SARVI",
             "application_domain": "vegetation",
             "bands": [
-                "L",
                 "N",
                 "R",
                 "B"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
             "formula": "(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
@@ -3942,10 +4180,12 @@
             "acronym": "SAVI",
             "application_domain": "vegetation",
             "bands": [
-                "L",
                 "N",
                 "R"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(1.0 + L) * (N - R) / (N + R + L)",
@@ -3962,10 +4202,12 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "R",
-                "slb",
-                "sla"
+                "R"
             ],
+            "constants": {
+                "sla": 1.0,
+                "slb": 0.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "N / (R + (slb / sla))",
@@ -3981,13 +4223,15 @@
             "acronym": "SAVI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "alpha",
                 "RE3",
                 "RE2",
-                "beta",
                 "R",
                 "RE1"
             ],
+            "constants": {
+                "alpha": 0.1,
+                "beta": 0.05
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "2.0 * ((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1 + 1))",
@@ -4003,11 +4247,13 @@
             "acronym": "SAVIT",
             "application_domain": "burn",
             "bands": [
-                "L",
                 "N",
                 "R",
                 "T"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)",
@@ -4029,6 +4275,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/cmayet",
             "date_of_addition": "2026-03-31",
             "formula": "B + 2.0 * (G - N) - 0.75 * S1 - 0.5 * S2",
@@ -4045,9 +4292,11 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "R",
-                "fdelta"
+                "R"
             ],
+            "constants": {
+                "fdelta": 0.581
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "(N/R) + fdelta * (1.0/R)",
@@ -4067,6 +4316,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)",
@@ -4086,6 +4336,7 @@
                 "A",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
             "formula": "(N - A) / (N - R)",
@@ -4105,6 +4356,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/geoSanjeeb",
             "date_of_addition": "2023-07-03",
             "formula": "N/(R + S2)",
@@ -4120,10 +4372,12 @@
             "acronym": "SNDTI",
             "application_domain": "vegetation",
             "bands": [
-                "L",
                 "S1",
                 "S2"
             ],
+            "constants": {
+                "L": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
             "formula": "(1.0 + L) * (S1 - S2) / (S1 + S2 + L)",
@@ -4139,12 +4393,14 @@
             "acronym": "SNDTI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "gamma",
                 "S1",
                 "S2",
                 "N",
                 "RE3"
             ],
+            "constants": {
+                "gamma": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N + RE3 + 1.0)",
@@ -4163,6 +4419,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "N/R",
@@ -4181,6 +4438,7 @@
                 "N",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "N/G",
@@ -4200,6 +4458,7 @@
                 "G",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "N2/(G * RE1)",
@@ -4218,6 +4477,7 @@
                 "RE2",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "RE2 / G",
@@ -4236,6 +4496,7 @@
                 "RE2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "RE2 / RE1",
@@ -4256,6 +4517,7 @@
                 "G",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/c-chrysostomou",
             "date_of_addition": "2026-05-25",
             "formula": "(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))",
@@ -4276,6 +4538,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/c-chrysostomou",
             "date_of_addition": "2026-05-25",
             "formula": "((G + B) - (N + S1)) / ((G + B) + (N + S1))",
@@ -4294,6 +4557,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
             "formula": "S1 / S2",
@@ -4309,12 +4573,14 @@
             "acronym": "STI4RE",
             "application_domain": "vegetation",
             "bands": [
-                "gamma",
                 "S1",
                 "S2",
                 "N",
                 "RE3"
             ],
+            "constants": {
+                "gamma": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
             "formula": "gamma * S1/S2 + (1 - gamma) * N/RE3",
@@ -4334,6 +4600,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(G * (N - S1)) / ((G + N) * (N + S1))",
@@ -4354,6 +4621,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
             "formula": "(B + G)/(N + S1)",
@@ -4372,6 +4640,7 @@
                 "N2",
                 "RE1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-08",
             "formula": "(N2 - RE1) / (N2 + RE1)",
@@ -4391,6 +4660,7 @@
                 "R",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
             "formula": "3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))",
@@ -4411,6 +4681,7 @@
                 "G",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))",
@@ -4430,6 +4701,7 @@
                 "RE1",
                 "G"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
             "formula": "(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
@@ -4449,6 +4721,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5",
@@ -4467,6 +4740,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
             "formula": "1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))",
@@ -4486,6 +4760,7 @@
                 "G",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "- 0.5 * (190 * (R - G) - 120 * (R - B))",
@@ -4505,6 +4780,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)",
@@ -4520,11 +4796,13 @@
             "acronym": "TSAVI",
             "application_domain": "vegetation",
             "bands": [
-                "sla",
                 "N",
-                "R",
-                "slb"
+                "R"
             ],
+            "constants": {
+                "sla": 1.0,
+                "slb": 0.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb)",
@@ -4544,6 +4822,7 @@
                 "RE2",
                 "N2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))",
@@ -4562,6 +4841,7 @@
                 "N",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(((N - R)/(N + R)) + 0.5) ** 0.5",
@@ -4584,6 +4864,7 @@
                 "B",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2023-02-10",
             "formula": "(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))",
@@ -4603,6 +4884,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "0.5 * (120 * (N - G) - 200 * (R - G))",
@@ -4621,6 +4903,7 @@
                 "S2",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-07",
             "formula": "(S2 - N)/(S2 + N)",
@@ -4640,6 +4923,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(G - R) / (G + R - B)",
@@ -4659,6 +4943,7 @@
                 "R",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)",
@@ -4677,6 +4962,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "(VV + VH)/VV",
@@ -4695,6 +4981,7 @@
                 "VH",
                 "VV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VH - VV",
@@ -4713,6 +5000,7 @@
                 "VH",
                 "VV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VH * VV",
@@ -4731,6 +5019,7 @@
                 "VH",
                 "VV"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VH/VV",
@@ -4749,6 +5038,7 @@
                 "N",
                 "T"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "(N - T/10000.0)/(N + T/10000.0)",
@@ -4767,6 +5057,7 @@
                 "RE1",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(RE1 - R) / (RE1 + R)",
@@ -4786,6 +5077,7 @@
                 "R",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
             "formula": "((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))",
@@ -4804,6 +5096,7 @@
                 "G",
                 "R"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
             "formula": "(G - R) / (G + R)",
@@ -4822,6 +5115,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VV - VH",
@@ -4840,6 +5134,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VV/VH",
@@ -4858,6 +5153,7 @@
                 "VV",
                 "VH"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
             "formula": "VV + VH",
@@ -4876,6 +5172,7 @@
                 "G",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
             "formula": "(G - N)/(G + N)",
@@ -4894,6 +5191,7 @@
                 "R",
                 "N"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
             "formula": "(R - N)/(R + N)",
@@ -4912,10 +5210,12 @@
                 "B",
                 "R",
                 "RE1",
-                "epsilon",
                 "G",
                 "N"
             ],
+            "constants": {
+                "epsilon": 1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
             "formula": "-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon))",
@@ -4935,9 +5235,11 @@
                 "G",
                 "RE1",
                 "R",
-                "epsilon",
                 "N"
             ],
+            "constants": {
+                "epsilon": 1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
             "formula": "-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))",
@@ -4953,10 +5255,12 @@
             "acronym": "WDRVI",
             "application_domain": "vegetation",
             "bands": [
-                "alpha",
                 "N",
                 "R"
             ],
+            "constants": {
+                "alpha": 0.1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "(alpha * N - R) / (alpha * N + R)",
@@ -4973,9 +5277,11 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "sla",
                 "R"
             ],
+            "constants": {
+                "sla": 1.0
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
             "formula": "N - sla * R",
@@ -4994,6 +5300,7 @@
                 "G",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(G - S2) / (G + S2)",
@@ -5012,6 +5319,7 @@
                 "B",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
             "formula": "(B - S2) / (B + S2)",
@@ -5033,6 +5341,7 @@
                 "S1",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
             "formula": "1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2",
@@ -5053,6 +5362,7 @@
                 "N",
                 "S1"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
             "formula": "(G + R)/(N + S1)",
@@ -5071,6 +5381,7 @@
                 "N",
                 "B"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "((N - B)/(N + B)) * N",
@@ -5086,14 +5397,16 @@
             "acronym": "kEVI",
             "application_domain": "kernel",
             "bands": [
-                "g",
                 "kNN",
                 "kNR",
-                "C1",
-                "C2",
                 "kNB",
                 "kNL"
             ],
+            "constants": {
+                "C1": 6.0,
+                "C2": 7.5,
+                "g": 2.5
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
             "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
@@ -5112,6 +5425,7 @@
                 "kNN",
                 "kNR"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "kNN/(kNN + kNR)",
@@ -5130,6 +5444,7 @@
                 "kNN",
                 "kNR"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "(kNN - kNR)/(kNN + kNR)",
@@ -5148,6 +5463,7 @@
                 "kNN",
                 "kNR"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "formula": "kNN / kNR",
@@ -5167,6 +5483,7 @@
                 "kGR",
                 "kGB"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
             "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
@@ -5186,6 +5503,7 @@
                 "RE1",
                 "A"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(RE2 - RE1)/(RE2 + RE1 - A)",
@@ -5204,6 +5522,7 @@
                 "RE2",
                 "A"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "formula": "(RE2 - A)/(RE2 + A)",
@@ -5222,6 +5541,7 @@
                 "N",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "((N - S2)/(N + S2)) * N",
@@ -5238,10 +5558,12 @@
             "application_domain": "vegetation",
             "bands": [
                 "N",
-                "alpha",
                 "R",
                 "S2"
             ],
+            "constants": {
+                "alpha": 0.1
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
@@ -5261,6 +5583,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
@@ -5280,6 +5603,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
             "formula": "(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
@@ -5299,6 +5623,7 @@
                 "R",
                 "S2"
             ],
+            "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2024-05-14",
             "formula": "((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N",

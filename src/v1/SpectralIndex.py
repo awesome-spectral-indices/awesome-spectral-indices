@@ -1,7 +1,7 @@
 import ast
 import re
 from datetime import date
-from typing import List, Literal, Optional
+from typing import Dict, List, Literal, Optional, Union
 from urllib.parse import urlsplit
 
 from pydantic import (
@@ -12,7 +12,7 @@ from pydantic import (
     field_validator,
 )
 
-from src.v1.utils import Bands, IndexType
+from src.v1.utils import Bands, Constants, IndexType
 
 
 class FormulaVisitor(ast.NodeVisitor):
@@ -162,6 +162,7 @@ class SpectralIndex(BaseModel):
     name: str
     formula: str
     bands: Optional[List[str]] = None
+    constants: Optional[Dict[str, Optional[Union[int, float]]]] = None
     application_domain: str
     date_of_addition: date
 
@@ -178,17 +179,20 @@ class SpectralIndex(BaseModel):
     @field_validator("formula")
     @classmethod
     def check_formula(cls, value):
-        """Validate formula syntax and ensure all variables are supported bands."""
+        """Validate formula syntax and ensure every variable is registered."""
         variables = parse_formula_variables(
             value
         )  # obtain band names (e.g. ["R", "G"])
 
-        # check if the variables are in "Bands".
-        if not all(elem in Bands._value2member_map_ for elem in variables):
-            band_names = ", ".join(Bands._value2member_map_.keys())
+        supported_variables = {
+            *Bands._value2member_map_.keys(),
+            *Constants._value2member_map_.keys(),
+        }
+        if not all(variable in supported_variables for variable in variables):
+            variable_names = ", ".join(sorted(supported_variables))
             raise ValueError(
                 "Invalid variables in formula. SpectralIndex only supports the following variables: "
-                + band_names
+                + variable_names
             )
 
         return value

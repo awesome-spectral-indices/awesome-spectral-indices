@@ -74,11 +74,8 @@ def describe_band(name, band_metadata):
     return name
 
 
-def render_bands(variable_names, band_metadata, constant_metadata):
-    """Render the non-constant formula variables as a Markdown list."""
-    band_names = [
-        name for name in variable_names if name not in constant_metadata
-    ]
+def render_bands(band_names, band_metadata):
+    """Render the formula's band and derived-input variables."""
     if not band_names:
         return "No bands are used in this index."
 
@@ -88,19 +85,15 @@ def render_bands(variable_names, band_metadata, constant_metadata):
     )
 
 
-def render_constants(variable_names, constant_metadata):
+def render_constants(constant_defaults, constant_metadata):
     """Render formula constants and their catalogue defaults."""
-    constant_names = [
-        name for name in variable_names if name in constant_metadata
-    ]
-    if not constant_names:
+    if not constant_defaults:
         return "No constants are used in this index."
 
     items = []
-    for name in constant_names:
+    for name, default in constant_defaults.items():
         metadata = constant_metadata[name]
         description = sentence(metadata["description"])
-        default = metadata["default"]
         if default is not None:
             description = f"{description} Default: `{default}`."
         items.append(f"- `{name}`: {description}")
@@ -115,12 +108,8 @@ def render_index_page(
 ):
     """Render one spectral-index page using the NDVI page structure."""
     domain = index["application_domain"].replace("_", " ").title()
-    bands = render_bands(
-        index["bands"],
-        band_metadata,
-        constant_metadata,
-    )
-    constants = render_constants(index["bands"], constant_metadata)
+    bands = render_bands(index["bands"], band_metadata)
+    constants = render_constants(index["constants"], constant_metadata)
 
     return f"""---
 # https://vitepress.dev/reference/default-theme-home-page

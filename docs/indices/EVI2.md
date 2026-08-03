@@ -29,8 +29,8 @@ g * (N - R) / (N + 2.4 * R + L)
 
 ### Constants
 
-- `g`: Gain factor. Default: `2.5`.
 - `L`: Canopy background adjustment. Default: `1.0`.
+- `g`: Gain factor. Default: `2.5`.
 
 ## Contributor
 
