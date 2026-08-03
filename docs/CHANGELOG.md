@@ -50,8 +50,8 @@ submitted through the usual contribution process.
   difference, property meanings, validation rules, generated files, and
   migration status.
 - Added a catalogue status dashboard with interactive summaries of source-link
-  availability and source-type completeness, plus expandable affected-index
-  lists.
+  availability, DOI coverage, and source-type completeness, plus expandable
+  affected-index lists.
 - Added a VitePress content generator that:
   - copies `CONTRIBUTING.md` into the website;
   - reads the generated v1 catalogue and metadata;

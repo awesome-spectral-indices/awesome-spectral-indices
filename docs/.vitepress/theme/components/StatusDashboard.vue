@@ -16,12 +16,18 @@ const indices = Object.entries(catalogue.SpectralIndices)
 
 const totalIndices = indices.length
 const linkDetails = ref(null)
+const doiDetails = ref(null)
 const typeDetails = ref(null)
 
 const downIndices = indices.filter(
   (index) => index.source.source_link_status === 'down'
 )
 const operationalCount = totalIndices - downIndices.length
+
+const nonDoiIndices = indices.filter(
+  (index) => index.source.source_link_type !== 'doi'
+)
+const doiCount = totalIndices - nonDoiIndices.length
 
 const preprintIndices = indices.filter(
   (index) => index.source.source_type === 'preprint'
@@ -44,6 +50,21 @@ const linkSegments = [
     label: 'Down',
     count: downIndices.length,
     className: 'down'
+  }
+]
+
+const doiSegments = [
+  {
+    key: 'doi',
+    label: 'DOI link',
+    count: doiCount,
+    className: 'operational'
+  },
+  {
+    key: 'other',
+    label: 'Other link',
+    count: nonDoiIndices.length,
+    className: 'warning'
   }
 ]
 
@@ -84,6 +105,10 @@ function segmentTitle(segment) {
 
 function openLinkDetails() {
   if (linkDetails.value) linkDetails.value.open = true
+}
+
+function openDoiDetails() {
+  if (doiDetails.value) doiDetails.value.open = true
 }
 
 function openTypeDetails() {
@@ -160,6 +185,73 @@ function indexLink(key) {
         </p>
         <ul v-else class="affected-list">
           <li v-for="index in downIndices" :key="index.key">
+            <a :href="indexLink(index.key)">
+              <strong>{{ index.acronym }}</strong>
+              <span>{{ index.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section class="status-block" aria-labelledby="doi-coverage-heading">
+    <header class="status-header">
+      <div>
+        <h2 id="doi-coverage-heading">DOI Coverage</h2>
+        <p>Use of DOI resolver links for the scientific source of each index.</p>
+      </div>
+      <span class="status-summary" :class="nonDoiIndices.length ? 'warning' : 'operational'">
+        <span class="status-dot" aria-hidden="true"></span>
+        {{ doiCount }} of {{ totalIndices }} use a DOI link
+      </span>
+    </header>
+
+    <div
+      class="status-bar"
+      role="group"
+      aria-label="DOI source-link coverage"
+    >
+      <button
+        v-for="segment in doiSegments"
+        v-show="segment.count"
+        :key="segment.key"
+        type="button"
+        class="status-segment"
+        :class="segment.className"
+        :style="{ width: `${percentage(segment.count)}%` }"
+        :title="segmentTitle(segment)"
+        :aria-label="segmentTitle(segment)"
+        aria-controls="doi-coverage-details"
+        @click="openDoiDetails"
+      ></button>
+    </div>
+
+    <div class="status-legend" aria-label="DOI-coverage legend">
+      <div v-for="segment in doiSegments" :key="segment.key" class="legend-item">
+        <span class="legend-swatch" :class="segment.className" aria-hidden="true"></span>
+        <span>{{ segment.label }}</span>
+        <strong>{{ segment.count }}</strong>
+        <small>{{ percentageLabel(segment.count) }}</small>
+      </div>
+    </div>
+
+    <p class="status-note">
+      Other link means the submitted source does not use a DOI resolver. The
+      publication itself may still have a DOI.
+    </p>
+
+    <details id="doi-coverage-details" ref="doiDetails" class="status-details">
+      <summary>
+        <span>Indices without DOI source links</span>
+        <strong>{{ nonDoiIndices.length }}</strong>
+      </summary>
+      <div class="details-content">
+        <p v-if="!nonDoiIndices.length" class="empty-status">
+          Every index uses a DOI source link.
+        </p>
+        <ul v-else class="affected-list">
+          <li v-for="index in nonDoiIndices" :key="index.key">
             <a :href="indexLink(index.key)">
               <strong>{{ index.acronym }}</strong>
               <span>{{ index.name }}</span>
@@ -350,6 +442,10 @@ function indexLink(key) {
 
 .status-summary.down {
   color: var(--status-down);
+}
+
+.status-summary.warning {
+  color: var(--status-warning);
 }
 
 .status-dot {
