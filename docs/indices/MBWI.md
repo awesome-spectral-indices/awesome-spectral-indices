@@ -32,7 +32,7 @@ hero:
 
 ### Constants
 
-- `omega`: Weighting coefficient used for MBWI. Default: `2.0`.
+- `omega`: Coefficient that maximizes the difference between water and non-water surfaces. Default: `2.0`. Suggested values: For negative index values assigned to water and non-water surfaces: `1.0`; For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result): `5.0`; For positive index values assigned to water surfaces and negative to non-water surfaces: `2.0`.
 
 ## Contributor
 

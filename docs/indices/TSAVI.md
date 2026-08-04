@@ -29,8 +29,8 @@ sla * (N - sla * R - slb) / (sla * N + R - sla * slb)
 
 ### Constants
 
-- `sla`: Soil line slope. Default: `1.0`.
-- `slb`: Soil line intercept. Default: `0.0`.
+- `sla`: Soil line slope. N = sla * R + slb (only for soil pixels/measurements). Default: `1.0`. Suggested values: Equal TSAVI to NDVI when slb is 0.0: `1.0`.
+- `slb`: Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements). Default: `0.0`. Suggested values: Equal TSAVI to NDVI when sla is 1.0: `0.0`.
 
 ## Contributor
 

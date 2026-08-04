@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `epsilon`: Adjustment constant used for EBI, WC1 and WC2. For WCx indices use epsilon = 1e-10. Default: `1`.
+- `epsilon`: Adjustment constant. Default: `1.0`. Suggested values: For raw RGB values in [0,255]: `256`; For reflectances in [0,1]: `1.0`.
 
 ## Contributor
 

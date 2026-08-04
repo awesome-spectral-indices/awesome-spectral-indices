@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `fdelta`: Adjustment factor used for SEVI. Default: `0.581`.
+- `fdelta`: Adjustment factor to avoid under-elimination or over-elimination. Default: `0.581`.
 
 ## Contributor
 

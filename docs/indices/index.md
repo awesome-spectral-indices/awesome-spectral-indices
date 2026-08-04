@@ -52,7 +52,8 @@ const advanced = reactive({
   sourceType: '',
   dateOfAddition: '',
   bands: [],
-  constants: []
+  constants: [],
+  externalVariables: []
 })
 
 const normalize = (value) => String(value ?? '').toLocaleLowerCase()
@@ -64,6 +65,10 @@ const allBands = [...new Set(indices.flatMap((index) => index.bands))]
 
 const allConstants = [
   ...new Set(indices.flatMap((index) => Object.keys(index.constants)))
+].sort((left, right) => left.localeCompare(right))
+
+const allExternalVariables = [
+  ...new Set(indices.flatMap((index) => Object.keys(index.external_variables)))
 ].sort((left, right) => left.localeCompare(right))
 
 const filteredIndices = computed(() => {
@@ -121,6 +126,13 @@ const filteredIndices = computed(() => {
     ) {
       return false
     }
+    if (
+      !advanced.externalVariables.every(
+        (externalVariable) => externalVariable in index.external_variables
+      )
+    ) {
+      return false
+    }
 
     return true
   })
@@ -151,6 +163,7 @@ function clearFilters() {
   advanced.dateOfAddition = ''
   advanced.bands = []
   advanced.constants = []
+  advanced.externalVariables = []
 }
 
 function indexLink(key) {
@@ -282,6 +295,24 @@ formula variables.
         >
           <input v-model="advanced.constants" type="checkbox" :value="constant">
           <code>{{ constant }}</code>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="band-filter">
+      <legend>Includes all selected external variables</legend>
+      <div class="band-options">
+        <label
+          v-for="externalVariable in allExternalVariables"
+          :key="externalVariable"
+          class="band-option"
+          :class="{ selected: advanced.externalVariables.includes(externalVariable) }"
+        >
+          <input
+            v-model="advanced.externalVariables"
+            type="checkbox"
+            :value="externalVariable"
+          >
+          <code>{{ externalVariable }}</code>
         </label>
       </div>
     </fieldset>

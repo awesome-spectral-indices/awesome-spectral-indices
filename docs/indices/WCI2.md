@@ -32,7 +32,7 @@ hero:
 
 ### Constants
 
-- `epsilon`: Adjustment constant used for EBI, WC1 and WC2. For WCx indices use epsilon = 1e-10. Default: `1`.
+- `epsilon`: Adjustment constant for numerical stability. Default: `1e-10`.
 
 ## Contributor
 

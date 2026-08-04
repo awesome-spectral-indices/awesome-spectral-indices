@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `gamma`: Weighting coefficient used for ARVI. Default: `1.0`.
+- `gamma`: Correction coefficient for upward atmospheric path radiance reaching the satellite. Default: `1.0`. Suggested range: `0.65`–`1.21`.
 
 ## Contributor
 

@@ -31,8 +31,8 @@ hero:
 
 ### Constants
 
-- `eta`: Mix of green and red reflectances in GRARI. Default: `0.5`.
-- `lmb`: Parameter that controls the atmospheric correction in GRARI. Default: `1`.
+- `eta`: Mix of green and red reflectances to get properties that are between ARVI and GARI. Default: `0.5`.
+- `lmb`: Parameter that controls the atmospheric correction. Default: `1.0`.
 
 ## Contributor
 

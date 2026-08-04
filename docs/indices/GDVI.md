@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))
+((N ** n) - (R ** n)) / ((N ** n) + (R ** n))
 ```
 
 ### Bands
@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `nexp`: Exponent used for GDVI. Default: `2.0`.
+- `n`: Power operation exponent to amplify the dynamic range. Default: `2.0`. Suggested values: Equal GDVI to NDVI: `1.0`; Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land: `2.0`; Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land: `3.0`; Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land: `3.0`.
 
 ## Contributor
 

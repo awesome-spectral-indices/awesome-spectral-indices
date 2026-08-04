@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `1.0`.
+- `L`: Soil adjustment factor. Default: `0.6`. Suggested range: `0.0`–`1.0`. Suggested values: Increased litter mass: `0.0`; Low litter mass: `1.0`.
 
 ## Contributor
 

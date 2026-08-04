@@ -32,7 +32,7 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `1.0`.
+- `L`: Canopy background adjustment. Default: `0.5`. Suggested range: `0.0`–`1.0`. Suggested values: High density vegetation: `1.0`; Low density vegetation: `0.0`; Medium density vegetation: `1.0`.
 
 ## Contributor
 

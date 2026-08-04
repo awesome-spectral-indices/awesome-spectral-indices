@@ -10,9 +10,8 @@ import pandas as pd
 
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.bands import bands
-from src.v1.constants import constants
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants
+from src.v1.utils import Bands, Constants, External
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +26,7 @@ TABLE_COLUMNS = [
     "formula",
     "bands",
     "constants",
+    "external_variables",
     "source",
     "contributor",
     "date_of_addition",
@@ -67,23 +67,41 @@ def check_source_link(source_link, timeout=SOURCE_CHECK_TIMEOUT):
 
 
 def add_formula_metadata(index_catalog):
-    """Populate each index with its bands and constant defaults."""
+    """Populate generated bands and normalize authored formula metadata."""
     band_names = set(Bands._value2member_map_)
-    constant_names = set(Constants._value2member_map_)
 
     for key, spectral_index in index_catalog.SpectralIndices.items():
         variables = parse_formula_variables(spectral_index.formula)
         spectral_index.bands = [
             variable for variable in variables if variable in band_names
         ]
-        spectral_index.constants = {
-            variable: constants[variable]["default"]
-            for variable in variables
-            if variable in constant_names
-        }
+        spectral_index.constants = spectral_index.constants or {}
+        spectral_index.external_variables = spectral_index.external_variables or {}
         index_catalog.SpectralIndices[key] = spectral_index
 
     return index_catalog
+
+
+def build_constants_metadata(index_catalog):
+    """Group contributor-provided constant definitions by constant and index."""
+    metadata = {constant.value: {} for constant in Constants}
+
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        for name, definition in (spectral_index.constants or {}).items():
+            metadata[name][key] = definition.model_dump(mode="json")
+
+    return metadata
+
+
+def build_external_variables_metadata(index_catalog):
+    """Group contributor-provided external descriptions by variable and index."""
+    metadata = {external.value: {} for external in External}
+
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        for name, definition in (spectral_index.external_variables or {}).items():
+            metadata[name][key] = definition.model_dump(mode="json")
+
+    return metadata
 
 
 def add_source_metadata(index_catalog, checker=check_source_link):
@@ -112,7 +130,7 @@ def add_source_metadata(index_catalog, checker=check_source_link):
 
 
 def write_json_outputs(index_catalog):
-    """Write the v1 catalogue, band metadata, and constants metadata as JSON."""
+    """Write the v1 catalogue and its variable metadata as JSON."""
     with SPECTRAL_INDICES_JSON.open("w") as fp:
         json.dump(
             index_catalog.model_dump(mode="json"),
@@ -125,7 +143,20 @@ def write_json_outputs(index_catalog):
         json.dump(bands, fp, indent=4, sort_keys=True)
 
     with (OUTPUT_DIR / "constants.json").open("w") as fp:
-        json.dump(constants, fp, indent=4, sort_keys=True)
+        json.dump(
+            build_constants_metadata(index_catalog),
+            fp,
+            indent=4,
+            sort_keys=True,
+        )
+
+    with (OUTPUT_DIR / "external_variables.json").open("w") as fp:
+        json.dump(
+            build_external_variables_metadata(index_catalog),
+            fp,
+            indent=4,
+            sort_keys=True,
+        )
 
 
 def build_indices_dataframe(path=SPECTRAL_INDICES_JSON):

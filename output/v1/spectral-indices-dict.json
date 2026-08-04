@@ -10,6 +10,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-17",
+            "external_variables": {},
             "formula": "(N - 0.66 * S1) / (N + 0.66 * S1)",
             "name": "Aerosol Free Vegetation Index (1600 nm)",
             "source": {
@@ -29,6 +30,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-17",
+            "external_variables": {},
             "formula": "(N - 0.5 * S2) / (N + 0.5 * S2)",
             "name": "Aerosol Free Vegetation Index (2100 nm)",
             "source": {
@@ -52,6 +54,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)",
             "name": "Augmented Normalized Difference Water Index",
             "source": {
@@ -71,6 +74,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(1 / G) - (1 / RE1)",
             "name": "Anthocyanin Reflectance Index",
             "source": {
@@ -91,6 +95,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "N * ((1 / G) - (1 / RE1))",
             "name": "Anthocyanin Reflectance Index 2",
             "source": {
@@ -109,10 +114,28 @@
                 "B"
             ],
             "constants": {
-                "gamma": 1.0
+                "gamma": {
+                    "default_value": 1.0,
+                    "description": "Weighting coefficient used for reducing atmospheric effects",
+                    "suggested_range": [
+                        0.0,
+                        2.0
+                    ],
+                    "suggested_values": {
+                        "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                        "Equal ARVI to NDVI": 0.0,
+                        "Lowest sensitivity for dense forests": [
+                            1.0,
+                            2.0
+                        ],
+                        "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                        "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
+            "external_variables": {},
             "formula": "(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
             "name": "Atmospherically Resistant Vegetation Index",
             "source": {
@@ -130,12 +153,23 @@
                 "R"
             ],
             "constants": {
-                "sla": 1.0,
-                "slb": 0.0
+                "X": {
+                    "default_value": 0.08,
+                    "description": "Negative abscissa of a reference point located on the soil line"
+                },
+                "sla": {
+                    "default_value": 1.0,
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)"
+                },
+                "slb": {
+                    "default_value": 0.0,
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
-            "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))",
+            "external_variables": {},
+            "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))",
             "name": "Adjusted Transformed Soil-Adjusted Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.1016/0034-4257(91)90009-U",
@@ -154,6 +188,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(N * (1.0 - R) * (N - R)) ** (1/3)",
             "name": "Advanced Vegetation Index",
             "source": {
@@ -175,6 +210,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "4.0 * (G - S1) - 0.25 * N + 2.75 * S2",
             "name": "Automated Water Extraction Index",
             "source": {
@@ -197,6 +233,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2",
             "name": "Automated Water Extraction Index with Shadows Elimination",
             "source": {
@@ -216,6 +253,7 @@
             "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2026-07-04",
+            "external_variables": {},
             "formula": "2.0 * N2 - R",
             "name": "Ashburn Vegetation Index",
             "source": {
@@ -235,6 +273,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)",
             "name": "Burned Area Index",
             "source": {
@@ -254,6 +293,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
+            "external_variables": {},
             "formula": "1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)",
             "name": "Burned Area Index adapted to MODIS",
             "source": {
@@ -276,6 +316,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0)",
             "name": "Burned Area Index for Sentinel 2",
             "source": {
@@ -296,6 +337,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "B / (R + G + B)",
             "name": "Blue Chromatic Coordinate",
             "source": {
@@ -317,6 +359,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "((S1 + R) - (N + B))/((S1 + R) + (N + B))",
             "name": "Bare Soil Index",
             "source": {
@@ -337,6 +380,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-11-20",
+            "external_variables": {},
             "formula": "(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5",
             "name": "Landsat TM-based Brightness Index",
             "source": {
@@ -356,6 +400,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-11-20",
+            "external_variables": {},
             "formula": "(((G**2.0)+(R**2.0))/2.0)**0.5",
             "name": "SPOT HRV XS-based Brightness Index",
             "source": {
@@ -377,6 +422,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
+            "external_variables": {},
             "formula": "(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)",
             "name": "Built-Up Land Features Extraction Index",
             "source": {
@@ -396,6 +442,7 @@
             "constants": {},
             "contributor": "https://github.com/MATRIX4284",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - B)/(N + B)",
             "name": "Blue Normalized Difference Vegetation Index",
             "source": {
@@ -415,6 +462,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "R/S1",
             "name": "Band Ratio for Built-up Area",
             "source": {
@@ -432,10 +480,19 @@
                 "B"
             ],
             "constants": {
-                "alpha": 0.1
+                "alpha": {
+                    "default_value": 0.01,
+                    "description": "NIR reflectance scalar",
+                    "suggested_values": {
+                        "Dense biomass/High yield": 0.01,
+                        "Low-to-moderate biomass": 0.1,
+                        "Moderate biomass": 0.05
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(alpha * N - B) / (alpha * N + B)",
             "name": "Blue Wide Dynamic Range Vegetation Index",
             "source": {
@@ -456,6 +513,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "R + S1 - N",
             "name": "Bareness Index",
             "source": {
@@ -475,6 +533,7 @@
             "constants": {},
             "contributor": "https://github.com/joanvlasschaert",
             "date_of_addition": "2023-03-12",
+            "external_variables": {},
             "formula": "(G1 - R)/(G1 + R)",
             "name": "Chlorophyll Carotenoid Index",
             "source": {
@@ -497,6 +556,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(N + 2.0 * S1) / (B + G + R)",
             "name": "Cloud Index Form 1 with SWIR 1",
             "source": {
@@ -518,6 +578,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(3.0 * N) / (B + G + R)",
             "name": "Cloud Index Form 1 without SWIR bands",
             "source": {
@@ -541,6 +602,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(B + G + R + N + S1 + S2) / 6.0",
             "name": "Cloud Index Form 2 with SWIR bands",
             "source": {
@@ -562,6 +624,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(B + G + R + N) / 4.0",
             "name": "Cloud Index Form 2 without SWIR bands",
             "source": {
@@ -581,6 +644,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N / G) - 1.0",
             "name": "Chlorophyll Index Green",
             "source": {
@@ -600,6 +664,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "(N / RE1) - 1",
             "name": "Chlorophyll Index Red Edge",
             "source": {
@@ -619,6 +684,7 @@
             "constants": {},
             "contributor": "https://github.com/atca1977",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)",
             "name": "Cloud Shadow Detection Index",
             "source": {
@@ -638,6 +704,7 @@
             "constants": {},
             "contributor": "https://github.com/eomasters-repos",
             "date_of_addition": "2024-08-08",
+            "external_variables": {},
             "formula": "(1.0 / B) - (1.0 / G)",
             "name": "Carotenoid Reflectance Index using 550 nm",
             "source": {
@@ -657,6 +724,7 @@
             "constants": {},
             "contributor": "https://github.com/eomasters-repos",
             "date_of_addition": "2024-08-08",
+            "external_variables": {},
             "formula": "(1.0 / B) - (1.0 / RE1)",
             "name": "Carotenoid Reflectance Index using 700 nm",
             "source": {
@@ -675,12 +743,19 @@
                 "S2"
             ],
             "constants": {
-                "lambdaN2": null,
-                "lambdaS1": null,
-                "lambdaS2": null
+                "lambdaN2": {
+                    "description": "NIR2 central wavelength (nm)"
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)"
+                },
+                "lambdaS2": {
+                    "description": "SWIR2 central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/kenoz",
             "date_of_addition": "2025-06-23",
+            "external_variables": {},
             "formula": "S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
             "name": "Continuum Removal SWIR",
             "source": {
@@ -700,6 +775,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "N/S2",
             "name": "Char Soil Index",
             "source": {
@@ -719,6 +795,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "(N + S1) / 2.0",
             "name": "Cloud Shadow Index with SWIR 1",
             "source": {
@@ -739,6 +816,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "N / (S2 * T / 10000.0)",
             "name": "Char Soil Index Thermal",
             "source": {
@@ -757,6 +835,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-03-30",
+            "external_variables": {},
             "formula": "N",
             "name": "Cloud Shadow Index without SWIR bands",
             "source": {
@@ -777,6 +856,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N * R) / (G ** 2.0)",
             "name": "Chlorophyll Vegetation Index",
             "source": {
@@ -798,6 +878,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
             "name": "Dry Built-Up Index",
             "source": {
@@ -819,6 +900,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "((S1 - G)/(S1 + G)) - ((N - R)/(N + R))",
             "name": "Dry Bareness Index",
             "source": {
@@ -838,6 +920,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "(VV + VH)/2.0 ** 0.5",
             "name": "Dual-Pol Diagonal Distance",
             "source": {
@@ -857,6 +940,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
+            "external_variables": {},
             "formula": "S1/N",
             "name": "Drought Stress Index",
             "source": {
@@ -876,6 +960,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
+            "external_variables": {},
             "formula": "N/S1",
             "name": "Disease-Water Stress Index 1",
             "source": {
@@ -895,6 +980,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
+            "external_variables": {},
             "formula": "S1/G",
             "name": "Disease-Water Stress Index 2",
             "source": {
@@ -914,6 +1000,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
+            "external_variables": {},
             "formula": "S1/R",
             "name": "Disease-Water Stress Index 3",
             "source": {
@@ -933,6 +1020,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-29",
+            "external_variables": {},
             "formula": "G/R",
             "name": "Disease-Water Stress Index 4",
             "source": {
@@ -954,6 +1042,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
+            "external_variables": {},
             "formula": "(N + G)/(S1 + R)",
             "name": "Disease-Water Stress Index 5",
             "source": {
@@ -973,6 +1062,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "N - R",
             "name": "Difference Vegetation Index",
             "source": {
@@ -991,12 +1081,19 @@
                 "R"
             ],
             "constants": {
-                "lambdaG": null,
-                "lambdaN": null,
-                "lambdaR": null
+                "lambdaG": {
+                    "description": "Green central wavelength (nm)"
+                },
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)"
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
+            "external_variables": {},
             "formula": "((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R",
             "name": "Difference Vegetation Index Plus",
             "source": {
@@ -1016,6 +1113,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
+            "external_variables": {},
             "formula": "(4.0 * HV)/(HH + HV)",
             "name": "Dual-Polarized Radar Vegetation Index HH",
             "source": {
@@ -1035,6 +1133,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
+            "external_variables": {},
             "formula": "(4.0 * VH)/(VV + VH)",
             "name": "Dual-Polarized Radar Vegetation Index VV",
             "source": {
@@ -1055,6 +1154,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "(S1 - N) / (10.0 * ((S1 + T) ** 0.5))",
             "name": "Enhanced Built-Up and Bareness Index",
             "source": {
@@ -1073,10 +1173,18 @@
                 "B"
             ],
             "constants": {
-                "epsilon": 1
+                "epsilon": {
+                    "default_value": 1.0,
+                    "description": "Adjustment constant",
+                    "suggested_values": {
+                        "For raw RGB values in [0,255]": 256,
+                        "For reflectances in [0,1]": 1.0
+                    }
+                }
             },
             "contributor": "https://github.com/geoSanjeeb",
             "date_of_addition": "2023-07-03",
+            "external_variables": {},
             "formula": "(R + G + B)/((G/B) * (R - B + epsilon))",
             "name": "Enhanced Bloom Index",
             "source": {
@@ -1098,6 +1206,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)",
             "name": "Enhanced Modified Bare Soil Index",
             "source": {
@@ -1118,6 +1227,7 @@
             "constants": {},
             "contributor": "https://github.com/gagev",
             "date_of_addition": "2024-04-08",
+            "external_variables": {},
             "formula": "((N + G) - (2 * B)) / ((N + G) + (2 * B))",
             "name": "Enhanced Normalized Difference Vegetation Index",
             "source": {
@@ -1136,17 +1246,30 @@
                 "B"
             ],
             "constants": {
-                "C1": 6.0,
-                "C2": 7.5,
-                "L": 1.0,
-                "g": 2.5
+                "C1": {
+                    "default_value": 6.0,
+                    "description": "Coefficient 1 for the aerosol resistance term"
+                },
+                "C2": {
+                    "default_value": 7.5,
+                    "description": "Coefficient 2 for the aerosol resistance term"
+                },
+                "L": {
+                    "default_value": 1.0,
+                    "description": "Canopy background adjustment"
+                },
+                "g": {
+                    "default_value": 2.5,
+                    "description": "Gain factor"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
             "name": "Enhanced Vegetation Index",
             "source": {
-                "source_link": "https://doi.org/10.1016/S0034-4257(96)00112-5",
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00096-2",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": "article"
@@ -1160,18 +1283,37 @@
                 "R"
             ],
             "constants": {
-                "L": 1.0,
-                "g": 2.5
+                "C1": {
+                    "default_value": 6.0,
+                    "description": "Coefficient 1 for the aerosol resistance term"
+                },
+                "C2": {
+                    "default_value": 7.5,
+                    "description": "Coefficient 2 for the aerosol resistance term"
+                },
+                "L": {
+                    "default_value": 1.0,
+                    "description": "Canopy background adjustment"
+                },
+                "c": {
+                    "default_value": 2.08,
+                    "description": "Ratio of red to blue reflectances. Red = c * Blue"
+                },
+                "g": {
+                    "default_value": 2.5,
+                    "description": "Gain factor"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
-            "formula": "g * (N - R) / (N + 2.4 * R + L)",
+            "external_variables": {},
+            "formula": "g * (N - R) / (N + (C1 - (C2 / c)) * R + L)",
             "name": "Two-Band Enhanced Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.1016/j.rse.2008.06.006",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
-                "source_type": null
+                "source_type": "article"
             }
         },
         "EVIv": {
@@ -1185,6 +1327,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N",
             "name": "Enhanced Vegetation Index of Vegetation",
             "source": {
@@ -1205,6 +1348,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "2 * G - R - B",
             "name": "Excess Green Index",
             "source": {
@@ -1225,6 +1369,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(2.0 * G - R - B) - (1.3 * R - G)",
             "name": "ExG - ExR Vegetation Index",
             "source": {
@@ -1244,6 +1389,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "1.3 * R - G",
             "name": "Excess Red Index",
             "source": {
@@ -1262,12 +1408,19 @@
                 "S1"
             ],
             "constants": {
-                "lambdaN": null,
-                "lambdaR": null,
-                "lambdaS1": null
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)"
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)"
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
+            "external_variables": {},
             "formula": "N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
             "name": "Floating Algae Index",
             "source": {
@@ -1289,6 +1442,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
+            "external_variables": {},
             "formula": "N - ((R + G + B)/3.0)",
             "name": "Fluorescence Correction Vegetation Index",
             "source": {
@@ -1307,12 +1461,19 @@
                 "S1"
             ],
             "constants": {
-                "lambdaN": null,
-                "lambdaR": null,
-                "lambdaS1": null
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)"
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)"
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/guillemc23",
             "date_of_addition": "2025-07-18",
+            "external_variables": {},
             "formula": "N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
             "name": "Floating Debris Index",
             "source": {
@@ -1334,6 +1495,7 @@
             "constants": {},
             "contributor": "https://github.com/kalab-oto",
             "date_of_addition": "2025-04-15",
+            "external_variables": {},
             "formula": "(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)",
             "name": "Flood/Water Extraction Index",
             "source": {
@@ -1352,10 +1514,16 @@
                 "B",
                 "R"
             ],
-            "constants": {},
+            "constants": {
+                "lmb": {
+                    "default_value": 1.0,
+                    "description": "Parameter that controls the atmospheric correction"
+                }
+            },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
-            "formula": "(N - (G - (B - R))) / (N + (G - (B - R)))",
+            "external_variables": {},
+            "formula": "(N - (G - lmb * (B - R))) / (N + (G - lmb * (B - R)))",
             "name": "Green Atmospherically Resistant Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.1016/S0034-4257(96)00072-7",
@@ -1375,6 +1543,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - (G + B))/(N + (G + B))",
             "name": "Green-Blue Normalized Difference Vegetation Index",
             "source": {
@@ -1395,6 +1564,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "G / (R + G + B)",
             "name": "Green Chromatic Coordinate",
             "source": {
@@ -1412,11 +1582,21 @@
                 "R"
             ],
             "constants": {
-                "nexp": 2.0
+                "n": {
+                    "default_value": 2.0,
+                    "description": "Power operation exponent to amplify the dynamic range",
+                    "suggested_values": {
+                        "Equal GDVI to NDVI": 1.0,
+                        "Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land": 2.0,
+                        "Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land": 3.0,
+                        "Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land": 3.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
-            "formula": "((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))",
+            "external_variables": {},
+            "formula": "((N ** n) - (R ** n)) / ((N ** n) + (R ** n))",
             "name": "Generalized Difference Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.3390/rs6021211",
@@ -1435,6 +1615,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))",
             "name": "Global Environment Monitoring Index",
             "source": {
@@ -1455,6 +1636,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
             "name": "Green Leaf Index",
             "source": {
@@ -1474,6 +1656,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "RE2/G",
             "name": "Gitelson and Merzlyak Index 1",
             "source": {
@@ -1493,6 +1676,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "RE2/RE1",
             "name": "Gitelson and Merzlyak Index 2",
             "source": {
@@ -1512,6 +1696,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - G)/(N + G)",
             "name": "Green Normalized Difference Vegetation Index",
             "source": {
@@ -1531,6 +1716,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(N - G) / (N + G + 0.16)",
             "name": "Green Optimized Soil Adjusted Vegetation Index",
             "source": {
@@ -1550,11 +1736,18 @@
                 "B"
             ],
             "constants": {
-                "eta": 0.5,
-                "lmb": 1
+                "eta": {
+                    "default_value": 0.5,
+                    "description": "Mix of green and red reflectances to get properties that are between ARVI and GARI"
+                },
+                "lmb": {
+                    "default_value": 1.0,
+                    "description": "Parameter that controls the atmospheric correction"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-07-22",
+            "external_variables": {},
             "formula": "(N - (eta * G + (1.0 - eta) * R - lmb * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lmb * (B - R)))",
             "name": "Atmospheric Resistant Green-Red Index",
             "source": {
@@ -1575,6 +1768,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - (G + R))/(N + (G + R))",
             "name": "Green-Red Normalized Difference Vegetation Index",
             "source": {
@@ -1594,6 +1788,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "N/G",
             "name": "Green Ratio Vegetation Index",
             "source": {
@@ -1611,10 +1806,14 @@
                 "G"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(1.0 + L) * (N - G) / (N + G + L)",
             "name": "Green Soil Adjusted Vegetation Index",
             "source": {
@@ -1634,6 +1833,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))",
             "name": "Global Vegetation Moisture Index",
             "source": {
@@ -1652,10 +1852,18 @@
                 "B"
             ],
             "constants": {
-                "gamma": 1.0
+                "gamma": {
+                    "default_value": 1.0,
+                    "description": "Correction coefficient for upward atmospheric path radiance reaching the satellite",
+                    "suggested_range": [
+                        0.65,
+                        1.21
+                    ]
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))",
             "name": "New Atmospherically Resistant Vegetation Index",
             "source": {
@@ -1675,10 +1883,14 @@
                 "G"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
+            "external_variables": {},
             "formula": "(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)",
             "name": "Index-Based Built-Up Index",
             "source": {
@@ -1698,6 +1910,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(R - B)/(R + B)",
             "name": "Kawashima Index",
             "source": {
@@ -1717,6 +1930,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "N/(N + R)",
             "name": "Infrared Percentage Vegetation Index",
             "source": {
@@ -1738,6 +1952,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "(RE3 - R) / (RE1 / RE2)",
             "name": "Inverted Red-Edge Chlorophyll Index",
             "source": {
@@ -1758,6 +1973,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-07-11",
+            "external_variables": {},
             "formula": "(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))",
             "name": "Improved-Red-Green-Blue Vegetation Index",
             "source": {
@@ -1779,6 +1995,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
+            "external_variables": {},
             "formula": "((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N))",
             "name": "Kochia Detection Index",
             "source": {
@@ -1798,6 +2015,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
+            "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Land Surface Water Index",
             "source": {
@@ -1818,6 +2036,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "((S1 - S2 - N)/(S1 + S2 + N)) + 0.5",
             "name": "Modified Bare Soil Index",
             "source": {
@@ -1838,10 +2057,19 @@
                 "S2"
             ],
             "constants": {
-                "omega": 2.0
+                "omega": {
+                    "default_value": 2.0,
+                    "description": "Coefficient that maximizes the difference between water and non-water surfaces",
+                    "suggested_values": {
+                        "For negative index values assigned to water and non-water surfaces": 1.0,
+                        "For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result)": 5.0,
+                        "For positive index values assigned to water surfaces and negative to non-water surfaces": 2.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "(omega * G) - R - N - S1 - S2",
             "name": "Multi-Band Water Index",
             "source": {
@@ -1862,6 +2090,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index",
             "source": {
@@ -1882,6 +2111,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "1.2 * (2.5 * (N - R) - 1.3 * (N - G))",
             "name": "Modified Chlorophyll Absorption in Reflectance Index 1",
             "source": {
@@ -1902,6 +2132,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(1.5 * (2.5 * (N - R) - 1.3 * (N - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index 2",
             "source": {
@@ -1922,6 +2153,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)",
             "source": {
@@ -1943,6 +2175,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))",
             "name": "MCARI/OSAVI Ratio",
             "source": {
@@ -1963,6 +2196,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
             "name": "MCARI/OSAVI Ratio (705 and 750 nm)",
             "source": {
@@ -1982,6 +2216,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)",
             "name": "Modified Green Red Vegetation Index",
             "source": {
@@ -2001,6 +2236,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-07-11",
+            "external_variables": {},
             "formula": "(N - S1) / (N * S1)",
             "name": "Mangrove Index",
             "source": {
@@ -2020,6 +2256,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "10.0 * S2 - 9.8 * S1 + 2.0",
             "name": "Mid-Infrared Burn Index",
             "source": {
@@ -2039,6 +2276,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
+            "external_variables": {},
             "formula": "(1.0 - N - S1)/(1.0 - N + S1)",
             "name": "Modified Land Surface Water Index (MODIS Bands 2 and 6)",
             "source": {
@@ -2058,6 +2296,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
+            "external_variables": {},
             "formula": "(1.0 - N - S2)/(1.0 - N + S2)",
             "name": "Modified Land Surface Water Index (MODIS Bands 2 and 7)",
             "source": {
@@ -2077,6 +2316,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - S2)/(N + S2)",
             "name": "Modified Normalized Difference Vegetation Index",
             "source": {
@@ -2096,6 +2336,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(G - S1) / (G + S1)",
             "name": "Modified Normalized Difference Water Index",
             "source": {
@@ -2113,10 +2354,14 @@
                 "R"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
+            "external_variables": {},
             "formula": "(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)",
             "name": "Modified Non-Linear Vegetation Index",
             "source": {
@@ -2136,6 +2381,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)",
             "name": "Modified Red Blue Vegetation Index",
             "source": {
@@ -2155,6 +2401,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)",
             "name": "Modified Soil-Adjusted Vegetation Index",
             "source": {
@@ -2174,6 +2421,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "S1/N",
             "name": "Moisture Stress Index",
             "source": {
@@ -2193,6 +2441,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(N / R - 1) / ((N / R + 1) ** 0.5)",
             "name": "Modified Simple Ratio",
             "source": {
@@ -2212,6 +2461,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)",
             "name": "Modified Simple Ratio (705 and 750 nm)",
             "source": {
@@ -2232,6 +2482,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "(RE2 - RE1) / (RE1 - R)",
             "name": "MERIS Terrestrial Chlorophyll Index",
             "source": {
@@ -2252,6 +2503,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "1.2 * (1.2 * (N - G) - 2.5 * (R - G))",
             "name": "Modified Triangular Vegetation Index 1",
             "source": {
@@ -2272,6 +2524,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
             "name": "Modified Triangular Vegetation Index 2",
             "source": {
@@ -2292,6 +2545,7 @@
             "constants": {},
             "contributor": "https://github.com/delatorredm",
             "date_of_addition": "2025-04-08",
+            "external_variables": {},
             "formula": "(N - G) / (S1 - G)",
             "name": "Mangrove Vegetation Index",
             "source": {
@@ -2314,6 +2568,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))",
             "name": "Revised Multi-Spectral Water Index",
             "source": {
@@ -2334,6 +2589,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(S2 - S1/G)/(S2 + S1/G)",
             "name": "Normalized Built-up Area Index",
             "source": {
@@ -2353,6 +2609,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(R - T)/(R + T)",
             "name": "Normalized Difference Bare Land Index",
             "source": {
@@ -2372,6 +2629,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2023-03-12",
+            "external_variables": {},
             "formula": "(R - T1)/(R + T1)",
             "name": "Normalized Difference Bare Land Index for Landsat-OLI",
             "source": {
@@ -2391,6 +2649,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - S2) / (N + S2)",
             "name": "Normalized Burn Ratio",
             "source": {
@@ -2410,6 +2669,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(S1 - S2) / (S1 + S2)",
             "name": "Normalized Burn Ratio 2",
             "source": {
@@ -2429,6 +2689,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(S2 - S1 - 0.02)/(S2 + S1 + 0.1)",
             "name": "Normalized Burn Ratio SWIR",
             "source": {
@@ -2449,6 +2710,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - (S2 * T / 10000.0)) / (N + (S2 * T / 10000.0))",
             "name": "Normalized Burn Ratio Thermal 1",
             "source": {
@@ -2469,6 +2731,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "((N / (T / 10000.0)) - S2) / ((N / (T / 10000.0)) + S2)",
             "name": "Normalized Burn Ratio Thermal 2",
             "source": {
@@ -2489,6 +2752,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "((N - (T / 10000.0)) - S2) / ((N - (T / 10000.0)) + S2)",
             "name": "Normalized Burn Ratio Thermal 3",
             "source": {
@@ -2510,6 +2774,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(S2 - N2 - G - B)/(S2 + N2 + G + B)",
             "name": "Normalized Burn Ratio Plus",
             "source": {
@@ -2533,6 +2798,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "0.36 * (G + R + N) - (((B + S2)/G) + S1)",
             "name": "Non-Binary Snow Index for Multi-Component Surfaces",
             "source": {
@@ -2553,10 +2819,23 @@
                 "G"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "High density vegetation": 1.0,
+                        "Low density vegetation": 0.0,
+                        "Medium density vegetation": 1.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "((S1 - N)/(10.0 * (T + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
             "name": "New Built-Up Index",
             "source": {
@@ -2576,6 +2855,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
             "name": "Normalized Difference (705 and 750 nm)",
             "source": {
@@ -2595,6 +2875,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(S1 - N) / (S1 + N)",
             "name": "Normalized Difference Built-Up Index",
             "source": {
@@ -2614,6 +2895,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "(S1 - T) / (S1 + T)",
             "name": "Normalized Difference Bareness Index",
             "source": {
@@ -2633,6 +2915,7 @@
             "constants": {},
             "contributor": "https://github.com/kalab-oto",
             "date_of_addition": "2022-10-10",
+            "external_variables": {},
             "formula": "(RE1 - R)/(RE1 + R)",
             "name": "Normalized Difference Chlorophyll Index",
             "source": {
@@ -2653,6 +2936,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))",
             "name": "Normalized Difference Drought Index",
             "source": {
@@ -2671,12 +2955,19 @@
                 "R"
             ],
             "constants": {
-                "lambdaG": null,
-                "lambdaN": null,
-                "lambdaR": null
+                "lambdaG": {
+                    "description": "Green central wavelength (nm)"
+                },
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)"
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
+            "external_variables": {},
             "formula": "(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)",
             "name": "Normalized Difference Greenness Index",
             "source": {
@@ -2696,6 +2987,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(G - R)/(G + R)",
             "name": "Normalized Difference Glacier Index",
             "source": {
@@ -2715,6 +3007,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
+            "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference Infrared Index",
             "source": {
@@ -2736,6 +3029,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(T - (B + N + S1) / 3.0)/(T + (B + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Blue",
             "source": {
@@ -2757,6 +3051,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(T - (G + N + S1) / 3.0)/(T + (G + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Green",
             "source": {
@@ -2778,6 +3073,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(T - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index with MNDWI",
             "source": {
@@ -2799,6 +3095,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(T - (((G - N)/(G + N)) + N + S1) / 3.0)/(T + (((G - N)/(G + N)) + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index with NDWI",
             "source": {
@@ -2820,6 +3117,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(T - (R + N + S1) / 3.0)/(T + (R + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Red",
             "source": {
@@ -2839,6 +3137,7 @@
             "constants": {},
             "contributor": "https://github.com/bpurinton",
             "date_of_addition": "2021-12-01",
+            "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference Moisture Index",
             "source": {
@@ -2857,10 +3156,18 @@
                 "S1"
             ],
             "constants": {
-                "alpha": 0.1
+                "alpha": {
+                    "default_value": 0.74,
+                    "description": "Weighting coefficient",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ]
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-20",
+            "external_variables": {},
             "formula": "(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))",
             "name": "Normalized Difference Phenology Index",
             "source": {
@@ -2880,6 +3187,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "(VV - VH)/(VV + VH)",
             "name": "Normalized Difference Polarization Index",
             "source": {
@@ -2899,6 +3207,7 @@
             "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
+            "external_variables": {},
             "formula": "(S1-G)/(S1+G)",
             "name": "Normalized Difference Pond Index",
             "source": {
@@ -2918,6 +3227,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "(N - RE1) / (N + RE1)",
             "name": "Normalized Difference Red Edge Index",
             "source": {
@@ -2937,6 +3247,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(G - S1) / (G + S1)",
             "name": "Normalized Difference Snow Index",
             "source": {
@@ -2956,6 +3267,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(G - N)/(G + N)",
             "name": "Normalized Difference Snow Ice Index",
             "source": {
@@ -2975,6 +3287,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-01-10",
+            "external_variables": {},
             "formula": "(R - S1)/(R + S1)",
             "name": "Normalized Difference Snow/Ice Index for Landsat TM",
             "source": {
@@ -2994,6 +3307,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-11-20",
+            "external_variables": {},
             "formula": "(G - Y)/(G + Y)",
             "name": "WorldView Normalized Difference Soil Index",
             "source": {
@@ -3011,11 +3325,15 @@
                 "S1"
             ],
             "constants": {
-                "beta": 0.05
+                "b": {
+                    "default_value": 0.05,
+                    "description": "Empirical parameter that offsets the index"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
-            "formula": "(N - S1 - beta)/(N + S1)",
+            "external_variables": {},
+            "formula": "(N - S1 - b)/(N + S1)",
             "name": "Normalized Difference Snow Index with no Water",
             "source": {
                 "source_link": "https://doi.org/10.3390/w12051339",
@@ -3034,6 +3352,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference SWIR",
             "source": {
@@ -3053,6 +3372,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(R - S1) / (R + S1)",
             "name": "Normalized Difference Snow and Ice Index",
             "source": {
@@ -3072,6 +3392,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(S2 - G)/(S2 + G)",
             "name": "Normalized Difference Soil Index",
             "source": {
@@ -3091,6 +3412,7 @@
             "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
+            "external_variables": {},
             "formula": "(R-G)/(R+G)",
             "name": "Normalized Difference Turbidity Index",
             "source": {
@@ -3110,10 +3432,22 @@
                 "RE3"
             ],
             "constants": {
-                "gamma": 1.0
+                "gamma": {
+                    "default_value": 0.4,
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "gamma * (S1 - S2)/(S1 + S2) + (1 - gamma) * (N - RE3)/(N + RE3)",
             "name": "4-band Red Edge Normalized Difference Tillage Index",
             "source": {
@@ -3133,6 +3467,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
+            "external_variables": {},
             "formula": "(S1 - S2)/(S1 + S2)",
             "name": "Normalized Difference Tillage Index",
             "source": {
@@ -3152,6 +3487,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - R)/(N + R)",
             "name": "Normalized Difference Vegetation Index",
             "source": {
@@ -3171,11 +3507,34 @@
                 "RE1"
             ],
             "constants": {
-                "alpha": 0.1,
-                "beta": 0.05
+                "alpha": {
+                    "default_value": 0.2,
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+                "beta": {
+                    "default_value": 0.2,
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1))",
             "name": "4-band Red Edge Normalized Difference Vegetation Index",
             "source": {
@@ -3195,6 +3554,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(RE2 - RE1) / (RE2 + RE1)",
             "name": "Normalized Difference Vegetation Index (705 and 750 nm)",
             "source": {
@@ -3216,6 +3576,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "((N - R)/(N + R)) - ((G - S1)/(G + S1))",
             "name": "NDVI-MNDWI Model",
             "source": {
@@ -3236,6 +3597,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(N - (R * T / 10000.0))/(N + (R * T / 10000.0))",
             "name": "Normalized Difference Vegetation Index Thermal",
             "source": {
@@ -3255,6 +3617,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(G - N) / (G + N)",
             "name": "Normalized Difference Water Index",
             "source": {
@@ -3272,11 +3635,15 @@
                 "N"
             ],
             "constants": {
-                "alpha": 0.1
+                "a": {
+                    "default_value": 2.0,
+                    "description": "Empirical parameter weighting NIR reflectance"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
-            "formula": "(G - alpha * N)/(G + N)",
+            "external_variables": {},
+            "formula": "(G - a * N)/(G + N)",
             "name": "Normalized Difference Water Index with no Snow Cover and Glaciers",
             "source": {
                 "source_link": "https://doi.org/10.3390/w12051339",
@@ -3295,6 +3662,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(G - B) / (G + B)",
             "name": "Normalized Difference Yellowness Index",
             "source": {
@@ -3314,6 +3682,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(G - R) / (G + R)",
             "name": "Normalized Green Red Difference Index",
             "source": {
@@ -3333,6 +3702,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "(RE1 - A) / (RE1 + A)",
             "name": "Non-Homogeneous Feature Difference",
             "source": {
@@ -3352,6 +3722,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-16",
+            "external_variables": {},
             "formula": "((N - R) / (N + R)) * N",
             "name": "Near-Infrared Reflectance of Vegetation",
             "source": {
@@ -3369,12 +3740,20 @@
                 "R"
             ],
             "constants": {
-                "k": 0.0,
-                "lambdaN": null,
-                "lambdaR": null
+                "k": {
+                    "default_value": 0.0,
+                    "description": "Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm)"
+                },
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)"
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "N - R - k * (lambdaN - lambdaR)",
             "name": "Hyperspectral Near-Infrared Reflectance of Vegetation",
             "source": {
@@ -3391,11 +3770,14 @@
                 "N",
                 "R"
             ],
-            "constants": {
-                "PAR": null
-            },
+            "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-18",
+            "external_variables": {
+                "PAR": {
+                    "description": "Photosynthetically Active Radiation"
+                }
+            },
             "formula": "((N - R) / (N + R)) * N * PAR",
             "name": "Near-Infrared Reflectance of Vegetation and Incoming PAR",
             "source": {
@@ -3415,6 +3797,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
+            "external_variables": {},
             "formula": "((N ** 2) - R)/((N ** 2) + R)",
             "name": "Non-Linear Vegetation Index",
             "source": {
@@ -3435,6 +3818,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
+            "external_variables": {},
             "formula": "(N - (S1 - S2))/(N + (S1 - S2))",
             "name": "Normalized Multi-band Drought Index",
             "source": {
@@ -3454,6 +3838,7 @@
             "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2025-03-19",
+            "external_variables": {},
             "formula": "(R - A) / (R + A)",
             "name": "Normalized Pigments Chlorophyll Ratio Index",
             "source": {
@@ -3473,6 +3858,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(G - S2) / (G + S2)",
             "name": "Normalized Rapeseed Flowering Index Green",
             "source": {
@@ -3492,6 +3878,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(R - S2) / (R + S2)",
             "name": "Normalized Rapeseed Flowering Index Red",
             "source": {
@@ -3511,6 +3898,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "(S1 - S2)/(S1 + S2)",
             "name": "Normalized Shortwave Infrared Difference Soil-Moisture",
             "source": {
@@ -3530,6 +3918,7 @@
             "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
+            "external_variables": {},
             "formula": "(S1-S2)/S1",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1",
             "source": {
@@ -3549,6 +3938,7 @@
             "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
+            "external_variables": {},
             "formula": "(S1-S2)/S2",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2",
             "source": {
@@ -3568,6 +3958,7 @@
             "constants": {},
             "contributor": "https://github.com/CvenGeo",
             "date_of_addition": "2022-10-03",
+            "external_variables": {},
             "formula": "(S1-S2)/(S1+S2)",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3",
             "source": {
@@ -3588,6 +3979,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-06",
+            "external_variables": {},
             "formula": "((N-S2)/(N+S2))*T",
             "name": "NIR-SWIR-Temperature Version 1",
             "source": {
@@ -3608,6 +4000,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-10-06",
+            "external_variables": {},
             "formula": "(N-(S2+T))/(N+(S2+T))",
             "name": "NIR-SWIR-Temperature Version 2",
             "source": {
@@ -3629,6 +4022,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "(B - (N + S1 + S2))/(B + (N + S1 + S2))",
             "name": "New Water Index",
             "source": {
@@ -3649,6 +4043,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "G/(N + G + R)",
             "name": "Normalized Green",
             "source": {
@@ -3669,6 +4064,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "N/(N + G + R)",
             "name": "Normalized NIR",
             "source": {
@@ -3689,6 +4085,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "R/(N + G + R)",
             "name": "Normalized Red",
             "source": {
@@ -3707,11 +4104,42 @@
                 "R"
             ],
             "constants": {
-                "cexp": 1.16
+                "c": {
+                    "default_value": 1.0,
+                    "description": "Correction factor",
+                    "suggested_range": [
+                        0.3,
+                        1.74
+                    ],
+                    "suggested_values": {
+                        "Broad-band and erectophile leaf orientation (~ 70\u00b0)": [
+                            0.87,
+                            1.74
+                        ],
+                        "Broad-band and intermediate leaf orientation (~ 50\u00b0)": [
+                            0.72,
+                            1.4
+                        ],
+                        "Broad-band and planophile leaf orientation (~ 30\u00b0)": [
+                            0.64,
+                            1.31
+                        ],
+                        "Broad-band reflectances": [
+                            0.64,
+                            1.74
+                        ],
+                        "Equal OCVI to CVI": 1.0,
+                        "Narrow-band reflectances": [
+                            0.3,
+                            0.89
+                        ]
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
-            "formula": "(N / G) * (R / G) ** cexp",
+            "external_variables": {},
+            "formula": "(N / G) * (R / G) ** c",
             "name": "Optimized Chlorophyll Vegetation Index",
             "source": {
                 "source_link": "http://dx.doi.org/10.1007/s11119-008-9075-z",
@@ -3730,6 +4158,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
+            "external_variables": {},
             "formula": "(N - R) / (N + R + 0.16)",
             "name": "Optimized Soil-Adjusted Vegetation Index",
             "source": {
@@ -3750,6 +4179,7 @@
             "constants": {},
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
+            "external_variables": {},
             "formula": "(G + R)/B",
             "name": "Oil Spill Index",
             "source": {
@@ -3769,6 +4199,7 @@
             "constants": {},
             "contributor": "https://github.com/emanuelcastanho",
             "date_of_addition": "2024-05-03",
+            "external_variables": {},
             "formula": "N/(N + R)",
             "name": "Plastic Index",
             "source": {
@@ -3788,6 +4219,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-18",
+            "external_variables": {},
             "formula": "0.8192 * B - 0.5735 * N + 0.0750",
             "name": "Perpendicular Impervious Surface Index",
             "source": {
@@ -3808,6 +4240,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(R - B)/RE2",
             "name": "Plant Senescing Reflectance Index",
             "source": {
@@ -3828,6 +4261,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-24",
+            "external_variables": {},
             "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
             "name": "Quad-Polarized Radar Vegetation Index",
             "source": {
@@ -3848,6 +4282,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "R / (R + G + B)",
             "name": "Red Chromatic Coordinate",
             "source": {
@@ -3867,6 +4302,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(N - R) / ((N + R) ** 0.5)",
             "name": "Renormalized Difference Vegetation Index",
             "source": {
@@ -3887,6 +4323,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)",
             "name": "Red-Edge Disease Stress Index",
             "source": {
@@ -3906,6 +4343,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
             "name": "Red Edge Normalized Difference Vegetation Index",
             "source": {
@@ -3925,6 +4363,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-12-25",
+            "external_variables": {},
             "formula": "(HH - HV)/(HH + HV)",
             "name": "Radar Forest Degradation Index",
             "source": {
@@ -3945,6 +4384,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(G ** 2.0 - B * R)/(G ** 2.0 + B * R)",
             "name": "Red Green Blue Vegetation Index",
             "source": {
@@ -3964,6 +4404,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "R/G",
             "name": "Red-Green Ratio Index",
             "source": {
@@ -3983,6 +4424,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "(R - G)/(R + G)",
             "name": "Redness Index",
             "source": {
@@ -4002,6 +4444,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-11-20",
+            "external_variables": {},
             "formula": "(R**2.0)/(G**4.0)",
             "name": "SPOT HRV XS-based Redness Index 4",
             "source": {
@@ -4021,6 +4464,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "(R - N)/(R + N)",
             "name": "Reversed Normalized Difference Vegetation Index",
             "source": {
@@ -4040,6 +4484,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "RE2 / R",
             "name": "Ratio Vegetation Index",
             "source": {
@@ -4059,11 +4504,34 @@
                 "RE1"
             ],
             "constants": {
-                "alpha": 0.1,
-                "beta": 0.05
+                "alpha": {
+                    "default_value": 0.3,
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.3,
+                        "August": 0.9
+                    }
+                },
+                "beta": {
+                    "default_value": 0.3,
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.3,
+                        "August": 0.6
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "(alpha * RE3 + (1 - alpha) * RE2)/(beta * R + (1 - beta) * RE1)",
             "name": "4-band Red Edge Ratio Vegetation Index",
             "source": {
@@ -4081,10 +4549,14 @@
                 "S1"
             ],
             "constants": {
-                "n": 5
+                "n": {
+                    "default_value": 5,
+                    "description": "Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)"
+                }
             },
             "contributor": "https://github.com/edujusti",
             "date_of_addition": "2026-03-31",
+            "external_variables": {},
             "formula": "((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)",
             "name": "Rescaled Water Index",
             "source": {
@@ -4106,6 +4578,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1))",
             "name": "Sentinel-2 Red-Edge Position",
             "source": {
@@ -4125,6 +4598,7 @@
             "constants": {},
             "contributor": "https://github.com/MATRIX4284",
             "date_of_addition": "2022-03-06",
+            "external_variables": {},
             "formula": "(RE1 - S2)/(RE1 + S2)",
             "name": "Sentinel-2 Water Index",
             "source": {
@@ -4145,6 +4619,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(N * (R - S1)) / ((N + R) * (N + S1))",
             "name": "S3 Snow Index",
             "source": {
@@ -4163,11 +4638,33 @@
                 "B"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment"
+                },
+                "gamma": {
+                    "default_value": 1.0,
+                    "description": "Weighting coefficient used for reducing atmospheric effects",
+                    "suggested_range": [
+                        0.0,
+                        2.0
+                    ],
+                    "suggested_values": {
+                        "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                        "Equal SARVI to SAVI": 0.0,
+                        "Lowest sensitivity for dense forests": [
+                            1.0,
+                            2.0
+                        ],
+                        "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                        "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
-            "formula": "(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
+            "external_variables": {},
+            "formula": "(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)",
             "name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.1109/36.134076",
@@ -4184,17 +4681,30 @@
                 "R"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment",
+                    "suggested_range": [
+                        0.25,
+                        1
+                    ],
+                    "suggested_values": {
+                        "High vegetation densities": 0.25,
+                        "Intermediate vegetation densities": 0.5,
+                        "Low vegetation densities": 1.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(1.0 + L) * (N - R) / (N + R + L)",
             "name": "Soil-Adjusted Vegetation Index",
             "source": {
                 "source_link": "https://doi.org/10.1016/0034-4257(88)90106-X",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
-                "source_type": null
+                "source_type": "article"
             }
         },
         "SAVI2": {
@@ -4205,11 +4715,18 @@
                 "R"
             ],
             "constants": {
-                "sla": 1.0,
-                "slb": 0.0
+                "sla": {
+                    "default_value": 1.0,
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)"
+                },
+                "slb": {
+                    "default_value": 0.0,
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "N / (R + (slb / sla))",
             "name": "Soil-Adjusted Vegetation Index 2",
             "source": {
@@ -4229,11 +4746,34 @@
                 "RE1"
             ],
             "constants": {
-                "alpha": 0.1,
-                "beta": 0.05
+                "alpha": {
+                    "default_value": 0.2,
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+                "beta": {
+                    "default_value": 0.2,
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "2.0 * ((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1 + 1))",
             "name": "4-band Red Edge Soil Adjusted Vegetation Index",
             "source": {
@@ -4252,10 +4792,14 @@
                 "T"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Canopy background adjustment"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)",
             "name": "Soil-Adjusted Vegetation Index Thermal",
             "source": {
@@ -4278,6 +4822,7 @@
             "constants": {},
             "contributor": "https://github.com/cmayet",
             "date_of_addition": "2026-03-31",
+            "external_variables": {},
             "formula": "B + 2.0 * (G - N) - 0.75 * S1 - 0.5 * S2",
             "name": "Subtractive Coastal Water Index",
             "source": {
@@ -4295,10 +4840,14 @@
                 "R"
             ],
             "constants": {
-                "fdelta": 0.581
+                "fdelta": {
+                    "default_value": 0.581,
+                    "description": "Adjustment factor to avoid under-elimination or over-elimination"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "(N/R) + fdelta * (1.0/R)",
             "name": "Shadow-Eliminated Vegetation Index",
             "source": {
@@ -4319,6 +4868,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)",
             "name": "Shadow Index",
             "source": {
@@ -4339,6 +4889,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-17",
+            "external_variables": {},
             "formula": "(N - A) / (N - R)",
             "name": "Structure Insensitive Pigment Index",
             "source": {
@@ -4359,6 +4910,7 @@
             "constants": {},
             "contributor": "https://github.com/geoSanjeeb",
             "date_of_addition": "2023-07-03",
+            "external_variables": {},
             "formula": "N/(R + S2)",
             "name": "Specific Leaf Area Vegetation Index",
             "source": {
@@ -4376,10 +4928,22 @@
                 "S2"
             ],
             "constants": {
-                "L": 1.0
+                "L": {
+                    "default_value": 0.6,
+                    "description": "Soil adjustment factor",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "Increased litter mass": 0.0,
+                        "Low litter mass": 1.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
+            "external_variables": {},
             "formula": "(1.0 + L) * (S1 - S2) / (S1 + S2 + L)",
             "name": "Soil-Adjusted Normalized Difference Tillage Index",
             "source": {
@@ -4399,10 +4963,22 @@
                 "RE3"
             ],
             "constants": {
-                "gamma": 1.0
+                "gamma": {
+                    "default_value": 0.4,
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N + RE3 + 1.0)",
             "name": "4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index",
             "source": {
@@ -4422,6 +4998,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "N/R",
             "name": "Simple Ratio",
             "source": {
@@ -4441,6 +5018,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "N/G",
             "name": "Simple Ratio (800 and 550 nm)",
             "source": {
@@ -4461,6 +5039,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "N2/(G * RE1)",
             "name": "Simple Ratio (860, 550 and 708 nm)",
             "source": {
@@ -4480,6 +5059,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "RE2 / G",
             "name": "Simple Ratio (555 and 750 nm)",
             "source": {
@@ -4499,6 +5079,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "RE2 / RE1",
             "name": "Simple Ratio (705 and 750 nm)",
             "source": {
@@ -4520,6 +5101,7 @@
             "constants": {},
             "contributor": "https://github.com/c-chrysostomou",
             "date_of_addition": "2026-05-25",
+            "external_variables": {},
             "formula": "(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))",
             "name": "Symbolic Regression Vegetation Index",
             "source": {
@@ -4541,6 +5123,7 @@
             "constants": {},
             "contributor": "https://github.com/c-chrysostomou",
             "date_of_addition": "2026-05-25",
+            "external_variables": {},
             "formula": "((G + B) - (N + S1)) / ((G + B) + (N + S1))",
             "name": "Symbolic Regression Water Index",
             "source": {
@@ -4560,6 +5143,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-10-11",
+            "external_variables": {},
             "formula": "S1 / S2",
             "name": "Simple Tillage Index",
             "source": {
@@ -4579,10 +5163,22 @@
                 "RE3"
             ],
             "constants": {
-                "gamma": 1.0
+                "gamma": {
+                    "default_value": 0.4,
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "suggested_range": [
+                        0.0,
+                        1.0
+                    ],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2025-09-30",
+            "external_variables": {},
             "formula": "gamma * S1/S2 + (1 - gamma) * N/RE3",
             "name": "4-band Red Edge Soil Tillage Index",
             "source": {
@@ -4603,6 +5199,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(G * (N - S1)) / ((G + N) * (N + S1))",
             "name": "Snow Water Index",
             "source": {
@@ -4624,6 +5221,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-20",
+            "external_variables": {},
             "formula": "(B + G)/(N + S1)",
             "name": "Sentinel Water Mask",
             "source": {
@@ -4643,6 +5241,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-08",
+            "external_variables": {},
             "formula": "(N2 - RE1) / (N2 + RE1)",
             "name": "Sentinel-2 LAI Green Index",
             "source": {
@@ -4663,6 +5262,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-13",
+            "external_variables": {},
             "formula": "3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))",
             "name": "Transformed Chlorophyll Absorption in Reflectance Index",
             "source": {
@@ -4684,6 +5284,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))",
             "name": "TCARI/OSAVI Ratio",
             "source": {
@@ -4704,6 +5305,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-11-06",
+            "external_variables": {},
             "formula": "(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
             "name": "TCARI/OSAVI Ratio (705 and 750 nm)",
             "source": {
@@ -4724,6 +5326,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5",
             "name": "Triangular Chlorophyll Index",
             "source": {
@@ -4743,6 +5346,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-09",
+            "external_variables": {},
             "formula": "1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))",
             "name": "Transformed Difference Vegetation Index",
             "source": {
@@ -4763,6 +5367,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "- 0.5 * (190 * (R - G) - 120 * (R - B))",
             "name": "Triangular Greenness Index",
             "source": {
@@ -4783,6 +5388,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)",
             "name": "Transformed Red Range Vegetation Index",
             "source": {
@@ -4800,11 +5406,24 @@
                 "R"
             ],
             "constants": {
-                "sla": 1.0,
-                "slb": 0.0
+                "sla": {
+                    "default_value": 1.0,
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)",
+                    "suggested_values": {
+                        "Equal TSAVI to NDVI when slb is 0.0": 1.0
+                    }
+                },
+                "slb": {
+                    "default_value": 0.0,
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)",
+                    "suggested_values": {
+                        "Equal TSAVI to NDVI when sla is 1.0": 0.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb)",
             "name": "Transformed Soil-Adjusted Vegetation Index",
             "source": {
@@ -4825,6 +5444,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))",
             "name": "Transformed Triangular Vegetation Index",
             "source": {
@@ -4844,6 +5464,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(((N - R)/(N + R)) + 0.5) ** 0.5",
             "name": "Transformed Vegetation Index",
             "source": {
@@ -4867,6 +5488,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2023-02-10",
+            "external_variables": {},
             "formula": "(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))",
             "name": "Triangle Water Index",
             "source": {
@@ -4887,6 +5509,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "0.5 * (120 * (N - G) - 200 * (R - G))",
             "name": "Triangular Vegetation Index",
             "source": {
@@ -4906,6 +5529,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-07",
+            "external_variables": {},
             "formula": "(S2 - N)/(S2 + N)",
             "name": "Urban Index",
             "source": {
@@ -4926,6 +5550,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(G - R) / (G + R - B)",
             "name": "Visible Atmospherically Resistant Index",
             "source": {
@@ -4946,6 +5571,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)",
             "name": "Visible Atmospherically Resistant Index (700 nm)",
             "source": {
@@ -4965,6 +5591,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "(VV + VH)/VV",
             "name": "Vertical Dual De-Polarization Index",
             "source": {
@@ -4984,6 +5611,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VH - VV",
             "name": "VH-VV Difference",
             "source": {
@@ -5003,6 +5631,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VH * VV",
             "name": "VH-VV Product",
             "source": {
@@ -5022,6 +5651,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VH/VV",
             "name": "VH-VV Ratio",
             "source": {
@@ -5041,6 +5671,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "(N - T/10000.0)/(N + T/10000.0)",
             "name": "VI6T Index",
             "source": {
@@ -5060,6 +5691,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(RE1 - R) / (RE1 + R)",
             "name": "Vegetation Index (700 nm)",
             "source": {
@@ -5080,6 +5712,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-09-22",
+            "external_variables": {},
             "formula": "((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))",
             "name": "Vegetation Index Built-up Index",
             "source": {
@@ -5099,6 +5732,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-20",
+            "external_variables": {},
             "formula": "(G - R) / (G + R)",
             "name": "Vegetation Index Green",
             "source": {
@@ -5118,6 +5752,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VV - VH",
             "name": "VV-VH Difference",
             "source": {
@@ -5137,6 +5772,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VV/VH",
             "name": "VV-VH Ratio",
             "source": {
@@ -5156,6 +5792,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-19",
+            "external_variables": {},
             "formula": "VV + VH",
             "name": "VV-VH Sum",
             "source": {
@@ -5175,6 +5812,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
+            "external_variables": {},
             "formula": "(G - N)/(G + N)",
             "name": "Visible Green-Based Built-Up Index",
             "source": {
@@ -5194,6 +5832,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-02-09",
+            "external_variables": {},
             "formula": "(R - N)/(R + N)",
             "name": "Visible Red-Based Built-Up Index",
             "source": {
@@ -5214,10 +5853,14 @@
                 "N"
             ],
             "constants": {
-                "epsilon": 1
+                "epsilon": {
+                    "default_value": 1e-10,
+                    "description": "Adjustment constant for numerical stability"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
+            "external_variables": {},
             "formula": "-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon))",
             "name": "Wheat Canopy Index (Growth Stage 1)",
             "source": {
@@ -5238,10 +5881,14 @@
                 "N"
             ],
             "constants": {
-                "epsilon": 1
+                "epsilon": {
+                    "default_value": 1e-10,
+                    "description": "Adjustment constant for numerical stability"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2026-05-27",
+            "external_variables": {},
             "formula": "-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))",
             "name": "Wheat Canopy Index (Growth Stage 2)",
             "source": {
@@ -5259,10 +5906,24 @@
                 "R"
             ],
             "constants": {
-                "alpha": 0.1
+                "alpha": {
+                    "default_value": 0.1,
+                    "description": "Weighting coefficient",
+                    "suggested_range": [
+                        0.1,
+                        0.2
+                    ],
+                    "suggested_values": {
+                        "Aggressive correction, high LAI. Underperforms in sparse vegetation": 0.05,
+                        "Conservative correction, high-biomass sensitivity without strongly down-weighting NIR": 0.2,
+                        "Equal WDRVI to NDVI": 1.0,
+                        "Stronger correction, moderate-to-high LAI, vegetation fraction where NDVI saturates": 0.1
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "(alpha * N - R) / (alpha * N + R)",
             "name": "Wide Dynamic Range Vegetation Index",
             "source": {
@@ -5280,10 +5941,17 @@
                 "R"
             ],
             "constants": {
-                "sla": 1.0
+                "sla": {
+                    "default_value": 1.0,
+                    "description": "Soil line slope. sla = N/R (only for soil pixels/measurements)",
+                    "suggested_values": {
+                        "Equal WDVI to DVI": 1.0
+                    }
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-14",
+            "external_variables": {},
             "formula": "N - sla * R",
             "name": "Weighted Difference Vegetation Index",
             "source": {
@@ -5303,6 +5971,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(G - S2) / (G + S2)",
             "name": "Water Index 1",
             "source": {
@@ -5322,6 +5991,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
+            "external_variables": {},
             "formula": "(B - S2) / (B + S2)",
             "name": "Water Index 2",
             "source": {
@@ -5344,6 +6014,7 @@
             "constants": {},
             "contributor": "https://github.com/remi-braun",
             "date_of_addition": "2022-10-26",
+            "external_variables": {},
             "formula": "1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2",
             "name": "Water Index 2015",
             "source": {
@@ -5365,6 +6036,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-01-17",
+            "external_variables": {},
             "formula": "(G + R)/(N + S1)",
             "name": "Water Ratio Index",
             "source": {
@@ -5384,6 +6056,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "((N - B)/(N + B)) * N",
             "name": "Blue Near-Infrared Reflectance of Vegetation",
             "source": {
@@ -5403,12 +6076,22 @@
                 "kNL"
             ],
             "constants": {
-                "C1": 6.0,
-                "C2": 7.5,
-                "g": 2.5
+                "C1": {
+                    "default_value": 6.0,
+                    "description": "Coefficient 1 for the aerosol resistance term"
+                },
+                "C2": {
+                    "default_value": 7.5,
+                    "description": "Coefficient 2 for the aerosol resistance term"
+                },
+                "g": {
+                    "default_value": 2.5,
+                    "description": "Gain factor"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
+            "external_variables": {},
             "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
             "name": "Kernel Enhanced Vegetation Index",
             "source": {
@@ -5428,6 +6111,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "kNN/(kNN + kNR)",
             "name": "Kernel Infrared Percentage Vegetation Index",
             "source": {
@@ -5447,6 +6131,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "(kNN - kNR)/(kNN + kNR)",
             "name": "Kernel Normalized Difference Vegetation Index",
             "source": {
@@ -5466,6 +6151,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
+            "external_variables": {},
             "formula": "kNN / kNR",
             "name": "Kernel Ratio Vegetation Index",
             "source": {
@@ -5486,6 +6172,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
+            "external_variables": {},
             "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
             "name": "Kernel Visible Atmospherically Resistant Index",
             "source": {
@@ -5506,6 +6193,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1 - A)",
             "name": "Modified Normalized Difference (705, 750 and 445 nm)",
             "source": {
@@ -5525,6 +6213,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
+            "external_variables": {},
             "formula": "(RE2 - A)/(RE2 + A)",
             "name": "Modified Simple Ratio (705 and 445 nm)",
             "source": {
@@ -5544,6 +6233,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "((N - S2)/(N + S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI",
             "source": {
@@ -5562,10 +6252,14 @@
                 "S2"
             ],
             "constants": {
-                "alpha": 0.1
+                "alpha": {
+                    "default_value": 0.74,
+                    "description": "Parameter to mitigate soil and snow effects. Taken from NDPI"
+                }
             },
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI",
             "source": {
@@ -5586,6 +6280,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product",
             "source": {
@@ -5606,6 +6301,7 @@
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2024-05-16",
+            "external_variables": {},
             "formula": "(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum",
             "source": {
@@ -5626,6 +6322,7 @@
             "constants": {},
             "contributor": "https://github.com/MartinuzziFrancesco",
             "date_of_addition": "2024-05-14",
+            "external_variables": {},
             "formula": "((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation",
             "source": {

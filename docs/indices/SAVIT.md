@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `1.0`.
+- `L`: Canopy background adjustment. Default: `0.5`.
 
 ## Contributor
 

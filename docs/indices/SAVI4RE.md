@@ -31,8 +31,8 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
-- `beta`: Calibration parameter used for NDSInw. Default: `0.05`.
+- `alpha`: Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2). Default: `0.2`. Suggested range: `0.0`–`1.0`. Suggested values: April: `0.2`; August: `0.7`.
+- `beta`: Parameter representing the proportion of Red reflectance (Sentinel-2). Default: `0.2`. Suggested range: `0.0`–`1.0`. Suggested values: April: `0.2`; August: `0.7`.
 
 ## Contributor
 

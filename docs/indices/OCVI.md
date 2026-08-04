@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(N / G) * (R / G) ** cexp
+(N / G) * (R / G) ** c
 ```
 
 ### Bands
@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `cexp`: Exponent used for OCVI. Default: `1.16`.
+- `c`: Correction factor. Default: `1.0`. Suggested range: `0.3`–`1.74`. Suggested values: Broad-band and erectophile leaf orientation (~ 70°): `0.87`–`1.74`; Broad-band and intermediate leaf orientation (~ 50°): `0.72`–`1.4`; Broad-band and planophile leaf orientation (~ 30°): `0.64`–`1.31`; Broad-band reflectances: `0.64`–`1.74`; Equal OCVI to CVI: `1.0`; Narrow-band reflectances: `0.3`–`0.89`.
 
 ## Contributor
 

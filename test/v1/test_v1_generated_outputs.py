@@ -4,9 +4,8 @@ from collections import Counter
 from pathlib import Path
 
 from src.v1.SpectralIndex import parse_formula_variables
-from src.v1.constants import constants
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants
+from src.v1.utils import Bands, Constants, External
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -25,7 +24,9 @@ def test_v1_source_catalogue_and_outputs_contain_the_same_indices():
     json_acronyms = Counter(item["acronym"] for item in json_catalogue.values())
 
     with (OUTPUT_DIR / "spectral-indices-table.csv").open(newline="") as fp:
-        csv_acronyms = Counter(row["acronym"] for row in csv.DictReader(fp))
+        csv_reader = csv.DictReader(fp)
+        assert "external_variables" in csv_reader.fieldnames
+        csv_acronyms = Counter(row["acronym"] for row in csv_reader)
 
     assert json_acronyms == expected
     assert csv_acronyms == expected
@@ -58,30 +59,95 @@ def test_v1_outputs_contain_generated_source_metadata():
         assert index["source"]["source_link_type"] in {"doi", "other"}
 
     assert json_catalogue["EVI"]["source"]["source_type"] == "article"
+    assert json_catalogue["SAVI"]["source"]["source_type"] == "article"
     assert json_catalogue["NDVI"]["source"]["source_type"] == "conference_paper"
     assert json_catalogue["TVI"]["source"]["source_type"] == "conference_paper"
 
 
-def test_v1_outputs_separate_bands_from_constant_defaults():
+def test_v1_outputs_separate_bands_constants_and_external_variables():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
         json_catalogue = json.load(fp)["SpectralIndices"]
 
     band_names = set(Bands._value2member_map_)
-    constant_names = set(Constants._value2member_map_)
+    external_names = set(External._value2member_map_)
 
     for key, source_index in spindex.SpectralIndices.items():
         variables = parse_formula_variables(source_index.formula)
-        expected_bands = [variable for variable in variables if variable in band_names]
+        expected_bands = [
+            variable for variable in variables if variable in band_names
+        ]
         expected_constants = {
-            variable: constants[variable]["default"]
-            for variable in variables
-            if variable in constant_names
+            name: definition.model_dump(mode="json")
+            for name, definition in (source_index.constants or {}).items()
+        }
+        expected_externals = {
+            name: definition.model_dump(mode="json")
+            for name, definition in (source_index.external_variables or {}).items()
+        }
+        expected_external_names = {
+            variable for variable in variables if variable in external_names
         }
 
         assert json_catalogue[key]["bands"] == expected_bands
         assert json_catalogue[key]["constants"] == expected_constants
+        assert json_catalogue[key]["external_variables"] == expected_externals
+        assert set(expected_externals) == expected_external_names
 
-        serialized_variables = set(json_catalogue[key]["bands"]) | set(
-            json_catalogue[key]["constants"]
+        serialized_variables = (
+            set(json_catalogue[key]["bands"])
+            | set(json_catalogue[key]["constants"])
+            | set(json_catalogue[key]["external_variables"])
         )
         assert serialized_variables == set(variables)
+
+
+def test_v1_constants_metadata_is_grouped_by_constant_and_index():
+    with (OUTPUT_DIR / "constants.json").open() as fp:
+        generated_constants = json.load(fp)
+
+    assert set(generated_constants) == set(Constants._value2member_map_)
+
+    for constant_name, index_definitions in generated_constants.items():
+        for key, definition in index_definitions.items():
+            expected = spindex.SpectralIndices[key].constants[constant_name]
+            assert definition == expected.model_dump(mode="json")
+            assert "description" in definition
+            assert set(definition) <= {
+                "description",
+                "default_value",
+                "suggested_values",
+                "suggested_range",
+            }
+
+    assert generated_constants["L"]["EVI"] == {
+        "description": "Canopy background adjustment",
+        "default_value": 1.0,
+    }
+    assert "short_name" not in generated_constants["L"]
+    assert generated_constants["L"]["SAVI"] == {
+        "description": "Canopy background adjustment",
+        "default_value": 0.5,
+        "suggested_values": {
+            "Low vegetation densities": 1.0,
+            "Intermediate vegetation densities": 0.5,
+            "High vegetation densities": 0.25,
+        },
+        "suggested_range": [0.25, 1],
+    }
+
+
+def test_v1_external_metadata_is_grouped_by_variable_and_index():
+    with (OUTPUT_DIR / "external_variables.json").open() as fp:
+        generated_externals = json.load(fp)
+
+    assert set(generated_externals) == set(External._value2member_map_)
+
+    for external_name, index_definitions in generated_externals.items():
+        for key, definition in index_definitions.items():
+            expected = spindex.SpectralIndices[key].external_variables[external_name]
+            assert definition == expected.model_dump(mode="json")
+            assert set(definition) == {"description"}
+
+    assert generated_externals["PAR"]["NIRvP"] == {
+        "description": "Photosynthetically Active Radiation"
+    }

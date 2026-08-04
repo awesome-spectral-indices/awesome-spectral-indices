@@ -18,6 +18,7 @@ submitted through the usual contribution process.
   - `spectral-indices-table.csv`
   - `bands.json`
   - `constants.json`
+  - `external_variables.json`
 - Added a v1 generator that parses formula variables and writes the new outputs
   independently of v0.
 - Added a dedicated v1 test suite under `test/v1/`.
@@ -39,13 +40,13 @@ submitted through the usual contribution process.
     application domain;
   - an advanced search panel for individual metadata fields;
   - filtering by source link, link status, link type, and source type;
-  - filtering independently by required bands, constants, radar polarizations,
-    and kernel variables;
+  - filtering independently by required bands, constants, external variables,
+    radar polarizations, and kernel variables;
   - results grouped by application domain; and
   - a live filtered-versus-total result count.
 - Added one generated documentation page for every spectral index. Each page
-  includes its formula, required variables, constants, source, contributor,
-  and date of addition.
+  includes its formula, required bands, constants, external variables, source,
+  contributor, and date of addition.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.
@@ -68,9 +69,39 @@ submitted through the usual contribution process.
   `source_link_type`.
 - Classified EVI as an article and NDVI and TVI as conference-paper sources in
   the v1 catalogue.
-- Split formula constants from bands in v1. Constants now have a dedicated
-  registry and each generated index exposes a `constants` mapping containing
-  its catalogue defaults, while `bands` contains only non-constant inputs.
+- Split formula constants from bands in v1. Constant-using indices now submit a
+  description and optional numeric default for every formula constant, while
+  `bands` contains spectral, radar, and kernel inputs. The generated
+  `constants.json` groups these definitions first by standard constant and
+  then by index.
+  Constant definitions can also include condition-specific `suggested_values`
+  and a general two-number `suggested_range`.
+- Separated formula inputs supplied outside spectral data into a new v1
+  `External` registry. `PAR` is now an external variable rather than a
+  constant, and NIRvP supplies its required, description-only definition
+  through `external_variables`. Generated catalogue and CSV records include
+  this property, while `external_variables.json` groups definitions by
+  external-variable standard and index.
+- Changed the OCVI exponent constant from `cexp` to `c` in v1 to preserve the
+  notation used by its original source, with OCVI-specific metadata stored
+  independently from other indices that also use the `c` standard.
+- Changed the GDVI exponent constant from `nexp` to `n` in v1 to preserve the
+  notation used by its original source, with GDVI-specific metadata stored
+  independently from RWI's use of the same `n` standard.
+- Changed the ATSAVI formula in v1 to replace its hard-coded `0.08` adjustment
+  with the source-defined `X` constant. Added the ATSAVI-specific `X`, `sla`,
+  and `slb` descriptions and defaults, including `X = 0.08`.
+- Changed the v1 constant standard used by NDWIns from `alpha` to `a` and the
+  standard used by NDSInw from `beta` to `b`. Added their index-specific
+  descriptions and retained the submitted defaults of `a = 2.0` and
+  `b = 0.05`.
+- Completed the first v1 metadata pass for all 45 indices that use registered
+  constants. Their 75 per-index definitions now include the submitted
+  descriptions, defaults where universal values are appropriate, and
+  source-specific suggested values and ranges.
+- Changed the v1 GARI formula to apply an explicit atmospheric-correction
+  parameter, `lmb`, to `(B - R)`. Added its index-specific description and a
+  default of `lmb = 1.0`.
 - Migrated catalogue validation from Pydantic 1 to Pydantic 2.
 - Replaced legacy Pydantic validators and configuration with
   `field_validator`, `ConfigDict`, and Pydantic 2 serialization.
@@ -114,6 +145,8 @@ submitted through the usual contribution process.
 
 ### Fixed
 
+- Corrected the SARVI formula in v0 and v1 so the atmospheric-resistance
+  coefficient `gamma` is applied to the `(R - B)` term.
 - Corrected the Aerosols band name in the band metadata.
 - Corrected the Landsat 9 coastal aerosol platform label, which previously
   identified the platform as Landsat 8.

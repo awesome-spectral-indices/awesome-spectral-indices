@@ -4194,11 +4194,12 @@
                 "L",
                 "N",
                 "R",
+                "gamma",
                 "B"
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-11",
-            "formula": "(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
+            "formula": "(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)",
             "long_name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
             "platforms": [
                 "Sentinel-2",

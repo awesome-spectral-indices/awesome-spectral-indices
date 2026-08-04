@@ -42,8 +42,26 @@ spindex = SpectralIndices(
             acronym="EVI",
             name="Enhanced Vegetation Index",
             formula="g * (N - R) / (N + C1 * R - C2 * B + L)",
+            constants={
+                "g": {
+                    "description": "Gain factor",
+                    "default_value": 2.5,
+                },
+                "C1": {
+                    "description": "Coefficient 1 for the aerosol resistance term",
+                    "default_value": 6.0,
+                },
+                "C2": {
+                    "description": "Coefficient 2 for the aerosol resistance term",
+                    "default_value": 7.5,
+                },
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 1.0,
+                },
+            },
             source={
-                "source_link": "https://doi.org/10.1016/S0034-4257(96)00112-5",
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00096-2",
                 "source_type": "article",
             },
             application_domain="vegetation",
@@ -53,8 +71,33 @@ spindex = SpectralIndices(
         EVI2=SpectralIndex(
             acronym="EVI2",
             name="Two-Band Enhanced Vegetation Index",
-            formula="g * (N - R) / (N + 2.4 * R + L)",
-            source={"source_link": "https://doi.org/10.1016/j.rse.2008.06.006"},
+            formula="g * (N - R) / (N + (C1 - (C2 / c)) * R + L)",
+            constants={
+                "g": {
+                    "description": "Gain factor",
+                    "default_value": 2.5,
+                },
+                "C1": {
+                    "description": "Coefficient 1 for the aerosol resistance term",
+                    "default_value": 6.0,
+                },
+                "C2": {
+                    "description": "Coefficient 2 for the aerosol resistance term",
+                    "default_value": 7.5,
+                },
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 1.0,
+                },
+                "c": {
+                    "description": "Ratio of red to blue reflectances. Red = c * Blue",
+                    "default_value": 2.08,
+                },
+            },
+            source={
+                "source_link": "https://doi.org/10.1016/j.rse.2008.06.006",
+                "source_type": "article",
+            },
             application_domain="vegetation",
             date_of_addition="2021-04-07",
             contributor="https://github.com/davemlz",
@@ -62,7 +105,13 @@ spindex = SpectralIndices(
         GARI=SpectralIndex(
             acronym="GARI",
             name="Green Atmospherically Resistant Vegetation Index",
-            formula="(N - (G - (B - R))) / (N + (G - (B - R)))",
+            formula="(N - (G - lmb * (B - R))) / (N + (G - lmb * (B - R)))",
+            constants={
+                "lmb": {
+                    "description": "Parameter that controls the atmospheric correction",
+                    "default_value": 1.0,
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/S0034-4257(96)00072-7"},
             application_domain="vegetation",
             date_of_addition="2021-04-07",
@@ -165,7 +214,22 @@ spindex = SpectralIndices(
             acronym="SAVI",
             name="Soil-Adjusted Vegetation Index",
             formula="(1.0 + L) * (N - R) / (N + R + L)",
-            source={"source_link": "https://doi.org/10.1016/0034-4257(88)90106-X"},
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                    "suggested_values": {
+                        "Low vegetation densities": 1.0,
+                        "Intermediate vegetation densities": 0.5,
+                        "High vegetation densities": 0.25,
+                    },
+                    "suggested_range": [0.25, 1],
+                },
+            },
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(88)90106-X",
+                "source_type": "article",
+            },
             application_domain="vegetation",
             date_of_addition="2021-04-07",
             contributor="https://github.com/davemlz",
@@ -237,6 +301,12 @@ spindex = SpectralIndices(
             acronym="SAVIT",
             name="Soil-Adjusted Vegetation Index Thermal",
             formula="(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                },
+            },
             source={"source_link": "https://doi.org/10.1080/01431160600954704"},
             application_domain="burn",
             date_of_addition="2021-04-07",
@@ -282,6 +352,20 @@ spindex = SpectralIndices(
             acronym="kEVI",
             name="Kernel Enhanced Vegetation Index",
             formula="g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
+            constants={
+                "g": {
+                    "description": "Gain factor",
+                    "default_value": 2.5,
+                },
+                "C1": {
+                    "description": "Coefficient 1 for the aerosol resistance term",
+                    "default_value": 6.0,
+                },
+                "C2": {
+                    "description": "Coefficient 2 for the aerosol resistance term",
+                    "default_value": 7.5,
+                },
+            },
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
             date_of_addition="2021-05-10",
@@ -336,6 +420,20 @@ spindex = SpectralIndices(
             acronym="ARVI",
             name="Atmospherically Resistant Vegetation Index",
             formula="(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
+            constants={
+                "gamma": {
+                    "description": "Weighting coefficient used for reducing atmospheric effects",
+                    "default_value": 1.0,
+                    "suggested_values": {
+                        "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                        "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7,
+                        "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                        "Lowest sensitivity for dense forests": [1.0, 2.0],
+                        "Equal ARVI to NDVI": 0.0
+                    },
+                    "suggested_range": [0.0,2.0]
+                },
+            },
             source={"source_link": "https://doi.org/10.1109/36.134076"},
             application_domain="vegetation",
             date_of_addition="2021-05-11",
@@ -344,7 +442,25 @@ spindex = SpectralIndices(
         SARVI=SpectralIndex(
             acronym="SARVI",
             name="Soil Adjusted and Atmospherically Resistant Vegetation Index",
-            formula="(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
+            formula="(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                },
+                "gamma": {
+                    "description": "Weighting coefficient used for reducing atmospheric effects",
+                    "default_value": 1.0,
+                    "suggested_values": {
+                        "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                        "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7,
+                        "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                        "Lowest sensitivity for dense forests": [1.0, 2.0],
+                        "Equal SARVI to SAVI": 0.0
+                    },
+                    "suggested_range": [0.0,2.0]
+                },
+            },
             source={"source_link": "https://doi.org/10.1109/36.134076"},
             application_domain="vegetation",
             date_of_addition="2021-05-11",
@@ -363,6 +479,12 @@ spindex = SpectralIndices(
             acronym="MNLI",
             name="Modified Non-Linear Vegetation Index",
             formula="(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                },
+            },
             source={"source_link": "https://doi.org/10.1109/TGRS.2003.812910"},
             application_domain="vegetation",
             date_of_addition="2021-05-11",
@@ -398,7 +520,22 @@ spindex = SpectralIndices(
         OCVI=SpectralIndex(
             acronym="OCVI",
             name="Optimized Chlorophyll Vegetation Index",
-            formula="(N / G) * (R / G) ** cexp",
+            formula="(N / G) * (R / G) ** c",
+            constants={
+                "c": {
+                    "description": "Correction factor",
+                    "default_value": 1.0,
+                    "suggested_values": {
+                        "Narrow-band reflectances": [0.3, 0.89],
+                        "Broad-band reflectances": [0.64, 1.74],
+                        "Broad-band and planophile leaf orientation (~ 30°)": [0.64,1.31],
+                        "Broad-band and intermediate leaf orientation (~ 50°)": [0.72, 1.40],
+                        "Broad-band and erectophile leaf orientation (~ 70°)": [0.87,1.74],
+                        "Equal OCVI to CVI": 1.0
+                    },
+                    "suggested_range": [0.3, 1.74]
+                },
+            },
             source={"source_link": "http://dx.doi.org/10.1007/s11119-008-9075-z"},
             application_domain="vegetation",
             date_of_addition="2021-05-13",
@@ -443,7 +580,19 @@ spindex = SpectralIndices(
         GDVI=SpectralIndex(
             acronym="GDVI",
             name="Generalized Difference Vegetation Index",
-            formula="((N ** nexp) - (R ** nexp)) / ((N ** nexp) + (R ** nexp))",
+            formula="((N ** n) - (R ** n)) / ((N ** n) + (R ** n))",
+            constants={
+                "n": {
+                    "description": "Power operation exponent to amplify the dynamic range",
+                    "default_value": 2.0,
+                    "suggested_values": {
+                        "Equal GDVI to NDVI": 1.0,
+                        "Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land" : 2.0,
+                        "Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land" : 3.0,
+                        "Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land" : 3.0
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.3390/rs6021211"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -453,6 +602,19 @@ spindex = SpectralIndices(
             acronym="WDRVI",
             name="Wide Dynamic Range Vegetation Index",
             formula="(alpha * N - R) / (alpha * N + R)",
+            constants={
+                "alpha": {
+                    "description": "Weighting coefficient",
+                    "default_value": 0.1,
+                    "suggested_values" : {
+                        "Equal WDRVI to NDVI": 1.0,
+                        "Conservative correction, high-biomass sensitivity without strongly down-weighting NIR": 0.2,
+                        "Stronger correction, moderate-to-high LAI, vegetation fraction where NDVI saturates": 0.1,
+                        "Aggressive correction, high LAI. Underperforms in sparse vegetation": 0.05,
+                    },
+                    "suggested_range": [0.1, 0.2]
+                },
+            },
             source={"source_link": "https://doi.org/10.1078/0176-1617-01176"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -561,6 +723,13 @@ spindex = SpectralIndices(
             acronym="WDVI",
             name="Weighted Difference Vegetation Index",
             formula="N - sla * R",
+            constants={
+                "sla": {
+                    "description": "Soil line slope. sla = N/R (only for soil pixels/measurements)",
+                    "default_value": 1.0,
+                    "suggested_values": {"Equal WDVI to DVI": 1.0}
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/0034-4257(89)90076-X"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -570,6 +739,18 @@ spindex = SpectralIndices(
             acronym="TSAVI",
             name="Transformed Soil-Adjusted Vegetation Index",
             formula="sla * (N - sla * R - slb) / (sla * N + R - sla * slb)",
+            constants={
+                "sla": {
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 1.0,
+                    "suggested_values": {"Equal TSAVI to NDVI when slb is 0.0": 1.0}
+                },
+                "slb": {
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 0.0,
+                    "suggested_values": {"Equal TSAVI to NDVI when sla is 1.0": 0.0}
+                },
+            },
             source={"source_link": "https://doi.org/10.1109/IGARSS.1989.576128"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -578,7 +759,21 @@ spindex = SpectralIndices(
         ATSAVI=SpectralIndex(
             acronym="ATSAVI",
             name="Adjusted Transformed Soil-Adjusted Vegetation Index",
-            formula="sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))",
+            formula="sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))",
+            constants={
+                "X": {
+                    "description": "Negative abscissa of a reference point located on the soil line",
+                    "default_value": 0.08
+                },
+                "sla": {
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 1.0
+                },
+                "slb": {
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 0.0
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/0034-4257(91)90009-U"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -588,6 +783,16 @@ spindex = SpectralIndices(
             acronym="SAVI2",
             name="Soil-Adjusted Vegetation Index 2",
             formula="N / (R + (slb / sla))",
+            constants={
+                "slb": {
+                    "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 0.0,
+                },
+                "sla": {
+                    "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)",
+                    "default_value": 1.0,
+                },
+            },
             source={"source_link": "https://doi.org/10.1080/01431169008955053"},
             application_domain="vegetation",
             date_of_addition="2021-05-14",
@@ -786,6 +991,17 @@ spindex = SpectralIndices(
             acronym="BWDRVI",
             name="Blue Wide Dynamic Range Vegetation Index",
             formula="(alpha * N - B) / (alpha * N + B)",
+            constants={
+                "alpha": {
+                    "description": "NIR reflectance scalar",
+                    "default_value": 0.01,
+                    "suggested_values": {
+                        "Low-to-moderate biomass": 0.1,
+                        "Moderate biomass": 0.05,
+                        "Dense biomass/High yield": 0.01
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.2135/cropsci2007.01.0031"},
             application_domain="vegetation",
             date_of_addition="2021-09-20",
@@ -948,6 +1164,11 @@ spindex = SpectralIndices(
             acronym="NIRvP",
             name="Near-Infrared Reflectance of Vegetation and Incoming PAR",
             formula="((N - R) / (N + R)) * N * PAR",
+            external_variables={
+                "PAR": {
+                    "description": "Photosynthetically Active Radiation",
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2021.112763"},
             application_domain="vegetation",
             date_of_addition="2021-11-18",
@@ -1029,6 +1250,17 @@ spindex = SpectralIndices(
             acronym="MBWI",
             name="Multi-Band Water Index",
             formula="(omega * G) - R - N - S1 - S2",
+            constants={
+                "omega": {
+                    "description": "Coefficient that maximizes the difference between water and non-water surfaces",
+                    "default_value": 2.0,
+                    "suggested_values": {
+                        "For negative index values assigned to water and non-water surfaces": 1.0,
+                        "For positive index values assigned to water surfaces and negative to non-water surfaces": 2.0,
+                        "For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result)": 5.0
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2018.01.018"},
             application_domain="water",
             date_of_addition="2022-01-17",
@@ -1065,6 +1297,18 @@ spindex = SpectralIndices(
             acronym="NIRvH2",
             name="Hyperspectral Near-Infrared Reflectance of Vegetation",
             formula="N - R - k * (lambdaN - lambdaR)",
+            constants={
+                "k": {
+                    "description": "Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm)",
+                    "default_value": 0.0,
+                },
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)",
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2021.112723"},
             application_domain="vegetation",
             date_of_addition="2022-01-17",
@@ -1074,6 +1318,13 @@ spindex = SpectralIndices(
             acronym="NDPI",
             name="Normalized Difference Phenology Index",
             formula="(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))",
+            constants={
+                "alpha": {
+                    "description": "Weighting coefficient",
+                    "default_value": 0.74,
+                    "suggested_range": [0.0,1.0]
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2017.04.031"},
             application_domain="vegetation",
             date_of_addition="2022-01-20",
@@ -1092,6 +1343,17 @@ spindex = SpectralIndices(
             acronym="DVIplus",
             name="Difference Vegetation Index Plus",
             formula="((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R",
+            constants={
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)",
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)",
+                },
+                "lambdaG": {
+                    "description": "Green central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2019.03.028"},
             application_domain="vegetation",
             date_of_addition="2022-01-20",
@@ -1101,6 +1363,17 @@ spindex = SpectralIndices(
             acronym="NDGI",
             name="Normalized Difference Greenness Index",
             formula="(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)",
+            constants={
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)",
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)",
+                },
+                "lambdaG": {
+                    "description": "Green central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2019.03.028"},
             application_domain="vegetation",
             date_of_addition="2022-01-20",
@@ -1146,6 +1419,12 @@ spindex = SpectralIndices(
             acronym="IBI",
             name="Index-Based Built-Up Index",
             formula="(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                },
+            },
             source={"source_link": "https://doi.org/10.1080/01431160802039957"},
             application_domain="urban",
             date_of_addition="2022-02-09",
@@ -1172,7 +1451,13 @@ spindex = SpectralIndices(
         NDWIns=SpectralIndex(
             acronym="NDWIns",
             name="Normalized Difference Water Index with no Snow Cover and Glaciers",
-            formula="(G - alpha * N)/(G + N)",
+            formula="(G - a * N)/(G + N)",
+            constants={
+                "a": {
+                    "description": "Empirical parameter weighting NIR reflectance",
+                    "default_value": 2.0,
+                },
+            },
             source={"source_link": "https://doi.org/10.3390/w12051339"},
             application_domain="water",
             date_of_addition="2022-04-08",
@@ -1181,7 +1466,13 @@ spindex = SpectralIndices(
         NDSInw=SpectralIndex(
             acronym="NDSInw",
             name="Normalized Difference Snow Index with no Water",
-            formula="(N - S1 - beta)/(N + S1)",
+            formula="(N - S1 - b)/(N + S1)",
+            constants={
+                "b": {
+                    "description": "Empirical parameter that offsets the index",
+                    "default_value": 0.05,
+                },
+            },
             source={"source_link": "https://doi.org/10.3390/w12051339"},
             application_domain="snow",
             date_of_addition="2022-04-08",
@@ -1344,6 +1635,12 @@ spindex = SpectralIndices(
             acronym="GSAVI",
             name="Green Soil Adjusted Vegetation Index",
             formula="(1.0 + L) * (N - G) / (N + G + L)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                },
+            },
             source={"source_link": "https://doi.org/10.2134/agronj2004.0314"},
             application_domain="vegetation",
             date_of_addition="2022-04-08",
@@ -1401,6 +1698,13 @@ spindex = SpectralIndices(
             acronym="IAVI",
             name="New Atmospherically Resistant Vegetation Index",
             formula="(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))",
+            constants={
+                "gamma": {
+                    "description": "Correction coefficient for upward atmospheric path radiance reaching the satellite",
+                    "default_value": 1.0,
+                    "suggested_range": [0.65, 1.21]
+                },
+            },
             source={"source_link": "https://www.jipb.net/EN/abstract/abstract23925.shtml"},
             application_domain="vegetation",
             date_of_addition="2022-04-08",
@@ -1527,6 +1831,18 @@ spindex = SpectralIndices(
             acronym="NBUI",
             name="New Built-Up Index",
             formula="((S1 - N)/(10.0 * (T + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
+            constants={
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 0.5,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values":{
+                        "High density vegetation": 1.0,
+                        "Medium density vegetation": 1.0,
+                        "Low density vegetation": 0.0
+                    }
+                },
+            },
             source={"source_link": "https://hdl.handle.net/1959.11/29500"},
             application_domain="urban",
             date_of_addition="2022-04-18",
@@ -1860,6 +2176,12 @@ spindex = SpectralIndices(
             acronym="SEVI",
             name="Shadow-Eliminated Vegetation Index",
             formula="(N/R) + fdelta * (1.0/R)",
+            constants={
+                "fdelta": {
+                    "description": "Adjustment factor to avoid under-elimination or over-elimination",
+                    "default_value": 0.581,
+                },
+            },
             source={"source_link": "https://doi.org/10.1080/17538947.2018.1495770"},
             application_domain="vegetation",
             date_of_addition="2022-09-22",
@@ -2112,6 +2434,16 @@ spindex = SpectralIndices(
             acronym="EBI",
             name="Enhanced Bloom Index",
             formula="(R + G + B)/((G/B) * (R - B + epsilon))",
+            constants={
+                "epsilon": {
+                    "description": "Adjustment constant",
+                    "default_value": 1.0,
+                    "suggested_values": {
+                        "For reflectances in [0,1]": 1.0,
+                        "For raw RGB values in [0,255]": 256
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.isprsjprs.2019.08.006"},
             application_domain="vegetation",
             date_of_addition="2023-07-03",
@@ -2157,6 +2489,12 @@ spindex = SpectralIndices(
             acronym="sNIRvNDPI",
             name="SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI",
             formula="(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
+            constants={
+                "alpha": {
+                    "description": "Parameter to mitigate soil and snow effects. Taken from NDPI",
+                    "default_value": 0.74,
+                },
+            },
             source={"source_link": "https://doi.org/10.1029/2024JG008240"},
             application_domain="vegetation",
             date_of_addition="2024-05-16",
@@ -2211,6 +2549,17 @@ spindex = SpectralIndices(
             acronym="FAI",
             name="Floating Algae Index",
             formula="N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
+            constants={
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)",
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)",
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.rse.2009.05.012"},
             application_domain="water",
             date_of_addition="2024-05-03",
@@ -2265,6 +2614,17 @@ spindex = SpectralIndices(
             acronym="CRSWIR",
             name="Continuum Removal SWIR",
             formula="S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
+            constants={
+                "lambdaS2": {
+                    "description": "SWIR2 central wavelength (nm)",
+                },
+                "lambdaN2": {
+                    "description": "NIR2 central wavelength (nm)",
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html"},
             application_domain="vegetation",
             date_of_addition="2025-06-23",
@@ -2301,6 +2661,17 @@ spindex = SpectralIndices(
             acronym="FDI",
             name="Floating Debris Index",
             formula="N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
+            constants={
+                "lambdaN": {
+                    "description": "NIR central wavelength (nm)",
+                },
+                "lambdaR": {
+                    "description": "Red central wavelength (nm)",
+                },
+                "lambdaS1": {
+                    "description": "SWIR1 central wavelength (nm)",
+                },
+            },
             source={"source_link": "https://doi.org/10.1038/s41598-020-62298-z"},
             application_domain="water",
             date_of_addition="2025-07-18",
@@ -2310,6 +2681,26 @@ spindex = SpectralIndices(
             acronym="NDVI4RE",
             name="4-band Red Edge Normalized Difference Vegetation Index",
             formula="((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1))",
+            constants={
+                "alpha": {
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "default_value": 0.2,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+                "beta": {
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "default_value": 0.2,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2319,6 +2710,26 @@ spindex = SpectralIndices(
             acronym="SAVI4RE",
             name="4-band Red Edge Soil Adjusted Vegetation Index",
             formula="2.0 * ((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1 + 1))",
+            constants={
+                "alpha": {
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "default_value": 0.2,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+                "beta": {
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "default_value": 0.2,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.2,
+                        "August": 0.7
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2328,6 +2739,26 @@ spindex = SpectralIndices(
             acronym="RVI4RE",
             name="4-band Red Edge Ratio Vegetation Index",
             formula="(alpha * RE3 + (1 - alpha) * RE2)/(beta * R + (1 - beta) * RE1)",
+            constants={
+                "alpha": {
+                    "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+                    "default_value": 0.3,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.3,
+                        "August": 0.9
+                    }
+                },
+                "beta": {
+                    "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+                    "default_value": 0.3,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "April": 0.3,
+                        "August": 0.6
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2337,6 +2768,17 @@ spindex = SpectralIndices(
             acronym="NDTI4RE",
             name="4-band Red Edge Normalized Difference Tillage Index",
             formula="gamma * (S1 - S2)/(S1 + S2) + (1 - gamma) * (N - RE3)/(N + RE3)",
+            constants={
+                "gamma": {
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "default_value": 0.4,
+                    "suggested_range": [0.0, 1.0],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2346,6 +2788,17 @@ spindex = SpectralIndices(
             acronym="SNDTI4RE",
             name="4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index",
             formula="gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N + RE3 + 1.0)",
+            constants={
+                "gamma": {
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "default_value": 0.4,
+                    "suggested_range": [0.0, 1.0],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2355,6 +2808,17 @@ spindex = SpectralIndices(
             acronym="STI4RE",
             name="4-band Red Edge Soil Tillage Index",
             formula="gamma * S1/S2 + (1 - gamma) * N/RE3",
+            constants={
+                "gamma": {
+                    "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+                    "default_value": 0.4,
+                    "suggested_range": [0.0, 1.0],
+                    "suggested_values": {
+                        "April": 0.4,
+                        "November": 0.5
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.jag.2022.102793"},
             application_domain="vegetation",
             date_of_addition="2025-09-30",
@@ -2382,6 +2846,17 @@ spindex = SpectralIndices(
             acronym="SNDTI",
             name="Soil-Adjusted Normalized Difference Tillage Index",
             formula="(1.0 + L) * (S1 - S2) / (S1 + S2 + L)",
+            constants={
+                "L": {
+                    "description": "Soil adjustment factor",
+                    "default_value": 0.6,
+                    "suggested_range": [0.0,1.0],
+                    "suggested_values": {
+                        "Low litter mass": 1.0,
+                        "Increased litter mass": 0.0
+                    }
+                },
+            },
             source={"source_link": "https://doi.org/10.1080/22797254.2017.1418186"},
             application_domain="vegetation",
             date_of_addition="2025-10-11",
@@ -2472,6 +2947,12 @@ spindex = SpectralIndices(
             acronym="RWI",
             name="Rescaled Water Index",
             formula="((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)",
+            constants={
+                "n": {
+                    "description": "Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)",
+                    "default_value": 5,
+                },
+            },
             source={"source_link": "https://doi.org/10.1109/JSTARS.2025.3562089"},
             application_domain="water",
             date_of_addition="2026-03-31",
@@ -2508,6 +2989,12 @@ spindex = SpectralIndices(
             acronym="WCI1",
             name="Wheat Canopy Index (Growth Stage 1)",
             formula="-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon))",
+            constants={
+                "epsilon": {
+                    "description": "Adjustment constant for numerical stability",
+                    "default_value": 1e-10
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.mlwa.2026.100914"},
             application_domain="vegetation",
             date_of_addition="2026-05-27",
@@ -2517,6 +3004,12 @@ spindex = SpectralIndices(
             acronym="WCI2",
             name="Wheat Canopy Index (Growth Stage 2)",
             formula="-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))",
+            constants={
+                "epsilon": {
+                    "description": "Adjustment constant for numerical stability",
+                    "default_value": 1e-10
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/j.mlwa.2026.100914"},
             application_domain="vegetation",
             date_of_addition="2026-05-27",
@@ -2535,6 +3028,16 @@ spindex = SpectralIndices(
             acronym="GRARI",
             name="Atmospheric Resistant Green-Red Index",
             formula="(N - (eta * G + (1.0 - eta) * R - lmb * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lmb * (B - R)))",
+            constants={
+                "eta": {
+                    "description": "Mix of green and red reflectances to get properties that are between ARVI and GARI",
+                    "default_value": 0.5,
+                },
+                "lmb": {
+                    "description": "Parameter that controls the atmospheric correction",
+                    "default_value": 1.0,
+                },
+            },
             source={"source_link": "https://doi.org/10.1016/S0034-4257(96)00072-7"},
             application_domain="vegetation",
             date_of_addition="2026-07-22",

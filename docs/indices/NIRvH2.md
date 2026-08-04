@@ -29,7 +29,7 @@ N - R - k * (lambdaN - lambdaR)
 
 ### Constants
 
-- `k`: Slope parameter by soil used for NIRvH2. Default: `0.0`.
+- `k`: Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm). Default: `0.0`.
 - `lambdaN`: NIR central wavelength (nm).
 - `lambdaR`: Red central wavelength (nm).
 

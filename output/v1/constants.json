@@ -1,142 +1,541 @@
 {
     "C1": {
-        "default": 6.0,
-        "description": "Coefficient 1 for the aerosol resistance term",
-        "short_name": "C1"
+        "EVI": {
+            "default_value": 6.0,
+            "description": "Coefficient 1 for the aerosol resistance term"
+        },
+        "EVI2": {
+            "default_value": 6.0,
+            "description": "Coefficient 1 for the aerosol resistance term"
+        },
+        "kEVI": {
+            "default_value": 6.0,
+            "description": "Coefficient 1 for the aerosol resistance term"
+        }
     },
     "C2": {
-        "default": 7.5,
-        "description": "Coefficient 2 for the aerosol resistance term",
-        "short_name": "C2"
+        "EVI": {
+            "default_value": 7.5,
+            "description": "Coefficient 2 for the aerosol resistance term"
+        },
+        "EVI2": {
+            "default_value": 7.5,
+            "description": "Coefficient 2 for the aerosol resistance term"
+        },
+        "kEVI": {
+            "default_value": 7.5,
+            "description": "Coefficient 2 for the aerosol resistance term"
+        }
     },
     "L": {
-        "default": 1.0,
-        "description": "Canopy background adjustment",
-        "short_name": "L"
+        "EVI": {
+            "default_value": 1.0,
+            "description": "Canopy background adjustment"
+        },
+        "EVI2": {
+            "default_value": 1.0,
+            "description": "Canopy background adjustment"
+        },
+        "GSAVI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment"
+        },
+        "IBI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment"
+        },
+        "MNLI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment"
+        },
+        "NBUI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "High density vegetation": 1.0,
+                "Low density vegetation": 0.0,
+                "Medium density vegetation": 1.0
+            }
+        },
+        "SARVI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment"
+        },
+        "SAVI": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment",
+            "suggested_range": [
+                0.25,
+                1
+            ],
+            "suggested_values": {
+                "High vegetation densities": 0.25,
+                "Intermediate vegetation densities": 0.5,
+                "Low vegetation densities": 1.0
+            }
+        },
+        "SAVIT": {
+            "default_value": 0.5,
+            "description": "Canopy background adjustment"
+        },
+        "SNDTI": {
+            "default_value": 0.6,
+            "description": "Soil adjustment factor",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "Increased litter mass": 0.0,
+                "Low litter mass": 1.0
+            }
+        }
     },
-    "PAR": {
-        "default": null,
-        "description": "Photosynthetically Active Radiation",
-        "short_name": "PAR"
+    "X": {
+        "ATSAVI": {
+            "default_value": 0.08,
+            "description": "Negative abscissa of a reference point located on the soil line"
+        }
+    },
+    "a": {
+        "NDWIns": {
+            "default_value": 2.0,
+            "description": "Empirical parameter weighting NIR reflectance"
+        }
     },
     "alpha": {
-        "default": 0.1,
-        "description": "Weighting coefficient used for WDRVI",
-        "short_name": "alpha"
+        "BWDRVI": {
+            "default_value": 0.01,
+            "description": "NIR reflectance scalar",
+            "suggested_values": {
+                "Dense biomass/High yield": 0.01,
+                "Low-to-moderate biomass": 0.1,
+                "Moderate biomass": 0.05
+            }
+        },
+        "NDPI": {
+            "default_value": 0.74,
+            "description": "Weighting coefficient",
+            "suggested_range": [
+                0.0,
+                1.0
+            ]
+        },
+        "NDVI4RE": {
+            "default_value": 0.2,
+            "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.2,
+                "August": 0.7
+            }
+        },
+        "RVI4RE": {
+            "default_value": 0.3,
+            "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.3,
+                "August": 0.9
+            }
+        },
+        "SAVI4RE": {
+            "default_value": 0.2,
+            "description": "Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.2,
+                "August": 0.7
+            }
+        },
+        "WDRVI": {
+            "default_value": 0.1,
+            "description": "Weighting coefficient",
+            "suggested_range": [
+                0.1,
+                0.2
+            ],
+            "suggested_values": {
+                "Aggressive correction, high LAI. Underperforms in sparse vegetation": 0.05,
+                "Conservative correction, high-biomass sensitivity without strongly down-weighting NIR": 0.2,
+                "Equal WDRVI to NDVI": 1.0,
+                "Stronger correction, moderate-to-high LAI, vegetation fraction where NDVI saturates": 0.1
+            }
+        },
+        "sNIRvNDPI": {
+            "default_value": 0.74,
+            "description": "Parameter to mitigate soil and snow effects. Taken from NDPI"
+        }
+    },
+    "b": {
+        "NDSInw": {
+            "default_value": 0.05,
+            "description": "Empirical parameter that offsets the index"
+        }
     },
     "beta": {
-        "default": 0.05,
-        "description": "Calibration parameter used for NDSInw",
-        "short_name": "beta"
+        "NDVI4RE": {
+            "default_value": 0.2,
+            "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.2,
+                "August": 0.7
+            }
+        },
+        "RVI4RE": {
+            "default_value": 0.3,
+            "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.3,
+                "August": 0.6
+            }
+        },
+        "SAVI4RE": {
+            "default_value": 0.2,
+            "description": "Parameter representing the proportion of Red reflectance (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.2,
+                "August": 0.7
+            }
+        }
     },
     "c": {
-        "default": 1.0,
-        "description": "Trade-off parameter in the polynomial kernel",
-        "short_name": "c"
+        "EVI2": {
+            "default_value": 2.08,
+            "description": "Ratio of red to blue reflectances. Red = c * Blue"
+        },
+        "OCVI": {
+            "default_value": 1.0,
+            "description": "Correction factor",
+            "suggested_range": [
+                0.3,
+                1.74
+            ],
+            "suggested_values": {
+                "Broad-band and erectophile leaf orientation (~ 70\u00b0)": [
+                    0.87,
+                    1.74
+                ],
+                "Broad-band and intermediate leaf orientation (~ 50\u00b0)": [
+                    0.72,
+                    1.4
+                ],
+                "Broad-band and planophile leaf orientation (~ 30\u00b0)": [
+                    0.64,
+                    1.31
+                ],
+                "Broad-band reflectances": [
+                    0.64,
+                    1.74
+                ],
+                "Equal OCVI to CVI": 1.0,
+                "Narrow-band reflectances": [
+                    0.3,
+                    0.89
+                ]
+            }
+        }
     },
-    "cexp": {
-        "default": 1.16,
-        "description": "Exponent used for OCVI",
-        "short_name": "cexp"
-    },
+    "cexp": {},
     "epsilon": {
-        "default": 1,
-        "description": "Adjustment constant used for EBI, WC1 and WC2. For WCx indices use epsilon = 1e-10",
-        "short_name": "epsilon"
+        "EBI": {
+            "default_value": 1.0,
+            "description": "Adjustment constant",
+            "suggested_values": {
+                "For raw RGB values in [0,255]": 256,
+                "For reflectances in [0,1]": 1.0
+            }
+        },
+        "WCI1": {
+            "default_value": 1e-10,
+            "description": "Adjustment constant for numerical stability"
+        },
+        "WCI2": {
+            "default_value": 1e-10,
+            "description": "Adjustment constant for numerical stability"
+        }
     },
     "eta": {
-        "default": 0.5,
-        "description": "Mix of green and red reflectances in GRARI",
-        "short_name": "eta"
+        "GRARI": {
+            "default_value": 0.5,
+            "description": "Mix of green and red reflectances to get properties that are between ARVI and GARI"
+        }
     },
     "fdelta": {
-        "default": 0.581,
-        "description": "Adjustment factor used for SEVI",
-        "short_name": "fdelta"
+        "SEVI": {
+            "default_value": 0.581,
+            "description": "Adjustment factor to avoid under-elimination or over-elimination"
+        }
     },
     "g": {
-        "default": 2.5,
-        "description": "Gain factor",
-        "short_name": "g"
+        "EVI": {
+            "default_value": 2.5,
+            "description": "Gain factor"
+        },
+        "EVI2": {
+            "default_value": 2.5,
+            "description": "Gain factor"
+        },
+        "kEVI": {
+            "default_value": 2.5,
+            "description": "Gain factor"
+        }
     },
     "gamma": {
-        "default": 1.0,
-        "description": "Weighting coefficient used for ARVI",
-        "short_name": "gamma"
+        "ARVI": {
+            "default_value": 1.0,
+            "description": "Weighting coefficient used for reducing atmospheric effects",
+            "suggested_range": [
+                0.0,
+                2.0
+            ],
+            "suggested_values": {
+                "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                "Equal ARVI to NDVI": 0.0,
+                "Lowest sensitivity for dense forests": [
+                    1.0,
+                    2.0
+                ],
+                "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7
+            }
+        },
+        "IAVI": {
+            "default_value": 1.0,
+            "description": "Correction coefficient for upward atmospheric path radiance reaching the satellite",
+            "suggested_range": [
+                0.65,
+                1.21
+            ]
+        },
+        "NDTI4RE": {
+            "default_value": 0.4,
+            "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.4,
+                "November": 0.5
+            }
+        },
+        "SARVI": {
+            "default_value": 1.0,
+            "description": "Weighting coefficient used for reducing atmospheric effects",
+            "suggested_range": [
+                0.0,
+                2.0
+            ],
+            "suggested_values": {
+                "Bare soil, very sparse vegetation, or arid and semi-arid areas": 0.5,
+                "Equal SARVI to SAVI": 0.0,
+                "Lowest sensitivity for dense forests": [
+                    1.0,
+                    2.0
+                ],
+                "Model-specific optimum for continental aerosol. alpha ~ 1.3": 0.9,
+                "Model-specific optimum for maritime aerosol. alpha ~ 0.2": 1.7
+            }
+        },
+        "SNDTI4RE": {
+            "default_value": 0.4,
+            "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.4,
+                "November": 0.5
+            }
+        },
+        "STI4RE": {
+            "default_value": 0.4,
+            "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",
+            "suggested_range": [
+                0.0,
+                1.0
+            ],
+            "suggested_values": {
+                "April": 0.4,
+                "November": 0.5
+            }
+        }
     },
     "k": {
-        "default": 0.0,
-        "description": "Slope parameter by soil used for NIRvH2",
-        "short_name": "k"
+        "NIRvH2": {
+            "default_value": 0.0,
+            "description": "Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm)"
+        }
     },
     "lambdaG": {
-        "default": null,
-        "description": "Green central wavelength (nm)",
-        "short_name": "lambdaG"
+        "DVIplus": {
+            "description": "Green central wavelength (nm)"
+        },
+        "NDGI": {
+            "description": "Green central wavelength (nm)"
+        }
     },
     "lambdaN": {
-        "default": null,
-        "description": "NIR central wavelength (nm)",
-        "short_name": "lambdaN"
+        "DVIplus": {
+            "description": "NIR central wavelength (nm)"
+        },
+        "FAI": {
+            "description": "NIR central wavelength (nm)"
+        },
+        "FDI": {
+            "description": "NIR central wavelength (nm)"
+        },
+        "NDGI": {
+            "description": "NIR central wavelength (nm)"
+        },
+        "NIRvH2": {
+            "description": "NIR central wavelength (nm)"
+        }
     },
     "lambdaN2": {
-        "default": null,
-        "description": "NIR2 central wavelength (nm)",
-        "short_name": "lambdaN2"
+        "CRSWIR": {
+            "description": "NIR2 central wavelength (nm)"
+        }
     },
     "lambdaR": {
-        "default": null,
-        "description": "Red central wavelength (nm)",
-        "short_name": "lambdaR"
+        "DVIplus": {
+            "description": "Red central wavelength (nm)"
+        },
+        "FAI": {
+            "description": "Red central wavelength (nm)"
+        },
+        "FDI": {
+            "description": "Red central wavelength (nm)"
+        },
+        "NDGI": {
+            "description": "Red central wavelength (nm)"
+        },
+        "NIRvH2": {
+            "description": "Red central wavelength (nm)"
+        }
     },
     "lambdaS1": {
-        "default": null,
-        "description": "SWIR1 central wavelength (nm)",
-        "short_name": "lambdaS1"
+        "CRSWIR": {
+            "description": "SWIR1 central wavelength (nm)"
+        },
+        "FAI": {
+            "description": "SWIR1 central wavelength (nm)"
+        },
+        "FDI": {
+            "description": "SWIR1 central wavelength (nm)"
+        }
     },
     "lambdaS2": {
-        "default": null,
-        "description": "SWIR2 central wavelength (nm)",
-        "short_name": "lambdaS2"
+        "CRSWIR": {
+            "description": "SWIR2 central wavelength (nm)"
+        }
     },
     "lmb": {
-        "default": 1,
-        "description": "Parameter that controls the atmospheric correction in GRARI",
-        "short_name": "lmb"
+        "GARI": {
+            "default_value": 1.0,
+            "description": "Parameter that controls the atmospheric correction"
+        },
+        "GRARI": {
+            "default_value": 1.0,
+            "description": "Parameter that controls the atmospheric correction"
+        }
     },
     "n": {
-        "default": 5,
-        "description": "Adjustment factor used for RWI. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)",
-        "short_name": "n"
+        "GDVI": {
+            "default_value": 2.0,
+            "description": "Power operation exponent to amplify the dynamic range",
+            "suggested_values": {
+                "Equal GDVI to NDVI": 1.0,
+                "Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land": 2.0,
+                "Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land": 3.0,
+                "Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land": 3.0
+            }
+        },
+        "RWI": {
+            "default_value": 5,
+            "description": "Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)"
+        }
     },
-    "nexp": {
-        "default": 2.0,
-        "description": "Exponent used for GDVI",
-        "short_name": "nexp"
-    },
+    "nexp": {},
     "omega": {
-        "default": 2.0,
-        "description": "Weighting coefficient used for MBWI",
-        "short_name": "omega"
+        "MBWI": {
+            "default_value": 2.0,
+            "description": "Coefficient that maximizes the difference between water and non-water surfaces",
+            "suggested_values": {
+                "For negative index values assigned to water and non-water surfaces": 1.0,
+                "For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result)": 5.0,
+                "For positive index values assigned to water surfaces and negative to non-water surfaces": 2.0
+            }
+        }
     },
-    "p": {
-        "default": 2.0,
-        "description": "Kernel degree in the polynomial kernel",
-        "short_name": "p"
-    },
-    "sigma": {
-        "default": 0.5,
-        "description": "Length-scale parameter in the RBF kernel",
-        "short_name": "sigma"
-    },
+    "p": {},
+    "sigma": {},
     "sla": {
-        "default": 1.0,
-        "description": "Soil line slope",
-        "short_name": "sla"
+        "ATSAVI": {
+            "default_value": 1.0,
+            "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)"
+        },
+        "SAVI2": {
+            "default_value": 1.0,
+            "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)"
+        },
+        "TSAVI": {
+            "default_value": 1.0,
+            "description": "Soil line slope. N = sla * R + slb (only for soil pixels/measurements)",
+            "suggested_values": {
+                "Equal TSAVI to NDVI when slb is 0.0": 1.0
+            }
+        },
+        "WDVI": {
+            "default_value": 1.0,
+            "description": "Soil line slope. sla = N/R (only for soil pixels/measurements)",
+            "suggested_values": {
+                "Equal WDVI to DVI": 1.0
+            }
+        }
     },
     "slb": {
-        "default": 0.0,
-        "description": "Soil line intercept",
-        "short_name": "slb"
+        "ATSAVI": {
+            "default_value": 0.0,
+            "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)"
+        },
+        "SAVI2": {
+            "default_value": 0.0,
+            "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)"
+        },
+        "TSAVI": {
+            "default_value": 0.0,
+            "description": "Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements)",
+            "suggested_values": {
+                "Equal TSAVI to NDVI when sla is 1.0": 0.0
+            }
+        }
     }
 }

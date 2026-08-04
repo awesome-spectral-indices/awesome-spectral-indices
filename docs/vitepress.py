@@ -13,11 +13,8 @@ DOCS_DIR = REPO_ROOT / "docs"
 INDICES_DIR = DOCS_DIR / "indices"
 CATALOGUE_PATH = REPO_ROOT / "output/v1/spectral-indices-dict.json"
 BANDS_PATH = REPO_ROOT / "output/v1/bands.json"
-CONSTANTS_PATH = REPO_ROOT / "output/v1/constants.json"
 CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
-PEOPLE_CONTRIBUTORS_PATH = (
-    DOCS_DIR / ".vitepress/data/index-contributors.json"
-)
+PEOPLE_CONTRIBUTORS_PATH = DOCS_DIR / ".vitepress/data/index-contributors.json"
 
 SAFE_FILENAME = re.compile(r"^[A-Za-z0-9._+-]+$")
 EMAIL_ADDRESS = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -25,7 +22,7 @@ EMAIL_ADDRESS = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 EMAIL_ICON = (
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
     '<path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 '
-    '0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 '
+    "0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 "
     '5 8-5v2Z"/></svg>'
 )
 
@@ -85,31 +82,64 @@ def render_bands(band_names, band_metadata):
     )
 
 
-def render_constants(constant_defaults, constant_metadata):
-    """Render formula constants and their catalogue defaults."""
-    if not constant_defaults:
+def render_constants(constant_definitions):
+    """Render formula constants and their contributor-provided metadata."""
+    if not constant_definitions:
         return "No constants are used in this index."
 
     items = []
-    for name, default in constant_defaults.items():
-        metadata = constant_metadata[name]
-        description = sentence(metadata["description"])
+    for name, definition in constant_definitions.items():
+        description = sentence(definition["description"])
+        default = definition.get("default_value")
         if default is not None:
             description = f"{description} Default: `{default}`."
+        suggested_range = definition.get("suggested_range")
+        if suggested_range is not None:
+            description = (
+                f"{description} Suggested range: `{suggested_range[0]}`–"
+                f"`{suggested_range[1]}`."
+            )
+        suggested_values = definition.get("suggested_values")
+        if suggested_values is not None:
+            rendered_values = []
+            for condition, value in suggested_values.items():
+                if isinstance(value, list):
+                    rendered_value = f"`{value[0]}`–`{value[1]}`"
+                else:
+                    rendered_value = f"`{value}`"
+                rendered_values.append(f"{condition}: {rendered_value}")
+            description = (
+                f"{description} Suggested values: " + "; ".join(rendered_values) + "."
+            )
         items.append(f"- `{name}`: {description}")
     return "\n".join(items)
+
+
+def render_external_variables(external_definitions):
+    """Render descriptions for formula inputs supplied outside spectral data."""
+    return "\n".join(
+        f"- `{name}`: {sentence(definition['description'])}"
+        for name, definition in external_definitions.items()
+    )
 
 
 def render_index_page(
     key,
     index,
     band_metadata,
-    constant_metadata,
 ):
     """Render one spectral-index page using the NDVI page structure."""
     domain = index["application_domain"].replace("_", " ").title()
     bands = render_bands(index["bands"], band_metadata)
-    constants = render_constants(index["constants"], constant_metadata)
+    constants = render_constants(index["constants"])
+    external_variables_section = ""
+    if index["external_variables"]:
+        external_variables = render_external_variables(index["external_variables"])
+        external_variables_section = f"""### External Variables
+
+{external_variables}
+
+"""
 
     return f"""---
 # https://vitepress.dev/reference/default-theme-home-page
@@ -143,7 +173,7 @@ hero:
 
 {constants}
 
-## Contributor
+{external_variables_section}## Contributor
 
 Index contributed by {index["contributor"]} on {index["date_of_addition"]}.
 """
@@ -180,9 +210,7 @@ def contributor_member(value):
             normalized_email.encode(), usedforsecurity=False
         ).hexdigest()
         return {
-            "avatar": (
-                f"https://www.gravatar.com/avatar/{avatar_hash}?d=identicon"
-            ),
+            "avatar": (f"https://www.gravatar.com/avatar/{avatar_hash}?d=identicon"),
             "name": value,
             "title": "Index Contributor",
             "links": [
@@ -194,8 +222,7 @@ def contributor_member(value):
         }
 
     raise ValueError(
-        "Contributor must be a GitHub profile URL or email address: "
-        f"{value!r}"
+        "Contributor must be a GitHub profile URL or email address: " f"{value!r}"
     )
 
 
@@ -223,7 +250,6 @@ def generate_index_pages():
     """Generate one Markdown page for every v1 spectral index."""
     catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
     band_metadata = load_json(BANDS_PATH)
-    constant_metadata = load_json(CONSTANTS_PATH)
 
     INDICES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -234,7 +260,6 @@ def generate_index_pages():
             key,
             index,
             band_metadata,
-            constant_metadata,
         )
         (INDICES_DIR / f"{key}.md").write_text(page)
         if key in CASE_COLLISION_ROUTES:

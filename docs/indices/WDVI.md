@@ -29,7 +29,7 @@ N - sla * R
 
 ### Constants
 
-- `sla`: Soil line slope. Default: `1.0`.
+- `sla`: Soil line slope. sla = N/R (only for soil pixels/measurements). Default: `1.0`. Suggested values: Equal WDVI to DVI: `1.0`.
 
 ## Contributor
 

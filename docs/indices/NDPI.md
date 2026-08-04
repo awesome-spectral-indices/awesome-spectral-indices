@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
+- `alpha`: Weighting coefficient. Default: `0.74`. Suggested range: `0.0`–`1.0`.
 
 ## Contributor
 

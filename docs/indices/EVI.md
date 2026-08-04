@@ -13,7 +13,7 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "https://doi.org/10.1016/S0034-4257(96)00112-5"
+      link: "https://doi.org/10.1016/S0034-4257(02)00096-2"
 ---
 
 ## Formula

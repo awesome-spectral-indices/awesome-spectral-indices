@@ -1,18 +1,32 @@
 import ast
 import re
 from datetime import date
-from typing import Dict, List, Literal, Optional, Union
+from typing import Annotated, Dict, List, Literal, Optional, Union
 from urllib.parse import urlsplit
 
 from pydantic import (
     BaseModel,
     ConfigDict,
+    Field,
     PrivateAttr,
+    StrictFloat,
+    StrictInt,
+    StrictStr,
     computed_field,
     field_validator,
+    model_serializer,
+    model_validator,
 )
 
-from src.v1.utils import Bands, Constants, IndexType
+from src.v1.utils import Bands, Constants, External, IndexType
+
+
+StrictNumber = Union[StrictInt, StrictFloat]
+NumericRange = Annotated[
+    List[StrictNumber],
+    Field(min_length=2, max_length=2),
+]
+SuggestedValues = Dict[StrictStr, Union[StrictInt, StrictFloat, NumericRange]]
 
 
 class FormulaVisitor(ast.NodeVisitor):
@@ -151,6 +165,37 @@ class Source(BaseModel):
         self._source_link_status = status
 
 
+class ConstantDefinition(BaseModel):
+    """Contributor-provided metadata for one formula constant."""
+
+    description: StrictStr
+    default_value: Optional[StrictNumber] = None
+    suggested_values: Optional[SuggestedValues] = None
+    suggested_range: Optional[NumericRange] = None
+
+    model_config = ConfigDict(extra="forbid")
+
+    @model_serializer
+    def serialize_definition(self):
+        """Omit the optional default when the contributor did not provide one."""
+        definition = {"description": self.description}
+        if self.default_value is not None:
+            definition["default_value"] = self.default_value
+        if self.suggested_values is not None:
+            definition["suggested_values"] = self.suggested_values
+        if self.suggested_range is not None:
+            definition["suggested_range"] = self.suggested_range
+        return definition
+
+
+class ExternalVariableDefinition(BaseModel):
+    """Contributor-provided description for one external formula variable."""
+
+    description: StrictStr
+
+    model_config = ConfigDict(extra="forbid")
+
+
 class SpectralIndex(BaseModel):
     """
     Python dataclass for Spectral Indices
@@ -162,7 +207,8 @@ class SpectralIndex(BaseModel):
     name: str
     formula: str
     bands: Optional[List[str]] = None
-    constants: Optional[Dict[str, Optional[Union[int, float]]]] = None
+    constants: Optional[Dict[str, ConstantDefinition]] = None
+    external_variables: Optional[Dict[str, ExternalVariableDefinition]] = None
     application_domain: str
     date_of_addition: date
 
@@ -180,13 +226,12 @@ class SpectralIndex(BaseModel):
     @classmethod
     def check_formula(cls, value):
         """Validate formula syntax and ensure every variable is registered."""
-        variables = parse_formula_variables(
-            value
-        )  # obtain band names (e.g. ["R", "G"])
+        variables = parse_formula_variables(value)
 
         supported_variables = {
             *Bands._value2member_map_.keys(),
             *Constants._value2member_map_.keys(),
+            *External._value2member_map_.keys(),
         }
         if not all(variable in supported_variables for variable in variables):
             variable_names = ", ".join(sorted(supported_variables))
@@ -196,6 +241,54 @@ class SpectralIndex(BaseModel):
             )
 
         return value
+
+    @model_validator(mode="after")
+    def check_constants_match_formula(self):
+        """Require definitions for exactly the constants used by the formula."""
+        formula_constants = {
+            variable
+            for variable in parse_formula_variables(self.formula)
+            if variable in Constants._value2member_map_
+        }
+        provided_constants = set(self.constants or {})
+        missing_constants = sorted(formula_constants - provided_constants)
+        extra_constants = sorted(provided_constants - formula_constants)
+
+        errors = []
+        if missing_constants:
+            errors.append("missing: " + ", ".join(missing_constants))
+        if extra_constants:
+            errors.append("not used by formula: " + ", ".join(extra_constants))
+        if errors:
+            raise ValueError(
+                "Invalid constants definitions (" + "; ".join(errors) + ")."
+            )
+
+        return self
+
+    @model_validator(mode="after")
+    def check_external_variables_match_formula(self):
+        """Require definitions for exactly the externals used by the formula."""
+        formula_externals = {
+            variable
+            for variable in parse_formula_variables(self.formula)
+            if variable in External._value2member_map_
+        }
+        provided_externals = set(self.external_variables or {})
+        missing_externals = sorted(formula_externals - provided_externals)
+        extra_externals = sorted(provided_externals - formula_externals)
+
+        errors = []
+        if missing_externals:
+            errors.append("missing: " + ", ".join(missing_externals))
+        if extra_externals:
+            errors.append("not used by formula: " + ", ".join(extra_externals))
+        if errors:
+            raise ValueError(
+                "Invalid external variable definitions (" + "; ".join(errors) + ")."
+            )
+
+        return self
 
     @field_validator("contributor")
     @classmethod

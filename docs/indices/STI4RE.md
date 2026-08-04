@@ -31,7 +31,7 @@ gamma * S1/S2 + (1 - gamma) * N/RE3
 
 ### Constants
 
-- `gamma`: Weighting coefficient used for ARVI. Default: `1.0`.
+- `gamma`: Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2). Default: `0.4`. Suggested range: `0.0`–`1.0`. Suggested values: April: `0.4`; November: `0.5`.
 
 ## Contributor
 

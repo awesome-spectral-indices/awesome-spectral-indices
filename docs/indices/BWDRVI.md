@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
+- `alpha`: NIR reflectance scalar. Default: `0.01`. Suggested values: Dense biomass/High yield: `0.01`; Low-to-moderate biomass: `0.1`; Moderate biomass: `0.05`.
 
 ## Contributor
 

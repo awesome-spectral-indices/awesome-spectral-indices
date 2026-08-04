@@ -29,6 +29,10 @@ hero:
 
 ### Constants
 
+No constants are used in this index.
+
+### External Variables
+
 - `PAR`: Photosynthetically Active Radiation.
 
 ## Contributor

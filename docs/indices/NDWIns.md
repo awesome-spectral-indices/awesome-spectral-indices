@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(G - alpha * N)/(G + N)
+(G - a * N)/(G + N)
 ```
 
 ### Bands
@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
+- `a`: Empirical parameter weighting NIR reflectance. Default: `2.0`.
 
 ## Contributor
 

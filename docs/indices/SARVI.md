@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)
+(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)
 ```
 
 ### Bands
@@ -30,7 +30,8 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `1.0`.
+- `L`: Canopy background adjustment. Default: `0.5`.
+- `gamma`: Weighting coefficient used for reducing atmospheric effects. Default: `1.0`. Suggested range: `0.0`–`2.0`. Suggested values: Bare soil, very sparse vegetation, or arid and semi-arid areas: `0.5`; Equal SARVI to SAVI: `0.0`; Lowest sensitivity for dense forests: `1.0`–`2.0`; Model-specific optimum for continental aerosol. alpha ~ 1.3: `0.9`; Model-specific optimum for maritime aerosol. alpha ~ 0.2: `1.7`.
 
 ## Contributor
 

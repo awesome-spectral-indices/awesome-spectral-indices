@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-g * (N - R) / (N + 2.4 * R + L)
+g * (N - R) / (N + (C1 - (C2 / c)) * R + L)
 ```
 
 ### Bands
@@ -29,7 +29,10 @@ g * (N - R) / (N + 2.4 * R + L)
 
 ### Constants
 
+- `C1`: Coefficient 1 for the aerosol resistance term. Default: `6.0`.
+- `C2`: Coefficient 2 for the aerosol resistance term. Default: `7.5`.
 - `L`: Canopy background adjustment. Default: `1.0`.
+- `c`: Ratio of red to blue reflectances. Red = c * Blue. Default: `2.08`.
 - `g`: Gain factor. Default: `2.5`.
 
 ## Contributor

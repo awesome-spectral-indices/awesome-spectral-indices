@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `n`: Adjustment factor used for RWI. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089). Default: `5`.
+- `n`: Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089). Default: `5`.
 
 ## Contributor
 

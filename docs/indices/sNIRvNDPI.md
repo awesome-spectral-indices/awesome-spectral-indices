@@ -30,7 +30,7 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
+- `alpha`: Parameter to mitigate soil and snow effects. Taken from NDPI. Default: `0.74`.
 
 ## Contributor
 

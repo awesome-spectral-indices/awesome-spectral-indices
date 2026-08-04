@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient used for WDRVI. Default: `0.1`.
+- `alpha`: Weighting coefficient. Default: `0.1`. Suggested range: `0.1`–`0.2`. Suggested values: Aggressive correction, high LAI. Underperforms in sparse vegetation: `0.05`; Conservative correction, high-biomass sensitivity without strongly down-weighting NIR: `0.2`; Equal WDRVI to NDVI: `1.0`; Stronger correction, moderate-to-high LAI, vegetation fraction where NDVI saturates: `0.1`.
 
 ## Contributor
 

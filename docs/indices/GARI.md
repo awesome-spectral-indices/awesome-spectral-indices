@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(N - (G - (B - R))) / (N + (G - (B - R)))
+(N - (G - lmb * (B - R))) / (N + (G - lmb * (B - R)))
 ```
 
 ### Bands
@@ -31,7 +31,7 @@ hero:
 
 ### Constants
 
-No constants are used in this index.
+- `lmb`: Parameter that controls the atmospheric correction. Default: `1.0`.
 
 ## Contributor
 

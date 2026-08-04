@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(N - S1 - beta)/(N + S1)
+(N - S1 - b)/(N + S1)
 ```
 
 ### Bands
@@ -29,7 +29,7 @@ hero:
 
 ### Constants
 
-- `beta`: Calibration parameter used for NDSInw. Default: `0.05`.
+- `b`: Empirical parameter that offsets the index. Default: `0.05`.
 
 ## Contributor
 

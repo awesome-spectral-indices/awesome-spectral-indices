@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))
+sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))
 ```
 
 ### Bands
@@ -29,8 +29,9 @@ sla * (N - sla * R - slb) / (sla * N + R - sla * slb + 0.08 * (1 + sla ** 2.0))
 
 ### Constants
 
-- `sla`: Soil line slope. Default: `1.0`.
-- `slb`: Soil line intercept. Default: `0.0`.
+- `X`: Negative abscissa of a reference point located on the soil line. Default: `0.08`.
+- `sla`: Soil line slope. N = sla * R + slb (only for soil pixels/measurements). Default: `1.0`.
+- `slb`: Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements). Default: `0.0`.
 
 ## Contributor
 

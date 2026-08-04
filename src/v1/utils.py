@@ -59,7 +59,6 @@ class Constants(Enum):
     BETA = "beta"
     SOIL_LINE_SLOPE = "sla"
     SOIL_LINE_INTERCEPT = "slb"
-    PAR = "PAR"
     OMEGA = "omega"
     F_DELTA = "fdelta"
     EPSILON = "epsilon"
@@ -67,6 +66,9 @@ class Constants(Enum):
     N_FACTOR = "n"
     LAMBDA = "lmb"
     ETA = "eta"
+    NEG_ABSCISSA = "X"
+    EMPIRICAL_PARAMETER_A = "a"
+    EMPIRICAL_PARAMETER_B = "b"
     CENTRAL_WAVELENGTH_NIR = "lambdaN"
     CENTRAL_WAVELENGTH_NIR2 = "lambdaN2"
     CENTRAL_WAVELENGTH_RED = "lambdaR"
@@ -76,6 +78,13 @@ class Constants(Enum):
     KERNEL_LENGTH_SCALE = "sigma"
     KERNEL_DEGREE = "p"
     KERNEL_TRADE_OFF = "c"
+
+
+@unique
+class External(Enum):
+    """External variables supported by spectral-index formulas."""
+
+    PAR = "PAR"
 
 
 class IndexType(Enum):
