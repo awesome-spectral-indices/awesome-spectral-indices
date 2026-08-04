@@ -29,11 +29,68 @@ g * (N - R) / (N + (C1 - (C2 / c)) * R + L)
 
 ### Constants
 
-- `C1`: Coefficient 1 for the aerosol resistance term. Default: `6.0`.
-- `C2`: Coefficient 2 for the aerosol resistance term. Default: `7.5`.
-- `L`: Canopy background adjustment. Default: `1.0`.
-- `c`: Ratio of red to blue reflectances. Red = c * Blue. Default: `2.08`.
-- `g`: Gain factor. Default: `2.5`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">C1</code>
+<p>Coefficient 1 for the aerosol resistance term.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">6.0</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">C2</code>
+<p>Coefficient 2 for the aerosol resistance term.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">7.5</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Canopy background adjustment.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">c</code>
+<p>Ratio of red to blue reflectances. Red = c * Blue.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">2.08</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">g</code>
+<p>Gain factor.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">2.5</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

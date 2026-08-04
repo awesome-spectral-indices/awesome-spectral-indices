@@ -29,9 +29,44 @@ sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))
 
 ### Constants
 
-- `X`: Negative abscissa of a reference point located on the soil line. Default: `0.08`.
-- `sla`: Soil line slope. N = sla * R + slb (only for soil pixels/measurements). Default: `1.0`.
-- `slb`: Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements). Default: `0.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">X</code>
+<p>Negative abscissa of a reference point located on the soil line.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.08</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">sla</code>
+<p>Soil line slope. N = sla * R + slb (only for soil pixels/measurements).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">slb</code>
+<p>Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.0</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

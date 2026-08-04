@@ -32,7 +32,37 @@ hero:
 
 ### Constants
 
-- `omega`: Coefficient that maximizes the difference between water and non-water surfaces. Default: `2.0`. Suggested values: For negative index values assigned to water and non-water surfaces: `1.0`; For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result): `5.0`; For positive index values assigned to water surfaces and negative to non-water surfaces: `2.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">omega</code>
+<p>Coefficient that maximizes the difference between water and non-water surfaces.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">2.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>For negative index values assigned to water and non-water surfaces</dt>
+<dd>1.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result)</dt>
+<dd>5.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>For positive index values assigned to water surfaces and negative to non-water surfaces</dt>
+<dd>2.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

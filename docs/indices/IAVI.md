@@ -30,7 +30,24 @@ hero:
 
 ### Constants
 
-- `gamma`: Correction coefficient for upward atmospheric path radiance reaching the satellite. Default: `1.0`. Suggested range: `0.65`–`1.21`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">gamma</code>
+<p>Correction coefficient for upward atmospheric path radiance reaching the satellite.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.65<span aria-hidden="true">–</span>1.21</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

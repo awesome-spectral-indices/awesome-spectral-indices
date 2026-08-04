@@ -30,8 +30,61 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `0.5`.
-- `gamma`: Weighting coefficient used for reducing atmospheric effects. Default: `1.0`. Suggested range: `0.0`–`2.0`. Suggested values: Bare soil, very sparse vegetation, or arid and semi-arid areas: `0.5`; Equal SARVI to SAVI: `0.0`; Lowest sensitivity for dense forests: `1.0`–`2.0`; Model-specific optimum for continental aerosol. alpha ~ 1.3: `0.9`; Model-specific optimum for maritime aerosol. alpha ~ 0.2: `1.7`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Canopy background adjustment.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.5</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">gamma</code>
+<p>Weighting coefficient used for reducing atmospheric effects.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>2.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Bare soil, very sparse vegetation, or arid and semi-arid areas</dt>
+<dd>0.5</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Equal SARVI to SAVI</dt>
+<dd>0.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Lowest sensitivity for dense forests</dt>
+<dd>1.0<span aria-hidden="true">–</span>2.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Model-specific optimum for continental aerosol. alpha ~ 1.3</dt>
+<dd>0.9</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Model-specific optimum for maritime aerosol. alpha ~ 0.2</dt>
+<dd>1.7</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

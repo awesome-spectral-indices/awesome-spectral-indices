@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import shutil
+from html import escape
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -89,30 +90,73 @@ def render_constants(constant_definitions):
 
     items = []
     for name, definition in constant_definitions.items():
-        description = sentence(definition["description"])
+        description = escape(sentence(definition["description"]))
+        cards = []
+
         default = definition.get("default_value")
-        if default is not None:
-            description = f"{description} Default: `{default}`."
+        default_value = "Not specified" if default is None else escape(str(default))
+        default_state = " is-empty" if default is None else ""
+        cards.append(
+            f"""<div class="constant-detail-card constant-default{default_state}">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">{default_value}</strong>
+</div>"""
+        )
+
         suggested_range = definition.get("suggested_range")
         if suggested_range is not None:
-            description = (
-                f"{description} Suggested range: `{suggested_range[0]}`–"
-                f"`{suggested_range[1]}`."
+            range_start = escape(str(suggested_range[0]))
+            range_end = escape(str(suggested_range[1]))
+            cards.append(
+                f"""<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">{range_start}<span aria-hidden="true">–</span>{range_end}</strong>
+</div>"""
             )
+
         suggested_values = definition.get("suggested_values")
         if suggested_values is not None:
             rendered_values = []
             for condition, value in suggested_values.items():
                 if isinstance(value, list):
-                    rendered_value = f"`{value[0]}`–`{value[1]}`"
+                    value_start = escape(str(value[0]))
+                    value_end = escape(str(value[1]))
+                    rendered_value = (
+                        f'{value_start}<span aria-hidden="true">–</span>{value_end}'
+                    )
                 else:
-                    rendered_value = f"`{value}`"
-                rendered_values.append(f"{condition}: {rendered_value}")
-            description = (
-                f"{description} Suggested values: " + "; ".join(rendered_values) + "."
+                    rendered_value = escape(str(value))
+                rendered_values.append(
+                    f"""<div class="constant-suggestion-row">
+<dt>{escape(str(condition))}</dt>
+<dd>{rendered_value}</dd>
+</div>"""
+                )
+            cards.append(
+                """<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+"""
+                + "\n".join(rendered_values)
+                + """
+</dl>
+</div>"""
             )
-        items.append(f"- `{name}`: {description}")
-    return "\n".join(items)
+
+        rendered_cards = "\n".join(cards)
+        items.append(
+            f"""<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">{escape(str(name))}</code>
+<p>{description}</p>
+</header>
+<div class="constant-details">
+{rendered_cards}
+</div>
+</article>"""
+        )
+
+    return '<div class="constant-list">\n' + "\n".join(items) + "\n</div>"
 
 
 def render_external_variables(external_definitions):

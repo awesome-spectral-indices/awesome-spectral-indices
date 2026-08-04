@@ -30,7 +30,33 @@ hero:
 
 ### Constants
 
-- `epsilon`: Adjustment constant. Default: `1.0`. Suggested values: For raw RGB values in [0,255]: `256`; For reflectances in [0,1]: `1.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">epsilon</code>
+<p>Adjustment constant.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>For raw RGB values in [0,255]</dt>
+<dd>256</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>For reflectances in [0,1]</dt>
+<dd>1.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

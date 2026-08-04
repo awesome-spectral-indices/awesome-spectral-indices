@@ -29,8 +29,50 @@ sla * (N - sla * R - slb) / (sla * N + R - sla * slb)
 
 ### Constants
 
-- `sla`: Soil line slope. N = sla * R + slb (only for soil pixels/measurements). Default: `1.0`. Suggested values: Equal TSAVI to NDVI when slb is 0.0: `1.0`.
-- `slb`: Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements). Default: `0.0`. Suggested values: Equal TSAVI to NDVI when sla is 1.0: `0.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">sla</code>
+<p>Soil line slope. N = sla * R + slb (only for soil pixels/measurements).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Equal TSAVI to NDVI when slb is 0.0</dt>
+<dd>1.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">slb</code>
+<p>Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Equal TSAVI to NDVI when sla is 1.0</dt>
+<dd>0.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

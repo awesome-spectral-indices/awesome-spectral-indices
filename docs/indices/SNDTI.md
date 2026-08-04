@@ -29,7 +29,37 @@ hero:
 
 ### Constants
 
-- `L`: Soil adjustment factor. Default: `0.6`. Suggested range: `0.0`–`1.0`. Suggested values: Increased litter mass: `0.0`; Low litter mass: `1.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Soil adjustment factor.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.6</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Increased litter mass</dt>
+<dd>0.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Low litter mass</dt>
+<dd>1.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

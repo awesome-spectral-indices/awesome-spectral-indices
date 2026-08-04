@@ -739,10 +739,159 @@
   color: color-mix(in srgb, var(--domain-link) 76%, var(--vp-c-text-1));
 }
 
+.index-page .constant-list {
+  display: grid;
+  gap: 18px;
+  margin: 16px 0 24px;
+}
+
+.index-page .constant-panel {
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--domain-link) 18%, var(--vp-c-divider));
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--domain-link) 3%, var(--vp-c-bg-soft));
+  box-shadow: 0 10px 30px rgb(15 23 42 / 5%);
+}
+
+.index-page .constant-panel-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.index-page .constant-panel-header p {
+  margin: 1px 0 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.55;
+}
+
+.index-page .constant-symbol {
+  flex: none;
+  min-width: 38px;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--domain-link) 25%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--domain-link) 9%, var(--vp-c-bg));
+  color: var(--domain-link);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.index-page .constant-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 10px;
+}
+
+.index-page .constant-detail-card {
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--domain-link) 14%, var(--vp-c-divider));
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--domain-link) 4%, var(--vp-c-bg));
+}
+
+.index-page .constant-default {
+  border-color: color-mix(in srgb, var(--domain-action) 45%, var(--vp-c-divider));
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--domain-action) 18%, var(--vp-c-bg)),
+      color-mix(in srgb, var(--domain-action) 6%, var(--vp-c-bg))
+    );
+  box-shadow: inset 3px 0 0 var(--domain-action);
+}
+
+.index-page .constant-detail-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--vp-c-text-3);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.index-page .constant-detail-value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.18em;
+  color: var(--domain-link);
+  font-size: 1.08rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+
+.index-page .constant-default .constant-detail-value {
+  font-size: 1.45rem;
+}
+
+.index-page .constant-default.is-empty .constant-detail-value {
+  color: var(--vp-c-text-3);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.index-page .constant-suggested-values {
+  grid-column: 1 / -1;
+}
+
+.index-page .constant-suggested-values dl {
+  margin: 0;
+}
+
+.index-page .constant-suggestion-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+  border-top: 1px solid color-mix(in srgb, var(--domain-link) 12%, var(--vp-c-divider));
+}
+
+.index-page .constant-suggestion-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.index-page .constant-suggestion-row:last-child {
+  padding-bottom: 0;
+}
+
+.index-page .constant-suggestion-row dt,
+.index-page .constant-suggestion-row dd {
+  margin: 0;
+}
+
+.index-page .constant-suggestion-row dt {
+  color: var(--vp-c-text-2);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.index-page .constant-suggestion-row dd {
+  color: var(--domain-link);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .dark .index-page .vp-doc h2,
 .dark .index-page .vp-doc h3,
 .dark .index-page .vp-doc a {
   color: var(--domain-link-dark);
+}
+
+.dark .index-page .constant-symbol,
+.dark .index-page .constant-detail-value,
+.dark .index-page .constant-suggestion-row dd {
+  color: var(--domain-link-dark);
+}
+
+.dark .index-page .constant-default.is-empty .constant-detail-value {
+  color: var(--vp-c-text-3);
 }
 
 @media (max-width: 640px) {
@@ -754,6 +903,28 @@
         transparent 32%
       ),
       var(--domain-bg);
+  }
+
+  .index-page .constant-panel {
+    padding: 15px;
+  }
+
+  .index-page .constant-panel-header {
+    display: block;
+  }
+
+  .index-page .constant-symbol {
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+
+  .index-page .constant-suggestion-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .index-page .constant-suggestion-row dd {
+    white-space: normal;
   }
 }
 

@@ -31,8 +31,66 @@ hero:
 
 ### Constants
 
-- `alpha`: Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2). Default: `0.2`. Suggested range: `0.0`–`1.0`. Suggested values: April: `0.2`; August: `0.7`.
-- `beta`: Parameter representing the proportion of Red reflectance (Sentinel-2). Default: `0.2`. Suggested range: `0.0`–`1.0`. Suggested values: April: `0.2`; August: `0.7`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">alpha</code>
+<p>Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.2</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>April</dt>
+<dd>0.2</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>August</dt>
+<dd>0.7</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">beta</code>
+<p>Parameter representing the proportion of Red reflectance (Sentinel-2).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.2</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>April</dt>
+<dd>0.2</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>August</dt>
+<dd>0.7</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

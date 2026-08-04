@@ -30,7 +30,24 @@ hero:
 
 ### Constants
 
-- `alpha`: Weighting coefficient. Default: `0.74`. Suggested range: `0.0`–`1.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">alpha</code>
+<p>Weighting coefficient.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.74</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

@@ -32,7 +32,41 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `0.5`. Suggested range: `0.0`–`1.0`. Suggested values: High density vegetation: `1.0`; Low density vegetation: `0.0`; Medium density vegetation: `1.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Canopy background adjustment.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.5</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>High density vegetation</dt>
+<dd>1.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Low density vegetation</dt>
+<dd>0.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Medium density vegetation</dt>
+<dd>1.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

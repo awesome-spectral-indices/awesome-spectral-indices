@@ -29,7 +29,41 @@ hero:
 
 ### Constants
 
-- `n`: Power operation exponent to amplify the dynamic range. Default: `2.0`. Suggested values: Equal GDVI to NDVI: `1.0`; Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land: `2.0`; Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land: `3.0`; Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land: `3.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">n</code>
+<p>Power operation exponent to amplify the dynamic range.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">2.0</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Equal GDVI to NDVI</dt>
+<dd>1.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land</dt>
+<dd>2.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land</dt>
+<dd>3.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land</dt>
+<dd>3.0</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

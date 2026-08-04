@@ -29,7 +29,37 @@ hero:
 
 ### Constants
 
-- `alpha`: NIR reflectance scalar. Default: `0.01`. Suggested values: Dense biomass/High yield: `0.01`; Low-to-moderate biomass: `0.1`; Moderate biomass: `0.05`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">alpha</code>
+<p>NIR reflectance scalar.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.01</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Dense biomass/High yield</dt>
+<dd>0.01</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Low-to-moderate biomass</dt>
+<dd>0.1</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Moderate biomass</dt>
+<dd>0.05</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

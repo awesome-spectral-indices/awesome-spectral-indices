@@ -30,7 +30,53 @@ hero:
 
 ### Constants
 
-- `c`: Correction factor. Default: `1.0`. Suggested range: `0.3`–`1.74`. Suggested values: Broad-band and erectophile leaf orientation (~ 70°): `0.87`–`1.74`; Broad-band and intermediate leaf orientation (~ 50°): `0.72`–`1.4`; Broad-band and planophile leaf orientation (~ 30°): `0.64`–`1.31`; Broad-band reflectances: `0.64`–`1.74`; Equal OCVI to CVI: `1.0`; Narrow-band reflectances: `0.3`–`0.89`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">c</code>
+<p>Correction factor.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+<div class="constant-detail-card constant-range">
+<span class="constant-detail-label">Suggested range</span>
+<strong class="constant-detail-value">0.3<span aria-hidden="true">–</span>1.74</strong>
+</div>
+<div class="constant-detail-card constant-suggested-values">
+<span class="constant-detail-label">Suggested values</span>
+<dl>
+<div class="constant-suggestion-row">
+<dt>Broad-band and erectophile leaf orientation (~ 70°)</dt>
+<dd>0.87<span aria-hidden="true">–</span>1.74</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Broad-band and intermediate leaf orientation (~ 50°)</dt>
+<dd>0.72<span aria-hidden="true">–</span>1.4</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Broad-band and planophile leaf orientation (~ 30°)</dt>
+<dd>0.64<span aria-hidden="true">–</span>1.31</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Broad-band reflectances</dt>
+<dd>0.64<span aria-hidden="true">–</span>1.74</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Equal OCVI to CVI</dt>
+<dd>1.0</dd>
+</div>
+<div class="constant-suggestion-row">
+<dt>Narrow-band reflectances</dt>
+<dd>0.3<span aria-hidden="true">–</span>0.89</dd>
+</div>
+</dl>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

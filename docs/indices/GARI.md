@@ -31,7 +31,20 @@ hero:
 
 ### Constants
 
-- `lmb`: Parameter that controls the atmospheric correction. Default: `1.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lmb</code>
+<p>Parameter that controls the atmospheric correction.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

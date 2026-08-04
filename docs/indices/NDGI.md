@@ -30,9 +30,44 @@ hero:
 
 ### Constants
 
-- `lambdaG`: Green central wavelength (nm).
-- `lambdaN`: NIR central wavelength (nm).
-- `lambdaR`: Red central wavelength (nm).
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaG</code>
+<p>Green central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaN</code>
+<p>NIR central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaR</code>
+<p>Red central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

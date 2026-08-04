@@ -32,7 +32,20 @@ hero:
 
 ### Constants
 
-- `epsilon`: Adjustment constant for numerical stability. Default: `1e-10`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">epsilon</code>
+<p>Adjustment constant for numerical stability.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1e-10</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

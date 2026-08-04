@@ -30,9 +30,44 @@ S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))
 
 ### Constants
 
-- `lambdaN2`: NIR2 central wavelength (nm).
-- `lambdaS1`: SWIR1 central wavelength (nm).
-- `lambdaS2`: SWIR2 central wavelength (nm).
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaN2</code>
+<p>NIR2 central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaS1</code>
+<p>SWIR1 central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">lambdaS2</code>
+<p>SWIR2 central wavelength (nm).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default is-empty">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">Not specified</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

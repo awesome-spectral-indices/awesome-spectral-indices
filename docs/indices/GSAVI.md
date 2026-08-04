@@ -29,7 +29,20 @@ hero:
 
 ### Constants
 
-- `L`: Canopy background adjustment. Default: `0.5`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Canopy background adjustment.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.5</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

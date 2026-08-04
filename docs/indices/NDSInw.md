@@ -29,7 +29,20 @@ hero:
 
 ### Constants
 
-- `b`: Empirical parameter that offsets the index. Default: `0.05`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">b</code>
+<p>Empirical parameter that offsets the index.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">0.05</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 

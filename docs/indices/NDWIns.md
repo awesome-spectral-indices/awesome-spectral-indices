@@ -29,7 +29,20 @@ hero:
 
 ### Constants
 
-- `a`: Empirical parameter weighting NIR reflectance. Default: `2.0`.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">a</code>
+<p>Empirical parameter weighting NIR reflectance.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">2.0</strong>
+</div>
+</div>
+</article>
+</div>
 
 ## Contributor
 
