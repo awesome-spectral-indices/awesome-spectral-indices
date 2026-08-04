@@ -99,9 +99,9 @@ submitted through the usual contribution process.
   constants. Their 75 per-index definitions now include the submitted
   descriptions, defaults where universal values are appropriate, and
   source-specific suggested values and ranges.
-- Changed the v1 GARI formula to apply an explicit atmospheric-correction
-  parameter, `lmb`, to `(B - R)`. Added its index-specific description and a
-  default of `lmb = 1.0`.
+- Changed the GARI formula in v0 and v1 to apply an explicit
+  atmospheric-correction parameter, `lmb`, to `(B - R)`. Added its
+  index-specific v1 description and a default of `lmb = 1.0`.
 - Migrated catalogue validation from Pydantic 1 to Pydantic 2.
 - Replaced legacy Pydantic validators and configuration with
   `field_validator`, `ConfigDict`, and Pydantic 2 serialization.
