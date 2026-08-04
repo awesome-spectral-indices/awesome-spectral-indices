@@ -31,6 +31,14 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`SR705`](/indices/SR705)
+- [`SR555`](/indices/SR555)
+- [`RENDVI`](/indices/RENDVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-11-06.

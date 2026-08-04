@@ -74,6 +74,12 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`SARVI`](/indices/SARVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-05-11.

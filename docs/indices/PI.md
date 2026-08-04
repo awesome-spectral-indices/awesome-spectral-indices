@@ -31,6 +31,12 @@ N/(N + R)
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`RNDVI`](/indices/RNDVI)
+
 ## Contributor
 
 Index contributed by https://github.com/emanuelcastanho on 2024-05-03.

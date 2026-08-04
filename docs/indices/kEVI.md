@@ -70,6 +70,15 @@ g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`kNDVI`](/indices/kNDVI)
+- [`kRVI`](/indices/kRVI)
+- [`kVARI`](/indices/kVARI)
+- [`kIPVI`](/indices/kIPVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-05-10.

@@ -34,6 +34,12 @@ B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`AWEInsh`](/indices/AWEInsh)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-09-18.

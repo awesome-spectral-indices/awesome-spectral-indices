@@ -92,6 +92,16 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NDVI4RE`](/indices/NDVI4RE)
+- [`RVI4RE`](/indices/RVI4RE)
+- [`NDTI4RE`](/indices/NDTI4RE)
+- [`SNDTI4RE`](/indices/SNDTI4RE)
+- [`STI4RE`](/indices/STI4RE)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2025-09-30.

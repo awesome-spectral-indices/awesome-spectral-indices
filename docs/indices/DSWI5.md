@@ -33,6 +33,15 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`DSWI1`](/indices/DSWI1)
+- [`DSWI2`](/indices/DSWI2)
+- [`DSWI3`](/indices/DSWI3)
+- [`DSWI4`](/indices/DSWI4)
+
 ## Contributor
 
 Index contributed by https://github.com/remi-braun on 2022-10-26.

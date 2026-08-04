@@ -33,6 +33,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`WCI1`](/indices/WCI1)
+- [`WCI2`](/indices/WCI2)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2026-05-27.

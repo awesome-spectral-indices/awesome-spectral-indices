@@ -32,6 +32,14 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`VIG`](/indices/VIG)
+- [`VI700`](/indices/VI700)
+- [`VARI700`](/indices/VARI700)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-04-07.

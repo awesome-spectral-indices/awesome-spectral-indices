@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NDSaII`](/indices/NDSaII)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2026-01-10.

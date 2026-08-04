@@ -63,6 +63,16 @@ gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N +
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NDVI4RE`](/indices/NDVI4RE)
+- [`SAVI4RE`](/indices/SAVI4RE)
+- [`RVI4RE`](/indices/RVI4RE)
+- [`NDTI4RE`](/indices/NDTI4RE)
+- [`STI4RE`](/indices/STI4RE)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2025-09-30.

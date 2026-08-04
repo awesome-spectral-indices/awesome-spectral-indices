@@ -32,6 +32,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`BNDVI`](/indices/BNDVI)
+- [`GRNDVI`](/indices/GRNDVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-04-07.

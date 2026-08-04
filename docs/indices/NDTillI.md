@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`STI`](/indices/STI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2025-10-11.

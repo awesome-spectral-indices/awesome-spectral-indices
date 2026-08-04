@@ -32,6 +32,15 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`kEVI`](/indices/kEVI)
+- [`kNDVI`](/indices/kNDVI)
+- [`kRVI`](/indices/kRVI)
+- [`kIPVI`](/indices/kIPVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-05-10.

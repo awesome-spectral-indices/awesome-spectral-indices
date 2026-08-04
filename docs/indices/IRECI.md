@@ -33,6 +33,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`S2REP`](/indices/S2REP)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-09-17.

@@ -31,6 +31,12 @@ S1 / S2
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NDTillI`](/indices/NDTillI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2025-10-11.

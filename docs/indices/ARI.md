@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`ARI2`](/indices/ARI2)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-09-20.

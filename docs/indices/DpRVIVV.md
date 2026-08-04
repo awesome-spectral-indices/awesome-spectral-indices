@@ -31,6 +31,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`VVVHR`](/indices/VVVHR)
+- [`VHVVD`](/indices/VHVVD)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-12-25.

@@ -47,6 +47,9 @@ submitted through the usual contribution process.
 - Added one generated documentation page for every spectral index. Each page
   includes its formula, required bands, constants, external variables, source,
   contributor, and date of addition.
+- Added the generated v1 `source.source_companions` property, which lists the
+  other catalogue keys sharing an index's exact source link. Generated index
+  pages link those keys to their companion pages.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.

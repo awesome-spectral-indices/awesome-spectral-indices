@@ -31,6 +31,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NSDSI2`](/indices/NSDSI2)
+- [`NSDSI3`](/indices/NSDSI3)
+
 ## Contributor
 
 Index contributed by https://github.com/CvenGeo on 2022-10-03.

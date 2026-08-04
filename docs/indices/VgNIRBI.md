@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`VrNIRBI`](/indices/VrNIRBI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-02-09.

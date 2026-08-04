@@ -31,6 +31,16 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`CI1SWIR`](/indices/CI1SWIR)
+- [`CI1woSWIR`](/indices/CI1woSWIR)
+- [`CI2SWIR`](/indices/CI2SWIR)
+- [`CI2woSWIR`](/indices/CI2woSWIR)
+- [`CSIwoSWIR`](/indices/CSIwoSWIR)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2026-03-30.

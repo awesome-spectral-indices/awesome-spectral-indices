@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`DVI`](/indices/DVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-05-14.

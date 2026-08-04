@@ -131,6 +131,7 @@ class Source(BaseModel):
     _source_link_status: Optional[Literal["operational", "down"]] = PrivateAttr(
         default=None
     )
+    _source_companions: List[str] = PrivateAttr(default_factory=list)
 
     model_config = ConfigDict(extra="forbid")
 
@@ -158,11 +159,23 @@ class Source(BaseModel):
             return "doi"
         return "other"
 
+    @computed_field
+    @property
+    def source_companions(self) -> List[str]:
+        """Return keys of other indices generated from the same source link."""
+        return list(self._source_companions)
+
     def set_source_link_status(self, status):
         """Set the generated availability status after checking the URL."""
         if status not in {"operational", "down"}:
             raise ValueError("Invalid source_link_status.")
         self._source_link_status = status
+
+    def set_source_companions(self, companions):
+        """Set the generated catalogue keys that share this source link."""
+        if not all(isinstance(companion, str) for companion in companions):
+            raise ValueError("Invalid source_companions.")
+        self._source_companions = list(companions)
 
 
 class ConstantDefinition(BaseModel):

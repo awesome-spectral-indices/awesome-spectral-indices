@@ -44,6 +44,16 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NormNIR`](/indices/NormNIR)
+- [`NormR`](/indices/NormR)
+- [`NormG`](/indices/NormG)
+- [`GRVI`](/indices/GRVI)
+- [`GOSAVI`](/indices/GOSAVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-04-08.

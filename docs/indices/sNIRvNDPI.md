@@ -45,6 +45,17 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`bNIRv`](/indices/bNIRv)
+- [`EVIv`](/indices/EVIv)
+- [`sNIRvLSWI`](/indices/sNIRvLSWI)
+- [`sNIRvSWIR`](/indices/sNIRvSWIR)
+- [`sNIRvNDVILSWIP`](/indices/sNIRvNDVILSWIP)
+- [`sNIRvNDVILSWIS`](/indices/sNIRvNDVILSWIS)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2024-05-16.

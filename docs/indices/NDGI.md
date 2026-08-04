@@ -69,6 +69,12 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`DVIplus`](/indices/DVIplus)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-01-20.

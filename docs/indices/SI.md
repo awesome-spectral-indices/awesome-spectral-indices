@@ -32,6 +32,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`AVI`](/indices/AVI)
+- [`BI`](/indices/BI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-04-08.

@@ -58,6 +58,13 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`GARI`](/indices/GARI)
+- [`GNDVI`](/indices/GNDVI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2026-07-22.

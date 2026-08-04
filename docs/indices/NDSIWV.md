@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NHFD`](/indices/NHFD)
+
 ## Contributor
 
 Index contributed by https://github.com/remi-braun on 2022-11-20.

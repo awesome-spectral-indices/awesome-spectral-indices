@@ -6,7 +6,7 @@ import re
 import shutil
 from html import escape
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -167,6 +167,14 @@ def render_external_variables(external_definitions):
     )
 
 
+def render_source_companions(companion_keys):
+    """Render links to indices generated from the same scientific source."""
+    return "\n".join(
+        f"- [`{key}`](/indices/{quote(CASE_COLLISION_ROUTES.get(key, key), safe='')})"
+        for key in companion_keys
+    )
+
+
 def render_index_page(
     key,
     index,
@@ -182,6 +190,18 @@ def render_index_page(
         external_variables_section = f"""### External Variables
 
 {external_variables}
+
+"""
+    source_companions_section = ""
+    if index["source"]["source_companions"]:
+        source_companions = render_source_companions(
+            index["source"]["source_companions"]
+        )
+        source_companions_section = f"""### Source Companions
+
+These indices are part of the same scientific source:
+
+{source_companions}
 
 """
 
@@ -217,7 +237,7 @@ hero:
 
 {constants}
 
-{external_variables_section}## Contributor
+{external_variables_section}{source_companions_section}## Contributor
 
 Index contributed by {index["contributor"]} on {index["date_of_addition"]}.
 """

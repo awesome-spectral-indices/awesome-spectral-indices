@@ -32,6 +32,14 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NBRT1`](/indices/NBRT1)
+- [`VI6T`](/indices/VI6T)
+- [`NBRT3`](/indices/NBRT3)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-04-19.

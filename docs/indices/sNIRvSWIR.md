@@ -32,6 +32,17 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`bNIRv`](/indices/bNIRv)
+- [`EVIv`](/indices/EVIv)
+- [`sNIRvLSWI`](/indices/sNIRvLSWI)
+- [`sNIRvNDPI`](/indices/sNIRvNDPI)
+- [`sNIRvNDVILSWIP`](/indices/sNIRvNDVILSWIP)
+- [`sNIRvNDVILSWIS`](/indices/sNIRvNDVILSWIS)
+
 ## Contributor
 
 Index contributed by https://github.com/MartinuzziFrancesco on 2024-05-14.

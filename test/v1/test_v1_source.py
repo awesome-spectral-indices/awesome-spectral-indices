@@ -3,7 +3,7 @@ from pydantic import ValidationError
 
 from src.v1.SpectralIndex import Source
 from src.v1.indices import spindex
-from src.v1.main_v1 import add_source_metadata
+from src.v1.main_v1 import add_source_companions, add_source_metadata
 
 
 def test_source_link_type_is_generated_from_the_url():
@@ -15,6 +15,12 @@ def test_source_link_type_is_generated_from_the_url():
         == "doi"
     )
     assert Source(source_link="https://example.com/paper").source_link_type == "other"
+
+
+def test_source_companions_are_empty_before_generation():
+    source = Source(source_link="https://example.com/source")
+
+    assert source.source_companions == []
 
 
 @pytest.mark.parametrize(
@@ -58,3 +64,23 @@ def test_source_status_generation_checks_each_unique_link_once():
         index.source.source_link_status == "operational"
         for index in catalogue.SpectralIndices.values()
     )
+
+
+def test_source_companions_include_every_other_key_with_the_same_link():
+    catalogue = spindex.model_copy(deep=True)
+
+    add_source_companions(catalogue)
+
+    for key, index in catalogue.SpectralIndices.items():
+        expected = [
+            other_key
+            for other_key, other_index in catalogue.SpectralIndices.items()
+            if other_key != key
+            and other_index.source.source_link == index.source.source_link
+        ]
+        assert index.source.source_companions == expected
+
+    assert catalogue.SpectralIndices["GARI"].source.source_companions == [
+        "GNDVI",
+        "GRARI",
+    ]

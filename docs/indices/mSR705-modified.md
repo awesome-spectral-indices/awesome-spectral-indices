@@ -31,6 +31,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`ND705`](/indices/ND705)
+- [`mND705`](/indices/mND705)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-04-08.

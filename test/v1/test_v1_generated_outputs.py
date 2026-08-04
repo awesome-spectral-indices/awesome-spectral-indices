@@ -50,6 +50,7 @@ def test_v1_outputs_contain_generated_source_metadata():
     for index in json_catalogue.values():
         assert "reference" not in index
         assert set(index["source"]) == {
+            "source_companions",
             "source_link",
             "source_link_status",
             "source_link_type",
@@ -57,6 +58,22 @@ def test_v1_outputs_contain_generated_source_metadata():
         }
         assert index["source"]["source_link_status"] in {"operational", "down"}
         assert index["source"]["source_link_type"] in {"doi", "other"}
+
+    for key, index in json_catalogue.items():
+        companions = index["source"]["source_companions"]
+        assert key not in companions
+        assert len(companions) == len(set(companions))
+        assert companions == [
+            other_key
+            for other_key, other_index in spindex.SpectralIndices.items()
+            if other_key != key
+            and other_index.source.source_link == index["source"]["source_link"]
+        ]
+
+    assert json_catalogue["GARI"]["source"]["source_companions"] == [
+        "GNDVI",
+        "GRARI",
+    ]
 
     assert json_catalogue["EVI"]["source"]["source_type"] == "article"
     assert json_catalogue["SAVI"]["source"]["source_type"] == "article"

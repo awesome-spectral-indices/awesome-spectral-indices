@@ -31,6 +31,14 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`TCARIOSAVI705`](/indices/TCARIOSAVI705)
+- [`MCARIOSAVI705`](/indices/MCARIOSAVI705)
+- [`MCARI705`](/indices/MCARI705)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-11-06.

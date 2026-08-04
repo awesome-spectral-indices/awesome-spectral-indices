@@ -33,6 +33,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`SRWI`](/indices/SRWI)
+
 ## Contributor
 
 Index contributed by https://github.com/c-chrysostomou on 2026-05-25.

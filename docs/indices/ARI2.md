@@ -32,6 +32,12 @@ N * ((1 / G) - (1 / RE1))
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`ARI`](/indices/ARI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-04-08.

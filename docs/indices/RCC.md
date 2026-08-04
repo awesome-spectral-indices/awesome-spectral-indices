@@ -32,6 +32,13 @@ R / (R + G + B)
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`GCC`](/indices/GCC)
+- [`BCC`](/indices/BCC)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-01-17.

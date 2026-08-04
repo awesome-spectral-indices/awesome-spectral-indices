@@ -47,6 +47,13 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`KDI`](/indices/KDI)
+- [`WCI1`](/indices/WCI1)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2026-05-27.

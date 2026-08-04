@@ -45,6 +45,13 @@ hero:
 </article>
 </div>
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`CSIT`](/indices/CSIT)
+- [`NDVIT`](/indices/NDVIT)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-04-07.

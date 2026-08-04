@@ -31,6 +31,12 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NBLI`](/indices/NBLI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2023-03-12.

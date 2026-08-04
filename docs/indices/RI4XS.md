@@ -31,6 +31,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`BITM`](/indices/BITM)
+- [`BIXS`](/indices/BIXS)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2022-11-20.

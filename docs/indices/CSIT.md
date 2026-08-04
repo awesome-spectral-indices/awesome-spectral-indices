@@ -32,6 +32,13 @@ N / (S2 * T / 10000.0)
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`NDVIT`](/indices/NDVIT)
+- [`SAVIT`](/indices/SAVIT)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-04-07.

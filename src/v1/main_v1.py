@@ -104,6 +104,25 @@ def build_external_variables_metadata(index_catalog):
     return metadata
 
 
+def add_source_companions(index_catalog):
+    """Populate each source with other catalogue keys sharing its exact URL."""
+    keys_by_source_link = {}
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        keys_by_source_link.setdefault(spectral_index.source.source_link, []).append(
+            key
+        )
+
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        companions = [
+            companion
+            for companion in keys_by_source_link[spectral_index.source.source_link]
+            if companion != key
+        ]
+        spectral_index.source.set_source_companions(companions)
+
+    return index_catalog
+
+
 def add_source_metadata(index_catalog, checker=check_source_link):
     """Check each unique source link and populate its generated status."""
     source_links = sorted(
@@ -179,6 +198,7 @@ def main():
 
     index_catalog = add_formula_metadata(spindex)
     index_catalog = add_source_metadata(index_catalog)
+    index_catalog = add_source_companions(index_catalog)
     write_json_outputs(index_catalog)
 
     df = build_indices_dataframe()

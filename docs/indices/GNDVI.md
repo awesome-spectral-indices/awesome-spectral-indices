@@ -31,6 +31,13 @@ hero:
 
 No constants are used in this index.
 
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`GARI`](/indices/GARI)
+- [`GRARI`](/indices/GRARI)
+
 ## Contributor
 
 Index contributed by https://github.com/davemlz on 2021-04-07.
