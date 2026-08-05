@@ -35,6 +35,7 @@ submitted through the usual contribution process.
   Validation Policy from the new-index issue template.
 - Added a new VitePress website as the foundation for the v1 documentation.
 - Added VitePress support for mathematical notation through MathJax.
+- Added the unary `tanh()` function to the v1 formula expression language.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

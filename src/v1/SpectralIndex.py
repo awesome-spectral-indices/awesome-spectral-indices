@@ -38,7 +38,7 @@ class FormulaVisitor(ast.NodeVisitor):
     explicitly allowed functions. It never evaluates the formula.
     """
 
-    allowed_functions = ("max", "min")
+    allowed_functions = ("max", "min", "tanh")
     allowed_binary_operators = (ast.Add, ast.Sub, ast.Mult, ast.Div, ast.Pow)
     allowed_unary_operators = (ast.UAdd, ast.USub)
 
@@ -81,6 +81,8 @@ class FormulaVisitor(ast.NodeVisitor):
             raise ValueError("Invalid formula.")
         if node.keywords:
             raise ValueError("Invalid formula.")
+        if node.func.id == "tanh" and len(node.args) != 1:
+            raise ValueError("Invalid formula.")
         for arg in node.args:
             self.visit(arg)
 
@@ -100,7 +102,7 @@ def parse_formula_variables(value):
 
     The formula is parsed with Python's AST in expression mode, then validated
     by FormulaVisitor. The returned list preserves first-seen order and excludes
-    allowed function names such as ``max`` and ``min``.
+    allowed function names such as ``max``, ``min``, and ``tanh``.
     """
     try:
         tree = ast.parse(value, mode="eval")
