@@ -40,6 +40,13 @@ submitted through the usual contribution process.
 - Added WCI3 (Wheat Canopy Index, Growth Stage 3) as the first catalogue index
   using nested allowed functions. Its v1 formula combines multi-argument
   `max()` with unary `tanh()` and an index-specific `epsilon` constant.
+- Added the contextual reduction functions `spatial_max()`, `spatial_min()`,
+  and `spatial_mean()` to the v1 formula language. Their shared spatial scope
+  is configured through the conditionally required `reductions` property,
+  which currently accepts `aoi` and `scene`.
+- Added CWI (Coastal Water Index) to v1 as the first index using contextual
+  spatial reductions. Its two `spatial_max()` operations are evaluated over
+  the area of interest without introducing generated reduction operands.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

@@ -7,7 +7,9 @@ from pydantic import ValidationError
 from src.v1.SpectralIndex import (
     ConstantDefinition,
     ExternalVariableDefinition,
+    ReductionDefinition,
     SpectralIndex,
+    parse_formula_reduction_dimensions,
     parse_formula_variables,
 )
 from src.v1.indices import spindex
@@ -59,6 +61,7 @@ def test_acronym_and_name_are_required_v1_fields():
     assert not fields["bands"].is_required()
     assert not fields["constants"].is_required()
     assert not fields["external_variables"].is_required()
+    assert not fields["reductions"].is_required()
     assert "short_name" not in fields
     assert "long_name" not in fields
     assert "reference" not in fields
@@ -120,7 +123,9 @@ def test_catalogue_defines_exactly_the_constants_and_externals_in_each_formula()
         assert set(index.external_variables or {}) == expected_externals
 
 
-def _index_with(formula, constants=None, external_variables=None):
+def _index_with(
+    formula, constants=None, external_variables=None, reductions=None
+):
     values = {
         "acronym": "TEST",
         "name": "Test Index",
@@ -134,6 +139,8 @@ def _index_with(formula, constants=None, external_variables=None):
         values["constants"] = constants
     if external_variables is not None:
         values["external_variables"] = external_variables
+    if reductions is not None:
+        values["reductions"] = reductions
     return SpectralIndex(**values)
 
 
@@ -248,6 +255,40 @@ def test_external_variable_definition_only_accepts_a_strict_description():
             )
 
 
+def test_spatial_reductions_require_matching_context_definitions():
+    index = _index_with(
+        "spatial_max(S2) / spatial_mean(B)",
+        reductions={"space": {"scope": "aoi"}},
+    )
+
+    assert parse_formula_reduction_dimensions(index.formula) == ["space"]
+    assert index.reductions["space"].scope == "aoi"
+
+    with pytest.raises(ValidationError, match="missing: space"):
+        _index_with("spatial_min(N)")
+
+    with pytest.raises(ValidationError, match="not used by formula: space"):
+        _index_with("N / R", reductions={"space": {"scope": "scene"}})
+
+
+@pytest.mark.parametrize("scope", ["aoi", "scene"])
+def test_spatial_reductions_accept_supported_scopes(scope):
+    definition = ReductionDefinition(scope=scope)
+    assert definition.scope == scope
+
+
+def test_spatial_reductions_reject_unsupported_scopes_and_properties():
+    with pytest.raises(ValidationError):
+        ReductionDefinition(scope="tile")
+    with pytest.raises(ValidationError):
+        ReductionDefinition(scope="aoi", radius=3)
+    with pytest.raises(ValidationError):
+        _index_with(
+            "spatial_max(N)",
+            reductions={"time": {"scope": "scene"}},
+        )
+
+
 def test_nirvp_defines_par_as_an_external_variable():
     nirvp = spindex.SpectralIndices["NIRvP"]
 
@@ -275,3 +316,14 @@ def test_wci3_uses_nested_max_and_tanh_functions():
         "description": "Adjustment constant for numerical stability",
         "default_value": 1e-10,
     }
+
+
+def test_cwi_uses_aoi_scoped_spatial_maximum_reductions():
+    cwi = spindex.SpectralIndices["CWI"]
+
+    assert cwi.formula == (
+        "(spatial_max(S2) * B) / (spatial_max(B) * S2)"
+    )
+    assert parse_formula_variables(cwi.formula) == ["S2", "B"]
+    assert parse_formula_reduction_dimensions(cwi.formula) == ["space"]
+    assert cwi.reductions["space"].model_dump() == {"scope": "aoi"}

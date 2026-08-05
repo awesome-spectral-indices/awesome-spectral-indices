@@ -26,6 +26,7 @@ def test_v1_source_catalogue_and_outputs_contain_the_same_indices():
     with (OUTPUT_DIR / "spectral-indices-table.csv").open(newline="") as fp:
         csv_reader = csv.DictReader(fp)
         assert "external_variables" in csv_reader.fieldnames
+        assert "reductions" in csv_reader.fieldnames
         csv_acronyms = Counter(row["acronym"] for row in csv_reader)
 
     assert json_acronyms == expected
@@ -101,6 +102,10 @@ def test_v1_outputs_separate_bands_constants_and_external_variables():
             name: definition.model_dump(mode="json")
             for name, definition in (source_index.external_variables or {}).items()
         }
+        expected_reductions = {
+            name: definition.model_dump(mode="json")
+            for name, definition in (source_index.reductions or {}).items()
+        }
         expected_external_names = {
             variable for variable in variables if variable in external_names
         }
@@ -108,6 +113,7 @@ def test_v1_outputs_separate_bands_constants_and_external_variables():
         assert json_catalogue[key]["bands"] == expected_bands
         assert json_catalogue[key]["constants"] == expected_constants
         assert json_catalogue[key]["external_variables"] == expected_externals
+        assert json_catalogue[key]["reductions"] == expected_reductions
         assert set(expected_externals) == expected_external_names
 
         serialized_variables = (
@@ -116,6 +122,21 @@ def test_v1_outputs_separate_bands_constants_and_external_variables():
             | set(json_catalogue[key]["external_variables"])
         )
         assert serialized_variables == set(variables)
+
+
+def test_v1_outputs_include_cwi_spatial_reduction_context():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+
+    assert json_catalogue["CWI"]["bands"] == ["S2", "B"]
+    assert json_catalogue["CWI"]["reductions"] == {
+        "space": {"scope": "aoi"}
+    }
+    assert all(
+        index["reductions"] == {}
+        for key, index in json_catalogue.items()
+        if key != "CWI"
+    )
 
 
 def test_v1_constants_metadata_is_grouped_by_constant_and_index():

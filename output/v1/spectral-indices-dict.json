@@ -13,6 +13,7 @@
             "external_variables": {},
             "formula": "(N - 0.66 * S1) / (N + 0.66 * S1)",
             "name": "Aerosol Free Vegetation Index (1600 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AFRI2100"
@@ -36,6 +37,7 @@
             "external_variables": {},
             "formula": "(N - 0.5 * S2) / (N + 0.5 * S2)",
             "name": "Aerosol Free Vegetation Index (2100 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AFRI1600"
@@ -63,6 +65,7 @@
             "external_variables": {},
             "formula": "(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)",
             "name": "Augmented Normalized Difference Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.envsoft.2021.105030",
@@ -84,6 +87,7 @@
             "external_variables": {},
             "formula": "(1 / G) - (1 / RE1)",
             "name": "Anthocyanin Reflectance Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "ARI2"
@@ -108,6 +112,7 @@
             "external_variables": {},
             "formula": "N * ((1 / G) - (1 / RE1))",
             "name": "Anthocyanin Reflectance Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "ARI"
@@ -151,6 +156,7 @@
             "external_variables": {},
             "formula": "(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
             "name": "Atmospherically Resistant Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "SARVI"
@@ -187,6 +193,7 @@
             "external_variables": {},
             "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))",
             "name": "Adjusted Transformed Soil-Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(91)90009-U",
@@ -208,6 +215,7 @@
             "external_variables": {},
             "formula": "(N * (1.0 - R) * (N - R)) ** (1/3)",
             "name": "Advanced Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BI",
@@ -234,6 +242,7 @@
             "external_variables": {},
             "formula": "4.0 * (G - S1) - 0.25 * N + 2.75 * S2",
             "name": "Automated Water Extraction Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AWEIsh"
@@ -260,6 +269,7 @@
             "external_variables": {},
             "formula": "B + 2.5 * G - 1.5 * (N + S1) - 0.25 * S2",
             "name": "Automated Water Extraction Index with Shadows Elimination",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AWEInsh"
@@ -283,6 +293,7 @@
             "external_variables": {},
             "formula": "2.0 * N2 - R",
             "name": "Ashburn Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://ntrs.nasa.gov/citations/19800007243",
@@ -304,6 +315,7 @@
             "external_variables": {},
             "formula": "1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)",
             "name": "Burned Area Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
@@ -325,6 +337,7 @@
             "external_variables": {},
             "formula": "1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)",
             "name": "Burned Area Index adapted to MODIS",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.foreco.2006.08.248",
@@ -349,6 +362,7 @@
             "external_variables": {},
             "formula": "(1.0 - ((RE2 * RE3 * N2) / R) ** 0.5) * (((S2 - N2)/(S2 + N2) ** 0.5) + 1.0)",
             "name": "Burned Area Index for Sentinel 2",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/ecrs-2-05177",
@@ -371,6 +385,7 @@
             "external_variables": {},
             "formula": "B / (R + G + B)",
             "name": "Blue Chromatic Coordinate",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GCC",
@@ -397,6 +412,7 @@
             "external_variables": {},
             "formula": "((S1 + R) - (N + B))/((S1 + R) + (N + B))",
             "name": "Bare Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AVI",
@@ -422,6 +438,7 @@
             "external_variables": {},
             "formula": "(((B**2.0)+(G**2.0)+(R**2.0))/3.0)**0.5",
             "name": "Landsat TM-based Brightness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BIXS",
@@ -446,6 +463,7 @@
             "external_variables": {},
             "formula": "(((G**2.0)+(R**2.0))/2.0)**0.5",
             "name": "SPOT HRV XS-based Brightness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BITM",
@@ -472,6 +490,7 @@
             "external_variables": {},
             "formula": "(((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)",
             "name": "Built-Up Land Features Extraction Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/10106049.2018.1497094",
@@ -493,6 +512,7 @@
             "external_variables": {},
             "formula": "(N - B)/(N + B)",
             "name": "Blue Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GBNDVI",
@@ -517,6 +537,7 @@
             "external_variables": {},
             "formula": "R/S1",
             "name": "Band Ratio for Built-up Area",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBAI"
@@ -550,6 +571,7 @@
             "external_variables": {},
             "formula": "(alpha * N - B) / (alpha * N + B)",
             "name": "Blue Wide Dynamic Range Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.2135/cropsci2007.01.0031",
@@ -572,6 +594,7 @@
             "external_variables": {},
             "formula": "R + S1 - N",
             "name": "Bareness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.2005.1525743",
@@ -593,6 +616,7 @@
             "external_variables": {},
             "formula": "(G1 - R)/(G1 + R)",
             "name": "Chlorophyll Carotenoid Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1073/pnas.1606162113",
@@ -617,6 +641,7 @@
             "external_variables": {},
             "formula": "(N + 2.0 * S1) / (B + G + R)",
             "name": "Cloud Index Form 1 with SWIR 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1woSWIR",
@@ -646,6 +671,7 @@
             "external_variables": {},
             "formula": "(3.0 * N) / (B + G + R)",
             "name": "Cloud Index Form 1 without SWIR bands",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1SWIR",
@@ -677,6 +703,7 @@
             "external_variables": {},
             "formula": "(B + G + R + N + S1 + S2) / 6.0",
             "name": "Cloud Index Form 2 with SWIR bands",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1SWIR",
@@ -706,6 +733,7 @@
             "external_variables": {},
             "formula": "(B + G + R + N) / 4.0",
             "name": "Cloud Index Form 2 without SWIR bands",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1SWIR",
@@ -733,6 +761,7 @@
             "external_variables": {},
             "formula": "(N / G) - 1.0",
             "name": "Chlorophyll Index Green",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CIRE"
@@ -756,6 +785,7 @@
             "external_variables": {},
             "formula": "(N / RE1) - 1",
             "name": "Chlorophyll Index Red Edge",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CIG"
@@ -779,6 +809,7 @@
             "external_variables": {},
             "formula": "(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)",
             "name": "Cloud Shadow Detection Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rsase.2026.101990",
@@ -800,6 +831,7 @@
             "external_variables": {},
             "formula": "(1.0 / B) - (1.0 / G)",
             "name": "Carotenoid Reflectance Index using 550 nm",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CRI700"
@@ -823,6 +855,7 @@
             "external_variables": {},
             "formula": "(1.0 / B) - (1.0 / RE1)",
             "name": "Carotenoid Reflectance Index using 700 nm",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CRI550"
@@ -857,6 +890,7 @@
             "external_variables": {},
             "formula": "S1 / (N2 + ((S2 - N2) / (lambdaS2 - lambdaN2)) * (lambdaS1 - lambdaN2))",
             "name": "Continuum Removal SWIR",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html",
@@ -878,6 +912,7 @@
             "external_variables": {},
             "formula": "N/S2",
             "name": "Char Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2005.04.014",
@@ -899,6 +934,7 @@
             "external_variables": {},
             "formula": "(N + S1) / 2.0",
             "name": "Cloud Shadow Index with SWIR 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1SWIR",
@@ -927,6 +963,7 @@
             "external_variables": {},
             "formula": "N / (S2 * T / 10000.0)",
             "name": "Char Soil Index Thermal",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVIT",
@@ -950,6 +987,7 @@
             "external_variables": {},
             "formula": "N",
             "name": "Cloud Shadow Index without SWIR bands",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CI1SWIR",
@@ -978,12 +1016,39 @@
             "external_variables": {},
             "formula": "(N * R) / (G ** 2.0)",
             "name": "Chlorophyll Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1007/s11119-010-9204-3",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "CWI": {
+            "acronym": "CWI",
+            "application_domain": "water",
+            "bands": [
+                "S2",
+                "B"
+            ],
+            "constants": {},
+            "contributor": "https://github.com/dghorai",
+            "date_of_addition": "2026-08-05",
+            "external_variables": {},
+            "formula": "(spatial_max(S2) * B) / (spatial_max(B) * S2)",
+            "name": "Coastal Water Index",
+            "reductions": {
+                "space": {
+                    "scope": "aoi"
+                }
+            },
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.1007/s41976-019-00030-w",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "DBI": {
@@ -1001,6 +1066,7 @@
             "external_variables": {},
             "formula": "((B - T1)/(B + T1)) - ((N - R)/(N + R))",
             "name": "Dry Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DBSI"
@@ -1026,6 +1092,7 @@
             "external_variables": {},
             "formula": "((S1 - G)/(S1 + G)) - ((N - R)/(N + R))",
             "name": "Dry Bareness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DBI"
@@ -1049,6 +1116,7 @@
             "external_variables": {},
             "formula": "(VV + VH)/2.0 ** 0.5",
             "name": "Dual-Pol Diagonal Distance",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VDDPI"
@@ -1072,6 +1140,7 @@
             "external_variables": {},
             "formula": "S1/N",
             "name": "Drought Stress Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf",
@@ -1093,6 +1162,7 @@
             "external_variables": {},
             "formula": "N/S1",
             "name": "Disease-Water Stress Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DSWI5",
@@ -1119,6 +1189,7 @@
             "external_variables": {},
             "formula": "S1/G",
             "name": "Disease-Water Stress Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DSWI5",
@@ -1145,6 +1216,7 @@
             "external_variables": {},
             "formula": "S1/R",
             "name": "Disease-Water Stress Index 3",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DSWI5",
@@ -1171,6 +1243,7 @@
             "external_variables": {},
             "formula": "G/R",
             "name": "Disease-Water Stress Index 4",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DSWI5",
@@ -1199,6 +1272,7 @@
             "external_variables": {},
             "formula": "(N + G)/(S1 + R)",
             "name": "Disease-Water Stress Index 5",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DSWI1",
@@ -1225,6 +1299,7 @@
             "external_variables": {},
             "formula": "N - R",
             "name": "Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "RDVI"
@@ -1259,6 +1334,7 @@
             "external_variables": {},
             "formula": "((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R",
             "name": "Difference Vegetation Index Plus",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDGI"
@@ -1282,6 +1358,7 @@
             "external_variables": {},
             "formula": "(4.0 * HV)/(HH + HV)",
             "name": "Dual-Polarized Radar Vegetation Index HH",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
@@ -1303,6 +1380,7 @@
             "external_variables": {},
             "formula": "(4.0 * VH)/(VV + VH)",
             "name": "Dual-Polarized Radar Vegetation Index VV",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VVVHR",
@@ -1328,6 +1406,7 @@
             "external_variables": {},
             "formula": "(S1 - N) / (10.0 * ((S1 + T) ** 0.5))",
             "name": "Enhanced Built-Up and Bareness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs4102957",
@@ -1359,6 +1438,7 @@
             "external_variables": {},
             "formula": "(R + G + B)/((G/B) * (R - B + epsilon))",
             "name": "Enhanced Bloom Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.isprsjprs.2019.08.006",
@@ -1382,6 +1462,7 @@
             "external_variables": {},
             "formula": "((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)",
             "name": "Enhanced Modified Bare Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.jag.2022.102703",
@@ -1404,6 +1485,7 @@
             "external_variables": {},
             "formula": "((N + G) - (2 * B)) / ((N + G) + (2 * B))",
             "name": "Enhanced Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1371/journal.pone.0186193",
@@ -1443,6 +1525,7 @@
             "external_variables": {},
             "formula": "g * (N - R) / (N + C1 * R - C2 * B + L)",
             "name": "Enhanced Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/S0034-4257(02)00096-2",
@@ -1485,6 +1568,7 @@
             "external_variables": {},
             "formula": "g * (N - R) / (N + (C1 - (C2 / c)) * R + L)",
             "name": "Two-Band Enhanced Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2008.06.006",
@@ -1507,6 +1591,7 @@
             "external_variables": {},
             "formula": "2.5 * ((N - R)/(N + 6 * R - 7.5 * B + 1.0)) * N",
             "name": "Enhanced Vegetation Index of Vegetation",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",
@@ -1536,6 +1621,7 @@
             "external_variables": {},
             "formula": "2 * G - R - B",
             "name": "Excess Green Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.13031/2013.27838",
@@ -1558,6 +1644,7 @@
             "external_variables": {},
             "formula": "(2.0 * G - R - B) - (1.3 * R - G)",
             "name": "ExG - ExR Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.compag.2008.03.009",
@@ -1579,6 +1666,7 @@
             "external_variables": {},
             "formula": "1.3 * R - G",
             "name": "Excess Red Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1117/12.336896",
@@ -1611,6 +1699,7 @@
             "external_variables": {},
             "formula": "N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))",
             "name": "Floating Algae Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2009.05.012",
@@ -1634,6 +1723,7 @@
             "external_variables": {},
             "formula": "N - ((R + G + B)/3.0)",
             "name": "Fluorescence Correction Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2020.111676",
@@ -1666,6 +1756,7 @@
             "external_variables": {},
             "formula": "N - (RE2 + 10 * (S1 - RE2) * (lambdaN - lambdaR)/(lambdaS1 - lambdaR))",
             "name": "Floating Debris Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1038/s41598-020-62298-z",
@@ -1689,6 +1780,7 @@
             "external_variables": {},
             "formula": "(((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)",
             "name": "Flood/Water Extraction Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1007/s00477-024-02660-z",
@@ -1717,6 +1809,7 @@
             "external_variables": {},
             "formula": "(N - (G - lmb * (B - R))) / (N + (G - lmb * (B - R)))",
             "name": "Green Atmospherically Resistant Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GNDVI",
@@ -1742,6 +1835,7 @@
             "external_variables": {},
             "formula": "(N - (G + B))/(N + (G + B))",
             "name": "Green-Blue Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BNDVI",
@@ -1767,6 +1861,7 @@
             "external_variables": {},
             "formula": "G / (R + G + B)",
             "name": "Green Chromatic Coordinate",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "RCC",
@@ -1802,6 +1897,7 @@
             "external_variables": {},
             "formula": "((N ** n) - (R ** n)) / ((N ** n) + (R ** n))",
             "name": "Generalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs6021211",
@@ -1823,6 +1919,7 @@
             "external_variables": {},
             "formula": "((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))",
             "name": "Global Environment Monitoring Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1007/bf00031911",
@@ -1845,6 +1942,7 @@
             "external_variables": {},
             "formula": "(2.0 * G - R - B) / (2.0 * G + R + B)",
             "name": "Green Leaf Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1080/10106040108542184",
@@ -1866,6 +1964,7 @@
             "external_variables": {},
             "formula": "RE2/G",
             "name": "Gitelson and Merzlyak Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GM2"
@@ -1889,6 +1988,7 @@
             "external_variables": {},
             "formula": "RE2/RE1",
             "name": "Gitelson and Merzlyak Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GM1"
@@ -1912,6 +2012,7 @@
             "external_variables": {},
             "formula": "(N - G)/(N + G)",
             "name": "Green Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GARI",
@@ -1936,6 +2037,7 @@
             "external_variables": {},
             "formula": "(N - G) / (N + G + 0.16)",
             "name": "Green Optimized Soil Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormNIR",
@@ -1974,6 +2076,7 @@
             "external_variables": {},
             "formula": "(N - (eta * G + (1.0 - eta) * R - lmb * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lmb * (B - R)))",
             "name": "Atmospheric Resistant Green-Red Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GARI",
@@ -1999,6 +2102,7 @@
             "external_variables": {},
             "formula": "(N - (G + R))/(N + (G + R))",
             "name": "Green-Red Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BNDVI",
@@ -2023,6 +2127,7 @@
             "external_variables": {},
             "formula": "N/G",
             "name": "Green Ratio Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormNIR",
@@ -2055,6 +2160,7 @@
             "external_variables": {},
             "formula": "(1.0 + L) * (N - G) / (N + G + L)",
             "name": "Green Soil Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormNIR",
@@ -2082,6 +2188,7 @@
             "external_variables": {},
             "formula": "((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))",
             "name": "Global Vegetation Moisture Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/S0034-4257(02)00037-8",
@@ -2113,6 +2220,7 @@
             "external_variables": {},
             "formula": "(N - (R - gamma * (B - R)))/(N + (R - gamma * (B - R)))",
             "name": "New Atmospherically Resistant Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.jipb.net/EN/abstract/abstract23925.shtml",
@@ -2141,6 +2249,7 @@
             "external_variables": {},
             "formula": "(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)",
             "name": "Index-Based Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431160802039957",
@@ -2162,6 +2271,7 @@
             "external_variables": {},
             "formula": "(R - B)/(R + B)",
             "name": "Kawashima Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1006/anbo.1997.0544",
@@ -2183,6 +2293,7 @@
             "external_variables": {},
             "formula": "N/(N + R)",
             "name": "Infrared Percentage Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(90)90085-Z",
@@ -2206,6 +2317,7 @@
             "external_variables": {},
             "formula": "(RE3 - R) / (RE1 / RE2)",
             "name": "Inverted Red-Edge Chlorophyll Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "S2REP"
@@ -2230,6 +2342,7 @@
             "external_variables": {},
             "formula": "(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))",
             "name": "Improved-Red-Green-Blue Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.jag.2024.103668",
@@ -2253,6 +2366,7 @@
             "external_variables": {},
             "formula": "((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N))",
             "name": "Kochia Detection Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "WCI1",
@@ -2278,6 +2392,7 @@
             "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Land Surface Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2003.11.008",
@@ -2300,6 +2415,7 @@
             "external_variables": {},
             "formula": "((S1 - S2 - N)/(S1 + S2 + N)) + 0.5",
             "name": "Modified Bare Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSDS"
@@ -2336,6 +2452,7 @@
             "external_variables": {},
             "formula": "(omega * G) - R - N - S1 - S2",
             "name": "Multi-Band Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.jag.2018.01.018",
@@ -2358,6 +2475,7 @@
             "external_variables": {},
             "formula": "((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1016/S0034-4257(00)00113-9",
@@ -2380,6 +2498,7 @@
             "external_variables": {},
             "formula": "1.2 * (2.5 * (N - R) - 1.3 * (N - G))",
             "name": "Modified Chlorophyll Absorption in Reflectance Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MTVI1",
@@ -2406,6 +2525,7 @@
             "external_variables": {},
             "formula": "(1.5 * (2.5 * (N - R) - 1.3 * (N - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MCARI1",
@@ -2432,6 +2552,7 @@
             "external_variables": {},
             "formula": "((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)",
             "name": "Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TCARIOSAVI705",
@@ -2459,6 +2580,7 @@
             "external_variables": {},
             "formula": "(((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)) / (1.16 * (N - R) / (N + R + 0.16))",
             "name": "MCARI/OSAVI Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/S0034-4257(00)00113-9",
@@ -2481,6 +2603,7 @@
             "external_variables": {},
             "formula": "(((RE2 - RE1) - 0.2 * (RE2 - G)) * (RE2 / RE1)) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
             "name": "MCARI/OSAVI Ratio (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TCARIOSAVI705",
@@ -2506,6 +2629,7 @@
             "external_variables": {},
             "formula": "(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)",
             "name": "Modified Green Red Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "RGBVI"
@@ -2529,6 +2653,7 @@
             "external_variables": {},
             "formula": "(N - S1) / (N * S1)",
             "name": "Mangrove Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.researchgate.net/profile/Gathot-Winarso/publication/277137915_NEW_MANGROVE_INDEX_AS_DEGRADATIONHEALTH_INDICATOR_USING_REMOTE_SENSING_DATA_SEGARA_ANAKAN_AND_ALAS_PURWO_CASE_STUDY/links/5562d90c08ae8c0cab333ab4/NEW-MANGROVE-INDEX-AS-DEGRADATION-HEALTH-INDICATOR-USING-REMOTE-SENSING-DATA-SEGARA-ANAKAN-AND-ALAS-PURWO-CASE-STUDY.pdf",
@@ -2550,6 +2675,7 @@
             "external_variables": {},
             "formula": "10.0 * S2 - 9.8 * S1 + 2.0",
             "name": "Mid-Infrared Burn Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431160110053185",
@@ -2571,6 +2697,7 @@
             "external_variables": {},
             "formula": "(1.0 - N - S1)/(1.0 - N + S1)",
             "name": "Modified Land Surface Water Index (MODIS Bands 2 and 6)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MLSWI27"
@@ -2594,6 +2721,7 @@
             "external_variables": {},
             "formula": "(1.0 - N - S2)/(1.0 - N + S2)",
             "name": "Modified Land Surface Water Index (MODIS Bands 2 and 7)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MLSWI26"
@@ -2617,6 +2745,7 @@
             "external_variables": {},
             "formula": "(N - S2)/(N + S2)",
             "name": "Modified Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/014311697216810",
@@ -2638,6 +2767,7 @@
             "external_variables": {},
             "formula": "(G - S1) / (G + S1)",
             "name": "Modified Normalized Difference Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431160600589179",
@@ -2664,6 +2794,7 @@
             "external_variables": {},
             "formula": "(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)",
             "name": "Modified Non-Linear Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/TGRS.2003.812910",
@@ -2685,6 +2816,7 @@
             "external_variables": {},
             "formula": "(R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)",
             "name": "Modified Red Blue Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/s20185055",
@@ -2706,6 +2838,7 @@
             "external_variables": {},
             "formula": "0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)",
             "name": "Modified Soil-Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(94)90134-1",
@@ -2727,6 +2860,7 @@
             "external_variables": {},
             "formula": "S1/N",
             "name": "Moisture Stress Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(89)90046-1",
@@ -2748,6 +2882,7 @@
             "external_variables": {},
             "formula": "(N / R - 1) / ((N / R + 1) ** 0.5)",
             "name": "Modified Simple Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/07038992.1996.10855178",
@@ -2769,6 +2904,7 @@
             "external_variables": {},
             "formula": "(RE2 / RE1 - 1) / ((RE2 / RE1 + 1) ** 0.5)",
             "name": "Modified Simple Ratio (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TCARIOSAVI705",
@@ -2795,6 +2931,7 @@
             "external_variables": {},
             "formula": "(RE2 - RE1) / (RE1 - R)",
             "name": "MERIS Terrestrial Chlorophyll Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/0143116042000274015",
@@ -2817,6 +2954,7 @@
             "external_variables": {},
             "formula": "1.2 * (1.2 * (N - G) - 2.5 * (R - G))",
             "name": "Modified Triangular Vegetation Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MCARI1",
@@ -2843,6 +2981,7 @@
             "external_variables": {},
             "formula": "(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)",
             "name": "Modified Triangular Vegetation Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MCARI1",
@@ -2869,6 +3008,7 @@
             "external_variables": {},
             "formula": "(N - G) / (S1 - G)",
             "name": "Mangrove Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.isprsjprs.2020.06.001",
@@ -2893,6 +3033,7 @@
             "external_variables": {},
             "formula": "-4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))",
             "name": "Revised Multi-Spectral Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs10101643",
@@ -2915,6 +3056,7 @@
             "external_variables": {},
             "formula": "(S2 - S1/G)/(S2 + S1/G)",
             "name": "Normalized Built-up Area Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BRBA"
@@ -2938,6 +3080,7 @@
             "external_variables": {},
             "formula": "(R - T)/(R + T)",
             "name": "Normalized Difference Bare Land Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBLIOLI"
@@ -2961,6 +3104,7 @@
             "external_variables": {},
             "formula": "(R - T1)/(R + T1)",
             "name": "Normalized Difference Bare Land Index for Landsat-OLI",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBLI"
@@ -2984,6 +3128,7 @@
             "external_variables": {},
             "formula": "(N - S2) / (N + S2)",
             "name": "Normalized Burn Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3133/ofr0211",
@@ -3005,6 +3150,7 @@
             "external_variables": {},
             "formula": "(S1 - S2) / (S1 + S2)",
             "name": "Normalized Burn Ratio 2",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
@@ -3026,6 +3172,7 @@
             "external_variables": {},
             "formula": "(S2 - S1 - 0.02)/(S2 + S1 + 0.1)",
             "name": "Normalized Burn Ratio SWIR",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/22797254.2020.1738900",
@@ -3048,6 +3195,7 @@
             "external_variables": {},
             "formula": "(N - (S2 * T / 10000.0)) / (N + (S2 * T / 10000.0))",
             "name": "Normalized Burn Ratio Thermal 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VI6T",
@@ -3074,6 +3222,7 @@
             "external_variables": {},
             "formula": "((N / (T / 10000.0)) - S2) / ((N / (T / 10000.0)) + S2)",
             "name": "Normalized Burn Ratio Thermal 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBRT1",
@@ -3100,6 +3249,7 @@
             "external_variables": {},
             "formula": "((N - (T / 10000.0)) - S2) / ((N - (T / 10000.0)) + S2)",
             "name": "Normalized Burn Ratio Thermal 3",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBRT1",
@@ -3127,6 +3277,7 @@
             "external_variables": {},
             "formula": "(S2 - N2 - G - B)/(S2 + N2 + G + B)",
             "name": "Normalized Burn Ratio Plus",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs14071727",
@@ -3152,6 +3303,7 @@
             "external_variables": {},
             "formula": "0.36 * (G + R + N) - (((B + S2)/G) + S1)",
             "name": "Non-Binary Snow Index for Multi-Component Surfaces",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs13142777",
@@ -3190,6 +3342,7 @@
             "external_variables": {},
             "formula": "((S1 - N)/(10.0 * (T + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)",
             "name": "New Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://hdl.handle.net/1959.11/29500",
@@ -3211,6 +3364,7 @@
             "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
             "name": "Normalized Difference (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "mSR705",
@@ -3235,6 +3389,7 @@
             "external_variables": {},
             "formula": "(S1 - N) / (S1 + N)",
             "name": "Normalized Difference Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1080/01431160304987",
@@ -3256,6 +3411,7 @@
             "external_variables": {},
             "formula": "(S1 - T) / (S1 + T)",
             "name": "Normalized Difference Bareness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.2005.1526319",
@@ -3277,6 +3433,7 @@
             "external_variables": {},
             "formula": "(RE1 - R)/(RE1 + R)",
             "name": "Normalized Difference Chlorophyll Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2011.10.016",
@@ -3299,6 +3456,7 @@
             "external_variables": {},
             "formula": "(((N - R)/(N + R)) - ((G - N)/(G + N)))/(((N - R)/(N + R)) + ((G - N)/(G + N)))",
             "name": "Normalized Difference Drought Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1029/2006GL029127",
@@ -3331,6 +3489,7 @@
             "external_variables": {},
             "formula": "(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)",
             "name": "Normalized Difference Greenness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DVIplus"
@@ -3354,6 +3513,7 @@
             "external_variables": {},
             "formula": "(G - R)/(G + R)",
             "name": "Normalized Difference Glacier Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDSII"
@@ -3377,6 +3537,7 @@
             "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference Infrared Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf",
@@ -3400,6 +3561,7 @@
             "external_variables": {},
             "formula": "(T - (B + N + S1) / 3.0)/(T + (B + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Blue",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDISIr",
@@ -3428,6 +3590,7 @@
             "external_variables": {},
             "formula": "(T - (G + N + S1) / 3.0)/(T + (G + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Green",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDISIr",
@@ -3456,6 +3619,7 @@
             "external_variables": {},
             "formula": "(T - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T + (((G - S1)/(G + S1)) + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index with MNDWI",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDISIr",
@@ -3484,6 +3648,7 @@
             "external_variables": {},
             "formula": "(T - (((G - N)/(G + N)) + N + S1) / 3.0)/(T + (((G - N)/(G + N)) + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index with NDWI",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDISIr",
@@ -3512,6 +3677,7 @@
             "external_variables": {},
             "formula": "(T - (R + N + S1) / 3.0)/(T + (R + N + S1) / 3.0)",
             "name": "Normalized Difference Impervious Surface Index Red",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDISIg",
@@ -3538,6 +3704,7 @@
             "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference Moisture Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/S0034-4257(01)00318-2",
@@ -3569,6 +3736,7 @@
             "external_variables": {},
             "formula": "(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))",
             "name": "Normalized Difference Phenology Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2017.04.031",
@@ -3590,6 +3758,7 @@
             "external_variables": {},
             "formula": "(VV - VH)/(VV + VH)",
             "name": "Normalized Difference Polarization Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
@@ -3611,6 +3780,7 @@
             "external_variables": {},
             "formula": "(S1-G)/(S1+G)",
             "name": "Normalized Difference Pond Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDTI"
@@ -3634,6 +3804,7 @@
             "external_variables": {},
             "formula": "(N - RE1) / (N + RE1)",
             "name": "Normalized Difference Red Edge Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/1011-1344(93)06963-4",
@@ -3655,6 +3826,7 @@
             "external_variables": {},
             "formula": "(G - S1) / (G + S1)",
             "name": "Normalized Difference Snow Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.1994.399618",
@@ -3676,6 +3848,7 @@
             "external_variables": {},
             "formula": "(G - N)/(G + N)",
             "name": "Normalized Difference Snow Ice Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDGlaI"
@@ -3699,6 +3872,7 @@
             "external_variables": {},
             "formula": "(R - S1)/(R + S1)",
             "name": "Normalized Difference Snow/Ice Index for Landsat TM",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDSaII"
@@ -3722,6 +3896,7 @@
             "external_variables": {},
             "formula": "(G - Y)/(G + Y)",
             "name": "WorldView Normalized Difference Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NHFD"
@@ -3750,6 +3925,7 @@
             "external_variables": {},
             "formula": "(N - S1 - b)/(N + S1)",
             "name": "Normalized Difference Snow Index with no Water",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDWIns"
@@ -3773,6 +3949,7 @@
             "external_variables": {},
             "formula": "(N - S1)/(N + S1)",
             "name": "Normalized Difference SWIR",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/TGRS.2003.819190",
@@ -3794,6 +3971,7 @@
             "external_variables": {},
             "formula": "(R - S1) / (R + S1)",
             "name": "Normalized Difference Snow and Ice Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDSIITM"
@@ -3817,6 +3995,7 @@
             "external_variables": {},
             "formula": "(S2 - G)/(S2 + G)",
             "name": "Normalized Difference Soil Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.jag.2015.02.010",
@@ -3838,6 +4017,7 @@
             "external_variables": {},
             "formula": "(R-G)/(R+G)",
             "name": "Normalized Difference Turbidity Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDPonI"
@@ -3876,6 +4056,7 @@
             "external_variables": {},
             "formula": "gamma * (S1 - S2)/(S1 + S2) + (1 - gamma) * (N - RE3)/(N + RE3)",
             "name": "4-band Red Edge Normalized Difference Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI4RE",
@@ -3903,6 +4084,7 @@
             "external_variables": {},
             "formula": "(S1 - S2)/(S1 + S2)",
             "name": "Normalized Difference Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "STI"
@@ -3926,6 +4108,7 @@
             "external_variables": {},
             "formula": "(N - R)/(N + R)",
             "name": "Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TVI"
@@ -3976,6 +4159,7 @@
             "external_variables": {},
             "formula": "((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1))",
             "name": "4-band Red Edge Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "SAVI4RE",
@@ -4003,6 +4187,7 @@
             "external_variables": {},
             "formula": "(RE2 - RE1) / (RE2 + RE1)",
             "name": "Normalized Difference Vegetation Index (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "SR705",
@@ -4030,6 +4215,7 @@
             "external_variables": {},
             "formula": "((N - R)/(N + R)) - ((G - S1)/(G + S1))",
             "name": "NDVI-MNDWI Model",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1007/978-3-662-45737-5_51",
@@ -4052,6 +4238,7 @@
             "external_variables": {},
             "formula": "(N - (R * T / 10000.0))/(N + (R * T / 10000.0))",
             "name": "Normalized Difference Vegetation Index Thermal",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CSIT",
@@ -4076,6 +4263,7 @@
             "external_variables": {},
             "formula": "(G - N) / (G + N)",
             "name": "Normalized Difference Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431169608948714",
@@ -4102,6 +4290,7 @@
             "external_variables": {},
             "formula": "(G - a * N)/(G + N)",
             "name": "Normalized Difference Water Index with no Snow Cover and Glaciers",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDSInw"
@@ -4125,6 +4314,7 @@
             "external_variables": {},
             "formula": "(G - B) / (G + B)",
             "name": "Normalized Difference Yellowness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2016.06.016",
@@ -4146,6 +4336,7 @@
             "external_variables": {},
             "formula": "(G - R) / (G + R)",
             "name": "Normalized Green Red Difference Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(79)90013-0",
@@ -4167,6 +4358,7 @@
             "external_variables": {},
             "formula": "(RE1 - A) / (RE1 + A)",
             "name": "Non-Homogeneous Feature Difference",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDSIWV"
@@ -4190,6 +4382,7 @@
             "external_variables": {},
             "formula": "((N - R) / (N + R)) * N",
             "name": "Near-Infrared Reflectance of Vegetation",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1126/sciadv.1602244",
@@ -4222,6 +4415,7 @@
             "external_variables": {},
             "formula": "N - R - k * (lambdaN - lambdaR)",
             "name": "Hyperspectral Near-Infrared Reflectance of Vegetation",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2021.112723",
@@ -4247,6 +4441,7 @@
             },
             "formula": "((N - R) / (N + R)) * N * PAR",
             "name": "Near-Infrared Reflectance of Vegetation and Incoming PAR",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2021.112763",
@@ -4268,6 +4463,7 @@
             "external_variables": {},
             "formula": "((N ** 2) - R)/((N ** 2) + R)",
             "name": "Non-Linear Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/02757259409532252",
@@ -4290,6 +4486,7 @@
             "external_variables": {},
             "formula": "(N - (S1 - S2))/(N + (S1 - S2))",
             "name": "Normalized Multi-band Drought Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1029/2007GL031021",
@@ -4311,6 +4508,7 @@
             "external_variables": {},
             "formula": "(R - A) / (R + A)",
             "name": "Normalized Pigments Chlorophyll Ratio Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(94)90136-8",
@@ -4332,6 +4530,7 @@
             "external_variables": {},
             "formula": "(G - S2) / (G + S2)",
             "name": "Normalized Rapeseed Flowering Index Green",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NRFIr"
@@ -4355,6 +4554,7 @@
             "external_variables": {},
             "formula": "(R - S2) / (R + S2)",
             "name": "Normalized Rapeseed Flowering Index Red",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NRFIg"
@@ -4378,6 +4578,7 @@
             "external_variables": {},
             "formula": "(S1 - S2)/(S1 + S2)",
             "name": "Normalized Shortwave Infrared Difference Soil-Moisture",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MBI"
@@ -4401,6 +4602,7 @@
             "external_variables": {},
             "formula": "(S1-S2)/S1",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSDSI2",
@@ -4425,6 +4627,7 @@
             "external_variables": {},
             "formula": "(S1-S2)/S2",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSDSI1",
@@ -4449,6 +4652,7 @@
             "external_variables": {},
             "formula": "(S1-S2)/(S1+S2)",
             "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSDSI1",
@@ -4474,6 +4678,7 @@
             "external_variables": {},
             "formula": "((N-S2)/(N+S2))*T",
             "name": "NIR-SWIR-Temperature Version 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSTv2"
@@ -4498,6 +4703,7 @@
             "external_variables": {},
             "formula": "(N-(S2+T))/(N+(S2+T))",
             "name": "NIR-SWIR-Temperature Version 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NSTv1"
@@ -4523,6 +4729,7 @@
             "external_variables": {},
             "formula": "(B - (N + S1 + S2))/(B + (N + S1 + S2))",
             "name": "New Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.11873/j.issn.1004-0323.2009.2.167",
@@ -4545,6 +4752,7 @@
             "external_variables": {},
             "formula": "G/(N + G + R)",
             "name": "Normalized Green",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormNIR",
@@ -4573,6 +4781,7 @@
             "external_variables": {},
             "formula": "N/(N + G + R)",
             "name": "Normalized NIR",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormR",
@@ -4601,6 +4810,7 @@
             "external_variables": {},
             "formula": "R/(N + G + R)",
             "name": "Normalized Red",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NormNIR",
@@ -4661,6 +4871,7 @@
             "external_variables": {},
             "formula": "(N / G) * (R / G) ** c",
             "name": "Optimized Chlorophyll Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1007/s11119-008-9075-z",
@@ -4682,6 +4893,7 @@
             "external_variables": {},
             "formula": "(N - R) / (N + R + 0.16)",
             "name": "Optimized Soil-Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(95)00186-7",
@@ -4704,6 +4916,7 @@
             "external_variables": {},
             "formula": "(G + R)/B",
             "name": "Oil Spill Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.mex.2021.101327",
@@ -4725,6 +4938,7 @@
             "external_variables": {},
             "formula": "N/(N + R)",
             "name": "Plastic Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "RNDVI"
@@ -4748,6 +4962,7 @@
             "external_variables": {},
             "formula": "0.8192 * B - 0.5735 * N + 0.0750",
             "name": "Perpendicular Impervious Surface Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs10101521",
@@ -4770,6 +4985,7 @@
             "external_variables": {},
             "formula": "(R - B)/RE2",
             "name": "Plant Senescing Reflectance Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
@@ -4792,6 +5008,7 @@
             "external_variables": {},
             "formula": "(8.0 * HV)/(HH + VV + 2.0 * HV)",
             "name": "Quad-Polarized Radar Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.2001.976856",
@@ -4814,6 +5031,7 @@
             "external_variables": {},
             "formula": "R / (R + G + B)",
             "name": "Red Chromatic Coordinate",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "GCC",
@@ -4838,6 +5056,7 @@
             "external_variables": {},
             "formula": "(N - R) / ((N + R) ** 0.5)",
             "name": "Renormalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DVI"
@@ -4862,6 +5081,7 @@
             "external_variables": {},
             "formula": "((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)",
             "name": "Red-Edge Disease Stress Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/s18030868",
@@ -4883,6 +5103,7 @@
             "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1)",
             "name": "Red Edge Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI705",
@@ -4908,6 +5129,7 @@
             "external_variables": {},
             "formula": "(HH - HV)/(HH + HV)",
             "name": "Radar Forest Degradation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.5194/bg-9-179-2012",
@@ -4930,6 +5152,7 @@
             "external_variables": {},
             "formula": "(G ** 2.0 - B * R)/(G ** 2.0 + B * R)",
             "name": "Red Green Blue Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MGRVI"
@@ -4953,6 +5176,7 @@
             "external_variables": {},
             "formula": "R/G",
             "name": "Red-Green Ratio Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.jag.2014.03.018",
@@ -4974,6 +5198,7 @@
             "external_variables": {},
             "formula": "(R - G)/(R + G)",
             "name": "Redness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.documentation.ird.fr/hor/fdi:34390",
@@ -4995,6 +5220,7 @@
             "external_variables": {},
             "formula": "(R**2.0)/(G**4.0)",
             "name": "SPOT HRV XS-based Redness Index 4",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "BITM",
@@ -5019,6 +5245,7 @@
             "external_variables": {},
             "formula": "(R - N)/(R + N)",
             "name": "Reversed Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "PI"
@@ -5042,6 +5269,7 @@
             "external_variables": {},
             "formula": "RE2 / R",
             "name": "Ratio Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.2134/agronj1968.00021962006000060016x",
@@ -5090,6 +5318,7 @@
             "external_variables": {},
             "formula": "(alpha * RE3 + (1 - alpha) * RE2)/(beta * R + (1 - beta) * RE1)",
             "name": "4-band Red Edge Ratio Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI4RE",
@@ -5122,6 +5351,7 @@
             "external_variables": {},
             "formula": "((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)",
             "name": "Rescaled Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/JSTARS.2025.3562089",
@@ -5145,6 +5375,7 @@
             "external_variables": {},
             "formula": "705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1))",
             "name": "Sentinel-2 Red-Edge Position",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "IRECI"
@@ -5168,6 +5399,7 @@
             "external_variables": {},
             "formula": "(RE1 - S2)/(RE1 + S2)",
             "name": "Sentinel-2 Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/w13121647",
@@ -5190,6 +5422,7 @@
             "external_variables": {},
             "formula": "(N * (R - S1)) / ((N + R) * (N + S1))",
             "name": "S3 Snow Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3178/jjshwr.12.28",
@@ -5235,6 +5468,7 @@
             "external_variables": {},
             "formula": "(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)",
             "name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "ARVI"
@@ -5272,6 +5506,7 @@
             "external_variables": {},
             "formula": "(1.0 + L) * (N - R) / (N + R + L)",
             "name": "Soil-Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(88)90106-X",
@@ -5302,6 +5537,7 @@
             "external_variables": {},
             "formula": "N / (R + (slb / sla))",
             "name": "Soil-Adjusted Vegetation Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431169008955053",
@@ -5350,6 +5586,7 @@
             "external_variables": {},
             "formula": "2.0 * ((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1 + 1))",
             "name": "4-band Red Edge Soil Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI4RE",
@@ -5383,6 +5620,7 @@
             "external_variables": {},
             "formula": "(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)",
             "name": "Soil-Adjusted Vegetation Index Thermal",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "CSIT",
@@ -5410,6 +5648,7 @@
             "external_variables": {},
             "formula": "B + 2.0 * (G - N) - 0.75 * S1 - 0.5 * S2",
             "name": "Subtractive Coastal Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs16152795",
@@ -5436,6 +5675,7 @@
             "external_variables": {},
             "formula": "(N/R) + fdelta * (1.0/R)",
             "name": "Shadow-Eliminated Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/17538947.2018.1495770",
@@ -5458,6 +5698,7 @@
             "external_variables": {},
             "formula": "((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)",
             "name": "Shadow Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "AVI",
@@ -5483,6 +5724,7 @@
             "external_variables": {},
             "formula": "(N - A) / (N - R)",
             "name": "Structure Insensitive Pigment Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://eurekamag.com/research/009/395/009395053.php",
@@ -5505,6 +5747,7 @@
             "external_variables": {},
             "formula": "N/(R + S2)",
             "name": "Specific Leaf Area Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf",
@@ -5539,6 +5782,7 @@
             "external_variables": {},
             "formula": "(1.0 + L) * (S1 - S2) / (S1 + S2 + L)",
             "name": "Soil-Adjusted Normalized Difference Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/22797254.2017.1418186",
@@ -5575,6 +5819,7 @@
             "external_variables": {},
             "formula": "gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N + RE3 + 1.0)",
             "name": "4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI4RE",
@@ -5602,6 +5847,7 @@
             "external_variables": {},
             "formula": "N/R",
             "name": "Simple Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.2307/1936256",
@@ -5623,6 +5869,7 @@
             "external_variables": {},
             "formula": "N/G",
             "name": "Simple Ratio (800 and 550 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431169308904370",
@@ -5645,6 +5892,7 @@
             "external_variables": {},
             "formula": "N2/(G * RE1)",
             "name": "Simple Ratio (860, 550 and 708 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
@@ -5666,6 +5914,7 @@
             "external_variables": {},
             "formula": "RE2 / G",
             "name": "Simple Ratio (555 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI705",
@@ -5691,6 +5940,7 @@
             "external_variables": {},
             "formula": "RE2 / RE1",
             "name": "Simple Ratio (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI705",
@@ -5718,6 +5968,7 @@
             "external_variables": {},
             "formula": "(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))",
             "name": "Symbolic Regression Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "SRWI"
@@ -5743,6 +5994,7 @@
             "external_variables": {},
             "formula": "((G + B) - (N + S1)) / ((G + B) + (N + S1))",
             "name": "Symbolic Regression Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "SRVI"
@@ -5766,6 +6018,7 @@
             "external_variables": {},
             "formula": "S1 / S2",
             "name": "Simple Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDTillI"
@@ -5804,6 +6057,7 @@
             "external_variables": {},
             "formula": "gamma * S1/S2 + (1 - gamma) * N/RE3",
             "name": "4-band Red Edge Soil Tillage Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI4RE",
@@ -5832,6 +6086,7 @@
             "external_variables": {},
             "formula": "(G * (N - S1)) / ((G + N) * (N + S1))",
             "name": "Snow Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs11232774",
@@ -5855,6 +6110,7 @@
             "external_variables": {},
             "formula": "(B + G)/(N + S1)",
             "name": "Sentinel Water Mask",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
@@ -5876,6 +6132,7 @@
             "external_variables": {},
             "formula": "(N2 - RE1) / (N2 + RE1)",
             "name": "Sentinel-2 LAI Green Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/s19040904",
@@ -5898,6 +6155,7 @@
             "external_variables": {},
             "formula": "3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))",
             "name": "Transformed Chlorophyll Absorption in Reflectance Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TCARIOSAVI"
@@ -5923,6 +6181,7 @@
             "external_variables": {},
             "formula": "(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))",
             "name": "TCARI/OSAVI Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "TCARI"
@@ -5947,6 +6206,7 @@
             "external_variables": {},
             "formula": "(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
             "name": "TCARI/OSAVI Ratio (705 and 750 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "MCARIOSAVI705",
@@ -5973,6 +6233,7 @@
             "external_variables": {},
             "formula": "1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5",
             "name": "Triangular Chlorophyll Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1109/TGRS.2007.904836",
@@ -5994,6 +6255,7 @@
             "external_variables": {},
             "formula": "1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))",
             "name": "Transformed Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.2002.1026867",
@@ -6016,6 +6278,7 @@
             "external_variables": {},
             "formula": "- 0.5 * (190 * (R - G) - 120 * (R - B))",
             "name": "Triangular Greenness Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1016/j.jag.2012.07.020",
@@ -6038,6 +6301,7 @@
             "external_variables": {},
             "formula": "((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)",
             "name": "Transformed Red Range Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs12152359",
@@ -6074,6 +6338,7 @@
             "external_variables": {},
             "formula": "sla * (N - sla * R - slb) / (sla * N + R - sla * slb)",
             "name": "Transformed Soil-Adjusted Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/IGARSS.1989.576128",
@@ -6096,6 +6361,7 @@
             "external_variables": {},
             "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))",
             "name": "Transformed Triangular Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs12010016",
@@ -6117,6 +6383,7 @@
             "external_variables": {},
             "formula": "(((N - R)/(N + R)) + 0.5) ** 0.5",
             "name": "Transformed Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NDVI"
@@ -6144,6 +6411,7 @@
             "external_variables": {},
             "formula": "(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))",
             "name": "Triangle Water Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.3390/rs14215289",
@@ -6166,6 +6434,7 @@
             "external_variables": {},
             "formula": "0.5 * (120 * (N - G) - 200 * (R - G))",
             "name": "Triangular Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1016/S0034-4257(00)00197-8",
@@ -6187,6 +6456,7 @@
             "external_variables": {},
             "formula": "(S2 - N)/(S2 + N)",
             "name": "Urban Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf",
@@ -6209,6 +6479,7 @@
             "external_variables": {},
             "formula": "(G - R) / (G + R - B)",
             "name": "Visible Atmospherically Resistant Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VIG",
@@ -6235,6 +6506,7 @@
             "external_variables": {},
             "formula": "(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)",
             "name": "Visible Atmospherically Resistant Index (700 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VARI",
@@ -6260,6 +6532,7 @@
             "external_variables": {},
             "formula": "(VV + VH)/VV",
             "name": "Vertical Dual De-Polarization Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DPDD"
@@ -6283,6 +6556,7 @@
             "external_variables": {},
             "formula": "VH - VV",
             "name": "VH-VV Difference",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DpRVIVV",
@@ -6307,6 +6581,7 @@
             "external_variables": {},
             "formula": "VH * VV",
             "name": "VH-VV Product",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VHVVR",
@@ -6332,6 +6607,7 @@
             "external_variables": {},
             "formula": "VH/VV",
             "name": "VH-VV Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VHVVP",
@@ -6357,6 +6633,7 @@
             "external_variables": {},
             "formula": "(N - T/10000.0)/(N + T/10000.0)",
             "name": "VI6T Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "NBRT1",
@@ -6382,6 +6659,7 @@
             "external_variables": {},
             "formula": "(RE1 - R) / (RE1 + R)",
             "name": "Vegetation Index (700 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VARI",
@@ -6408,6 +6686,7 @@
             "external_variables": {},
             "formula": "((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))",
             "name": "Vegetation Index Built-up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "http://dx.doi.org/10.1080/01431161.2012.687842",
@@ -6429,6 +6708,7 @@
             "external_variables": {},
             "formula": "(G - R) / (G + R)",
             "name": "Vegetation Index Green",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VARI",
@@ -6454,6 +6734,7 @@
             "external_variables": {},
             "formula": "VV - VH",
             "name": "VV-VH Difference",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VHVVR",
@@ -6479,6 +6760,7 @@
             "external_variables": {},
             "formula": "VV/VH",
             "name": "VV-VH Ratio",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "DpRVIVV",
@@ -6503,6 +6785,7 @@
             "external_variables": {},
             "formula": "VV + VH",
             "name": "VV-VH Sum",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VHVVR",
@@ -6528,6 +6811,7 @@
             "external_variables": {},
             "formula": "(G - N)/(G + N)",
             "name": "Visible Green-Based Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VrNIRBI"
@@ -6551,6 +6835,7 @@
             "external_variables": {},
             "formula": "(R - N)/(R + N)",
             "name": "Visible Red-Based Built-Up Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "VgNIRBI"
@@ -6582,6 +6867,7 @@
             "external_variables": {},
             "formula": "-1.0 * ((B - R + RE1)/(B + R + RE1 + epsilon)) * ((G + R)/(B + N + epsilon))",
             "name": "Wheat Canopy Index (Growth Stage 1)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "KDI",
@@ -6615,6 +6901,7 @@
             "external_variables": {},
             "formula": "-1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))",
             "name": "Wheat Canopy Index (Growth Stage 2)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "KDI",
@@ -6648,6 +6935,7 @@
             "external_variables": {},
             "formula": "((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))",
             "name": "Wheat Canopy Index (Growth Stage 3)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "KDI",
@@ -6688,6 +6976,7 @@
             "external_variables": {},
             "formula": "(alpha * N - R) / (alpha * N + R)",
             "name": "Wide Dynamic Range Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1078/0176-1617-01176",
@@ -6717,6 +7006,7 @@
             "external_variables": {},
             "formula": "N - sla * R",
             "name": "Weighted Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/0034-4257(89)90076-X",
@@ -6738,6 +7028,7 @@
             "external_variables": {},
             "formula": "(G - S2) / (G + S2)",
             "name": "Water Index 1",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "WI2"
@@ -6761,6 +7052,7 @@
             "external_variables": {},
             "formula": "(B - S2) / (B + S2)",
             "name": "Water Index 2",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "WI1"
@@ -6787,6 +7079,7 @@
             "external_variables": {},
             "formula": "1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2",
             "name": "Water Index 2015",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1016/j.rse.2015.12.055",
@@ -6810,6 +7103,7 @@
             "external_variables": {},
             "formula": "(G + R)/(N + S1)",
             "name": "Water Ratio Index",
+            "reductions": {},
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762",
@@ -6831,6 +7125,7 @@
             "external_variables": {},
             "formula": "((N - B)/(N + B)) * N",
             "name": "Blue Near-Infrared Reflectance of Vegetation",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "EVIv",
@@ -6874,6 +7169,7 @@
             "external_variables": {},
             "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
             "name": "Kernel Enhanced Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "kNDVI",
@@ -6900,6 +7196,7 @@
             "external_variables": {},
             "formula": "kNN/(kNN + kNR)",
             "name": "Kernel Infrared Percentage Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "kEVI",
@@ -6926,6 +7223,7 @@
             "external_variables": {},
             "formula": "(kNN - kNR)/(kNN + kNR)",
             "name": "Kernel Normalized Difference Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "kEVI",
@@ -6952,6 +7250,7 @@
             "external_variables": {},
             "formula": "kNN / kNR",
             "name": "Kernel Ratio Vegetation Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "kEVI",
@@ -6979,6 +7278,7 @@
             "external_variables": {},
             "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
             "name": "Kernel Visible Atmospherically Resistant Index",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "kEVI",
@@ -7006,6 +7306,7 @@
             "external_variables": {},
             "formula": "(RE2 - RE1)/(RE2 + RE1 - A)",
             "name": "Modified Normalized Difference (705, 750 and 445 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "ND705",
@@ -7030,6 +7331,7 @@
             "external_variables": {},
             "formula": "(RE2 - A)/(RE2 + A)",
             "name": "Modified Simple Ratio (705 and 445 nm)",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "ND705",
@@ -7054,6 +7356,7 @@
             "external_variables": {},
             "formula": "((N - S2)/(N + S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",
@@ -7088,6 +7391,7 @@
             "external_variables": {},
             "formula": "(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",
@@ -7117,6 +7421,7 @@
             "external_variables": {},
             "formula": "((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",
@@ -7146,6 +7451,7 @@
             "external_variables": {},
             "formula": "(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",
@@ -7175,6 +7481,7 @@
             "external_variables": {},
             "formula": "((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N",
             "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation",
+            "reductions": {},
             "source": {
                 "source_companions": [
                     "bNIRv",

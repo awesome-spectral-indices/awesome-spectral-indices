@@ -3061,5 +3061,22 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-05",
             contributor="https://github.com/davemlz",
         ),
+        CWI=SpectralIndex(
+            acronym="CWI",
+            name="Coastal Water Index",
+            formula="(spatial_max(S2) * B) / (spatial_max(B) * S2)",
+            reductions={
+                "space": {
+                    "scope": "aoi",
+                }
+            },
+            source={
+                "source_link": "https://doi.org/10.1007/s41976-019-00030-w",
+                "source_type": "article"
+            },
+            application_domain="water",
+            date_of_addition="2026-08-05",
+            contributor="https://github.com/dghorai",
+        ),
     )
 )

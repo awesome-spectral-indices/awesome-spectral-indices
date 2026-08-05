@@ -38,7 +38,19 @@ class FormulaVisitor(ast.NodeVisitor):
     explicitly allowed functions. It never evaluates the formula.
     """
 
-    allowed_functions = ("max", "min", "tanh")
+    allowed_functions = (
+        "max",
+        "min",
+        "tanh",
+        "spatial_max",
+        "spatial_min",
+        "spatial_mean",
+    )
+    spatial_reduction_functions = (
+        "spatial_max",
+        "spatial_min",
+        "spatial_mean",
+    )
     allowed_binary_operators = (ast.Add, ast.Sub, ast.Mult, ast.Div, ast.Pow)
     allowed_unary_operators = (ast.UAdd, ast.USub)
 
@@ -46,6 +58,8 @@ class FormulaVisitor(ast.NodeVisitor):
         """Create an empty collector that preserves first-seen variable order."""
         self.variables = []
         self._seen_variables = set()
+        self.reduction_dimensions = []
+        self._seen_reduction_dimensions = set()
 
     def visit_Expression(self, node):
         """Visit the root expression body produced by ast.parse(..., mode='eval')."""
@@ -83,6 +97,12 @@ class FormulaVisitor(ast.NodeVisitor):
             raise ValueError("Invalid formula.")
         if node.func.id == "tanh" and len(node.args) != 1:
             raise ValueError("Invalid formula.")
+        if node.func.id in self.spatial_reduction_functions:
+            if len(node.args) != 1:
+                raise ValueError("Invalid formula.")
+            if "space" not in self._seen_reduction_dimensions:
+                self.reduction_dimensions.append("space")
+                self._seen_reduction_dimensions.add("space")
         for arg in node.args:
             self.visit(arg)
 
@@ -112,6 +132,18 @@ def parse_formula_variables(value):
     visitor = FormulaVisitor()
     visitor.visit(tree)
     return visitor.variables
+
+
+def parse_formula_reduction_dimensions(value):
+    """Return contextual-reduction dimensions used by a validated formula."""
+    try:
+        tree = ast.parse(value, mode="eval")
+    except SyntaxError as exc:
+        raise ValueError("Invalid formula.") from exc
+
+    visitor = FormulaVisitor()
+    visitor.visit(tree)
+    return visitor.reduction_dimensions
 
 
 class Source(BaseModel):
@@ -211,6 +243,14 @@ class ExternalVariableDefinition(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class ReductionDefinition(BaseModel):
+    """Execution context shared by reductions over one formula dimension."""
+
+    scope: Literal["aoi", "scene"]
+
+    model_config = ConfigDict(extra="forbid")
+
+
 class SpectralIndex(BaseModel):
     """
     Python dataclass for Spectral Indices
@@ -224,6 +264,7 @@ class SpectralIndex(BaseModel):
     bands: Optional[List[str]] = None
     constants: Optional[Dict[str, ConstantDefinition]] = None
     external_variables: Optional[Dict[str, ExternalVariableDefinition]] = None
+    reductions: Optional[Dict[Literal["space"], ReductionDefinition]] = None
     application_domain: str
     date_of_addition: date
 
@@ -301,6 +342,28 @@ class SpectralIndex(BaseModel):
         if errors:
             raise ValueError(
                 "Invalid external variable definitions (" + "; ".join(errors) + ")."
+            )
+
+        return self
+
+    @model_validator(mode="after")
+    def check_reductions_match_formula(self):
+        """Require contexts for exactly the reduction dimensions in the formula."""
+        formula_dimensions = set(
+            parse_formula_reduction_dimensions(self.formula)
+        )
+        provided_dimensions = set(self.reductions or {})
+        missing_dimensions = sorted(formula_dimensions - provided_dimensions)
+        extra_dimensions = sorted(provided_dimensions - formula_dimensions)
+
+        errors = []
+        if missing_dimensions:
+            errors.append("missing: " + ", ".join(missing_dimensions))
+        if extra_dimensions:
+            errors.append("not used by formula: " + ", ".join(extra_dimensions))
+        if errors:
+            raise ValueError(
+                "Invalid reduction definitions (" + "; ".join(errors) + ")."
             )
 
         return self

@@ -27,6 +27,7 @@ TABLE_COLUMNS = [
     "bands",
     "constants",
     "external_variables",
+    "reductions",
     "source",
     "contributor",
     "date_of_addition",
@@ -77,6 +78,7 @@ def add_formula_metadata(index_catalog):
         ]
         spectral_index.constants = spectral_index.constants or {}
         spectral_index.external_variables = spectral_index.external_variables or {}
+        spectral_index.reductions = spectral_index.reductions or {}
         index_catalog.SpectralIndices[key] = spectral_index
 
     return index_catalog

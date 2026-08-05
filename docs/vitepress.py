@@ -167,6 +167,21 @@ def render_external_variables(external_definitions):
     )
 
 
+def render_reductions(reduction_definitions):
+    """Render the execution context of contextual formula reductions."""
+    scope_descriptions = {
+        "aoi": "the valid pixels within the area of interest (AOI)",
+        "scene": "the valid pixels within the complete input scene",
+    }
+    return "\n".join(
+        (
+            f"- `{dimension}`: reduction functions are evaluated across "
+            f"{scope_descriptions[definition['scope']]}."
+        )
+        for dimension, definition in reduction_definitions.items()
+    )
+
+
 def render_source_companions(companion_keys):
     """Render links to indices generated from the same scientific source."""
     return "\n".join(
@@ -190,6 +205,14 @@ def render_index_page(
         external_variables_section = f"""### External Variables
 
 {external_variables}
+
+"""
+    reductions_section = ""
+    if index["reductions"]:
+        reductions = render_reductions(index["reductions"])
+        reductions_section = f"""### Reductions
+
+{reductions}
 
 """
     source_companions_section = ""
@@ -237,7 +260,7 @@ hero:
 
 {constants}
 
-{external_variables_section}{source_companions_section}## Contributor
+{external_variables_section}{reductions_section}{source_companions_section}## Contributor
 
 Index contributed by {index["contributor"]} on {index["date_of_addition"]}.
 """
