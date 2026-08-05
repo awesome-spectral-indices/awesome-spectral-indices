@@ -67,8 +67,6 @@ def describe_band(name, band_metadata):
         return band_metadata[name]["long_name"]
     if name in VARIABLE_DESCRIPTIONS:
         return VARIABLE_DESCRIPTIONS[name]
-    if name.startswith("k"):
-        return f"Kernel variable {name}"
     return name
 
 

@@ -28,22 +28,6 @@ class Bands(Enum):
     HH = "HH"
     VV = "VV"
     VH = "VH"
-    KNN = "kNN"
-    KNR = "kNR"
-    KNB = "kNB"
-    KNL = "kNL"
-    KGG = "kGG"
-    KGR = "kGR"
-    KGB = "kGB"
-    KBB = "kBB"
-    KBR = "kBR"
-    KBL = "kBL"
-    KRR = "kRR"
-    KRB = "kRB"
-    KRL = "kRL"
-    KLL = "kLL"
-
-
 @unique
 class Constants(Enum):
     """Constants supported by spectral-index formulas."""
@@ -52,8 +36,6 @@ class Constants(Enum):
     CANOPY_BACKGROUND_ADJUSTMENT = "L"
     AEROSOL_COEFFICIENT1 = "C1"
     AEROSOL_COEFFICIENT2 = "C2"
-    C_EXPONENT = "cexp"
-    N_EXPONENT = "nexp"
     GAMMA = "gamma"
     ALPHA = "alpha"
     BETA = "beta"

@@ -139,6 +139,19 @@ def test_v1_outputs_include_cwi_spatial_reduction_context():
     )
 
 
+def test_v1_outputs_generate_physical_bands_for_kernel_indices():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+
+    assert json_catalogue["kNDVI"]["bands"] == ["N", "R"]
+    assert json_catalogue["kEVI"]["bands"] == ["N", "R", "B"]
+    assert json_catalogue["kVARI"]["bands"] == ["G", "R", "B"]
+    assert json_catalogue["kEVI"]["constants"]["L"] == {
+        "description": "Canopy background adjustment",
+        "default_value": 1.0,
+    }
+
+
 def test_v1_constants_metadata_is_grouped_by_constant_and_index():
     with (OUTPUT_DIR / "constants.json").open() as fp:
         generated_constants = json.load(fp)

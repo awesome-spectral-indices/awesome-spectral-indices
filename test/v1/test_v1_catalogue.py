@@ -104,6 +104,33 @@ def test_formula_variable_registries_are_disjoint():
     assert constant_names.isdisjoint(external_names)
 
 
+def test_kernel_results_are_functions_not_registered_band_operands():
+    legacy_kernel_operands = {
+        "kNN",
+        "kNR",
+        "kNB",
+        "kNL",
+        "kGG",
+        "kGR",
+        "kGB",
+        "kBB",
+        "kBR",
+        "kBL",
+        "kRR",
+        "kRB",
+        "kRL",
+        "kLL",
+    }
+
+    assert legacy_kernel_operands.isdisjoint(Bands._value2member_map_)
+    for key in ("kEVI", "kNDVI", "kRVI", "kVARI", "kIPVI"):
+        index = spindex.SpectralIndices[key]
+        assert "kernel(" in index.formula
+        assert legacy_kernel_operands.isdisjoint(
+            parse_formula_variables(index.formula)
+        )
+
+
 def test_catalogue_defines_exactly_the_constants_and_externals_in_each_formula():
     constant_names = set(Constants._value2member_map_)
     external_names = set(External._value2member_map_)
@@ -327,3 +354,31 @@ def test_cwi_uses_aoi_scoped_spatial_maximum_reductions():
     assert parse_formula_variables(cwi.formula) == ["S2", "B"]
     assert parse_formula_reduction_dimensions(cwi.formula) == ["space"]
     assert cwi.reductions["space"].model_dump() == {"scope": "aoi"}
+
+
+def test_kndvi_uses_explicit_two_input_kernel_calls():
+    kndvi = spindex.SpectralIndices["kNDVI"]
+
+    assert kndvi.formula == (
+        "(kernel(N, N) - kernel(N, R)) / "
+        "(kernel(N, N) + kernel(N, R))"
+    )
+    assert parse_formula_variables(kndvi.formula) == ["N", "R"]
+
+
+def test_kevi_exposes_its_kernel_inputs_and_background_constant():
+    kevi = spindex.SpectralIndices["kEVI"]
+
+    assert parse_formula_variables(kevi.formula) == [
+        "g",
+        "N",
+        "R",
+        "C1",
+        "C2",
+        "B",
+        "L",
+    ]
+    assert kevi.constants["L"].model_dump() == {
+        "description": "Canopy background adjustment",
+        "default_value": 1.0,
+    }

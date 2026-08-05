@@ -19,14 +19,14 @@ hero:
 ## Formula
 
 ```
-(kGG - kGR) / (kGG + kGR - kGB)
+(kernel(G, G) - kernel(G, R)) / (kernel(G, G) + kernel(G, R) - kernel(G, B))
 ```
 
 ### Bands
 
-- `kGG`: Kernel variable kGG.
-- `kGR`: Kernel variable kGR.
-- `kGB`: Kernel variable kGB.
+- `G`: Green.
+- `R`: Red.
+- `B`: Blue.
 
 ### Constants
 

@@ -7145,10 +7145,9 @@
             "acronym": "kEVI",
             "application_domain": "kernel",
             "bands": [
-                "kNN",
-                "kNR",
-                "kNB",
-                "kNL"
+                "N",
+                "R",
+                "B"
             ],
             "constants": {
                 "C1": {
@@ -7159,6 +7158,10 @@
                     "default_value": 7.5,
                     "description": "Coefficient 2 for the aerosol resistance term"
                 },
+                "L": {
+                    "default_value": 1.0,
+                    "description": "Canopy background adjustment"
+                },
                 "g": {
                     "default_value": 2.5,
                     "description": "Gain factor"
@@ -7167,7 +7170,7 @@
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
             "external_variables": {},
-            "formula": "g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
+            "formula": "g * (kernel(N, N) - kernel(N, R)) / (kernel(N, N) + C1 * kernel(N, R) - C2 * kernel(N, B) + kernel(N, L))",
             "name": "Kernel Enhanced Vegetation Index",
             "reductions": {},
             "source": {
@@ -7187,14 +7190,14 @@
             "acronym": "kIPVI",
             "application_domain": "kernel",
             "bands": [
-                "kNN",
-                "kNR"
+                "N",
+                "R"
             ],
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2022-04-08",
             "external_variables": {},
-            "formula": "kNN/(kNN + kNR)",
+            "formula": "kernel(N, N) / (kernel(N, N) + kernel(N, R))",
             "name": "Kernel Infrared Percentage Vegetation Index",
             "reductions": {},
             "source": {
@@ -7214,14 +7217,14 @@
             "acronym": "kNDVI",
             "application_domain": "kernel",
             "bands": [
-                "kNN",
-                "kNR"
+                "N",
+                "R"
             ],
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "external_variables": {},
-            "formula": "(kNN - kNR)/(kNN + kNR)",
+            "formula": "(kernel(N, N) - kernel(N, R)) / (kernel(N, N) + kernel(N, R))",
             "name": "Kernel Normalized Difference Vegetation Index",
             "reductions": {},
             "source": {
@@ -7241,14 +7244,14 @@
             "acronym": "kRVI",
             "application_domain": "kernel",
             "bands": [
-                "kNN",
-                "kNR"
+                "N",
+                "R"
             ],
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-04-07",
             "external_variables": {},
-            "formula": "kNN / kNR",
+            "formula": "kernel(N, N) / kernel(N, R)",
             "name": "Kernel Ratio Vegetation Index",
             "reductions": {},
             "source": {
@@ -7268,15 +7271,15 @@
             "acronym": "kVARI",
             "application_domain": "kernel",
             "bands": [
-                "kGG",
-                "kGR",
-                "kGB"
+                "G",
+                "R",
+                "B"
             ],
             "constants": {},
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-05-10",
             "external_variables": {},
-            "formula": "(kGG - kGR) / (kGG + kGR - kGB)",
+            "formula": "(kernel(G, G) - kernel(G, R)) / (kernel(G, G) + kernel(G, R) - kernel(G, B))",
             "name": "Kernel Visible Atmospherically Resistant Index",
             "reductions": {},
             "source": {

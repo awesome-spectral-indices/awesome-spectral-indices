@@ -47,13 +47,16 @@ submitted through the usual contribution process.
 - Added CWI (Coastal Water Index) to v1 as the first index using contextual
   spatial reductions. Its two `spatial_max()` operations are evaluated over
   the area of interest without introducing generated reduction operands.
+- Added the strict two-input `kernel()` function to the v1 formula language so
+  kernel evaluations can be expressed as operations over their underlying
+  inputs rather than as additional operands.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
   - an advanced search panel for individual metadata fields;
   - filtering by source link, link status, link type, and source type;
   - filtering independently by required bands, constants, external variables,
-    radar polarizations, and kernel variables;
+    and radar polarizations;
   - results grouped by application domain; and
   - a live filtered-versus-total result count.
 - Added one generated documentation page for every spectral index. Each page
@@ -86,11 +89,15 @@ submitted through the usual contribution process.
   the v1 catalogue.
 - Split formula constants from bands in v1. Constant-using indices now submit a
   description and optional numeric default for every formula constant, while
-  `bands` contains spectral, radar, and kernel inputs. The generated
-  `constants.json` groups these definitions first by standard constant and
-  then by index.
+  `bands` contains spectral and radar inputs. The generated `constants.json`
+  groups these definitions first by standard constant and then by index.
   Constant definitions can also include condition-specific `suggested_values`
   and a general two-number `suggested_range`.
+- Replaced the synthetic kernel operands in the v1 kEVI, kNDVI, kRVI, kVARI,
+  and kIPVI formulas with explicit `kernel(X, Y)` calls. Removed all fourteen
+  `kXY` values from the v1 `Bands` registry; generated kernel-index band lists
+  now contain only their underlying observed inputs. kEVI additionally defines
+  the `L` constant exposed by `kernel(N, L)`.
 - Separated formula inputs supplied outside spectral data into a new v1
   `External` registry. `PAR` is now an external variable rather than a
   constant, and NIRvP supplies its required, description-only definition

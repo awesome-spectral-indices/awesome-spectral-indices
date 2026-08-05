@@ -19,15 +19,14 @@ hero:
 ## Formula
 
 ```
-g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)
+g * (kernel(N, N) - kernel(N, R)) / (kernel(N, N) + C1 * kernel(N, R) - C2 * kernel(N, B) + kernel(N, L))
 ```
 
 ### Bands
 
-- `kNN`: Kernel variable kNN.
-- `kNR`: Kernel variable kNR.
-- `kNB`: Kernel variable kNB.
-- `kNL`: Kernel variable kNL.
+- `N`: Near-Infrared (NIR).
+- `R`: Red.
+- `B`: Blue.
 
 ### Constants
 
@@ -53,6 +52,18 @@ g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)
 <div class="constant-detail-card constant-default">
 <span class="constant-detail-label">Default value</span>
 <strong class="constant-detail-value">7.5</strong>
+</div>
+</div>
+</article>
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">L</code>
+<p>Canopy background adjustment.</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.0</strong>
 </div>
 </div>
 </article>

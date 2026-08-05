@@ -351,7 +351,7 @@ spindex = SpectralIndices(
         kEVI=SpectralIndex(
             acronym="kEVI",
             name="Kernel Enhanced Vegetation Index",
-            formula="g * (kNN - kNR) / (kNN + C1 * kNR - C2 * kNB + kNL)",
+            formula="g * (kernel(N, N) - kernel(N, R)) / (kernel(N, N) + C1 * kernel(N, R) - C2 * kernel(N, B) + kernel(N, L))",
             constants={
                 "g": {
                     "description": "Gain factor",
@@ -365,6 +365,10 @@ spindex = SpectralIndices(
                     "description": "Coefficient 2 for the aerosol resistance term",
                     "default_value": 7.5,
                 },
+                "L": {
+                    "description": "Canopy background adjustment",
+                    "default_value": 1.0,
+                },
             },
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
@@ -374,7 +378,7 @@ spindex = SpectralIndices(
         kNDVI=SpectralIndex(
             acronym="kNDVI",
             name="Kernel Normalized Difference Vegetation Index",
-            formula="(kNN - kNR)/(kNN + kNR)",
+            formula="(kernel(N, N) - kernel(N, R)) / (kernel(N, N) + kernel(N, R))",
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
             date_of_addition="2021-04-07",
@@ -383,7 +387,7 @@ spindex = SpectralIndices(
         kRVI=SpectralIndex(
             acronym="kRVI",
             name="Kernel Ratio Vegetation Index",
-            formula="kNN / kNR",
+            formula="kernel(N, N) / kernel(N, R)",
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
             date_of_addition="2021-04-07",
@@ -392,7 +396,7 @@ spindex = SpectralIndices(
         kVARI=SpectralIndex(
             acronym="kVARI",
             name="Kernel Visible Atmospherically Resistant Index",
-            formula="(kGG - kGR) / (kGG + kGR - kGB)",
+            formula="(kernel(G, G) - kernel(G, R)) / (kernel(G, G) + kernel(G, R) - kernel(G, B))",
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
             date_of_addition="2021-05-10",
@@ -1722,7 +1726,7 @@ spindex = SpectralIndices(
         kIPVI=SpectralIndex(
             acronym="kIPVI",
             name="Kernel Infrared Percentage Vegetation Index",
-            formula="kNN/(kNN + kNR)",
+            formula="kernel(N, N) / (kernel(N, N) + kernel(N, R))",
             source={"source_link": "https://doi.org/10.1126/sciadv.abc7447"},
             application_domain="kernel",
             date_of_addition="2022-04-08",

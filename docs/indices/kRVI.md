@@ -19,13 +19,13 @@ hero:
 ## Formula
 
 ```
-kNN / kNR
+kernel(N, N) / kernel(N, R)
 ```
 
 ### Bands
 
-- `kNN`: Kernel variable kNN.
-- `kNR`: Kernel variable kNR.
+- `N`: Near-Infrared (NIR).
+- `R`: Red.
 
 ### Constants
 

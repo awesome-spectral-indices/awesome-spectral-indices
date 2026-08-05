@@ -14,6 +14,7 @@ from src.v1.SpectralIndex import parse_formula_variables
         ("max(N, R) - min(G, B)", ["N", "R", "G", "B"]),
         ("tanh((N - R) / (N + R))", ["N", "R"]),
         ("max(tanh(N), R)", ["N", "R"]),
+        ("kernel(N, N) - kernel(N, R)", ["N", "R"]),
         (
             "spatial_max(S2) * B / (spatial_min(B) + spatial_mean(S2))",
             ["S2", "B"],
@@ -39,6 +40,10 @@ def test_parse_formula_variables_accepts_catalogue_expression_language(
         "abs(N)",
         "tanh()",
         "tanh(N, R)",
+        "kernel()",
+        "kernel(N)",
+        "kernel(N, R, B)",
+        "kernel(N, other=R)",
         "spatial_max()",
         "spatial_min(N, R)",
         "spatial_mean(N, scope)",

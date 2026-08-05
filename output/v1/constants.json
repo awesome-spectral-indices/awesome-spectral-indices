@@ -93,6 +93,10 @@
                 "Increased litter mass": 0.0,
                 "Low litter mass": 1.0
             }
+        },
+        "kEVI": {
+            "default_value": 1.0,
+            "description": "Canopy background adjustment"
         }
     },
     "X": {
@@ -261,7 +265,6 @@
             }
         }
     },
-    "cexp": {},
     "epsilon": {
         "EBI": {
             "default_value": 1.0,
@@ -487,7 +490,6 @@
             "description": "Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089)"
         }
     },
-    "nexp": {},
     "omega": {
         "MBWI": {
             "default_value": 2.0,
