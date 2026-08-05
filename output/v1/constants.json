@@ -278,6 +278,10 @@
         "WCI2": {
             "default_value": 1e-10,
             "description": "Adjustment constant for numerical stability"
+        },
+        "WCI3": {
+            "default_value": 1e-10,
+            "description": "Adjustment constant for numerical stability"
         }
     },
     "eta": {

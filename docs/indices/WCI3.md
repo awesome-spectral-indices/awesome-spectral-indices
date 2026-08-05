@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "WCI2"
-  text: "Wheat Canopy Index (Growth Stage 2)"
+  name: "WCI3"
+  text: "Wheat Canopy Index (Growth Stage 3)"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,15 +19,15 @@ hero:
 ## Formula
 
 ```
--1.0 * ((B + G + RE1)/(R + epsilon)) * ((B + R + RE1)/(N + epsilon))
+((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))
 ```
 
 ### Bands
 
 - `B`: Blue.
+- `R`: Red.
 - `G`: Green.
 - `RE1`: Red Edge 1.
-- `R`: Red.
 - `N`: Near-Infrared (NIR).
 
 ### Constants
@@ -53,8 +53,8 @@ These indices are part of the same scientific source:
 
 - [`KDI`](/indices/KDI)
 - [`WCI1`](/indices/WCI1)
-- [`WCI3`](/indices/WCI3)
+- [`WCI2`](/indices/WCI2)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2026-05-27.
+Index contributed by https://github.com/davemlz on 2026-08-05.

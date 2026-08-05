@@ -255,3 +255,23 @@ def test_nirvp_defines_par_as_an_external_variable():
     assert nirvp.external_variables["PAR"].model_dump() == {
         "description": "Photosynthetically Active Radiation"
     }
+
+
+def test_wci3_uses_nested_max_and_tanh_functions():
+    wci3 = spindex.SpectralIndices["WCI3"]
+
+    assert wci3.formula == (
+        "((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))"
+    )
+    assert parse_formula_variables(wci3.formula) == [
+        "B",
+        "R",
+        "epsilon",
+        "G",
+        "RE1",
+        "N",
+    ]
+    assert wci3.constants["epsilon"].model_dump() == {
+        "description": "Adjustment constant for numerical stability",
+        "default_value": 1e-10,
+    }

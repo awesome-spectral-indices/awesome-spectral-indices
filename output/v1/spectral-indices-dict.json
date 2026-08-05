@@ -307,7 +307,7 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -2256,7 +2256,8 @@
             "source": {
                 "source_companions": [
                     "WCI1",
-                    "WCI2"
+                    "WCI2",
+                    "WCI3"
                 ],
                 "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
                 "source_link_status": "operational",
@@ -6584,7 +6585,8 @@
             "source": {
                 "source_companions": [
                     "KDI",
-                    "WCI2"
+                    "WCI2",
+                    "WCI3"
                 ],
                 "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
                 "source_link_status": "operational",
@@ -6616,12 +6618,46 @@
             "source": {
                 "source_companions": [
                     "KDI",
-                    "WCI1"
+                    "WCI1",
+                    "WCI3"
                 ],
                 "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "WCI3": {
+            "acronym": "WCI3",
+            "application_domain": "vegetation",
+            "bands": [
+                "B",
+                "R",
+                "G",
+                "RE1",
+                "N"
+            ],
+            "constants": {
+                "epsilon": {
+                    "default_value": 1e-10,
+                    "description": "Adjustment constant for numerical stability"
+                }
+            },
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-05",
+            "external_variables": {},
+            "formula": "((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))",
+            "name": "Wheat Canopy Index (Growth Stage 3)",
+            "source": {
+                "source_companions": [
+                    "KDI",
+                    "WCI1",
+                    "WCI2"
+                ],
+                "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "WDRVI": {

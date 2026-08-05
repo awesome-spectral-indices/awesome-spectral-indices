@@ -53,6 +53,7 @@ These indices are part of the same scientific source:
 
 - [`KDI`](/indices/KDI)
 - [`WCI2`](/indices/WCI2)
+- [`WCI3`](/indices/WCI3)
 
 ## Contributor
 

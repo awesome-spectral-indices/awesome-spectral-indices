@@ -3043,5 +3043,23 @@ spindex = SpectralIndices(
             date_of_addition="2026-07-22",
             contributor="https://github.com/davemlz",
         ),
+        WCI3=SpectralIndex(
+            acronym="WCI3",
+            name="Wheat Canopy Index (Growth Stage 3)",
+            formula="((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))",
+            constants={
+                "epsilon": {
+                    "description": "Adjustment constant for numerical stability",
+                    "default_value": 1e-10
+                },
+            },
+            source={
+                "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
+                "source_type": "article"
+            },
+            application_domain="vegetation",
+            date_of_addition="2026-08-05",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )
