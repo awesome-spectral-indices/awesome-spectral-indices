@@ -146,6 +146,14 @@ def test_classification_vocabularies_and_authored_assignments():
     }
 
     kernel_keys = {"kEVI", "kNDVI", "kRVI", "kVARI", "kIPVI"}
+    tasseled_cap_keys = {
+        "TMTCbrightness",
+        "TMTCwetness",
+        "TMTCgreenness",
+        "TMTCfourth",
+        "TMTCfifth",
+        "TMTCsixth",
+    }
     radar_keys = {
         key
         for key, index in spindex.SpectralIndices.items()
@@ -154,9 +162,14 @@ def test_classification_vocabularies_and_authored_assignments():
     }
 
     for key, index in spindex.SpectralIndices.items():
-        expected_family = (
-            ["kernel"] if key in kernel_keys else ["radar"] if key in radar_keys else None
-        )
+        if key in kernel_keys:
+            expected_family = ["kernel"]
+        elif key in tasseled_cap_keys:
+            expected_family = ["tasseled_cap"]
+        elif key in radar_keys:
+            expected_family = ["radar"]
+        else:
+            expected_family = None
         assert index.classification.family == expected_family
 
     assert spindex.SpectralIndices["NDPolI"].classification.application_domain == (
@@ -169,6 +182,10 @@ def test_classification_vocabularies_and_authored_assignments():
     assert all(
         spindex.SpectralIndices[key].classification.application_domain == "vegetation"
         for key in kernel_keys
+    )
+    assert all(
+        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
+        for key in tasseled_cap_keys
     )
 
 

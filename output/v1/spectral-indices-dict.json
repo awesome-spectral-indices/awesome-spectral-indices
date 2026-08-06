@@ -7984,6 +7984,252 @@
                 "source_type": null
             }
         },
+        "TMTCbrightness": {
+            "acronym": "TMTCbrightness",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "0.3037 * B + 0.2793 * G + 0.4743 * R + 0.5585 * N + 0.5082 * S1 + 0.1863 * S2",
+            "name": "Thematic Mapper Tasseled Cap Brightness Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCwetness",
+                    "TMTCgreenness",
+                    "TMTCfourth",
+                    "TMTCfifth",
+                    "TMTCsixth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "TMTCfifth": {
+            "acronym": "TMTCfifth",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "-0.3280 * B + 0.0549 * G + 0.1075 * R + 0.1855 * N - 0.4357 * S1 + 0.8085 * S2",
+            "name": "Thematic Mapper Tasseled Cap Fifth Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCbrightness",
+                    "TMTCwetness",
+                    "TMTCgreenness",
+                    "TMTCfourth",
+                    "TMTCsixth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "TMTCfourth": {
+            "acronym": "TMTCfourth",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "-0.8242 * B + 0.0849 * G + 0.4392 * R - 0.0580 * N + 0.2012 * S1 - 0.2768 * S2",
+            "name": "Thematic Mapper Tasseled Cap Fourth Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCbrightness",
+                    "TMTCwetness",
+                    "TMTCgreenness",
+                    "TMTCfifth",
+                    "TMTCsixth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "TMTCgreenness": {
+            "acronym": "TMTCgreenness",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "-0.2848 * B - 0.2435 * G - 0.5436 * R + 0.7243 * N + 0.0840 * S1 - 0.1800 * S2",
+            "name": "Thematic Mapper Tasseled Cap Greenness Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCbrightness",
+                    "TMTCwetness",
+                    "TMTCfourth",
+                    "TMTCfifth",
+                    "TMTCsixth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "TMTCsixth": {
+            "acronym": "TMTCsixth",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "0.1084 * B - 0.9022 * G + 0.4120 * R + 0.0573 * N - 0.0251 * S1 + 0.0238 * S2",
+            "name": "Thematic Mapper Tasseled Cap Sixth Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCbrightness",
+                    "TMTCwetness",
+                    "TMTCgreenness",
+                    "TMTCfourth",
+                    "TMTCfifth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "TMTCwetness": {
+            "acronym": "TMTCwetness",
+            "bands": [
+                "B",
+                "G",
+                "R",
+                "N",
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": [
+                    "tasseled_cap"
+                ],
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/remi-braun",
+            "date_of_addition": "2026-08-06",
+            "external_variables": {},
+            "formula": "0.1509 * B + 0.1973 * G + 0.3279 * R + 0.3406 * N - 0.7112 * S1 - 0.4572 * S2",
+            "name": "Thematic Mapper Tasseled Cap Wetness Feature",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "TMTCbrightness",
+                    "TMTCgreenness",
+                    "TMTCfourth",
+                    "TMTCfifth",
+                    "TMTCsixth"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
         "TRRVI": {
             "acronym": "TRRVI",
             "bands": [

@@ -3082,5 +3082,77 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-05",
             contributor="https://github.com/dghorai",
         ),
+        TMTCbrightness=SpectralIndex(
+            acronym="TMTCbrightness",
+            name="Thematic Mapper Tasseled Cap Brightness Feature",
+            formula="0.3037 * B + 0.2793 * G + 0.4743 * R + 0.5585 * N + 0.5082 * S1 + 0.1863 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/remi-braun",
+        ),
+        TMTCwetness=SpectralIndex(
+            acronym="TMTCwetness",
+            name="Thematic Mapper Tasseled Cap Wetness Feature",
+            formula="0.1509 * B + 0.1973 * G + 0.3279 * R + 0.3406 * N - 0.7112 * S1 - 0.4572 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/remi-braun",
+        ),
+        TMTCgreenness=SpectralIndex(
+            acronym="TMTCgreenness",
+            name="Thematic Mapper Tasseled Cap Greenness Feature",
+            formula="-0.2848 * B - 0.2435 * G - 0.5436 * R + 0.7243 * N + 0.0840 * S1 - 0.1800 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/remi-braun",
+        ),
+        TMTCfourth=SpectralIndex(
+            acronym="TMTCfourth",
+            name="Thematic Mapper Tasseled Cap Fourth Feature",
+            formula="-0.8242 * B + 0.0849 * G + 0.4392 * R - 0.0580 * N + 0.2012 * S1 - 0.2768 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/davemlz",
+        ),
+        TMTCfifth=SpectralIndex(
+            acronym="TMTCfifth",
+            name="Thematic Mapper Tasseled Cap Fifth Feature",
+            formula="-0.3280 * B + 0.0549 * G + 0.1075 * R + 0.1855 * N - 0.4357 * S1 + 0.8085 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/davemlz",
+        ),
+        TMTCsixth=SpectralIndex(
+            acronym="TMTCsixth",
+            name="Thematic Mapper Tasseled Cap Sixth Feature",
+            formula="0.1084 * B - 0.9022 * G + 0.4120 * R + 0.0573 * N - 0.0251 * S1 + 0.0238 * S2",
+            source={
+                "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
+            date_of_addition="2026-08-06",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

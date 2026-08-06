@@ -55,6 +55,9 @@ submitted through the usual contribution process.
   one or more sensing modalities from the formula standards.
 - Added `geology` as an application domain and `kernel`, `tasseled_cap`, and
   `radar` as the initial supported index families.
+- Added the six Thematic Mapper Tasseled Cap features—brightness, wetness,
+  greenness, fourth, fifth, and sixth—to v1 as vegetation indices in the
+  `tasseled_cap` family.
 - Added the v1 `Polarizations` registry and generated `polarizations` property
   for the `HH`, `HV`, `VH`, and `VV` radar inputs.
 - Added a catalogue search page with:

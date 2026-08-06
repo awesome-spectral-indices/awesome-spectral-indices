@@ -160,6 +160,11 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
         "sensing_modalities": ["multispectral"],
         "family": ["kernel"],
     }
+    assert json_catalogue["TMTCbrightness"]["classification"] == {
+        "application_domain": "vegetation",
+        "sensing_modalities": ["multispectral"],
+        "family": ["tasseled_cap"],
+    }
     assert json_catalogue["NDPolI"]["classification"] == {
         "application_domain": "geology",
         "sensing_modalities": ["radar"],
