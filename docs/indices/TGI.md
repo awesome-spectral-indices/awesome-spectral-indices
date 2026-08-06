@@ -22,11 +22,20 @@ hero:
 - 0.5 * (190 * (R - G) - 120 * (R - B))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `G`: Green.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

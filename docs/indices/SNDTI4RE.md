@@ -22,12 +22,21 @@ hero:
 gamma * ((S1 - S2) * 2.0)/(S1 + S2 + 1.0) + (1 - gamma) * ((N - RE3) * 2.0)/(N + RE3 + 1.0)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `N`: Near-Infrared (NIR).
 - `RE3`: Red Edge 3.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -22,10 +22,19 @@ hero:
 (G - Y)/(G + Y)
 ```
 
+### Classification
+
+- Application domain: `Soil`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `G`: Green.
 - `Y`: Yellow.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

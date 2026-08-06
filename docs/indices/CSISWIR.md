@@ -22,10 +22,19 @@ hero:
 (N + S1) / 2.0
 ```
 
+### Classification
+
+- Application domain: `Clouds`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

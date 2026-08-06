@@ -22,12 +22,21 @@ hero:
 (T - (((G - S1)/(G + S1)) + N + S1) / 3.0)/(T + (((G - S1)/(G + S1)) + N + S1) / 3.0)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `T`: Thermal Infrared.
 - `G`: Green.
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

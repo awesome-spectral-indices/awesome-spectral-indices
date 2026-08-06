@@ -22,11 +22,20 @@ hero:
 (RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE1`: Red Edge 1.
 - `R`: Red.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

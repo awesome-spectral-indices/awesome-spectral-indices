@@ -22,11 +22,20 @@ hero:
 (N - G) / (S1 - G)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `G`: Green.
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

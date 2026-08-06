@@ -22,11 +22,20 @@ hero:
 (R - B)/RE2
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `B`: Blue.
 - `RE2`: Red Edge 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

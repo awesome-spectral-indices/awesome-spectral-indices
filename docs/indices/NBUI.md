@@ -22,6 +22,11 @@ hero:
 ((S1 - N)/(10.0 * (T + S1) ** 0.5)) - (((N - R) * (1.0 + L))/(N - R + L)) - (G - S1)/(G + S1)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
@@ -29,6 +34,10 @@ hero:
 - `T`: Thermal Infrared.
 - `R`: Red.
 - `G`: Green.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -22,12 +22,21 @@ hero:
 (N - (eta * G + (1.0 - eta) * R - lmb * (B - R)))/(N + (eta * G + (1.0 - eta) * R - lmb * (B - R)))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `G`: Green.
 - `R`: Red.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

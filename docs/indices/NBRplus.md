@@ -22,12 +22,21 @@ hero:
 (S2 - N2 - G - B)/(S2 + N2 + G + B)
 ```
 
+### Classification
+
+- Application domain: `Burn`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `N2`: Near-Infrared (NIR) 2.
 - `G`: Green.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

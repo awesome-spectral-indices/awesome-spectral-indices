@@ -22,11 +22,20 @@ hero:
 (N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
 - `S2`: Short-wave Infrared (SWIR) 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

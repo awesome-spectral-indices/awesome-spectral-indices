@@ -22,12 +22,21 @@ hero:
 (((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
 - `G`: Green.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

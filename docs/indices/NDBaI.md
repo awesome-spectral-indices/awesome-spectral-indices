@@ -22,10 +22,19 @@ hero:
 (S1 - T) / (S1 + T)
 ```
 
+### Classification
+
+- Application domain: `Soil`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `T`: Thermal Infrared.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

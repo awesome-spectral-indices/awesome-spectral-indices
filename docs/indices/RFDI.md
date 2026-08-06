@@ -1,12 +1,12 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-pageClass: "index-page domain-radar"
+pageClass: "index-page domain-vegetation"
 
 hero:
   name: "RFDI"
   text: "Radar Forest Degradation Index"
-  tagline: "Radar"
+  tagline: "Vegetation"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -22,7 +22,17 @@ hero:
 (HH - HV)/(HH + HV)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Radar`
+- Family: `Radar`
+
 ### Bands
+
+No bands are used in this index.
+
+### Polarizations
 
 - `HH`: Horizontal transmit, horizontal receive radar polarization.
 - `HV`: Horizontal transmit, vertical receive radar polarization.

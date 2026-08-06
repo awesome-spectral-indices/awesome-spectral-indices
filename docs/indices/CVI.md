@@ -22,11 +22,20 @@ hero:
 (N * R) / (G ** 2.0)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
 - `G`: Green.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

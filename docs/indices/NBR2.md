@@ -22,10 +22,19 @@ hero:
 (S1 - S2) / (S1 + S2)
 ```
 
+### Classification
+
+- Application domain: `Burn`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `S2`: Short-wave Infrared (SWIR) 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

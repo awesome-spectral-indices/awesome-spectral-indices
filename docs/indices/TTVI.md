@@ -22,11 +22,20 @@ hero:
 0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE3`: Red Edge 3.
 - `RE2`: Red Edge 2.
 - `N2`: Near-Infrared (NIR) 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

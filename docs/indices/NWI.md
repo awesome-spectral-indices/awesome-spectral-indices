@@ -22,12 +22,21 @@ hero:
 (B - (N + S1 + S2))/(B + (N + S1 + S2))
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `B`: Blue.
 - `N`: Near-Infrared (NIR).
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `S2`: Short-wave Infrared (SWIR) 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

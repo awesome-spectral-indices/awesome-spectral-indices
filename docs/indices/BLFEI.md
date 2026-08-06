@@ -22,12 +22,21 @@ hero:
 (((G+R+S2)/3.0)-S1)/(((G+R+S2)/3.0)+S1)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `G`: Green.
 - `R`: Red.
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

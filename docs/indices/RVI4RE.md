@@ -22,12 +22,21 @@ hero:
 (alpha * RE3 + (1 - alpha) * RE2)/(beta * R + (1 - beta) * RE1)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE3`: Red Edge 3.
 - `RE2`: Red Edge 2.
 - `R`: Red.
 - `RE1`: Red Edge 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

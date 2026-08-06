@@ -22,10 +22,19 @@ hero:
 (S2 - G)/(S2 + G)
 ```
 
+### Classification
+
+- Application domain: `Soil`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `G`: Green.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

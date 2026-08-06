@@ -22,12 +22,21 @@ hero:
 (3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE1`: Red Edge 1.
 - `R`: Red.
 - `G`: Green.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

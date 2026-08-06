@@ -22,12 +22,21 @@ hero:
 ((S1 - G)/(S1 + G)) - ((N - R)/(N + R))
 ```
 
+### Classification
+
+- Application domain: `Soil`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `G`: Green.
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -22,10 +22,19 @@ hero:
 (G - R)/(G + R)
 ```
 
+### Classification
+
+- Application domain: `Snow`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `G`: Green.
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -22,12 +22,21 @@ hero:
 (((B + G + R) / 3.0) - N)/(((B + G + R) / 3.0) + N)
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `B`: Blue.
 - `G`: Green.
 - `R`: Red.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

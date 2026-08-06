@@ -22,12 +22,21 @@ hero:
 (G + R)/(N + S1)
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `G`: Green.
 - `R`: Red.
 - `N`: Near-Infrared (NIR).
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

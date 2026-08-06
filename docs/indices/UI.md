@@ -22,10 +22,19 @@ hero:
 (S2 - N)/(S2 + N)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -22,10 +22,19 @@ hero:
 (R-G)/(R+G)
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `G`: Green.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

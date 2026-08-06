@@ -22,10 +22,19 @@ hero:
 (G - S1) / (G + S1)
 ```
 
+### Classification
+
+- Application domain: `Snow`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `G`: Green.
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

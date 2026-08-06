@@ -22,10 +22,19 @@ hero:
 (spatial_max(S2) * B) / (spatial_max(B) * S2)
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

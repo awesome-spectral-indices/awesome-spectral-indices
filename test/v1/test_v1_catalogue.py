@@ -5,6 +5,7 @@ import pytest
 from pydantic import ValidationError
 
 from src.v1.SpectralIndex import (
+    Classification,
     ConstantDefinition,
     ExternalVariableDefinition,
     ReductionDefinition,
@@ -13,14 +14,21 @@ from src.v1.SpectralIndex import (
     parse_formula_variables,
 )
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External, IndexType
+from src.v1.utils import (
+    ApplicationDomain,
+    Bands,
+    Constants,
+    External,
+    IndexFamily,
+    Polarizations,
+    SensingModality,
+)
 
 
 REQUIRED_TEXT_FIELDS = (
     "acronym",
     "name",
     "formula",
-    "application_domain",
     "contributor",
 )
 
@@ -42,6 +50,9 @@ def test_required_catalogue_metadata_is_present_and_well_formed():
             assert isinstance(value, str)
             assert value.strip(), f"{index.acronym}.{field} is empty"
 
+        assert index.classification.application_domain
+        assert index.classification.sensing_modalities is None
+
         source_link = urlparse(index.source.source_link)
         assert source_link.scheme in {"http", "https"}
         assert source_link.netloc
@@ -58,13 +69,16 @@ def test_acronym_and_name_are_required_v1_fields():
     assert fields["acronym"].is_required()
     assert fields["name"].is_required()
     assert fields["source"].is_required()
+    assert fields["classification"].is_required()
     assert not fields["bands"].is_required()
+    assert not fields["polarizations"].is_required()
     assert not fields["constants"].is_required()
     assert not fields["external_variables"].is_required()
     assert not fields["reductions"].is_required()
     assert "short_name" not in fields
     assert "long_name" not in fields
     assert "reference" not in fields
+    assert "application_domain" not in fields
 
     source_fields = next(iter(spindex.SpectralIndices.values())).source.model_fields
     assert source_fields["source_link"].is_required()
@@ -82,15 +96,16 @@ def test_evi_and_savi_are_articles():
 
 
 def test_catalogue_domains_and_formula_variables_are_supported():
-    supported_domains = set(IndexType._value2member_map_)
+    supported_domains = set(ApplicationDomain._value2member_map_)
     supported_variables = {
         *Bands._value2member_map_,
+        *Polarizations._value2member_map_,
         *Constants._value2member_map_,
         *External._value2member_map_,
     }
 
     for index in spindex.SpectralIndices.values():
-        assert index.application_domain in supported_domains
+        assert index.classification.application_domain in supported_domains
         assert set(parse_formula_variables(index.formula)) <= supported_variables
 
 
@@ -98,10 +113,78 @@ def test_formula_variable_registries_are_disjoint():
     band_names = set(Bands._value2member_map_)
     constant_names = set(Constants._value2member_map_)
     external_names = set(External._value2member_map_)
+    polarization_names = set(Polarizations._value2member_map_)
 
     assert band_names.isdisjoint(constant_names)
     assert band_names.isdisjoint(external_names)
+    assert band_names.isdisjoint(polarization_names)
     assert constant_names.isdisjoint(external_names)
+    assert constant_names.isdisjoint(polarization_names)
+    assert external_names.isdisjoint(polarization_names)
+
+
+def test_classification_vocabularies_and_authored_assignments():
+    assert set(ApplicationDomain._value2member_map_) == {
+        "vegetation",
+        "water",
+        "burn",
+        "snow",
+        "soil",
+        "urban",
+        "geology",
+        "clouds",
+    }
+    assert set(SensingModality._value2member_map_) == {
+        "multispectral",
+        "thermal",
+        "radar",
+    }
+    assert set(IndexFamily._value2member_map_) == {
+        "kernel",
+        "tasseled_cap",
+        "radar",
+    }
+
+    kernel_keys = {"kEVI", "kNDVI", "kRVI", "kVARI", "kIPVI"}
+    radar_keys = {
+        key
+        for key, index in spindex.SpectralIndices.items()
+        if set(parse_formula_variables(index.formula))
+        & set(Polarizations._value2member_map_)
+    }
+
+    for key, index in spindex.SpectralIndices.items():
+        expected_family = (
+            ["kernel"] if key in kernel_keys else ["radar"] if key in radar_keys else None
+        )
+        assert index.classification.family == expected_family
+
+    assert spindex.SpectralIndices["NDPolI"].classification.application_domain == (
+        "geology"
+    )
+    assert all(
+        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
+        for key in radar_keys - {"NDPolI"}
+    )
+    assert all(
+        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
+        for key in kernel_keys
+    )
+
+
+def test_classification_rejects_invalid_or_duplicate_values():
+    assert Classification(application_domain="geology").family is None
+
+    with pytest.raises(ValidationError):
+        Classification(application_domain="radar")
+    with pytest.raises(ValidationError):
+        Classification(application_domain="vegetation", family=[])
+    with pytest.raises(ValidationError):
+        Classification(
+            application_domain="vegetation", family=["kernel", "kernel"]
+        )
+    with pytest.raises(ValidationError):
+        Classification(application_domain="vegetation", family=["ratio"])
 
 
 def test_kernel_results_are_functions_not_registered_band_operands():
@@ -158,7 +241,7 @@ def _index_with(
         "name": "Test Index",
         "formula": formula,
         "source": {"source_link": "https://example.com/source"},
-        "application_domain": "vegetation",
+        "classification": {"application_domain": "vegetation"},
         "date_of_addition": "2026-08-03",
         "contributor": "https://github.com/example",
     }

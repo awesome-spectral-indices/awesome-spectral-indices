@@ -22,10 +22,19 @@ hero:
 S1/N
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `S1`: Short-wave Infrared (SWIR) 1.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

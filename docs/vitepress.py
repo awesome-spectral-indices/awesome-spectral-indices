@@ -81,6 +81,39 @@ def render_bands(band_names, band_metadata):
     )
 
 
+def render_polarizations(polarization_names):
+    """Render radar-polarization inputs separately from spectral bands."""
+    if not polarization_names:
+        return "No radar polarizations are used in this index."
+
+    return "\n".join(
+        f"- `{name}`: {sentence(VARIABLE_DESCRIPTIONS[name])}"
+        for name in polarization_names
+    )
+
+
+def render_classification(classification):
+    """Render application, modality, and optional family classifications."""
+    application_domain = classification["application_domain"].replace(
+        "_", " "
+    ).title()
+    modalities = ", ".join(
+        f"`{modality.replace('_', ' ').title()}`"
+        for modality in classification["sensing_modalities"]
+    )
+    lines = [
+        f"- Application domain: `{application_domain}`",
+        f"- Sensing modalities: {modalities}",
+    ]
+    if classification["family"]:
+        families = ", ".join(
+            f"`{family.replace('_', ' ').title()}`"
+            for family in classification["family"]
+        )
+        lines.append(f"- Family: {families}")
+    return "\n".join(lines)
+
+
 def render_constants(constant_definitions):
     """Render formula constants and their contributor-provided metadata."""
     if not constant_definitions:
@@ -194,8 +227,11 @@ def render_index_page(
     band_metadata,
 ):
     """Render one spectral-index page using the NDVI page structure."""
-    domain = index["application_domain"].replace("_", " ").title()
+    classification = index["classification"]
+    domain = classification["application_domain"].replace("_", " ").title()
+    classification_details = render_classification(classification)
     bands = render_bands(index["bands"], band_metadata)
+    polarizations = render_polarizations(index["polarizations"])
     constants = render_constants(index["constants"])
     external_variables_section = ""
     if index["external_variables"]:
@@ -229,7 +265,7 @@ These indices are part of the same scientific source:
     return f"""---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-pageClass: {yaml_string(f'index-page domain-{index["application_domain"]}')}
+pageClass: {yaml_string(f'index-page domain-{classification["application_domain"]}')}
 
 hero:
   name: {yaml_string(index["acronym"])}
@@ -250,9 +286,17 @@ hero:
 {index["formula"]}
 ```
 
+### Classification
+
+{classification_details}
+
 ### Bands
 
 {bands}
+
+### Polarizations
+
+{polarizations}
 
 ### Constants
 

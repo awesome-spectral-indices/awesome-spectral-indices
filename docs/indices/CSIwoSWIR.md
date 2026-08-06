@@ -22,9 +22,18 @@ hero:
 N
 ```
 
+### Classification
+
+- Application domain: `Clouds`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

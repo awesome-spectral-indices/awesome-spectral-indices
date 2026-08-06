@@ -22,10 +22,19 @@ hero:
 (R - A) / (R + A)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `A`: Aerosols.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -11,7 +11,7 @@ import pandas as pd
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.bands import bands
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External
+from src.v1.utils import Bands, Constants, External, Polarizations
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -22,9 +22,10 @@ SPECTRAL_INDICES_TABLE = OUTPUT_DIR / "spectral-indices-table.csv"
 TABLE_COLUMNS = [
     "acronym",
     "name",
-    "application_domain",
+    "classification",
     "formula",
     "bands",
+    "polarizations",
     "constants",
     "external_variables",
     "reductions",
@@ -68,14 +69,27 @@ def check_source_link(source_link, timeout=SOURCE_CHECK_TIMEOUT):
 
 
 def add_formula_metadata(index_catalog):
-    """Populate generated bands and normalize authored formula metadata."""
+    """Populate generated inputs, modalities, and normalized formula metadata."""
     band_names = set(Bands._value2member_map_)
+    polarization_names = set(Polarizations._value2member_map_)
+    thermal_names = {"T", "T1", "T2"}
 
     for key, spectral_index in index_catalog.SpectralIndices.items():
         variables = parse_formula_variables(spectral_index.formula)
         spectral_index.bands = [
             variable for variable in variables if variable in band_names
         ]
+        spectral_index.polarizations = [
+            variable for variable in variables if variable in polarization_names
+        ]
+        modalities = []
+        if any(band not in thermal_names for band in spectral_index.bands):
+            modalities.append("multispectral")
+        if any(band in thermal_names for band in spectral_index.bands):
+            modalities.append("thermal")
+        if spectral_index.polarizations:
+            modalities.append("radar")
+        spectral_index.classification.sensing_modalities = modalities
         spectral_index.constants = spectral_index.constants or {}
         spectral_index.external_variables = spectral_index.external_variables or {}
         spectral_index.reductions = spectral_index.reductions or {}

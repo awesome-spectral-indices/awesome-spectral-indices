@@ -22,10 +22,19 @@ hero:
 0.8192 * B - 0.5735 * N + 0.0750
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `B`: Blue.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

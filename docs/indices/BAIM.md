@@ -22,10 +22,19 @@ hero:
 1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)
 ```
 
+### Classification
+
+- Application domain: `Burn`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `S2`: Short-wave Infrared (SWIR) 2.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

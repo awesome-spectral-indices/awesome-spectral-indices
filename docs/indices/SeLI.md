@@ -22,10 +22,19 @@ hero:
 (N2 - RE1) / (N2 + RE1)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N2`: Near-Infrared (NIR) 2.
 - `RE1`: Red Edge 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

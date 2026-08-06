@@ -22,12 +22,21 @@ hero:
 (T - (R + N + S1) / 3.0)/(T + (R + N + S1) / 3.0)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `T`: Thermal Infrared.
 - `R`: Red.
 - `N`: Near-Infrared (NIR).
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

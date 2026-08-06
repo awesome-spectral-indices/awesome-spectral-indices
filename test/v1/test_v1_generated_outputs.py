@@ -5,7 +5,7 @@ from pathlib import Path
 
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External
+from src.v1.utils import Bands, Constants, External, Polarizations
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -26,7 +26,10 @@ def test_v1_source_catalogue_and_outputs_contain_the_same_indices():
     with (OUTPUT_DIR / "spectral-indices-table.csv").open(newline="") as fp:
         csv_reader = csv.DictReader(fp)
         assert "external_variables" in csv_reader.fieldnames
+        assert "classification" in csv_reader.fieldnames
+        assert "polarizations" in csv_reader.fieldnames
         assert "reductions" in csv_reader.fieldnames
+        assert "application_domain" not in csv_reader.fieldnames
         csv_acronyms = Counter(row["acronym"] for row in csv_reader)
 
     assert json_acronyms == expected
@@ -82,17 +85,21 @@ def test_v1_outputs_contain_generated_source_metadata():
     assert json_catalogue["TVI"]["source"]["source_type"] == "conference_paper"
 
 
-def test_v1_outputs_separate_bands_constants_and_external_variables():
+def test_v1_outputs_separate_formula_input_types():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
         json_catalogue = json.load(fp)["SpectralIndices"]
 
     band_names = set(Bands._value2member_map_)
+    polarization_names = set(Polarizations._value2member_map_)
     external_names = set(External._value2member_map_)
 
     for key, source_index in spindex.SpectralIndices.items():
         variables = parse_formula_variables(source_index.formula)
         expected_bands = [
             variable for variable in variables if variable in band_names
+        ]
+        expected_polarizations = [
+            variable for variable in variables if variable in polarization_names
         ]
         expected_constants = {
             name: definition.model_dump(mode="json")
@@ -111,6 +118,7 @@ def test_v1_outputs_separate_bands_constants_and_external_variables():
         }
 
         assert json_catalogue[key]["bands"] == expected_bands
+        assert json_catalogue[key]["polarizations"] == expected_polarizations
         assert json_catalogue[key]["constants"] == expected_constants
         assert json_catalogue[key]["external_variables"] == expected_externals
         assert json_catalogue[key]["reductions"] == expected_reductions
@@ -118,10 +126,47 @@ def test_v1_outputs_separate_bands_constants_and_external_variables():
 
         serialized_variables = (
             set(json_catalogue[key]["bands"])
+            | set(json_catalogue[key]["polarizations"])
             | set(json_catalogue[key]["constants"])
             | set(json_catalogue[key]["external_variables"])
         )
         assert serialized_variables == set(variables)
+
+
+def test_v1_outputs_generate_classification_and_sensing_modalities():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+
+    for index in json_catalogue.values():
+        assert "application_domain" not in index
+        assert set(index["classification"]) == {
+            "application_domain",
+            "sensing_modalities",
+            "family",
+        }
+        assert index["classification"]["sensing_modalities"]
+
+    assert json_catalogue["NDVI"]["classification"] == {
+        "application_domain": "vegetation",
+        "sensing_modalities": ["multispectral"],
+        "family": None,
+    }
+    assert json_catalogue["NBRT1"]["classification"]["sensing_modalities"] == [
+        "multispectral",
+        "thermal",
+    ]
+    assert json_catalogue["kNDVI"]["classification"] == {
+        "application_domain": "vegetation",
+        "sensing_modalities": ["multispectral"],
+        "family": ["kernel"],
+    }
+    assert json_catalogue["NDPolI"]["classification"] == {
+        "application_domain": "geology",
+        "sensing_modalities": ["radar"],
+        "family": ["radar"],
+    }
+    assert json_catalogue["NDPolI"]["bands"] == []
+    assert json_catalogue["NDPolI"]["polarizations"] == ["VV", "VH"]
 
 
 def test_v1_outputs_include_cwi_spatial_reduction_context():

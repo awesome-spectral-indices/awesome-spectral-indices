@@ -22,6 +22,11 @@ hero:
 ((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `B`: Blue.
@@ -29,6 +34,10 @@ hero:
 - `G`: Green.
 - `RE1`: Red Edge 1.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

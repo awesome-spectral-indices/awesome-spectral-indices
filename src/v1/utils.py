@@ -24,10 +24,18 @@ class Bands(Enum):
     TIR = "T"
     TIR1 = "T1"
     TIR2 = "T2"
-    HV = "HV"
+
+
+@unique
+class Polarizations(Enum):
+    """Radar polarizations supported by spectral-index formulas."""
+
     HH = "HH"
-    VV = "VV"
+    HV = "HV"
     VH = "VH"
+    VV = "VV"
+
+
 @unique
 class Constants(Enum):
     """Constants supported by spectral-index formulas."""
@@ -69,10 +77,9 @@ class External(Enum):
     PAR = "PAR"
 
 
-class IndexType(Enum):
-    """
-    IndexType supported by SpectralIndex DataClass
-    """
+@unique
+class ApplicationDomain(Enum):
+    """Application domains supported by the v1 catalogue."""
 
     VEGETATION = "vegetation"
     WATER = "water"
@@ -80,6 +87,23 @@ class IndexType(Enum):
     SNOW = "snow"
     SOIL = "soil"
     URBAN = "urban"
-    KERNEL = "kernel"
+    GEOLOGY = "geology"
     CLOUDS = "clouds"
+
+
+@unique
+class SensingModality(Enum):
+    """Sensing modalities generated from formula input standards."""
+
+    MULTISPECTRAL = "multispectral"
+    THERMAL = "thermal"
+    RADAR = "radar"
+
+
+@unique
+class IndexFamily(Enum):
+    """Optional scientific families assigned to spectral indices."""
+
+    KERNEL = "kernel"
+    TASSELED_CAP = "tasseled_cap"
     RADAR = "radar"

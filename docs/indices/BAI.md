@@ -22,10 +22,19 @@ hero:
 1.0 / ((0.1 - R) ** 2.0 + (0.06 - N) ** 2.0)
 ```
 
+### Classification
+
+- Application domain: `Burn`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 <script setup>
 import { computed, reactive, ref } from 'vue'
 import { withBase } from 'vitepress'
@@ -10,9 +14,8 @@ const domainOrder = [
   'snow',
   'urban',
   'soil',
-  'clouds',
-  'kernel',
-  'radar'
+  'geology',
+  'clouds'
 ]
 
 const domainLabels = {
@@ -22,8 +25,20 @@ const domainLabels = {
   snow: 'Snow',
   urban: 'Urban',
   soil: 'Soil',
-  clouds: 'Clouds',
+  geology: 'Geology',
+  clouds: 'Clouds'
+}
+
+const modalityOrder = ['multispectral', 'thermal', 'radar']
+const modalityLabels = {
+  multispectral: 'Multispectral',
+  thermal: 'Thermal',
+  radar: 'Radar'
+}
+
+const familyLabels = {
   kernel: 'Kernel',
+  tasseled_cap: 'Tasseled Cap',
   radar: 'Radar'
 }
 
@@ -44,6 +59,8 @@ const advanced = reactive({
   acronym: '',
   name: '',
   applicationDomain: '',
+  sensingModalities: [],
+  families: [],
   formula: '',
   contributor: '',
   sourceLink: '',
@@ -52,6 +69,7 @@ const advanced = reactive({
   sourceType: '',
   dateOfAddition: '',
   bands: [],
+  polarizations: [],
   constants: [],
   externalVariables: []
 })
@@ -62,6 +80,20 @@ const includesText = (value, filter) =>
 
 const allBands = [...new Set(indices.flatMap((index) => index.bands))]
   .sort((left, right) => left.localeCompare(right))
+
+const allPolarizations = [
+  ...new Set(indices.flatMap((index) => index.polarizations))
+].sort((left, right) => left.localeCompare(right))
+
+const allSensingModalities = modalityOrder.filter((modality) =>
+  indices.some((index) =>
+    index.classification.sensing_modalities.includes(modality)
+  )
+)
+
+const allFamilies = [
+  ...new Set(indices.flatMap((index) => index.classification.family ?? []))
+].sort((left, right) => left.localeCompare(right))
 
 const allConstants = [
   ...new Set(indices.flatMap((index) => Object.keys(index.constants)))
@@ -79,7 +111,9 @@ const filteredIndices = computed(() => {
       index.key,
       index.acronym,
       index.name,
-      index.application_domain
+      index.classification.application_domain,
+      ...index.classification.sensing_modalities,
+      ...(index.classification.family ?? [])
     ]
 
     if (
@@ -93,7 +127,21 @@ const filteredIndices = computed(() => {
     if (!includesText(index.name, advanced.name)) return false
     if (
       advanced.applicationDomain &&
-      index.application_domain !== advanced.applicationDomain
+      index.classification.application_domain !== advanced.applicationDomain
+    ) {
+      return false
+    }
+    if (
+      !advanced.sensingModalities.every((modality) =>
+        index.classification.sensing_modalities.includes(modality)
+      )
+    ) {
+      return false
+    }
+    if (
+      !advanced.families.every((family) =>
+        index.classification.family?.includes(family)
+      )
     ) {
       return false
     }
@@ -122,8 +170,13 @@ const filteredIndices = computed(() => {
       return false
     }
     if (
-      !advanced.constants.every((constant) => constant in index.constants)
+      !advanced.polarizations.every((polarization) =>
+        index.polarizations.includes(polarization)
+      )
     ) {
+      return false
+    }
+    if (!advanced.constants.every((constant) => constant in index.constants)) {
       return false
     }
     if (
@@ -138,22 +191,50 @@ const filteredIndices = computed(() => {
   })
 })
 
-const groupedIndices = computed(() =>
-  domainOrder
-    .map((domain) => ({
-      domain,
-      indices: filteredIndices.value.filter(
-        (index) => index.application_domain === domain
-      )
+const modalityProfileKey = (modalities) => modalities.join('+')
+const modalityProfileLabel = (modalities) =>
+  modalities.map((modality) => modalityLabels[modality]).join(' + ')
+const modalityProfileRank = (modalities) =>
+  modalityOrder.indexOf(modalities[0]) * 10 + modalities.length
+
+const groupedIndices = computed(() => {
+  const profiles = new Map()
+
+  for (const index of filteredIndices.value) {
+    const modalities = index.classification.sensing_modalities
+    const key = modalityProfileKey(modalities)
+    if (!profiles.has(key)) profiles.set(key, { key, modalities, indices: [] })
+    profiles.get(key).indices.push(index)
+  }
+
+  return [...profiles.values()]
+    .sort(
+      (left, right) =>
+        modalityProfileRank(left.modalities) -
+          modalityProfileRank(right.modalities) ||
+        left.key.localeCompare(right.key)
+    )
+    .map((profile) => ({
+      ...profile,
+      label: modalityProfileLabel(profile.modalities),
+      domains: domainOrder
+        .map((domain) => ({
+          domain,
+          indices: profile.indices.filter(
+            (index) => index.classification.application_domain === domain
+          )
+        }))
+        .filter((group) => group.indices.length)
     }))
-    .filter((group) => group.indices.length)
-)
+})
 
 function clearFilters() {
   query.value = ''
   advanced.acronym = ''
   advanced.name = ''
   advanced.applicationDomain = ''
+  advanced.sensingModalities = []
+  advanced.families = []
   advanced.formula = ''
   advanced.contributor = ''
   advanced.sourceLink = ''
@@ -162,6 +243,7 @@ function clearFilters() {
   advanced.sourceType = ''
   advanced.dateOfAddition = ''
   advanced.bands = []
+  advanced.polarizations = []
   advanced.constants = []
   advanced.externalVariables = []
 }
@@ -174,9 +256,9 @@ function indexLink(key) {
 
 # Catalogue Search
 
-Search all Awesome Spectral Indices by name or application domain. Open
-advanced search to filter individual metadata fields or require specific
-formula variables.
+Search all Awesome Spectral Indices by name, classification, or application
+domain. Open advanced search to filter individual metadata fields or require
+specific formula variables.
 
 <div class="catalogue-tools">
   <div class="primary-search">
@@ -187,7 +269,7 @@ formula variables.
       id="catalogue-query"
       v-model="query"
       type="search"
-      placeholder="Search acronym, name, or application domain…"
+      placeholder="Search acronym, name, application, modality, or family…"
       autocomplete="off"
     >
     <button
@@ -271,6 +353,38 @@ formula variables.
       </label>
     </div>
     <fieldset class="band-filter">
+      <legend>Includes all selected sensing modalities</legend>
+      <div class="band-options">
+        <label
+          v-for="modality in allSensingModalities"
+          :key="modality"
+          class="band-option"
+          :class="{ selected: advanced.sensingModalities.includes(modality) }"
+        >
+          <input
+            v-model="advanced.sensingModalities"
+            type="checkbox"
+            :value="modality"
+          >
+          <span>{{ modalityLabels[modality] }}</span>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset v-if="allFamilies.length" class="band-filter">
+      <legend>Includes all selected families</legend>
+      <div class="band-options">
+        <label
+          v-for="family in allFamilies"
+          :key="family"
+          class="band-option"
+          :class="{ selected: advanced.families.includes(family) }"
+        >
+          <input v-model="advanced.families" type="checkbox" :value="family">
+          <span>{{ familyLabels[family] }}</span>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="band-filter">
       <legend>Includes all selected bands</legend>
       <div class="band-options">
         <label
@@ -281,6 +395,24 @@ formula variables.
         >
           <input v-model="advanced.bands" type="checkbox" :value="band">
           <code>{{ band }}</code>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset v-if="allPolarizations.length" class="band-filter">
+      <legend>Includes all selected radar polarizations</legend>
+      <div class="band-options">
+        <label
+          v-for="polarization in allPolarizations"
+          :key="polarization"
+          class="band-option"
+          :class="{ selected: advanced.polarizations.includes(polarization) }"
+        >
+          <input
+            v-model="advanced.polarizations"
+            type="checkbox"
+            :value="polarization"
+          >
+          <code>{{ polarization }}</code>
         </label>
       </div>
     </fieldset>
@@ -326,26 +458,48 @@ formula variables.
   {{ filteredIndices.length }} of {{ indices.length }} indices found
 </p>
 
-<div v-if="groupedIndices.length" class="domain-groups">
+<div v-if="groupedIndices.length" class="modality-groups">
   <section
-    v-for="group in groupedIndices"
-    :key="group.domain"
-    class="domain-group"
+    v-for="modalityGroup in groupedIndices"
+    :key="modalityGroup.key"
+    class="modality-group"
   >
-    <h2 :id="group.domain">
-      {{ domainLabels[group.domain] }}
-      <span>{{ group.indices.length }}</span>
+    <h2 :id="`modality-${modalityGroup.key}`">
+      {{ modalityGroup.label }}
+      <span>{{ modalityGroup.indices.length }}</span>
     </h2>
-    <div class="index-grid">
-      <article v-for="index in group.indices" :key="index.key" class="index-card">
-        <h3>
-          <a :href="indexLink(index.key)">{{ index.acronym }}</a>
+    <div class="domain-groups">
+      <section
+        v-for="domainGroup in modalityGroup.domains"
+        :key="`${modalityGroup.key}-${domainGroup.domain}`"
+        class="domain-group"
+      >
+        <h3 :id="`${modalityGroup.key}-${domainGroup.domain}`">
+          {{ domainLabels[domainGroup.domain] }}
+          <span>{{ domainGroup.indices.length }}</span>
         </h3>
-        <p>{{ index.name }}</p>
-        <div class="index-bands">
-          <code v-for="band in index.bands" :key="band">{{ band }}</code>
+        <div class="index-grid">
+          <article
+            v-for="index in domainGroup.indices"
+            :key="index.key"
+            class="index-card"
+          >
+            <h4>
+              <a :href="indexLink(index.key)">{{ index.acronym }}</a>
+            </h4>
+            <p>{{ index.name }}</p>
+            <div class="index-bands">
+              <code v-for="band in index.bands" :key="band">{{ band }}</code>
+              <code
+                v-for="polarization in index.polarizations"
+                :key="polarization"
+              >
+                {{ polarization }}
+              </code>
+            </div>
+          </article>
         </div>
-      </article>
+      </section>
     </div>
   </section>
 </div>
@@ -361,7 +515,7 @@ formula variables.
 <style scoped>
 .catalogue-tools,
 .result-count,
-.domain-groups,
+.modality-groups,
 .empty-state {
   --catalogue-glass-border: color-mix(
     in srgb,
@@ -591,21 +745,40 @@ formula variables.
   color: var(--vp-c-text-2);
 }
 
-.domain-group {
-  margin-top: 2rem;
+.modality-group {
+  margin-top: 2.5rem;
 }
 
-.domain-group h2 {
+.modality-group > h2,
+.domain-group h3 {
   display: flex;
   align-items: baseline;
   gap: 0.55rem;
-  margin-bottom: 1rem;
   border-top: 0;
   padding-top: 0;
+}
+
+.modality-group > h2 {
+  margin-bottom: 0.5rem;
   color: var(--vp-c-brand-1);
 }
 
-.domain-group h2 span {
+.domain-groups {
+  margin-left: 1rem;
+}
+
+.domain-group {
+  margin-top: 1.5rem;
+}
+
+.domain-group h3 {
+  margin-bottom: 0.8rem;
+  color: var(--vp-c-text-1);
+  font-size: 1.15rem;
+}
+
+.modality-group > h2 span,
+.domain-group h3 span {
   color: var(--vp-c-text-3);
   font-size: 0.85rem;
   font-weight: 500;
@@ -653,14 +826,14 @@ formula variables.
   transform: translateY(-2px);
 }
 
-.index-card h3 {
+.index-card h4 {
   margin: 0;
   border: 0;
   padding: 0;
   font-size: 1rem;
 }
 
-.index-card h3 a {
+.index-card h4 a {
   color: var(--vp-c-brand-1);
 }
 
@@ -728,6 +901,10 @@ formula variables.
 
   .domain-group {
     margin-top: 1.6rem;
+  }
+
+  .domain-groups {
+    margin-left: 0;
   }
 }
 

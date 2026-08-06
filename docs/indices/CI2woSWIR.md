@@ -22,12 +22,21 @@ hero:
 (B + G + R + N) / 4.0
 ```
 
+### Classification
+
+- Application domain: `Clouds`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `B`: Blue.
 - `G`: Green.
 - `R`: Red.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

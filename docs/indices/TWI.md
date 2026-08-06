@@ -22,6 +22,11 @@ hero:
 (2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE1`: Red Edge 1.
@@ -30,6 +35,10 @@ hero:
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `B`: Blue.
 - `N`: Near-Infrared (NIR).
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

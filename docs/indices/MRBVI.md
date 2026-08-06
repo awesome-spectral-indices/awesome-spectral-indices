@@ -22,10 +22,19 @@ hero:
 (R ** 2.0 - B ** 2.0)/(R ** 2.0 + B ** 2.0)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `R`: Red.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

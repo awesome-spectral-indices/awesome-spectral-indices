@@ -22,11 +22,20 @@ hero:
 ((N-S2)/(N+S2))*T
 ```
 
+### Classification
+
+- Application domain: `Burn`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `S2`: Short-wave Infrared (SWIR) 2.
 - `T`: Thermal Infrared.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

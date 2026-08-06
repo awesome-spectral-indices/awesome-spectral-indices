@@ -1,12 +1,12 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-pageClass: "index-page domain-radar"
+pageClass: "index-page domain-vegetation"
 
 hero:
   name: "VVVHR"
   text: "VV-VH Ratio"
-  tagline: "Radar"
+  tagline: "Vegetation"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -22,7 +22,17 @@ hero:
 VV/VH
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Radar`
+- Family: `Radar`
+
 ### Bands
+
+No bands are used in this index.
+
+### Polarizations
 
 - `VV`: Vertical transmit, vertical receive radar polarization.
 - `VH`: Vertical transmit, horizontal receive radar polarization.

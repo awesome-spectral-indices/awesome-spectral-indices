@@ -1,9 +1,9 @@
 /*
  * Application-domain palettes for generated spectral-index pages.
  *
- * Each page receives `index-page domain-<application_domain>` from
- * docs/vitepress.py. The catalogue search and other documentation pages keep
- * the general neutral theme.
+ * Each page receives `index-page domain-<classification.application_domain>`
+ * from docs/vitepress.py. The catalogue search and other documentation pages
+ * keep the general neutral theme.
  */
 
 :root {
@@ -542,65 +542,17 @@
   --domain-title-gradient: linear-gradient(120deg, #ffffff, #caf0f8 48%, #90e0ef);
 }
 
-.domain-kernel {
-  --domain-hero-image: url("/kernel.webp");
+.domain-geology {
+  --domain-hero-image: url("/geology.webp");
   --domain-bg: #f8f9fa;
   --domain-accent: #dee2e6;
   --domain-accent-2: #e9ecef;
-  --domain-link: #3a0ca3;
-  --domain-link-dark: #4cc9f0;
+  --domain-link: #8a4f22;
+  --domain-link-dark: #efbd7d;
   --domain-hero-text: #212529;
-  --domain-action: #f72585;
-  --domain-action-text: #ffffff;
-  --domain-title-gradient: linear-gradient(110deg, #ff9fca, #f72585 50%, #3a0ca3);
-}
-
-.domain-kernel-original {
-  --domain-hero-image: url("/kernel.webp");
-  --domain-bg: #3a0ca3;
-  --domain-accent: #4cc9f0;
-  --domain-accent-2: #f72585;
-  --domain-link: #3a0ca3;
-  --domain-link-dark: #4cc9f0;
-  --domain-action: #f72585;
-  --domain-action-text: #ffffff;
-  --domain-title-gradient: linear-gradient(110deg, #f72585, #ffffff 50%, #4cc9f0);
-}
-
-.domain-radar {
-  --domain-hero-image: url("/radar.webp");
-  --domain-bg: #f8f9fa;
-  --domain-accent: #dee2e6;
-  --domain-accent-2: #e9ecef;
-  --domain-link: #495057;
-  --domain-link-dark: #dee2e6;
-  --domain-hero-text: #212529;
-  --domain-action: #343a40;
-  --domain-action-text: #f8f9fa;
-  --domain-title-gradient: linear-gradient(115deg, #54595e, #6c757d 55%, #b1b6bb);
-}
-
-.domain-radar-original {
-  --domain-hero-image: url("/radar.webp");
-  --domain-bg: #9f9f9f;
-  --domain-accent: #ffffff;
-  --domain-accent-2: #f3f4f6;
-  --domain-link: #4b5563;
-  --domain-link-dark: #f3f4f6;
-  --domain-action: #f3f4f6;
-  --domain-action-text: #111827;
-  --domain-title-gradient: linear-gradient(120deg, #3a445a, #1a1e27 55%, #111827);
-}
-
-.domain-radar-prev {
-  --domain-bg: #6b7280;
-  --domain-accent: #ffffff;
-  --domain-accent-2: #f3f4f6;
-  --domain-link: #4b5563;
-  --domain-link-dark: #f3f4f6;
-  --domain-action: #f3f4f6;
-  --domain-action-text: #111827;
-  --domain-title-gradient: linear-gradient(120deg, #ffffff, #f3f4f6 55%, #d1d5db);
+  --domain-action: #b8793f;
+  --domain-action-text: #21150d;
+  --domain-title-gradient: linear-gradient(115deg, #f4d5a6, #c6874c 55%, #8a4f22);
 }
 
 .index-page .VPNavBar {
@@ -650,22 +602,6 @@
   );
   mask-image: linear-gradient(
     to right,
-    transparent 0%,
-    rgb(0 0 0 / 12%) 18%,
-    #000 52%
-  );
-}
-
-.domain-radar .VPHomeHero::before {
-  transform: scaleX(-1);
-  -webkit-mask-image: linear-gradient(
-    to left,
-    transparent 0%,
-    rgb(0 0 0 / 12%) 18%,
-    #000 52%
-  );
-  mask-image: linear-gradient(
-    to left,
     transparent 0%,
     rgb(0 0 0 / 12%) 18%,
     #000 52%

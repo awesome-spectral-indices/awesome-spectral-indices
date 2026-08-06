@@ -22,10 +22,19 @@ hero:
 (RE2 - A)/(RE2 + A)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE2`: Red Edge 2.
 - `A`: Aerosols.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

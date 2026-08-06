@@ -1,12 +1,12 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-pageClass: "index-page domain-kernel"
+pageClass: "index-page domain-vegetation"
 
 hero:
   name: "kRVI"
   text: "Kernel Ratio Vegetation Index"
-  tagline: "Kernel"
+  tagline: "Vegetation"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -22,10 +22,20 @@ hero:
 kernel(N, N) / kernel(N, R)
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+- Family: `Kernel`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

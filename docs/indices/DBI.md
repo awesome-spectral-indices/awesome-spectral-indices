@@ -22,12 +22,21 @@ hero:
 ((B - T1)/(B + T1)) - ((N - R)/(N + R))
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `B`: Blue.
 - `T1`: Thermal Infrared 1.
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

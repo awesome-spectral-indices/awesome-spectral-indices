@@ -22,10 +22,19 @@ hero:
 (1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)
 ```
 
+### Classification
+
+- Application domain: `Clouds`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

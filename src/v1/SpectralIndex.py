@@ -18,7 +18,15 @@ from pydantic import (
     model_validator,
 )
 
-from src.v1.utils import Bands, Constants, External, IndexType
+from src.v1.utils import (
+    ApplicationDomain,
+    Bands,
+    Constants,
+    External,
+    IndexFamily,
+    Polarizations,
+    SensingModality,
+)
 
 
 StrictNumber = Union[StrictInt, StrictFloat]
@@ -254,6 +262,60 @@ class ReductionDefinition(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class Classification(BaseModel):
+    """Authored and generated classification metadata for one index."""
+
+    application_domain: str
+    sensing_modalities: Optional[List[str]] = None
+    family: Optional[List[str]] = None
+
+    model_config = ConfigDict(extra="forbid")
+
+    @field_validator("application_domain")
+    @classmethod
+    def check_application_domain(cls, value):
+        """Require one supported contributor-provided application domain."""
+        supported = set(ApplicationDomain._value2member_map_)
+        if value not in supported:
+            raise ValueError(
+                "Invalid application_domain. Supported values: "
+                + ", ".join(sorted(supported))
+            )
+        return value
+
+    @field_validator("sensing_modalities")
+    @classmethod
+    def check_sensing_modalities(cls, value):
+        """Validate generated sensing modalities when they are populated."""
+        if value is None:
+            return value
+        supported = set(SensingModality._value2member_map_)
+        if not value or len(value) != len(set(value)):
+            raise ValueError("sensing_modalities must be a non-empty unique list.")
+        if not set(value) <= supported:
+            raise ValueError(
+                "Invalid sensing_modalities. Supported values: "
+                + ", ".join(sorted(supported))
+            )
+        return value
+
+    @field_validator("family")
+    @classmethod
+    def check_family(cls, value):
+        """Validate optional contributor-provided index families."""
+        if value is None:
+            return value
+        supported = set(IndexFamily._value2member_map_)
+        if not value or len(value) != len(set(value)):
+            raise ValueError("family must be a non-empty unique list.")
+        if not set(value) <= supported:
+            raise ValueError(
+                "Invalid family. Supported values: "
+                + ", ".join(sorted(supported))
+            )
+        return value
+
+
 class SpectralIndex(BaseModel):
     """
     Python dataclass for Spectral Indices
@@ -265,10 +327,11 @@ class SpectralIndex(BaseModel):
     name: str
     formula: str
     bands: Optional[List[str]] = None
+    polarizations: Optional[List[str]] = None
     constants: Optional[Dict[str, ConstantDefinition]] = None
     external_variables: Optional[Dict[str, ExternalVariableDefinition]] = None
     reductions: Optional[Dict[Literal["space"], ReductionDefinition]] = None
-    application_domain: str
+    classification: Classification
     date_of_addition: date
 
     model_config = ConfigDict(extra="forbid")
@@ -289,6 +352,7 @@ class SpectralIndex(BaseModel):
 
         supported_variables = {
             *Bands._value2member_map_.keys(),
+            *Polarizations._value2member_map_.keys(),
             *Constants._value2member_map_.keys(),
             *External._value2member_map_.keys(),
         }
@@ -382,19 +446,4 @@ class SpectralIndex(BaseModel):
         # Check if it is a correct email address or GitHub profile.
         if not re.match(full_regex, value):
             raise ValueError("contributor is neither a GitHub profile nor an email.")
-        return value
-
-    @field_validator("application_domain")
-    @classmethod
-    def check_type(cls, value):
-        """Ensure the application domain is one of the supported index types."""
-        # Obtain names of IndexType enum.
-        IndexTypeNames = ", ".join(IndexType._value2member_map_.keys())
-
-        # Check if IndexTtpe is supported.
-        if not value in IndexType._value2member_map_:
-            raise ValueError(
-                "Invalid IndexType. SpectralIndex only supports the following IndexType: "
-                + IndexTypeNames
-            )
         return value

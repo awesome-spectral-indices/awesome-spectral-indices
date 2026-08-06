@@ -50,13 +50,21 @@ submitted through the usual contribution process.
 - Added the strict two-input `kernel()` function to the v1 formula language so
   kernel evaluations can be expressed as operations over their underlying
   inputs rather than as additional operands.
+- Added the structured v1 `classification` property. Contributors provide the
+  required `application_domain` and optional `family`, while generation adds
+  one or more sensing modalities from the formula standards.
+- Added `geology` as an application domain and `kernel`, `tasseled_cap`, and
+  `radar` as the initial supported index families.
+- Added the v1 `Polarizations` registry and generated `polarizations` property
+  for the `HH`, `HV`, `VH`, and `VV` radar inputs.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
   - an advanced search panel for individual metadata fields;
   - filtering by source link, link status, link type, and source type;
-  - filtering independently by required bands, constants, external variables,
-    and radar polarizations;
+  - filtering independently by classification, required bands, radar
+    polarizations, constants, and external variables;
+  - results arranged by sensing-modality profile and then application domain;
   - results grouped by application domain; and
   - a live filtered-versus-total result count.
 - Added one generated documentation page for every spectral index. Each page
@@ -98,6 +106,14 @@ submitted through the usual contribution process.
   `kXY` values from the v1 `Bands` registry; generated kernel-index band lists
   now contain only their underlying observed inputs. kEVI additionally defines
   the `L` constant exposed by `kernel(N, L)`.
+- Moved the required v1 `application_domain` into `classification`. The five
+  kernel indices now use vegetation with the kernel family. The thirteen radar
+  indices use the radar family and vegetation application, except NDPolI,
+  which uses the new geology application.
+- Split radar polarizations from spectral and thermal bands in v1. Generated
+  `bands` no longer contains `HH`, `HV`, `VH`, or `VV`; those inputs are now
+  written to `polarizations`, while `classification.sensing_modalities`
+  distinguishes multispectral, thermal, and radar requirements.
 - Separated formula inputs supplied outside spectral data into a new v1
   `External` registry. `PAR` is now an external variable rather than a
   constant, and NIRvP supplies its required, description-only definition

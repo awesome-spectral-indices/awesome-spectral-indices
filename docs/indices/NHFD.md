@@ -22,10 +22,19 @@ hero:
 (RE1 - A) / (RE1 + A)
 ```
 
+### Classification
+
+- Application domain: `Urban`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `RE1`: Red Edge 1.
 - `A`: Aerosols.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

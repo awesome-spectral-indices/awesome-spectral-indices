@@ -22,11 +22,20 @@ hero:
 N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))
 ```
 
+### Classification
+
+- Application domain: `Water`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
 - `S1`: Short-wave Infrared (SWIR) 1.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

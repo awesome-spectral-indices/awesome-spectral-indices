@@ -1,12 +1,12 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-pageClass: "index-page domain-kernel"
+pageClass: "index-page domain-vegetation"
 
 hero:
   name: "kVARI"
   text: "Kernel Visible Atmospherically Resistant Index"
-  tagline: "Kernel"
+  tagline: "Vegetation"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -22,11 +22,21 @@ hero:
 (kernel(G, G) - kernel(G, R)) / (kernel(G, G) + kernel(G, R) - kernel(G, B))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+- Family: `Kernel`
+
 ### Bands
 
 - `G`: Green.
 - `R`: Red.
 - `B`: Blue.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

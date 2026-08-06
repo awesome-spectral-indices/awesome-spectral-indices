@@ -22,10 +22,19 @@ hero:
 (R - T)/(R + T)
 ```
 
+### Classification
+
+- Application domain: `Soil`
+- Sensing modalities: `Multispectral`, `Thermal`
+
 ### Bands
 
 - `R`: Red.
 - `T`: Thermal Infrared.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 

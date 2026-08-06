@@ -22,10 +22,19 @@ hero:
 sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))
 ```
 
+### Classification
+
+- Application domain: `Vegetation`
+- Sensing modalities: `Multispectral`
+
 ### Bands
 
 - `N`: Near-Infrared (NIR).
 - `R`: Red.
+
+### Polarizations
+
+No radar polarizations are used in this index.
 
 ### Constants
 
