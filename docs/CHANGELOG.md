@@ -186,6 +186,8 @@ submitted through the usual contribution process.
 
 ### Fixed
 
+- Replaced the unavailable CiteSeerX source link shared by AVI, BI, and SI with
+  an operational publication page.
 - Corrected the SARVI formula in v0 and v1 so the atmospheric-resistance
   coefficient `gamma` is applied to the `(R - B)` term.
 - Corrected the Aerosols band name in the band metadata.

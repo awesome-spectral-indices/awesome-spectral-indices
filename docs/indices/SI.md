@@ -13,7 +13,7 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf"
+      link: "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping"
 ---
 
 ## Formula
