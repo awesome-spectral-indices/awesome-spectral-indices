@@ -2560,24 +2560,6 @@ spindex = SpectralIndices(
             date_of_addition="2024-05-16",
             contributor="https://github.com/davemlz",
         ),
-        CRI550=SpectralIndex(
-            acronym="CRI550",
-            name="Carotenoid Reflectance Index using 550 nm",
-            formula="(1.0 / B) - (1.0 / G)",
-            source={"source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2"},
-            classification={"application_domain": "vegetation"},
-            date_of_addition="2024-08-08",
-            contributor="https://github.com/eomasters-repos",
-        ),
-        CRI700=SpectralIndex(
-            acronym="CRI700",
-            name="Carotenoid Reflectance Index using 700 nm",
-            formula="(1.0 / B) - (1.0 / RE1)",
-            source={"source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2"},
-            classification={"application_domain": "vegetation"},
-            date_of_addition="2024-08-08",
-            contributor="https://github.com/eomasters-repos",
-        ),
         NPCI=SpectralIndex(
             acronym="NPCI",
             name="Normalized Pigments Chlorophyll Ratio Index",
@@ -3454,6 +3436,30 @@ spindex = SpectralIndices(
             formula="(R678-R500)/R750",
             source={
                 "source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        CRI550=SpectralIndex(
+            acronym="CRI550",
+            name="Carotenoid Reflectance Index at 550 nm",
+            formula="(1.0/R510) - (1.0/R550)",
+            source={
+                "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        CRI700=SpectralIndex(
+            acronym="CRI700",
+            name="Carotenoid Reflectance Index at 700 nm",
+            formula="(1.0/R510) - (1.0/R700)",
+            source={
+                "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
                 "source_type": "article"
             },
             classification={"application_domain": "vegetation"},

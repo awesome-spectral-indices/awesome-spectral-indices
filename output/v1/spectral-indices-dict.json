@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -1067,22 +1067,22 @@
         "CRI550": {
             "acronym": "CRI550",
             "bands": [
-                "B",
-                "G"
+                "R510",
+                "R550"
             ],
             "classification": {
                 "application_domain": "vegetation",
                 "family": null,
                 "sensing_modalities": [
-                    "multispectral"
+                    "hyperspectral"
                 ]
             },
             "constants": {},
-            "contributor": "https://github.com/eomasters-repos",
-            "date_of_addition": "2024-08-08",
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
             "external_variables": {},
-            "formula": "(1.0 / B) - (1.0 / G)",
-            "name": "Carotenoid Reflectance Index using 550 nm",
+            "formula": "(1.0/R510) - (1.0/R550)",
+            "name": "Carotenoid Reflectance Index at 550 nm",
             "polarizations": [],
             "reductions": {},
             "source": {
@@ -1092,28 +1092,28 @@
                 "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
-                "source_type": null
+                "source_type": "article"
             }
         },
         "CRI700": {
             "acronym": "CRI700",
             "bands": [
-                "B",
-                "RE1"
+                "R510",
+                "R700"
             ],
             "classification": {
                 "application_domain": "vegetation",
                 "family": null,
                 "sensing_modalities": [
-                    "multispectral"
+                    "hyperspectral"
                 ]
             },
             "constants": {},
-            "contributor": "https://github.com/eomasters-repos",
-            "date_of_addition": "2024-08-08",
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
             "external_variables": {},
-            "formula": "(1.0 / B) - (1.0 / RE1)",
-            "name": "Carotenoid Reflectance Index using 700 nm",
+            "formula": "(1.0/R510) - (1.0/R700)",
+            "name": "Carotenoid Reflectance Index at 700 nm",
             "polarizations": [],
             "reductions": {},
             "source": {
@@ -1123,7 +1123,7 @@
                 "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
-                "source_type": null
+                "source_type": "article"
             }
         },
         "CRSWIR": {
@@ -3919,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -4575,7 +4575,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4612,7 +4612,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4649,7 +4649,7 @@
                     "NDISIndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4686,7 +4686,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4723,7 +4723,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
             }

@@ -101,6 +101,9 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Replaced the broad-band v1 CRI550 and CRI700 approximations with their
+  original hyperspectral formulas, `(1 / R510) - (1 / R550)` and
+  `(1 / R510) - (1 / R700)`. The v0 definitions remain unchanged.
 - Replaced the broad-band v1 PSRI approximation `(R - B) / RE2` with the
   original hyperspectral formula `(R678 - R500) / R750`, and updated its name
   to Plant Senescence Reflectance Index. The v0 definition remains unchanged.
