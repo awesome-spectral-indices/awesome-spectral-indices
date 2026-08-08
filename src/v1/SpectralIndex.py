@@ -51,6 +51,7 @@ class FormulaVisitor(ast.NodeVisitor):
         "max",
         "min",
         "tanh",
+        "log",
         "kernel",
         "spatial_max",
         "spatial_min",
@@ -105,7 +106,7 @@ class FormulaVisitor(ast.NodeVisitor):
             raise ValueError("Invalid formula.")
         if node.keywords:
             raise ValueError("Invalid formula.")
-        if node.func.id == "tanh" and len(node.args) != 1:
+        if node.func.id in ("tanh", "log") and len(node.args) != 1:
             raise ValueError("Invalid formula.")
         if node.func.id == "kernel" and len(node.args) != 2:
             raise ValueError("Invalid formula.")
@@ -134,7 +135,7 @@ def parse_formula_variables(value):
 
     The formula is parsed with Python's AST in expression mode, then validated
     by FormulaVisitor. The returned list preserves first-seen order and excludes
-    allowed function names such as ``max``, ``tanh``, and ``kernel``.
+    allowed function names such as ``max``, ``tanh``, ``log``, and ``kernel``.
     """
     try:
         tree = ast.parse(value, mode="eval")
