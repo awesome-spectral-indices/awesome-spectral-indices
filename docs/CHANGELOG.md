@@ -76,6 +76,9 @@ submitted through the usual contribution process.
   indices to v1: PRI550, PRI570, PRIm1, and PRIm4.
 - Added RVSI (Red-edge Vegetation Stress Index) to v1 as a hyperspectral
   vegetation index.
+- Added NDNI (Normalized Difference Nitrogen Index) and NDLI (Normalized
+  Difference Lignin Index) to v1 as the first catalogue indices using the
+  natural-logarithm `log()` formula function.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

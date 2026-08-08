@@ -487,6 +487,18 @@ def test_wci3_uses_nested_max_and_tanh_functions():
     }
 
 
+def test_ndni_and_ndli_use_logarithmic_hyperspectral_formulas():
+    ndni = spindex.SpectralIndices["NDNI"]
+    ndli = spindex.SpectralIndices["NDLI"]
+
+    assert parse_formula_variables(ndni.formula) == ["R1510", "R1680"]
+    assert parse_formula_variables(ndli.formula) == ["R1754", "R1680"]
+    assert all(
+        Hyperspectral.is_band(variable)
+        for variable in ["R1510", "R1680", "R1754"]
+    )
+
+
 def test_cari_uses_hyperspectral_reflectance_standards():
     cari = spindex.SpectralIndices["CARI"]
 

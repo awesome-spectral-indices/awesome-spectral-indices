@@ -4041,7 +4041,7 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -4728,6 +4728,37 @@
                 "source_type": null
             }
         },
+        "NDLI": {
+            "acronym": "NDLI",
+            "bands": [
+                "R1754",
+                "R1680"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(log(1.0 / R1754) - log(1.0 / R1680))/(log(1.0 / R1754) + log(1.0 / R1680))",
+            "name": "Normalized Difference Lignin Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "NDNI"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
         "NDMI": {
             "acronym": "NDMI",
             "bands": [
@@ -4755,6 +4786,37 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "NDNI": {
+            "acronym": "NDNI",
+            "bands": [
+                "R1510",
+                "R1680"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(log(1.0 / R1510) - log(1.0 / R1680))/(log(1.0 / R1510) + log(1.0 / R1680))",
+            "name": "Normalized Difference Nitrogen Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "NDLI"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "NDPI": {

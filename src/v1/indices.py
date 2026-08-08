@@ -3526,5 +3526,29 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/MartinuzziFrancesco",
         ),
+        NDNI=SpectralIndex(
+            acronym="NDNI",
+            name="Normalized Difference Nitrogen Index",
+            formula="(log(1.0 / R1510) - log(1.0 / R1680))/(log(1.0 / R1510) + log(1.0 / R1680))",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/MartinuzziFrancesco",
+        ),
+        NDLI=SpectralIndex(
+            acronym="NDLI",
+            name="Normalized Difference Lignin Index",
+            formula="(log(1.0 / R1754) - log(1.0 / R1680))/(log(1.0 / R1754) + log(1.0 / R1680))",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/MartinuzziFrancesco",
+        ),
     )
 )
