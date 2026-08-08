@@ -1759,15 +1759,6 @@ spindex = SpectralIndices(
             date_of_addition="2022-04-08",
             contributor="https://github.com/davemlz",
         ),
-        PSRI=SpectralIndex(
-            acronym="PSRI",
-            name="Plant Senescing Reflectance Index",
-            formula="(R - B)/RE2",
-            source={"source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x"},
-            classification={"application_domain": "vegetation"},
-            date_of_addition="2022-04-08",
-            contributor="https://github.com/davemlz",
-        ),
         NBSIMS=SpectralIndex(
             acronym="NBSIMS",
             name="Non-Binary Snow Index for Multi-Component Surfaces",
@@ -3451,6 +3442,18 @@ spindex = SpectralIndices(
             formula="R860/(R550*R708)",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSRI=SpectralIndex(
+            acronym="PSRI",
+            name="Plant Senescence Reflectance Index",
+            formula="(R678-R500)/R750",
+            source={
+                "source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
                 "source_type": "article"
             },
             classification={"application_domain": "vegetation"},

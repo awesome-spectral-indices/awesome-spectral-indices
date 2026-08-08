@@ -101,6 +101,9 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Replaced the broad-band v1 PSRI approximation `(R - B) / RE2` with the
+  original hyperspectral formula `(R678 - R500) / R750`, and updated its name
+  to Plant Senescence Reflectance Index. The v0 definition remains unchanged.
 - Renamed the initial RBR1 through RBR5 catalogue keys and acronyms to URBR1
   through URBR5 to distinguish untransformed from scatter-adjusted ratios.
 - Renamed the required v1 spectral-index properties `short_name` to `acronym`

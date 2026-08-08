@@ -5,7 +5,7 @@ pageClass: "index-page domain-vegetation"
 
 hero:
   name: "PSRI"
-  text: "Plant Senescing Reflectance Index"
+  text: "Plant Senescence Reflectance Index"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,19 +19,19 @@ hero:
 ## Formula
 
 ```
-(R - B)/RE2
+(R678-R500)/R750
 ```
 
 ### Classification
 
 - Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
+- Sensing modalities: `Hyperspectral`
 
 ### Bands
 
-- `R`: Red.
-- `B`: Blue.
-- `RE2`: Red Edge 2.
+- `R678`: Reflectance at 678 nm.
+- `R500`: Reflectance at 500 nm.
+- `R750`: Reflectance at 750 nm.
 
 ### Polarizations
 
@@ -43,4 +43,4 @@ No constants are used in this index.
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2022-04-08.
+Index contributed by https://github.com/davemlz on 2026-08-08.

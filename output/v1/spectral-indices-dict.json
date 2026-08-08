@@ -6728,23 +6728,23 @@
         "PSRI": {
             "acronym": "PSRI",
             "bands": [
-                "R",
-                "B",
-                "RE2"
+                "R678",
+                "R500",
+                "R750"
             ],
             "classification": {
                 "application_domain": "vegetation",
                 "family": null,
                 "sensing_modalities": [
-                    "multispectral"
+                    "hyperspectral"
                 ]
             },
             "constants": {},
             "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2022-04-08",
+            "date_of_addition": "2026-08-08",
             "external_variables": {},
-            "formula": "(R - B)/RE2",
-            "name": "Plant Senescing Reflectance Index",
+            "formula": "(R678-R500)/R750",
+            "name": "Plant Senescence Reflectance Index",
             "polarizations": [],
             "reductions": {},
             "source": {
@@ -6752,7 +6752,7 @@
                 "source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
-                "source_type": null
+                "source_type": "article"
             }
         },
         "PSSRa": {
