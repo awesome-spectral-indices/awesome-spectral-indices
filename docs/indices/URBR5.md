@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "RBR1"
-  text: "Reflectance Band Ratio 1"
+  name: "URBR5"
+  text: "Untransformed Reflectance Band Ratio 5"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-R750/R550
+R672/(R550*R708)
 ```
 
 ### Classification
@@ -29,8 +29,9 @@ R750/R550
 
 ### Bands
 
-- `R750`: Reflectance at 750 nm.
+- `R672`: Reflectance at 672 nm.
 - `R550`: Reflectance at 550 nm.
+- `R708`: Reflectance at 708 nm.
 
 ### Polarizations
 
@@ -44,11 +45,15 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
-- [`SR3`](/indices/SR3)
-- [`RBR2`](/indices/RBR2)
-- [`RBR3`](/indices/RBR3)
-- [`RBR4`](/indices/RBR4)
-- [`RBR5`](/indices/RBR5)
+- [`URBR1`](/indices/URBR1)
+- [`URBR2`](/indices/URBR2)
+- [`URBR3`](/indices/URBR3)
+- [`URBR4`](/indices/URBR4)
+- [`SARBR1`](/indices/SARBR1)
+- [`SARBR2`](/indices/SARBR2)
+- [`SARBR3`](/indices/SARBR3)
+- [`SARBR4`](/indices/SARBR4)
+- [`SARBR5`](/indices/SARBR5)
 
 ## Contributor
 

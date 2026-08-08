@@ -1813,15 +1813,6 @@ spindex = SpectralIndices(
             date_of_addition="2022-04-09",
             contributor="https://github.com/davemlz",
         ),
-        SR3=SpectralIndex(
-            acronym="SR3",
-            name="Simple Ratio (860, 550 and 708 nm)",
-            formula="N2/(G * RE1)",
-            source={"source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7"},
-            classification={"application_domain": "vegetation"},
-            date_of_addition="2022-04-09",
-            contributor="https://github.com/davemlz",
-        ),
         TDVI=SpectralIndex(
             acronym="TDVI",
             name="Transformed Difference Vegetation Index",
@@ -3346,9 +3337,9 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
-        RBR1=SpectralIndex(
-            acronym="RBR1",
-            name="Reflectance Band Ratio 1",
+        URBR1=SpectralIndex(
+            acronym="URBR1",
+            name="Untransformed Reflectance Band Ratio 1",
             formula="R750/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
@@ -3358,9 +3349,9 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
-        RBR2=SpectralIndex(
-            acronym="RBR2",
-            name="Reflectance Band Ratio 2",
+        URBR2=SpectralIndex(
+            acronym="URBR2",
+            name="Untransformed Reflectance Band Ratio 2",
             formula="R750/R700",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
@@ -3370,9 +3361,9 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
-        RBR3=SpectralIndex(
-            acronym="RBR3",
-            name="Reflectance Band Ratio 3",
+        URBR3=SpectralIndex(
+            acronym="URBR3",
+            name="Untransformed Reflectance Band Ratio 3",
             formula="R672/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
@@ -3382,9 +3373,9 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
-        RBR4=SpectralIndex(
-            acronym="RBR4",
-            name="Reflectance Band Ratio 4",
+        URBR4=SpectralIndex(
+            acronym="URBR4",
+            name="Untransformed Reflectance Band Ratio 4",
             formula="R672/R708",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
@@ -3394,10 +3385,70 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
-        RBR5=SpectralIndex(
-            acronym="RBR5",
-            name="Reflectance Band Ratio 5",
+        URBR5=SpectralIndex(
+            acronym="URBR5",
+            name="Untransformed Reflectance Band Ratio 5",
             formula="R672/(R550*R708)",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        SARBR1=SpectralIndex(
+            acronym="SARBR1",
+            name="Scatter-Adjusted Reflectance Band Ratio 1",
+            formula="R750/R550",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        SARBR2=SpectralIndex(
+            acronym="SARBR2",
+            name="Scatter-Adjusted Reflectance Band Ratio 2",
+            formula="R750/R700",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        SARBR3=SpectralIndex(
+            acronym="SARBR3",
+            name="Scatter-Adjusted Reflectance Band Ratio 3",
+            formula="R860/R550",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        SARBR4=SpectralIndex(
+            acronym="SARBR4",
+            name="Scatter-Adjusted Reflectance Band Ratio 4",
+            formula="R860/R708",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        SARBR5=SpectralIndex(
+            acronym="SARBR5",
+            name="Scatter-Adjusted Reflectance Band Ratio 5",
+            formula="R860/(R550*R708)",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
                 "source_type": "article"

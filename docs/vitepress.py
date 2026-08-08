@@ -379,11 +379,12 @@ def generate_people_contributors():
 
 
 def generate_index_pages():
-    """Generate one Markdown page for every v1 spectral index."""
+    """Generate every v1 index page and remove obsolete generated pages."""
     catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
     band_metadata = load_json(BANDS_PATH)
 
     INDICES_DIR.mkdir(parents=True, exist_ok=True)
+    expected_page_names = {"index.md"}
 
     for key, index in catalogue.items():
         if not SAFE_FILENAME.fullmatch(key):
@@ -393,10 +394,18 @@ def generate_index_pages():
             index,
             band_metadata,
         )
-        (INDICES_DIR / f"{key}.md").write_text(page)
+        filename = f"{key}.md"
+        expected_page_names.add(filename)
+        (INDICES_DIR / filename).write_text(page)
         if key in CASE_COLLISION_ROUTES:
             route = CASE_COLLISION_ROUTES[key]
-            (INDICES_DIR / f"{route}.md").write_text(page)
+            route_filename = f"{route}.md"
+            expected_page_names.add(route_filename)
+            (INDICES_DIR / route_filename).write_text(page)
+
+    for path in INDICES_DIR.glob("*.md"):
+        if path.name not in expected_page_names:
+            path.unlink()
 
     return len(catalogue)
 

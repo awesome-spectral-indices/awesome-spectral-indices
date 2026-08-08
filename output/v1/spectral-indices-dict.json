@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -3919,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -4575,7 +4575,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4612,7 +4612,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4649,7 +4649,7 @@
                     "NDISIndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4686,7 +4686,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -4723,7 +4723,7 @@
                     "NDISImndwi"
                 ],
                 "source_link": "https://doi.org/10.14358/PERS.76.5.557",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "doi",
                 "source_type": null
             }
@@ -7007,182 +7007,6 @@
                 "source_type": "article"
             }
         },
-        "RBR1": {
-            "acronym": "RBR1",
-            "bands": [
-                "R750",
-                "R550"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "hyperspectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2026-08-08",
-            "external_variables": {},
-            "formula": "R750/R550",
-            "name": "Reflectance Band Ratio 1",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "SR3",
-                    "RBR2",
-                    "RBR3",
-                    "RBR4",
-                    "RBR5"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": "article"
-            }
-        },
-        "RBR2": {
-            "acronym": "RBR2",
-            "bands": [
-                "R750",
-                "R700"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "hyperspectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2026-08-08",
-            "external_variables": {},
-            "formula": "R750/R700",
-            "name": "Reflectance Band Ratio 2",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "SR3",
-                    "RBR1",
-                    "RBR3",
-                    "RBR4",
-                    "RBR5"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": "article"
-            }
-        },
-        "RBR3": {
-            "acronym": "RBR3",
-            "bands": [
-                "R672",
-                "R550"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "hyperspectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2026-08-08",
-            "external_variables": {},
-            "formula": "R672/R550",
-            "name": "Reflectance Band Ratio 3",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "SR3",
-                    "RBR1",
-                    "RBR2",
-                    "RBR4",
-                    "RBR5"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": "article"
-            }
-        },
-        "RBR4": {
-            "acronym": "RBR4",
-            "bands": [
-                "R672",
-                "R708"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "hyperspectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2026-08-08",
-            "external_variables": {},
-            "formula": "R672/R708",
-            "name": "Reflectance Band Ratio 4",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "SR3",
-                    "RBR1",
-                    "RBR2",
-                    "RBR3",
-                    "RBR5"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": "article"
-            }
-        },
-        "RBR5": {
-            "acronym": "RBR5",
-            "bands": [
-                "R672",
-                "R550",
-                "R708"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "hyperspectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2026-08-08",
-            "external_variables": {},
-            "formula": "R672/(R550*R708)",
-            "name": "Reflectance Band Ratio 5",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "SR3",
-                    "RBR1",
-                    "RBR2",
-                    "RBR3",
-                    "RBR4"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": "article"
-            }
-        },
         "RCC": {
             "acronym": "RCC",
             "bands": [
@@ -7709,6 +7533,202 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "SARBR1": {
+            "acronym": "SARBR1",
+            "bands": [
+                "R750",
+                "R550"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R750/R550",
+            "name": "Scatter-Adjusted Reflectance Band Ratio 1",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "SARBR2": {
+            "acronym": "SARBR2",
+            "bands": [
+                "R750",
+                "R700"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R750/R700",
+            "name": "Scatter-Adjusted Reflectance Band Ratio 2",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "SARBR3": {
+            "acronym": "SARBR3",
+            "bands": [
+                "R860",
+                "R550"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R860/R550",
+            "name": "Scatter-Adjusted Reflectance Band Ratio 3",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "SARBR4": {
+            "acronym": "SARBR4",
+            "bands": [
+                "R860",
+                "R708"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R860/R708",
+            "name": "Scatter-Adjusted Reflectance Band Ratio 4",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "SARBR5": {
+            "acronym": "SARBR5",
+            "bands": [
+                "R860",
+                "R550",
+                "R708"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R860/(R550*R708)",
+            "name": "Scatter-Adjusted Reflectance Band Ratio 5",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "SARVI": {
@@ -8252,42 +8272,6 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1080/01431169308904370",
-                "source_link_status": "operational",
-                "source_link_type": "doi",
-                "source_type": null
-            }
-        },
-        "SR3": {
-            "acronym": "SR3",
-            "bands": [
-                "N2",
-                "G",
-                "RE1"
-            ],
-            "classification": {
-                "application_domain": "vegetation",
-                "family": null,
-                "sensing_modalities": [
-                    "multispectral"
-                ]
-            },
-            "constants": {},
-            "contributor": "https://github.com/davemlz",
-            "date_of_addition": "2022-04-09",
-            "external_variables": {},
-            "formula": "N2/(G * RE1)",
-            "name": "Simple Ratio (860, 550 and 708 nm)",
-            "polarizations": [],
-            "reductions": {},
-            "source": {
-                "source_companions": [
-                    "RBR1",
-                    "RBR2",
-                    "RBR3",
-                    "RBR4",
-                    "RBR5"
-                ],
-                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
@@ -9255,6 +9239,202 @@
                 "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
+            }
+        },
+        "URBR1": {
+            "acronym": "URBR1",
+            "bands": [
+                "R750",
+                "R550"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R750/R550",
+            "name": "Untransformed Reflectance Band Ratio 1",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "URBR2": {
+            "acronym": "URBR2",
+            "bands": [
+                "R750",
+                "R700"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R750/R700",
+            "name": "Untransformed Reflectance Band Ratio 2",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR3",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "URBR3": {
+            "acronym": "URBR3",
+            "bands": [
+                "R672",
+                "R550"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R672/R550",
+            "name": "Untransformed Reflectance Band Ratio 3",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR4",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "URBR4": {
+            "acronym": "URBR4",
+            "bands": [
+                "R672",
+                "R708"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R672/R708",
+            "name": "Untransformed Reflectance Band Ratio 4",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR5",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "URBR5": {
+            "acronym": "URBR5",
+            "bands": [
+                "R672",
+                "R550",
+                "R708"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R672/(R550*R708)",
+            "name": "Untransformed Reflectance Band Ratio 5",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "URBR1",
+                    "URBR2",
+                    "URBR3",
+                    "URBR4",
+                    "SARBR1",
+                    "SARBR2",
+                    "SARBR3",
+                    "SARBR4",
+                    "SARBR5"
+                ],
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "VARI": {

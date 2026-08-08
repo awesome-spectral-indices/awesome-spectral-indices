@@ -68,8 +68,9 @@ submitted through the usual contribution process.
 - Added fifteen hyperspectral pigment indices to v1: RARSa, RARSb, RARSc,
   PSSRa, PSSRb, PSSRc, PSNDa, PSNDb, PSNDc, OPSSRa, OPSSRb, OPSSRc, OPSNDa,
   OPSNDb, and OPSNDc.
-- Added the five hyperspectral Reflectance Band Ratio indices RBR1 through
-  RBR5 to v1.
+- Added ten hyperspectral Reflectance Band Ratio indices to v1: the
+  untransformed URBR1 through URBR5 and the scatter-adjusted SARBR1 through
+  SARBR5.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
@@ -100,6 +101,8 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Renamed the initial RBR1 through RBR5 catalogue keys and acronyms to URBR1
+  through URBR5 to distinguish untransformed from scatter-adjusted ratios.
 - Renamed the required v1 spectral-index properties `short_name` to `acronym`
   and `long_name` to `name`. Neither property is required to be unique.
 - Replaced the v1 `reference` string with a structured `source` object. The
@@ -185,6 +188,8 @@ submitted through the usual contribution process.
 
 ### Removed
 
+- Removed SR3 from v1 because its broad-band representation corresponds to the
+  newly represented hyperspectral SARBR5 index. SR3 remains available in v0.
 - Removed the generated `platforms` property from v1 spectral-index records.
   The v0 catalogue continues to generate it.
 - Removed the retired Read the Docs configuration and links.

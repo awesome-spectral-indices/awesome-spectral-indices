@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "RBR2"
-  text: "Reflectance Band Ratio 2"
+  name: "SARBR5"
+  text: "Scatter-Adjusted Reflectance Band Ratio 5"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-R750/R700
+R860/(R550*R708)
 ```
 
 ### Classification
@@ -29,8 +29,9 @@ R750/R700
 
 ### Bands
 
-- `R750`: Reflectance at 750 nm.
-- `R700`: Reflectance at 700 nm.
+- `R860`: Reflectance at 860 nm.
+- `R550`: Reflectance at 550 nm.
+- `R708`: Reflectance at 708 nm.
 
 ### Polarizations
 
@@ -44,11 +45,15 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
-- [`SR3`](/indices/SR3)
-- [`RBR1`](/indices/RBR1)
-- [`RBR3`](/indices/RBR3)
-- [`RBR4`](/indices/RBR4)
-- [`RBR5`](/indices/RBR5)
+- [`URBR1`](/indices/URBR1)
+- [`URBR2`](/indices/URBR2)
+- [`URBR3`](/indices/URBR3)
+- [`URBR4`](/indices/URBR4)
+- [`URBR5`](/indices/URBR5)
+- [`SARBR1`](/indices/SARBR1)
+- [`SARBR2`](/indices/SARBR2)
+- [`SARBR3`](/indices/SARBR3)
+- [`SARBR4`](/indices/SARBR4)
 
 ## Contributor
 

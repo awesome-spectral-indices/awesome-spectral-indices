@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "RBR3"
-  text: "Reflectance Band Ratio 3"
+  name: "URBR3"
+  text: "Untransformed Reflectance Band Ratio 3"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -44,11 +44,15 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
-- [`SR3`](/indices/SR3)
-- [`RBR1`](/indices/RBR1)
-- [`RBR2`](/indices/RBR2)
-- [`RBR4`](/indices/RBR4)
-- [`RBR5`](/indices/RBR5)
+- [`URBR1`](/indices/URBR1)
+- [`URBR2`](/indices/URBR2)
+- [`URBR4`](/indices/URBR4)
+- [`URBR5`](/indices/URBR5)
+- [`SARBR1`](/indices/SARBR1)
+- [`SARBR2`](/indices/SARBR2)
+- [`SARBR3`](/indices/SARBR3)
+- [`SARBR4`](/indices/SARBR4)
+- [`SARBR5`](/indices/SARBR5)
 
 ## Contributor
 
