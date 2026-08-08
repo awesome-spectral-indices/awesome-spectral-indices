@@ -3166,5 +3166,185 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/eomasters-repos",
         ),
+        RARSc=SpectralIndex(
+            acronym="RARSc",
+            name="Ratio Analysis of Reflectance Spectra for Carotenoids",
+            formula="R760/R500",
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RARSa=SpectralIndex(
+            acronym="RARSa",
+            name="Ratio Analysis of Reflectance Spectra for Chlorophyll a",
+            formula="R675/R700",
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RARSb=SpectralIndex(
+            acronym="RARSb",
+            name="Ratio Analysis of Reflectance Spectra for Chlorophyll b",
+            formula="R675/(R650*R700)",
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSSRa=SpectralIndex(
+            acronym="PSSRa",
+            name="Pigment Specific Simple Ratio for Chlorophyll a",
+            formula="R800/R675",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSSRb=SpectralIndex(
+            acronym="PSSRb",
+            name="Pigment Specific Simple Ratio for Chlorophyll b",
+            formula="R800/R650",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSSRc=SpectralIndex(
+            acronym="PSSRc",
+            name="Pigment Specific Simple Ratio for Carotenoids",
+            formula="R800/R500",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSNDa=SpectralIndex(
+            acronym="PSNDa",
+            name="Pigment Specific Normalized Difference for Chlorophyll a",
+            formula="(R800-R675)/(R800+R675)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSNDb=SpectralIndex(
+            acronym="PSNDb",
+            name="Pigment Specific Normalized Difference for Chlorophyll b",
+            formula="(R800-R650)/(R800+R650)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PSNDc=SpectralIndex(
+            acronym="PSNDc",
+            name="Pigment Specific Normalized Difference for Carotenoids",
+            formula="(R800-R500)/(R800+R500)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSSRa=SpectralIndex(
+            acronym="OPSSRa",
+            name="Optimized Pigment Specific Simple Ratio for Chlorophyll a",
+            formula="R800/R680",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSSRb=SpectralIndex(
+            acronym="OPSSRb",
+            name="Optimized Pigment Specific Simple Ratio for Chlorophyll b",
+            formula="R800/R635",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSSRc=SpectralIndex(
+            acronym="OPSSRc",
+            name="Optimized Pigment Specific Simple Ratio for Carotenoids",
+            formula="R800/R470",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSNDa=SpectralIndex(
+            acronym="OPSNDa",
+            name="Optimized Pigment Specific Normalized Difference for Chlorophyll a",
+            formula="(R800-R680)/(R800+R680)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSNDb=SpectralIndex(
+            acronym="OPSNDb",
+            name="Optimized Pigment Specific Normalized Difference for Chlorophyll b",
+            formula="(R800-R635)/(R800+R635)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        OPSNDc=SpectralIndex(
+            acronym="OPSNDc",
+            name="Optimized Pigment Specific Normalized Difference for Carotenoids",
+            formula="(R800-R470)/(R800+R470)",
+            source={
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

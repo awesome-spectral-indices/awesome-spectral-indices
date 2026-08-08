@@ -182,6 +182,22 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
     assert json_catalogue["CARI"]["bands"] == ["R720", "R521"]
     assert json_catalogue["CARI"]["polarizations"] == []
 
+    hyperspectral_keys = {
+        key
+        for key, source_index in spindex.SpectralIndices.items()
+        if any(
+            Hyperspectral.is_band(variable)
+            for variable in parse_formula_variables(source_index.formula)
+        )
+    }
+    for key in hyperspectral_keys:
+        assert "hyperspectral" in json_catalogue[key]["classification"][
+            "sensing_modalities"
+        ]
+        assert any(
+            Hyperspectral.is_band(band) for band in json_catalogue[key]["bands"]
+        )
+
 
 def test_v1_outputs_include_cwi_spatial_reduction_context():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:

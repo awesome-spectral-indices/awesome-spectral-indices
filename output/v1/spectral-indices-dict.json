@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -3919,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -6237,6 +6237,252 @@
                 "source_type": null
             }
         },
+        "OPSNDa": {
+            "acronym": "OPSNDa",
+            "bands": [
+                "R800",
+                "R680"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R680)/(R800+R680)",
+            "name": "Optimized Pigment Specific Normalized Difference for Chlorophyll a",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "OPSNDb": {
+            "acronym": "OPSNDb",
+            "bands": [
+                "R800",
+                "R635"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R635)/(R800+R635)",
+            "name": "Optimized Pigment Specific Normalized Difference for Chlorophyll b",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "OPSNDc": {
+            "acronym": "OPSNDc",
+            "bands": [
+                "R800",
+                "R470"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R470)/(R800+R470)",
+            "name": "Optimized Pigment Specific Normalized Difference for Carotenoids",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "OPSSRa": {
+            "acronym": "OPSSRa",
+            "bands": [
+                "R800",
+                "R680"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R680",
+            "name": "Optimized Pigment Specific Simple Ratio for Chlorophyll a",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "OPSSRb": {
+            "acronym": "OPSSRb",
+            "bands": [
+                "R800",
+                "R635"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R635",
+            "name": "Optimized Pigment Specific Simple Ratio for Chlorophyll b",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "OPSSRc": {
+            "acronym": "OPSSRc",
+            "bands": [
+                "R800",
+                "R470"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R470",
+            "name": "Optimized Pigment Specific Simple Ratio for Carotenoids",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
         "OSAVI": {
             "acronym": "OSAVI",
             "bands": [
@@ -6356,6 +6602,129 @@
                 "source_type": null
             }
         },
+        "PSNDa": {
+            "acronym": "PSNDa",
+            "bands": [
+                "R800",
+                "R675"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R675)/(R800+R675)",
+            "name": "Pigment Specific Normalized Difference for Chlorophyll a",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PSNDb": {
+            "acronym": "PSNDb",
+            "bands": [
+                "R800",
+                "R650"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R650)/(R800+R650)",
+            "name": "Pigment Specific Normalized Difference for Chlorophyll b",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PSNDc": {
+            "acronym": "PSNDc",
+            "bands": [
+                "R800",
+                "R500"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R800-R500)/(R800+R500)",
+            "name": "Pigment Specific Normalized Difference for Carotenoids",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
         "PSRI": {
             "acronym": "PSRI",
             "bands": [
@@ -6384,6 +6753,129 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "PSSRa": {
+            "acronym": "PSSRa",
+            "bands": [
+                "R800",
+                "R675"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R675",
+            "name": "Pigment Specific Simple Ratio for Chlorophyll a",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRb",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PSSRb": {
+            "acronym": "PSSRb",
+            "bands": [
+                "R800",
+                "R650"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R650",
+            "name": "Pigment Specific Simple Ratio for Chlorophyll b",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRc",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PSSRc": {
+            "acronym": "PSSRc",
+            "bands": [
+                "R800",
+                "R500"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R800/R500",
+            "name": "Pigment Specific Simple Ratio for Carotenoids",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PSSRa",
+                    "PSSRb",
+                    "PSNDa",
+                    "PSNDb",
+                    "PSNDc",
+                    "OPSSRa",
+                    "OPSSRb",
+                    "OPSSRc",
+                    "OPSNDa",
+                    "OPSNDb",
+                    "OPSNDc"
+                ],
+                "source_link": "https://doi.org/10.1080/014311698215919",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "QpRVI": {
@@ -6416,6 +6908,103 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "RARSa": {
+            "acronym": "RARSa",
+            "bands": [
+                "R675",
+                "R700"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R675/R700",
+            "name": "Ratio Analysis of Reflectance Spectra for Chlorophyll a",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "RARSc",
+                    "RARSb"
+                ],
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "RARSb": {
+            "acronym": "RARSb",
+            "bands": [
+                "R675",
+                "R650",
+                "R700"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R675/(R650*R700)",
+            "name": "Ratio Analysis of Reflectance Spectra for Chlorophyll b",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "RARSc",
+                    "RARSa"
+                ],
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "RARSc": {
+            "acronym": "RARSc",
+            "bands": [
+                "R760",
+                "R500"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "R760/R500",
+            "name": "Ratio Analysis of Reflectance Spectra for Carotenoids",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "RARSa",
+                    "RARSb"
+                ],
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "RCC": {

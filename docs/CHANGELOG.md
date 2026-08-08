@@ -65,6 +65,9 @@ submitted through the usual contribution process.
   nanometres and generate the `hyperspectral` sensing modality.
 - Added CARI (Carotenoid Index) to v1 as the first hyperspectral index, using
   reflectance inputs at 720 nm and 521 nm.
+- Added fifteen hyperspectral pigment indices to v1: RARSa, RARSb, RARSc,
+  PSSRa, PSSRb, PSSRc, PSNDa, PSNDb, PSNDc, OPSSRa, OPSSRb, OPSSRc, OPSNDa,
+  OPSNDb, and OPSNDc.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
