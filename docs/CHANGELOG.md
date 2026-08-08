@@ -71,6 +71,8 @@ submitted through the usual contribution process.
 - Added ten hyperspectral Reflectance Band Ratio indices to v1: the
   untransformed URBR1 through URBR5 and the scatter-adjusted SARBR1 through
   SARBR5.
+- Added four hyperspectral physiological and photochemical reflectance
+  indices to v1: PRI550, PRI570, PRIm1, and PRIm4.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -3919,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -6600,6 +6600,131 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "PRI550": {
+            "acronym": "PRI550",
+            "bands": [
+                "R550",
+                "R531"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R550 - R531)/(R550 + R531)",
+            "name": "Physiological Reflectance Index at 550 nm",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PRI570"
+                ],
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PRI570": {
+            "acronym": "PRI570",
+            "bands": [
+                "R570",
+                "R531"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R570 - R531)/(R570 + R531)",
+            "name": "Physiological Reflectance Index at 570 nm",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PRI550"
+                ],
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PRIm1": {
+            "acronym": "PRIm1",
+            "bands": [
+                "R512",
+                "R531"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R512 - R531)/(R512 + R531)",
+            "name": "Modified Photochemical Reflectance Index 1",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PRIm4"
+                ],
+                "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
+        "PRIm4": {
+            "acronym": "PRIm4",
+            "bands": [
+                "R570",
+                "R531",
+                "R670"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R570 - R531 - R670)/(R570 + R531 + R670)",
+            "name": "Modified Photochemical Reflectance Index 4",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "PRIm1"
+                ],
+                "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "PSNDa": {

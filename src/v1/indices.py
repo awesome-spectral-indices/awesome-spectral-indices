@@ -3466,5 +3466,53 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
+        PRI550=SpectralIndex(
+            acronym="PRI550",
+            name="Physiological Reflectance Index at 550 nm",
+            formula="(R550 - R531)/(R550 + R531)",
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PRI570=SpectralIndex(
+            acronym="PRI570",
+            name="Physiological Reflectance Index at 570 nm",
+            formula="(R570 - R531)/(R570 + R531)",
+            source={
+                "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PRIm1=SpectralIndex(
+            acronym="PRIm1",
+            name="Modified Photochemical Reflectance Index 1",
+            formula="(R512 - R531)/(R512 + R531)",
+            source={
+                "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        PRIm4=SpectralIndex(
+            acronym="PRIm4",
+            name="Modified Photochemical Reflectance Index 4",
+            formula="(R570 - R531 - R670)/(R570 + R531 + R670)",
+            source={
+                "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )
