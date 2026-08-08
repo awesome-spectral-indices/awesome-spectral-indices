@@ -3514,5 +3514,17 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
+        RVSI=SpectralIndex(
+            acronym="RVSI",
+            name="Red-edge Vegetation Stress Index",
+            formula="((R714 + R752)/2.0)-R733",
+            source={
+                "source_link": "https://popo.jpl.nasa.gov/pub/docs/workshops/98_docs/37.pdf",
+                "source_type": "conference_paper"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/MartinuzziFrancesco",
+        ),
     )
 )

@@ -7534,6 +7534,36 @@
                 "source_type": null
             }
         },
+        "RVSI": {
+            "acronym": "RVSI",
+            "bands": [
+                "R714",
+                "R752",
+                "R733"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "((R714 + R752)/2.0)-R733",
+            "name": "Red-edge Vegetation Stress Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://popo.jpl.nasa.gov/pub/docs/workshops/98_docs/37.pdf",
+                "source_link_status": "operational",
+                "source_link_type": "other",
+                "source_type": "conference_paper"
+            }
+        },
         "RWI": {
             "acronym": "RWI",
             "bands": [

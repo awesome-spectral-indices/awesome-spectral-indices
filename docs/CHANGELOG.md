@@ -73,6 +73,8 @@ submitted through the usual contribution process.
   SARBR5.
 - Added four hyperspectral physiological and photochemical reflectance
   indices to v1: PRI550, PRI570, PRIm1, and PRIm4.
+- Added RVSI (Red-edge Vegetation Stress Index) to v1 as a hyperspectral
+  vegetation index.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
