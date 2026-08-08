@@ -68,6 +68,8 @@ submitted through the usual contribution process.
 - Added fifteen hyperspectral pigment indices to v1: RARSa, RARSb, RARSc,
   PSSRa, PSSRb, PSSRc, PSNDa, PSNDb, PSNDc, OPSSRa, OPSSRb, OPSSRc, OPSNDa,
   OPSNDb, and OPSNDc.
+- Added the five hyperspectral Reflectance Band Ratio indices RBR1 through
+  RBR5 to v1.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

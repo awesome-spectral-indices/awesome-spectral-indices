@@ -3346,5 +3346,65 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/davemlz",
         ),
+        RBR1=SpectralIndex(
+            acronym="RBR1",
+            name="Reflectance Band Ratio 1",
+            formula="R750/R550",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RBR2=SpectralIndex(
+            acronym="RBR2",
+            name="Reflectance Band Ratio 2",
+            formula="R750/R700",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RBR3=SpectralIndex(
+            acronym="RBR3",
+            name="Reflectance Band Ratio 3",
+            formula="R672/R550",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RBR4=SpectralIndex(
+            acronym="RBR4",
+            name="Reflectance Band Ratio 4",
+            formula="R672/R708",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
+        RBR5=SpectralIndex(
+            acronym="RBR5",
+            name="Reflectance Band Ratio 5",
+            formula="R672/(R550*R708)",
+            source={
+                "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

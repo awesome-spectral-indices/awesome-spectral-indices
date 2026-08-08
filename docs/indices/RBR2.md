@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "SR3"
-  text: "Simple Ratio (860, 550 and 708 nm)"
+  name: "RBR2"
+  text: "Reflectance Band Ratio 2"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,19 +19,18 @@ hero:
 ## Formula
 
 ```
-N2/(G * RE1)
+R750/R700
 ```
 
 ### Classification
 
 - Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
+- Sensing modalities: `Hyperspectral`
 
 ### Bands
 
-- `N2`: Near-Infrared (NIR) 2.
-- `G`: Green.
-- `RE1`: Red Edge 1.
+- `R750`: Reflectance at 750 nm.
+- `R700`: Reflectance at 700 nm.
 
 ### Polarizations
 
@@ -45,12 +44,12 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
+- [`SR3`](/indices/SR3)
 - [`RBR1`](/indices/RBR1)
-- [`RBR2`](/indices/RBR2)
 - [`RBR3`](/indices/RBR3)
 - [`RBR4`](/indices/RBR4)
 - [`RBR5`](/indices/RBR5)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2022-04-09.
+Index contributed by https://github.com/davemlz on 2026-08-08.
