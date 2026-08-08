@@ -23,6 +23,7 @@ from src.v1.utils import (
     Bands,
     Constants,
     External,
+    Hyperspectral,
     IndexFamily,
     Polarizations,
     SensingModality,
@@ -356,11 +357,20 @@ class SpectralIndex(BaseModel):
             *Constants._value2member_map_.keys(),
             *External._value2member_map_.keys(),
         }
-        if not all(variable in supported_variables for variable in variables):
+        unsupported_variables = [
+            variable
+            for variable in variables
+            if variable not in supported_variables
+            and not Hyperspectral.is_band(variable)
+        ]
+        if unsupported_variables:
             variable_names = ", ".join(sorted(supported_variables))
             raise ValueError(
-                "Invalid variables in formula. SpectralIndex only supports the following variables: "
+                "Invalid variables in formula: "
+                + ", ".join(unsupported_variables)
+                + ". SpectralIndex supports registered variables ("
                 + variable_names
+                + ") and hyperspectral reflectance bands R300 through R2500."
             )
 
         return value

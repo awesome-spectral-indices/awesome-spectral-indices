@@ -60,6 +60,11 @@ submitted through the usual contribution process.
   `tasseled_cap` family.
 - Added the v1 `Polarizations` registry and generated `polarizations` property
   for the `HH`, `HV`, `VH`, and `VV` radar inputs.
+- Added the range-based v1 `Hyperspectral` standard. Formula operands from
+  `R300` through `R2500` represent reflectance at an integer wavelength in
+  nanometres and generate the `hyperspectral` sensing modality.
+- Added CARI (Carotenoid Index) to v1 as the first hyperspectral index, using
+  reflectance inputs at 720 nm and 521 nm.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

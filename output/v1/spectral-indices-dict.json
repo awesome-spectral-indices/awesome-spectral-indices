@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -762,6 +762,35 @@
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
+            }
+        },
+        "CARI": {
+            "acronym": "CARI",
+            "bands": [
+                "R720",
+                "R521"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/eomasters-repos",
+            "date_of_addition": "2026-08-08",
+            "external_variables": {},
+            "formula": "(R720 / R521) - 1",
+            "name": "Carotenoid Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.1016/j.jag.2016.12.005",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
             }
         },
         "CCI": {
@@ -3890,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }

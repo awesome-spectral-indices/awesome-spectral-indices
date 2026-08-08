@@ -3154,5 +3154,17 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-06",
             contributor="https://github.com/davemlz",
         ),
+        CARI=SpectralIndex(
+            acronym="CARI",
+            name="Carotenoid Index",
+            formula="(R720 / R521) - 1",
+            source={
+                "source_link": "https://doi.org/10.1016/j.jag.2016.12.005",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-08",
+            contributor="https://github.com/eomasters-repos",
+        ),
     )
 )

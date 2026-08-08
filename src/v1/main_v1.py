@@ -11,7 +11,7 @@ import pandas as pd
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.bands import bands
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External, Polarizations
+from src.v1.utils import Bands, Constants, External, Hyperspectral, Polarizations
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -73,18 +73,23 @@ def add_formula_metadata(index_catalog):
     band_names = set(Bands._value2member_map_)
     polarization_names = set(Polarizations._value2member_map_)
     thermal_names = {"T", "T1", "T2"}
+    multispectral_names = band_names - thermal_names
 
     for key, spectral_index in index_catalog.SpectralIndices.items():
         variables = parse_formula_variables(spectral_index.formula)
         spectral_index.bands = [
-            variable for variable in variables if variable in band_names
+            variable
+            for variable in variables
+            if variable in band_names or Hyperspectral.is_band(variable)
         ]
         spectral_index.polarizations = [
             variable for variable in variables if variable in polarization_names
         ]
         modalities = []
-        if any(band not in thermal_names for band in spectral_index.bands):
+        if any(band in multispectral_names for band in spectral_index.bands):
             modalities.append("multispectral")
+        if any(Hyperspectral.is_band(band) for band in spectral_index.bands):
+            modalities.append("hyperspectral")
         if any(band in thermal_names for band in spectral_index.bands):
             modalities.append("thermal")
         if spectral_index.polarizations:

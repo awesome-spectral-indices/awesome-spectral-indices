@@ -19,6 +19,7 @@ from src.v1.utils import (
     Bands,
     Constants,
     External,
+    Hyperspectral,
     IndexFamily,
     Polarizations,
     SensingModality,
@@ -106,7 +107,10 @@ def test_catalogue_domains_and_formula_variables_are_supported():
 
     for index in spindex.SpectralIndices.values():
         assert index.classification.application_domain in supported_domains
-        assert set(parse_formula_variables(index.formula)) <= supported_variables
+        assert all(
+            variable in supported_variables or Hyperspectral.is_band(variable)
+            for variable in parse_formula_variables(index.formula)
+        )
 
 
 def test_formula_variable_registries_are_disjoint():
@@ -121,6 +125,13 @@ def test_formula_variable_registries_are_disjoint():
     assert constant_names.isdisjoint(external_names)
     assert constant_names.isdisjoint(polarization_names)
     assert external_names.isdisjoint(polarization_names)
+    assert not any(
+        Hyperspectral.is_band(name)
+        for name in band_names
+        | constant_names
+        | external_names
+        | polarization_names
+    )
 
 
 def test_classification_vocabularies_and_authored_assignments():
@@ -136,6 +147,7 @@ def test_classification_vocabularies_and_authored_assignments():
     }
     assert set(SensingModality._value2member_map_) == {
         "multispectral",
+        "hyperspectral",
         "thermal",
         "radar",
     }
@@ -269,6 +281,36 @@ def _index_with(
     if reductions is not None:
         values["reductions"] = reductions
     return SpectralIndex(**values)
+
+
+@pytest.mark.parametrize(
+    ("name", "wavelength"),
+    [("R300", 300), ("R542", 542), ("R2487", 2487), ("R2500", 2500)],
+)
+def test_hyperspectral_standard_accepts_the_inclusive_wavelength_range(
+    name, wavelength
+):
+    assert Hyperspectral.is_band(name)
+    assert Hyperspectral.wavelength(name) == wavelength
+
+
+@pytest.mark.parametrize(
+    "name",
+    ["R", "R1", "R299", "R2501", "R0300", "r720", "R720.0", "R720nm"],
+)
+def test_hyperspectral_standard_rejects_out_of_range_or_noncanonical_names(name):
+    assert not Hyperspectral.is_band(name)
+    assert Hyperspectral.wavelength(name) is None
+
+
+def test_hyperspectral_formula_variables_are_validated_by_range():
+    index = _index_with("(R720 / R521) - 1")
+    assert parse_formula_variables(index.formula) == ["R720", "R521"]
+
+    with pytest.raises(ValidationError, match="R299"):
+        _index_with("R300 / R299")
+    with pytest.raises(ValidationError, match="R2501"):
+        _index_with("R2501 / R2500")
 
 
 def test_constants_are_optional_when_formula_has_none():
@@ -443,6 +485,14 @@ def test_wci3_uses_nested_max_and_tanh_functions():
         "description": "Adjustment constant for numerical stability",
         "default_value": 1e-10,
     }
+
+
+def test_cari_uses_hyperspectral_reflectance_standards():
+    cari = spindex.SpectralIndices["CARI"]
+
+    assert cari.formula == "(R720 / R521) - 1"
+    assert parse_formula_variables(cari.formula) == ["R720", "R521"]
+    assert all(Hyperspectral.is_band(variable) for variable in ["R720", "R521"])
 
 
 def test_cwi_uses_aoi_scoped_spatial_maximum_reductions():

@@ -5,7 +5,7 @@ from pathlib import Path
 
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External, Polarizations
+from src.v1.utils import Bands, Constants, External, Hyperspectral, Polarizations
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -96,7 +96,9 @@ def test_v1_outputs_separate_formula_input_types():
     for key, source_index in spindex.SpectralIndices.items():
         variables = parse_formula_variables(source_index.formula)
         expected_bands = [
-            variable for variable in variables if variable in band_names
+            variable
+            for variable in variables
+            if variable in band_names or Hyperspectral.is_band(variable)
         ]
         expected_polarizations = [
             variable for variable in variables if variable in polarization_names
@@ -172,6 +174,13 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
     }
     assert json_catalogue["NDPolI"]["bands"] == []
     assert json_catalogue["NDPolI"]["polarizations"] == ["VV", "VH"]
+    assert json_catalogue["CARI"]["classification"] == {
+        "application_domain": "vegetation",
+        "sensing_modalities": ["hyperspectral"],
+        "family": None,
+    }
+    assert json_catalogue["CARI"]["bands"] == ["R720", "R521"]
+    assert json_catalogue["CARI"]["polarizations"] == []
 
 
 def test_v1_outputs_include_cwi_spatial_reduction_context():

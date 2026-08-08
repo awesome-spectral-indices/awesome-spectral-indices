@@ -29,9 +29,10 @@ const domainLabels = {
   clouds: 'Clouds'
 }
 
-const modalityOrder = ['multispectral', 'thermal', 'radar']
+const modalityOrder = ['multispectral', 'hyperspectral', 'thermal', 'radar']
 const modalityLabels = {
   multispectral: 'Multispectral',
+  hyperspectral: 'Hyperspectral',
   thermal: 'Thermal',
   radar: 'Radar'
 }
@@ -80,6 +81,22 @@ const includesText = (value, filter) =>
 
 const allBands = [...new Set(indices.flatMap((index) => index.bands))]
   .sort((left, right) => left.localeCompare(right))
+
+const hyperspectralBandPattern = /^R([1-9][0-9]*)$/
+const isHyperspectralBand = (band) => {
+  const match = hyperspectralBandPattern.exec(band)
+  if (!match) return false
+  const wavelength = Number(match[1])
+  return wavelength >= 300 && wavelength <= 2500
+}
+const thermalBands = new Set(['T', 'T1', 'T2'])
+const allMultispectralBands = allBands.filter(
+  (band) => !isHyperspectralBand(band) && !thermalBands.has(band)
+)
+const allHyperspectralBands = allBands
+  .filter(isHyperspectralBand)
+  .sort((left, right) => Number(left.slice(1)) - Number(right.slice(1)))
+const allThermalBands = allBands.filter((band) => thermalBands.has(band))
 
 const allPolarizations = [
   ...new Set(indices.flatMap((index) => index.polarizations))
@@ -384,11 +401,39 @@ specific formula variables.
         </label>
       </div>
     </fieldset>
-    <fieldset class="band-filter">
-      <legend>Includes all selected bands</legend>
+    <fieldset v-if="allMultispectralBands.length" class="band-filter">
+      <legend>Includes all selected multispectral bands</legend>
       <div class="band-options">
         <label
-          v-for="band in allBands"
+          v-for="band in allMultispectralBands"
+          :key="band"
+          class="band-option"
+          :class="{ selected: advanced.bands.includes(band) }"
+        >
+          <input v-model="advanced.bands" type="checkbox" :value="band">
+          <code>{{ band }}</code>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset v-if="allHyperspectralBands.length" class="band-filter">
+      <legend>Includes all selected hyperspectral wavelengths</legend>
+      <div class="band-options">
+        <label
+          v-for="band in allHyperspectralBands"
+          :key="band"
+          class="band-option"
+          :class="{ selected: advanced.bands.includes(band) }"
+        >
+          <input v-model="advanced.bands" type="checkbox" :value="band">
+          <code>{{ band }}</code>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset v-if="allThermalBands.length" class="band-filter">
+      <legend>Includes all selected thermal bands</legend>
+      <div class="band-options">
+        <label
+          v-for="band in allThermalBands"
           :key="band"
           class="band-option"
           :class="{ selected: advanced.bands.includes(band) }"

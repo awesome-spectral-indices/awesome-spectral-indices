@@ -1,3 +1,4 @@
+import re
 from enum import Enum, unique
 
 
@@ -24,6 +25,33 @@ class Bands(Enum):
     TIR = "T"
     TIR1 = "T1"
     TIR2 = "T2"
+
+
+class Hyperspectral:
+    """Range-based hyperspectral reflectance standards used in formulas."""
+
+    PREFIX = "R"
+    MIN_WAVELENGTH = 300
+    MAX_WAVELENGTH = 2500
+    _PATTERN = re.compile(r"R([1-9][0-9]*)")
+
+    @classmethod
+    def wavelength(cls, value):
+        """Return the wavelength encoded by a valid standard, otherwise None."""
+        if not isinstance(value, str):
+            return None
+        match = cls._PATTERN.fullmatch(value)
+        if match is None:
+            return None
+        wavelength = int(match.group(1))
+        if cls.MIN_WAVELENGTH <= wavelength <= cls.MAX_WAVELENGTH:
+            return wavelength
+        return None
+
+    @classmethod
+    def is_band(cls, value):
+        """Return whether a variable is a canonical hyperspectral band name."""
+        return cls.wavelength(value) is not None
 
 
 @unique
@@ -96,6 +124,7 @@ class SensingModality(Enum):
     """Sensing modalities generated from formula input standards."""
 
     MULTISPECTRAL = "multispectral"
+    HYPERSPECTRAL = "hyperspectral"
     THERMAL = "thermal"
     RADAR = "radar"
 
