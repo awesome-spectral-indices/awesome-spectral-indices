@@ -49,6 +49,7 @@ These indices are part of the same scientific source:
 - [`NormG`](/indices/NormG)
 - [`GRVI`](/indices/GRVI)
 - [`GSAVI`](/indices/GSAVI)
+- [`GreenDVI`](/indices/GreenDVI)
 
 ## Contributor
 

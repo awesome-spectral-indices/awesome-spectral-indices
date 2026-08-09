@@ -553,6 +553,28 @@ def test_ndni_and_ndli_use_logarithmic_hyperspectral_formulas():
     )
 
 
+def test_msavi_and_msavi2_are_distinct_qi_et_al_indices():
+    msavi = spindex.SpectralIndices["MSAVI"]
+    msavi2 = spindex.SpectralIndices["MSAVI2"]
+
+    assert msavi.acronym == "MSAVI"
+    assert parse_formula_variables(msavi.formula) == ["gamma", "N", "R"]
+    assert msavi.constants["gamma"].default_value == 1.06
+    assert msavi2.acronym == "MSAVI2"
+    assert parse_formula_variables(msavi2.formula) == ["N", "R"]
+    assert msavi.source.source_link == msavi2.source.source_link
+
+
+def test_lci_and_green_dvi_use_their_published_band_combinations():
+    lci = spindex.SpectralIndices["LCI"]
+    green_dvi = spindex.SpectralIndices["GreenDVI"]
+
+    assert lci.formula == "(R850 - R710)/(R850 - R680)"
+    assert parse_formula_variables(lci.formula) == ["R850", "R710", "R680"]
+    assert green_dvi.acronym == "GDVI"
+    assert green_dvi.formula == "N - G"
+
+
 def test_cari_uses_hyperspectral_reflectance_standards():
     cari = spindex.SpectralIndices["CARI"]
 

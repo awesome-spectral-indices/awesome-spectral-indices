@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "NormNIR"
-  text: "Normalized NIR"
+  name: "LCI"
+  text: "Leaf Chlorophyll Index"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -13,25 +13,25 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "https://doi.org/10.2134/agronj2004.0314"
+      link: "https://doi.org/10.1016/S0176-1617(99)80314-9"
 ---
 
 ## Formula
 
 ```
-N/(N + G + R)
+(R850 - R710)/(R850 - R680)
 ```
 
 ### Classification
 
 - Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
+- Sensing modalities: `Hyperspectral`
 
 ### Bands
 
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-- `R`: Red.
+- `R850`: Reflectance at 850 nm.
+- `R710`: Reflectance at 710 nm.
+- `R680`: Reflectance at 680 nm.
 
 ### Polarizations
 
@@ -41,17 +41,6 @@ No radar polarizations are used in this index.
 
 No constants are used in this index.
 
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NormR`](/indices/NormR)
-- [`NormG`](/indices/NormG)
-- [`GRVI`](/indices/GRVI)
-- [`GSAVI`](/indices/GSAVI)
-- [`GOSAVI`](/indices/GOSAVI)
-- [`GreenDVI`](/indices/GreenDVI)
-
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2022-04-08.
+Index contributed by https://github.com/j-miszczyszyn on 2026-08-09.

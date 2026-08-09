@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "NormNIR"
-  text: "Normalized NIR"
+  name: "MSAVI2"
+  text: "Modified Soil-Adjusted Vegetation Index 2"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -13,13 +13,13 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "https://doi.org/10.2134/agronj2004.0314"
+      link: "https://doi.org/10.1016/0034-4257(94)90134-1"
 ---
 
 ## Formula
 
 ```
-N/(N + G + R)
+0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)
 ```
 
 ### Classification
@@ -30,7 +30,6 @@ N/(N + G + R)
 ### Bands
 
 - `N`: Near-Infrared (NIR).
-- `G`: Green.
 - `R`: Red.
 
 ### Polarizations
@@ -45,13 +44,8 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
-- [`NormR`](/indices/NormR)
-- [`NormG`](/indices/NormG)
-- [`GRVI`](/indices/GRVI)
-- [`GSAVI`](/indices/GSAVI)
-- [`GOSAVI`](/indices/GOSAVI)
-- [`GreenDVI`](/indices/GreenDVI)
+- [`MSAVI`](/indices/MSAVI)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2022-04-08.
+Index contributed by https://github.com/davemlz on 2021-05-13.

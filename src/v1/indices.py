@@ -503,9 +503,9 @@ spindex = SpectralIndices(
             date_of_addition="2021-05-11",
             contributor="https://github.com/davemlz",
         ),
-        MSAVI=SpectralIndex(
-            acronym="MSAVI",
-            name="Modified Soil-Adjusted Vegetation Index",
+        MSAVI2=SpectralIndex(
+            acronym="MSAVI2",
+            name="Modified Soil-Adjusted Vegetation Index 2",
             formula="0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)",
             source={"source_link": "https://doi.org/10.1016/0034-4257(94)90134-1"},
             classification={"application_domain": "vegetation"},
@@ -3561,6 +3561,42 @@ spindex = SpectralIndices(
             classification={"application_domain": "snow"},
             date_of_addition="2026-08-09",
             contributor="https://github.com/MartinuzziFrancesco",
+        ),
+        LCI=SpectralIndex(
+            acronym="LCI",
+            name="Leaf Chlorophyll Index",
+            formula="(R850 - R710)/(R850 - R680)",
+            source={
+                "source_link": "https://doi.org/10.1016/S0176-1617(99)80314-9",
+                "source_type": "article"
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-09",
+            contributor="https://github.com/j-miszczyszyn",
+        ),
+        MSAVI=SpectralIndex(
+            acronym="MSAVI",
+            name="Modified Soil-Adjusted Vegetation Index",
+            formula="(1 + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R))) * (N - R) / (N + R + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R)))",
+            constants={
+                "gamma": {
+                    "description": "Primary soil line parameter. gamma = N/R (slope of the soil line, only for soil pixels/measurements)",
+                    "default_value": 1.06,
+                },
+            },
+            source={"source_link": "https://doi.org/10.1016/0034-4257(94)90134-1"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-09",
+            contributor="https://github.com/davemlz",
+        ),
+        GreenDVI=SpectralIndex(
+            acronym="GDVI",
+            name="Green Difference Vegetation Index",
+            formula="N - G",
+            source={"source_link": "https://doi.org/10.2134/agronj2004.0314"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-09",
+            contributor="https://github.com/j-miszczyszyn",
         ),
     )
 )

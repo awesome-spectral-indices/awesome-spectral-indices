@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "NormNIR"
-  text: "Normalized NIR"
+  name: "GDVI"
+  text: "Green Difference Vegetation Index"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-N/(N + G + R)
+N - G
 ```
 
 ### Classification
@@ -31,7 +31,6 @@ N/(N + G + R)
 
 - `N`: Near-Infrared (NIR).
 - `G`: Green.
-- `R`: Red.
 
 ### Polarizations
 
@@ -45,13 +44,13 @@ No constants are used in this index.
 
 These indices are part of the same scientific source:
 
+- [`NormNIR`](/indices/NormNIR)
 - [`NormR`](/indices/NormR)
 - [`NormG`](/indices/NormG)
 - [`GRVI`](/indices/GRVI)
 - [`GSAVI`](/indices/GSAVI)
 - [`GOSAVI`](/indices/GOSAVI)
-- [`GreenDVI`](/indices/GreenDVI)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2022-04-08.
+Index contributed by https://github.com/j-miszczyszyn on 2026-08-09.

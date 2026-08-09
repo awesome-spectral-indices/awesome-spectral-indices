@@ -50,6 +50,7 @@ These indices are part of the same scientific source:
 - [`GRVI`](/indices/GRVI)
 - [`GSAVI`](/indices/GSAVI)
 - [`GOSAVI`](/indices/GOSAVI)
+- [`GreenDVI`](/indices/GreenDVI)
 
 ## Contributor
 

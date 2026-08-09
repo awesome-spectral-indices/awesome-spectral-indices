@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)
+(1 + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R))) * (N - R) / (N + R + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R)))
 ```
 
 ### Classification
@@ -38,8 +38,27 @@ No radar polarizations are used in this index.
 
 ### Constants
 
-No constants are used in this index.
+<div class="constant-list">
+<article class="constant-panel">
+<header class="constant-panel-header">
+<code class="constant-symbol">gamma</code>
+<p>Primary soil line parameter. gamma = N/R (slope of the soil line, only for soil pixels/measurements).</p>
+</header>
+<div class="constant-details">
+<div class="constant-detail-card constant-default">
+<span class="constant-detail-label">Default value</span>
+<strong class="constant-detail-value">1.06</strong>
+</div>
+</div>
+</article>
+</div>
+
+### Source Companions
+
+These indices are part of the same scientific source:
+
+- [`MSAVI2`](/indices/MSAVI2)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2021-05-13.
+Index contributed by https://github.com/davemlz on 2026-08-09.

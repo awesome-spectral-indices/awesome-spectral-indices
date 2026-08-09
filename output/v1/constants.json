@@ -340,6 +340,10 @@
                 1.21
             ]
         },
+        "MSAVI": {
+            "default_value": 1.06,
+            "description": "Primary soil line parameter. gamma = N/R (slope of the soil line, only for soil pixels/measurements)"
+        },
         "NDTI4RE": {
             "default_value": 0.4,
             "description": "Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2)",

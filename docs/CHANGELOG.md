@@ -84,6 +84,9 @@ submitted through the usual contribution process.
   natural-logarithm `log()` formula function.
 - Added NDISI (Normalized Difference Ice-Snow Index) to v1 as the first index
   using selectable hyperspectral wavelength ranges.
+- Added LCI (Leaf Chlorophyll Index) as a hyperspectral vegetation index and
+  GreenDVI (Green Difference Vegetation Index) as a multispectral vegetation
+  index.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
@@ -114,6 +117,9 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Renamed the previous v1 `MSAVI` definition to `MSAVI2`, matching the name of
+  its closed-form recursive formula. Added the distinct soil-line-dependent
+  MSAVI formula with its `gamma` constant. The v0 definition remains unchanged.
 - Replaced the broad-band v1 CRI550 and CRI700 approximations with their
   original hyperspectral formulas, `(1 / R510) - (1 / R550)` and
   `(1 / R510) - (1 / R700)`. The v0 definitions remain unchanged.
