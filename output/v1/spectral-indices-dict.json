@@ -690,7 +690,7 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -3919,7 +3919,7 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_type": null
             }
@@ -4041,7 +4041,7 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_type": null
             }
