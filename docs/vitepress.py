@@ -65,6 +65,15 @@ def describe_band(name, band_metadata):
     """Return a human-readable description for a band or derived variable."""
     if name in band_metadata:
         return band_metadata[name]["long_name"]
+    hyperspectral_range_match = re.fullmatch(
+        r"R([1-9][0-9]*)_([1-9][0-9]*)", name
+    )
+    if hyperspectral_range_match:
+        lower, upper = hyperspectral_range_match.groups()
+        return (
+            "Reflectance at one selected wavelength from "
+            f"{lower} to {upper} nm, inclusive"
+        )
     hyperspectral_match = re.fullmatch(r"R([1-9][0-9]*)", name)
     if hyperspectral_match:
         return f"Reflectance at {hyperspectral_match.group(1)} nm"

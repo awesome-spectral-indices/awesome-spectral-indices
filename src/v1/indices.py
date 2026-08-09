@@ -3550,5 +3550,17 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-08",
             contributor="https://github.com/MartinuzziFrancesco",
         ),
+        NDISI=SpectralIndex(
+            acronym="NDISI",
+            name="Normalized Difference Ice-Snow Index",
+            formula="(R1080_1120 - R1760_1800)/(R1080_1120 + R1760_1800)",
+            source={
+                "source_link": "https://doi.org/10.1029/2021JD035742",
+                "source_type": "article"
+            },
+            classification={"application_domain": "snow"},
+            date_of_addition="2026-08-09",
+            contributor="https://github.com/MartinuzziFrancesco",
+        ),
     )
 )

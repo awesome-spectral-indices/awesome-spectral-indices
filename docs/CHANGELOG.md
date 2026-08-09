@@ -64,6 +64,9 @@ submitted through the usual contribution process.
 - Added the range-based v1 `Hyperspectral` standard. Formula operands from
   `R300` through `R2500` represent reflectance at an integer wavelength in
   nanometres and generate the `hyperspectral` sensing modality.
+- Added the dynamic `HyperspectralRange` standard. Operands such as
+  `R750_800` represent one selectable reflectance wavelength within an
+  inclusive interval without enumerating every possible wavelength range.
 - Added CARI (Carotenoid Index) to v1 as the first hyperspectral index, using
   reflectance inputs at 720 nm and 521 nm.
 - Added fifteen hyperspectral pigment indices to v1: RARSa, RARSb, RARSc,
@@ -79,6 +82,8 @@ submitted through the usual contribution process.
 - Added NDNI (Normalized Difference Nitrogen Index) and NDLI (Normalized
   Difference Lignin Index) to v1 as the first catalogue indices using the
   natural-logarithm `log()` formula function.
+- Added NDISI (Normalized Difference Ice-Snow Index) to v1 as the first index
+  using selectable hyperspectral wavelength ranges.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

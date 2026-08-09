@@ -23,10 +23,10 @@ from src.v1.utils import (
     Bands,
     Constants,
     External,
-    Hyperspectral,
     IndexFamily,
     Polarizations,
     SensingModality,
+    is_hyperspectral_band,
 )
 
 
@@ -362,7 +362,7 @@ class SpectralIndex(BaseModel):
             variable
             for variable in variables
             if variable not in supported_variables
-            and not Hyperspectral.is_band(variable)
+            and not is_hyperspectral_band(variable)
         ]
         if unsupported_variables:
             variable_names = ", ".join(sorted(supported_variables))
@@ -371,7 +371,8 @@ class SpectralIndex(BaseModel):
                 + ", ".join(unsupported_variables)
                 + ". SpectralIndex supports registered variables ("
                 + variable_names
-                + ") and hyperspectral reflectance bands R300 through R2500."
+                + ") and hyperspectral reflectance bands R300 through R2500 "
+                + "or inclusive wavelength ranges such as R750_800."
             )
 
         return value

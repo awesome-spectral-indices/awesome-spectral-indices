@@ -82,12 +82,18 @@ const includesText = (value, filter) =>
 const allBands = [...new Set(indices.flatMap((index) => index.bands))]
   .sort((left, right) => left.localeCompare(right))
 
-const hyperspectralBandPattern = /^R([1-9][0-9]*)$/
-const isHyperspectralBand = (band) => {
+const hyperspectralBandPattern = /^R([1-9][0-9]*)(?:_([1-9][0-9]*))?$/
+const hyperspectralBandBounds = (band) => {
   const match = hyperspectralBandPattern.exec(band)
-  if (!match) return false
-  const wavelength = Number(match[1])
-  return wavelength >= 300 && wavelength <= 2500
+  if (!match) return null
+  const lower = Number(match[1])
+  const upper = Number(match[2] ?? match[1])
+  const isRange = match[2] !== undefined
+  if (lower < 300 || upper > 2500 || (isRange && lower >= upper)) return null
+  return [lower, upper]
+}
+const isHyperspectralBand = (band) => {
+  return hyperspectralBandBounds(band) !== null
 }
 const thermalBands = new Set(['T', 'T1', 'T2'])
 const allMultispectralBands = allBands.filter(
@@ -95,7 +101,11 @@ const allMultispectralBands = allBands.filter(
 )
 const allHyperspectralBands = allBands
   .filter(isHyperspectralBand)
-  .sort((left, right) => Number(left.slice(1)) - Number(right.slice(1)))
+  .sort((left, right) => {
+    const leftBounds = hyperspectralBandBounds(left)
+    const rightBounds = hyperspectralBandBounds(right)
+    return leftBounds[0] - rightBounds[0] || leftBounds[1] - rightBounds[1]
+  })
 const allThermalBands = allBands.filter((band) => thermalBands.has(band))
 
 const allPolarizations = [
@@ -416,7 +426,7 @@ specific formula variables.
       </div>
     </fieldset>
     <fieldset v-if="allHyperspectralBands.length" class="band-filter">
-      <legend>Includes all selected hyperspectral wavelengths</legend>
+      <legend>Includes all selected hyperspectral wavelengths or ranges</legend>
       <div class="band-options">
         <label
           v-for="band in allHyperspectralBands"

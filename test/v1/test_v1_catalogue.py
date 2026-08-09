@@ -20,6 +20,7 @@ from src.v1.utils import (
     Constants,
     External,
     Hyperspectral,
+    HyperspectralRange,
     IndexFamily,
     Polarizations,
     SensingModality,
@@ -108,7 +109,9 @@ def test_catalogue_domains_and_formula_variables_are_supported():
     for index in spindex.SpectralIndices.values():
         assert index.classification.application_domain in supported_domains
         assert all(
-            variable in supported_variables or Hyperspectral.is_band(variable)
+            variable in supported_variables
+            or Hyperspectral.is_band(variable)
+            or HyperspectralRange.is_band(variable)
             for variable in parse_formula_variables(index.formula)
         )
 
@@ -311,6 +314,57 @@ def test_hyperspectral_formula_variables_are_validated_by_range():
         _index_with("R300 / R299")
     with pytest.raises(ValidationError, match="R2501"):
         _index_with("R2501 / R2500")
+
+
+@pytest.mark.parametrize(
+    ("name", "bounds"),
+    [
+        ("R300_301", (300, 301)),
+        ("R750_800", (750, 800)),
+        ("R2499_2500", (2499, 2500)),
+    ],
+)
+def test_hyperspectral_range_standard_accepts_inclusive_bounds(name, bounds):
+    assert HyperspectralRange.is_band(name)
+    assert HyperspectralRange.bounds(name) == bounds
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "R750",
+        "R750_750",
+        "R800_750",
+        "R299_800",
+        "R750_2501",
+        "R0750_800",
+        "r750_800",
+        "R750.0_800",
+        "R750_800nm",
+    ],
+)
+def test_hyperspectral_range_standard_rejects_invalid_names(name):
+    assert not HyperspectralRange.is_band(name)
+    assert HyperspectralRange.bounds(name) is None
+
+
+def test_hyperspectral_range_formula_variables_are_validated():
+    index = _index_with("(R750_800 - R680)/(R750_800 + R680)")
+    assert parse_formula_variables(index.formula) == ["R750_800", "R680"]
+
+    with pytest.raises(ValidationError, match="R800_750"):
+        _index_with("R800_750 / R680")
+
+
+def test_ndisi_uses_selectable_hyperspectral_ranges():
+    ndisi = spindex.SpectralIndices["NDISI"]
+
+    assert parse_formula_variables(ndisi.formula) == [
+        "R1080_1120",
+        "R1760_1800",
+    ]
+    assert HyperspectralRange.bounds("R1080_1120") == (1080, 1120)
+    assert HyperspectralRange.bounds("R1760_1800") == (1760, 1800)
 
 
 def test_constants_are_optional_when_formula_has_none():

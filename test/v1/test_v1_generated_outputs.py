@@ -5,7 +5,13 @@ from pathlib import Path
 
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.indices import spindex
-from src.v1.utils import Bands, Constants, External, Hyperspectral, Polarizations
+from src.v1.utils import (
+    Bands,
+    Constants,
+    External,
+    Polarizations,
+    is_hyperspectral_band,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -98,7 +104,7 @@ def test_v1_outputs_separate_formula_input_types():
         expected_bands = [
             variable
             for variable in variables
-            if variable in band_names or Hyperspectral.is_band(variable)
+            if variable in band_names or is_hyperspectral_band(variable)
         ]
         expected_polarizations = [
             variable for variable in variables if variable in polarization_names
@@ -181,12 +187,21 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
     }
     assert json_catalogue["CARI"]["bands"] == ["R720", "R521"]
     assert json_catalogue["CARI"]["polarizations"] == []
+    assert json_catalogue["NDISI"]["classification"] == {
+        "application_domain": "snow",
+        "sensing_modalities": ["hyperspectral"],
+        "family": None,
+    }
+    assert json_catalogue["NDISI"]["bands"] == [
+        "R1080_1120",
+        "R1760_1800",
+    ]
 
     hyperspectral_keys = {
         key
         for key, source_index in spindex.SpectralIndices.items()
         if any(
-            Hyperspectral.is_band(variable)
+            is_hyperspectral_band(variable)
             for variable in parse_formula_variables(source_index.formula)
         )
     }
@@ -195,7 +210,7 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
             "sensing_modalities"
         ]
         assert any(
-            Hyperspectral.is_band(band) for band in json_catalogue[key]["bands"]
+            is_hyperspectral_band(band) for band in json_catalogue[key]["bands"]
         )
 
 

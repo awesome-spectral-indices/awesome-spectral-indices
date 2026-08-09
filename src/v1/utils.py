@@ -28,7 +28,7 @@ class Bands(Enum):
 
 
 class Hyperspectral:
-    """Range-based hyperspectral reflectance standards used in formulas."""
+    """Exact-wavelength hyperspectral reflectance standards used in formulas."""
 
     PREFIX = "R"
     MIN_WAVELENGTH = 300
@@ -52,6 +52,41 @@ class Hyperspectral:
     def is_band(cls, value):
         """Return whether a variable is a canonical hyperspectral band name."""
         return cls.wavelength(value) is not None
+
+
+class HyperspectralRange:
+    """Selectable hyperspectral wavelength-range standards used in formulas."""
+
+    PREFIX = "R"
+    MIN_WAVELENGTH = Hyperspectral.MIN_WAVELENGTH
+    MAX_WAVELENGTH = Hyperspectral.MAX_WAVELENGTH
+    _PATTERN = re.compile(r"R([1-9][0-9]*)_([1-9][0-9]*)")
+
+    @classmethod
+    def bounds(cls, value):
+        """Return valid inclusive wavelength bounds, otherwise None."""
+        if not isinstance(value, str):
+            return None
+        match = cls._PATTERN.fullmatch(value)
+        if match is None:
+            return None
+        lower, upper = (int(bound) for bound in match.groups())
+        if (
+            cls.MIN_WAVELENGTH <= lower < upper
+            and upper <= cls.MAX_WAVELENGTH
+        ):
+            return lower, upper
+        return None
+
+    @classmethod
+    def is_band(cls, value):
+        """Return whether a variable is a canonical wavelength-range name."""
+        return cls.bounds(value) is not None
+
+
+def is_hyperspectral_band(value):
+    """Return whether a variable is an exact or selectable-range band."""
+    return Hyperspectral.is_band(value) or HyperspectralRange.is_band(value)
 
 
 @unique

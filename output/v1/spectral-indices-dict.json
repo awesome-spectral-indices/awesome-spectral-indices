@@ -4543,6 +4543,35 @@
                 "source_type": null
             }
         },
+        "NDISI": {
+            "acronym": "NDISI",
+            "bands": [
+                "R1080_1120",
+                "R1760_1800"
+            ],
+            "classification": {
+                "application_domain": "snow",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/MartinuzziFrancesco",
+            "date_of_addition": "2026-08-09",
+            "external_variables": {},
+            "formula": "(R1080_1120 - R1760_1800)/(R1080_1120 + R1760_1800)",
+            "name": "Normalized Difference Ice-Snow Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.1029/2021JD035742",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": "article"
+            }
+        },
         "NDISIb": {
             "acronym": "NDISIb",
             "bands": [
