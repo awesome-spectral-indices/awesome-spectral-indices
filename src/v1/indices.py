@@ -3598,5 +3598,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-09",
             contributor="https://github.com/j-miszczyszyn",
         ),
+        SUI=SpectralIndex(
+            acronym="SUI",
+            name="Sealed Urban Index",
+            formula="((G - S1)*(S2 - R))/((G + S1)*(S2 + R))",
+            source={"source_link": "https://doi.org/10.1080/01431161.2026.2715141"},
+            classification={"application_domain": "urban"},
+            date_of_addition="2026-08-12",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

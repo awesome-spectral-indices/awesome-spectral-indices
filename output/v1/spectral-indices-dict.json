@@ -8846,6 +8846,37 @@
                 "source_type": null
             }
         },
+        "SUI": {
+            "acronym": "SUI",
+            "bands": [
+                "G",
+                "S1",
+                "S2",
+                "R"
+            ],
+            "classification": {
+                "application_domain": "urban",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-12",
+            "external_variables": {},
+            "formula": "((G - S1)*(S2 - R))/((G + S1)*(S2 + R))",
+            "name": "Sealed Urban Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.1080/01431161.2026.2715141",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": null
+            }
+        },
         "SWI": {
             "acronym": "SWI",
             "bands": [

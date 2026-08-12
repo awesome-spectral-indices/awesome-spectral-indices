@@ -87,6 +87,7 @@ submitted through the usual contribution process.
 - Added LCI (Leaf Chlorophyll Index) as a hyperspectral vegetation index and
   GreenDVI (Green Difference Vegetation Index) as a multispectral vegetation
   index.
+- Added SUI (Sealed Urban Index) to v1 as a multispectral urban index.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
