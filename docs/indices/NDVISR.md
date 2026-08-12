@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "MNLI"
-  text: "Modified Non-Linear Vegetation Index"
+  name: "NDVISR"
+  text: "Normalized Difference Vegetation Index with Simple Ratio"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)
+(N**2 - R)/(N + R**2)
 ```
 
 ### Classification
@@ -38,28 +38,15 @@ No radar polarizations are used in this index.
 
 ### Constants
 
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-</div>
+No constants are used in this index.
 
 ### Source Companions
 
 These indices are part of the same scientific source:
 
-- [`NDVISR`](/indices/NDVISR)
+- [`MNLI`](/indices/MNLI)
 - [`SAVISR`](/indices/SAVISR)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2021-05-11.
+Index contributed by https://github.com/davemlz on 2026-08-12.

@@ -3607,5 +3607,29 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-12",
             contributor="https://github.com/davemlz",
         ),
+        NDVISR=SpectralIndex(
+            acronym="NDVISR",
+            name="Normalized Difference Vegetation Index with Simple Ratio",
+            formula="(N**2 - R)/(N + R**2)",
+            source={"source_link": "https://doi.org/10.1109/TGRS.2003.812910"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-12",
+            contributor="https://github.com/davemlz",
+        ),
+        SAVISR=SpectralIndex(
+            acronym="SAVISR",
+            name="Soil-Adjusted Vegetation Index with Simple Ratio",
+            formula="(N**2 - R)/(R * (N + R + L))",
+            constants={
+                "L": {
+                    "description": "Background Adjustment Factor",
+                    "default_value": 0.5,
+                },
+            },
+            source={"source_link": "https://doi.org/10.1109/TGRS.2003.812910"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-12",
+            contributor="https://github.com/davemlz",
+        ),
     )
 )

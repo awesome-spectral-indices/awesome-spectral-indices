@@ -88,6 +88,9 @@ submitted through the usual contribution process.
   GreenDVI (Green Difference Vegetation Index) as a multispectral vegetation
   index.
 - Added SUI (Sealed Urban Index) to v1 as a multispectral urban index.
+- Added NDVISR (Normalized Difference Vegetation Index with Simple Ratio) and
+  SAVISR (Soil-Adjusted Vegetation Index with Simple Ratio) to v1 as
+  multispectral vegetation indices.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;

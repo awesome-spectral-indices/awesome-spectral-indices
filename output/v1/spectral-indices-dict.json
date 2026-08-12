@@ -3645,7 +3645,10 @@
             "polarizations": [],
             "reductions": {},
             "source": {
-                "source_companions": [],
+                "source_companions": [
+                    "NDVISR",
+                    "SAVISR"
+                ],
                 "source_link": "https://doi.org/10.1109/TGRS.2003.812910",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
@@ -5596,6 +5599,38 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://doi.org/10.1007/978-3-662-45737-5_51",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": null
+            }
+        },
+        "NDVISR": {
+            "acronym": "NDVISR",
+            "bands": [
+                "N",
+                "R"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-12",
+            "external_variables": {},
+            "formula": "(N**2 - R)/(N + R**2)",
+            "name": "Normalized Difference Vegetation Index with Simple Ratio",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "MNLI",
+                    "SAVISR"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.2003.812910",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null
@@ -8280,6 +8315,43 @@
                     "STI4RE"
                 ],
                 "source_link": "https://doi.org/10.1016/j.jag.2022.102793",
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_type": null
+            }
+        },
+        "SAVISR": {
+            "acronym": "SAVISR",
+            "bands": [
+                "N",
+                "R"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {
+                "L": {
+                    "default_value": 0.5,
+                    "description": "Background Adjustment Factor"
+                }
+            },
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-12",
+            "external_variables": {},
+            "formula": "(N**2 - R)/(R * (N + R + L))",
+            "name": "Soil-Adjusted Vegetation Index with Simple Ratio",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [
+                    "MNLI",
+                    "NDVISR"
+                ],
+                "source_link": "https://doi.org/10.1109/TGRS.2003.812910",
                 "source_link_status": "operational",
                 "source_link_type": "doi",
                 "source_type": null

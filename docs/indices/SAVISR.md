@@ -4,8 +4,8 @@ layout: home
 pageClass: "index-page domain-vegetation"
 
 hero:
-  name: "MNLI"
-  text: "Modified Non-Linear Vegetation Index"
+  name: "SAVISR"
+  text: "Soil-Adjusted Vegetation Index with Simple Ratio"
   tagline: "Vegetation"
   actions:
     - theme: brand
@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(1 + L)*((N ** 2) - R)/((N ** 2) + R + L)
+(N**2 - R)/(R * (N + R + L))
 ```
 
 ### Classification
@@ -42,7 +42,7 @@ No radar polarizations are used in this index.
 <article class="constant-panel">
 <header class="constant-panel-header">
 <code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
+<p>Background Adjustment Factor.</p>
 </header>
 <div class="constant-details">
 <div class="constant-detail-card constant-default">
@@ -57,9 +57,9 @@ No radar polarizations are used in this index.
 
 These indices are part of the same scientific source:
 
+- [`MNLI`](/indices/MNLI)
 - [`NDVISR`](/indices/NDVISR)
-- [`SAVISR`](/indices/SAVISR)
 
 ## Contributor
 
-Index contributed by https://github.com/davemlz on 2021-05-11.
+Index contributed by https://github.com/davemlz on 2026-08-12.

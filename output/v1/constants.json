@@ -78,6 +78,10 @@
                 "Low vegetation densities": 1.0
             }
         },
+        "SAVISR": {
+            "default_value": 0.5,
+            "description": "Background Adjustment Factor"
+        },
         "SAVIT": {
             "default_value": 0.5,
             "description": "Canopy background adjustment"
