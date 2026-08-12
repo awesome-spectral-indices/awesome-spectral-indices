@@ -423,7 +423,7 @@ spindex = SpectralIndices(
         ARVI=SpectralIndex(
             acronym="ARVI",
             name="Atmospherically Resistant Vegetation Index",
-            formula="(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)))",
+            formula="(N - (R - gamma * (B - R))) / (N + (R - gamma * (B - R)))",
             constants={
                 "gamma": {
                     "description": "Weighting coefficient used for reducing atmospheric effects",
@@ -446,7 +446,7 @@ spindex = SpectralIndices(
         SARVI=SpectralIndex(
             acronym="SARVI",
             name="Soil Adjusted and Atmospherically Resistant Vegetation Index",
-            formula="(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)",
+            formula="(1 + L)*(N - (R - gamma * (B - R))) / (N + (R - gamma * (B - R)) + L)",
             constants={
                 "L": {
                     "description": "Canopy background adjustment",

@@ -19,7 +19,7 @@ hero:
 ## Formula
 
 ```
-(1 + L)*(N - (R - gamma * (R - B))) / (N + (R - gamma * (R - B)) + L)
+(1 + L)*(N - (R - gamma * (B - R))) / (N + (R - gamma * (B - R)) + L)
 ```
 
 ### Classification

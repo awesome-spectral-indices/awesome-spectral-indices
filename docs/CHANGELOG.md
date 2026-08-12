@@ -229,8 +229,9 @@ submitted through the usual contribution process.
 
 - Replaced the unavailable CiteSeerX source link shared by AVI, BI, and SI with
   an operational publication page.
-- Corrected the SARVI formula in v0 and v1 so the atmospheric-resistance
-  coefficient `gamma` is applied to the `(R - B)` term.
+- Corrected the v1 ARVI and SARVI formulas so the atmospheric-resistance
+  coefficient `gamma` is applied to the published `(B - R)` term. The v0
+  definitions remain unchanged.
 - Corrected the Aerosols band name in the band metadata.
 - Corrected the Landsat 9 coastal aerosol platform label, which previously
   identified the platform as Landsat 8.
