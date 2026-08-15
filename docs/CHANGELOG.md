@@ -113,6 +113,8 @@ submitted through the usual contribution process.
 - Added a catalogue status dashboard with interactive summaries of source-link
   availability, DOI coverage, and source-type completeness, plus expandable
   affected-index lists.
+- Added an interactive catalogue dashboard showing index counts by application
+  domain and sensing modality, with drill-down links to the matching indices.
 - Added a VitePress content generator that:
   - copies `CONTRIBUTING.md` into the website;
   - reads the generated v1 catalogue and metadata;

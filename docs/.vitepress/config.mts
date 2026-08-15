@@ -56,6 +56,7 @@ export default defineConfig({
       {
         text: 'More',
         items: [
+          { text: 'Dashboard', link: '/dashboard' },
           { text: 'Status', link: '/status' },
           { text: 'How to cite', link: '/citation' },
           { text: 'People', link: '/people' }
