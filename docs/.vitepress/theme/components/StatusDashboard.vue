@@ -30,10 +30,10 @@ const nonDoiIndices = indices.filter(
 const doiCount = totalIndices - nonDoiIndices.length
 
 const preprintIndices = indices.filter(
-  (index) => index.source.source_type === 'preprint'
+  (index) => index.source.source_metadata?.type === 'preprint'
 )
 const unclassifiedIndices = indices.filter(
-  (index) => index.source.source_type === null
+  (index) => index.source.source_metadata?.type == null
 )
 const classifiedCount =
   totalIndices - preprintIndices.length - unclassifiedIndices.length

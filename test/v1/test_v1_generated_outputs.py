@@ -1,5 +1,6 @@
 import csv
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -64,10 +65,15 @@ def test_v1_outputs_contain_generated_source_metadata():
             "source_link",
             "source_link_status",
             "source_link_type",
-            "source_type",
+            "source_metadata",
         }
         assert index["source"]["source_link_status"] in {"operational", "down"}
         assert index["source"]["source_link_type"] in {"doi", "other"}
+        assert isinstance(index["source"]["source_metadata"], dict)
+        assert "source_type" not in index["source"]
+        metadata = index["source"]["source_metadata"]
+        if metadata:
+            assert metadata["source"] in {"contributor", "crossref", "other"}
 
     for key, index in json_catalogue.items():
         companions = index["source"]["source_companions"]
@@ -85,10 +91,75 @@ def test_v1_outputs_contain_generated_source_metadata():
         "GRARI",
     ]
 
-    assert json_catalogue["EVI"]["source"]["source_type"] == "article"
-    assert json_catalogue["SAVI"]["source"]["source_type"] == "article"
-    assert json_catalogue["NDVI"]["source"]["source_type"] == "conference_paper"
-    assert json_catalogue["TVI"]["source"]["source_type"] == "conference_paper"
+    assert json_catalogue["EVI"]["source"]["source_metadata"]["type"] == "article"
+    assert json_catalogue["SAVI"]["source"]["source_metadata"]["type"] == "article"
+    assert (
+        json_catalogue["NDVI"]["source"]["source_metadata"]["type"]
+        == "conference_paper"
+    )
+    assert (
+        json_catalogue["TVI"]["source"]["source_metadata"]["type"]
+        == "conference_paper"
+    )
+    assert (
+        json_catalogue["NDVI"]["source"]["source_metadata"]["source"]
+        == "contributor"
+    )
+    assert (
+        json_catalogue["TVI"]["source"]["source_metadata"]["source"]
+        == "contributor"
+    )
+    assert (
+        json_catalogue["EVI"]["source"]["source_metadata"]["source"]
+        == "crossref"
+    )
+
+
+def test_v1_bibtex_references_are_shared_by_source():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+    bibtex = (OUTPUT_DIR / "spectral-indices-references.bib").read_text()
+    bibtex_keys = set(re.findall(r"^@\w+\{([^,]+),", bibtex, flags=re.MULTILINE))
+
+    used_keys = set()
+    for index in json_catalogue.values():
+        citation = index["source"]["source_metadata"].get("how_to_cite")
+        if citation:
+            assert set(citation) == {"apa", "bibtex"}
+            assert citation["apa"].strip()
+            assert citation["bibtex"] in bibtex_keys
+            used_keys.add(citation["bibtex"])
+
+    assert used_keys == bibtex_keys
+    assert (
+        json_catalogue["GARI"]["source"]["source_metadata"]["how_to_cite"][
+            "bibtex"
+        ]
+        == json_catalogue["GNDVI"]["source"]["source_metadata"]["how_to_cite"][
+            "bibtex"
+        ]
+    )
+
+
+def test_v1_citation_history_matches_latest_catalogue_snapshots():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+    with (OUTPUT_DIR / "spectral-indices-citations.json").open() as fp:
+        citation_history = json.load(fp)
+
+    assert set(citation_history) == set(json_catalogue)
+    for key, snapshots in citation_history.items():
+        assert isinstance(snapshots, list)
+        assert snapshots == sorted(snapshots, key=lambda item: item["date"])
+        assert len({snapshot["date"] for snapshot in snapshots}) == len(snapshots)
+        for snapshot in snapshots:
+            assert set(snapshot) == {"citation_count", "date"}
+            assert isinstance(snapshot["citation_count"], int)
+            assert snapshot["citation_count"] >= 0
+
+        current = json_catalogue[key]["source"]["source_metadata"].get("citations")
+        if current:
+            assert snapshots[-1] == current
 
 
 def test_v1_outputs_separate_formula_input_types():

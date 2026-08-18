@@ -62,7 +62,7 @@ spindex = SpectralIndices(
             },
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(02)00096-2",
-                "source_type": "article",
+                "source_metadata": {"type": "article", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2021-04-07",
@@ -96,7 +96,7 @@ spindex = SpectralIndices(
             },
             source={
                 "source_link": "https://doi.org/10.1016/j.rse.2008.06.006",
-                "source_type": "article",
+                "source_metadata": {"type": "article", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2021-04-07",
@@ -186,7 +186,7 @@ spindex = SpectralIndices(
             formula="(N - R)/(N + R)",
             source={
                 "source_link": "https://ntrs.nasa.gov/citations/19740022614",
-                "source_type": "conference_paper",
+                "source_metadata": {"type": "conference_paper", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2021-04-07",
@@ -228,7 +228,7 @@ spindex = SpectralIndices(
             },
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(88)90106-X",
-                "source_type": "article",
+                "source_metadata": {"type": "article", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2021-04-07",
@@ -1674,7 +1674,7 @@ spindex = SpectralIndices(
             formula="(((N - R)/(N + R)) + 0.5) ** 0.5",
             source={
                 "source_link": "https://ntrs.nasa.gov/citations/19740022614",
-                "source_type": "conference_paper",
+                "source_metadata": {"type": "conference_paper", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2022-04-08",
@@ -3023,7 +3023,7 @@ spindex = SpectralIndices(
             },
             source={
                 "source_link": "https://doi.org/10.1016/j.mlwa.2026.100914",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-05",
@@ -3040,7 +3040,7 @@ spindex = SpectralIndices(
             },
             source={
                 "source_link": "https://doi.org/10.1007/s41976-019-00030-w",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "water"},
             date_of_addition="2026-08-05",
@@ -3052,7 +3052,7 @@ spindex = SpectralIndices(
             formula="0.3037 * B + 0.2793 * G + 0.4743 * R + 0.5585 * N + 0.5082 * S1 + 0.1863 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3064,7 +3064,7 @@ spindex = SpectralIndices(
             formula="0.1509 * B + 0.1973 * G + 0.3279 * R + 0.3406 * N - 0.7112 * S1 - 0.4572 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3076,7 +3076,7 @@ spindex = SpectralIndices(
             formula="-0.2848 * B - 0.2435 * G - 0.5436 * R + 0.7243 * N + 0.0840 * S1 - 0.1800 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3088,7 +3088,7 @@ spindex = SpectralIndices(
             formula="-0.8242 * B + 0.0849 * G + 0.4392 * R - 0.0580 * N + 0.2012 * S1 - 0.2768 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3100,7 +3100,7 @@ spindex = SpectralIndices(
             formula="-0.3280 * B + 0.0549 * G + 0.1075 * R + 0.1855 * N - 0.4357 * S1 + 0.8085 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3112,7 +3112,7 @@ spindex = SpectralIndices(
             formula="0.1084 * B - 0.9022 * G + 0.4120 * R + 0.0573 * N - 0.0251 * S1 + 0.0238 * S2",
             source={
                 "source_link": "https://doi.org/10.1109/TGRS.1984.350619",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation", "family": ["tasseled_cap"]},
             date_of_addition="2026-08-06",
@@ -3124,7 +3124,7 @@ spindex = SpectralIndices(
             formula="(R720 / R521) - 1",
             source={
                 "source_link": "https://doi.org/10.1016/j.jag.2016.12.005",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3136,7 +3136,7 @@ spindex = SpectralIndices(
             formula="R760/R500",
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3148,7 +3148,7 @@ spindex = SpectralIndices(
             formula="R675/R700",
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3160,7 +3160,7 @@ spindex = SpectralIndices(
             formula="R675/(R650*R700)",
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(92)90089-3",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3172,7 +3172,7 @@ spindex = SpectralIndices(
             formula="R800/R675",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3184,7 +3184,7 @@ spindex = SpectralIndices(
             formula="R800/R650",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3196,7 +3196,7 @@ spindex = SpectralIndices(
             formula="R800/R500",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3208,7 +3208,7 @@ spindex = SpectralIndices(
             formula="(R800-R675)/(R800+R675)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3220,7 +3220,7 @@ spindex = SpectralIndices(
             formula="(R800-R650)/(R800+R650)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3232,7 +3232,7 @@ spindex = SpectralIndices(
             formula="(R800-R500)/(R800+R500)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3244,7 +3244,7 @@ spindex = SpectralIndices(
             formula="R800/R680",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3256,7 +3256,7 @@ spindex = SpectralIndices(
             formula="R800/R635",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3268,7 +3268,7 @@ spindex = SpectralIndices(
             formula="R800/R470",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3280,7 +3280,7 @@ spindex = SpectralIndices(
             formula="(R800-R680)/(R800+R680)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3292,7 +3292,7 @@ spindex = SpectralIndices(
             formula="(R800-R635)/(R800+R635)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3304,7 +3304,7 @@ spindex = SpectralIndices(
             formula="(R800-R470)/(R800+R470)",
             source={
                 "source_link": "https://doi.org/10.1080/014311698215919",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3316,7 +3316,7 @@ spindex = SpectralIndices(
             formula="R750/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3328,7 +3328,7 @@ spindex = SpectralIndices(
             formula="R750/R700",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3340,7 +3340,7 @@ spindex = SpectralIndices(
             formula="R672/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3352,7 +3352,7 @@ spindex = SpectralIndices(
             formula="R672/R708",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3364,7 +3364,7 @@ spindex = SpectralIndices(
             formula="R672/(R550*R708)",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3376,7 +3376,7 @@ spindex = SpectralIndices(
             formula="R750/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3388,7 +3388,7 @@ spindex = SpectralIndices(
             formula="R750/R700",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3400,7 +3400,7 @@ spindex = SpectralIndices(
             formula="R860/R550",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3412,7 +3412,7 @@ spindex = SpectralIndices(
             formula="R860/R708",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3424,7 +3424,7 @@ spindex = SpectralIndices(
             formula="R860/(R550*R708)",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(98)00046-7",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3436,7 +3436,7 @@ spindex = SpectralIndices(
             formula="(R678-R500)/R750",
             source={
                 "source_link": "https://doi.org/10.1034/j.1399-3054.1999.106119.x",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3448,7 +3448,7 @@ spindex = SpectralIndices(
             formula="(1.0/R510) - (1.0/R550)",
             source={
                 "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3460,7 +3460,7 @@ spindex = SpectralIndices(
             formula="(1.0/R510) - (1.0/R700)",
             source={
                 "source_link": "https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3472,7 +3472,7 @@ spindex = SpectralIndices(
             formula="(R550 - R531)/(R550 + R531)",
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3484,7 +3484,7 @@ spindex = SpectralIndices(
             formula="(R570 - R531)/(R570 + R531)",
             source={
                 "source_link": "https://doi.org/10.1016/0034-4257(92)90059-S",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3496,7 +3496,7 @@ spindex = SpectralIndices(
             formula="(R512 - R531)/(R512 + R531)",
             source={
                 "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3508,7 +3508,7 @@ spindex = SpectralIndices(
             formula="(R570 - R531 - R670)/(R570 + R531 + R670)",
             source={
                 "source_link": "https://doi.org/10.1016/j.rse.2011.04.036",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3520,7 +3520,7 @@ spindex = SpectralIndices(
             formula="((R714 + R752)/2.0)-R733",
             source={
                 "source_link": "https://popo.jpl.nasa.gov/pub/docs/workshops/98_docs/37.pdf",
-                "source_type": "conference_paper"
+                "source_metadata": {"type": "conference_paper", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3532,7 +3532,7 @@ spindex = SpectralIndices(
             formula="(log(1.0 / R1510) - log(1.0 / R1680))/(log(1.0 / R1510) + log(1.0 / R1680))",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3544,7 +3544,7 @@ spindex = SpectralIndices(
             formula="(log(1.0 / R1754) - log(1.0 / R1680))/(log(1.0 / R1754) + log(1.0 / R1680))",
             source={
                 "source_link": "https://doi.org/10.1016/S0034-4257(02)00011-1",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-08",
@@ -3556,7 +3556,7 @@ spindex = SpectralIndices(
             formula="(R1080_1120 - R1760_1800)/(R1080_1120 + R1760_1800)",
             source={
                 "source_link": "https://doi.org/10.1029/2021JD035742",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "snow"},
             date_of_addition="2026-08-09",
@@ -3568,7 +3568,7 @@ spindex = SpectralIndices(
             formula="(R850 - R710)/(R850 - R680)",
             source={
                 "source_link": "https://doi.org/10.1016/S0176-1617(99)80314-9",
-                "source_type": "article"
+                "source_metadata": {"type": "article", "source": "contributor"}
             },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-09",

@@ -1,0 +1,1819 @@
+{
+    "AFRI1600": [
+        {
+            "citation_count": 150,
+            "date": "2026-08-18"
+        }
+    ],
+    "AFRI2100": [
+        {
+            "citation_count": 150,
+            "date": "2026-08-18"
+        }
+    ],
+    "ANDWI": [
+        {
+            "citation_count": 134,
+            "date": "2026-08-18"
+        }
+    ],
+    "ARI": [
+        {
+            "citation_count": 752,
+            "date": "2026-08-18"
+        }
+    ],
+    "ARI2": [
+        {
+            "citation_count": 752,
+            "date": "2026-08-18"
+        }
+    ],
+    "ARVI": [
+        {
+            "citation_count": 1151,
+            "date": "2026-08-18"
+        }
+    ],
+    "ATSAVI": [
+        {
+            "citation_count": 1467,
+            "date": "2026-08-18"
+        }
+    ],
+    "AVI": [],
+    "AWEInsh": [
+        {
+            "citation_count": 1860,
+            "date": "2026-08-18"
+        }
+    ],
+    "AWEIsh": [
+        {
+            "citation_count": 1860,
+            "date": "2026-08-18"
+        }
+    ],
+    "AshburnVI": [],
+    "BAI": [],
+    "BAIM": [
+        {
+            "citation_count": 41,
+            "date": "2026-08-18"
+        }
+    ],
+    "BAIS2": [
+        {
+            "citation_count": 100,
+            "date": "2026-08-18"
+        }
+    ],
+    "BCC": [
+        {
+            "citation_count": 616,
+            "date": "2026-08-18"
+        }
+    ],
+    "BI": [],
+    "BITM": [
+        {
+            "citation_count": 174,
+            "date": "2026-08-18"
+        }
+    ],
+    "BIXS": [
+        {
+            "citation_count": 174,
+            "date": "2026-08-18"
+        }
+    ],
+    "BLFEI": [
+        {
+            "citation_count": 78,
+            "date": "2026-08-18"
+        }
+    ],
+    "BNDVI": [
+        {
+            "citation_count": 323,
+            "date": "2026-08-18"
+        }
+    ],
+    "BRBA": [],
+    "BWDRVI": [
+        {
+            "citation_count": 77,
+            "date": "2026-08-18"
+        }
+    ],
+    "BaI": [
+        {
+            "citation_count": 6,
+            "date": "2026-08-18"
+        }
+    ],
+    "CARI": [
+        {
+            "citation_count": 35,
+            "date": "2026-08-18"
+        }
+    ],
+    "CCI": [
+        {
+            "citation_count": 348,
+            "date": "2026-08-18"
+        }
+    ],
+    "CI1SWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CI1woSWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CI2SWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CI2woSWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CIG": [
+        {
+            "citation_count": 2303,
+            "date": "2026-08-18"
+        }
+    ],
+    "CIRE": [
+        {
+            "citation_count": 2303,
+            "date": "2026-08-18"
+        }
+    ],
+    "CLOSDI": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "CRI550": [
+        {
+            "citation_count": 88,
+            "date": "2026-08-18"
+        }
+    ],
+    "CRI700": [
+        {
+            "citation_count": 88,
+            "date": "2026-08-18"
+        }
+    ],
+    "CRSWIR": [],
+    "CSI": [
+        {
+            "citation_count": 176,
+            "date": "2026-08-18"
+        }
+    ],
+    "CSISWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CSIT": [
+        {
+            "citation_count": 157,
+            "date": "2026-08-18"
+        }
+    ],
+    "CSIwoSWIR": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "CVI": [
+        {
+            "citation_count": 66,
+            "date": "2026-08-18"
+        }
+    ],
+    "CWI": [
+        {
+            "citation_count": 29,
+            "date": "2026-08-18"
+        }
+    ],
+    "DBI": [
+        {
+            "citation_count": 220,
+            "date": "2026-08-18"
+        }
+    ],
+    "DBSI": [
+        {
+            "citation_count": 220,
+            "date": "2026-08-18"
+        }
+    ],
+    "DPDD": [
+        {
+            "citation_count": 182,
+            "date": "2026-08-18"
+        }
+    ],
+    "DSI": [],
+    "DSWI1": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "DSWI2": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "DSWI3": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "DSWI4": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "DSWI5": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "DVI": [
+        {
+            "citation_count": 1205,
+            "date": "2026-08-18"
+        }
+    ],
+    "DVIplus": [
+        {
+            "citation_count": 74,
+            "date": "2026-08-18"
+        }
+    ],
+    "DpRVIHH": [],
+    "DpRVIVV": [
+        {
+            "citation_count": 231,
+            "date": "2026-08-18"
+        }
+    ],
+    "EBBI": [
+        {
+            "citation_count": 289,
+            "date": "2026-08-18"
+        }
+    ],
+    "EBI": [
+        {
+            "citation_count": 115,
+            "date": "2026-08-18"
+        }
+    ],
+    "EMBI": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "ENDVI": [
+        {
+            "citation_count": 44,
+            "date": "2026-08-18"
+        }
+    ],
+    "EVI": [
+        {
+            "citation_count": 8333,
+            "date": "2026-08-18"
+        }
+    ],
+    "EVI2": [
+        {
+            "citation_count": 1912,
+            "date": "2026-08-18"
+        }
+    ],
+    "EVIv": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "ExG": [
+        {
+            "citation_count": 1312,
+            "date": "2026-08-18"
+        }
+    ],
+    "ExGR": [
+        {
+            "citation_count": 908,
+            "date": "2026-08-18"
+        }
+    ],
+    "ExR": [
+        {
+            "citation_count": 130,
+            "date": "2026-08-18"
+        }
+    ],
+    "FAI": [
+        {
+            "citation_count": 895,
+            "date": "2026-08-18"
+        }
+    ],
+    "FCVI": [
+        {
+            "citation_count": 139,
+            "date": "2026-08-18"
+        }
+    ],
+    "FDI": [
+        {
+            "citation_count": 233,
+            "date": "2026-08-18"
+        }
+    ],
+    "FWEI": [
+        {
+            "citation_count": 42,
+            "date": "2026-08-18"
+        }
+    ],
+    "GARI": [
+        {
+            "citation_count": 2798,
+            "date": "2026-08-18"
+        }
+    ],
+    "GBNDVI": [
+        {
+            "citation_count": 323,
+            "date": "2026-08-18"
+        }
+    ],
+    "GCC": [
+        {
+            "citation_count": 616,
+            "date": "2026-08-18"
+        }
+    ],
+    "GDVI": [
+        {
+            "citation_count": 208,
+            "date": "2026-08-18"
+        }
+    ],
+    "GEMI": [
+        {
+            "citation_count": 589,
+            "date": "2026-08-18"
+        }
+    ],
+    "GLI": [
+        {
+            "citation_count": 726,
+            "date": "2026-08-18"
+        }
+    ],
+    "GM1": [
+        {
+            "citation_count": 664,
+            "date": "2026-08-18"
+        }
+    ],
+    "GM2": [
+        {
+            "citation_count": 664,
+            "date": "2026-08-18"
+        }
+    ],
+    "GNDVI": [
+        {
+            "citation_count": 2798,
+            "date": "2026-08-18"
+        }
+    ],
+    "GOSAVI": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "GRARI": [
+        {
+            "citation_count": 2798,
+            "date": "2026-08-18"
+        }
+    ],
+    "GRNDVI": [
+        {
+            "citation_count": 323,
+            "date": "2026-08-18"
+        }
+    ],
+    "GRVI": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "GSAVI": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "GVMI": [
+        {
+            "citation_count": 504,
+            "date": "2026-08-18"
+        }
+    ],
+    "GreenDVI": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "IAVI": [],
+    "IBI": [
+        {
+            "citation_count": 644,
+            "date": "2026-08-18"
+        }
+    ],
+    "IKAW": [
+        {
+            "citation_count": 299,
+            "date": "2026-08-18"
+        }
+    ],
+    "IPVI": [
+        {
+            "citation_count": 545,
+            "date": "2026-08-18"
+        }
+    ],
+    "IRECI": [
+        {
+            "citation_count": 670,
+            "date": "2026-08-18"
+        }
+    ],
+    "IRGBVI": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "KDI": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "LCI": [
+        {
+            "citation_count": 454,
+            "date": "2026-08-18"
+        }
+    ],
+    "LSWI": [
+        {
+            "citation_count": 803,
+            "date": "2026-08-18"
+        }
+    ],
+    "MBI": [
+        {
+            "citation_count": 229,
+            "date": "2026-08-18"
+        }
+    ],
+    "MBWI": [
+        {
+            "citation_count": 80,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARI": [
+        {
+            "citation_count": 2087,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARI1": [
+        {
+            "citation_count": 2230,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARI2": [
+        {
+            "citation_count": 2230,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARI705": [
+        {
+            "citation_count": 767,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARIOSAVI": [
+        {
+            "citation_count": 2087,
+            "date": "2026-08-18"
+        }
+    ],
+    "MCARIOSAVI705": [
+        {
+            "citation_count": 767,
+            "date": "2026-08-18"
+        }
+    ],
+    "MGRVI": [
+        {
+            "citation_count": 531,
+            "date": "2026-08-18"
+        }
+    ],
+    "MI": [],
+    "MIRBI": [
+        {
+            "citation_count": 236,
+            "date": "2026-08-18"
+        }
+    ],
+    "MLSWI26": [
+        {
+            "citation_count": 52,
+            "date": "2026-08-18"
+        }
+    ],
+    "MLSWI27": [
+        {
+            "citation_count": 52,
+            "date": "2026-08-18"
+        }
+    ],
+    "MNDVI": [
+        {
+            "citation_count": 130,
+            "date": "2026-08-18"
+        }
+    ],
+    "MNDWI": [
+        {
+            "citation_count": 5188,
+            "date": "2026-08-18"
+        }
+    ],
+    "MNLI": [
+        {
+            "citation_count": 355,
+            "date": "2026-08-18"
+        }
+    ],
+    "MRBVI": [
+        {
+            "citation_count": 89,
+            "date": "2026-08-18"
+        }
+    ],
+    "MSAVI": [
+        {
+            "citation_count": 2753,
+            "date": "2026-08-18"
+        }
+    ],
+    "MSAVI2": [
+        {
+            "citation_count": 2753,
+            "date": "2026-08-18"
+        }
+    ],
+    "MSI": [
+        {
+            "citation_count": 996,
+            "date": "2026-08-18"
+        }
+    ],
+    "MSR": [
+        {
+            "citation_count": 978,
+            "date": "2026-08-18"
+        }
+    ],
+    "MSR705": [
+        {
+            "citation_count": 767,
+            "date": "2026-08-18"
+        }
+    ],
+    "MTCI": [
+        {
+            "citation_count": 1008,
+            "date": "2026-08-18"
+        }
+    ],
+    "MTVI1": [
+        {
+            "citation_count": 2230,
+            "date": "2026-08-18"
+        }
+    ],
+    "MTVI2": [
+        {
+            "citation_count": 2230,
+            "date": "2026-08-18"
+        }
+    ],
+    "MVI": [
+        {
+            "citation_count": 264,
+            "date": "2026-08-18"
+        }
+    ],
+    "MuWIR": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBAI": [],
+    "NBLI": [
+        {
+            "citation_count": 86,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBLIOLI": [
+        {
+            "citation_count": 86,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBR": [
+        {
+            "citation_count": 6,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBR2": [],
+    "NBRSWIR": [
+        {
+            "citation_count": 87,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBRT1": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBRT2": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBRT3": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBRplus": [
+        {
+            "citation_count": 127,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBSIMS": [
+        {
+            "citation_count": 9,
+            "date": "2026-08-18"
+        }
+    ],
+    "NBUI": [],
+    "ND705": [
+        {
+            "citation_count": 2864,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDBI": [
+        {
+            "citation_count": 2432,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDBaI": [
+        {
+            "citation_count": 100,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDCI": [
+        {
+            "citation_count": 708,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDDI": [
+        {
+            "citation_count": 498,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDGI": [
+        {
+            "citation_count": 74,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDGlaI": [
+        {
+            "citation_count": 94,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDII": [],
+    "NDISI": [
+        {
+            "citation_count": 8,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDISIb": [
+        {
+            "citation_count": 339,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDISIg": [
+        {
+            "citation_count": 339,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDISImndwi": [
+        {
+            "citation_count": 339,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDISIndwi": [
+        {
+            "citation_count": 339,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDISIr": [
+        {
+            "citation_count": 339,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDLI": [
+        {
+            "citation_count": 409,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDMI": [
+        {
+            "citation_count": 685,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDNI": [
+        {
+            "citation_count": 409,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDPI": [
+        {
+            "citation_count": 178,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDPolI": [],
+    "NDPonI": [
+        {
+            "citation_count": 426,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDREI": [
+        {
+            "citation_count": 785,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSI": [
+        {
+            "citation_count": 54,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSII": [
+        {
+            "citation_count": 94,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSIITM": [
+        {
+            "citation_count": 96,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSIWV": [],
+    "NDSInw": [
+        {
+            "citation_count": 48,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSWIR": [
+        {
+            "citation_count": 49,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSaII": [
+        {
+            "citation_count": 96,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDSoI": [
+        {
+            "citation_count": 75,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDTI": [
+        {
+            "citation_count": 426,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDTI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDTillI": [],
+    "NDVI": [],
+    "NDVI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDVI705": [
+        {
+            "citation_count": 1206,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDVIMNDWI": [
+        {
+            "citation_count": 11,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDVISR": [
+        {
+            "citation_count": 355,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDVIT": [
+        {
+            "citation_count": 157,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDWI": [
+        {
+            "citation_count": 6617,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDWIns": [
+        {
+            "citation_count": 48,
+            "date": "2026-08-18"
+        }
+    ],
+    "NDYI": [
+        {
+            "citation_count": 185,
+            "date": "2026-08-18"
+        }
+    ],
+    "NGRDI": [
+        {
+            "citation_count": 9530,
+            "date": "2026-08-18"
+        }
+    ],
+    "NHFD": [],
+    "NIRv": [
+        {
+            "citation_count": 906,
+            "date": "2026-08-18"
+        }
+    ],
+    "NIRvH2": [
+        {
+            "citation_count": 76,
+            "date": "2026-08-18"
+        }
+    ],
+    "NIRvP": [
+        {
+            "citation_count": 169,
+            "date": "2026-08-18"
+        }
+    ],
+    "NLI": [
+        {
+            "citation_count": 357,
+            "date": "2026-08-18"
+        }
+    ],
+    "NMDI": [
+        {
+            "citation_count": 428,
+            "date": "2026-08-18"
+        }
+    ],
+    "NPCI": [
+        {
+            "citation_count": 853,
+            "date": "2026-08-18"
+        }
+    ],
+    "NRFIg": [
+        {
+            "citation_count": 49,
+            "date": "2026-08-18"
+        }
+    ],
+    "NRFIr": [
+        {
+            "citation_count": 49,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSDS": [
+        {
+            "citation_count": 229,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSDSI1": [
+        {
+            "citation_count": 143,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSDSI2": [
+        {
+            "citation_count": 143,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSDSI3": [
+        {
+            "citation_count": 143,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSTv1": [
+        {
+            "citation_count": 86,
+            "date": "2026-08-18"
+        }
+    ],
+    "NSTv2": [
+        {
+            "citation_count": 86,
+            "date": "2026-08-18"
+        }
+    ],
+    "NWI": [],
+    "NormG": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "NormNIR": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "NormR": [
+        {
+            "citation_count": 163,
+            "date": "2026-08-18"
+        }
+    ],
+    "OCVI": [
+        {
+            "citation_count": 283,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSNDa": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSNDb": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSNDc": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSSRa": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSSRb": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OPSSRc": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "OSAVI": [
+        {
+            "citation_count": 2452,
+            "date": "2026-08-18"
+        }
+    ],
+    "OSI": [
+        {
+            "citation_count": 25,
+            "date": "2026-08-18"
+        }
+    ],
+    "PI": [
+        {
+            "citation_count": 153,
+            "date": "2026-08-18"
+        }
+    ],
+    "PISI": [
+        {
+            "citation_count": 65,
+            "date": "2026-08-18"
+        }
+    ],
+    "PRI550": [
+        {
+            "citation_count": 1866,
+            "date": "2026-08-18"
+        }
+    ],
+    "PRI570": [
+        {
+            "citation_count": 1866,
+            "date": "2026-08-18"
+        }
+    ],
+    "PRIm1": [
+        {
+            "citation_count": 213,
+            "date": "2026-08-18"
+        }
+    ],
+    "PRIm4": [
+        {
+            "citation_count": 213,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSNDa": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSNDb": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSNDc": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSRI": [
+        {
+            "citation_count": 1108,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSSRa": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSSRb": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "PSSRc": [
+        {
+            "citation_count": 558,
+            "date": "2026-08-18"
+        }
+    ],
+    "QpRVI": [
+        {
+            "citation_count": 10,
+            "date": "2026-08-18"
+        }
+    ],
+    "RARSa": [
+        {
+            "citation_count": 631,
+            "date": "2026-08-18"
+        }
+    ],
+    "RARSb": [
+        {
+            "citation_count": 631,
+            "date": "2026-08-18"
+        }
+    ],
+    "RARSc": [
+        {
+            "citation_count": 631,
+            "date": "2026-08-18"
+        }
+    ],
+    "RCC": [
+        {
+            "citation_count": 616,
+            "date": "2026-08-18"
+        }
+    ],
+    "RDVI": [
+        {
+            "citation_count": 1205,
+            "date": "2026-08-18"
+        }
+    ],
+    "REDSI": [
+        {
+            "citation_count": 158,
+            "date": "2026-08-18"
+        }
+    ],
+    "RENDVI": [
+        {
+            "citation_count": 1206,
+            "date": "2026-08-18"
+        }
+    ],
+    "RFDI": [
+        {
+            "citation_count": 200,
+            "date": "2026-08-18"
+        }
+    ],
+    "RGBVI": [
+        {
+            "citation_count": 531,
+            "date": "2026-08-18"
+        }
+    ],
+    "RGRI": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "RI": [],
+    "RI4XS": [
+        {
+            "citation_count": 174,
+            "date": "2026-08-18"
+        }
+    ],
+    "RNDVI": [
+        {
+            "citation_count": 153,
+            "date": "2026-08-18"
+        }
+    ],
+    "RVI": [
+        {
+            "citation_count": 566,
+            "date": "2026-08-18"
+        }
+    ],
+    "RVI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "RVSI": [],
+    "RWI": [
+        {
+            "citation_count": 3,
+            "date": "2026-08-18"
+        }
+    ],
+    "S2REP": [
+        {
+            "citation_count": 670,
+            "date": "2026-08-18"
+        }
+    ],
+    "S2WI": [
+        {
+            "citation_count": 119,
+            "date": "2026-08-18"
+        }
+    ],
+    "S3": [
+        {
+            "citation_count": 42,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARBR1": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARBR2": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARBR3": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARBR4": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARBR5": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "SARVI": [
+        {
+            "citation_count": 1151,
+            "date": "2026-08-18"
+        }
+    ],
+    "SAVI": [
+        {
+            "citation_count": 6293,
+            "date": "2026-08-18"
+        }
+    ],
+    "SAVI2": [
+        {
+            "citation_count": 306,
+            "date": "2026-08-18"
+        }
+    ],
+    "SAVI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "SAVISR": [
+        {
+            "citation_count": 355,
+            "date": "2026-08-18"
+        }
+    ],
+    "SAVIT": [
+        {
+            "citation_count": 157,
+            "date": "2026-08-18"
+        }
+    ],
+    "SCoWI": [
+        {
+            "citation_count": 30,
+            "date": "2026-08-18"
+        }
+    ],
+    "SEVI": [
+        {
+            "citation_count": 42,
+            "date": "2026-08-18"
+        }
+    ],
+    "SI": [],
+    "SIPI": [],
+    "SLAVI": [],
+    "SNDTI": [
+        {
+            "citation_count": 16,
+            "date": "2026-08-18"
+        }
+    ],
+    "SNDTI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "SR": [
+        {
+            "citation_count": 2229,
+            "date": "2026-08-18"
+        }
+    ],
+    "SR2": [
+        {
+            "citation_count": 433,
+            "date": "2026-08-18"
+        }
+    ],
+    "SR555": [
+        {
+            "citation_count": 1206,
+            "date": "2026-08-18"
+        }
+    ],
+    "SR705": [
+        {
+            "citation_count": 1206,
+            "date": "2026-08-18"
+        }
+    ],
+    "SRVI": [
+        {
+            "citation_count": 2,
+            "date": "2026-08-18"
+        }
+    ],
+    "SRWI": [
+        {
+            "citation_count": 2,
+            "date": "2026-08-18"
+        }
+    ],
+    "STI": [],
+    "STI4RE": [
+        {
+            "citation_count": 20,
+            "date": "2026-08-18"
+        }
+    ],
+    "SUI": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "SWI": [
+        {
+            "citation_count": 43,
+            "date": "2026-08-18"
+        }
+    ],
+    "SWM": [],
+    "SeLI": [
+        {
+            "citation_count": 124,
+            "date": "2026-08-18"
+        }
+    ],
+    "TCARI": [
+        {
+            "citation_count": 1698,
+            "date": "2026-08-18"
+        }
+    ],
+    "TCARIOSAVI": [
+        {
+            "citation_count": 1698,
+            "date": "2026-08-18"
+        }
+    ],
+    "TCARIOSAVI705": [
+        {
+            "citation_count": 767,
+            "date": "2026-08-18"
+        }
+    ],
+    "TCI": [
+        {
+            "citation_count": 295,
+            "date": "2026-08-18"
+        }
+    ],
+    "TDVI": [
+        {
+            "citation_count": 72,
+            "date": "2026-08-18"
+        }
+    ],
+    "TGI": [
+        {
+            "citation_count": 291,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCbrightness": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCfifth": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCfourth": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCgreenness": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCsixth": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TMTCwetness": [
+        {
+            "citation_count": 939,
+            "date": "2026-08-18"
+        }
+    ],
+    "TRRVI": [
+        {
+            "citation_count": 42,
+            "date": "2026-08-18"
+        }
+    ],
+    "TSAVI": [
+        {
+            "citation_count": 145,
+            "date": "2026-08-18"
+        }
+    ],
+    "TTVI": [
+        {
+            "citation_count": 64,
+            "date": "2026-08-18"
+        }
+    ],
+    "TVI": [],
+    "TWI": [
+        {
+            "citation_count": 16,
+            "date": "2026-08-18"
+        }
+    ],
+    "TriVI": [
+        {
+            "citation_count": 1454,
+            "date": "2026-08-18"
+        }
+    ],
+    "UI": [],
+    "URBR1": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "URBR2": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "URBR3": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "URBR4": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "URBR5": [
+        {
+            "citation_count": 464,
+            "date": "2026-08-18"
+        }
+    ],
+    "VARI": [
+        {
+            "citation_count": 1876,
+            "date": "2026-08-18"
+        }
+    ],
+    "VARI700": [
+        {
+            "citation_count": 1876,
+            "date": "2026-08-18"
+        }
+    ],
+    "VDDPI": [
+        {
+            "citation_count": 182,
+            "date": "2026-08-18"
+        }
+    ],
+    "VHVVD": [
+        {
+            "citation_count": 231,
+            "date": "2026-08-18"
+        }
+    ],
+    "VHVVP": [
+        {
+            "citation_count": 22,
+            "date": "2026-08-18"
+        }
+    ],
+    "VHVVR": [
+        {
+            "citation_count": 22,
+            "date": "2026-08-18"
+        }
+    ],
+    "VI6T": [
+        {
+            "citation_count": 95,
+            "date": "2026-08-18"
+        }
+    ],
+    "VI700": [
+        {
+            "citation_count": 1876,
+            "date": "2026-08-18"
+        }
+    ],
+    "VIBI": [
+        {
+            "citation_count": 52,
+            "date": "2026-08-18"
+        }
+    ],
+    "VIG": [
+        {
+            "citation_count": 1876,
+            "date": "2026-08-18"
+        }
+    ],
+    "VVVHD": [
+        {
+            "citation_count": 22,
+            "date": "2026-08-18"
+        }
+    ],
+    "VVVHR": [
+        {
+            "citation_count": 231,
+            "date": "2026-08-18"
+        }
+    ],
+    "VVVHS": [
+        {
+            "citation_count": 22,
+            "date": "2026-08-18"
+        }
+    ],
+    "VgNIRBI": [
+        {
+            "citation_count": 198,
+            "date": "2026-08-18"
+        }
+    ],
+    "VrNIRBI": [
+        {
+            "citation_count": 198,
+            "date": "2026-08-18"
+        }
+    ],
+    "WCI1": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "WCI2": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "WCI3": [
+        {
+            "citation_count": 0,
+            "date": "2026-08-18"
+        }
+    ],
+    "WDRVI": [
+        {
+            "citation_count": 1056,
+            "date": "2026-08-18"
+        }
+    ],
+    "WDVI": [
+        {
+            "citation_count": 280,
+            "date": "2026-08-18"
+        }
+    ],
+    "WI1": [
+        {
+            "citation_count": 51,
+            "date": "2026-08-18"
+        }
+    ],
+    "WI2": [
+        {
+            "citation_count": 51,
+            "date": "2026-08-18"
+        }
+    ],
+    "WI2015": [
+        {
+            "citation_count": 564,
+            "date": "2026-08-18"
+        }
+    ],
+    "WRI": [
+        {
+            "citation_count": 193,
+            "date": "2026-08-18"
+        }
+    ],
+    "bNIRv": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "kEVI": [
+        {
+            "citation_count": 709,
+            "date": "2026-08-18"
+        }
+    ],
+    "kIPVI": [
+        {
+            "citation_count": 709,
+            "date": "2026-08-18"
+        }
+    ],
+    "kNDVI": [
+        {
+            "citation_count": 709,
+            "date": "2026-08-18"
+        }
+    ],
+    "kRVI": [
+        {
+            "citation_count": 709,
+            "date": "2026-08-18"
+        }
+    ],
+    "kVARI": [
+        {
+            "citation_count": 709,
+            "date": "2026-08-18"
+        }
+    ],
+    "mND705": [
+        {
+            "citation_count": 2864,
+            "date": "2026-08-18"
+        }
+    ],
+    "mSR705": [
+        {
+            "citation_count": 2864,
+            "date": "2026-08-18"
+        }
+    ],
+    "sNIRvLSWI": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "sNIRvNDPI": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "sNIRvNDVILSWIP": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "sNIRvNDVILSWIS": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ],
+    "sNIRvSWIR": [
+        {
+            "citation_count": 7,
+            "date": "2026-08-18"
+        }
+    ]
+}

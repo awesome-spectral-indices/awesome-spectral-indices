@@ -1,7 +1,9 @@
 """Build the Awesome Spectral Indices v1 catalogue outputs."""
 
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -10,7 +12,9 @@ import pandas as pd
 
 from src.v1.SpectralIndex import parse_formula_variables
 from src.v1.bands import bands
+from src.v1.crossref import CrossrefClient, extract_doi, normalize_crossref_work
 from src.v1.indices import spindex
+from src.v1.references import add_reference_metadata
 from src.v1.utils import (
     Bands,
     Constants,
@@ -24,6 +28,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_DIR = REPO_ROOT / "output/v1"
 SPECTRAL_INDICES_JSON = OUTPUT_DIR / "spectral-indices-dict.json"
 SPECTRAL_INDICES_TABLE = OUTPUT_DIR / "spectral-indices-table.csv"
+SPECTRAL_INDICES_CITATIONS = OUTPUT_DIR / "spectral-indices-citations.json"
+SPECTRAL_INDICES_REFERENCES = OUTPUT_DIR / "spectral-indices-references.bib"
 
 TABLE_COLUMNS = [
     "acronym",
@@ -47,6 +53,13 @@ SOURCE_CHECK_USER_AGENT = (
     "Awesome-Spectral-Indices/1.0 "
     "(+https://github.com/awesome-spectral-indices/awesome-spectral-indices)"
 )
+CROSSREF_REFRESH_DAYS = 7
+
+
+def load_json(path):
+    """Load a JSON document from disk."""
+    with path.open() as fp:
+        return json.load(fp)
 
 
 def check_source_link(source_link, timeout=SOURCE_CHECK_TIMEOUT):
@@ -175,7 +188,160 @@ def add_source_metadata(index_catalog, checker=check_source_link):
     return index_catalog
 
 
-def write_json_outputs(index_catalog):
+def load_crossref_cache(path=SPECTRAL_INDICES_JSON):
+    """Load generated Crossref metadata from the previous catalogue output."""
+    if not path.exists():
+        return {}
+    try:
+        previous_indices = load_json(path)["SpectralIndices"]
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        return {}
+
+    cache = {}
+    for key, index in previous_indices.items():
+        source = index.get("source", {})
+        doi = extract_doi(source.get("source_link", ""))
+        metadata = source.get("source_metadata")
+        if doi and isinstance(metadata, dict) and metadata.get("source") == "crossref":
+            metadata = dict(metadata)
+            source_type = metadata.pop("type", source.get("source_type"))
+            record = cache.setdefault(
+                doi,
+                {
+                    "metadata": metadata,
+                    "source_types": {},
+                },
+            )
+            record["source_types"][key] = source_type
+    return cache
+
+
+def crossref_metadata_is_fresh(metadata, today, refresh_days=CROSSREF_REFRESH_DAYS):
+    """Return whether cached citation metadata is younger than the refresh window."""
+    try:
+        retrieved_on = date.fromisoformat(metadata["citations"]["date"])
+    except (KeyError, TypeError, ValueError):
+        return False
+    return today - retrieved_on < timedelta(days=refresh_days)
+
+
+def add_crossref_metadata(
+    index_catalog,
+    fetcher=None,
+    today=None,
+    cache_path=SPECTRAL_INDICES_JSON,
+    refresh_days=CROSSREF_REFRESH_DAYS,
+):
+    """Populate generated publication metadata for every DOI-backed source."""
+    today = today or date.today()
+    cache = load_crossref_cache(cache_path)
+    doi_sources = {}
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        doi = extract_doi(spectral_index.source.source_link)
+        if doi:
+            doi_sources.setdefault(doi, []).append((key, spectral_index.source))
+
+    if fetcher is None:
+        client = CrossrefClient(email=os.environ.get("CROSSREF_EMAIL"))
+        fetcher = client.fetch_work
+
+    records = {}
+    cache_hits = 0
+    refreshed = 0
+    failed = 0
+    for doi in sorted(doi_sources):
+        cached = cache.get(doi)
+        if cached and crossref_metadata_is_fresh(
+            cached["metadata"], today, refresh_days
+        ):
+            records[doi] = cached
+            cache_hits += 1
+            continue
+
+        message = fetcher(doi)
+        if message is not None:
+            metadata, source_type = normalize_crossref_work(message, today)
+            records[doi] = {
+                "metadata": metadata,
+                "source_type": source_type,
+                "source_types": {},
+            }
+            refreshed += 1
+        elif cached:
+            records[doi] = cached
+            failed += 1
+        else:
+            records[doi] = {
+                "metadata": {},
+                "source_type": None,
+                "source_types": {},
+            }
+            failed += 1
+
+    for doi, sources in doi_sources.items():
+        record = records[doi]
+        for key, source in sources:
+            inferred_source_type = record.get("source_type")
+            if inferred_source_type is None:
+                inferred_source_type = record.get("source_types", {}).get(key)
+            source.set_source_metadata(
+                record["metadata"],
+                inferred_source_type=inferred_source_type,
+            )
+
+    print(
+        f"Crossref metadata for {len(doi_sources)} unique DOIs: "
+        f"{refreshed} refreshed, {cache_hits} cached, {failed} unavailable."
+    )
+    return index_catalog
+
+
+def load_citation_history(path=SPECTRAL_INDICES_CITATIONS):
+    """Load citation snapshots, accepting the initial single-object shape."""
+    if not path.exists():
+        return {}
+    try:
+        history = load_json(path)
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return {}
+    if not isinstance(history, dict):
+        return {}
+
+    normalized = {}
+    for key, value in history.items():
+        if isinstance(value, list):
+            normalized[key] = value
+        elif isinstance(value, dict):
+            normalized[key] = [value]
+    return normalized
+
+
+def write_citation_history(index_catalog, path=SPECTRAL_INDICES_CITATIONS):
+    """Append or update the latest dated citation snapshot for every index."""
+    previous = load_citation_history(path)
+    history = {}
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        snapshots = list(previous.get(key, []))
+        citations = spectral_index.source.source_metadata.citations
+        if citations is not None:
+            citations = citations.model_dump(mode="json")
+            snapshots = [
+                snapshot
+                for snapshot in snapshots
+                if snapshot.get("date") != citations["date"]
+            ]
+            snapshots.append(citations)
+            snapshots.sort(key=lambda snapshot: snapshot["date"])
+        history[key] = snapshots
+
+    with path.open("w") as fp:
+        json.dump(history, fp, indent=4, sort_keys=True)
+        fp.write("\n")
+
+    return history
+
+
+def write_json_outputs(index_catalog, bibtex_entries):
     """Write the v1 catalogue and its variable metadata as JSON."""
     with SPECTRAL_INDICES_JSON.open("w") as fp:
         json.dump(
@@ -204,6 +370,13 @@ def write_json_outputs(index_catalog):
             sort_keys=True,
         )
 
+    write_citation_history(index_catalog)
+
+    with SPECTRAL_INDICES_REFERENCES.open("w") as fp:
+        fp.write("\n\n".join(bibtex_entries.values()))
+        if bibtex_entries:
+            fp.write("\n")
+
 
 def build_indices_dataframe(path=SPECTRAL_INDICES_JSON):
     """Build the public v1 CSV dataframe from the generated catalogue JSON."""
@@ -225,8 +398,12 @@ def main():
 
     index_catalog = add_formula_metadata(spindex)
     index_catalog = add_source_metadata(index_catalog)
+    index_catalog = add_crossref_metadata(index_catalog)
     index_catalog = add_source_companions(index_catalog)
-    write_json_outputs(index_catalog)
+    bibtex_entries = add_reference_metadata(
+        index_catalog, cache_path=SPECTRAL_INDICES_JSON
+    )
+    write_json_outputs(index_catalog, bibtex_entries)
 
     df = build_indices_dataframe()
     write_spectral_indices_table(df)

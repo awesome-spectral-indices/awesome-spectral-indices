@@ -117,6 +117,14 @@ submitted through the usual contribution process.
   domain and sensing modality, with drill-down links to the matching indices.
 - Added an automatically generated Repository Contributors section to the
   People page using contribution data from the GitHub repository.
+- Added generated `source.source_metadata` publication metadata for DOI-backed
+  indices using Crossref, including titles, venues, volume and issue details,
+  authors, publication years, and dated citation counts. Added
+  `spectral-indices-citations.json` to retain the citation-count history for
+  every index.
+- Added `spectral-indices-references.bib`, containing one generated BibTeX
+  entry per unique retrieved source. Added `source_metadata.how_to_cite` with
+  the shared BibTeX key and an APA citation for each associated index.
 - Added a VitePress content generator that:
   - copies `CONTRIBUTING.md` into the website;
   - reads the generated v1 catalogue and metadata;
@@ -139,9 +147,16 @@ submitted through the usual contribution process.
 - Renamed the required v1 spectral-index properties `short_name` to `acronym`
   and `long_name` to `name`. Neither property is required to be unique.
 - Replaced the v1 `reference` string with a structured `source` object. The
-  contributor provides its required `source_link` and optional constrained
-  `source_type`, while generation adds `source_link_status` and
-  `source_link_type`.
+  contributor provides its required `source_link` and may optionally provide
+  descriptive `source_metadata` marked with `source: contributor`.
+  Citation counts and citation formats remain generated-only. For DOI links,
+  a successful or cached Crossref record replaces contributed metadata as the
+  authoritative record; contributed metadata is retained when Crossref has no
+  record. Generation also adds `source_link_status`, `source_link_type`, and
+  source-companion metadata.
+- Changed the scheduled catalogue refresh from daily to weekly. Crossref
+  responses are cached for seven days and shared by every index using the same
+  DOI.
 - Classified EVI as an article and NDVI and TVI as conference-paper sources in
   the v1 catalogue.
 - Split formula constants from bands in v1. Constant-using indices now submit a

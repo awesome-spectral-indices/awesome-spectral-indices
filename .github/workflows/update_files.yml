@@ -2,7 +2,7 @@ name: update_files
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 0 * * 0'
 
 permissions:
   contents: write
@@ -27,6 +27,8 @@ jobs:
         run: |
           python -m src.main_v0
       - name: generate v1
+        env:
+          CROSSREF_EMAIL: ${{ secrets.CROSSREF_EMAIL }}
         run: |
           python -m src.v1.main_v1
       - name: generate VitePress pages

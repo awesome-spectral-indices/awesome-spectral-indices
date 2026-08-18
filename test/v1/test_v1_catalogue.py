@@ -60,8 +60,16 @@ def test_required_catalogue_metadata_is_present_and_well_formed():
         assert source_link.netloc
         assert index.source.source_link_type in {"doi", "other"}
         assert (
-            index.source.source_type is None or index.source.source_type in SOURCE_TYPES
+            index.source.source_metadata.type is None
+            or index.source.source_metadata.type in SOURCE_TYPES
         )
+        raw_metadata = index.source.source_metadata.model_dump(
+            mode="json", exclude_none=True
+        )
+        if raw_metadata:
+            assert raw_metadata["source"] == "contributor"
+        assert index.source.source_metadata.citations is None
+        assert index.source.source_metadata.how_to_cite is None
         assert isinstance(index.date_of_addition, date)
 
 
@@ -84,17 +92,26 @@ def test_acronym_and_name_are_required_v1_fields():
 
     source_fields = next(iter(spindex.SpectralIndices.values())).source.model_fields
     assert source_fields["source_link"].is_required()
-    assert not source_fields["source_type"].is_required()
+    assert not source_fields["source_metadata"].is_required()
+    assert "source_type" not in source_fields
+    metadata_fields = source_fields["source_metadata"].annotation.model_fields
+    assert all(not field.is_required() for field in metadata_fields.values())
 
 
 def test_ndvi_and_tvi_are_conference_papers():
-    assert spindex.SpectralIndices["NDVI"].source.source_type == "conference_paper"
-    assert spindex.SpectralIndices["TVI"].source.source_type == "conference_paper"
+    assert (
+        spindex.SpectralIndices["NDVI"].source.source_metadata.type
+        == "conference_paper"
+    )
+    assert (
+        spindex.SpectralIndices["TVI"].source.source_metadata.type
+        == "conference_paper"
+    )
 
 
 def test_evi_and_savi_are_articles():
-    assert spindex.SpectralIndices["EVI"].source.source_type == "article"
-    assert spindex.SpectralIndices["SAVI"].source.source_type == "article"
+    assert spindex.SpectralIndices["EVI"].source.source_metadata.type == "article"
+    assert spindex.SpectralIndices["SAVI"].source.source_metadata.type == "article"
 
 
 def test_catalogue_domains_and_formula_variables_are_supported():

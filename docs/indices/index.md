@@ -187,7 +187,10 @@ const filteredIndices = computed(() => {
     ) {
       return false
     }
-    if (advanced.sourceType && index.source.source_type !== advanced.sourceType) {
+    if (
+      advanced.sourceType &&
+      index.source.source_metadata?.type !== advanced.sourceType
+    ) {
       return false
     }
     if (!includesText(index.date_of_addition, advanced.dateOfAddition)) {

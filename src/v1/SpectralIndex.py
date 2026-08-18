@@ -36,6 +36,59 @@ NumericRange = Annotated[
     Field(min_length=2, max_length=2),
 ]
 SuggestedValues = Dict[StrictStr, Union[StrictInt, StrictFloat, NumericRange]]
+SourceType = Literal[
+    "article",
+    "book",
+    "book_chapter",
+    "conference_paper",
+    "poster",
+    "report",
+    "preprint",
+]
+
+
+class SourceCitationMetadata(BaseModel):
+    """Latest citation count retrieved for a scientific source."""
+
+    citation_count: Annotated[StrictInt, Field(ge=0)]
+    date: date
+
+    model_config = ConfigDict(extra="forbid")
+
+
+class HowToCite(BaseModel):
+    """Generated citation formats for one shared scientific source."""
+
+    bibtex: StrictStr
+    apa: StrictStr
+
+    model_config = ConfigDict(extra="forbid")
+
+
+class SourceMetadata(BaseModel):
+    """Optional publication metadata supplied by a contributor or provider."""
+
+    type: Optional[SourceType] = None
+    title: Optional[StrictStr] = None
+    journal: Optional[StrictStr] = None
+    volume: Optional[StrictStr] = None
+    issue: Optional[StrictStr] = None
+    authors: Optional[List[StrictStr]] = None
+    year: Optional[StrictInt] = None
+    citations: Optional[SourceCitationMetadata] = None
+    how_to_cite: Optional[HowToCite] = None
+    source: Optional[Literal["contributor", "crossref", "other"]] = None
+
+    model_config = ConfigDict(extra="forbid")
+
+    @model_serializer(mode="wrap")
+    def omit_unavailable_values(self, handler):
+        """Omit optional metadata fields that have no available value."""
+        return {
+            key: value
+            for key, value in handler(self).items()
+            if value is not None
+        }
 
 
 class FormulaVisitor(ast.NodeVisitor):
@@ -163,17 +216,7 @@ class Source(BaseModel):
     """Scientific source metadata for a spectral index."""
 
     source_link: str
-    source_type: Optional[
-        Literal[
-            "article",
-            "book",
-            "book_chapter",
-            "conference_paper",
-            "poster",
-            "report",
-            "preprint",
-        ]
-    ] = None
+    source_metadata: SourceMetadata = Field(default_factory=SourceMetadata)
 
     _source_link_status: Optional[Literal["operational", "down"]] = PrivateAttr(
         default=None
@@ -181,6 +224,32 @@ class Source(BaseModel):
     _source_companions: List[str] = PrivateAttr(default_factory=list)
 
     model_config = ConfigDict(extra="forbid")
+
+    @model_validator(mode="before")
+    @classmethod
+    def check_contributor_source_metadata(cls, value):
+        """Require explicit provenance and reject submitted generated fields."""
+        if not isinstance(value, dict):
+            return value
+        metadata = value.get("source_metadata")
+        if isinstance(metadata, SourceMetadata):
+            metadata = metadata.model_dump(mode="json", exclude_none=True)
+        if not metadata:
+            return value
+        if not isinstance(metadata, dict):
+            return value
+        generated_fields = {"citations", "how_to_cite"} & set(metadata)
+        if generated_fields:
+            raise ValueError(
+                "Contributors cannot provide generated source metadata: "
+                + ", ".join(sorted(generated_fields))
+            )
+        if metadata.get("source") != "contributor":
+            raise ValueError(
+                "Contributor-provided source_metadata must set "
+                "source to 'contributor'."
+            )
+        return value
 
     @field_validator("source_link")
     @classmethod
@@ -223,6 +292,27 @@ class Source(BaseModel):
         if not all(isinstance(companion, str) for companion in companions):
             raise ValueError("Invalid source_companions.")
         self._source_companions = list(companions)
+
+    def set_source_metadata(self, metadata, inferred_source_type=None):
+        """Set trusted metadata while preserving unavailable contributed data."""
+        validated = SourceMetadata.model_validate(metadata)
+        if (
+            not validated.model_dump(mode="json", exclude_none=True)
+            and self.source_metadata.source == "contributor"
+        ):
+            return
+        if inferred_source_type is not None:
+            if inferred_source_type not in SourceType.__args__:
+                raise ValueError("Invalid inferred source_type.")
+            validated.type = inferred_source_type
+        self.source_metadata = validated
+
+    def set_how_to_cite(self, bibtex_key, apa_citation):
+        """Attach generated citation pointers to the publication metadata."""
+        self.source_metadata.how_to_cite = HowToCite(
+            bibtex=bibtex_key,
+            apa=apa_citation,
+        )
 
 
 class ConstantDefinition(BaseModel):
