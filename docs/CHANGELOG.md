@@ -113,8 +113,11 @@ submitted through the usual contribution process.
 - Added a catalogue status dashboard with interactive summaries of source-link
   availability, DOI coverage, and source-type completeness, plus expandable
   affected-index lists.
-- Added an interactive catalogue dashboard showing index counts by application
-  domain and sensing modality, with drill-down links to the matching indices.
+- Added an interactive, tabbed catalogue dashboard showing index counts by
+  application domain and sensing modality; publication totals by year, venue,
+  and source type; and citation-count rankings both catalogue-wide and within
+  each application domain. Every chart provides drill-down links to the
+  matching indices.
 - Added an automatically generated Repository Contributors section to the
   People page using contribution data from the GitHub repository.
 - Added generated `source.source_metadata` publication metadata for DOI-backed
