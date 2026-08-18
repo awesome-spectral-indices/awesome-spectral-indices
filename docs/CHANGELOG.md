@@ -115,6 +115,8 @@ submitted through the usual contribution process.
   affected-index lists.
 - Added an interactive catalogue dashboard showing index counts by application
   domain and sensing modality, with drill-down links to the matching indices.
+- Added an automatically generated Repository Contributors section to the
+  People page using contribution data from the GitHub repository.
 - Added a VitePress content generator that:
   - copies `CONTRIBUTING.md` into the website;
   - reads the generated v1 catalogue and metadata;

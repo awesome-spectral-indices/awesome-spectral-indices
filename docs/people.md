@@ -10,6 +10,7 @@ import {
   VPTeamPageSection
 } from 'vitepress/theme'
 import indexContributors from './.vitepress/data/index-contributors.json'
+import repositoryContributors from './.vitepress/data/repository-contributors.json'
 
 const maintainer = [{
     avatar: 'https://www.github.com/davemlz.png',
@@ -101,6 +102,13 @@ const designer = [{
     <template #lead>Community members who have contributed one or more spectral indices to the catalogue.</template>
     <template #members>
       <VPTeamMembers size="small" :members="indexContributors" />
+    </template>
+  </VPTeamPageSection>
+  <VPTeamPageSection>
+    <template #title>Repository Contributors</template>
+    <template #lead>Community members who have contributed code, documentation, or other changes directly to the repository.</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="repositoryContributors" />
     </template>
   </VPTeamPageSection>
   <VPTeamPageSection>

@@ -2,11 +2,13 @@
 
 import hashlib
 import json
+import os
 import re
 import shutil
 from html import escape
 from pathlib import Path
 from urllib.parse import quote, urlsplit
+from urllib.request import Request, urlopen
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +18,20 @@ CATALOGUE_PATH = REPO_ROOT / "output/v1/spectral-indices-dict.json"
 BANDS_PATH = REPO_ROOT / "output/v1/bands.json"
 CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
 PEOPLE_CONTRIBUTORS_PATH = DOCS_DIR / ".vitepress/data/index-contributors.json"
+REPOSITORY_CONTRIBUTORS_PATH = (
+    DOCS_DIR / ".vitepress/data/repository-contributors.json"
+)
+
+GITHUB_REPOSITORY = os.environ.get(
+    "GITHUB_REPOSITORY",
+    "awesome-spectral-indices/awesome-spectral-indices",
+)
+GITHUB_CONTRIBUTORS_URL = (
+    f"https://api.github.com/repos/{GITHUB_REPOSITORY}/contributors"
+)
+GITHUB_API_VERSION = "2022-11-28"
+GITHUB_API_TIMEOUT = 20
+AUTOMATED_GITHUB_ACCOUNTS = {"actions-user", "github-actions[bot]"}
 
 SAFE_FILENAME = re.compile(r"^[A-Za-z0-9._+-]+$")
 EMAIL_ADDRESS = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -387,6 +403,71 @@ def generate_people_contributors():
     return len(members)
 
 
+def fetch_repository_contributors():
+    """Fetch all human contributors reported by the GitHub repository."""
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "Awesome-Spectral-Indices-VitePress",
+        "X-GitHub-Api-Version": GITHUB_API_VERSION,
+    }
+    github_token = os.environ.get("GITHUB_TOKEN")
+    if github_token:
+        headers["Authorization"] = f"Bearer {github_token}"
+
+    contributors = []
+    page = 1
+    while True:
+        request = Request(
+            f"{GITHUB_CONTRIBUTORS_URL}?per_page=100&page={page}",
+            headers=headers,
+        )
+        with urlopen(request, timeout=GITHUB_API_TIMEOUT) as response:
+            payload = json.load(response)
+
+        if not isinstance(payload, list):
+            raise ValueError("GitHub contributors response must be a list")
+
+        contributors.extend(payload)
+        if len(payload) < 100:
+            break
+        page += 1
+
+    return contributors
+
+
+def generate_repository_contributors():
+    """Generate People-page members from the GitHub contributors API."""
+    members = []
+    for contributor in fetch_repository_contributors():
+        username = contributor.get("login")
+        account_type = contributor.get("type")
+        if (
+            not username
+            or account_type == "Bot"
+            or username.casefold() in AUTOMATED_GITHUB_ACCOUNTS
+            or username.casefold().endswith("[bot]")
+        ):
+            continue
+
+        profile = contributor.get("html_url") or f"https://github.com/{username}"
+        avatar = contributor.get("avatar_url") or f"{profile}.png"
+        members.append(
+            {
+                "avatar": avatar,
+                "name": username,
+                "title": "Repository Contributor",
+                "links": [{"icon": "github", "link": profile}],
+            }
+        )
+
+    members.sort(key=lambda member: member["name"].casefold())
+    REPOSITORY_CONTRIBUTORS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    REPOSITORY_CONTRIBUTORS_PATH.write_text(
+        json.dumps(members, indent=2, ensure_ascii=False) + "\n"
+    )
+    return len(members)
+
+
 def generate_index_pages():
     """Generate every v1 index page and remove obsolete generated pages."""
     catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
@@ -424,8 +505,13 @@ def main():
     copy_contributing_guide()
     count = generate_index_pages()
     contributor_count = generate_people_contributors()
+    repository_contributor_count = generate_repository_contributors()
     print(f"Generated {count} spectral-index pages.")
     print(f"Generated {contributor_count} People-page contributors.")
+    print(
+        "Generated "
+        f"{repository_contributor_count} People-page repository contributors."
+    )
 
 
 if __name__ == "__main__":
