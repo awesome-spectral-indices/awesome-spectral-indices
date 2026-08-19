@@ -43,7 +43,7 @@ const routeOverrides = {
 }
 
 const tabs = [
-  { key: 'counts', label: 'Number of indices' },
+  { key: 'counts', label: 'General' },
   { key: 'publications', label: 'Publications' },
   { key: 'citations', label: 'Citations' }
 ]
