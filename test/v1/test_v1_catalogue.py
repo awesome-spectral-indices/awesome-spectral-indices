@@ -9,6 +9,7 @@ from src.v1.SpectralIndex import (
     ConstantDefinition,
     ExternalVariableDefinition,
     ReductionDefinition,
+    SemanticScholarSource,
     SpectralIndex,
     parse_formula_reduction_dimensions,
     parse_formula_variables,
@@ -92,10 +93,25 @@ def test_acronym_and_name_are_required_v1_fields():
 
     source_fields = next(iter(spindex.SpectralIndices.values())).source.model_fields
     assert source_fields["source_link"].is_required()
+    assert not source_fields["source_link_semantic_scholar"].is_required()
     assert not source_fields["source_metadata"].is_required()
     assert "source_type" not in source_fields
     metadata_fields = source_fields["source_metadata"].annotation.model_fields
     assert all(not field.is_required() for field in metadata_fields.values())
+
+    assert all(
+        not field.is_required()
+        for field in SemanticScholarSource.model_fields.values()
+    )
+
+
+def test_ndvi_has_semantic_scholar_source_identifiers():
+    semantic_scholar = (
+        spindex.SpectralIndices["NDVI"].source.source_link_semantic_scholar
+    )
+
+    assert semantic_scholar.paper_id == "fb2f60fe0fe2874e5cbf927a2556d719c32eac29"
+    assert semantic_scholar.corpus_id == 133358670
 
 
 def test_ndvi_and_tvi_are_conference_papers():

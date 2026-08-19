@@ -63,6 +63,7 @@ def test_v1_outputs_contain_generated_source_metadata():
         assert set(index["source"]) == {
             "source_companions",
             "source_link",
+            "source_link_semantic_scholar",
             "source_link_status",
             "source_link_type",
             "source_metadata",
@@ -113,6 +114,11 @@ def test_v1_outputs_contain_generated_source_metadata():
         json_catalogue["EVI"]["source"]["source_metadata"]["source"]
         == "crossref"
     )
+    assert json_catalogue["NDVI"]["source"]["source_link_semantic_scholar"] == {
+        "corpus_id": 133358670,
+        "paper_id": "fb2f60fe0fe2874e5cbf927a2556d719c32eac29",
+    }
+    assert json_catalogue["EVI"]["source"]["source_link_semantic_scholar"] is None
 
 
 def test_v1_bibtex_references_are_shared_by_source():

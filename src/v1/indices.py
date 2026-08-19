@@ -186,6 +186,10 @@ spindex = SpectralIndices(
             formula="(N - R)/(N + R)",
             source={
                 "source_link": "https://ntrs.nasa.gov/citations/19740022614",
+                "source_link_semantic_scholar": {
+                    "paper_id": "fb2f60fe0fe2874e5cbf927a2556d719c32eac29",
+                    "corpus_id": 133358670
+                },
                 "source_metadata": {"type": "conference_paper", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},

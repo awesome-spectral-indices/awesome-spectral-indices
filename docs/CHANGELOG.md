@@ -107,6 +107,10 @@ submitted through the usual contribution process.
 - Added the generated v1 `source.source_companions` property, which lists the
   other catalogue keys sharing an index's exact source link. Generated index
   pages link those keys to their companion pages.
+- Added the optional contributor-provided
+  `source.source_link_semantic_scholar` object for Semantic Scholar paper and
+  corpus identifiers, recommended when an index source does not use a DOI
+  link.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.

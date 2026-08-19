@@ -91,6 +91,20 @@ class SourceMetadata(BaseModel):
         }
 
 
+class SemanticScholarSource(BaseModel):
+    """Optional contributor-provided Semantic Scholar identifiers."""
+
+    paper_id: Optional[
+        Annotated[
+            StrictStr,
+            Field(min_length=1, pattern=r"^[A-Za-z0-9]+$"),
+        ]
+    ] = None
+    corpus_id: Optional[Annotated[StrictInt, Field(ge=0)]] = None
+
+    model_config = ConfigDict(extra="forbid")
+
+
 class FormulaVisitor(ast.NodeVisitor):
     """
     Validate a spectral-index formula and collect its variable names.
@@ -216,6 +230,7 @@ class Source(BaseModel):
     """Scientific source metadata for a spectral index."""
 
     source_link: str
+    source_link_semantic_scholar: Optional[SemanticScholarSource] = None
     source_metadata: SourceMetadata = Field(default_factory=SourceMetadata)
 
     _source_link_status: Optional[Literal["operational", "down"]] = PrivateAttr(

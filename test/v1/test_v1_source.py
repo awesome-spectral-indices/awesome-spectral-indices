@@ -31,6 +31,41 @@ def test_source_link_type_is_generated_from_the_url():
     assert Source(source_link="https://example.com/paper").source_link_type == "other"
 
 
+def test_semantic_scholar_source_identifiers_are_optional_and_validated():
+    source = Source(
+        source_link="https://example.com/source",
+        source_link_semantic_scholar={
+            "paper_id": "AbC123",
+            "corpus_id": 123456,
+        },
+    )
+
+    assert source.source_link_semantic_scholar.paper_id == "AbC123"
+    assert source.source_link_semantic_scholar.corpus_id == 123456
+    assert (
+        Source(source_link="https://example.com/source").source_link_semantic_scholar
+        is None
+    )
+
+
+@pytest.mark.parametrize("paper_id", ["", "abc-123", "abc 123", 123])
+def test_semantic_scholar_paper_id_rejects_non_alphanumeric_values(paper_id):
+    with pytest.raises(ValidationError):
+        Source(
+            source_link="https://example.com/source",
+            source_link_semantic_scholar={"paper_id": paper_id},
+        )
+
+
+@pytest.mark.parametrize("corpus_id", [-1, 1.5, "123", True])
+def test_semantic_scholar_corpus_id_requires_a_non_negative_integer(corpus_id):
+    with pytest.raises(ValidationError):
+        Source(
+            source_link="https://example.com/source",
+            source_link_semantic_scholar={"corpus_id": corpus_id},
+        )
+
+
 def test_source_companions_are_empty_before_generation():
     source = Source(source_link="https://example.com/source")
 
