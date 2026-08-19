@@ -77,7 +77,9 @@ class SourceMetadata(BaseModel):
     year: Optional[StrictInt] = None
     citations: Optional[SourceCitationMetadata] = None
     how_to_cite: Optional[HowToCite] = None
-    source: Optional[Literal["contributor", "crossref", "other"]] = None
+    source: Optional[
+        Literal["contributor", "crossref", "semantic_scholar", "other"]
+    ] = None
 
     model_config = ConfigDict(extra="forbid")
 

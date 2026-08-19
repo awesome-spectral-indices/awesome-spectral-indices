@@ -15,6 +15,10 @@ from src.v1.bands import bands
 from src.v1.crossref import CrossrefClient, extract_doi, normalize_crossref_work
 from src.v1.indices import spindex
 from src.v1.references import add_reference_metadata
+from src.v1.semantic_scholar import (
+    SemanticScholarClient,
+    normalize_semantic_scholar_paper,
+)
 from src.v1.utils import (
     Bands,
     Constants,
@@ -54,6 +58,7 @@ SOURCE_CHECK_USER_AGENT = (
     "(+https://github.com/awesome-spectral-indices/awesome-spectral-indices)"
 )
 CROSSREF_REFRESH_DAYS = 7
+SEMANTIC_SCHOLAR_REFRESH_DAYS = 7
 
 
 def load_json(path):
@@ -216,7 +221,7 @@ def load_crossref_cache(path=SPECTRAL_INDICES_JSON):
     return cache
 
 
-def crossref_metadata_is_fresh(metadata, today, refresh_days=CROSSREF_REFRESH_DAYS):
+def source_metadata_is_fresh(metadata, today, refresh_days=CROSSREF_REFRESH_DAYS):
     """Return whether cached citation metadata is younger than the refresh window."""
     try:
         retrieved_on = date.fromisoformat(metadata["citations"]["date"])
@@ -251,7 +256,7 @@ def add_crossref_metadata(
     failed = 0
     for doi in sorted(doi_sources):
         cached = cache.get(doi)
-        if cached and crossref_metadata_is_fresh(
+        if cached and source_metadata_is_fresh(
             cached["metadata"], today, refresh_days
         ):
             records[doi] = cached
@@ -292,6 +297,174 @@ def add_crossref_metadata(
     print(
         f"Crossref metadata for {len(doi_sources)} unique DOIs: "
         f"{refreshed} refreshed, {cache_hits} cached, {failed} unavailable."
+    )
+    return index_catalog
+
+
+def load_semantic_scholar_cache(path=SPECTRAL_INDICES_JSON):
+    """Load generated Semantic Scholar metadata by exact source link."""
+    if not path.exists():
+        return {}
+    try:
+        previous_indices = load_json(path)["SpectralIndices"]
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        return {}
+
+    cache = {}
+    for index in previous_indices.values():
+        source = index.get("source", {})
+        identifiers = source.get("source_link_semantic_scholar")
+        metadata = source.get("source_metadata")
+        source_link = source.get("source_link")
+        if (
+            source_link
+            and isinstance(identifiers, dict)
+            and identifiers
+            and isinstance(metadata, dict)
+            and metadata.get("source") == "semantic_scholar"
+        ):
+            metadata = dict(metadata)
+            source_type = metadata.pop("type", None)
+            cache[source_link] = {
+                "metadata": metadata,
+                "source_type": source_type,
+            }
+    return cache
+
+
+def add_semantic_scholar_metadata(
+    index_catalog,
+    fetcher=None,
+    today=None,
+    cache_path=SPECTRAL_INDICES_JSON,
+    refresh_days=SEMANTIC_SCHOLAR_REFRESH_DAYS,
+):
+    """Enrich eligible Crossref fallbacks through Semantic Scholar batches."""
+    today = today or date.today()
+    cache = load_semantic_scholar_cache(cache_path)
+    groups = {}
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        source = spectral_index.source
+        group = groups.setdefault(
+            source.source_link,
+            {
+                "sources": [],
+                "paper_ids": [],
+                "corpus_ids": [],
+            },
+        )
+        group["sources"].append((key, source))
+        identifiers = source.source_link_semantic_scholar
+        if identifiers is None:
+            continue
+        if (
+            identifiers.paper_id
+            and identifiers.paper_id not in group["paper_ids"]
+        ):
+            group["paper_ids"].append(identifiers.paper_id)
+        if identifiers.corpus_id is not None:
+            corpus_id = f"CorpusId:{identifiers.corpus_id}"
+            if corpus_id not in group["corpus_ids"]:
+                group["corpus_ids"].append(corpus_id)
+
+    targets = {
+        source_link: group
+        for source_link, group in groups.items()
+        if (group["paper_ids"] or group["corpus_ids"])
+        and not any(
+            source.source_metadata.source == "crossref"
+            for _, source in group["sources"]
+        )
+    }
+
+    if fetcher is None:
+        client = SemanticScholarClient(
+            api_key=os.environ.get("SEMANTIC_SCHOLAR_API_KEY")
+        )
+        fetcher = client.fetch_papers
+
+    records = {}
+    pending = {}
+    cached_source_links = set()
+    refreshed_source_links = set()
+    for source_link, group in targets.items():
+        cached = cache.get(source_link)
+        if cached and source_metadata_is_fresh(
+            cached["metadata"], today, refresh_days
+        ):
+            records[source_link] = cached
+            cached_source_links.add(source_link)
+        else:
+            pending[source_link] = group
+
+    paper_ids = sorted(
+        {
+            group["paper_ids"][0]
+            for group in pending.values()
+            if group["paper_ids"]
+        }
+    )
+    paper_results = dict(zip(paper_ids, fetcher(paper_ids))) if paper_ids else {}
+
+    unresolved = {}
+    for source_link, group in pending.items():
+        paper = (
+            paper_results.get(group["paper_ids"][0])
+            if group["paper_ids"]
+            else None
+        )
+        if paper is not None:
+            metadata, source_type = normalize_semantic_scholar_paper(paper, today)
+            records[source_link] = {
+                "metadata": metadata,
+                "source_type": source_type,
+            }
+            refreshed_source_links.add(source_link)
+        else:
+            unresolved[source_link] = group
+
+    corpus_ids = sorted(
+        {
+            group["corpus_ids"][0]
+            for group in unresolved.values()
+            if group["corpus_ids"]
+        }
+    )
+    corpus_results = (
+        dict(zip(corpus_ids, fetcher(corpus_ids))) if corpus_ids else {}
+    )
+
+    unavailable = 0
+    for source_link, group in unresolved.items():
+        paper = (
+            corpus_results.get(group["corpus_ids"][0])
+            if group["corpus_ids"]
+            else None
+        )
+        if paper is not None:
+            metadata, source_type = normalize_semantic_scholar_paper(paper, today)
+            records[source_link] = {
+                "metadata": metadata,
+                "source_type": source_type,
+            }
+            refreshed_source_links.add(source_link)
+        elif source_link in cache:
+            records[source_link] = cache[source_link]
+            cached_source_links.add(source_link)
+        else:
+            unavailable += 1
+
+    for source_link, record in records.items():
+        for _, source in targets[source_link]["sources"]:
+            source.set_source_metadata(
+                record["metadata"],
+                inferred_source_type=record.get("source_type"),
+            )
+
+    print(
+        f"Semantic Scholar metadata for {len(targets)} unique sources: "
+        f"{len(refreshed_source_links)} refreshed, "
+        f"{len(cached_source_links)} cached, {unavailable} unavailable."
     )
     return index_catalog
 
@@ -399,6 +572,7 @@ def main():
     index_catalog = add_formula_metadata(spindex)
     index_catalog = add_source_metadata(index_catalog)
     index_catalog = add_crossref_metadata(index_catalog)
+    index_catalog = add_semantic_scholar_metadata(index_catalog)
     index_catalog = add_source_companions(index_catalog)
     bibtex_entries = add_reference_metadata(
         index_catalog, cache_path=SPECTRAL_INDICES_JSON

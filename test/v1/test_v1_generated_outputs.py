@@ -74,7 +74,12 @@ def test_v1_outputs_contain_generated_source_metadata():
         assert "source_type" not in index["source"]
         metadata = index["source"]["source_metadata"]
         if metadata:
-            assert metadata["source"] in {"contributor", "crossref", "other"}
+            assert metadata["source"] in {
+                "contributor",
+                "crossref",
+                "semantic_scholar",
+                "other",
+            }
 
     for key, index in json_catalogue.items():
         companions = index["source"]["source_companions"]
@@ -95,20 +100,16 @@ def test_v1_outputs_contain_generated_source_metadata():
     assert json_catalogue["EVI"]["source"]["source_metadata"]["type"] == "article"
     assert json_catalogue["SAVI"]["source"]["source_metadata"]["type"] == "article"
     assert (
-        json_catalogue["NDVI"]["source"]["source_metadata"]["type"]
-        == "conference_paper"
-    )
-    assert (
-        json_catalogue["TVI"]["source"]["source_metadata"]["type"]
-        == "conference_paper"
-    )
-    assert (
         json_catalogue["NDVI"]["source"]["source_metadata"]["source"]
-        == "contributor"
+        == "semantic_scholar"
     )
     assert (
         json_catalogue["TVI"]["source"]["source_metadata"]["source"]
-        == "contributor"
+        == "semantic_scholar"
+    )
+    assert (
+        json_catalogue["NDVI"]["source"]["source_metadata"]["citations"]
+        == json_catalogue["TVI"]["source"]["source_metadata"]["citations"]
     )
     assert (
         json_catalogue["EVI"]["source"]["source_metadata"]["source"]

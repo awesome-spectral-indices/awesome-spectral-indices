@@ -111,6 +111,11 @@ submitted through the usual contribution process.
   `source.source_link_semantic_scholar` object for Semantic Scholar paper and
   corpus identifiers, recommended when an index source does not use a DOI
   link.
+- Added Semantic Scholar Academic Graph enrichment as the fallback for
+  non-DOI sources and DOI sources unavailable from Crossref. Paper IDs are
+  resolved before corpus IDs through rate-limited batch requests, and returned
+  publication metadata and citation counts identify `semantic_scholar` as
+  their provider.
 - Added the **v1 Explained** page documenting the current v0/v1 schema
   difference, property meanings, validation rules, generated files, and
   migration status.

@@ -898,7 +898,12 @@
         }
     ],
     "NDTillI": [],
-    "NDVI": [],
+    "NDVI": [
+        {
+            "citation_count": 10265,
+            "date": "2026-08-19"
+        }
+    ],
     "NDVI4RE": [
         {
             "citation_count": 20,
@@ -1550,7 +1555,12 @@
             "date": "2026-08-18"
         }
     ],
-    "TVI": [],
+    "TVI": [
+        {
+            "citation_count": 10265,
+            "date": "2026-08-19"
+        }
+    ],
     "TWI": [
         {
             "citation_count": 16,

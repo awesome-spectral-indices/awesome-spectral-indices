@@ -8792,8 +8792,24 @@
                 "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_metadata": {
-                    "source": "contributor",
-                    "type": "conference_paper"
+                    "authors": [
+                        "J. Rouse",
+                        "R. H. Haas",
+                        "J. A. Schell",
+                        "D. Deering"
+                    ],
+                    "citations": {
+                        "citation_count": 10265,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "J. Rouse, R. H. Haas, J. A. Schell, & D. Deering (1973). Monitoring vegetation systems in the great plains with ERTS. https://ntrs.nasa.gov/citations/19740022614",
+                        "bibtex": "ASI_NDVI"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "Monitoring vegetation systems in the great plains with ERTS",
+                    "volume": "1",
+                    "year": 1973
                 }
             }
         },
@@ -15332,8 +15348,24 @@
                 "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_metadata": {
-                    "source": "contributor",
-                    "type": "conference_paper"
+                    "authors": [
+                        "J. Rouse",
+                        "R. H. Haas",
+                        "J. A. Schell",
+                        "D. Deering"
+                    ],
+                    "citations": {
+                        "citation_count": 10265,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "J. Rouse, R. H. Haas, J. A. Schell, & D. Deering (1973). Monitoring vegetation systems in the great plains with ERTS. https://ntrs.nasa.gov/citations/19740022614",
+                        "bibtex": "ASI_NDVI"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "Monitoring vegetation systems in the great plains with ERTS",
+                    "volume": "1",
+                    "year": 1973
                 }
             }
         },

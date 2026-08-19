@@ -29,6 +29,7 @@ jobs:
       - name: generate v1
         env:
           CROSSREF_EMAIL: ${{ secrets.CROSSREF_EMAIL }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: |
           python -m src.v1.main_v1
       - name: generate VitePress pages

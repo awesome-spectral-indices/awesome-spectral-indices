@@ -1,5 +1,6 @@
 import json
 from datetime import date
+from io import BytesIO
 
 import pytest
 from pydantic import ValidationError
@@ -9,9 +10,16 @@ from src.v1.crossref import extract_doi, normalize_crossref_work
 from src.v1.indices import SpectralIndices, spindex
 from src.v1.main_v1 import (
     add_crossref_metadata,
+    add_semantic_scholar_metadata,
     add_source_companions,
     add_source_metadata,
     write_citation_history,
+)
+from src.v1.semantic_scholar import (
+    SEMANTIC_SCHOLAR_BATCH_SIZE,
+    SEMANTIC_SCHOLAR_INTERVAL,
+    SemanticScholarClient,
+    normalize_semantic_scholar_paper,
 )
 from src.v1.references import (
     add_reference_metadata,
@@ -160,6 +168,9 @@ def test_source_metadata_validates_generated_values():
             citations={"citation_count": -1, "date": "2026-08-18"}
         )
 
+    semantic_scholar = SourceMetadata(source="semantic_scholar")
+    assert semantic_scholar.source == "semantic_scholar"
+
 
 def test_crossref_work_normalization_and_source_type_mapping():
     message = {
@@ -191,6 +202,218 @@ def test_crossref_work_normalization_and_source_type_mapping():
         "source": "crossref",
     }
     assert source_type == "conference_paper"
+
+
+def test_semantic_scholar_paper_normalization_and_source_type_mapping():
+    metadata, source_type = normalize_semantic_scholar_paper(
+        {
+            "title": "A spectral-index publication",
+            "venue": "Fallback venue",
+            "journal": {
+                "name": "Remote Sensing Journal",
+                "volume": "12",
+            },
+            "authors": [
+                {"authorId": "1", "name": "Ada Lovelace"},
+                {"authorId": "2", "name": "Grace Hopper"},
+            ],
+            "year": 2025,
+            "citationCount": 42,
+            "publicationTypes": ["Review", "JournalArticle"],
+        },
+        retrieved_on=date(2026, 8, 19),
+    )
+
+    assert metadata == {
+        "title": "A spectral-index publication",
+        "journal": "Remote Sensing Journal",
+        "volume": "12",
+        "authors": ["Ada Lovelace", "Grace Hopper"],
+        "year": 2025,
+        "citations": {"citation_count": 42, "date": "2026-08-19"},
+        "source": "semantic_scholar",
+    }
+    assert source_type == "article"
+
+
+def test_semantic_scholar_batch_client_uses_api_key_and_rate_limit():
+    requests = []
+    delays = []
+
+    def opener(request, timeout):
+        requests.append((request, timeout))
+        ids = json.loads(request.data)["ids"]
+        return BytesIO(
+            json.dumps([{"paperId": paper_id} for paper_id in ids]).encode()
+        )
+
+    client = SemanticScholarClient(
+        api_key="secret-key",
+        opener=opener,
+        sleeper=delays.append,
+    )
+    ids = [f"paper{number}" for number in range(SEMANTIC_SCHOLAR_BATCH_SIZE + 1)]
+
+    papers = client.fetch_papers(ids)
+
+    assert [paper["paperId"] for paper in papers] == ids
+    assert len(requests) == 2
+    assert all(request.method == "POST" for request, _ in requests)
+    assert all(
+        dict(request.header_items()).get("X-api-key") == "secret-key"
+        for request, _ in requests
+    )
+    assert delays and delays[-1] > 1.0
+    assert SEMANTIC_SCHOLAR_INTERVAL > 1.0
+
+
+def test_semantic_scholar_falls_back_from_paper_id_to_corpus_id(tmp_path):
+    def make_index(acronym, source):
+        return SpectralIndex(
+            acronym=acronym,
+            name=f"{acronym} name",
+            formula="N",
+            source=source,
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-19",
+            contributor="https://github.com/example",
+        )
+
+    shared_link = "https://example.com/shared-source"
+    catalogue = SpectralIndices(
+        SpectralIndices={
+            "ONE": make_index(
+                "ONE",
+                {
+                    "source_link": shared_link,
+                    "source_link_semantic_scholar": {
+                        "paper_id": "missingpaper",
+                        "corpus_id": 123,
+                    },
+                },
+            ),
+            "TWO": make_index("TWO", {"source_link": shared_link}),
+            "DOI_FALLBACK": make_index(
+                "DOI_FALLBACK",
+                {
+                    "source_link": "https://doi.org/10.1234/unavailable",
+                    "source_link_semantic_scholar": {"paper_id": "foundpaper"},
+                },
+            ),
+            "CROSSREF": make_index(
+                "CROSSREF",
+                {
+                    "source_link": "https://doi.org/10.1234/available",
+                    "source_link_semantic_scholar": {"paper_id": "unusedpaper"},
+                },
+            ),
+        }
+    )
+    catalogue.SpectralIndices["CROSSREF"].source.set_source_metadata(
+        {"title": "Crossref record", "source": "crossref"},
+        inferred_source_type="article",
+    )
+    calls = []
+
+    def fetcher(ids):
+        calls.append(ids)
+        records = {
+            "missingpaper": None,
+            "foundpaper": {
+                "title": "DOI fallback paper",
+                "citationCount": 9,
+                "publicationTypes": ["Conference"],
+            },
+            "CorpusId:123": {
+                "title": "Shared source paper",
+                "citationCount": 7,
+                "publicationTypes": ["JournalArticle"],
+            },
+        }
+        return [records.get(identifier) for identifier in ids]
+
+    add_semantic_scholar_metadata(
+        catalogue,
+        fetcher=fetcher,
+        today=date(2026, 8, 19),
+        cache_path=tmp_path / "missing.json",
+    )
+
+    assert calls == [["foundpaper", "missingpaper"], ["CorpusId:123"]]
+    assert (
+        catalogue.SpectralIndices["ONE"].source.source_metadata.title
+        == "Shared source paper"
+    )
+    assert (
+        catalogue.SpectralIndices["TWO"].source.source_metadata.source
+        == "semantic_scholar"
+    )
+    assert catalogue.SpectralIndices["ONE"].source.source_metadata.type == "article"
+    assert (
+        catalogue.SpectralIndices["DOI_FALLBACK"].source.source_metadata.type
+        == "conference_paper"
+    )
+    assert (
+        catalogue.SpectralIndices["CROSSREF"].source.source_metadata.title
+        == "Crossref record"
+    )
+
+
+def test_semantic_scholar_reuses_fresh_generated_metadata(tmp_path):
+    source_link = "https://example.com/cached-source"
+    cache_path = tmp_path / "catalogue.json"
+    cache_path.write_text(
+        json.dumps(
+            {
+                "SpectralIndices": {
+                    "CACHED": {
+                        "source": {
+                            "source_link": source_link,
+                            "source_link_semantic_scholar": {
+                                "paper_id": "cachedpaper"
+                            },
+                            "source_metadata": {
+                                "type": "article",
+                                "title": "Cached paper",
+                                "citations": {
+                                    "citation_count": 5,
+                                    "date": "2026-08-18",
+                                },
+                                "source": "semantic_scholar",
+                            },
+                        }
+                    }
+                }
+            }
+        )
+    )
+    index = SpectralIndex(
+        acronym="CACHED",
+        name="Cached index",
+        formula="N",
+        source={
+            "source_link": source_link,
+            "source_link_semantic_scholar": {"paper_id": "cachedpaper"},
+        },
+        classification={"application_domain": "vegetation"},
+        date_of_addition="2026-08-19",
+        contributor="https://github.com/example",
+    )
+    catalogue = SpectralIndices(SpectralIndices={"CACHED": index})
+
+    def unexpected_fetch(ids):
+        raise AssertionError(f"Unexpected Semantic Scholar request: {ids}")
+
+    add_semantic_scholar_metadata(
+        catalogue,
+        fetcher=unexpected_fetch,
+        today=date(2026, 8, 19),
+        cache_path=cache_path,
+    )
+
+    assert index.source.source_metadata.title == "Cached paper"
+    assert index.source.source_metadata.type == "article"
+    assert index.source.source_metadata.source == "semantic_scholar"
 
 
 def test_crossref_generation_reuses_each_doi_and_overwrites_contributed_metadata(
