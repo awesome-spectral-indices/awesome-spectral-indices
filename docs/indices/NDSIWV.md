@@ -13,7 +13,7 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4"
+      link: "https://doi.org/10.1117/12.917717"
 ---
 
 ## Formula

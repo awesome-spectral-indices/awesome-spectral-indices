@@ -1351,6 +1351,61 @@
                 }
             }
         },
+        "CCRI": {
+            "acronym": "CCRI",
+            "bands": [
+                "R720",
+                "R521",
+                "R750",
+                "R705"
+            ],
+            "classification": {
+                "application_domain": "vegetation",
+                "family": null,
+                "sensing_modalities": [
+                    "hyperspectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/davemlz",
+            "date_of_addition": "2026-08-19",
+            "external_variables": {},
+            "formula": "((R720-R521)/R521)/((R750-R705)/R705)",
+            "name": "Carotenoid-Chlorophyll Ratio Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.1016/j.jag.2018.10.012",
+                "source_link_semantic_scholar": null,
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_metadata": {
+                    "authors": [
+                        "Xianfeng Zhou",
+                        "Wenjiang Huang",
+                        "Jingcheng Zhang",
+                        "Weiping Kong",
+                        "Raffaele Casa",
+                        "Yanbo Huang"
+                    ],
+                    "citations": {
+                        "citation_count": 32,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "Xianfeng Zhou, Wenjiang Huang, Jingcheng Zhang, Weiping Kong, Raffaele Casa, & Yanbo Huang (2019). A novel combined spectral index for estimating the ratio of carotenoid to chlorophyll content to monitor crop physiological and phenological status. International Journal of Applied Earth Observation and Geoinformation, 76. https://doi.org/10.1016/j.jag.2018.10.012",
+                        "bibtex": "ASI_CCRI"
+                    },
+                    "journal": "International Journal of Applied Earth Observation and Geoinformation",
+                    "source": "crossref",
+                    "title": "A novel combined spectral index for estimating the ratio of carotenoid to chlorophyll content to monitor crop physiological and phenological status",
+                    "type": "article",
+                    "volume": "76",
+                    "year": 2019
+                }
+            }
+        },
         "CI1SWIR": {
             "acronym": "CI1SWIR",
             "bands": [
@@ -8225,10 +8280,30 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 8824779,
+                    "paper_id": "6b064bc14e76cb57a40b4f14a3b61630a1d6a26a"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "Cao Yun-gang",
+                        "Yan Li-juan",
+                        "Zheng Ze-zhong"
+                    ],
+                    "citations": {
+                        "citation_count": 23,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "Cao Yun-gang, Yan Li-juan, & Zheng Ze-zhong (2008). EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES. https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
+                        "bibtex": "ASI_NDPolI"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES",
+                    "year": 2008
+                }
             }
         },
         "NDPonI": {
@@ -8516,11 +8591,32 @@
                 "source_companions": [
                     "NHFD"
                 ],
-                "source_link": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
-                "source_link_semantic_scholar": null,
+                "source_link": "https://doi.org/10.1117/12.917717",
+                "source_link_semantic_scholar": {
+                    "corpus_id": 55635449,
+                    "paper_id": "5e5063ccc4ee76b56b721c866e871d47a77f9fb4"
+                },
                 "source_link_status": "operational",
-                "source_link_type": "other",
-                "source_metadata": {}
+                "source_link_type": "doi",
+                "source_metadata": {
+                    "authors": [
+                        "Antonio F. Wolf"
+                    ],
+                    "citations": {
+                        "citation_count": 61,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "Antonio F. Wolf (2012). Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios. SPIE Proceedings, 8390. https://doi.org/10.1117/12.917717",
+                        "bibtex": "ASI_NDSIWV"
+                    },
+                    "journal": "SPIE Proceedings",
+                    "source": "crossref",
+                    "title": "Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios",
+                    "type": "conference_paper",
+                    "volume": "8390",
+                    "year": 2012
+                }
             }
         },
         "NDSInw": {
@@ -9492,11 +9588,32 @@
                 "source_companions": [
                     "NDSIWV"
                 ],
-                "source_link": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
-                "source_link_semantic_scholar": null,
+                "source_link": "https://doi.org/10.1117/12.917717",
+                "source_link_semantic_scholar": {
+                    "corpus_id": 55635449,
+                    "paper_id": "5e5063ccc4ee76b56b721c866e871d47a77f9fb4"
+                },
                 "source_link_status": "operational",
-                "source_link_type": "other",
-                "source_metadata": {}
+                "source_link_type": "doi",
+                "source_metadata": {
+                    "authors": [
+                        "Antonio F. Wolf"
+                    ],
+                    "citations": {
+                        "citation_count": 61,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "Antonio F. Wolf (2012). Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios. SPIE Proceedings, 8390. https://doi.org/10.1117/12.917717",
+                        "bibtex": "ASI_NDSIWV"
+                    },
+                    "journal": "SPIE Proceedings",
+                    "source": "crossref",
+                    "title": "Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios",
+                    "type": "conference_paper",
+                    "volume": "8390",
+                    "year": 2012
+                }
             }
         },
         "NIRv": {
@@ -12410,10 +12527,29 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.documentation.ird.fr/hor/fdi:34390",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 134833301,
+                    "paper_id": "b55be2da95cb9970bfa93f9c52c093039d9506b0"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "R. Escadafal",
+                        "A. Huete"
+                    ],
+                    "citations": {
+                        "citation_count": 48,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "R. Escadafal, & A. Huete (1991). Improvement in remote sensing of low vegetation cover in arid regions by correcting vegetation indices for soil \"noise\". https://www.documentation.ird.fr/hor/fdi:34390",
+                        "bibtex": "ASI_RI"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "Improvement in remote sensing of low vegetation cover in arid regions by correcting vegetation indices for soil \"noise\"",
+                    "year": 1991
+                }
             }
         },
         "RI4XS": {
@@ -12686,7 +12822,7 @@
                 "source_companions": [],
                 "source_link": "https://popo.jpl.nasa.gov/pub/docs/workshops/98_docs/37.pdf",
                 "source_link_semantic_scholar": null,
-                "source_link_status": "operational",
+                "source_link_status": "down",
                 "source_link_type": "other",
                 "source_metadata": {
                     "source": "contributor",
@@ -14551,7 +14687,22 @@
                 "source_link_semantic_scholar": null,
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "Marta Milczarek",
+                        "Anna Robak",
+                        "Alicja Gadawska"
+                    ],
+                    "how_to_cite": {
+                        "apa": "Marta Milczarek, Anna Robak, & Alicja Gadawska (2017). Sentinel Water Mask (SWM) - new index for water detection on Sentinel-2 images. 7th Advanced Training Course on Land Remote Sensing, Szent Istv\u00e1n University, G\u00f6d\u00f6ll\u0151, Hungary 4-9 September 2017. https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
+                        "bibtex": "ASI_SWM"
+                    },
+                    "journal": "7th Advanced Training Course on Land Remote Sensing, Szent Istv\u00e1n University, G\u00f6d\u00f6ll\u0151, Hungary 4-9 September 2017",
+                    "source": "contributor",
+                    "title": "Sentinel Water Mask (SWM) - new index for water detection on Sentinel-2 images",
+                    "type": "poster",
+                    "year": 2017
+                }
             }
         },
         "SeLI": {

@@ -873,7 +873,13 @@ spindex = SpectralIndices(
             acronym="NHFD",
             name="Non-Homogeneous Feature Difference",
             formula="(RE1 - A) / (RE1 + A)",
-            source={"source_link": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4"},
+            source={
+                "source_link": "https://doi.org/10.1117/12.917717",
+                "source_link_semantic_scholar": {
+                    "paper_id": "5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
+                    "corpus_id": 55635449
+                },
+            },
             classification={"application_domain": "urban"},
             date_of_addition="2021-09-17",
             contributor="https://github.com/davemlz",
@@ -1822,7 +1828,13 @@ spindex = SpectralIndices(
             acronym="RI",
             name="Redness Index",
             formula="(R - G)/(R + G)",
-            source={"source_link": "https://www.documentation.ird.fr/hor/fdi:34390"},
+            source={
+                "source_link": "https://www.documentation.ird.fr/hor/fdi:34390",
+                "source_link_semantic_scholar": {
+                    "paper_id": "b55be2da95cb9970bfa93f9c52c093039d9506b0",
+                    "corpus_id": 134833301
+                },
+            },
             classification={"application_domain": "vegetation"},
             date_of_addition="2022-04-09",
             contributor="https://github.com/davemlz",
@@ -2065,7 +2077,13 @@ spindex = SpectralIndices(
             acronym="NDPolI",
             name="Normalized Difference Polarization Index",
             formula="(VV - VH)/(VV + VH)",
-            source={"source_link": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf"},
+            source={
+                "source_link": "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf",
+                "source_link_semantic_scholar": {
+                    "paper_id": "6b064bc14e76cb57a40b4f14a3b61630a1d6a26a",
+                    "corpus_id": 8824779
+                },
+            },
             classification={"application_domain": "geology", "family": ["radar"]},
             date_of_addition="2022-04-19",
             contributor="https://github.com/davemlz",
@@ -2137,7 +2155,21 @@ spindex = SpectralIndices(
             acronym="SWM",
             name="Sentinel Water Mask",
             formula="(B + G)/(N + S1)",
-            source={"source_link": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf"},
+            source={
+                "source_link": "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf",
+                "source_metadata": {
+                    "authors": [
+                        "Marta Milczarek",
+                        "Anna Robak",
+                        "Alicja Gadawska"
+                    ],
+                    "journal": "7th Advanced Training Course on Land Remote Sensing, Szent István University, Gödöllő, Hungary 4-9 September 2017",
+                    "source": "contributor",
+                    "title": "Sentinel Water Mask (SWM) - new index for water detection on Sentinel-2 images",
+                    "type": "poster",
+                    "year": 2017
+                }
+            },
             classification={"application_domain": "water"},
             date_of_addition="2022-04-20",
             contributor="https://github.com/davemlz",
@@ -2425,7 +2457,13 @@ spindex = SpectralIndices(
             acronym="NDSIWV",
             name="WorldView Normalized Difference Soil Index",
             formula="(G - Y)/(G + Y)",
-            source={"source_link": "https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4"},
+            source={
+                "source_link": "https://doi.org/10.1117/12.917717",
+                "source_link_semantic_scholar": {
+                    "paper_id": "5e5063ccc4ee76b56b721c866e871d47a77f9fb4",
+                    "corpus_id": 55635449
+                },
+            },
             classification={"application_domain": "soil"},
             date_of_addition="2022-11-20",
             contributor="https://github.com/remi-braun",
@@ -3685,6 +3723,15 @@ spindex = SpectralIndices(
             source={"source_link": "https://doi.org/10.1109/TGRS.2003.812910"},
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-08-12",
+            contributor="https://github.com/davemlz",
+        ),
+        CCRI=SpectralIndex(
+            acronym="CCRI",
+            name="Carotenoid-Chlorophyll Ratio Index",
+            formula="((R720-R521)/R521)/((R750-R705)/R705)",
+            source={"source_link": "https://doi.org/10.1016/j.jag.2018.10.012"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-08-19",
             contributor="https://github.com/davemlz",
         ),
     )

@@ -91,6 +91,8 @@ submitted through the usual contribution process.
 - Added NDVISR (Normalized Difference Vegetation Index with Simple Ratio) and
   SAVISR (Soil-Adjusted Vegetation Index with Simple Ratio) to v1 as
   multispectral vegetation indices.
+- Added CCRI (Carotenoid-Chlorophyll Ratio Index) to v1 as a hyperspectral
+  vegetation index.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
