@@ -1213,7 +1213,13 @@ spindex = SpectralIndices(
             acronym="DpRVIHH",
             name="Dual-Polarized Radar Vegetation Index HH",
             formula="(4.0 * HV)/(HH + HV)",
-            source={"source_link": "https://www.tandfonline.com/doi/abs/10.5589/m12-043"},
+            source={
+                "source_link": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
+                "source_link_semantic_scholar": {
+                    "paper_id": "cdbfdeb645107d89267569095c569faa8b922c7c",
+                    "corpus_id": 127767016
+                },
+            },
             classification={"application_domain": "vegetation", "family": ["radar"]},
             date_of_addition="2021-12-25",
             contributor="https://github.com/davemlz",
@@ -1517,7 +1523,13 @@ spindex = SpectralIndices(
             acronym="AVI",
             name="Advanced Vegetation Index",
             formula="(N * (1.0 - R) * (N - R)) ** (1/3)",
-            source={"source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping"},
+            source={
+                "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                "source_link_semantic_scholar": {
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e",
+                    "corpus_id": 88163464
+                },
+            },
             classification={"application_domain": "vegetation"},
             date_of_addition="2022-04-08",
             contributor="https://github.com/davemlz",
@@ -1526,7 +1538,13 @@ spindex = SpectralIndices(
             acronym="BI",
             name="Bare Soil Index",
             formula="((S1 + R) - (N + B))/((S1 + R) + (N + B))",
-            source={"source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping"},
+            source={
+                "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                "source_link_semantic_scholar": {
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e",
+                    "corpus_id": 88163464
+                },
+            },
             classification={"application_domain": "soil"},
             date_of_addition="2022-04-08",
             contributor="https://github.com/davemlz",
@@ -1535,7 +1553,13 @@ spindex = SpectralIndices(
             acronym="SI",
             name="Shadow Index",
             formula="((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)",
-            source={"source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping"},
+            source={
+                "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                "source_link_semantic_scholar": {
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e",
+                    "corpus_id": 88163464
+                },
+            },
             classification={"application_domain": "vegetation"},
             date_of_addition="2022-04-08",
             contributor="https://github.com/davemlz",
@@ -1678,6 +1702,10 @@ spindex = SpectralIndices(
             formula="(((N - R)/(N + R)) + 0.5) ** 0.5",
             source={
                 "source_link": "https://ntrs.nasa.gov/citations/19740022614",
+                "source_link_semantic_scholar": {
+                    "paper_id": "fb2f60fe0fe2874e5cbf927a2556d719c32eac29",
+                    "corpus_id": 133358670
+                },
                 "source_metadata": {"type": "conference_paper", "source": "contributor"},
             },
             classification={"application_domain": "vegetation"},
@@ -1828,12 +1856,18 @@ spindex = SpectralIndices(
                     "suggested_range": [0.0,1.0],
                     "suggested_values":{
                         "High density vegetation": 1.0,
-                        "Medium density vegetation": 1.0,
+                        "Medium density vegetation": 0.5,
                         "Low density vegetation": 0.0
                     }
                 },
             },
-            source={"source_link": "https://hdl.handle.net/1959.11/29500"},
+            source={
+                "source_link": "https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images",
+                "source_link_semantic_scholar": {
+                    "paper_id": "702856ed6a8b14857bafa31f91b2e02d8f31126b",
+                    "corpus_id": 22466600
+                }
+            },
             classification={"application_domain": "urban"},
             date_of_addition="2022-04-18",
             contributor="https://github.com/davemlz",
@@ -2190,7 +2224,13 @@ spindex = SpectralIndices(
             acronym="NBAI",
             name="Normalized Built-up Area Index",
             formula="(S2 - S1/G)/(S2 + S1/G)",
-            source={"source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf"},
+            source={
+                "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+                "source_link_semantic_scholar": {
+                    "paper_id": "4d42d2e5ae0c9e5bce9535124a1079fc0ead7d33",
+                    "corpus_id": 130536174
+                },
+            },
             classification={"application_domain": "urban"},
             date_of_addition="2022-09-22",
             contributor="https://github.com/davemlz",
@@ -2199,7 +2239,13 @@ spindex = SpectralIndices(
             acronym="BRBA",
             name="Band Ratio for Built-up Area",
             formula="R/S1",
-            source={"source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf"},
+            source={
+                "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+                "source_link_semantic_scholar": {
+                    "paper_id": "4d42d2e5ae0c9e5bce9535124a1079fc0ead7d33",
+                    "corpus_id": 130536174
+                },
+            },
             classification={"application_domain": "urban"},
             date_of_addition="2022-09-22",
             contributor="https://github.com/davemlz",
@@ -2991,7 +3037,13 @@ spindex = SpectralIndices(
             acronym="AshburnVI",
             name="Ashburn Vegetation Index",
             formula="2.0 * N2 - R",
-            source={"source_link": "https://ntrs.nasa.gov/citations/19800007243"},
+            source={
+                "source_link": "https://ntrs.nasa.gov/citations/19800007243",
+                "source_link_semantic_scholar": {
+                    "paper_id": "61d68ec6ea172457a17810a998edaefca0c0bc9c",
+                    "corpus_id": 128035828
+                },
+            },
             classification={"application_domain": "vegetation"},
             date_of_addition="2026-07-04",
             contributor="https://github.com/MartinuzziFrancesco",

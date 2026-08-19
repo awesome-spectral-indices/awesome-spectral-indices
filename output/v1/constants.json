@@ -58,7 +58,7 @@
             "suggested_values": {
                 "High density vegetation": 1.0,
                 "Low density vegetation": 0.0,
-                "Medium density vegetation": 1.0
+                "Medium density vegetation": 0.5
             }
         },
         "SARVI": {

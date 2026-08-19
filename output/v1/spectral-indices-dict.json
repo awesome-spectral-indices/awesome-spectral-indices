@@ -431,10 +431,32 @@
                     "SI"
                 ],
                 "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 88163464,
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "A. Rikimaru",
+                        "P. Roy",
+                        "S. Miyatake"
+                    ],
+                    "citations": {
+                        "citation_count": 443,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "A. Rikimaru, P. Roy, & S. Miyatake (2002). Tropical forest cover density mapping. Tropical Ecology, 43. https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                        "bibtex": "ASI_AVI"
+                    },
+                    "journal": "Tropical Ecology",
+                    "source": "semantic_scholar",
+                    "title": "Tropical forest cover density mapping",
+                    "volume": "43",
+                    "year": 2002
+                }
             }
         },
         "AWEInsh": {
@@ -572,10 +594,28 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://ntrs.nasa.gov/citations/19800007243",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 128035828,
+                    "paper_id": "61d68ec6ea172457a17810a998edaefca0c0bc9c"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "P. Ashburn"
+                    ],
+                    "citations": {
+                        "citation_count": 40,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "P. Ashburn (1979). The vegetative index number and crop identification. https://ntrs.nasa.gov/citations/19800007243",
+                        "bibtex": "ASI_AshburnVI"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "The vegetative index number and crop identification",
+                    "year": 1979
+                }
             }
         },
         "BAI": {
@@ -792,10 +832,32 @@
                     "SI"
                 ],
                 "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 88163464,
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "A. Rikimaru",
+                        "P. Roy",
+                        "S. Miyatake"
+                    ],
+                    "citations": {
+                        "citation_count": 443,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "A. Rikimaru, P. Roy, & S. Miyatake (2002). Tropical forest cover density mapping. Tropical Ecology, 43. https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                        "bibtex": "ASI_AVI"
+                    },
+                    "journal": "Tropical Ecology",
+                    "source": "semantic_scholar",
+                    "title": "Tropical forest cover density mapping",
+                    "volume": "43",
+                    "year": 2002
+                }
             }
         },
         "BITM": {
@@ -1044,10 +1106,28 @@
                     "NBAI"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 130536174,
+                    "paper_id": "4d42d2e5ae0c9e5bce9535124a1079fc0ead7d33"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "W. Muhammad"
+                    ],
+                    "citations": {
+                        "citation_count": 85,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "W. Muhammad (2012). Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data. https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+                        "bibtex": "ASI_BRBA"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data",
+                    "year": 2012
+                }
             }
         },
         "BWDRVI": {
@@ -2784,10 +2864,32 @@
             "source": {
                 "source_companions": [],
                 "source_link": "https://www.tandfonline.com/doi/abs/10.5589/m12-043",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 127767016,
+                    "paper_id": "cdbfdeb645107d89267569095c569faa8b922c7c"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "M\u00e9lanie Trudel",
+                        "F. Charbonneau",
+                        "R. Leconte"
+                    ],
+                    "citations": {
+                        "citation_count": 106,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "M\u00e9lanie Trudel, F. Charbonneau, & R. Leconte (2012). Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields. Canadian Journal of Remote Sensing, 38. https://www.tandfonline.com/doi/abs/10.5589/m12-043",
+                        "bibtex": "ASI_DpRVIHH"
+                    },
+                    "journal": "Canadian Journal of Remote Sensing",
+                    "source": "semantic_scholar",
+                    "title": "Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields",
+                    "volume": "38",
+                    "year": 2012
+                }
             }
         },
         "DpRVIVV": {
@@ -6498,10 +6600,28 @@
                     "BRBA"
                 ],
                 "source_link": "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 130536174,
+                    "paper_id": "4d42d2e5ae0c9e5bce9535124a1079fc0ead7d33"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "W. Muhammad"
+                    ],
+                    "citations": {
+                        "citation_count": 85,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "W. Muhammad (2012). Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data. https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf",
+                        "bibtex": "ASI_BRBA"
+                    },
+                    "source": "semantic_scholar",
+                    "title": "Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data",
+                    "year": 2012
+                }
             }
         },
         "NBLI": {
@@ -7067,7 +7187,7 @@
                     "suggested_values": {
                         "High density vegetation": 1.0,
                         "Low density vegetation": 0.0,
-                        "Medium density vegetation": 1.0
+                        "Medium density vegetation": 0.5
                     }
                 }
             },
@@ -7080,11 +7200,33 @@
             "reductions": {},
             "source": {
                 "source_companions": [],
-                "source_link": "https://hdl.handle.net/1959.11/29500",
-                "source_link_semantic_scholar": null,
+                "source_link": "https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images",
+                "source_link_semantic_scholar": {
+                    "corpus_id": 22466600,
+                    "paper_id": "702856ed6a8b14857bafa31f91b2e02d8f31126b"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "Priyakant Sinha",
+                        "N. K. Verma",
+                        "E. Ayele"
+                    ],
+                    "citations": {
+                        "citation_count": 78,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "Priyakant Sinha, N. K. Verma, & E. Ayele (2016). Urban Built-up Area Extraction and Change Detection of Adama Municipal Area using Time-Series Landsat Images. International Journal of Advanced Remote Sensing and GIS, 5. https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images",
+                        "bibtex": "ASI_NBUI"
+                    },
+                    "journal": "International Journal of Advanced Remote Sensing and GIS",
+                    "source": "semantic_scholar",
+                    "title": "Urban Built-up Area Extraction and Change Detection of Adama Municipal Area using Time-Series Landsat Images",
+                    "volume": "5",
+                    "year": 2016
+                }
             }
         },
         "ND705": {
@@ -13626,10 +13768,32 @@
                     "BI"
                 ],
                 "source_link": "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 88163464,
+                    "paper_id": "076b1060b928d1bf7a4ae1107ec82b291867c61e"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
-                "source_metadata": {}
+                "source_metadata": {
+                    "authors": [
+                        "A. Rikimaru",
+                        "P. Roy",
+                        "S. Miyatake"
+                    ],
+                    "citations": {
+                        "citation_count": 443,
+                        "date": "2026-08-19"
+                    },
+                    "how_to_cite": {
+                        "apa": "A. Rikimaru, P. Roy, & S. Miyatake (2002). Tropical forest cover density mapping. Tropical Ecology, 43. https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping",
+                        "bibtex": "ASI_AVI"
+                    },
+                    "journal": "Tropical Ecology",
+                    "source": "semantic_scholar",
+                    "title": "Tropical forest cover density mapping",
+                    "volume": "43",
+                    "year": 2002
+                }
             }
         },
         "SIPI": {
@@ -15344,7 +15508,10 @@
                     "NDVI"
                 ],
                 "source_link": "https://ntrs.nasa.gov/citations/19740022614",
-                "source_link_semantic_scholar": null,
+                "source_link_semantic_scholar": {
+                    "corpus_id": 133358670,
+                    "paper_id": "fb2f60fe0fe2874e5cbf927a2556d719c32eac29"
+                },
                 "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_metadata": {

@@ -41,7 +41,12 @@
             "date": "2026-08-18"
         }
     ],
-    "AVI": [],
+    "AVI": [
+        {
+            "citation_count": 443,
+            "date": "2026-08-19"
+        }
+    ],
     "AWEInsh": [
         {
             "citation_count": 1860,
@@ -54,7 +59,12 @@
             "date": "2026-08-18"
         }
     ],
-    "AshburnVI": [],
+    "AshburnVI": [
+        {
+            "citation_count": 40,
+            "date": "2026-08-19"
+        }
+    ],
     "BAI": [],
     "BAIM": [
         {
@@ -74,7 +84,12 @@
             "date": "2026-08-18"
         }
     ],
-    "BI": [],
+    "BI": [
+        {
+            "citation_count": 443,
+            "date": "2026-08-19"
+        }
+    ],
     "BITM": [
         {
             "citation_count": 174,
@@ -99,7 +114,12 @@
             "date": "2026-08-18"
         }
     ],
-    "BRBA": [],
+    "BRBA": [
+        {
+            "citation_count": 85,
+            "date": "2026-08-19"
+        }
+    ],
     "BWDRVI": [
         {
             "citation_count": 77,
@@ -276,7 +296,12 @@
             "date": "2026-08-18"
         }
     ],
-    "DpRVIHH": [],
+    "DpRVIHH": [
+        {
+            "citation_count": 106,
+            "date": "2026-08-19"
+        }
+    ],
     "DpRVIVV": [
         {
             "citation_count": 231,
@@ -669,7 +694,12 @@
             "date": "2026-08-18"
         }
     ],
-    "NBAI": [],
+    "NBAI": [
+        {
+            "citation_count": 85,
+            "date": "2026-08-19"
+        }
+    ],
     "NBLI": [
         {
             "citation_count": 86,
@@ -725,7 +755,12 @@
             "date": "2026-08-18"
         }
     ],
-    "NBUI": [],
+    "NBUI": [
+        {
+            "citation_count": 78,
+            "date": "2026-08-19"
+        }
+    ],
     "ND705": [
         {
             "citation_count": 2864,
@@ -1388,7 +1423,12 @@
             "date": "2026-08-18"
         }
     ],
-    "SI": [],
+    "SI": [
+        {
+            "citation_count": 443,
+            "date": "2026-08-19"
+        }
+    ],
     "SIPI": [],
     "SLAVI": [],
     "SNDTI": [

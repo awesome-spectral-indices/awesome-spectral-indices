@@ -13,7 +13,7 @@ hero:
       link: /indices/index
     - theme: alt
       text: View source 🡕
-      link: "https://hdl.handle.net/1959.11/29500"
+      link: "https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images"
 ---
 
 ## Formula
@@ -69,7 +69,7 @@ No radar polarizations are used in this index.
 </div>
 <div class="constant-suggestion-row">
 <dt>Medium density vegetation</dt>
-<dd>1.0</dd>
+<dd>0.5</dd>
 </div>
 </dl>
 </div>
