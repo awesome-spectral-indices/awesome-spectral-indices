@@ -24,10 +24,33 @@ const downIndices = indices.filter(
 )
 const operationalCount = totalIndices - downIndices.length
 
-const nonDoiIndices = indices.filter(
-  (index) => index.source.source_link_type !== 'doi'
+function hasSemanticScholarId(index) {
+  const identifiers = index.source.source_link_semantic_scholar
+  return Boolean(
+    identifiers &&
+      (identifiers.paper_id || identifiers.corpus_id != null)
+  )
+}
+
+const doiWithSemanticScholarIndices = indices.filter(
+  (index) =>
+    index.source.source_link_type === 'doi' && hasSemanticScholarId(index)
 )
-const doiCount = totalIndices - nonDoiIndices.length
+const doiOnlyIndices = indices.filter(
+  (index) =>
+    index.source.source_link_type === 'doi' && !hasSemanticScholarId(index)
+)
+const nonDoiWithSemanticScholarIndices = indices.filter(
+  (index) =>
+    index.source.source_link_type !== 'doi' && hasSemanticScholarId(index)
+)
+const noDoiOrSemanticScholarIndices = indices.filter(
+  (index) =>
+    index.source.source_link_type !== 'doi' && !hasSemanticScholarId(index)
+)
+const doiCount = doiWithSemanticScholarIndices.length + doiOnlyIndices.length
+const semanticScholarCount =
+  doiWithSemanticScholarIndices.length + nonDoiWithSemanticScholarIndices.length
 
 const preprintIndices = indices.filter(
   (index) => index.source.source_metadata?.type === 'preprint'
@@ -55,16 +78,32 @@ const linkSegments = [
 
 const doiSegments = [
   {
-    key: 'doi',
-    label: 'DOI link',
-    count: doiCount,
-    className: 'operational'
+    key: 'doi-semantic-scholar',
+    label: 'DOI + Semantic Scholar ID',
+    count: doiWithSemanticScholarIndices.length,
+    className: 'operational',
+    indices: doiWithSemanticScholarIndices
   },
   {
-    key: 'other',
-    label: 'Other link',
-    count: nonDoiIndices.length,
-    className: 'warning'
+    key: 'doi-only',
+    label: 'DOI only',
+    count: doiOnlyIndices.length,
+    className: 'info',
+    indices: doiOnlyIndices
+  },
+  {
+    key: 'semantic-scholar-only',
+    label: 'No DOI + Semantic Scholar ID',
+    count: nonDoiWithSemanticScholarIndices.length,
+    className: 'warning',
+    indices: nonDoiWithSemanticScholarIndices
+  },
+  {
+    key: 'no-doi-or-semantic-scholar',
+    label: 'No DOI or Semantic Scholar ID',
+    count: noDoiOrSemanticScholarIndices.length,
+    className: 'down',
+    indices: noDoiOrSemanticScholarIndices
   }
 ]
 
@@ -199,11 +238,14 @@ function indexLink(key) {
     <header class="status-header">
       <div>
         <h2 id="doi-coverage-heading">DOI Coverage</h2>
-        <p>Use of DOI resolver links for the scientific source of each index.</p>
+        <p>Coverage from DOI links and Semantic Scholar identifiers.</p>
       </div>
-      <span class="status-summary" :class="nonDoiIndices.length ? 'warning' : 'operational'">
+      <span
+        class="status-summary"
+        :class="noDoiOrSemanticScholarIndices.length ? 'warning' : 'operational'"
+      >
         <span class="status-dot" aria-hidden="true"></span>
-        {{ doiCount }} of {{ totalIndices }} use a DOI link
+        {{ doiCount }} DOI · {{ semanticScholarCount }} Semantic Scholar
       </span>
     </header>
 
@@ -237,27 +279,34 @@ function indexLink(key) {
     </div>
 
     <p class="status-note">
-      Other link means the submitted source does not use a DOI resolver. The
-      publication itself may still have a DOI.
+      Semantic Scholar coverage means that at least one paper ID or corpus ID
+      is recorded. No DOI means the submitted source does not use a DOI
+      resolver; the publication itself may still have a DOI.
     </p>
 
     <details id="doi-coverage-details" ref="doiDetails" class="status-details">
       <summary>
-        <span>Indices without DOI source links</span>
-        <strong>{{ nonDoiIndices.length }}</strong>
+        <span>Review DOI and Semantic Scholar coverage</span>
+        <strong>{{ totalIndices }}</strong>
       </summary>
-      <div class="details-content">
-        <p v-if="!nonDoiIndices.length" class="empty-status">
-          Every index uses a DOI source link.
-        </p>
-        <ul v-else class="affected-list">
-          <li v-for="index in nonDoiIndices" :key="index.key">
-            <a :href="indexLink(index.key)">
-              <strong>{{ index.acronym }}</strong>
-              <span>{{ index.name }}</span>
-            </a>
-          </li>
-        </ul>
+      <div class="details-content type-details">
+        <section v-for="segment in doiSegments" :key="segment.key">
+          <h3>
+            {{ segment.label }}
+            <span>{{ segment.count }}</span>
+          </h3>
+          <p v-if="!segment.count" class="empty-status">
+            No indices are currently in this category.
+          </p>
+          <ul v-else class="affected-list long-list">
+            <li v-for="index in segment.indices" :key="index.key">
+              <a :href="indexLink(index.key)">
+                <strong>{{ index.acronym }}</strong>
+                <span>{{ index.name }}</span>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </details>
   </section>
@@ -380,6 +429,7 @@ function indexLink(key) {
 
 .status-dashboard {
   --status-operational: #2e7d32;
+  --status-info: #287aa9;
   --status-warning: #d89b00;
   --status-down: #c62828;
   margin-top: 2rem;
@@ -387,6 +437,7 @@ function indexLink(key) {
 
 :global(.dark) .status-dashboard {
   --status-operational: #4ade80;
+  --status-info: #60a5fa;
   --status-warning: #facc15;
   --status-down: #f87171;
 }
@@ -495,6 +546,11 @@ function indexLink(key) {
 .status-segment.warning,
 .legend-swatch.warning {
   background-color: var(--status-warning);
+}
+
+.status-segment.info,
+.legend-swatch.info {
+  background-color: var(--status-info);
 }
 
 .status-segment.down,
