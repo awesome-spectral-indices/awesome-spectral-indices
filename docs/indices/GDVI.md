@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GDVI"
   text: "Generalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,64 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs6021211"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GDVI,
+  author = {Weicheng Wu},
+  title = {The Generalized Difference Vegetation Index (GDVI) for Dryland Characterization},
+  journal = {Remote Sensing},
+  volume = {6},
+  number = {2},
+  year = {2014},
+  doi = {10.3390/rs6021211},
+  url = {https://doi.org/10.3390/rs6021211}
+}
 ```
-((N ** n) - (R ** n)) / ((N ** n) + (R ** n))
+
+```text [APA]
+Weicheng Wu (2014). The Generalized Difference Vegetation Index (GDVI) for Dryland Characterization. Remote Sensing, 6(2). https://doi.org/10.3390/rs6021211
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">n</code>
-<p>Power operation exponent to amplify the dynamic range.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">2.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Equal GDVI to NDVI</dt>
-<dd>1.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Forest/Maquis (Partly), Irrigated Cropland (Partly), Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land</dt>
-<dd>2.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Wood-Lands (Partly), Citrus/Orchard (Partly), Rainfed Cropland (Partly), Olive Plantation, Rangeland, Desert, Bare Land</dt>
-<dd>3.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Wood-Lands, Citrus/Orchard, Rainfed Cropland, Olive Plantation, Rangeland, Desert, Bare Land</dt>
-<dd>3.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

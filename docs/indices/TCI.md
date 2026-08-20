@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TCI"
   text: "Triangular Chlorophyll Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1109/TGRS.2007.904836"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TCI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_TCI,
+  author = {Driss Haboudane and Nicolas Tremblay and John R. Miller and Philippe Vigneault},
+  title = {Remote Estimation of Crop Chlorophyll Content Using Spectral Indices Derived From Hyperspectral Data},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {46},
+  number = {2},
+  year = {2008},
+  doi = {10.1109/tgrs.2007.904836},
+  url = {https://doi.org/10.1109/tgrs.2007.904836}
+}
 ```
-1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5
+
+```text [APA]
+Driss Haboudane, Nicolas Tremblay, John R. Miller, & Philippe Vigneault (2008). Remote Estimation of Crop Chlorophyll Content Using Spectral Indices Derived From Hyperspectral Data. IEEE Transactions on Geoscience and Remote Sensing, 46(2). https://doi.org/10.1109/tgrs.2007.904836
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

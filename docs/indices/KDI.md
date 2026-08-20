@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "KDI"
   text: "Kochia Detection Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,40 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.mlwa.2026.100914"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="KDI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_KDI,
+  author = {Ali Lotfi and Adam Carter and Thuan Ha and Mohammad Meysami and Kwabena Nketia and Steve Shirtliffe},
+  title = {Interpretable machine learning–Derived spectral indices for vegetation monitoring},
+  journal = {Machine Learning with Applications},
+  volume = {24},
+  year = {2026},
+  doi = {10.1016/j.mlwa.2026.100914},
+  url = {https://doi.org/10.1016/j.mlwa.2026.100914}
+}
 ```
-((N + S1 - RE3)/(N + S1 + RE3)) * ((RE1 - 2.0 * RE3 + N)/(RE1 + 2.0 * RE3 + N))
+
+```text [APA]
+Ali Lotfi, Adam Carter, Thuan Ha, Mohammad Meysami, Kwabena Nketia, & Steve Shirtliffe (2026). Interpretable machine learning–Derived spectral indices for vegetation monitoring. Machine Learning with Applications, 24. https://doi.org/10.1016/j.mlwa.2026.100914
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `RE3`: Red Edge 3.
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`WCI1`](/indices/WCI1)
-- [`WCI2`](/indices/WCI2)
-- [`WCI3`](/indices/WCI3)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-05-27.
+:::
+</IndexDetails>

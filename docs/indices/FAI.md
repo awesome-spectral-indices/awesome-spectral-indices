@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "FAI"
   text: "Floating Algae Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,68 +16,30 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2009.05.012"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="FAI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_FAI,
+  author = {Chuanmin Hu},
+  title = {A novel ocean color index to detect floating algae in the global oceans},
+  journal = {Remote Sensing of Environment},
+  volume = {113},
+  number = {10},
+  year = {2009},
+  doi = {10.1016/j.rse.2009.05.012},
+  url = {https://doi.org/10.1016/j.rse.2009.05.012}
+}
 ```
-N - (R + (S1 - R)*((lambdaN - lambdaR)/(lambdaS1 - lambdaR)))
+
+```text [APA]
+Chuanmin Hu (2009). A novel ocean color index to detect floating algae in the global oceans. Remote Sensing of Environment, 113(10). https://doi.org/10.1016/j.rse.2009.05.012
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaN</code>
-<p>NIR central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaR</code>
-<p>Red central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaS1</code>
-<p>SWIR1 central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/emanuelcastanho on 2024-05-03.
+:::
+</IndexDetails>

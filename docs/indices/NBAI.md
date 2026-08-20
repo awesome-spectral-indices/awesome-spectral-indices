@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "NBAI"
   text: "Normalized Built-up Area Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,26 @@ hero:
       link: "https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBAI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_BRBA,
+  author = {W. Muhammad},
+  title = {Development of New Indices for Extraction of Built-Up Area \& Bare Soil from Landsat Data},
+  year = {2012},
+  url = {https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf}
+}
 ```
-(S2 - S1/G)/(S2 + S1/G)
+
+```text [APA]
+W. Muhammad (2012). Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data. https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`BRBA`](/indices/BRBA)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

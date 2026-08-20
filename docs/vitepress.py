@@ -7,7 +7,7 @@ import re
 import shutil
 from html import escape
 from pathlib import Path
-from urllib.parse import quote, urlsplit
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 
@@ -15,7 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = REPO_ROOT / "docs"
 INDICES_DIR = DOCS_DIR / "indices"
 CATALOGUE_PATH = REPO_ROOT / "output/v1/spectral-indices-dict.json"
-BANDS_PATH = REPO_ROOT / "output/v1/bands.json"
+BIBLIOGRAPHY_PATH = REPO_ROOT / "output/v1/spectral-indices-references.bib"
 CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
 PEOPLE_CONTRIBUTORS_PATH = DOCS_DIR / ".vitepress/data/index-contributors.json"
 REPOSITORY_CONTRIBUTORS_PATH = (
@@ -43,13 +43,6 @@ EMAIL_ICON = (
     '5 8-5v2Z"/></svg>'
 )
 
-VARIABLE_DESCRIPTIONS = {
-    "HH": "Horizontal transmit, horizontal receive radar polarization",
-    "HV": "Horizontal transmit, vertical receive radar polarization",
-    "VH": "Vertical transmit, horizontal receive radar polarization",
-    "VV": "Vertical transmit, vertical receive radar polarization",
-}
-
 CASE_COLLISION_ROUTES = {
     "BAI": "BAI-burn",
     "BaI": "BaI-soil",
@@ -69,226 +62,77 @@ def yaml_string(value):
     return json.dumps(str(value), ensure_ascii=False)
 
 
-def sentence(value):
-    """Ensure a short description ends with sentence punctuation."""
-    value = str(value).strip()
-    if value.endswith((".", "!", "?")):
-        return value
-    return f"{value}."
+def load_bibtex_entries(path):
+    """Load generated BibTeX entries keyed by their citation key."""
+    entries = {}
+    for block in re.split(r"\n\s*\n(?=@)", path.read_text().strip()):
+        match = re.match(r"^@\w+\{([^,\s]+),", block)
+        if match:
+            entries[match.group(1)] = block.strip()
+    return entries
 
 
-def describe_band(name, band_metadata):
-    """Return a human-readable description for a band or derived variable."""
-    if name in band_metadata:
-        return band_metadata[name]["long_name"]
-    hyperspectral_range_match = re.fullmatch(
-        r"R([1-9][0-9]*)_([1-9][0-9]*)", name
-    )
-    if hyperspectral_range_match:
-        lower, upper = hyperspectral_range_match.groups()
-        return (
-            "Reflectance at one selected wavelength from "
-            f"{lower} to {upper} nm, inclusive"
-        )
-    hyperspectral_match = re.fullmatch(r"R([1-9][0-9]*)", name)
-    if hyperspectral_match:
-        return f"Reflectance at {hyperspectral_match.group(1)} nm"
-    if name in VARIABLE_DESCRIPTIONS:
-        return VARIABLE_DESCRIPTIONS[name]
-    return name
+def render_citation_slot(key, index, bibtex_entries):
+    """Render citation Markdown so VitePress can syntax-highlight it."""
+    metadata = index["source"].get("source_metadata") or {}
+    citation = metadata.get("how_to_cite")
+    if not citation:
+        return ""
 
+    citation_key = citation["bibtex"]
+    try:
+        bibtex = bibtex_entries[citation_key]
+    except KeyError as error:
+        raise ValueError(
+            f"Missing BibTeX entry {citation_key!r} for spectral index {key!r}"
+        ) from error
 
-def render_bands(band_names, band_metadata):
-    """Render the formula's band and derived-input variables."""
-    if not band_names:
-        return "No bands are used in this index."
+    apa = citation["apa"]
+    if "```" in bibtex or "```" in apa:
+        raise ValueError(f"Citation for spectral index {key!r} contains a code fence")
 
-    return "\n".join(
-        f"- `{name}`: {sentence(describe_band(name, band_metadata))}"
-        for name in band_names
-    )
+    return f"""::: code-group
 
+```bibtex [BibTeX]
+{bibtex}
+```
 
-def render_polarizations(polarization_names):
-    """Render radar-polarization inputs separately from spectral bands."""
-    if not polarization_names:
-        return "No radar polarizations are used in this index."
+```text [APA]
+{apa}
+```
 
-    return "\n".join(
-        f"- `{name}`: {sentence(VARIABLE_DESCRIPTIONS[name])}"
-        for name in polarization_names
-    )
-
-
-def render_classification(classification):
-    """Render application, modality, and optional family classifications."""
-    application_domain = classification["application_domain"].replace(
-        "_", " "
-    ).title()
-    modalities = ", ".join(
-        f"`{modality.replace('_', ' ').title()}`"
-        for modality in classification["sensing_modalities"]
-    )
-    lines = [
-        f"- Application domain: `{application_domain}`",
-        f"- Sensing modalities: {modalities}",
-    ]
-    if classification["family"]:
-        families = ", ".join(
-            f"`{family.replace('_', ' ').title()}`"
-            for family in classification["family"]
-        )
-        lines.append(f"- Family: {families}")
-    return "\n".join(lines)
-
-
-def render_constants(constant_definitions):
-    """Render formula constants and their contributor-provided metadata."""
-    if not constant_definitions:
-        return "No constants are used in this index."
-
-    items = []
-    for name, definition in constant_definitions.items():
-        description = escape(sentence(definition["description"]))
-        cards = []
-
-        default = definition.get("default_value")
-        default_value = "Not specified" if default is None else escape(str(default))
-        default_state = " is-empty" if default is None else ""
-        cards.append(
-            f"""<div class="constant-detail-card constant-default{default_state}">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">{default_value}</strong>
-</div>"""
-        )
-
-        suggested_range = definition.get("suggested_range")
-        if suggested_range is not None:
-            range_start = escape(str(suggested_range[0]))
-            range_end = escape(str(suggested_range[1]))
-            cards.append(
-                f"""<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">{range_start}<span aria-hidden="true">–</span>{range_end}</strong>
-</div>"""
-            )
-
-        suggested_values = definition.get("suggested_values")
-        if suggested_values is not None:
-            rendered_values = []
-            for condition, value in suggested_values.items():
-                if isinstance(value, list):
-                    value_start = escape(str(value[0]))
-                    value_end = escape(str(value[1]))
-                    rendered_value = (
-                        f'{value_start}<span aria-hidden="true">–</span>{value_end}'
-                    )
-                else:
-                    rendered_value = escape(str(value))
-                rendered_values.append(
-                    f"""<div class="constant-suggestion-row">
-<dt>{escape(str(condition))}</dt>
-<dd>{rendered_value}</dd>
-</div>"""
-                )
-            cards.append(
-                """<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
+:::
 """
-                + "\n".join(rendered_values)
-                + """
-</dl>
-</div>"""
-            )
-
-        rendered_cards = "\n".join(cards)
-        items.append(
-            f"""<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">{escape(str(name))}</code>
-<p>{description}</p>
-</header>
-<div class="constant-details">
-{rendered_cards}
-</div>
-</article>"""
-        )
-
-    return '<div class="constant-list">\n' + "\n".join(items) + "\n</div>"
-
-
-def render_external_variables(external_definitions):
-    """Render descriptions for formula inputs supplied outside spectral data."""
-    return "\n".join(
-        f"- `{name}`: {sentence(definition['description'])}"
-        for name, definition in external_definitions.items()
-    )
-
-
-def render_reductions(reduction_definitions):
-    """Render the execution context of contextual formula reductions."""
-    scope_descriptions = {
-        "aoi": "the valid pixels within the area of interest (AOI)",
-        "scene": "the valid pixels within the complete input scene",
-    }
-    return "\n".join(
-        (
-            f"- `{dimension}`: reduction functions are evaluated across "
-            f"{scope_descriptions[definition['scope']]}."
-        )
-        for dimension, definition in reduction_definitions.items()
-    )
-
-
-def render_source_companions(companion_keys):
-    """Render links to indices generated from the same scientific source."""
-    return "\n".join(
-        f"- [`{key}`](/indices/{quote(CASE_COLLISION_ROUTES.get(key, key), safe='')})"
-        for key in companion_keys
-    )
 
 
 def render_index_page(
     key,
     index,
-    band_metadata,
+    bibtex_entries,
 ):
-    """Render one spectral-index page using the NDVI page structure."""
+    """Render one spectral-index page with a themed hero and detail tabs."""
     classification = index["classification"]
     domain = classification["application_domain"].replace("_", " ").title()
-    classification_details = render_classification(classification)
-    bands = render_bands(index["bands"], band_metadata)
-    polarizations = render_polarizations(index["polarizations"])
-    constants = render_constants(index["constants"])
-    external_variables_section = ""
-    if index["external_variables"]:
-        external_variables = render_external_variables(index["external_variables"])
-        external_variables_section = f"""### External Variables
-
-{external_variables}
-
-"""
-    reductions_section = ""
-    if index["reductions"]:
-        reductions = render_reductions(index["reductions"])
-        reductions_section = f"""### Reductions
-
-{reductions}
-
-"""
-    source_companions_section = ""
-    if index["source"]["source_companions"]:
-        source_companions = render_source_companions(
-            index["source"]["source_companions"]
+    domain_badge = (
+        '<span class="hero-domain-badge">' + escape(domain) + "</span>"
+    )
+    modality_badges = "".join(
+        (
+            '<span class="hero-modality-badge modality-'
+            + escape(modality)
+            + '">'
+            + escape(modality.replace("_", " ").title())
+            + "</span>"
         )
-        source_companions_section = f"""### Source Companions
-
-These indices are part of the same scientific source:
-
-{source_companions}
-
-"""
+        for modality in classification["sensing_modalities"]
+    )
+    hero_tagline = (
+        '<span class="hero-classification-badges">'
+        + domain_badge
+        + modality_badges
+        + "</span>"
+    )
+    citation_slot = render_citation_slot(key, index, bibtex_entries)
 
     return f"""---
 # https://vitepress.dev/reference/default-theme-home-page
@@ -298,7 +142,7 @@ pageClass: {yaml_string(f'index-page domain-{classification["application_domain"
 hero:
   name: {yaml_string(index["acronym"])}
   text: {yaml_string(index["name"])}
-  tagline: {yaml_string(domain)}
+  tagline: {yaml_string(hero_tagline)}
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -308,31 +152,13 @@ hero:
       link: {yaml_string(index["source"]["source_link"])}
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
-```
-{index["formula"]}
-```
+<IndexDetails index-key={yaml_string(key)}>
 
-### Classification
-
-{classification_details}
-
-### Bands
-
-{bands}
-
-### Polarizations
-
-{polarizations}
-
-### Constants
-
-{constants}
-
-{external_variables_section}{reductions_section}{source_companions_section}## Contributor
-
-Index contributed by {index["contributor"]} on {index["date_of_addition"]}.
+{citation_slot}</IndexDetails>
 """
 
 
@@ -471,7 +297,7 @@ def generate_repository_contributors():
 def generate_index_pages():
     """Generate every v1 index page and remove obsolete generated pages."""
     catalogue = load_json(CATALOGUE_PATH)["SpectralIndices"]
-    band_metadata = load_json(BANDS_PATH)
+    bibtex_entries = load_bibtex_entries(BIBLIOGRAPHY_PATH)
 
     INDICES_DIR.mkdir(parents=True, exist_ok=True)
     expected_page_names = {"index.md"}
@@ -482,7 +308,7 @@ def generate_index_pages():
         page = render_index_page(
             key,
             index,
-            band_metadata,
+            bibtex_entries,
         )
         filename = f"{key}.md"
         expected_page_names.add(filename)

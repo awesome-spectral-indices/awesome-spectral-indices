@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDYI"
   text: "Normalized Difference Yellowness Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2016.06.016"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDYI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDYI,
+  author = {John J. Sulik and Dan S. Long},
+  title = {Spectral considerations for modeling yield of canola},
+  journal = {Remote Sensing of Environment},
+  volume = {184},
+  year = {2016},
+  doi = {10.1016/j.rse.2016.06.016},
+  url = {https://doi.org/10.1016/j.rse.2016.06.016}
+}
 ```
-(G - B) / (G + B)
+
+```text [APA]
+John J. Sulik, & Dan S. Long (2016). Spectral considerations for modeling yield of canola. Remote Sensing of Environment, 184. https://doi.org/10.1016/j.rse.2016.06.016
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

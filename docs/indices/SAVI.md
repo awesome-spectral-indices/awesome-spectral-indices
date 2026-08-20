@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SAVI"
   text: "Soil-Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,64 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(88)90106-X"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SAVI,
+  author = {A.R Huete},
+  title = {A soil-adjusted vegetation index (SAVI)},
+  journal = {Remote Sensing of Environment},
+  volume = {25},
+  number = {3},
+  year = {1988},
+  doi = {10.1016/0034-4257(88)90106-x},
+  url = {https://doi.org/10.1016/0034-4257(88)90106-x}
+}
 ```
-(1.0 + L) * (N - R) / (N + R + L)
+
+```text [APA]
+A.R Huete (1988). A soil-adjusted vegetation index (SAVI). Remote Sensing of Environment, 25(3). https://doi.org/10.1016/0034-4257(88)90106-x
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.25<span aria-hidden="true">–</span>1</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>High vegetation densities</dt>
-<dd>0.25</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Intermediate vegetation densities</dt>
-<dd>0.5</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Low vegetation densities</dt>
-<dd>1.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

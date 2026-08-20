@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NBRSWIR"
   text: "Normalized Burn Ratio SWIR"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/22797254.2020.1738900"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBRSWIR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NBRSWIR,
+  author = {Sicong Liu and Yongjie Zheng and Michele Dalponte and Xiaohua Tong},
+  title = {A novel fire index-based burned area change detection approach using Landsat-8 OLI data},
+  journal = {European Journal of Remote Sensing},
+  volume = {53},
+  number = {1},
+  year = {2020},
+  doi = {10.1080/22797254.2020.1738900},
+  url = {https://doi.org/10.1080/22797254.2020.1738900}
+}
 ```
-(S2 - S1 - 0.02)/(S2 + S1 + 0.1)
+
+```text [APA]
+Sicong Liu, Yongjie Zheng, Michele Dalponte, & Xiaohua Tong (2020). A novel fire index-based burned area change detection approach using Landsat-8 OLI data. European Journal of Remote Sensing, 53(1). https://doi.org/10.1080/22797254.2020.1738900
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

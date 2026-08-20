@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GNDVI"
   text: "Green Normalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(96)00072-7"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GNDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GARI,
+  author = {Anatoly A. Gitelson and Yoram J. Kaufman and Mark N. Merzlyak},
+  title = {Use of a green channel in remote sensing of global vegetation from EOS-MODIS},
+  journal = {Remote Sensing of Environment},
+  volume = {58},
+  number = {3},
+  year = {1996},
+  doi = {10.1016/s0034-4257(96)00072-7},
+  url = {https://doi.org/10.1016/s0034-4257(96)00072-7}
+}
 ```
-(N - G)/(N + G)
+
+```text [APA]
+Anatoly A. Gitelson, Yoram J. Kaufman, & Mark N. Merzlyak (1996). Use of a green channel in remote sensing of global vegetation from EOS-MODIS. Remote Sensing of Environment, 58(3). https://doi.org/10.1016/s0034-4257(96)00072-7
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`GARI`](/indices/GARI)
-- [`GRARI`](/indices/GRARI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

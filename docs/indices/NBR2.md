@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NBR2"
   text: "Normalized Burn Ratio 2"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,10 @@ hero:
       link: "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
-```
-(S1 - S2) / (S1 + S2)
-```
+<IndexDetails index-key="NBR2">
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-20.
+</IndexDetails>

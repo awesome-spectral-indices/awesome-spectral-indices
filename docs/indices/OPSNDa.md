@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "OPSNDa"
   text: "Optimized Pigment Specific Normalized Difference for Chlorophyll a"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,46 +16,30 @@ hero:
       link: "https://doi.org/10.1080/014311698215919"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="OPSNDa">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_OPSNDa,
+  author = {G. A. Blackburn},
+  title = {Spectral indices for estimating photosynthetic pigment concentrations: A test using senescent tree leaves},
+  journal = {International Journal of Remote Sensing},
+  volume = {19},
+  number = {4},
+  year = {1998},
+  doi = {10.1080/014311698215919},
+  url = {https://doi.org/10.1080/014311698215919}
+}
 ```
-(R800-R680)/(R800+R680)
+
+```text [APA]
+G. A. Blackburn (1998). Spectral indices for estimating photosynthetic pigment concentrations: A test using senescent tree leaves. International Journal of Remote Sensing, 19(4). https://doi.org/10.1080/014311698215919
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R800`: Reflectance at 800 nm.
-- `R680`: Reflectance at 680 nm.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`PSSRa`](/indices/PSSRa)
-- [`PSSRb`](/indices/PSSRb)
-- [`PSSRc`](/indices/PSSRc)
-- [`PSNDa`](/indices/PSNDa)
-- [`PSNDb`](/indices/PSNDb)
-- [`PSNDc`](/indices/PSNDc)
-- [`OPSSRa`](/indices/OPSSRa)
-- [`OPSSRb`](/indices/OPSSRb)
-- [`OPSSRc`](/indices/OPSSRc)
-- [`OPSNDb`](/indices/OPSNDb)
-- [`OPSNDc`](/indices/OPSNDc)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-08.
+:::
+</IndexDetails>

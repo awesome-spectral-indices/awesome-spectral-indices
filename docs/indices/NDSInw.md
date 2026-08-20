@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NDSInw"
   text: "Normalized Difference Snow Index with no Water"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,49 +16,30 @@ hero:
       link: "https://doi.org/10.3390/w12051339"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSInw">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDSInw,
+  author = {Dajiang Yan and Chang Huang and Ning Ma and Yinsheng Zhang},
+  title = {Improved Landsat-Based Water and Snow Indices for Extracting Lake and Snow Cover/Glacier in the Tibetan Plateau},
+  journal = {Water},
+  volume = {12},
+  number = {5},
+  year = {2020},
+  doi = {10.3390/w12051339},
+  url = {https://doi.org/10.3390/w12051339}
+}
 ```
-(N - S1 - b)/(N + S1)
+
+```text [APA]
+Dajiang Yan, Chang Huang, Ning Ma, & Yinsheng Zhang (2020). Improved Landsat-Based Water and Snow Indices for Extracting Lake and Snow Cover/Glacier in the Tibetan Plateau. Water, 12(5). https://doi.org/10.3390/w12051339
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">b</code>
-<p>Empirical parameter that offsets the index.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.05</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDWIns`](/indices/NDWIns)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

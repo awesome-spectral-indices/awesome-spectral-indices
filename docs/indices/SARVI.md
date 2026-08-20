@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SARVI"
   text: "Soil Adjusted and Atmospherically Resistant Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,91 +16,30 @@ hero:
       link: "https://doi.org/10.1109/36.134076"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SARVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_ARVI,
+  author = {Y.J. Kaufman and D. Tanre},
+  title = {Atmospherically resistant vegetation index (ARVI) for EOS-MODIS},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {30},
+  number = {2},
+  year = {1992},
+  doi = {10.1109/36.134076},
+  url = {https://doi.org/10.1109/36.134076}
+}
 ```
-(1 + L)*(N - (R - gamma * (B - R))) / (N + (R - gamma * (B - R)) + L)
+
+```text [APA]
+Y.J. Kaufman, & D. Tanre (1992). Atmospherically resistant vegetation index (ARVI) for EOS-MODIS. IEEE Transactions on Geoscience and Remote Sensing, 30(2). https://doi.org/10.1109/36.134076
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">gamma</code>
-<p>Weighting coefficient used for reducing atmospheric effects.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>2.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Bare soil, very sparse vegetation, or arid and semi-arid areas</dt>
-<dd>0.5</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Equal SARVI to SAVI</dt>
-<dd>0.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Lowest sensitivity for dense forests</dt>
-<dd>1.0<span aria-hidden="true">–</span>2.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Model-specific optimum for continental aerosol. alpha ~ 1.3</dt>
-<dd>0.9</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Model-specific optimum for maritime aerosol. alpha ~ 0.2</dt>
-<dd>1.7</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`ARVI`](/indices/ARVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-11.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "WCI3"
   text: "Wheat Canopy Index (Growth Stage 3)"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,54 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.mlwa.2026.100914"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="WCI3">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_KDI,
+  author = {Ali Lotfi and Adam Carter and Thuan Ha and Mohammad Meysami and Kwabena Nketia and Steve Shirtliffe},
+  title = {Interpretable machine learning–Derived spectral indices for vegetation monitoring},
+  journal = {Machine Learning with Applications},
+  volume = {24},
+  year = {2026},
+  doi = {10.1016/j.mlwa.2026.100914},
+  url = {https://doi.org/10.1016/j.mlwa.2026.100914}
+}
 ```
-((B - R)/(B + R + epsilon)) * tanh(R - max(B, G, RE1, N))
+
+```text [APA]
+Ali Lotfi, Adam Carter, Thuan Ha, Mohammad Meysami, Kwabena Nketia, & Steve Shirtliffe (2026). Interpretable machine learning–Derived spectral indices for vegetation monitoring. Machine Learning with Applications, 24. https://doi.org/10.1016/j.mlwa.2026.100914
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `R`: Red.
-- `G`: Green.
-- `RE1`: Red Edge 1.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">epsilon</code>
-<p>Adjustment constant for numerical stability.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1e-10</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`KDI`](/indices/KDI)
-- [`WCI1`](/indices/WCI1)
-- [`WCI2`](/indices/WCI2)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-05.
+:::
+</IndexDetails>

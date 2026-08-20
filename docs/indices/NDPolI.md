@@ -6,7 +6,7 @@ pageClass: "index-page domain-geology"
 hero:
   name: "NDPolI"
   text: "Normalized Difference Polarization Index"
-  tagline: "Geology"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Geology</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,26 @@ hero:
       link: "https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDPolI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_NDPolI,
+  author = {Cao Yun-gang and Yan Li-juan and Zheng Ze-zhong},
+  title = {EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES},
+  year = {2008},
+  url = {https://www.isprs.org/proceedings/XXXVII/congress/4\_pdf/267.pdf}
+}
 ```
-(VV - VH)/(VV + VH)
+
+```text [APA]
+Cao Yun-gang, Yan Li-juan, & Zheng Ze-zhong (2008). EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES. https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf
 ```
 
-### Classification
-
-- Application domain: `Geology`
-- Sensing modalities: `Radar`
-- Family: `Radar`
-
-### Bands
-
-No bands are used in this index.
-
-### Polarizations
-
-- `VV`: Vertical transmit, vertical receive radar polarization.
-- `VH`: Vertical transmit, horizontal receive radar polarization.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-19.
+:::
+</IndexDetails>

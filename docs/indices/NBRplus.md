@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NBRplus"
   text: "Normalized Burn Ratio Plus"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs14071727"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBRplus">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NBRplus,
+  author = {Emanuele Alcaras and Domenica Costantino and Francesca Guastaferro and Claudio Parente and Massimiliano Pepe},
+  title = {Normalized Burn Ratio Plus (NBR+): A New Index for Sentinel-2 Imagery},
+  journal = {Remote Sensing},
+  volume = {14},
+  number = {7},
+  year = {2022},
+  doi = {10.3390/rs14071727},
+  url = {https://doi.org/10.3390/rs14071727}
+}
 ```
-(S2 - N2 - G - B)/(S2 + N2 + G + B)
+
+```text [APA]
+Emanuele Alcaras, Domenica Costantino, Francesca Guastaferro, Claudio Parente, & Massimiliano Pepe (2022). Normalized Burn Ratio Plus (NBR+): A New Index for Sentinel-2 Imagery. Remote Sensing, 14(7). https://doi.org/10.3390/rs14071727
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `N2`: Near-Infrared (NIR) 2.
-- `G`: Green.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

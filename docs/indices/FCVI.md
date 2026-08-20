@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "FCVI"
   text: "Fluorescence Correction Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2020.111676"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="FCVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_FCVI,
+  author = {Peiqi Yang and Christiaan van der Tol and Petya K.E. Campbell and Elizabeth M. Middleton},
+  title = {Fluorescence Correction Vegetation Index (FCVI): A physically based reflectance index to separate physiological and non-physiological information in far-red sun-induced chlorophyll fluorescence},
+  journal = {Remote Sensing of Environment},
+  volume = {240},
+  year = {2020},
+  doi = {10.1016/j.rse.2020.111676},
+  url = {https://doi.org/10.1016/j.rse.2020.111676}
+}
 ```
-N - ((R + G + B)/3.0)
+
+```text [APA]
+Peiqi Yang, Christiaan van der Tol, Petya K.E. Campbell, & Elizabeth M. Middleton (2020). Fluorescence Correction Vegetation Index (FCVI): A physically based reflectance index to separate physiological and non-physiological information in far-red sun-induced chlorophyll fluorescence. Remote Sensing of Environment, 240. https://doi.org/10.1016/j.rse.2020.111676
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `G`: Green.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-20.
+:::
+</IndexDetails>

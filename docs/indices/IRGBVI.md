@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "IRGBVI"
   text: "Improved-Red-Green-Blue Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2024.103668"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="IRGBVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_IRGBVI,
+  author = {Cheng Chen and Xiping Yuan and Shu Gan and WeiDong Luo and Rui Bi and RaoBo Li and Sha Gao},
+  title = {A new vegetation index based on UAV for extracting plateau vegetation information},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {128},
+  year = {2024},
+  doi = {10.1016/j.jag.2024.103668},
+  url = {https://doi.org/10.1016/j.jag.2024.103668}
+}
 ```
-(5.0 * (G ** 2.0) - 2.0 * (R ** 2.0) - 5.0 * (B ** 2.0)) / (5.0 * (G ** 2.0) + 2.0 * (R ** 2.0) + 5.0 * (B ** 2.0))
+
+```text [APA]
+Cheng Chen, Xiping Yuan, Shu Gan, WeiDong Luo, Rui Bi, RaoBo Li, & Sha Gao (2024). A new vegetation index based on UAV for extracting plateau vegetation information. International Journal of Applied Earth Observation and Geoinformation, 128. https://doi.org/10.1016/j.jag.2024.103668
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2025-07-11.
+:::
+</IndexDetails>

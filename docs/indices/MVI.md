@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MVI"
   text: "Mangrove Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.isprsjprs.2020.06.001"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MVI,
+  author = {Alvin B. Baloloy and Ariel C. Blanco and Raymund Rhommel C. Sta. Ana and Kazuo Nadaoka},
+  title = {Development and application of a new mangrove vegetation index (MVI) for rapid and accurate mangrove mapping},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {166},
+  year = {2020},
+  doi = {10.1016/j.isprsjprs.2020.06.001},
+  url = {https://doi.org/10.1016/j.isprsjprs.2020.06.001}
+}
 ```
-(N - G) / (S1 - G)
+
+```text [APA]
+Alvin B. Baloloy, Ariel C. Blanco, Raymund Rhommel C. Sta. Ana, & Kazuo Nadaoka (2020). Development and application of a new mangrove vegetation index (MVI) for rapid and accurate mangrove mapping. ISPRS Journal of Photogrammetry and Remote Sensing, 166. https://doi.org/10.1016/j.isprsjprs.2020.06.001
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/delatorredm on 2025-04-08.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NDSIWV"
   text: "WorldView Normalized Difference Soil Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,29 @@ hero:
       link: "https://doi.org/10.1117/12.917717"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSIWV">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_NDSIWV,
+  author = {Antonio F. Wolf},
+  title = {Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios},
+  booktitle = {SPIE Proceedings},
+  volume = {8390},
+  year = {2012},
+  doi = {10.1117/12.917717},
+  url = {https://doi.org/10.1117/12.917717}
+}
 ```
-(G - Y)/(G + Y)
+
+```text [APA]
+Antonio F. Wolf (2012). Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios. SPIE Proceedings, 8390. https://doi.org/10.1117/12.917717
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `Y`: Yellow.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NHFD`](/indices/NHFD)
-
-## Contributor
-
-Index contributed by https://github.com/remi-braun on 2022-11-20.
+:::
+</IndexDetails>

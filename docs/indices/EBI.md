@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "EBI"
   text: "Enhanced Bloom Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,57 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.isprsjprs.2019.08.006"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="EBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_EBI,
+  author = {Bin Chen and Yufang Jin and Patrick Brown},
+  title = {An enhanced bloom index for quantifying floral phenology using multi-scale remote sensing observations},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {156},
+  year = {2019},
+  doi = {10.1016/j.isprsjprs.2019.08.006},
+  url = {https://doi.org/10.1016/j.isprsjprs.2019.08.006}
+}
 ```
-(R + G + B)/((G/B) * (R - B + epsilon))
+
+```text [APA]
+Bin Chen, Yufang Jin, & Patrick Brown (2019). An enhanced bloom index for quantifying floral phenology using multi-scale remote sensing observations. ISPRS Journal of Photogrammetry and Remote Sensing, 156. https://doi.org/10.1016/j.isprsjprs.2019.08.006
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `R`: Red.
-- `G`: Green.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">epsilon</code>
-<p>Adjustment constant.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>For raw RGB values in [0,255]</dt>
-<dd>256</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>For reflectances in [0,1]</dt>
-<dd>1.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/geoSanjeeb on 2023-07-03.
+:::
+</IndexDetails>

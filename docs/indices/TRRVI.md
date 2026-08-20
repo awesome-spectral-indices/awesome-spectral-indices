@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TRRVI"
   text: "Transformed Red Range Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs12152359"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TRRVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_TRRVI,
+  author = {Víctor Blanco and Pedro José Blaya-Ros and Cristina Castillo and Fulgencio Soto-Vallés and Roque Torres-Sánchez and Rafael Domingo},
+  title = {Potential of UAS-Based Remote Sensing for Estimating Tree Water Status and Yield in Sweet Cherry Trees},
+  journal = {Remote Sensing},
+  volume = {12},
+  number = {15},
+  year = {2020},
+  doi = {10.3390/rs12152359},
+  url = {https://doi.org/10.3390/rs12152359}
+}
 ```
-((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)
+
+```text [APA]
+Víctor Blanco, Pedro José Blaya-Ros, Cristina Castillo, Fulgencio Soto-Vallés, Roque Torres-Sánchez, & Rafael Domingo (2020). Potential of UAS-Based Remote Sensing for Estimating Tree Water Status and Yield in Sweet Cherry Trees. Remote Sensing, 12(15). https://doi.org/10.3390/rs12152359
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE2`: Red Edge 2.
-- `R`: Red.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

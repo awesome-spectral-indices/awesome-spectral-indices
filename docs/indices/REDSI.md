@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "REDSI"
   text: "Red-Edge Disease Stress Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.3390/s18030868"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="REDSI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_REDSI,
+  author = {Qiong Zheng and Wenjiang Huang and Ximin Cui and Yue Shi and Linyi Liu},
+  title = {New Spectral Index for Detecting Wheat Yellow Rust Using Sentinel-2 Multispectral Imagery},
+  journal = {Sensors},
+  volume = {18},
+  number = {3},
+  year = {2018},
+  doi = {10.3390/s18030868},
+  url = {https://doi.org/10.3390/s18030868}
+}
 ```
-((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)
+
+```text [APA]
+Qiong Zheng, Wenjiang Huang, Ximin Cui, Yue Shi, & Linyi Liu (2018). New Spectral Index for Detecting Wheat Yellow Rust Using Sentinel-2 Multispectral Imagery. Sensors, 18(3). https://doi.org/10.3390/s18030868
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE3`: Red Edge 3.
-- `R`: Red.
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-11-06.
+:::
+</IndexDetails>

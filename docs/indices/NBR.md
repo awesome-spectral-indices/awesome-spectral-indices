@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NBR"
   text: "Normalized Burn Ratio"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,28 @@ hero:
       link: "https://doi.org/10.3133/ofr0211"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_NBR,
+  author = {J.L. Coffelt and Russell K. Livingston},
+  title = {Second U.S. Geological Survey Wildland Fire Workshop: Los Alamos, New Mexico, October 31-November 3, 2000},
+  howpublished = {Open-File Report},
+  year = {2002},
+  doi = {10.3133/ofr0211},
+  url = {https://doi.org/10.3133/ofr0211}
+}
 ```
-(N - S2) / (N + S2)
+
+```text [APA]
+J.L. Coffelt, & Russell K. Livingston (2002). Second U.S. Geological Survey Wildland Fire Workshop: Los Alamos, New Mexico, October 31-November 3, 2000. Open-File Report. https://doi.org/10.3133/ofr0211
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

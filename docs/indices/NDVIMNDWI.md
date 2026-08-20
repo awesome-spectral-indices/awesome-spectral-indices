@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "NDVIMNDWI"
   text: "NDVI-MNDWI Model"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,28 @@ hero:
       link: "https://doi.org/10.1007/978-3-662-45737-5_51"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDVIMNDWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@incollection{ASI_NDVIMNDWI,
+  author = {Weifeng Zhou and Zhanqiang Li and Shijian Ji and Chengjun Hua and Wei Fan},
+  title = {A New Index Model NDVI-MNDWI for Water Object Extraction in Hybrid Area},
+  booktitle = {Communications in Computer and Information Science},
+  year = {2015},
+  doi = {10.1007/978-3-662-45737-5\_51},
+  url = {https://doi.org/10.1007/978-3-662-45737-5\_51}
+}
 ```
-((N - R)/(N + R)) - ((G - S1)/(G + S1))
+
+```text [APA]
+Weifeng Zhou, Zhanqiang Li, Shijian Ji, Chengjun Hua, & Wei Fan (2015). A New Index Model NDVI-MNDWI for Water Object Extraction in Hybrid Area. Communications in Computer and Information Science. https://doi.org/10.1007/978-3-662-45737-5_51
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-17.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "NDBI"
   text: "Normalized Difference Built-Up Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1080/01431160304987"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDBI,
+  author = {Y. Zha and J. Gao and S. Ni},
+  title = {Use of normalized difference built-up index in automatically mapping urban areas from TM imagery},
+  journal = {International Journal of Remote Sensing},
+  volume = {24},
+  number = {3},
+  year = {2003},
+  doi = {10.1080/01431160304987},
+  url = {https://doi.org/10.1080/01431160304987}
+}
 ```
-(S1 - N) / (S1 + N)
+
+```text [APA]
+Y. Zha, J. Gao, & S. Ni (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. International Journal of Remote Sensing, 24(3). https://doi.org/10.1080/01431160304987
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

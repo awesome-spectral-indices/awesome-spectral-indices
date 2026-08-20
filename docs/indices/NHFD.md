@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "NHFD"
   text: "Non-Homogeneous Feature Difference"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,29 @@ hero:
       link: "https://doi.org/10.1117/12.917717"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NHFD">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_NDSIWV,
+  author = {Antonio F. Wolf},
+  title = {Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios},
+  booktitle = {SPIE Proceedings},
+  volume = {8390},
+  year = {2012},
+  doi = {10.1117/12.917717},
+  url = {https://doi.org/10.1117/12.917717}
+}
 ```
-(RE1 - A) / (RE1 + A)
+
+```text [APA]
+Antonio F. Wolf (2012). Using WorldView-2 Vis-NIR multispectral imagery to support land mapping and feature extraction using normalized difference index ratios. SPIE Proceedings, 8390. https://doi.org/10.1117/12.917717
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `A`: Aerosols.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDSIWV`](/indices/NDSIWV)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-17.
+:::
+</IndexDetails>

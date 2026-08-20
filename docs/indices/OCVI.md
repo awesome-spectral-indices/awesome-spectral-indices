@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "OCVI"
   text: "Optimized Chlorophyll Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,77 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1007/s11119-008-9075-z"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="OCVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_OCVI,
+  author = {M. Vincini and E. Frazzi and P. D’Alessio},
+  title = {A broad-band leaf chlorophyll vegetation index at the canopy scale},
+  journal = {Precision Agriculture},
+  volume = {9},
+  number = {5},
+  year = {2008},
+  doi = {10.1007/s11119-008-9075-z},
+  url = {https://doi.org/10.1007/s11119-008-9075-z}
+}
 ```
-(N / G) * (R / G) ** c
+
+```text [APA]
+M. Vincini, E. Frazzi, & P. D’Alessio (2008). A broad-band leaf chlorophyll vegetation index at the canopy scale. Precision Agriculture, 9(5). https://doi.org/10.1007/s11119-008-9075-z
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">c</code>
-<p>Correction factor.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.3<span aria-hidden="true">–</span>1.74</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Broad-band and erectophile leaf orientation (~ 70°)</dt>
-<dd>0.87<span aria-hidden="true">–</span>1.74</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Broad-band and intermediate leaf orientation (~ 50°)</dt>
-<dd>0.72<span aria-hidden="true">–</span>1.4</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Broad-band and planophile leaf orientation (~ 30°)</dt>
-<dd>0.64<span aria-hidden="true">–</span>1.31</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Broad-band reflectances</dt>
-<dd>0.64<span aria-hidden="true">–</span>1.74</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Equal OCVI to CVI</dt>
-<dd>1.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Narrow-band reflectances</dt>
-<dd>0.3<span aria-hidden="true">–</span>0.89</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-13.
+:::
+</IndexDetails>

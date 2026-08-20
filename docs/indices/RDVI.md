@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "RDVI"
   text: "Renormalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(94)00114-3"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="RDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_DVI,
+  author = {Jean-Louis Roujean and François-Marie Breon},
+  title = {Estimating PAR absorbed by vegetation from bidirectional reflectance measurements},
+  journal = {Remote Sensing of Environment},
+  volume = {51},
+  number = {3},
+  year = {1995},
+  doi = {10.1016/0034-4257(94)00114-3},
+  url = {https://doi.org/10.1016/0034-4257(94)00114-3}
+}
 ```
-(N - R) / ((N + R) ** 0.5)
+
+```text [APA]
+Jean-Louis Roujean, & François-Marie Breon (1995). Estimating PAR absorbed by vegetation from bidirectional reflectance measurements. Remote Sensing of Environment, 51(3). https://doi.org/10.1016/0034-4257(94)00114-3
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`DVI`](/indices/DVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

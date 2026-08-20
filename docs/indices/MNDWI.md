@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "MNDWI"
   text: "Modified Normalized Difference Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160600589179"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MNDWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MNDWI,
+  author = {Hanqiu Xu},
+  title = {Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery},
+  journal = {International Journal of Remote Sensing},
+  volume = {27},
+  number = {14},
+  year = {2006},
+  doi = {10.1080/01431160600589179},
+  url = {https://doi.org/10.1080/01431160600589179}
+}
 ```
-(G - S1) / (G + S1)
+
+```text [APA]
+Hanqiu Xu (2006). Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing, 27(14). https://doi.org/10.1080/01431160600589179
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

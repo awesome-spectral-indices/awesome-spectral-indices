@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "DpRVIHH"
   text: "Dual-Polarized Radar Vegetation Index HH"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,28 @@ hero:
       link: "https://www.tandfonline.com/doi/abs/10.5589/m12-043"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="DpRVIHH">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_DpRVIHH,
+  author = {Mélanie Trudel and F. Charbonneau and R. Leconte},
+  title = {Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields},
+  howpublished = {Canadian Journal of Remote Sensing},
+  volume = {38},
+  year = {2012},
+  url = {https://www.tandfonline.com/doi/abs/10.5589/m12-043}
+}
 ```
-(4.0 * HV)/(HH + HV)
+
+```text [APA]
+Mélanie Trudel, F. Charbonneau, & R. Leconte (2012). Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields. Canadian Journal of Remote Sensing, 38. https://www.tandfonline.com/doi/abs/10.5589/m12-043
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Radar`
-- Family: `Radar`
-
-### Bands
-
-No bands are used in this index.
-
-### Polarizations
-
-- `HV`: Horizontal transmit, vertical receive radar polarization.
-- `HH`: Horizontal transmit, horizontal receive radar polarization.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-12-25.
+:::
+</IndexDetails>

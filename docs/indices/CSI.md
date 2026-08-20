@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "CSI"
   text: "Char Soil Index"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2005.04.014"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="CSI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CSI,
+  author = {Alistair M.S. Smith and Martin J. Wooster and Nick A. Drake and Frederick M. Dipotso and Michael J. Falkowski and Andrew T. Hudak},
+  title = {Testing the potential of multi-spectral remote sensing for retrospectively estimating fire severity in African Savannahs},
+  journal = {Remote Sensing of Environment},
+  volume = {97},
+  number = {1},
+  year = {2005},
+  doi = {10.1016/j.rse.2005.04.014},
+  url = {https://doi.org/10.1016/j.rse.2005.04.014}
+}
 ```
-N/S2
+
+```text [APA]
+Alistair M.S. Smith, Martin J. Wooster, Nick A. Drake, Frederick M. Dipotso, Michael J. Falkowski, & Andrew T. Hudak (2005). Testing the potential of multi-spectral remote sensing for retrospectively estimating fire severity in African Savannahs. Remote Sensing of Environment, 97(1). https://doi.org/10.1016/j.rse.2005.04.014
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-19.
+:::
+</IndexDetails>

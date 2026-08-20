@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NSDS"
   text: "Normalized Shortwave Infrared Difference Soil-Moisture"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.3390/land10030231"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NSDS">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MBI,
+  author = {Can Trong Nguyen and Amnat Chidthaisong and Phan Kieu Diem and Lian-Zhi Huo},
+  title = {A Modified Bare Soil Index to Identify Bare Land Features during Agricultural Fallow-Period in Southeast Asia Using Landsat 8},
+  journal = {Land},
+  volume = {10},
+  number = {3},
+  year = {2021},
+  doi = {10.3390/land10030231},
+  url = {https://doi.org/10.3390/land10030231}
+}
 ```
-(S1 - S2)/(S1 + S2)
+
+```text [APA]
+Can Trong Nguyen, Amnat Chidthaisong, Phan Kieu Diem, & Lian-Zhi Huo (2021). A Modified Bare Soil Index to Identify Bare Land Features during Agricultural Fallow-Period in Southeast Asia Using Landsat 8. Land, 10(3). https://doi.org/10.3390/land10030231
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MBI`](/indices/MBI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

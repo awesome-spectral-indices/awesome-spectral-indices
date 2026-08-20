@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "EMBI"
   text: "Enhanced Modified Bare Soil Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2022.102703"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="EMBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_EMBI,
+  author = {Yongquan Zhao and Zhe Zhu},
+  title = {ASI: An artificial surface Index for Landsat 8 imagery},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {107},
+  year = {2022},
+  doi = {10.1016/j.jag.2022.102703},
+  url = {https://doi.org/10.1016/j.jag.2022.102703}
+}
 ```
-((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) - ((G - S1)/(G + S1)) - 0.5)/((((S1 - S2 - N)/(S1 + S2 + N)) + 0.5) + ((G - S1)/(G + S1)) + 1.5)
+
+```text [APA]
+Yongquan Zhao, & Zhe Zhu (2022). ASI: An artificial surface Index for Landsat 8 imagery. International Journal of Applied Earth Observation and Geoinformation, 107. https://doi.org/10.1016/j.jag.2022.102703
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

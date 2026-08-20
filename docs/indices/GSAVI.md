@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GSAVI"
   text: "Green Soil Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,54 +16,30 @@ hero:
       link: "https://doi.org/10.2134/agronj2004.0314"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GSAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GOSAVI,
+  author = {Ravi P. Sripada and Ronnie W. Heiniger and Jeffrey G. White and Randy Weisz},
+  title = {Aerial Color Infrared Photography for Determining Late‐Season Nitrogen Requirements in Corn},
+  journal = {Agronomy Journal},
+  volume = {97},
+  number = {5},
+  year = {2005},
+  doi = {10.2134/agronj2004.0314},
+  url = {https://doi.org/10.2134/agronj2004.0314}
+}
 ```
-(1.0 + L) * (N - G) / (N + G + L)
+
+```text [APA]
+Ravi P. Sripada, Ronnie W. Heiniger, Jeffrey G. White, & Randy Weisz (2005). Aerial Color Infrared Photography for Determining Late‐Season Nitrogen Requirements in Corn. Agronomy Journal, 97(5). https://doi.org/10.2134/agronj2004.0314
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NormNIR`](/indices/NormNIR)
-- [`NormR`](/indices/NormR)
-- [`NormG`](/indices/NormG)
-- [`GRVI`](/indices/GRVI)
-- [`GOSAVI`](/indices/GOSAVI)
-- [`GreenDVI`](/indices/GreenDVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

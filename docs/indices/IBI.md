@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "IBI"
   text: "Index-Based Built-Up Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,45 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160802039957"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="IBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_IBI,
+  author = {H. Xu},
+  title = {A new index for delineating built‐up land features in satellite imagery},
+  journal = {International Journal of Remote Sensing},
+  volume = {29},
+  number = {14},
+  year = {2008},
+  doi = {10.1080/01431160802039957},
+  url = {https://doi.org/10.1080/01431160802039957}
+}
 ```
-(((S1-N)/(S1+N))-(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)/(((S1-N)/(S1+N))+(((N-R)*(1.0+L)/(N+R+L))+((G-S1)/(G+S1)))/2.0)
+
+```text [APA]
+H. Xu (2008). A new index for delineating built‐up land features in satellite imagery. International Journal of Remote Sensing, 29(14). https://doi.org/10.1080/01431160802039957
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-02-09.
+:::
+</IndexDetails>

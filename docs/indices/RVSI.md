@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "RVSI"
   text: "Red-edge Vegetation Stress Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,10 @@ hero:
       link: "https://popo.jpl.nasa.gov/pub/docs/workshops/98_docs/37.pdf"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
-```
-((R714 + R752)/2.0)-R733
-```
+<IndexDetails index-key="RVSI">
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R714`: Reflectance at 714 nm.
-- `R752`: Reflectance at 752 nm.
-- `R733`: Reflectance at 733 nm.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/MartinuzziFrancesco on 2026-08-08.
+</IndexDetails>

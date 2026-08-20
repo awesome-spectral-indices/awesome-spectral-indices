@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NDSIITM"
   text: "Normalized Difference Snow/Ice Index for Landsat TM"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160119766"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSIITM">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDSIITM,
+  author = {Xiangming Xiao and Zhenxi Shen and Xiaoguan Qin},
+  title = {Assessing the potential of VEGETATION sensor data for mapping snow and ice cover: A Normalized Difference Snow and Ice Index},
+  journal = {International Journal of Remote Sensing},
+  volume = {22},
+  number = {13},
+  year = {2001},
+  doi = {10.1080/01431160119766},
+  url = {https://doi.org/10.1080/01431160119766}
+}
 ```
-(R - S1)/(R + S1)
+
+```text [APA]
+Xiangming Xiao, Zhenxi Shen, & Xiaoguan Qin (2001). Assessing the potential of VEGETATION sensor data for mapping snow and ice cover: A Normalized Difference Snow and Ice Index. International Journal of Remote Sensing, 22(13). https://doi.org/10.1080/01431160119766
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `R`: Red.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDSaII`](/indices/NDSaII)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-01-10.
+:::
+</IndexDetails>

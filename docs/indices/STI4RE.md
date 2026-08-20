@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "STI4RE"
   text: "4-band Red Edge Soil Tillage Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,72 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2022.102793"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="STI4RE">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDTI4RE,
+  author = {Jiali Liu and Jianrong Fan and Chao Yang and Fubao Xu and Xiyu Zhang},
+  title = {Novel vegetation indices for estimating photosynthetic and non-photosynthetic fractional vegetation cover from Sentinel data},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {109},
+  year = {2022},
+  doi = {10.1016/j.jag.2022.102793},
+  url = {https://doi.org/10.1016/j.jag.2022.102793}
+}
 ```
-gamma * S1/S2 + (1 - gamma) * N/RE3
+
+```text [APA]
+Jiali Liu, Jianrong Fan, Chao Yang, Fubao Xu, & Xiyu Zhang (2022). Novel vegetation indices for estimating photosynthetic and non-photosynthetic fractional vegetation cover from Sentinel data. International Journal of Applied Earth Observation and Geoinformation, 109. https://doi.org/10.1016/j.jag.2022.102793
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `N`: Near-Infrared (NIR).
-- `RE3`: Red Edge 3.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">gamma</code>
-<p>Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.4</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>April</dt>
-<dd>0.4</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>November</dt>
-<dd>0.5</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDVI4RE`](/indices/NDVI4RE)
-- [`SAVI4RE`](/indices/SAVI4RE)
-- [`RVI4RE`](/indices/RVI4RE)
-- [`NDTI4RE`](/indices/NDTI4RE)
-- [`SNDTI4RE`](/indices/SNDTI4RE)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2025-09-30.
+:::
+</IndexDetails>

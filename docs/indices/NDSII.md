@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NDSII"
   text: "Normalized Difference Snow Ice Index"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160802385459"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSII">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDGlaI,
+  author = {A. K. Keshri and A. Shukla and R. P. Gupta},
+  title = {ASTER ratio indices for supraglacial terrain mapping},
+  journal = {International Journal of Remote Sensing},
+  volume = {30},
+  number = {2},
+  year = {2009},
+  doi = {10.1080/01431160802385459},
+  url = {https://doi.org/10.1080/01431160802385459}
+}
 ```
-(G - N)/(G + N)
+
+```text [APA]
+A. K. Keshri, A. Shukla, & R. P. Gupta (2009). ASTER ratio indices for supraglacial terrain mapping. International Journal of Remote Sensing, 30(2). https://doi.org/10.1080/01431160802385459
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDGlaI`](/indices/NDGlaI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

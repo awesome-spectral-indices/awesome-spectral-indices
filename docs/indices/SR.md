@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SR"
   text: "Simple Ratio"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.2307/1936256"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SR,
+  author = {Carl F. Jordan},
+  title = {Derivation of Leaf‐Area Index from Quality of Light on the Forest Floor},
+  journal = {Ecology},
+  volume = {50},
+  number = {4},
+  year = {1969},
+  doi = {10.2307/1936256},
+  url = {https://doi.org/10.2307/1936256}
+}
 ```
-N/R
+
+```text [APA]
+Carl F. Jordan (1969). Derivation of Leaf‐Area Index from Quality of Light on the Forest Floor. Ecology, 50(4). https://doi.org/10.2307/1936256
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

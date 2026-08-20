@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "SUI"
   text: "Sealed Urban Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,28 @@ hero:
       link: "https://doi.org/10.1080/01431161.2026.2715141"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SUI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SUI,
+  author = {Ahmad Asad and Alessandra Capolupo and Eufemia Tarantino},
+  title = {A cross-sensor spectral index for soil sealing detection with improved impervious-bare soil discrimination},
+  journal = {International Journal of Remote Sensing},
+  year = {2026},
+  doi = {10.1080/01431161.2026.2715141},
+  url = {https://doi.org/10.1080/01431161.2026.2715141}
+}
 ```
-((G - S1)*(S2 - R))/((G + S1)*(S2 + R))
+
+```text [APA]
+Ahmad Asad, Alessandra Capolupo, & Eufemia Tarantino (2026). A cross-sensor spectral index for soil sealing detection with improved impervious-bare soil discrimination. International Journal of Remote Sensing. https://doi.org/10.1080/01431161.2026.2715141
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-12.
+:::
+</IndexDetails>

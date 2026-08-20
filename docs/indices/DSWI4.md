@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "DSWI4"
   text: "Disease-Water Stress Index 4"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,39 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160310001618031"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="DSWI4">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_DSWI1,
+  author = {A. Apan and A. Held and S. Phinn and J. Markley},
+  title = {Detecting sugarcane ‘orange rust’ disease using EO-1 Hyperion hyperspectral imagery},
+  journal = {International Journal of Remote Sensing},
+  volume = {25},
+  number = {2},
+  year = {2004},
+  doi = {10.1080/01431160310001618031},
+  url = {https://doi.org/10.1080/01431160310001618031}
+}
 ```
-G/R
+
+```text [APA]
+A. Apan, A. Held, S. Phinn, & J. Markley (2004). Detecting sugarcane ‘orange rust’ disease using EO-1 Hyperion hyperspectral imagery. International Journal of Remote Sensing, 25(2). https://doi.org/10.1080/01431160310001618031
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`DSWI5`](/indices/DSWI5)
-- [`DSWI1`](/indices/DSWI1)
-- [`DSWI2`](/indices/DSWI2)
-- [`DSWI3`](/indices/DSWI3)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-10-29.
+:::
+</IndexDetails>

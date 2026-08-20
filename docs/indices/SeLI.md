@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SeLI"
   text: "Sentinel-2 LAI Green Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.3390/s19040904"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SeLI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SeLI,
+  author = {Nieves Pasqualotto and Jesús Delegido and Shari Van Wittenberghe and Michele Rinaldi and José Moreno},
+  title = {Multi-Crop Green LAI Estimation with a New Simple Sentinel-2 LAI Index (SeLI)},
+  journal = {Sensors},
+  volume = {19},
+  number = {4},
+  year = {2019},
+  doi = {10.3390/s19040904},
+  url = {https://doi.org/10.3390/s19040904}
+}
 ```
-(N2 - RE1) / (N2 + RE1)
+
+```text [APA]
+Nieves Pasqualotto, Jesús Delegido, Shari Van Wittenberghe, Michele Rinaldi, & José Moreno (2019). Multi-Crop Green LAI Estimation with a New Simple Sentinel-2 LAI Index (SeLI). Sensors, 19(4). https://doi.org/10.3390/s19040904
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N2`: Near-Infrared (NIR) 2.
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-08.
+:::
+</IndexDetails>

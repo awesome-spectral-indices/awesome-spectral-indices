@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDLI"
   text: "Normalized Difference Lignin Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(02)00011-1"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDLI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDLI,
+  author = {Lydia Serrano and Josep Peñuelas and Susan L Ustin},
+  title = {Remote sensing of nitrogen and lignin in Mediterranean vegetation from AVIRIS data},
+  journal = {Remote Sensing of Environment},
+  volume = {81},
+  number = {2-3},
+  year = {2002},
+  doi = {10.1016/s0034-4257(02)00011-1},
+  url = {https://doi.org/10.1016/s0034-4257(02)00011-1}
+}
 ```
-(log(1.0 / R1754) - log(1.0 / R1680))/(log(1.0 / R1754) + log(1.0 / R1680))
+
+```text [APA]
+Lydia Serrano, Josep Peñuelas, & Susan L Ustin (2002). Remote sensing of nitrogen and lignin in Mediterranean vegetation from AVIRIS data. Remote Sensing of Environment, 81(2-3). https://doi.org/10.1016/s0034-4257(02)00011-1
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R1754`: Reflectance at 1754 nm.
-- `R1680`: Reflectance at 1680 nm.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDNI`](/indices/NDNI)
-
-## Contributor
-
-Index contributed by https://github.com/MartinuzziFrancesco on 2026-08-08.
+:::
+</IndexDetails>

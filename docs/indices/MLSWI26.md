@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "MLSWI26"
   text: "Modified Land Surface Water Index (MODIS Bands 2 and 6)"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs71215805"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MLSWI26">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MLSWI26,
+  author = {Youngjoo Kwak and Bhuyan Arifuzzanman and Yoichi Iwami},
+  title = {Prompt Proxy Mapping of Flood Damaged Rice Fields Using MODIS-Derived Indices},
+  journal = {Remote Sensing},
+  volume = {7},
+  number = {12},
+  year = {2015},
+  doi = {10.3390/rs71215805},
+  url = {https://doi.org/10.3390/rs71215805}
+}
 ```
-(1.0 - N - S1)/(1.0 - N + S1)
+
+```text [APA]
+Youngjoo Kwak, Bhuyan Arifuzzanman, & Yoichi Iwami (2015). Prompt Proxy Mapping of Flood Damaged Rice Fields Using MODIS-Derived Indices. Remote Sensing, 7(12). https://doi.org/10.3390/rs71215805
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MLSWI27`](/indices/MLSWI27)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-20.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "IKAW"
   text: "Kawashima Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1006/anbo.1997.0544"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="IKAW">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_IKAW,
+  author = {S KAWASHIMA},
+  title = {An Algorithm for Estimating Chlorophyll Content in Leaves Using a Video Camera},
+  journal = {Annals of Botany},
+  volume = {81},
+  number = {1},
+  year = {1998},
+  doi = {10.1006/anbo.1997.0544},
+  url = {https://doi.org/10.1006/anbo.1997.0544}
+}
 ```
-(R - B)/(R + B)
+
+```text [APA]
+S KAWASHIMA (1998). An Algorithm for Estimating Chlorophyll Content in Leaves Using a Video Camera. Annals of Botany, 81(1). https://doi.org/10.1006/anbo.1997.0544
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

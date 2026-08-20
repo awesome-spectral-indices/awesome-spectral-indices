@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDREI"
   text: "Normalized Difference Red Edge Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/1011-1344(93)06963-4"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDREI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDREI,
+  author = {Anatoly Gitelson and Mark N. Merzlyak},
+  title = {Quantitative estimation of chlorophyll-a using reflectance spectra: Experiments with autumn chestnut and maple leaves},
+  journal = {Journal of Photochemistry and Photobiology B: Biology},
+  volume = {22},
+  number = {3},
+  year = {1994},
+  doi = {10.1016/1011-1344(93)06963-4},
+  url = {https://doi.org/10.1016/1011-1344(93)06963-4}
+}
 ```
-(N - RE1) / (N + RE1)
+
+```text [APA]
+Anatoly Gitelson, & Mark N. Merzlyak (1994). Quantitative estimation of chlorophyll-a using reflectance spectra: Experiments with autumn chestnut and maple leaves. Journal of Photochemistry and Photobiology B: Biology, 22(3). https://doi.org/10.1016/1011-1344(93)06963-4
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-13.
+:::
+</IndexDetails>

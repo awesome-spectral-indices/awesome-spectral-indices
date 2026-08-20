@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NIRvH2"
   text: "Hyperspectral Near-Infrared Reflectance of Vegetation"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,67 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2021.112723"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NIRvH2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NIRvH2,
+  author = {Yelu Zeng and Dalei Hao and Grayson Badgley and Alexander Damm and Uwe Rascher and Youngryel Ryu and Jennifer Johnson and Vera Krieger and Shengbiao Wu and Han Qiu and Yaling Liu and Joseph A. Berry and Min Chen},
+  title = {Estimating near-infrared reflectance of vegetation from hyperspectral data},
+  journal = {Remote Sensing of Environment},
+  volume = {267},
+  year = {2021},
+  doi = {10.1016/j.rse.2021.112723},
+  url = {https://doi.org/10.1016/j.rse.2021.112723}
+}
 ```
-N - R - k * (lambdaN - lambdaR)
+
+```text [APA]
+Yelu Zeng, Dalei Hao, Grayson Badgley, Alexander Damm, Uwe Rascher, Youngryel Ryu, Jennifer Johnson, Vera Krieger, Shengbiao Wu, Han Qiu, Yaling Liu, Joseph A. Berry, & Min Chen (2021). Estimating near-infrared reflectance of vegetation from hyperspectral data. Remote Sensing of Environment, 267. https://doi.org/10.1016/j.rse.2021.112723
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">k</code>
-<p>Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.0</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaN</code>
-<p>NIR central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaR</code>
-<p>Red central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-17.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SI"
   text: "Shadow Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,38 +16,28 @@ hero:
       link: "https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_AVI,
+  author = {A. Rikimaru and P. Roy and S. Miyatake},
+  title = {Tropical forest cover density mapping},
+  howpublished = {Tropical Ecology},
+  volume = {43},
+  year = {2002},
+  url = {https://www.researchgate.net/publication/255718070\_Tropical\_forest\_cover\_density\_mapping}
+}
 ```
-((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)
+
+```text [APA]
+A. Rikimaru, P. Roy, & S. Miyatake (2002). Tropical forest cover density mapping. Tropical Ecology, 43. https://www.researchgate.net/publication/255718070_Tropical_forest_cover_density_mapping
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`AVI`](/indices/AVI)
-- [`BI`](/indices/BI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

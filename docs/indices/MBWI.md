@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "MBWI"
   text: "Multi-Band Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,63 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2018.01.018"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MBWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MBWI,
+  author = {Xiaobiao Wang and Shunping Xie and Xueliang Zhang and Cheng Chen and Hao Guo and Jinkang Du and Zheng Duan},
+  title = {A robust Multi-Band Water Index (MBWI) for automated extraction of surface water from Landsat 8 OLI imagery},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {68},
+  year = {2018},
+  doi = {10.1016/j.jag.2018.01.018},
+  url = {https://doi.org/10.1016/j.jag.2018.01.018}
+}
 ```
-(omega * G) - R - N - S1 - S2
+
+```text [APA]
+Xiaobiao Wang, Shunping Xie, Xueliang Zhang, Cheng Chen, Hao Guo, Jinkang Du, & Zheng Duan (2018). A robust Multi-Band Water Index (MBWI) for automated extraction of surface water from Landsat 8 OLI imagery. International Journal of Applied Earth Observation and Geoinformation, 68. https://doi.org/10.1016/j.jag.2018.01.018
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">omega</code>
-<p>Coefficient that maximizes the difference between water and non-water surfaces.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">2.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>For negative index values assigned to water and non-water surfaces</dt>
-<dd>1.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>For positive index values assigned to water surfaces and built-up areas (greater values than this also deliver the same result)</dt>
-<dd>5.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>For positive index values assigned to water surfaces and negative to non-water surfaces</dt>
-<dd>2.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-17.
+:::
+</IndexDetails>

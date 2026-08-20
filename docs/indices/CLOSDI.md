@@ -6,7 +6,7 @@ pageClass: "index-page domain-clouds"
 hero:
   name: "CLOSDI"
   text: "Cloud Shadow Detection Index"
-  tagline: "Clouds"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Clouds</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rsase.2026.101990"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="CLOSDI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CLOSDI,
+  author = {Adrián Cal},
+  title = {CLOSDI: A novel spectral index for cloud shadow detection in Sentinel-2 imagery using NDVI and EVI2},
+  journal = {Remote Sensing Applications: Society and Environment},
+  volume = {42},
+  year = {2026},
+  doi = {10.1016/j.rsase.2026.101990},
+  url = {https://doi.org/10.1016/j.rsase.2026.101990}
+}
 ```
-(1.0 - 1.5 * N - 0.1 * R) / (1.0 + 3.5 * N + 4.9 * R)
+
+```text [APA]
+Adrián Cal (2026). CLOSDI: A novel spectral index for cloud shadow detection in Sentinel-2 imagery using NDVI and EVI2. Remote Sensing Applications: Society and Environment, 42. https://doi.org/10.1016/j.rsase.2026.101990
 ```
 
-### Classification
-
-- Application domain: `Clouds`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/atca1977 on 2026-03-30.
+:::
+</IndexDetails>

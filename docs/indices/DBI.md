@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "DBI"
   text: "Dry Built-Up Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,38 +16,30 @@ hero:
       link: "https://doi.org/10.3390/land7030081"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="DBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_DBI,
+  author = {Azad Rasul and Heiko Balzter and Gaylan R. Faqe Ibrahim and Hasan M. Hameed and James Wheeler and Bashir Adamu and Sa’ad Ibrahim and Peshawa M. Najmaddin},
+  title = {Applying Built-Up and Bare-Soil Indices from Landsat 8 to Cities in Dry Climates},
+  journal = {Land},
+  volume = {7},
+  number = {3},
+  year = {2018},
+  doi = {10.3390/land7030081},
+  url = {https://doi.org/10.3390/land7030081}
+}
 ```
-((B - T1)/(B + T1)) - ((N - R)/(N + R))
+
+```text [APA]
+Azad Rasul, Heiko Balzter, Gaylan R. Faqe Ibrahim, Hasan M. Hameed, James Wheeler, Bashir Adamu, Sa’ad Ibrahim, & Peshawa M. Najmaddin (2018). Applying Built-Up and Bare-Soil Indices from Landsat 8 to Cities in Dry Climates. Land, 7(3). https://doi.org/10.3390/land7030081
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`, `Thermal`
-
-### Bands
-
-- `B`: Blue.
-- `T1`: Thermal Infrared 1.
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`DBSI`](/indices/DBSI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

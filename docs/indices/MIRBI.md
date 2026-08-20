@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "MIRBI"
   text: "Mid-Infrared Burn Index"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160110053185"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MIRBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MIRBI,
+  author = {S. Trigg and S. Flasse},
+  title = {An evaluation of different bi-spectral spaces for discriminating burned shrub-savannah},
+  journal = {International Journal of Remote Sensing},
+  volume = {22},
+  number = {13},
+  year = {2001},
+  doi = {10.1080/01431160110053185},
+  url = {https://doi.org/10.1080/01431160110053185}
+}
 ```
-10.0 * S2 - 9.8 * S1 + 2.0
+
+```text [APA]
+S. Trigg, & S. Flasse (2001). An evaluation of different bi-spectral spaces for discriminating burned shrub-savannah. International Journal of Remote Sensing, 22(13). https://doi.org/10.1080/01431160110053185
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-19.
+:::
+</IndexDetails>

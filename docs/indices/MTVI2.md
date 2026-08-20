@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MTVI2"
   text: "Modified Triangular Vegetation Index 2"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,39 +16,30 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2003.12.013"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MTVI2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MCARI1,
+  author = {D Haboudane},
+  title = {Hyperspectral vegetation indices and novel algorithms for predicting green LAI of crop canopies: Modeling and validation in the context of precision agriculture},
+  journal = {Remote Sensing of Environment},
+  volume = {90},
+  number = {3},
+  year = {2004},
+  doi = {10.1016/j.rse.2003.12.013},
+  url = {https://doi.org/10.1016/j.rse.2003.12.013}
+}
 ```
-(1.5 * (1.2 * (N - G) - 2.5 * (R - G))) / ((((2.0 * N + 1) ** 2) - (6.0 * N - 5 * (R ** 0.5)) - 0.5) ** 0.5)
+
+```text [APA]
+D Haboudane (2004). Hyperspectral vegetation indices and novel algorithms for predicting green LAI of crop canopies: Modeling and validation in the context of precision agriculture. Remote Sensing of Environment, 90(3). https://doi.org/10.1016/j.rse.2003.12.013
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MCARI1`](/indices/MCARI1)
-- [`MTVI1`](/indices/MTVI1)
-- [`MCARI2`](/indices/MCARI2)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "VARI700"
   text: "Visible Atmospherically Resistant Index (700 nm)"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,39 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(01)00289-9"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="VARI700">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_VARI,
+  author = {Anatoly A. Gitelson and Yoram J. Kaufman and Robert Stark and Don Rundquist},
+  title = {Novel algorithms for remote estimation of vegetation fraction},
+  journal = {Remote Sensing of Environment},
+  volume = {80},
+  number = {1},
+  year = {2002},
+  doi = {10.1016/s0034-4257(01)00289-9},
+  url = {https://doi.org/10.1016/s0034-4257(01)00289-9}
+}
 ```
-(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)
+
+```text [APA]
+Anatoly A. Gitelson, Yoram J. Kaufman, Robert Stark, & Don Rundquist (2002). Novel algorithms for remote estimation of vegetation fraction. Remote Sensing of Environment, 80(1). https://doi.org/10.1016/s0034-4257(01)00289-9
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`VARI`](/indices/VARI)
-- [`VIG`](/indices/VIG)
-- [`VI700`](/indices/VI700)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-20.
+:::
+</IndexDetails>

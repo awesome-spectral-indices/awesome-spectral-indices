@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MSAVI2"
   text: "Modified Soil-Adjusted Vegetation Index 2"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(94)90134-1"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MSAVI2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MSAVI,
+  author = {J. Qi and A. Chehbouni and A.R. Huete and Y.H. Kerr and S. Sorooshian},
+  title = {A modified soil adjusted vegetation index},
+  journal = {Remote Sensing of Environment},
+  volume = {48},
+  number = {2},
+  year = {1994},
+  doi = {10.1016/0034-4257(94)90134-1},
+  url = {https://doi.org/10.1016/0034-4257(94)90134-1}
+}
 ```
-0.5 * (2.0 * N + 1 - (((2 * N + 1) ** 2) - 8 * (N - R)) ** 0.5)
+
+```text [APA]
+J. Qi, A. Chehbouni, A.R. Huete, Y.H. Kerr, & S. Sorooshian (1994). A modified soil adjusted vegetation index. Remote Sensing of Environment, 48(2). https://doi.org/10.1016/0034-4257(94)90134-1
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MSAVI`](/indices/MSAVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-13.
+:::
+</IndexDetails>

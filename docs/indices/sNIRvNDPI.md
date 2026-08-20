@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "sNIRvNDPI"
   text: "SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,55 +16,30 @@ hero:
       link: "https://doi.org/10.1029/2024JG008240"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="sNIRvNDPI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_EVIv,
+  author = {Sadegh Ranjbar and Danielle Losos and Benjamin Dechant and Sophie Hoffman and Eyyup Ensar Başakın and Paul C. Stoy},
+  title = {Harnessing Information From Shortwave Infrared Reflectance Bands to Enhance Satellite‐Based Estimates of Gross Primary Productivity},
+  journal = {Journal of Geophysical Research: Biogeosciences},
+  volume = {129},
+  number = {11},
+  year = {2024},
+  doi = {10.1029/2024jg008240},
+  url = {https://doi.org/10.1029/2024jg008240}
+}
 ```
-(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N
+
+```text [APA]
+Sadegh Ranjbar, Danielle Losos, Benjamin Dechant, Sophie Hoffman, Eyyup Ensar Başakın, & Paul C. Stoy (2024). Harnessing Information From Shortwave Infrared Reflectance Bands to Enhance Satellite‐Based Estimates of Gross Primary Productivity. Journal of Geophysical Research: Biogeosciences, 129(11). https://doi.org/10.1029/2024jg008240
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">alpha</code>
-<p>Parameter to mitigate soil and snow effects. Taken from NDPI.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.74</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`bNIRv`](/indices/bNIRv)
-- [`EVIv`](/indices/EVIv)
-- [`sNIRvLSWI`](/indices/sNIRvLSWI)
-- [`sNIRvSWIR`](/indices/sNIRvSWIR)
-- [`sNIRvNDVILSWIP`](/indices/sNIRvNDVILSWIP)
-- [`sNIRvNDVILSWIS`](/indices/sNIRvNDVILSWIS)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2024-05-16.
+:::
+</IndexDetails>

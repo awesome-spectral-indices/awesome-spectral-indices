@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GEMI"
   text: "Global Environment Monitoring Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1007/bf00031911"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GEMI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GEMI,
+  author = {B. Pinty and M. M. Verstraete},
+  title = {GEMI: a non-linear index to monitor global vegetation from satellites},
+  journal = {Vegetatio},
+  volume = {101},
+  number = {1},
+  year = {1992},
+  doi = {10.1007/bf00031911},
+  url = {https://doi.org/10.1007/bf00031911}
+}
 ```
-((2.0*((N ** 2.0)-(R ** 2.0)) + 1.5*N + 0.5*R)/(N + R + 0.5))*(1.0 - 0.25*((2.0 * ((N ** 2.0) - (R ** 2)) + 1.5 * N + 0.5 * R)/(N + R + 0.5)))-((R - 0.125)/(1 - R))
+
+```text [APA]
+B. Pinty, & M. M. Verstraete (1992). GEMI: a non-linear index to monitor global vegetation from satellites. Vegetatio, 101(1). https://doi.org/10.1007/bf00031911
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

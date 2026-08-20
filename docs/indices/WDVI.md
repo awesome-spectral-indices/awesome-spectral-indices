@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "WDVI"
   text: "Weighted Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,52 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(89)90076-X"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="WDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_WDVI,
+  author = {J.G.P.W. Clevers},
+  title = {Application of a weighted infrared-red vegetation index for estimating leaf Area Index by Correcting for Soil Moisture},
+  journal = {Remote Sensing of Environment},
+  volume = {29},
+  number = {1},
+  year = {1989},
+  doi = {10.1016/0034-4257(89)90076-x},
+  url = {https://doi.org/10.1016/0034-4257(89)90076-x}
+}
 ```
-N - sla * R
+
+```text [APA]
+J.G.P.W. Clevers (1989). Application of a weighted infrared-red vegetation index for estimating leaf Area Index by Correcting for Soil Moisture. Remote Sensing of Environment, 29(1). https://doi.org/10.1016/0034-4257(89)90076-x
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">sla</code>
-<p>Soil line slope. sla = N/R (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Equal WDVI to DVI</dt>
-<dd>1.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

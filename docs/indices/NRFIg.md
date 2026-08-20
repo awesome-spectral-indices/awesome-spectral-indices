@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NRFIg"
   text: "Normalized Rapeseed Flowering Index Green"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs13010105"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NRFIg">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NRFIg,
+  author = {Jichong Han and Zhao Zhang and Juan Cao},
+  title = {Developing a New Method to Identify Flowering Dynamics of Rapeseed Using Landsat 8 and Sentinel-1/2},
+  journal = {Remote Sensing},
+  volume = {13},
+  number = {1},
+  year = {2020},
+  doi = {10.3390/rs13010105},
+  url = {https://doi.org/10.3390/rs13010105}
+}
 ```
-(G - S2) / (G + S2)
+
+```text [APA]
+Jichong Han, Zhao Zhang, & Juan Cao (2020). Developing a New Method to Identify Flowering Dynamics of Rapeseed Using Landsat 8 and Sentinel-1/2. Remote Sensing, 13(1). https://doi.org/10.3390/rs13010105
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NRFIr`](/indices/NRFIr)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

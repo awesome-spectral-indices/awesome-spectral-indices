@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "TWI"
   text: "Triangle Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,34 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs14215289"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_TWI,
+  author = {Lifeng Niu and Hermann Kaufmann and Guochang Xu and Guangzong Zhang and Chaonan Ji and Yufang He and Mengfei Sun},
+  title = {Triangle Water Index (TWI): An Advanced Approach for More Accurate Detection and Delineation of Water Surfaces in Sentinel-2 Data},
+  journal = {Remote Sensing},
+  volume = {14},
+  number = {21},
+  year = {2022},
+  doi = {10.3390/rs14215289},
+  url = {https://doi.org/10.3390/rs14215289}
+}
 ```
-(2.84 * (RE1 - RE2) / (G + S2)) + ((1.25 * (G - B) - (N - B)) / (N + 1.25 * G - 0.25 * B))
+
+```text [APA]
+Lifeng Niu, Hermann Kaufmann, Guochang Xu, Guangzong Zhang, Chaonan Ji, Yufang He, & Mengfei Sun (2022). Triangle Water Index (TWI): An Advanced Approach for More Accurate Detection and Delineation of Water Surfaces in Sentinel-2 Data. Remote Sensing, 14(21). https://doi.org/10.3390/rs14215289
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `RE2`: Red Edge 2.
-- `G`: Green.
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `B`: Blue.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/remi-braun on 2023-02-10.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "NDCI"
   text: "Normalized Difference Chlorophyll Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2011.10.016"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDCI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDCI,
+  author = {Sachidananda Mishra and Deepak R. Mishra},
+  title = {Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters},
+  journal = {Remote Sensing of Environment},
+  volume = {117},
+  year = {2012},
+  doi = {10.1016/j.rse.2011.10.016},
+  url = {https://doi.org/10.1016/j.rse.2011.10.016}
+}
 ```
-(RE1 - R)/(RE1 + R)
+
+```text [APA]
+Sachidananda Mishra, & Deepak R. Mishra (2012). Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, 117. https://doi.org/10.1016/j.rse.2011.10.016
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/kalab-oto on 2022-10-10.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MSR"
   text: "Modified Simple Ratio"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/07038992.1996.10855178"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MSR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MSR,
+  author = {Jing M. Chen},
+  title = {Evaluation of Vegetation Indices and a Modified Simple Ratio for Boreal Applications},
+  journal = {Canadian Journal of Remote Sensing},
+  volume = {22},
+  number = {3},
+  year = {1996},
+  doi = {10.1080/07038992.1996.10855178},
+  url = {https://doi.org/10.1080/07038992.1996.10855178}
+}
 ```
-(N / R - 1) / ((N / R + 1) ** 0.5)
+
+```text [APA]
+Jing M. Chen (1996). Evaluation of Vegetation Indices and a Modified Simple Ratio for Boreal Applications. Canadian Journal of Remote Sensing, 22(3). https://doi.org/10.1080/07038992.1996.10855178
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

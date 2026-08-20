@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "ATSAVI"
   text: "Adjusted Transformed Soil-Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,67 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(91)90009-U"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="ATSAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_ATSAVI,
+  author = {F. Baret and G. Guyot},
+  title = {Potentials and limits of vegetation indices for LAI and APAR assessment},
+  journal = {Remote Sensing of Environment},
+  volume = {35},
+  number = {2-3},
+  year = {1991},
+  doi = {10.1016/0034-4257(91)90009-u},
+  url = {https://doi.org/10.1016/0034-4257(91)90009-u}
+}
 ```
-sla * (N - sla * R - slb) / (sla * N + R - sla * slb + X * (1 + sla ** 2.0))
+
+```text [APA]
+F. Baret, & G. Guyot (1991). Potentials and limits of vegetation indices for LAI and APAR assessment. Remote Sensing of Environment, 35(2-3). https://doi.org/10.1016/0034-4257(91)90009-u
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">X</code>
-<p>Negative abscissa of a reference point located on the soil line.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.08</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">sla</code>
-<p>Soil line slope. N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">slb</code>
-<p>Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.0</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NSDSI1"
   text: "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.isprsjprs.2019.06.012"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NSDSI1">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NSDSI1,
+  author = {Jibo Yue and Jia Tian and Qingjiu Tian and Kaijian Xu and Nianxu Xu},
+  title = {Development of soil moisture indices from differences in water absorption between shortwave-infrared bands},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {154},
+  year = {2019},
+  doi = {10.1016/j.isprsjprs.2019.06.012},
+  url = {https://doi.org/10.1016/j.isprsjprs.2019.06.012}
+}
 ```
-(S1-S2)/S1
+
+```text [APA]
+Jibo Yue, Jia Tian, Qingjiu Tian, Kaijian Xu, & Nianxu Xu (2019). Development of soil moisture indices from differences in water absorption between shortwave-infrared bands. ISPRS Journal of Photogrammetry and Remote Sensing, 154. https://doi.org/10.1016/j.isprsjprs.2019.06.012
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NSDSI2`](/indices/NSDSI2)
-- [`NSDSI3`](/indices/NSDSI3)
-
-## Contributor
-
-Index contributed by https://github.com/CvenGeo on 2022-10-03.
+:::
+</IndexDetails>

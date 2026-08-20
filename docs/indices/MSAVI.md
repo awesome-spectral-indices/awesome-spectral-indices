@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MSAVI"
   text: "Modified Soil-Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,49 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(94)90134-1"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MSAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MSAVI,
+  author = {J. Qi and A. Chehbouni and A.R. Huete and Y.H. Kerr and S. Sorooshian},
+  title = {A modified soil adjusted vegetation index},
+  journal = {Remote Sensing of Environment},
+  volume = {48},
+  number = {2},
+  year = {1994},
+  doi = {10.1016/0034-4257(94)90134-1},
+  url = {https://doi.org/10.1016/0034-4257(94)90134-1}
+}
 ```
-(1 + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R))) * (N - R) / (N + R + (1 - 2 * gamma * ((N - R)/(N + R)) * (N - gamma * R)))
+
+```text [APA]
+J. Qi, A. Chehbouni, A.R. Huete, Y.H. Kerr, & S. Sorooshian (1994). A modified soil adjusted vegetation index. Remote Sensing of Environment, 48(2). https://doi.org/10.1016/0034-4257(94)90134-1
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">gamma</code>
-<p>Primary soil line parameter. gamma = N/R (slope of the soil line, only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.06</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MSAVI2`](/indices/MSAVI2)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-09.
+:::
+</IndexDetails>

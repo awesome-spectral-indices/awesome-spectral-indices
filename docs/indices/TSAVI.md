@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TSAVI"
   text: "Transformed Soil-Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,73 +16,28 @@ hero:
       link: "https://doi.org/10.1109/IGARSS.1989.576128"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TSAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_TSAVI,
+  author = {F. Baret and G. Guyot and D.J. Major},
+  title = {TSAVI: A Vegetation Index Which Minimizes Soil Brightness Effects On LAI And APAR Estimation},
+  booktitle = {12th Canadian Symposium on Remote Sensing Geoscience and Remote Sensing Symposium,},
+  volume = {3},
+  doi = {10.1109/igarss.1989.576128},
+  url = {https://doi.org/10.1109/igarss.1989.576128}
+}
 ```
-sla * (N - sla * R - slb) / (sla * N + R - sla * slb)
+
+```text [APA]
+F. Baret, G. Guyot, & D.J. Major (n.d.). TSAVI: A Vegetation Index Which Minimizes Soil Brightness Effects On LAI And APAR Estimation. 12th Canadian Symposium on Remote Sensing Geoscience and Remote Sensing Symposium,, 3. https://doi.org/10.1109/igarss.1989.576128
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">sla</code>
-<p>Soil line slope. N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Equal TSAVI to NDVI when slb is 0.0</dt>
-<dd>1.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">slb</code>
-<p>Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Equal TSAVI to NDVI when sla is 1.0</dt>
-<dd>0.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

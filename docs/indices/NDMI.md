@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDMI"
   text: "Normalized Difference Moisture Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(01)00318-2"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDMI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDMI,
+  author = {Emily Hoffhine Wilson and Steven A Sader},
+  title = {Detection of forest harvest type using multiple dates of Landsat TM imagery},
+  journal = {Remote Sensing of Environment},
+  volume = {80},
+  number = {3},
+  year = {2002},
+  doi = {10.1016/s0034-4257(01)00318-2},
+  url = {https://doi.org/10.1016/s0034-4257(01)00318-2}
+}
 ```
-(N - S1)/(N + S1)
+
+```text [APA]
+Emily Hoffhine Wilson, & Steven A Sader (2002). Detection of forest harvest type using multiple dates of Landsat TM imagery. Remote Sensing of Environment, 80(3). https://doi.org/10.1016/s0034-4257(01)00318-2
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/bpurinton on 2021-12-01.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SR2"
   text: "Simple Ratio (800 and 550 nm)"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431169308904370"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SR2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SR2,
+  author = {C. BUSCHMANN and E. NAGEL},
+  title = {In vivo spectroscopy and internal optics of leaves as basis for remote sensing of vegetation},
+  journal = {International Journal of Remote Sensing},
+  volume = {14},
+  number = {4},
+  year = {1993},
+  doi = {10.1080/01431169308904370},
+  url = {https://doi.org/10.1080/01431169308904370}
+}
 ```
-N/G
+
+```text [APA]
+C. BUSCHMANN, & E. NAGEL (1993). In vivo spectroscopy and internal optics of leaves as basis for remote sensing of vegetation. International Journal of Remote Sensing, 14(4). https://doi.org/10.1080/01431169308904370
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-09.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GCC"
   text: "Green Chromatic Coordinate"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,38 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(87)90088-5"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GCC">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_BCC,
+  author = {Alan R Gillespie and Anne B Kahle and Richard E Walker},
+  title = {Color enhancement of highly correlated images. II. Channel ratio and “chromaticity” transformation techniques},
+  journal = {Remote Sensing of Environment},
+  volume = {22},
+  number = {3},
+  year = {1987},
+  doi = {10.1016/0034-4257(87)90088-5},
+  url = {https://doi.org/10.1016/0034-4257(87)90088-5}
+}
 ```
-G / (R + G + B)
+
+```text [APA]
+Alan R Gillespie, Anne B Kahle, & Richard E Walker (1987). Color enhancement of highly correlated images. II. Channel ratio and “chromaticity” transformation techniques. Remote Sensing of Environment, 22(3). https://doi.org/10.1016/0034-4257(87)90088-5
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`RCC`](/indices/RCC)
-- [`BCC`](/indices/BCC)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-17.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MCARI"
   text: "Modified Chlorophyll Absorption in Reflectance Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1016/S0034-4257(00)00113-9"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MCARI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MCARI,
+  author = {C Daughtry},
+  title = {Estimating Corn Leaf Chlorophyll Concentration from Leaf and Canopy Reflectance},
+  journal = {Remote Sensing of Environment},
+  volume = {74},
+  number = {2},
+  year = {2000},
+  doi = {10.1016/s0034-4257(00)00113-9},
+  url = {https://doi.org/10.1016/s0034-4257(00)00113-9}
+}
 ```
-((RE1 - R) - 0.2 * (RE1 - G)) * (RE1 / R)
+
+```text [APA]
+C Daughtry (2000). Estimating Corn Leaf Chlorophyll Concentration from Leaf and Canopy Reflectance. Remote Sensing of Environment, 74(2). https://doi.org/10.1016/s0034-4257(00)00113-9
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `R`: Red.
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-13.
+:::
+</IndexDetails>

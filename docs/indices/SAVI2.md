@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SAVI2"
   text: "Soil-Adjusted Vegetation Index 2"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,55 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431169008955053"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SAVI2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SAVI2,
+  author = {D. J. MAJOR and F. BARET and G. GUYOT},
+  title = {A ratio vegetation index adjusted for soil brightness},
+  journal = {International Journal of Remote Sensing},
+  volume = {11},
+  number = {5},
+  year = {1990},
+  doi = {10.1080/01431169008955053},
+  url = {https://doi.org/10.1080/01431169008955053}
+}
 ```
-N / (R + (slb / sla))
+
+```text [APA]
+D. J. MAJOR, F. BARET, & G. GUYOT (1990). A ratio vegetation index adjusted for soil brightness. International Journal of Remote Sensing, 11(5). https://doi.org/10.1080/01431169008955053
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">sla</code>
-<p>Soil line slope. N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">1.0</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">slb</code>
-<p>Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.0</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

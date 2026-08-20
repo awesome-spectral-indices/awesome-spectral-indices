@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GLI"
   text: "Green Leaf Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "http://dx.doi.org/10.1080/10106040108542184"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GLI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GLI,
+  author = {Mounir Louhaichi and Michael M. Borman and Douglas E. Johnson},
+  title = {Spatially Located Platform and Aerial Photography for Documentation of Grazing Impacts on Wheat},
+  journal = {Geocarto International},
+  volume = {16},
+  number = {1},
+  year = {2001},
+  doi = {10.1080/10106040108542184},
+  url = {https://doi.org/10.1080/10106040108542184}
+}
 ```
-(2.0 * G - R - B) / (2.0 * G + R + B)
+
+```text [APA]
+Mounir Louhaichi, Michael M. Borman, & Douglas E. Johnson (2001). Spatially Located Platform and Aerial Photography for Documentation of Grazing Impacts on Wheat. Geocarto International, 16(1). https://doi.org/10.1080/10106040108542184
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

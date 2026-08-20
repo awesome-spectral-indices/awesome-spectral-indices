@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDPI"
   text: "Normalized Difference Phenology Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,48 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2017.04.031"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDPI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDPI,
+  author = {Cong Wang and Jin Chen and Jin Wu and Yanhong Tang and Peijun Shi and T. Andrew Black and Kai Zhu},
+  title = {A snow-free vegetation index for improved monitoring of vegetation spring green-up date in deciduous ecosystems},
+  journal = {Remote Sensing of Environment},
+  volume = {196},
+  year = {2017},
+  doi = {10.1016/j.rse.2017.04.031},
+  url = {https://doi.org/10.1016/j.rse.2017.04.031}
+}
 ```
-(N - (alpha * R + (1.0 - alpha) * S1))/(N + (alpha * R + (1.0 - alpha) * S1))
+
+```text [APA]
+Cong Wang, Jin Chen, Jin Wu, Yanhong Tang, Peijun Shi, T. Andrew Black, & Kai Zhu (2017). A snow-free vegetation index for improved monitoring of vegetation spring green-up date in deciduous ecosystems. Remote Sensing of Environment, 196. https://doi.org/10.1016/j.rse.2017.04.031
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">alpha</code>
-<p>Weighting coefficient.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.74</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-20.
+:::
+</IndexDetails>

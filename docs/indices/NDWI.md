@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "NDWI"
   text: "Normalized Difference Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431169608948714"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDWI,
+  author = {S. K. McFEETERS},
+  title = {The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features},
+  journal = {International Journal of Remote Sensing},
+  volume = {17},
+  number = {7},
+  year = {1996},
+  doi = {10.1080/01431169608948714},
+  url = {https://doi.org/10.1080/01431169608948714}
+}
 ```
-(G - N) / (G + N)
+
+```text [APA]
+S. K. McFEETERS (1996). The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features. International Journal of Remote Sensing, 17(7). https://doi.org/10.1080/01431169608948714
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SRVI"
   text: "Symbolic Regression Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,38 +16,30 @@ hero:
       link: "https://doi.org/10.1038/s41598-025-34720-x"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SRVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SRVI,
+  author = {Charalambos Chrysostomou and Stelios P. Neophytides and Michalis Mavrovouniotis and Diofantos G. Hadjimitsis},
+  title = {Optimized spectral indices for global vegetation and water mapping using Sentinel-2},
+  journal = {Scientific Reports},
+  volume = {16},
+  number = {1},
+  year = {2026},
+  doi = {10.1038/s41598-025-34720-x},
+  url = {https://doi.org/10.1038/s41598-025-34720-x}
+}
 ```
-(2.0 * N - 3.0 * R) / (N + R + 0.5 * (G + S1))
+
+```text [APA]
+Charalambos Chrysostomou, Stelios P. Neophytides, Michalis Mavrovouniotis, & Diofantos G. Hadjimitsis (2026). Optimized spectral indices for global vegetation and water mapping using Sentinel-2. Scientific Reports, 16(1). https://doi.org/10.1038/s41598-025-34720-x
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`SRWI`](/indices/SRWI)
-
-## Contributor
-
-Index contributed by https://github.com/c-chrysostomou on 2026-05-25.
+:::
+</IndexDetails>

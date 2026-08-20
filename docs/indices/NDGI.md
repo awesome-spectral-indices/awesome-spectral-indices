@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDGI"
   text: "Normalized Difference Greenness Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,74 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2019.03.028"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDGI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_DVIplus,
+  author = {Wei Yang and Hideki Kobayashi and Cong Wang and Miaogen Shen and Jin Chen and Bunkei Matsushita and Yanhong Tang and Yongwon Kim and M. Syndonia Bret-Harte and Donatella Zona and Walter Oechel and Akihiko Kondoh},
+  title = {A semi-analytical snow-free vegetation index for improving estimation of plant phenology in tundra and grassland ecosystems},
+  journal = {Remote Sensing of Environment},
+  volume = {228},
+  year = {2019},
+  doi = {10.1016/j.rse.2019.03.028},
+  url = {https://doi.org/10.1016/j.rse.2019.03.028}
+}
 ```
-(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N - R)/(((lambdaN - lambdaR)/(lambdaN - lambdaG)) * G + (1.0 - ((lambdaN - lambdaR)/(lambdaN - lambdaG))) * N + R)
+
+```text [APA]
+Wei Yang, Hideki Kobayashi, Cong Wang, Miaogen Shen, Jin Chen, Bunkei Matsushita, Yanhong Tang, Yongwon Kim, M. Syndonia Bret-Harte, Donatella Zona, Walter Oechel, & Akihiko Kondoh (2019). A semi-analytical snow-free vegetation index for improving estimation of plant phenology in tundra and grassland ecosystems. Remote Sensing of Environment, 228. https://doi.org/10.1016/j.rse.2019.03.028
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaG</code>
-<p>Green central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaN</code>
-<p>NIR central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">lambdaR</code>
-<p>Red central wavelength (nm).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default is-empty">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">Not specified</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`DVIplus`](/indices/DVIplus)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-01-20.
+:::
+</IndexDetails>

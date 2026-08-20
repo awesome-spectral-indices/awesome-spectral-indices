@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "BIXS"
   text: "SPOT HRV XS-based Brightness Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(98)00030-3"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="BIXS">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_BITM,
+  author = {Renaud Mathieu and Marcel Pouget and Bernard Cervelle and Richard Escadafal},
+  title = {Relationships between Satellite-Based Radiometric Indices Simulated Using Laboratory Reflectance Data and Typic Soil Color of an Arid Environment},
+  journal = {Remote Sensing of Environment},
+  volume = {66},
+  number = {1},
+  year = {1998},
+  doi = {10.1016/s0034-4257(98)00030-3},
+  url = {https://doi.org/10.1016/s0034-4257(98)00030-3}
+}
 ```
-(((G**2.0)+(R**2.0))/2.0)**0.5
+
+```text [APA]
+Renaud Mathieu, Marcel Pouget, Bernard Cervelle, & Richard Escadafal (1998). Relationships between Satellite-Based Radiometric Indices Simulated Using Laboratory Reflectance Data and Typic Soil Color of an Arid Environment. Remote Sensing of Environment, 66(1). https://doi.org/10.1016/s0034-4257(98)00030-3
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`BITM`](/indices/BITM)
-- [`RI4XS`](/indices/RI4XS)
-
-## Contributor
-
-Index contributed by https://github.com/remi-braun on 2022-11-20.
+:::
+</IndexDetails>

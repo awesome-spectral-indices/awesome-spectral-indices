@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NBSIMS"
   text: "Non-Binary Snow Index for Multi-Component Surfaces"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,34 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs13142777"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBSIMS">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NBSIMS,
+  author = {Mario Arreola-Esquivel and Carina Toxqui-Quitl and Maricela Delgadillo-Herrera and Alfonso Padilla-Vivanco and Gabriel Ortega-Mendoza and Anna Carbone},
+  title = {Non-Binary Snow Index for Multi-Component Surfaces},
+  journal = {Remote Sensing},
+  volume = {13},
+  number = {14},
+  year = {2021},
+  doi = {10.3390/rs13142777},
+  url = {https://doi.org/10.3390/rs13142777}
+}
 ```
-0.36 * (G + R + N) - (((B + S2)/G) + S1)
+
+```text [APA]
+Mario Arreola-Esquivel, Carina Toxqui-Quitl, Maricela Delgadillo-Herrera, Alfonso Padilla-Vivanco, Gabriel Ortega-Mendoza, & Anna Carbone (2021). Non-Binary Snow Index for Multi-Component Surfaces. Remote Sensing, 13(14). https://doi.org/10.3390/rs13142777
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-- `N`: Near-Infrared (NIR).
-- `B`: Blue.
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-09.
+:::
+</IndexDetails>

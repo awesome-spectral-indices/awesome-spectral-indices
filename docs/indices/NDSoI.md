@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NDSoI"
   text: "Normalized Difference Soil Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2015.02.010"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSoI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDSoI,
+  author = {Yingbin Deng and Changshan Wu and Miao Li and Renrong Chen},
+  title = {RNDSI: A ratio normalized difference soil index for remote sensing of urban/suburban environments},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {39},
+  year = {2015},
+  doi = {10.1016/j.jag.2015.02.010},
+  url = {https://doi.org/10.1016/j.jag.2015.02.010}
+}
 ```
-(S2 - G)/(S2 + G)
+
+```text [APA]
+Yingbin Deng, Changshan Wu, Miao Li, & Renrong Chen (2015). RNDSI: A ratio normalized difference soil index for remote sensing of urban/suburban environments. International Journal of Applied Earth Observation and Geoinformation, 39. https://doi.org/10.1016/j.jag.2015.02.010
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

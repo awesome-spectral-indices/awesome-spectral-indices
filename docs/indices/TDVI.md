@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TDVI"
   text: "Transformed Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,28 @@ hero:
       link: "https://doi.org/10.1109/IGARSS.2002.1026867"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_TDVI,
+  author = {A. Bannari and H. Asalhi and P.M. Teillet},
+  title = {Transformed difference vegetation index (TDVI) for vegetation cover mapping},
+  booktitle = {IEEE International Geoscience and Remote Sensing Symposium},
+  volume = {5},
+  doi = {10.1109/igarss.2002.1026867},
+  url = {https://doi.org/10.1109/igarss.2002.1026867}
+}
 ```
-1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))
+
+```text [APA]
+A. Bannari, H. Asalhi, & P.M. Teillet (n.d.). Transformed difference vegetation index (TDVI) for vegetation cover mapping. IEEE International Geoscience and Remote Sensing Symposium, 5. https://doi.org/10.1109/igarss.2002.1026867
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-09.
+:::
+</IndexDetails>

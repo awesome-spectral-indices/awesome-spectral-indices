@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MNDVI"
   text: "Modified Normalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1080/014311697216810"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MNDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MNDVI,
+  author = {C. Jurgens},
+  title = {The modified normalized difference vegetation index (mNDVI) a new index to determine frost damages in agriculture based on Landsat TM data},
+  journal = {International Journal of Remote Sensing},
+  volume = {18},
+  number = {17},
+  year = {1997},
+  doi = {10.1080/014311697216810},
+  url = {https://doi.org/10.1080/014311697216810}
+}
 ```
-(N - S2)/(N + S2)
+
+```text [APA]
+C. Jurgens (1997). The modified normalized difference vegetation index (mNDVI) a new index to determine frost damages in agriculture based on Landsat TM data. International Journal of Remote Sensing, 18(17). https://doi.org/10.1080/014311697216810
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

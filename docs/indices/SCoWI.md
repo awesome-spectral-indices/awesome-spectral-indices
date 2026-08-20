@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "SCoWI"
   text: "Subtractive Coastal Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,33 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs16152795"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SCoWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SCoWI,
+  author = {Erwin W. J. Bergsma and Adrien N. Klotz and Stéphanie Artigues and Marcan Graffin and Anna Prenowitz and Jean-Marc Delvit and Rafael Almar},
+  title = {Shoreliner: A Sub-Pixel Coastal Waterline Extraction Pipeline for Multi-Spectral Satellite Optical Imagery},
+  journal = {Remote Sensing},
+  volume = {16},
+  number = {15},
+  year = {2024},
+  doi = {10.3390/rs16152795},
+  url = {https://doi.org/10.3390/rs16152795}
+}
 ```
-B + 2.0 * (G - N) - 0.75 * S1 - 0.5 * S2
+
+```text [APA]
+Erwin W. J. Bergsma, Adrien N. Klotz, Stéphanie Artigues, Marcan Graffin, Anna Prenowitz, Jean-Marc Delvit, & Rafael Almar (2024). Shoreliner: A Sub-Pixel Coastal Waterline Extraction Pipeline for Multi-Spectral Satellite Optical Imagery. Remote Sensing, 16(15). https://doi.org/10.3390/rs16152795
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/cmayet on 2026-03-31.
+:::
+</IndexDetails>

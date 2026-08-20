@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "VgNIRBI"
   text: "Visible Green-Based Built-Up Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.ecolind.2015.03.037"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="VgNIRBI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_VgNIRBI,
+  author = {Ronald C. Estoque and Yuji Murayama},
+  title = {Classification and change detection of built-up lands from Landsat-7 ETM+ and Landsat-8 OLI/TIRS imageries: A comparative assessment of various spectral indices},
+  journal = {Ecological Indicators},
+  volume = {56},
+  year = {2015},
+  doi = {10.1016/j.ecolind.2015.03.037},
+  url = {https://doi.org/10.1016/j.ecolind.2015.03.037}
+}
 ```
-(G - N)/(G + N)
+
+```text [APA]
+Ronald C. Estoque, & Yuji Murayama (2015). Classification and change detection of built-up lands from Landsat-7 ETM+ and Landsat-8 OLI/TIRS imageries: A comparative assessment of various spectral indices. Ecological Indicators, 56. https://doi.org/10.1016/j.ecolind.2015.03.037
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`VrNIRBI`](/indices/VrNIRBI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-02-09.
+:::
+</IndexDetails>

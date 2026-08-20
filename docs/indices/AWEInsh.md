@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "AWEInsh"
   text: "Automated Water Extraction Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,38 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2013.08.029"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="AWEInsh">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_AWEInsh,
+  author = {Gudina L. Feyisa and Henrik Meilby and Rasmus Fensholt and Simon R. Proud},
+  title = {Automated Water Extraction Index: A new technique for surface water mapping using Landsat imagery},
+  journal = {Remote Sensing of Environment},
+  volume = {140},
+  year = {2014},
+  doi = {10.1016/j.rse.2013.08.029},
+  url = {https://doi.org/10.1016/j.rse.2013.08.029}
+}
 ```
-4.0 * (G - S1) - 0.25 * N + 2.75 * S2
+
+```text [APA]
+Gudina L. Feyisa, Henrik Meilby, Rasmus Fensholt, & Simon R. Proud (2014). Automated Water Extraction Index: A new technique for surface water mapping using Landsat imagery. Remote Sensing of Environment, 140. https://doi.org/10.1016/j.rse.2013.08.029
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`AWEIsh`](/indices/AWEIsh)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

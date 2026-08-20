@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NDISI"
   text: "Normalized Difference Ice-Snow Index"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1029/2021JD035742"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDISI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDISI,
+  author = {Wenzheng Ji and Xiaohua Hao and Donghang Shao and Qian Yang and Jian Wang and Hongyi Li and Guanghui Huang},
+  title = {A New Index for Snow/Ice/Ice‐Snow Discrimination Based on BRDF Characteristic Observation Data},
+  journal = {Journal of Geophysical Research: Atmospheres},
+  volume = {127},
+  number = {3},
+  year = {2022},
+  doi = {10.1029/2021jd035742},
+  url = {https://doi.org/10.1029/2021jd035742}
+}
 ```
-(R1080_1120 - R1760_1800)/(R1080_1120 + R1760_1800)
+
+```text [APA]
+Wenzheng Ji, Xiaohua Hao, Donghang Shao, Qian Yang, Jian Wang, Hongyi Li, & Guanghui Huang (2022). A New Index for Snow/Ice/Ice‐Snow Discrimination Based on BRDF Characteristic Observation Data. Journal of Geophysical Research: Atmospheres, 127(3). https://doi.org/10.1029/2021jd035742
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R1080_1120`: Reflectance at one selected wavelength from 1080 to 1120 nm, inclusive.
-- `R1760_1800`: Reflectance at one selected wavelength from 1760 to 1800 nm, inclusive.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/MartinuzziFrancesco on 2026-08-09.
+:::
+</IndexDetails>

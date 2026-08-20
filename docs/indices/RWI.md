@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "RWI"
   text: "Rescaled Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,43 +16,29 @@ hero:
       link: "https://doi.org/10.1109/JSTARS.2025.3562089"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="RWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_RWI,
+  author = {Eduardo Felix Justiniano and Fernando Shinji Kawakubo and Edimilson Rodrigues dos Santos Junior and Breno Malheiros de Melo and Gustavo Paixão Menezes and Marcel Fantin and Julio Cesar Pedrassoli and Marcos Roberto Martines and Rúbia Gomes Morato},
+  title = {A New Spectral Index for Mapping Water Surfaces in Urban Contexts},
+  journal = {IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+  volume = {18},
+  year = {2025},
+  doi = {10.1109/jstars.2025.3562089},
+  url = {https://doi.org/10.1109/jstars.2025.3562089}
+}
 ```
-((G ** (1.0 / 2.71828)) * (1.0 / n) - S1) / ((G ** (1.0 / 2.71828)) * (1.0 / n) + S1)
+
+```text [APA]
+Eduardo Felix Justiniano, Fernando Shinji Kawakubo, Edimilson Rodrigues dos Santos Junior, Breno Malheiros de Melo, Gustavo Paixão Menezes, Marcel Fantin, Julio Cesar Pedrassoli, Marcos Roberto Martines, & Rúbia Gomes Morato (2025). A New Spectral Index for Mapping Water Surfaces in Urban Contexts. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 18. https://doi.org/10.1109/jstars.2025.3562089
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">n</code>
-<p>Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">5</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/edujusti on 2026-03-31.
+:::
+</IndexDetails>

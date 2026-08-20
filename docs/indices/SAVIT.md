@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "SAVIT"
   text: "Soil-Adjusted Vegetation Index Thermal"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,51 +16,30 @@ hero:
       link: "https://doi.org/10.1080/01431160600954704"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SAVIT">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CSIT,
+  author = {A. M. S. Smith and N. A. Drake and M. J. Wooster and A. T. Hudak and Z. A. Holden and C. J. Gibbons},
+  title = {Production of Landsat ETM+ reference imagery of burned areas within Southern African savannahs: comparison of methods and application to MODIS},
+  journal = {International Journal of Remote Sensing},
+  volume = {28},
+  number = {12},
+  year = {2007},
+  doi = {10.1080/01431160600954704},
+  url = {https://doi.org/10.1080/01431160600954704}
+}
 ```
-(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)
+
+```text [APA]
+A. M. S. Smith, N. A. Drake, M. J. Wooster, A. T. Hudak, Z. A. Holden, & C. J. Gibbons (2007). Production of Landsat ETM+ reference imagery of burned areas within Southern African savannahs: comparison of methods and application to MODIS. International Journal of Remote Sensing, 28(12). https://doi.org/10.1080/01431160600954704
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`, `Thermal`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `T`: Thermal Infrared.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Canopy background adjustment.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`CSIT`](/indices/CSIT)
-- [`NDVIT`](/indices/NDVIT)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

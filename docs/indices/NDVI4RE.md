@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDVI4RE"
   text: "4-band Red Edge Normalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,101 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2022.102793"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDVI4RE">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDTI4RE,
+  author = {Jiali Liu and Jianrong Fan and Chao Yang and Fubao Xu and Xiyu Zhang},
+  title = {Novel vegetation indices for estimating photosynthetic and non-photosynthetic fractional vegetation cover from Sentinel data},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {109},
+  year = {2022},
+  doi = {10.1016/j.jag.2022.102793},
+  url = {https://doi.org/10.1016/j.jag.2022.102793}
+}
 ```
-((alpha * RE3 + (1 - alpha) * RE2) - (beta * R + (1 - beta) * RE1))/((alpha * RE3 + (1 - alpha) * RE2) + (beta * R + (1 - beta) * RE1))
+
+```text [APA]
+Jiali Liu, Jianrong Fan, Chao Yang, Fubao Xu, & Xiyu Zhang (2022). Novel vegetation indices for estimating photosynthetic and non-photosynthetic fractional vegetation cover from Sentinel data. International Journal of Applied Earth Observation and Geoinformation, 109. https://doi.org/10.1016/j.jag.2022.102793
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE3`: Red Edge 3.
-- `RE2`: Red Edge 2.
-- `R`: Red.
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">alpha</code>
-<p>Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.2</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>April</dt>
-<dd>0.2</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>August</dt>
-<dd>0.7</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">beta</code>
-<p>Parameter representing the proportion of Red reflectance (Sentinel-2).</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.2</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>April</dt>
-<dd>0.2</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>August</dt>
-<dd>0.7</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`SAVI4RE`](/indices/SAVI4RE)
-- [`RVI4RE`](/indices/RVI4RE)
-- [`NDTI4RE`](/indices/NDTI4RE)
-- [`SNDTI4RE`](/indices/SNDTI4RE)
-- [`STI4RE`](/indices/STI4RE)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2025-09-30.
+:::
+</IndexDetails>

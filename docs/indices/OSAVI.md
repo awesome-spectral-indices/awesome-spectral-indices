@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "OSAVI"
   text: "Optimized Soil-Adjusted Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(95)00186-7"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="OSAVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_OSAVI,
+  author = {Geneviève Rondeaux and Michael Steven and Frédéric Baret},
+  title = {Optimization of soil-adjusted vegetation indices},
+  journal = {Remote Sensing of Environment},
+  volume = {55},
+  number = {2},
+  year = {1996},
+  doi = {10.1016/0034-4257(95)00186-7},
+  url = {https://doi.org/10.1016/0034-4257(95)00186-7}
+}
 ```
-(N - R) / (N + R + 0.16)
+
+```text [APA]
+Geneviève Rondeaux, Michael Steven, & Frédéric Baret (1996). Optimization of soil-adjusted vegetation indices. Remote Sensing of Environment, 55(2). https://doi.org/10.1016/0034-4257(95)00186-7
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-11.
+:::
+</IndexDetails>

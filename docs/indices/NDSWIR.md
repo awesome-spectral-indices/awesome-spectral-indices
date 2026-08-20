@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NDSWIR"
   text: "Normalized Difference SWIR"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1109/TGRS.2003.819190"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDSWIR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NDSWIR,
+  author = {F. Gerard and S. Plummer and R. Wadsworth and A.F. Sanfeliu and L. Iliffe and H. Balzter and B. Wyatt},
+  title = {Forest fire scar detection in the boreal forest with multitemporal spot-vegetation data},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {41},
+  number = {11},
+  year = {2003},
+  doi = {10.1109/tgrs.2003.819190},
+  url = {https://doi.org/10.1109/tgrs.2003.819190}
+}
 ```
-(N - S1)/(N + S1)
+
+```text [APA]
+F. Gerard, S. Plummer, R. Wadsworth, A.F. Sanfeliu, L. Iliffe, H. Balzter, & B. Wyatt (2003). Forest fire scar detection in the boreal forest with multitemporal spot-vegetation data. IEEE Transactions on Geoscience and Remote Sensing, 41(11). https://doi.org/10.1109/tgrs.2003.819190
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

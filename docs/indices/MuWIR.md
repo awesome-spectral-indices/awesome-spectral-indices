@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "MuWIR"
   text: "Revised Multi-Spectral Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,33 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs10101643"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MuWIR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MuWIR,
+  author = {Zifeng Wang and Junguo Liu and Jinbao Li and David D. Zhang},
+  title = {Multi-Spectral Water Index (MuWI): A Native 10-m Multi-Spectral Water Index for Accurate Water Mapping on Sentinel-2},
+  journal = {Remote Sensing},
+  volume = {10},
+  number = {10},
+  year = {2018},
+  doi = {10.3390/rs10101643},
+  url = {https://doi.org/10.3390/rs10101643}
+}
 ```
--4.0 * ((B - G)/(B + G)) + 2.0 * ((G - N)/(G + N)) + 2.0 * ((G - S2)/(G + S2)) - ((G - S1)/(G + S1))
+
+```text [APA]
+Zifeng Wang, Junguo Liu, Jinbao Li, & David D. Zhang (2018). Multi-Spectral Water Index (MuWI): A Native 10-m Multi-Spectral Water Index for Accurate Water Mapping on Sentinel-2. Remote Sensing, 10(10). https://doi.org/10.3390/rs10101643
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-09.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-clouds"
 hero:
   name: "CSISWIR"
   text: "Cloud Shadow Index with SWIR 1"
-  tagline: "Clouds"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Clouds</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,40 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.isprsjprs.2018.07.006"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="CSISWIR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CI1SWIR,
+  author = {Han Zhai and Hongyan Zhang and Liangpei Zhang and Pingxiang Li},
+  title = {Cloud/shadow detection based on spectral indices for multi/hyperspectral optical remote sensing imagery},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {144},
+  year = {2018},
+  doi = {10.1016/j.isprsjprs.2018.07.006},
+  url = {https://doi.org/10.1016/j.isprsjprs.2018.07.006}
+}
 ```
-(N + S1) / 2.0
+
+```text [APA]
+Han Zhai, Hongyan Zhang, Liangpei Zhang, & Pingxiang Li (2018). Cloud/shadow detection based on spectral indices for multi/hyperspectral optical remote sensing imagery. ISPRS Journal of Photogrammetry and Remote Sensing, 144. https://doi.org/10.1016/j.isprsjprs.2018.07.006
 ```
 
-### Classification
-
-- Application domain: `Clouds`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`CI1SWIR`](/indices/CI1SWIR)
-- [`CI1woSWIR`](/indices/CI1woSWIR)
-- [`CI2SWIR`](/indices/CI2SWIR)
-- [`CI2woSWIR`](/indices/CI2woSWIR)
-- [`CSIwoSWIR`](/indices/CSIwoSWIR)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-03-30.
+:::
+</IndexDetails>

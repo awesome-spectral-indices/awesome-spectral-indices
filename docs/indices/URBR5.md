@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "URBR5"
   text: "Untransformed Reflectance Band Ratio 5"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,45 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(98)00046-7"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="URBR5">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SARBR1,
+  author = {Bisun Datt},
+  title = {Remote Sensing of Chlorophyll a, Chlorophyll b, Chlorophyll a+b, and Total Carotenoid Content in Eucalyptus Leaves},
+  journal = {Remote Sensing of Environment},
+  volume = {66},
+  number = {2},
+  year = {1998},
+  doi = {10.1016/s0034-4257(98)00046-7},
+  url = {https://doi.org/10.1016/s0034-4257(98)00046-7}
+}
 ```
-R672/(R550*R708)
+
+```text [APA]
+Bisun Datt (1998). Remote Sensing of Chlorophyll a, Chlorophyll b, Chlorophyll a+b, and Total Carotenoid Content in Eucalyptus Leaves. Remote Sensing of Environment, 66(2). https://doi.org/10.1016/s0034-4257(98)00046-7
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R672`: Reflectance at 672 nm.
-- `R550`: Reflectance at 550 nm.
-- `R708`: Reflectance at 708 nm.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`URBR1`](/indices/URBR1)
-- [`URBR2`](/indices/URBR2)
-- [`URBR3`](/indices/URBR3)
-- [`URBR4`](/indices/URBR4)
-- [`SARBR1`](/indices/SARBR1)
-- [`SARBR2`](/indices/SARBR2)
-- [`SARBR3`](/indices/SARBR3)
-- [`SARBR4`](/indices/SARBR4)
-- [`SARBR5`](/indices/SARBR5)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-08.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "ENDVI"
   text: "Enhanced Normalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.1371/journal.pone.0186193"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="ENDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_ENDVI,
+  author = {Conor J. Strong and Niall G. Burnside and Dan Llewellyn},
+  title = {The potential of small-Unmanned Aircraft Systems for the rapid detection of threatened unimproved grassland communities using an Enhanced Normalized Difference Vegetation Index},
+  journal = {PLOS ONE},
+  volume = {12},
+  number = {10},
+  year = {2017},
+  doi = {10.1371/journal.pone.0186193},
+  url = {https://doi.org/10.1371/journal.pone.0186193}
+}
 ```
-((N + G) - (2 * B)) / ((N + G) + (2 * B))
+
+```text [APA]
+Conor J. Strong, Niall G. Burnside, & Dan Llewellyn (2017). The potential of small-Unmanned Aircraft Systems for the rapid detection of threatened unimproved grassland communities using an Enhanced Normalized Difference Vegetation Index. PLOS ONE, 12(10). https://doi.org/10.1371/journal.pone.0186193
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-- `B`: Blue.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/gagev on 2024-04-08.
+:::
+</IndexDetails>

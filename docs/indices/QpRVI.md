@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "QpRVI"
   text: "Quad-Polarized Radar Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,28 @@ hero:
       link: "https://doi.org/10.1109/IGARSS.2001.976856"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="QpRVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_QpRVI,
+  author = {Yunjin Kim and J. van Zyl},
+  title = {Comparison of forest parameter estimation techniques using SAR data},
+  booktitle = {IGARSS 2001. Scanning the Present and Resolving the Future. Proceedings. IEEE 2001 International Geoscience and Remote Sensing Symposium (Cat. No.01CH37217)},
+  year = {2001},
+  doi = {10.1109/igarss.2001.976856},
+  url = {https://doi.org/10.1109/igarss.2001.976856}
+}
 ```
-(8.0 * HV)/(HH + VV + 2.0 * HV)
+
+```text [APA]
+Yunjin Kim, & J. van Zyl (2001). Comparison of forest parameter estimation techniques using SAR data. IGARSS 2001. Scanning the Present and Resolving the Future. Proceedings. IEEE 2001 International Geoscience and Remote Sensing Symposium (Cat. No.01CH37217). https://doi.org/10.1109/igarss.2001.976856
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Radar`
-- Family: `Radar`
-
-### Bands
-
-No bands are used in this index.
-
-### Polarizations
-
-- `HV`: Horizontal transmit, vertical receive radar polarization.
-- `HH`: Horizontal transmit, horizontal receive radar polarization.
-- `VV`: Vertical transmit, vertical receive radar polarization.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-12-24.
+:::
+</IndexDetails>

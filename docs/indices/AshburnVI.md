@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "AshburnVI"
   text: "Ashburn Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,26 @@ hero:
       link: "https://ntrs.nasa.gov/citations/19800007243"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="AshburnVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_AshburnVI,
+  author = {P. Ashburn},
+  title = {The vegetative index number and crop identification},
+  year = {1979},
+  url = {https://ntrs.nasa.gov/citations/19800007243}
+}
 ```
-2.0 * N2 - R
+
+```text [APA]
+P. Ashburn (1979). The vegetative index number and crop identification. https://ntrs.nasa.gov/citations/19800007243
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N2`: Near-Infrared (NIR) 2.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/MartinuzziFrancesco on 2026-07-04.
+:::
+</IndexDetails>

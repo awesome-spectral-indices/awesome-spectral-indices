@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "CVI"
   text: "Chlorophyll Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.1007/s11119-010-9204-3"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="CVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CVI,
+  author = {M. Vincini and E. Frazzi},
+  title = {Comparing narrow and broad-band vegetation indices to estimate leaf chlorophyll content in planophile crop canopies},
+  journal = {Precision Agriculture},
+  volume = {12},
+  number = {3},
+  year = {2011},
+  doi = {10.1007/s11119-010-9204-3},
+  url = {https://doi.org/10.1007/s11119-010-9204-3}
+}
 ```
-(N * R) / (G ** 2.0)
+
+```text [APA]
+M. Vincini, & E. Frazzi (2011). Comparing narrow and broad-band vegetation indices to estimate leaf chlorophyll content in planophile crop canopies. Precision Agriculture, 12(3). https://doi.org/10.1007/s11119-010-9204-3
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NIRvP"
   text: "Near-Infrared Reflectance of Vegetation and Incoming PAR"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,34 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2021.112763"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NIRvP">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NIRvP,
+  author = {Benjamin Dechant and Youngryel Ryu and Grayson Badgley and Philipp Köhler and Uwe Rascher and Mirco Migliavacca and Yongguang Zhang and Giulia Tagliabue and Kaiyu Guan and Micol Rossini and Yves Goulas and Yelu Zeng and Christian Frankenberg and Joseph A. Berry},
+  title = {NIRVP: A robust structural proxy for sun-induced chlorophyll fluorescence and photosynthesis across scales},
+  journal = {Remote Sensing of Environment},
+  volume = {268},
+  year = {2022},
+  doi = {10.1016/j.rse.2021.112763},
+  url = {https://doi.org/10.1016/j.rse.2021.112763}
+}
 ```
-((N - R) / (N + R)) * N * PAR
+
+```text [APA]
+Benjamin Dechant, Youngryel Ryu, Grayson Badgley, Philipp Köhler, Uwe Rascher, Mirco Migliavacca, Yongguang Zhang, Giulia Tagliabue, Kaiyu Guan, Micol Rossini, Yves Goulas, Yelu Zeng, Christian Frankenberg, & Joseph A. Berry (2022). NIRVP: A robust structural proxy for sun-induced chlorophyll fluorescence and photosynthesis across scales. Remote Sensing of Environment, 268. https://doi.org/10.1016/j.rse.2021.112763
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### External Variables
-
-- `PAR`: Photosynthetically Active Radiation.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-11-18.
+:::
+</IndexDetails>

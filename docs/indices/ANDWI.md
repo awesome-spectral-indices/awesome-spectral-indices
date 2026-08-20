@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "ANDWI"
   text: "Augmented Normalized Difference Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,34 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.envsoft.2021.105030"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="ANDWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_ANDWI,
+  author = {Arash Modaresi Rad and Jason Kreitler and Mojtaba Sadegh},
+  title = {Augmented Normalized Difference Water Index for improved surface water monitoring},
+  journal = {Environmental Modelling \&amp; Software},
+  volume = {140},
+  year = {2021},
+  doi = {10.1016/j.envsoft.2021.105030},
+  url = {https://doi.org/10.1016/j.envsoft.2021.105030}
+}
 ```
-(B + G + R - N - S1 - S2)/(B + G + R + N + S1 + S2)
+
+```text [APA]
+Arash Modaresi Rad, Jason Kreitler, & Mojtaba Sadegh (2021). Augmented Normalized Difference Water Index for improved surface water monitoring. Environmental Modelling &amp; Software, 140. https://doi.org/10.1016/j.envsoft.2021.105030
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `R`: Red.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

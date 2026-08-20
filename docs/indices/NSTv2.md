@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NSTv2"
   text: "NIR-SWIR-Temperature Version 2"
-  tagline: "Burn"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,30 @@ hero:
       link: "https://doi.org/10.1016/j.rse.2011.06.010"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NSTv2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NSTv1,
+  author = {S. Veraverbeke and S. Harris and S. Hook},
+  title = {Evaluating spectral indices for burned area discrimination using MODIS/ASTER (MASTER) airborne simulator data},
+  journal = {Remote Sensing of Environment},
+  volume = {115},
+  number = {10},
+  year = {2011},
+  doi = {10.1016/j.rse.2011.06.010},
+  url = {https://doi.org/10.1016/j.rse.2011.06.010}
+}
 ```
-(N-(S2+T))/(N+(S2+T))
+
+```text [APA]
+S. Veraverbeke, S. Harris, & S. Hook (2011). Evaluating spectral indices for burned area discrimination using MODIS/ASTER (MASTER) airborne simulator data. Remote Sensing of Environment, 115(10). https://doi.org/10.1016/j.rse.2011.06.010
 ```
 
-### Classification
-
-- Application domain: `Burn`
-- Sensing modalities: `Multispectral`, `Thermal`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-- `T`: Thermal Infrared.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NSTv1`](/indices/NSTv1)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-10-06.
+:::
+</IndexDetails>

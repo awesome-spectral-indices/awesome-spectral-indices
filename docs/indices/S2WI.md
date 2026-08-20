@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "S2WI"
   text: "Sentinel-2 Water Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.3390/w13121647"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="S2WI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_S2WI,
+  author = {Wei Jiang and Yuan Ni and Zhiguo Pang and Xiaotao Li and Hongrun Ju and Guojin He and Juan Lv and Kun Yang and June Fu and Xiangdong Qin},
+  title = {An Effective Water Body Extraction Method with New Water Index for Sentinel-2 Imagery},
+  journal = {Water},
+  volume = {13},
+  number = {12},
+  year = {2021},
+  doi = {10.3390/w13121647},
+  url = {https://doi.org/10.3390/w13121647}
+}
 ```
-(RE1 - S2)/(RE1 + S2)
+
+```text [APA]
+Wei Jiang, Yuan Ni, Zhiguo Pang, Xiaotao Li, Hongrun Ju, Guojin He, Juan Lv, Kun Yang, June Fu, & Xiangdong Qin (2021). An Effective Water Body Extraction Method with New Water Index for Sentinel-2 Imagery. Water, 13(12). https://doi.org/10.3390/w13121647
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE1`: Red Edge 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/MATRIX4284 on 2022-03-06.
+:::
+</IndexDetails>

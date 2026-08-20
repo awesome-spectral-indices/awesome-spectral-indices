@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SEVI"
   text: "Shadow-Eliminated Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,43 +16,30 @@ hero:
       link: "https://doi.org/10.1080/17538947.2018.1495770"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SEVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SEVI,
+  author = {Hong Jiang and Sen Wang and Xiaojie Cao and Chenghai Yang and Zhaoming Zhang and Xiaoqin Wang},
+  title = {A shadow- eliminated vegetation index (SEVI) for removal of self and cast shadow effects on vegetation in rugged terrains},
+  journal = {International Journal of Digital Earth},
+  volume = {12},
+  number = {9},
+  year = {2019},
+  doi = {10.1080/17538947.2018.1495770},
+  url = {https://doi.org/10.1080/17538947.2018.1495770}
+}
 ```
-(N/R) + fdelta * (1.0/R)
+
+```text [APA]
+Hong Jiang, Sen Wang, Xiaojie Cao, Chenghai Yang, Zhaoming Zhang, & Xiaoqin Wang (2019). A shadow- eliminated vegetation index (SEVI) for removal of self and cast shadow effects on vegetation in rugged terrains. International Journal of Digital Earth, 12(9). https://doi.org/10.1080/17538947.2018.1495770
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">fdelta</code>
-<p>Adjustment factor to avoid under-elimination or over-elimination.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.581</strong>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-09-22.
+:::
+</IndexDetails>

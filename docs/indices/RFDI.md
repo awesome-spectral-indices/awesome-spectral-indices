@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "RFDI"
   text: "Radar Forest Degradation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.5194/bg-9-179-2012"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="RFDI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_RFDI,
+  author = {E. T. A. Mitchard and S. S. Saatchi and L. J. T. White and K. A. Abernethy and K. J. Jeffery and S. L. Lewis and M. Collins and M. A. Lefsky and M. E. Leal and I. H. Woodhouse and P. Meir},
+  title = {Mapping tropical forest biomass with radar and  spaceborne LiDAR in Lopé National Park, Gabon: overcoming problems of high biomass and persistent cloud},
+  journal = {Biogeosciences},
+  volume = {9},
+  number = {1},
+  year = {2012},
+  doi = {10.5194/bg-9-179-2012},
+  url = {https://doi.org/10.5194/bg-9-179-2012}
+}
 ```
-(HH - HV)/(HH + HV)
+
+```text [APA]
+E. T. A. Mitchard, S. S. Saatchi, L. J. T. White, K. A. Abernethy, K. J. Jeffery, S. L. Lewis, M. Collins, M. A. Lefsky, M. E. Leal, I. H. Woodhouse, & P. Meir (2012). Mapping tropical forest biomass with radar and  spaceborne LiDAR in Lopé National Park, Gabon: overcoming problems of high biomass and persistent cloud. Biogeosciences, 9(1). https://doi.org/10.5194/bg-9-179-2012
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Radar`
-- Family: `Radar`
-
-### Bands
-
-No bands are used in this index.
-
-### Polarizations
-
-- `HH`: Horizontal transmit, horizontal receive radar polarization.
-- `HV`: Horizontal transmit, vertical receive radar polarization.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-12-25.
+:::
+</IndexDetails>

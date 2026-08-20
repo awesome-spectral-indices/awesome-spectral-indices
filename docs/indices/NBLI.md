@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NBLI"
   text: "Normalized Difference Bare Land Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs9030249"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NBLI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NBLI,
+  author = {Hui Li and Cuizhen Wang and Cheng Zhong and Aijun Su and Chengren Xiong and Jinge Wang and Junqi Liu},
+  title = {Mapping Urban Bare Land Automatically  from Landsat Imagery with a Simple Index},
+  journal = {Remote Sensing},
+  volume = {9},
+  number = {3},
+  year = {2017},
+  doi = {10.3390/rs9030249},
+  url = {https://doi.org/10.3390/rs9030249}
+}
 ```
-(R - T)/(R + T)
+
+```text [APA]
+Hui Li, Cuizhen Wang, Cheng Zhong, Aijun Su, Chengren Xiong, Jinge Wang, & Junqi Liu (2017). Mapping Urban Bare Land Automatically  from Landsat Imagery with a Simple Index. Remote Sensing, 9(3). https://doi.org/10.3390/rs9030249
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`, `Thermal`
-
-### Bands
-
-- `R`: Red.
-- `T`: Thermal Infrared.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NBLIOLI`](/indices/NBLIOLI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

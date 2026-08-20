@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GVMI"
   text: "Global Vegetation Moisture Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0034-4257(02)00037-8"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GVMI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GVMI,
+  author = {Pietro Ceccato and Nadine Gobron and Stéphane Flasse and Bernard Pinty and Stefano Tarantola},
+  title = {Designing a spectral index to estimate vegetation water content from remote sensing data: Part 1},
+  journal = {Remote Sensing of Environment},
+  volume = {82},
+  number = {2-3},
+  year = {2002},
+  doi = {10.1016/s0034-4257(02)00037-8},
+  url = {https://doi.org/10.1016/s0034-4257(02)00037-8}
+}
 ```
-((N + 0.1) - (S2 + 0.02)) / ((N + 0.1) + (S2 + 0.02))
+
+```text [APA]
+Pietro Ceccato, Nadine Gobron, Stéphane Flasse, Bernard Pinty, & Stefano Tarantola (2002). Designing a spectral index to estimate vegetation water content from remote sensing data: Part 1. Remote Sensing of Environment, 82(2-3). https://doi.org/10.1016/s0034-4257(02)00037-8
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

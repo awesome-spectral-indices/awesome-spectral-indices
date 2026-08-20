@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NGRDI"
   text: "Normalized Green Red Difference Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(79)90013-0"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NGRDI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_NGRDI,
+  author = {Compton J. Tucker},
+  title = {Red and photographic infrared linear combinations for monitoring vegetation},
+  journal = {Remote Sensing of Environment},
+  volume = {8},
+  number = {2},
+  year = {1979},
+  doi = {10.1016/0034-4257(79)90013-0},
+  url = {https://doi.org/10.1016/0034-4257(79)90013-0}
+}
 ```
-(G - R) / (G + R)
+
+```text [APA]
+Compton J. Tucker (1979). Red and photographic infrared linear combinations for monitoring vegetation. Remote Sensing of Environment, 8(2). https://doi.org/10.1016/0034-4257(79)90013-0
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

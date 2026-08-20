@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "CIG"
   text: "Chlorophyll Index Green"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1078/0176-1617-00887"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="CIG">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_CIG,
+  author = {Anatoly A. Gitelson and Yuri Gritz † and Mark N. Merzlyak},
+  title = {Relationships between leaf chlorophyll content and spectral reflectance and algorithms for non-destructive chlorophyll assessment in higher plant leaves},
+  journal = {Journal of Plant Physiology},
+  volume = {160},
+  number = {3},
+  year = {2003},
+  doi = {10.1078/0176-1617-00887},
+  url = {https://doi.org/10.1078/0176-1617-00887}
+}
 ```
-(N / G) - 1.0
+
+```text [APA]
+Anatoly A. Gitelson, Yuri Gritz †, & Mark N. Merzlyak (2003). Relationships between leaf chlorophyll content and spectral reflectance and algorithms for non-destructive chlorophyll assessment in higher plant leaves. Journal of Plant Physiology, 160(3). https://doi.org/10.1078/0176-1617-00887
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `G`: Green.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`CIRE`](/indices/CIRE)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

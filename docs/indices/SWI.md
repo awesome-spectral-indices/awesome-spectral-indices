@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "SWI"
   text: "Snow Water Index"
-  tagline: "Snow"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs11232774"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SWI,
+  author = {Abhilasha Dixit and Ajanta Goswami and Sanjay Jain},
+  title = {Development and Evaluation of a New “Snow Water Index (SWI)” for Accurate Snow Cover Delineation},
+  journal = {Remote Sensing},
+  volume = {11},
+  number = {23},
+  year = {2019},
+  doi = {10.3390/rs11232774},
+  url = {https://doi.org/10.3390/rs11232774}
+}
 ```
-(G * (N - S1)) / ((G + N) * (N + S1))
+
+```text [APA]
+Abhilasha Dixit, Ajanta Goswami, & Sanjay Jain (2019). Development and Evaluation of a New “Snow Water Index (SWI)” for Accurate Snow Cover Delineation. Remote Sensing, 11(23). https://doi.org/10.3390/rs11232774
 ```
 
-### Classification
-
-- Application domain: `Snow`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

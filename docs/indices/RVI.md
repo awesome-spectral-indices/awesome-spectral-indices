@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "RVI"
   text: "Ratio Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.2134/agronj1968.00021962006000060016x"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="RVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_RVI,
+  author = {Gerald S. Birth and George R. McVey},
+  title = {Measuring the Color of Growing Turf with a Reflectance Spectrophotometer<sup>1</sup>},
+  journal = {Agronomy Journal},
+  volume = {60},
+  number = {6},
+  year = {1968},
+  doi = {10.2134/agronj1968.00021962006000060016x},
+  url = {https://doi.org/10.2134/agronj1968.00021962006000060016x}
+}
 ```
-RE2 / R
+
+```text [APA]
+Gerald S. Birth, & George R. McVey (1968). Measuring the Color of Growing Turf with a Reflectance Spectrophotometer<sup>1</sup>. Agronomy Journal, 60(6). https://doi.org/10.2134/agronj1968.00021962006000060016x
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE2`: Red Edge 2.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

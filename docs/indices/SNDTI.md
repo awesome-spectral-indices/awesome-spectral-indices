@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SNDTI"
   text: "Soil-Adjusted Normalized Difference Tillage Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,60 +16,30 @@ hero:
       link: "https://doi.org/10.1080/22797254.2017.1418186"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SNDTI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_SNDTI,
+  author = {Hongrui Ren and Bei Zhang and Xulin Guo},
+  title = {Estimation of litter mass in nongrowing seasons in arid grasslands using MODIS satellite data},
+  journal = {European Journal of Remote Sensing},
+  volume = {51},
+  number = {1},
+  year = {2018},
+  doi = {10.1080/22797254.2017.1418186},
+  url = {https://doi.org/10.1080/22797254.2017.1418186}
+}
 ```
-(1.0 + L) * (S1 - S2) / (S1 + S2 + L)
+
+```text [APA]
+Hongrui Ren, Bei Zhang, & Xulin Guo (2018). Estimation of litter mass in nongrowing seasons in arid grasslands using MODIS satellite data. European Journal of Remote Sensing, 51(1). https://doi.org/10.1080/22797254.2017.1418186
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Soil adjustment factor.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.6</strong>
-</div>
-<div class="constant-detail-card constant-range">
-<span class="constant-detail-label">Suggested range</span>
-<strong class="constant-detail-value">0.0<span aria-hidden="true">–</span>1.0</strong>
-</div>
-<div class="constant-detail-card constant-suggested-values">
-<span class="constant-detail-label">Suggested values</span>
-<dl>
-<div class="constant-suggestion-row">
-<dt>Increased litter mass</dt>
-<dd>0.0</dd>
-</div>
-<div class="constant-suggestion-row">
-<dt>Low litter mass</dt>
-<dd>1.0</dd>
-</div>
-</dl>
-</div>
-</div>
-</article>
-</div>
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2025-10-11.
+:::
+</IndexDetails>

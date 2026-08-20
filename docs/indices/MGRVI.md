@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MGRVI"
   text: "Modified Green Red Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,29 @@ hero:
       link: "https://doi.org/10.1016/j.jag.2015.02.012"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MGRVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MGRVI,
+  author = {Juliane Bendig and Kang Yu and Helge Aasen and Andreas Bolten and Simon Bennertz and Janis Broscheit and Martin L. Gnyp and Georg Bareth},
+  title = {Combining UAV-based plant height from crop surface models, visible, and near infrared vegetation indices for biomass monitoring in barley},
+  journal = {International Journal of Applied Earth Observation and Geoinformation},
+  volume = {39},
+  year = {2015},
+  doi = {10.1016/j.jag.2015.02.012},
+  url = {https://doi.org/10.1016/j.jag.2015.02.012}
+}
 ```
-(G ** 2.0 - R ** 2.0) / (G ** 2.0 + R ** 2.0)
+
+```text [APA]
+Juliane Bendig, Kang Yu, Helge Aasen, Andreas Bolten, Simon Bennertz, Janis Broscheit, Martin L. Gnyp, & Georg Bareth (2015). Combining UAV-based plant height from crop surface models, visible, and near infrared vegetation indices for biomass monitoring in barley. International Journal of Applied Earth Observation and Geoinformation, 39. https://doi.org/10.1016/j.jag.2015.02.012
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `G`: Green.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`RGBVI`](/indices/RGBVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-14.
+:::
+</IndexDetails>

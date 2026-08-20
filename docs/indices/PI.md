@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "PI"
   text: "Plastic Index"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs12162648"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="PI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_PI,
+  author = {Kyriacos Themistocleous and Christiana Papoutsa and Silas Michaelides and Diofantos Hadjimitsis},
+  title = {Investigating Detection of Floating Plastic Litter from Space Using Sentinel-2 Imagery},
+  journal = {Remote Sensing},
+  volume = {12},
+  number = {16},
+  year = {2020},
+  doi = {10.3390/rs12162648},
+  url = {https://doi.org/10.3390/rs12162648}
+}
 ```
-N/(N + R)
+
+```text [APA]
+Kyriacos Themistocleous, Christiana Papoutsa, Silas Michaelides, & Diofantos Hadjimitsis (2020). Investigating Detection of Floating Plastic Litter from Space Using Sentinel-2 Imagery. Remote Sensing, 12(16). https://doi.org/10.3390/rs12162648
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`RNDVI`](/indices/RNDVI)
-
-## Contributor
-
-Index contributed by https://github.com/emanuelcastanho on 2024-05-03.
+:::
+</IndexDetails>

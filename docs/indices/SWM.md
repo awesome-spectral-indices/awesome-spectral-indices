@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "SWM"
   text: "Sentinel Water Mask"
-  tagline: "Water"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,32 +16,27 @@ hero:
       link: "https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SWM">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_SWM,
+  author = {Marta Milczarek and Anna Robak and Alicja Gadawska},
+  title = {Sentinel Water Mask (SWM) - new index for water detection on Sentinel-2 images},
+  booktitle = {7th Advanced Training Course on Land Remote Sensing, Szent István University, Gödöllő, Hungary 4-9 September 2017},
+  year = {2017},
+  url = {https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf}
+}
 ```
-(B + G)/(N + S1)
+
+```text [APA]
+Marta Milczarek, Anna Robak, & Alicja Gadawska (2017). Sentinel Water Mask (SWM) - new index for water detection on Sentinel-2 images. 7th Advanced Training Course on Land Remote Sensing, Szent István University, Gödöllő, Hungary 4-9 September 2017. https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf
 ```
 
-### Classification
-
-- Application domain: `Water`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-20.
+:::
+</IndexDetails>

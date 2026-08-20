@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NDBaI"
   text: "Normalized Difference Bareness Index"
-  tagline: "Soil"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,28 @@ hero:
       link: "https://doi.org/10.1109/IGARSS.2005.1526319"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDBaI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@inproceedings{ASI_NDBaI,
+  author = {Hongmei Zhao and Xiaoling Chen},
+  title = {Use of normalized difference bareness index in quickly mapping bare areas from TM/ETM+},
+  booktitle = {Proceedings. 2005 IEEE International Geoscience and Remote Sensing Symposium, 2005. IGARSS '05.},
+  volume = {3},
+  doi = {10.1109/igarss.2005.1526319},
+  url = {https://doi.org/10.1109/igarss.2005.1526319}
+}
 ```
-(S1 - T) / (S1 + T)
+
+```text [APA]
+Hongmei Zhao, & Xiaoling Chen (n.d.). Use of normalized difference bareness index in quickly mapping bare areas from TM/ETM+. Proceedings. 2005 IEEE International Geoscience and Remote Sensing Symposium, 2005. IGARSS '05., 3. https://doi.org/10.1109/igarss.2005.1526319
 ```
 
-### Classification
-
-- Application domain: `Soil`
-- Sensing modalities: `Multispectral`, `Thermal`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `T`: Thermal Infrared.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-17.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "STI"
   text: "Simple Tillage Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,10 @@ hero:
       link: "https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
-```
-S1 / S2
-```
+<IndexDetails index-key="STI">
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`NDTillI`](/indices/NDTillI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2025-10-11.
+</IndexDetails>

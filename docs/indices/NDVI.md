@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "NDVI"
   text: "Normalized Difference Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,27 @@ hero:
       link: "https://ntrs.nasa.gov/citations/19740022614"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="NDVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@misc{ASI_NDVI,
+  author = {J. Rouse and R. H. Haas and J. A. Schell and D. Deering},
+  title = {Monitoring vegetation systems in the great plains with ERTS},
+  volume = {1},
+  year = {1973},
+  url = {https://ntrs.nasa.gov/citations/19740022614}
+}
 ```
-(N - R)/(N + R)
+
+```text [APA]
+J. Rouse, R. H. Haas, J. A. Schell, & D. Deering (1973). Monitoring vegetation systems in the great plains with ERTS. https://ntrs.nasa.gov/citations/19740022614
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`TVI`](/indices/TVI)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-04-07.
+:::
+</IndexDetails>

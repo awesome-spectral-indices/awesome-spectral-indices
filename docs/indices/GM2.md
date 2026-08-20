@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GM2"
   text: "Gitelson and Merzlyak Index 2"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,36 +16,30 @@ hero:
       link: "https://doi.org/10.1016/S0176-1617(96)80284-7"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="GM2">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_GM1,
+  author = {Anatoly A. Gitelson and Mark N. Merzlyak},
+  title = {Signature Analysis of Leaf Reflectance Spectra: Algorithm Development for Remote Sensing of Chlorophyll},
+  journal = {Journal of Plant Physiology},
+  volume = {148},
+  number = {3-4},
+  year = {1996},
+  doi = {10.1016/s0176-1617(96)80284-7},
+  url = {https://doi.org/10.1016/s0176-1617(96)80284-7}
+}
 ```
-RE2/RE1
+
+```text [APA]
+Anatoly A. Gitelson, & Mark N. Merzlyak (1996). Signature Analysis of Leaf Reflectance Spectra: Algorithm Development for Remote Sensing of Chlorophyll. Journal of Plant Physiology, 148(3-4). https://doi.org/10.1016/s0176-1617(96)80284-7
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE2`: Red Edge 2.
-- `RE1`: Red Edge 1.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`GM1`](/indices/GM1)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-08.
+:::
+</IndexDetails>

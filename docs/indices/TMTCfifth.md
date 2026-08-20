@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TMTCfifth"
   text: "Thematic Mapper Tasseled Cap Fifth Feature"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,45 +16,30 @@ hero:
       link: "https://doi.org/10.1109/TGRS.1984.350619"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TMTCfifth">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_TMTCbrightness,
+  author = {Eric P. Crist and Richard C. Cicone},
+  title = {A Physically-Based Transformation of Thematic Mapper Data---The TM Tasseled Cap},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {GE-22},
+  number = {3},
+  year = {1984},
+  doi = {10.1109/tgrs.1984.350619},
+  url = {https://doi.org/10.1109/tgrs.1984.350619}
+}
 ```
--0.3280 * B + 0.0549 * G + 0.1075 * R + 0.1855 * N - 0.4357 * S1 + 0.8085 * S2
+
+```text [APA]
+Eric P. Crist, & Richard C. Cicone (1984). A Physically-Based Transformation of Thematic Mapper Data---The TM Tasseled Cap. IEEE Transactions on Geoscience and Remote Sensing, GE-22(3). https://doi.org/10.1109/tgrs.1984.350619
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-- Family: `Tasseled Cap`
-
-### Bands
-
-- `B`: Blue.
-- `G`: Green.
-- `R`: Red.
-- `N`: Near-Infrared (NIR).
-- `S1`: Short-wave Infrared (SWIR) 1.
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`TMTCbrightness`](/indices/TMTCbrightness)
-- [`TMTCwetness`](/indices/TMTCwetness)
-- [`TMTCgreenness`](/indices/TMTCgreenness)
-- [`TMTCfourth`](/indices/TMTCfourth)
-- [`TMTCsixth`](/indices/TMTCsixth)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-06.
+:::
+</IndexDetails>

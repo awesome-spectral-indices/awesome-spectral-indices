@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "TTVI"
   text: "Transformed Triangular Vegetation Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs12010016"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="TTVI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_TTVI,
+  author = {Naichen Xing and Wenjiang Huang and Qiaoyun Xie and Yue Shi and Huichun Ye and Yingying Dong and Mingquan Wu and Gang Sun and Quanjun Jiao},
+  title = {A Transformed Triangular Vegetation Index for Estimating Winter Wheat Leaf Area Index},
+  journal = {Remote Sensing},
+  volume = {12},
+  number = {1},
+  year = {2019},
+  doi = {10.3390/rs12010016},
+  url = {https://doi.org/10.3390/rs12010016}
+}
 ```
-0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))
+
+```text [APA]
+Naichen Xing, Wenjiang Huang, Qiaoyun Xie, Yue Shi, Huichun Ye, Yingying Dong, Mingquan Wu, Gang Sun, & Quanjun Jiao (2019). A Transformed Triangular Vegetation Index for Estimating Winter Wheat Leaf Area Index. Remote Sensing, 12(1). https://doi.org/10.3390/rs12010016
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE3`: Red Edge 3.
-- `RE2`: Red Edge 2.
-- `N2`: Near-Infrared (NIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-09-18.
+:::
+</IndexDetails>

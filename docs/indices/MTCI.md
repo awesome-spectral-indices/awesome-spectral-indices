@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "MTCI"
   text: "MERIS Terrestrial Chlorophyll Index"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,31 +16,30 @@ hero:
       link: "https://doi.org/10.1080/0143116042000274015"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="MTCI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MTCI,
+  author = {J. Dash and P. J. Curran},
+  title = {The MERIS terrestrial chlorophyll index},
+  journal = {International Journal of Remote Sensing},
+  volume = {25},
+  number = {23},
+  year = {2004},
+  doi = {10.1080/0143116042000274015},
+  url = {https://doi.org/10.1080/0143116042000274015}
+}
 ```
-(RE2 - RE1) / (RE1 - R)
+
+```text [APA]
+J. Dash, & P. J. Curran (2004). The MERIS terrestrial chlorophyll index. International Journal of Remote Sensing, 25(23). https://doi.org/10.1080/0143116042000274015
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `RE2`: Red Edge 2.
-- `RE1`: Red Edge 1.
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2021-05-13.
+:::
+</IndexDetails>

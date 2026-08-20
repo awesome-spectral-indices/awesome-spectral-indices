@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "sNIRvLSWI"
   text: "SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,41 +16,30 @@ hero:
       link: "https://doi.org/10.1029/2024JG008240"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="sNIRvLSWI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_EVIv,
+  author = {Sadegh Ranjbar and Danielle Losos and Benjamin Dechant and Sophie Hoffman and Eyyup Ensar Başakın and Paul C. Stoy},
+  title = {Harnessing Information From Shortwave Infrared Reflectance Bands to Enhance Satellite‐Based Estimates of Gross Primary Productivity},
+  journal = {Journal of Geophysical Research: Biogeosciences},
+  volume = {129},
+  number = {11},
+  year = {2024},
+  doi = {10.1029/2024jg008240},
+  url = {https://doi.org/10.1029/2024jg008240}
+}
 ```
-((N - S2)/(N + S2)) * N
+
+```text [APA]
+Sadegh Ranjbar, Danielle Losos, Benjamin Dechant, Sophie Hoffman, Eyyup Ensar Başakın, & Paul C. Stoy (2024). Harnessing Information From Shortwave Infrared Reflectance Bands to Enhance Satellite‐Based Estimates of Gross Primary Productivity. Journal of Geophysical Research: Biogeosciences, 129(11). https://doi.org/10.1029/2024jg008240
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `S2`: Short-wave Infrared (SWIR) 2.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`bNIRv`](/indices/bNIRv)
-- [`EVIv`](/indices/EVIv)
-- [`sNIRvNDPI`](/indices/sNIRvNDPI)
-- [`sNIRvSWIR`](/indices/sNIRvSWIR)
-- [`sNIRvNDVILSWIP`](/indices/sNIRvNDVILSWIP)
-- [`sNIRvNDVILSWIS`](/indices/sNIRvNDVILSWIS)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2024-05-16.
+:::
+</IndexDetails>

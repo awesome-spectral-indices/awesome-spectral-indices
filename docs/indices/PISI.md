@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "PISI"
   text: "Perpendicular Impervious Surface Index"
-  tagline: "Urban"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,30 +16,30 @@ hero:
       link: "https://doi.org/10.3390/rs10101521"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="PISI">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_PISI,
+  author = {Yugang Tian and Hui Chen and Qingju Song and Kun Zheng},
+  title = {A Novel Index for Impervious Surface Area Mapping: Development and Validation},
+  journal = {Remote Sensing},
+  volume = {10},
+  number = {10},
+  year = {2018},
+  doi = {10.3390/rs10101521},
+  url = {https://doi.org/10.3390/rs10101521}
+}
 ```
-0.8192 * B - 0.5735 * N + 0.0750
+
+```text [APA]
+Yugang Tian, Hui Chen, Qingju Song, & Kun Zheng (2018). A Novel Index for Impervious Surface Area Mapping: Development and Validation. Remote Sensing, 10(10). https://doi.org/10.3390/rs10101521
 ```
 
-### Classification
-
-- Application domain: `Urban`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `B`: Blue.
-- `N`: Near-Infrared (NIR).
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2022-04-18.
+:::
+</IndexDetails>

@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "RARSa"
   text: "Ratio Analysis of Reflectance Spectra for Chlorophyll a"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,37 +16,30 @@ hero:
       link: "https://doi.org/10.1016/0034-4257(92)90089-3"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="RARSa">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_RARSa,
+  author = {Emmett W Chappelle and Moon S Kim and James E McMurtrey},
+  title = {Ratio analysis of reflectance spectra (RARS): An algorithm for the remote estimation of the concentrations of chlorophyll A, chlorophyll B, and carotenoids in soybean leaves},
+  journal = {Remote Sensing of Environment},
+  volume = {39},
+  number = {3},
+  year = {1992},
+  doi = {10.1016/0034-4257(92)90089-3},
+  url = {https://doi.org/10.1016/0034-4257(92)90089-3}
+}
 ```
-R675/R700
+
+```text [APA]
+Emmett W Chappelle, Moon S Kim, & James E McMurtrey (1992). Ratio analysis of reflectance spectra (RARS): An algorithm for the remote estimation of the concentrations of chlorophyll A, chlorophyll B, and carotenoids in soybean leaves. Remote Sensing of Environment, 39(3). https://doi.org/10.1016/0034-4257(92)90089-3
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Hyperspectral`
-
-### Bands
-
-- `R675`: Reflectance at 675 nm.
-- `R700`: Reflectance at 700 nm.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-No constants are used in this index.
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`RARSc`](/indices/RARSc)
-- [`RARSb`](/indices/RARSb)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-08.
+:::
+</IndexDetails>

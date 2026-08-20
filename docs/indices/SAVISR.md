@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SAVISR"
   text: "Soil-Adjusted Vegetation Index with Simple Ratio"
-  tagline: "Vegetation"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -16,50 +16,30 @@ hero:
       link: "https://doi.org/10.1109/TGRS.2003.812910"
 ---
 
-## Formula
+<script setup>
+import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
+</script>
 
+<IndexDetails index-key="SAVISR">
+
+::: code-group
+
+```bibtex [BibTeX]
+@article{ASI_MNLI,
+  author = {Peng Gong and Ruiliang Pu and G.S. Biging and M.R. Larrieu},
+  title = {Estimation of forest leaf area index using vegetation indices derived from hyperion hyperspectral data},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {41},
+  number = {6},
+  year = {2003},
+  doi = {10.1109/tgrs.2003.812910},
+  url = {https://doi.org/10.1109/tgrs.2003.812910}
+}
 ```
-(N**2 - R)/(R * (N + R + L))
+
+```text [APA]
+Peng Gong, Ruiliang Pu, G.S. Biging, & M.R. Larrieu (2003). Estimation of forest leaf area index using vegetation indices derived from hyperion hyperspectral data. IEEE Transactions on Geoscience and Remote Sensing, 41(6). https://doi.org/10.1109/tgrs.2003.812910
 ```
 
-### Classification
-
-- Application domain: `Vegetation`
-- Sensing modalities: `Multispectral`
-
-### Bands
-
-- `N`: Near-Infrared (NIR).
-- `R`: Red.
-
-### Polarizations
-
-No radar polarizations are used in this index.
-
-### Constants
-
-<div class="constant-list">
-<article class="constant-panel">
-<header class="constant-panel-header">
-<code class="constant-symbol">L</code>
-<p>Background Adjustment Factor.</p>
-</header>
-<div class="constant-details">
-<div class="constant-detail-card constant-default">
-<span class="constant-detail-label">Default value</span>
-<strong class="constant-detail-value">0.5</strong>
-</div>
-</div>
-</article>
-</div>
-
-### Source Companions
-
-These indices are part of the same scientific source:
-
-- [`MNLI`](/indices/MNLI)
-- [`NDVISR`](/indices/NDVISR)
-
-## Contributor
-
-Index contributed by https://github.com/davemlz on 2026-08-12.
+:::
+</IndexDetails>
