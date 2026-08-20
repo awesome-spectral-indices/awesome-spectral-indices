@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "OSI"
   text: "Oil Spill Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #276</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

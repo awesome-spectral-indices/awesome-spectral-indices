@@ -6,7 +6,7 @@ pageClass: "index-page domain-geology"
 hero:
   name: "NDPolI"
   text: "Normalized Difference Polarization Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Geology</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Geology</span><span class=\"hero-modality-badge modality-radar\">Radar</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #277</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

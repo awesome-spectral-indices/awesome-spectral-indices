@@ -47,11 +47,27 @@ SourceType = Literal[
 ]
 
 
-class SourceCitationMetadata(BaseModel):
-    """Latest citation count retrieved for a scientific source."""
+class CitationRankingMetrics(BaseModel):
+    """Citation rank and percentile within one comparison population."""
+
+    rank: Annotated[StrictInt, Field(ge=1)]
+    rank_similar_age: Optional[Annotated[StrictInt, Field(ge=1)]] = None
+    percentile: Annotated[StrictFloat, Field(ge=0, le=100)]
+    percentile_similar_age: Optional[
+        Annotated[StrictFloat, Field(ge=0, le=100)]
+    ] = None
+
+    model_config = ConfigDict(extra="forbid")
+
+
+class SourceCitationMetrics(BaseModel):
+    """Latest citation snapshot and generated comparative metrics."""
 
     citation_count: Annotated[StrictInt, Field(ge=0)]
     date: date
+    overall: Optional[CitationRankingMetrics] = None
+    within_application_domain: Optional[CitationRankingMetrics] = None
+    similar_age_count: Optional[Annotated[StrictInt, Field(ge=0)]] = None
 
     model_config = ConfigDict(extra="forbid")
 
@@ -75,7 +91,7 @@ class SourceMetadata(BaseModel):
     issue: Optional[StrictStr] = None
     authors: Optional[List[StrictStr]] = None
     year: Optional[StrictInt] = None
-    citations: Optional[SourceCitationMetadata] = None
+    citations_metrics: Optional[SourceCitationMetrics] = None
     how_to_cite: Optional[HowToCite] = None
     source: Optional[
         Literal["contributor", "crossref", "semantic_scholar", "other"]
@@ -255,7 +271,7 @@ class Source(BaseModel):
             return value
         if not isinstance(metadata, dict):
             return value
-        generated_fields = {"citations", "how_to_cite"} & set(metadata)
+        generated_fields = {"citations_metrics", "how_to_cite"} & set(metadata)
         if generated_fields:
             raise ValueError(
                 "Contributors cannot provide generated source metadata: "

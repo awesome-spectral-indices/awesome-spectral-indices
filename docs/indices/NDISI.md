@@ -6,7 +6,7 @@ pageClass: "index-page domain-snow"
 hero:
   name: "NDISI"
   text: "Normalized Difference Ice-Snow Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Snow</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #294</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 
 import pandas as pd
 
-from src.v1.SpectralIndex import parse_formula_variables
+from src.v1.SpectralIndex import SourceCitationMetrics, parse_formula_variables
 from src.v1.bands import bands
 from src.v1.crossref import CrossrefClient, extract_doi, normalize_crossref_work
 from src.v1.indices import spindex
@@ -208,7 +208,7 @@ def load_crossref_cache(path=SPECTRAL_INDICES_JSON):
         doi = extract_doi(source.get("source_link", ""))
         metadata = source.get("source_metadata")
         if doi and isinstance(metadata, dict) and metadata.get("source") == "crossref":
-            metadata = dict(metadata)
+            metadata = migrate_cached_citation_metadata(metadata)
             source_type = metadata.pop("type", source.get("source_type"))
             record = cache.setdefault(
                 doi,
@@ -224,10 +224,19 @@ def load_crossref_cache(path=SPECTRAL_INDICES_JSON):
 def source_metadata_is_fresh(metadata, today, refresh_days=CROSSREF_REFRESH_DAYS):
     """Return whether cached citation metadata is younger than the refresh window."""
     try:
-        retrieved_on = date.fromisoformat(metadata["citations"]["date"])
+        citation_metadata = metadata.get("citations_metrics") or metadata["citations"]
+        retrieved_on = date.fromisoformat(citation_metadata["date"])
     except (KeyError, TypeError, ValueError):
         return False
     return today - retrieved_on < timedelta(days=refresh_days)
+
+
+def migrate_cached_citation_metadata(metadata):
+    """Accept the pre-migration ``citations`` key in generated caches."""
+    metadata = dict(metadata)
+    if "citations_metrics" not in metadata and "citations" in metadata:
+        metadata["citations_metrics"] = metadata.pop("citations")
+    return metadata
 
 
 def add_crossref_metadata(
@@ -323,7 +332,7 @@ def load_semantic_scholar_cache(path=SPECTRAL_INDICES_JSON):
             and isinstance(metadata, dict)
             and metadata.get("source") == "semantic_scholar"
         ):
-            metadata = dict(metadata)
+            metadata = migrate_cached_citation_metadata(metadata)
             source_type = metadata.pop("type", None)
             cache[source_link] = {
                 "metadata": metadata,
@@ -489,15 +498,126 @@ def load_citation_history(path=SPECTRAL_INDICES_CITATIONS):
     return normalized
 
 
+def _citation_rank(entries, target_key):
+    """Return a deterministic one-based rank by count, then catalogue key."""
+    ordered = sorted(
+        entries,
+        key=lambda entry: (
+            -entry["citation_count"],
+            entry["key"].casefold(),
+            entry["key"],
+        ),
+    )
+    return next(
+        position
+        for position, entry in enumerate(ordered, start=1)
+        if entry["key"] == target_key
+    )
+
+
+def _citation_percentile(entries, target_key):
+    """Return the percentage of comparison counts at or below the target."""
+    target_count = next(
+        entry["citation_count"] for entry in entries if entry["key"] == target_key
+    )
+    at_or_below = sum(
+        entry["citation_count"] <= target_count for entry in entries
+    )
+    return round(100.0 * at_or_below / len(entries), 2)
+
+
+def _citation_comparison_metrics(entries, similar_age_entries, target_key):
+    """Build rank and percentile values for full and age-window cohorts."""
+    metrics = {
+        "rank": _citation_rank(entries, target_key),
+        "percentile": _citation_percentile(entries, target_key),
+        "rank_similar_age": None,
+        "percentile_similar_age": None,
+    }
+    if similar_age_entries:
+        metrics["rank_similar_age"] = _citation_rank(
+            similar_age_entries, target_key
+        )
+        metrics["percentile_similar_age"] = _citation_percentile(
+            similar_age_entries, target_key
+        )
+    return metrics
+
+
+def add_citation_metrics(index_catalog):
+    """Generate citation rankings and percentiles across catalogue cohorts."""
+    entries = []
+    for key, spectral_index in index_catalog.SpectralIndices.items():
+        metadata = spectral_index.source.source_metadata
+        citation_metrics = metadata.citations_metrics
+        if citation_metrics is None:
+            continue
+        entries.append(
+            {
+                "key": key,
+                "citation_count": citation_metrics.citation_count,
+                "year": metadata.year,
+                "application_domain": (
+                    spectral_index.classification.application_domain
+                ),
+            }
+        )
+
+    for entry in entries:
+        key = entry["key"]
+        year = entry["year"]
+        domain = entry["application_domain"]
+        domain_entries = [
+            candidate
+            for candidate in entries
+            if candidate["application_domain"] == domain
+        ]
+        if year is None:
+            similar_age_entries = []
+            similar_age_domain_entries = []
+        else:
+            similar_age_entries = [
+                candidate
+                for candidate in entries
+                if candidate["year"] is not None
+                and abs(candidate["year"] - year) <= 2
+            ]
+            similar_age_domain_entries = [
+                candidate
+                for candidate in domain_entries
+                if candidate["year"] is not None
+                and abs(candidate["year"] - year) <= 2
+            ]
+
+        metadata = index_catalog.SpectralIndices[key].source.source_metadata
+        current = metadata.citations_metrics
+        metadata.citations_metrics = SourceCitationMetrics(
+            citation_count=current.citation_count,
+            date=current.date,
+            overall=_citation_comparison_metrics(
+                entries, similar_age_entries, key
+            ),
+            within_application_domain=_citation_comparison_metrics(
+                domain_entries, similar_age_domain_entries, key
+            ),
+            similar_age_count=len(similar_age_entries),
+        )
+
+    return index_catalog
+
+
 def write_citation_history(index_catalog, path=SPECTRAL_INDICES_CITATIONS):
     """Append or update the latest dated citation snapshot for every index."""
     previous = load_citation_history(path)
     history = {}
     for key, spectral_index in index_catalog.SpectralIndices.items():
         snapshots = list(previous.get(key, []))
-        citations = spectral_index.source.source_metadata.citations
-        if citations is not None:
-            citations = citations.model_dump(mode="json")
+        citations_metrics = spectral_index.source.source_metadata.citations_metrics
+        if citations_metrics is not None:
+            citations = {
+                "citation_count": citations_metrics.citation_count,
+                "date": citations_metrics.date.isoformat(),
+            }
             snapshots = [
                 snapshot
                 for snapshot in snapshots
@@ -573,6 +693,7 @@ def main():
     index_catalog = add_source_metadata(index_catalog)
     index_catalog = add_crossref_metadata(index_catalog)
     index_catalog = add_semantic_scholar_metadata(index_catalog)
+    index_catalog = add_citation_metrics(index_catalog)
     index_catalog = add_source_companions(index_catalog)
     bibtex_entries = add_reference_metadata(
         index_catalog, cache_path=SPECTRAL_INDICES_JSON

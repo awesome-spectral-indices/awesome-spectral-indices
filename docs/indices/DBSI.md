@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "DBSI"
   text: "Dry Bareness Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #165</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

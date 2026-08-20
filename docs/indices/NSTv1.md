@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "NSTv1"
   text: "NIR-SWIR-Temperature Version 1"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #234</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

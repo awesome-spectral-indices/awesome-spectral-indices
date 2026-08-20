@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "RI4XS"
   text: "SPOT HRV XS-based Redness Index 4"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #180</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

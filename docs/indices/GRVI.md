@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "GRVI"
   text: "Green Ratio Vegetation Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #184</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

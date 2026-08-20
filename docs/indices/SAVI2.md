@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "SAVI2"
   text: "Soil-Adjusted Vegetation Index 2"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #144</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

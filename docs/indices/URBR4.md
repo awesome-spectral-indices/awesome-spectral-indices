@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "URBR4"
   text: "Untransformed Reflectance Band Ratio 4"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #119</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

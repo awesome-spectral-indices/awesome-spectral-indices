@@ -9,6 +9,7 @@ from src.v1.SpectralIndex import Source, SourceMetadata, SpectralIndex
 from src.v1.crossref import extract_doi, normalize_crossref_work
 from src.v1.indices import SpectralIndices, spindex
 from src.v1.main_v1 import (
+    add_citation_metrics,
     add_crossref_metadata,
     add_semantic_scholar_metadata,
     add_source_companions,
@@ -137,10 +138,13 @@ def test_contributed_source_metadata_requires_provenance():
     assert source.source_metadata.source == "contributor"
 
 
-@pytest.mark.parametrize("generated_field", ["citations", "how_to_cite"])
+@pytest.mark.parametrize("generated_field", ["citations_metrics", "how_to_cite"])
 def test_contributors_cannot_submit_generated_citation_metadata(generated_field):
     values = {
-        "citations": {"citation_count": 1, "date": "2026-08-18"},
+        "citations_metrics": {
+            "citation_count": 1,
+            "date": "2026-08-18",
+        },
         "how_to_cite": {"bibtex": "ASI_TEST", "apa": "A citation."},
     }
     with pytest.raises(ValidationError, match="cannot provide generated"):
@@ -158,18 +162,79 @@ def test_source_metadata_validates_generated_values():
         title="A publication",
         authors=["Ada Lovelace", "Grace Hopper"],
         year=2026,
-        citations={"citation_count": 12, "date": "2026-08-18"},
+        citations_metrics={"citation_count": 12, "date": "2026-08-18"},
         source="crossref",
     )
 
-    assert metadata.citations.citation_count == 12
+    assert metadata.citations_metrics.citation_count == 12
     with pytest.raises(ValidationError):
         SourceMetadata(
-            citations={"citation_count": -1, "date": "2026-08-18"}
+            citations_metrics={"citation_count": -1, "date": "2026-08-18"}
         )
 
     semantic_scholar = SourceMetadata(source="semantic_scholar")
     assert semantic_scholar.source == "semantic_scholar"
+
+
+def test_citation_metrics_rank_overall_age_and_application_domain_cohorts():
+    def make_index(key, count, year, domain):
+        index = SpectralIndex(
+            acronym=key,
+            name=f"{key} name",
+            formula="N",
+            source={"source_link": f"https://example.com/{key}"},
+            classification={"application_domain": domain},
+            date_of_addition="2026-08-20",
+            contributor="https://github.com/example",
+        )
+        metadata = {
+            "citations_metrics": {
+                "citation_count": count,
+                "date": "2026-08-20",
+            },
+            "source": "crossref",
+        }
+        if year is not None:
+            metadata["year"] = year
+        index.source.set_source_metadata(metadata)
+        return index
+
+    catalogue = SpectralIndices(
+        SpectralIndices={
+            "A": make_index("A", 100, 2020, "vegetation"),
+            "B": make_index("B", 100, 2020, "vegetation"),
+            "C": make_index("C", 50, 2022, "vegetation"),
+            "D": make_index("D", 10, 2024, "vegetation"),
+            "E": make_index("E", 60, 2020, "water"),
+            "F": make_index("F", 5, None, "water"),
+        }
+    )
+
+    add_citation_metrics(catalogue)
+
+    first = catalogue.SpectralIndices["A"].source.source_metadata.citations_metrics
+    tied = catalogue.SpectralIndices["B"].source.source_metadata.citations_metrics
+    water = catalogue.SpectralIndices["E"].source.source_metadata.citations_metrics
+    undated = catalogue.SpectralIndices["F"].source.source_metadata.citations_metrics
+
+    assert first.overall.model_dump() == {
+        "rank": 1,
+        "rank_similar_age": 1,
+        "percentile": 100.0,
+        "percentile_similar_age": 100.0,
+    }
+    assert tied.overall.rank == 2
+    assert tied.overall.percentile == 100.0
+    assert first.similar_age_count == 4
+    assert first.within_application_domain.rank == 1
+    assert first.within_application_domain.rank_similar_age == 1
+    assert water.overall.rank == 3
+    assert water.overall.percentile == 66.67
+    assert water.within_application_domain.rank == 1
+    assert undated.overall.rank == 6
+    assert undated.overall.rank_similar_age is None
+    assert undated.within_application_domain.rank_similar_age is None
+    assert undated.similar_age_count == 0
 
 
 def test_crossref_work_normalization_and_source_type_mapping():
@@ -198,7 +263,10 @@ def test_crossref_work_normalization_and_source_type_mapping():
         "issue": "3",
         "authors": ["Ada Lovelace", "Example Research Group"],
         "year": 2025,
-        "citations": {"citation_count": 42, "date": "2026-08-18"},
+        "citations_metrics": {
+            "citation_count": 42,
+            "date": "2026-08-18",
+        },
         "source": "crossref",
     }
     assert source_type == "conference_paper"
@@ -230,7 +298,10 @@ def test_semantic_scholar_paper_normalization_and_source_type_mapping():
         "volume": "12",
         "authors": ["Ada Lovelace", "Grace Hopper"],
         "year": 2025,
-        "citations": {"citation_count": 42, "date": "2026-08-19"},
+        "citations_metrics": {
+            "citation_count": 42,
+            "date": "2026-08-19",
+        },
         "source": "semantic_scholar",
     }
     assert source_type == "article"
@@ -482,8 +553,10 @@ def test_crossref_generation_reuses_each_doi_and_overwrites_contributed_metadata
         )
         == {}
     )
-    assert catalogue.SpectralIndices["ONE"].source.source_metadata.citations.model_dump(
-        mode="json"
+    assert catalogue.SpectralIndices[
+        "ONE"
+    ].source.source_metadata.citations_metrics.model_dump(
+        mode="json", exclude_none=True
     ) == {
         "citation_count": 7,
         "date": "2026-08-18",

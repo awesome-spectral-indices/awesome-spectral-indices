@@ -44,6 +44,7 @@ if (!index) throw new Error(`Unknown spectral-index key: ${props.indexKey}`)
 const metadata = index.source?.source_metadata ?? {}
 const apaCitation = metadata.how_to_cite?.apa ?? null
 const publicationYear = metadata.year ?? null
+const citationMetrics = metadata.citations_metrics ?? null
 const applicationDomain = index.classification.application_domain.replaceAll('_', ' ')
 const sensingModalityText = formatList(
   index.classification.sensing_modalities.map((value) => value.replaceAll('_', ' '))
@@ -62,11 +63,50 @@ const reductions = Object.entries(index.reductions)
 const families = index.classification.family ?? []
 const sourceCompanions = index.source.source_companions ?? []
 const contributor = contributorDetails(index.contributor)
+const citationComparableIndices = Object.values(catalogue.SpectralIndices).filter(
+  (candidate) => candidate.source?.source_metadata?.citations_metrics
+)
+const overallCitationComparisonCount = citationComparableIndices.length
+const domainCitationComparisonCount = citationComparableIndices.filter(
+  (candidate) =>
+    candidate.classification.application_domain ===
+    index.classification.application_domain
+).length
+const similarAgeDomainCount = publicationYear == null
+  ? 0
+  : citationComparableIndices.filter((candidate) => {
+      const candidateMetadata = candidate.source?.source_metadata ?? {}
+      return (
+        candidate.classification.application_domain ===
+          index.classification.application_domain &&
+        Number.isInteger(candidateMetadata.year) &&
+        Math.abs(candidateMetadata.year - publicationYear) <= 2
+      )
+    }).length
 
 function formatList(values) {
   if (values.length < 2) return values[0] ?? ''
   if (values.length === 2) return values.join(' and ')
   return `${values.slice(0, -1).join(', ')}, and ${values.at(-1)}`
+}
+
+function ordinal(value) {
+  const number = Number(value)
+  const rounded = Number.isInteger(number)
+    ? String(number)
+    : number.toFixed(2).replace(/0+$/, '').replace(/\.$/, '')
+  if (!Number.isInteger(number)) return `${rounded}th`
+
+  const lastTwoDigits = number % 100
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) return `${rounded}th`
+  if (number % 10 === 1) return `${rounded}st`
+  if (number % 10 === 2) return `${rounded}nd`
+  if (number % 10 === 3) return `${rounded}rd`
+  return `${rounded}th`
+}
+
+function indexCountLabel(count) {
+  return count === 1 ? 'index' : 'indices'
 }
 
 function titleCase(value) {
@@ -157,9 +197,62 @@ function contributorDetails(value) {
           <a
             :href="index.source.source_link"
             target="_blank"
-              rel="noopener noreferrer"
-              class="index-summary-source"
-          ><template v-if="apaCitation">{{ apaCitation }}</template><template v-else>original source</template> <span aria-hidden="true">🡕</span></a>.
+            rel="noopener noreferrer"
+            class="index-summary-source"
+          ><template v-if="apaCitation">{{ apaCitation }}</template><template
+            v-else
+          >original source</template> <span aria-hidden="true">🡕</span></a>.
+        </template>
+      </p>
+
+      <p
+        v-if="
+          citationMetrics?.overall &&
+          citationMetrics?.within_application_domain
+        "
+        class="index-summary-text index-summary-metrics"
+      >
+        Based on the latest citation data, this index is in the
+        <strong>
+          {{ ordinal(citationMetrics.overall.percentile) }} percentile
+        </strong>
+        overall, ranking
+        <strong>{{ citationMetrics.overall.rank }}</strong> out of
+        <strong>{{ overallCitationComparisonCount }}</strong>
+        {{ indexCountLabel(overallCitationComparisonCount) }} with citation data.
+        <template v-if="citationMetrics.overall.rank_similar_age != null">
+          Among the
+          <strong>{{ citationMetrics.similar_age_count }}</strong>
+          {{ indexCountLabel(citationMetrics.similar_age_count) }} published within
+          two years of {{ publicationYear }}, it ranks
+          <strong>{{ citationMetrics.overall.rank_similar_age }}</strong>
+          ({{ ordinal(citationMetrics.overall.percentile_similar_age) }} percentile).
+        </template>
+        Within the <strong>{{ applicationDomain }}</strong> application domain,
+        it is in the
+        <strong>
+          {{ ordinal(citationMetrics.within_application_domain.percentile) }}
+          percentile
+        </strong>
+        and ranks
+        <strong>{{ citationMetrics.within_application_domain.rank }}</strong>
+        out of
+        <strong>{{ domainCitationComparisonCount }}</strong>
+        {{ indexCountLabel(domainCitationComparisonCount) }} with citation data.
+        <template
+          v-if="citationMetrics.within_application_domain.rank_similar_age != null"
+        >
+          Among the <strong>{{ similarAgeDomainCount }}</strong> similarly aged
+          {{ applicationDomain }}
+          {{ indexCountLabel(similarAgeDomainCount) }}, it ranks
+          <strong>
+            {{ citationMetrics.within_application_domain.rank_similar_age }}
+          </strong>
+          ({{
+            ordinal(
+              citationMetrics.within_application_domain.percentile_similar_age
+            )
+          }} percentile).
         </template>
       </p>
 

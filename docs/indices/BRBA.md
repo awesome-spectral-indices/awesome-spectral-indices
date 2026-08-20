@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "BRBA"
   text: "Band Ratio for Built-up Area"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #236</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

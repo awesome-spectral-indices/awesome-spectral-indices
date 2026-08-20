@@ -126,10 +126,29 @@ def render_index_page(
         )
         for modality in classification["sensing_modalities"]
     )
+    source_metadata = index["source"].get("source_metadata") or {}
+    citation_metrics = source_metadata.get("citations_metrics") or {}
+    overall_metrics = citation_metrics.get("overall") or {}
+    citation_rank = overall_metrics.get("rank")
+    citation_badge = ""
+    if isinstance(citation_rank, int) and not isinstance(citation_rank, bool):
+        rank_style = {
+            1: "gold",
+            2: "silver",
+            3: "bronze",
+        }.get(citation_rank, "standard")
+        citation_badge = (
+            '<span class="hero-citation-badge citation-rank-'
+            + rank_style
+            + '">Citation Rank #'
+            + str(citation_rank)
+            + "</span>"
+        )
     hero_tagline = (
         '<span class="hero-classification-badges">'
         + domain_badge
         + modality_badges
+        + citation_badge
         + "</span>"
     )
     citation_slot = render_citation_slot(key, index, bibtex_entries)

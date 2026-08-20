@@ -101,9 +101,9 @@ def normalize_crossref_work(message, retrieved_on=None):
         if name
     ]
     citation_count = message.get("is-referenced-by-count")
-    citations = None
+    citations_metrics = None
     if isinstance(citation_count, int) and not isinstance(citation_count, bool):
-        citations = {
+        citations_metrics = {
             "citation_count": max(0, citation_count),
             "date": (retrieved_on or date.today()).isoformat(),
         }
@@ -115,7 +115,7 @@ def normalize_crossref_work(message, retrieved_on=None):
         "issue": str(message["issue"]).strip() if message.get("issue") else None,
         "authors": authors or None,
         "year": _publication_year(message),
-        "citations": citations,
+        "citations_metrics": citations_metrics,
         "source": "crossref",
     }
     metadata = {key: value for key, value in metadata.items() if value is not None}

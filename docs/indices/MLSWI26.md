@@ -6,7 +6,7 @@ pageClass: "index-page domain-water"
 hero:
   name: "MLSWI26"
   text: "Modified Land Surface Water Index (MODIS Bands 2 and 6)"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Water</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #253</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

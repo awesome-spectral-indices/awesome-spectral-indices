@@ -638,7 +638,8 @@
 }
 
 .index-page .hero-domain-badge,
-.index-page .hero-modality-badge {
+.index-page .hero-modality-badge,
+.index-page .hero-citation-badge {
   display: inline-flex;
   align-items: center;
   min-height: 29px;
@@ -691,6 +692,46 @@
 
 .index-page .modality-radar {
   --modality-gradient: linear-gradient(90deg, #374151, #6b7280 58%, #d1d5db);
+}
+
+.index-page .hero-citation-badge {
+  --citation-rank-gradient: linear-gradient(90deg, #4b5563, #9ca3af, #e5e7eb);
+  --citation-rank-glow: rgb(156 163 175 / 18%);
+
+  border: 2px solid transparent;
+  background:
+    linear-gradient(
+        color-mix(in srgb, var(--domain-bg) 70%, transparent),
+        color-mix(in srgb, var(--domain-bg) 70%, transparent)
+      )
+      padding-box,
+    var(--citation-rank-gradient) border-box;
+  color: var(--domain-hero-text);
+  box-shadow:
+    0 5px 15px rgb(15 23 42 / 16%),
+    0 0 16px var(--citation-rank-glow),
+    inset 0 1px 0 rgb(255 255 255 / 28%);
+  backdrop-filter: blur(9px) saturate(125%);
+}
+
+.index-page .citation-rank-gold {
+  --citation-rank-gradient: linear-gradient(90deg, #8a6508, #ffd700, #fff2a8);
+  --citation-rank-glow: rgb(255 215 0 / 30%);
+}
+
+.index-page .citation-rank-silver {
+  --citation-rank-gradient: linear-gradient(90deg, #64748b, #d8dee8, #ffffff);
+  --citation-rank-glow: rgb(216 222 232 / 25%);
+}
+
+.index-page .citation-rank-bronze {
+  --citation-rank-gradient: linear-gradient(90deg, #7c3f18, #cd7f32, #f2bd83);
+  --citation-rank-glow: rgb(205 127 50 / 27%);
+}
+
+.index-page .citation-rank-standard {
+  --citation-rank-gradient: linear-gradient(90deg, #4b5563, #9ca3af, #e5e7eb);
+  --citation-rank-glow: rgb(156 163 175 / 18%);
 }
 
 .index-page .VPHero .VPButton.brand {
@@ -772,6 +813,10 @@
 .index-page .index-summary-text strong {
   color: var(--vp-c-text-1);
   font-weight: 650;
+}
+
+.index-page .index-summary-metrics {
+  margin-top: 12px;
 }
 
 .index-page .index-summary-source {

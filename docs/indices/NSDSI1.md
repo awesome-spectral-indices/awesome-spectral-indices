@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NSDSI1"
   text: "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #204</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

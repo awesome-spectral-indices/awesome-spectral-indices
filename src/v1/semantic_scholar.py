@@ -106,9 +106,9 @@ def normalize_semantic_scholar_paper(paper, retrieved_on=None):
         year = None
 
     citation_count = paper.get("citationCount")
-    citations = None
+    citations_metrics = None
     if isinstance(citation_count, int) and not isinstance(citation_count, bool):
-        citations = {
+        citations_metrics = {
             "citation_count": max(0, citation_count),
             "date": (retrieved_on or date.today()).isoformat(),
         }
@@ -119,7 +119,7 @@ def normalize_semantic_scholar_paper(paper, retrieved_on=None):
         "volume": volume,
         "authors": authors or None,
         "year": year,
-        "citations": citations,
+        "citations_metrics": citations_metrics,
         "source": "semantic_scholar",
     }
     metadata = {key: value for key, value in metadata.items() if value is not None}

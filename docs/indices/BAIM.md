@@ -6,7 +6,7 @@ pageClass: "index-page domain-burn"
 hero:
   name: "BAIM"
   text: "Burned Area Index adapted to MODIS"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Burn</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #270</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

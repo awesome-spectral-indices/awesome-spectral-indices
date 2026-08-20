@@ -6,7 +6,7 @@ pageClass: "index-page domain-clouds"
 hero:
   name: "CI1woSWIR"
   text: "Cloud Index Form 1 without SWIR bands"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Clouds</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Clouds</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #198</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

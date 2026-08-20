@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "VrNIRBI"
   text: "Visible Red-Based Built-Up Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #171</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

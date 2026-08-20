@@ -69,7 +69,7 @@ def test_required_catalogue_metadata_is_present_and_well_formed():
         )
         if raw_metadata:
             assert raw_metadata["source"] == "contributor"
-        assert index.source.source_metadata.citations is None
+        assert index.source.source_metadata.citations_metrics is None
         assert index.source.source_metadata.how_to_cite is None
         assert isinstance(index.date_of_addition, date)
 

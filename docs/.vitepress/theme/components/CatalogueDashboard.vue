@@ -119,13 +119,15 @@ const sourceTypeBars = [...countedMetadata('type').entries()]
   .sort((left, right) => right.count - left.count || left.label.localeCompare(right.label))
 
 const citationBars = indices
-  .filter((index) => Number.isInteger(metadata(index).citations?.citation_count))
+  .filter((index) =>
+    Number.isInteger(metadata(index).citations_metrics?.citation_count)
+  )
   .map((index) => ({
     key: index.key,
     label: index.key,
     name: index.name,
     domain: index.classification.application_domain,
-    count: metadata(index).citations.citation_count,
+    count: metadata(index).citations_metrics.citation_count,
     gradient:
       domainDefinitionByKey[index.classification.application_domain]?.gradient ??
       'linear-gradient(90deg, #334155, #64748b 58%, #cbd5e1)'

@@ -6,7 +6,7 @@ pageClass: "index-page domain-soil"
 hero:
   name: "NBLIOLI"
   text: "Normalized Difference Bare Land Index for Landsat-OLI"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Soil</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-modality-badge modality-thermal\">Thermal</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #233</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

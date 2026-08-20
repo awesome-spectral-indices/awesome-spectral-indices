@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "PRIm1"
   text: "Modified Photochemical Reflectance Index 1"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-hyperspectral\">Hyperspectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #166</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

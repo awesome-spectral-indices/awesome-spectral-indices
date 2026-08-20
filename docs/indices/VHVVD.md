@@ -6,7 +6,7 @@ pageClass: "index-page domain-vegetation"
 hero:
   name: "VHVVD"
   text: "VH-VV Difference"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-radar\">Radar</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Vegetation</span><span class=\"hero-modality-badge modality-radar\">Radar</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #160</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

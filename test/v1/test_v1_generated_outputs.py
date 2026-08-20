@@ -107,10 +107,19 @@ def test_v1_outputs_contain_generated_source_metadata():
         json_catalogue["TVI"]["source"]["source_metadata"]["source"]
         == "semantic_scholar"
     )
-    assert (
-        json_catalogue["NDVI"]["source"]["source_metadata"]["citations"]
-        == json_catalogue["TVI"]["source"]["source_metadata"]["citations"]
-    )
+    ndvi_metrics = json_catalogue["NDVI"]["source"]["source_metadata"][
+        "citations_metrics"
+    ]
+    tvi_metrics = json_catalogue["TVI"]["source"]["source_metadata"][
+        "citations_metrics"
+    ]
+    assert {
+        "citation_count": ndvi_metrics["citation_count"],
+        "date": ndvi_metrics["date"],
+    } == {
+        "citation_count": tvi_metrics["citation_count"],
+        "date": tvi_metrics["date"],
+    }
     assert (
         json_catalogue["EVI"]["source"]["source_metadata"]["source"]
         == "crossref"
@@ -164,9 +173,56 @@ def test_v1_citation_history_matches_latest_catalogue_snapshots():
             assert isinstance(snapshot["citation_count"], int)
             assert snapshot["citation_count"] >= 0
 
-        current = json_catalogue[key]["source"]["source_metadata"].get("citations")
+        current = json_catalogue[key]["source"]["source_metadata"].get(
+            "citations_metrics"
+        )
         if current:
-            assert snapshots[-1] == current
+            assert snapshots[-1] == {
+                "citation_count": current["citation_count"],
+                "date": current["date"],
+            }
+
+
+def test_v1_citation_metrics_have_generated_comparison_statistics():
+    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
+        json_catalogue = json.load(fp)["SpectralIndices"]
+
+    cited_indices = {
+        key: index
+        for key, index in json_catalogue.items()
+        if "citations_metrics" in index["source"]["source_metadata"]
+    }
+    assert cited_indices
+
+    for index in cited_indices.values():
+        metrics = index["source"]["source_metadata"]["citations_metrics"]
+        assert set(metrics) == {
+            "citation_count",
+            "date",
+            "overall",
+            "similar_age_count",
+            "within_application_domain",
+        }
+        assert metrics["similar_age_count"] >= 0
+        for comparison in ("overall", "within_application_domain"):
+            values = metrics[comparison]
+            assert set(values) == {
+                "percentile",
+                "percentile_similar_age",
+                "rank",
+                "rank_similar_age",
+            }
+            assert values["rank"] >= 1
+            assert 0 <= values["percentile"] <= 100
+
+    assert (
+        cited_indices["NDVI"]["source"]["source_metadata"][
+            "citations_metrics"
+        ]["overall"]["rank"]
+        < cited_indices["TVI"]["source"]["source_metadata"][
+            "citations_metrics"
+        ]["overall"]["rank"]
+    )
 
 
 def test_v1_outputs_separate_formula_input_types():
