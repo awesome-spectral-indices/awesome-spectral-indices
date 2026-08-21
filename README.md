@@ -17,7 +17,7 @@
 <a href="https://github.com/sindresorhus/awesome" target="_blank">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
 </a>
-<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-dict.json" target="_blank">
+<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-dict.json" target="_blank">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
 </a>
 <a href="https://share.streamlit.io/davemlz/espectro/main/espectro.py" target="_blank">
@@ -62,22 +62,35 @@
 
 ---
 
-> [!IMPORTANT]
-> As of 2026-07-29, the old Read the Docs website is no longer available, and Awesome Spectral Indices has started its migration to v1. You can find the new website here: https://awesome-spectral-indices.github.io/awesome-spectral-indices/
->
-> The existing API will not change during this process and can continue to be used as usual, and new spectral indices can still be submitted as usual. It will be migrated fully to v1 at a later stage. More details [here](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
-
 > [!WARNING]
-> Due to recent submissions of automatically generated spectral indices lacking scientific validation, Awesome Spectral Indices has adopted a new AI and Scientific Validation Policy.
+> Awesome Spectral Indices is being migrated to v1. The v1 catalogue and schema are **experimental and may change** while the migration is in progress. Existing APIs continue to use v0 until their individual migrations are ready.
 >
-> The use of AI is **not prohibited**, but AI-generated formulas, hypotheses, repositories, preprints, or DOI records are **not considered evidence of scientific validity on their own**.
+> Read [v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html) for the current schema, implemented changes, and migration status.
+
+> [!IMPORTANT]
+> **Call for Indices!** Researchers who have published—or aim to publish—their
+> novel spectral indices are encouraged to add them to this repository. To add
+> an index, follow the [Contribution Guidelines](CONTRIBUTING.md).
 >
-> Before submitting a new index, please review our [AI Policy](AI%20POLICY.md). Submissions that lack sufficient scientific justification, validation, or reproducibility may be rejected.
+> If you know a spectral index that is missing, or find an error in an existing
+> entry, please open an
+> [issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new).
+> There is no deadline; the repository is continuously updated.
 
 # Spectral Indices
 
-Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
-You can check the [curated list of spectral indices here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv), and if you want to use it in your environment, it is available in [CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv) and [JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json).
+Spectral indices are widely used throughout the remote-sensing community. This
+repository curates classical and novel indices for different Earth-observation
+applications and makes their definitions available across programming
+languages and processing environments.
+
+The README now follows the experimental v1 catalogue. Browse the generated
+[CSV table](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-table.csv),
+or download the raw
+[CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-table.csv)
+and
+[JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-dict.json)
+files.
 
 ## Citation
 
@@ -96,676 +109,527 @@ If you use this work, please consider citing the following paper:
 }
 ```
 
-## Attributes
-
-All spectral indices follow a standard. Each item of the list has the following attributes:
-
-- `short_name`: Short name of the index (e.g. `"NDWI"`).
-- `long_name`: Long name of the index (e.g. `"Normalized Difference Water Index"`).
-- `formula`: Expression/formula of the index (e.g. `"(G - N)/(G + N)"`).
-- `bands`: List of required bands/parameters for the index computation (e.g. `["N","G"]`).
-- `platforms`: List of platforms with the required bands for the index computation (e.g. `["MODIS", "Landsat-457", "Landsat-89", "Sentinel-2"]`).
-- `reference`: Link to the index reference/paper/doi (e.g. `"https://doi.org/10.1080/01431169608948714"`).
-- `application_domain`: Application domain of the index (e.g. `"water"`).
-- `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
-- `contributor`: GitHub user link of the contributor (e.g. `"https://github.com/davemlz"`).
-
-## Expressions
-
-The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) that can be easily evaluated. The parameters used in the expression for each index follow this standard:
-
-<table>
-
-<tr>
-
-<th> Description </th>
-<th> Standard </th>
-<th> Spectral Range (nm) </th>
-<th> Sentinel-2 </th>
-<th> Landsat-89 </th>
-<th> Landsat-457 </th>
-<th> MODIS </th>
-
-</tr>
-
-<tr>
-
-<td>Aerosols</td>
-<td>A</td>
-<td>400 - 455</td>
-<td>B1</td>
-<td>B1</td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Blue</td>
-<td>B</td>
-<td>450 - 530</td>
-<td>B2</td>
-<td>B2</td>
-<td>B1</td>
-<td>B3</td>
-
-</tr>
-
-<tr>
-
-<td>Green 1</td>
-<td>G1</td>
-<td>510 - 550</td>
-<td></td>
-<td></td>
-<td></td>
-<td>B11</td>
-
-</tr>
-
-<tr>
-
-<td>Green</td>
-<td>G</td>
-<td>510 - 600</td>
-<td>B3</td>
-<td>B3</td>
-<td>B2</td>
-<td>B4</td>
-
-</tr>
-
-<tr>
-
-<td>Yellow</td>
-<td>Y</td>
-<td>585 - 625</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Red</td>
-<td>R</td>
-<td>620 - 690</td>
-<td>B4</td>
-<td>B4</td>
-<td>B3</td>
-<td>B1</td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 1</td>
-<td>RE1</td>
-<td>695 - 715</td>
-<td>B5</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 2</td>
-<td>RE2</td>
-<td>730 - 750</td>
-<td>B6</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 3</td>
-<td>RE3</td>
-<td>765 - 795</td>
-<td>B7</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>NIR</td>
-<td>N</td>
-<td>760 - 900</td>
-<td>B8</td>
-<td>B5</td>
-<td>B4</td>
-<td>B2</td>
-
-</tr>
-
-<tr>
-
-<td>NIR 2</td>
-<td>N2</td>
-<td>850 - 880</td>
-<td>B8A</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Water Vapour</td>
-<td>WV</td>
-<td>930 - 960</td>
-<td>B9</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>SWIR 1</td>
-<td>S1</td>
-<td>1550 - 1750</td>
-<td>B11</td>
-<td>B6</td>
-<td>B5</td>
-<td>B6</td>
-
-</tr>
-
-<tr>
-
-<td>SWIR 2</td>
-<td>S2</td>
-<td>2080 - 2350</td>
-<td>B12</td>
-<td>B7</td>
-<td>B7</td>
-<td>B7</td>
-
-</tr>
-
-<tr>
-
-<td>Thermal</td>
-<td>T</td>
-<td>10400 - 12500</td>
-<td></td>
-<td></td>
-<td>B6</td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Thermal 1</td>
-<td>T1</td>
-<td>10600 - 11190</td>
-<td></td>
-<td>B10</td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Thermal 2</td>
-<td>T2</td>
-<td>11500 - 12510</td>
-<td></td>
-<td>B11</td>
-<td></td>
-<td></td>
-
-</tr>
-
-</table>
-
-In the case of RADAR Indices, the bands follow this standard:
-
-<table>
-
-<tr>
-
-<th> Description </th>
-<th> Standard </th>
-<th> Sentinel-1 </th>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient HV</td>
-<td>HV</td>
-<td>HV</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient VH</td>
-<td>VH</td>
-<td>VH</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient HH</td>
-<td>HH</td>
-<td>HH</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient VV</td>
-<td>VV</td>
-<td>VV</td>
-
-</tr>
-
-</table>
-
-
-
-
-Additional index parameters also follow a standard:
-
-- `g`: Gain factor (e.g. Used for EVI).
-- `L`: Canopy background adjustment (e.g. Used for SAVI and EVI).
-- `C1`: Coefficient 1 for the aerosol resistance term (e.g. Used for EVI).
-- `C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
-- `cexp`: Exponent used for OCVI.
-- `nexp`: Exponent used for GDVI.
-- `alpha`: Weighting coefficient used for WDRVI, BWDRVI and NDPI.
-- `beta`: Calibration parameter used for NDSIns.
-- `gamma`: Weighting coefficient used for ARVI.
-- `omega`: Weighting coefficient used for MBWI.
-- `sla`: Soil line slope.
-- `slb`: Soil line intercept.
-- `PAR`: Photosynthetically Active Radiation.
-- `k`: Slope parameter by soil used for NIRvH2.
-- `epsilon`: Adjustment constant used for EBI, WC1 and WC2.
-- `n`: Adjustment factor used for RWI.
-- `eta`: Mix of green and red reflectances in GRARI.
-- `lmb`: Parameter that controls the atmospheric correction in GRARI.
-- `lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
-- `lambdaR`: Red wavelength used for NIRvH2 and NDGI.
-- `lambdaG`: Green wavelength used for NDGI.
-
-The kernel indices are constructed using a special type of parameters:
-
-- `kAB`: Kernel of bands/parameters `A` and `B` (e.g. `kNR` means `k(N,R)`, where `k` is the kernel function).
-- `p`: Kernel degree (used for the polynomial kernel).
-- `c`: Free parameter that trades off the influence of higher-order versus lower-order terms (used for the polynomial kernel).
-
-# Call for Indices! :rotating_light:
-
-Researchers that have published (or aim to publish) their novel spectral indices are encouraged to add them to this repository! The list of spectral indices is used as a source for different resources that allow spectral indices computation in different environments (such as Python and Google Earth Engine). To add an index, please follow the [Contribution Guidelines](CONTRIBUTING.md).
-
-In the same line, if you know an spectral index that is not included in this repository, you are encouraged to follow the [Contribution Guidelines](CONTRIBUTING.md).
-
-And one more thing: If you see an error in one or several indices, please [open an issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new)!
-
-There is no deadline. The repository is continuously updated!
-
-# Used by
-
-## JavaScript
-
-- [spectral](https://github.com/awesome-spectral-indices/spectral): Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
-
-## Python
-
-- [eemont](https://github.com/davemlz/eemont): A Python package that extends Google Earth Engine.
-- [eeExtra](https://github.com/r-earthengine/ee_extra): A Python package that unifies the Google Earth Engine ecosystem.
-- [Espectro](https://github.com/davemlz/espectro): The Awesome Spectral Indices Streamlit App.
-- [spyndex](https://github.com/awesome-spectral-indices/spyndex): Awesome Spectral Indices in Python.
-
-## Julia
-
-- [SpectralIndices.jl](https://github.com/awesome-spectral-indices/SpectralIndices.jl): Awesome Spectral Indices in Julia.
-
-## R
-
-- [rgeeExtra](https://github.com/r-earthengine/rgeeExtra): High-level functions to process spatial and simple Earth Engine objects.
-
-# Spectral Indices by Application Domain
-
-
-## Vegetation
-
-<table><tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00190-0" target="_blank">AFRI1600</a>: Aerosol Free Vegetation Index (1600 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00190-0" target="_blank">AFRI2100</a>: Aerosol Free Vegetation Index (2100 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2" target="_blank">ARI</a>: Anthocyanin Reflectance Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2.0.CO;2" target="_blank">ARI2</a>: Anthocyanin Reflectance Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/36.134076" target="_blank">ARVI</a>: Atmospherically Resistant Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(91)90009-U" target="_blank">ATSAVI</a>: Adjusted Transformed Soil-Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf" target="_blank">AVI</a>: Advanced Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://ntrs.nasa.gov/citations/19800007243" target="_blank">AshburnVI</a>: Ashburn Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(87)90088-5" target="_blank">BCC</a>: Blue Chromatic Coordinate.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S1672-6308(07)60027-4" target="_blank">BNDVI</a>: Blue Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2135/cropsci2007.01.0031" target="_blank">BWDRVI</a>: Blue Wide Dynamic Range Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">bNIRv</a>: Blue Near-Infrared Reflectance of Vegetation.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1073/pnas.1606162113" target="_blank">CCI</a>: Chlorophyll Carotenoid Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1078/0176-1617-00887" target="_blank">CIG</a>: Chlorophyll Index Green.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1078/0176-1617-00887" target="_blank">CIRE</a>: Chlorophyll Index Red Edge.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2" target="_blank">CRI550</a>: Carotenoid Reflectance Index using 550 nm.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1562/0031-8655(2002)0750272ACCIPL2.0.CO2" target="_blank">CRI700</a>: Carotenoid Reflectance Index using 700 nm.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html" target="_blank">CRSWIR</a>: Continuum Removal SWIR.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1007/s11119-010-9204-3" target="_blank">CVI</a>: Chlorophyll Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf" target="_blank">DSI</a>: Drought Stress Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160310001618031" target="_blank">DSWI1</a>: Disease-Water Stress Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160310001618031" target="_blank">DSWI2</a>: Disease-Water Stress Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160310001618031" target="_blank">DSWI3</a>: Disease-Water Stress Index 3.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160310001618031" target="_blank">DSWI4</a>: Disease-Water Stress Index 4.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160310001618031" target="_blank">DSWI5</a>: Disease-Water Stress Index 5.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(94)00114-3" target="_blank">DVI</a>: Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2019.03.028" target="_blank">DVIplus</a>: Difference Vegetation Index Plus.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2019.08.006" target="_blank">EBI</a>: Enhanced Bloom Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1371/journal.pone.0186193" target="_blank">ENDVI</a>: Enhanced Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(96)00112-5" target="_blank">EVI</a>: Enhanced Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2008.06.006" target="_blank">EVI2</a>: Two-Band Enhanced Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">EVIv</a>: Enhanced Vegetation Index of Vegetation.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.13031/2013.27838" target="_blank">ExG</a>: Excess Green Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.compag.2008.03.009" target="_blank">ExGR</a>: ExG - ExR Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1117/12.336896" target="_blank">ExR</a>: Excess Red Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2020.111676" target="_blank">FCVI</a>: Fluorescence Correction Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(96)00072-7" target="_blank">GARI</a>: Green Atmospherically Resistant Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S1672-6308(07)60027-4" target="_blank">GBNDVI</a>: Green-Blue Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(87)90088-5" target="_blank">GCC</a>: Green Chromatic Coordinate.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs6021211" target="_blank">GDVI</a>: Generalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1007/bf00031911" target="_blank">GEMI</a>: Global Environment Monitoring Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1080/10106040108542184" target="_blank">GLI</a>: Green Leaf Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(96)80284-7" target="_blank">GM1</a>: Gitelson and Merzlyak Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(96)80284-7" target="_blank">GM2</a>: Gitelson and Merzlyak Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(96)00072-7" target="_blank">GNDVI</a>: Green Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">GOSAVI</a>: Green Optimized Soil Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(96)00072-7" target="_blank">GRARI</a>: Atmospheric Resistant Green-Red Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S1672-6308(07)60027-4" target="_blank">GRNDVI</a>: Green-Red Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">GRVI</a>: Green Ratio Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">GSAVI</a>: Green Soil Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00037-8" target="_blank">GVMI</a>: Global Vegetation Moisture Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.jipb.net/EN/abstract/abstract23925.shtml" target="_blank">IAVI</a>: New Atmospherically Resistant Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1006/anbo.1997.0544" target="_blank">IKAW</a>: Kawashima Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(90)90085-Z" target="_blank">IPVI</a>: Infrared Percentage Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2013.04.007" target="_blank">IRECI</a>: Inverted Red-Edge Chlorophyll Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2024.103668" target="_blank">IRGBVI</a>: Improved-Red-Green-Blue Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.mlwa.2026.100914" target="_blank">KDI</a>: Kochia Detection Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1016/S0034-4257(00)00113-9" target="_blank">MCARI</a>: Modified Chlorophyll Absorption in Reflectance Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2003.12.013" target="_blank">MCARI1</a>: Modified Chlorophyll Absorption in Reflectance Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2003.12.013" target="_blank">MCARI2</a>: Modified Chlorophyll Absorption in Reflectance Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.agrformet.2008.03.005" target="_blank">MCARI705</a>: Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(00)00113-9" target="_blank">MCARIOSAVI</a>: MCARI/OSAVI Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.agrformet.2008.03.005" target="_blank">MCARIOSAVI705</a>: MCARI/OSAVI Ratio (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2015.02.012" target="_blank">MGRVI</a>: Modified Green Red Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://www.researchgate.net/profile/Gathot-Winarso/publication/277137915_NEW_MANGROVE_INDEX_AS_DEGRADATIONHEALTH_INDICATOR_USING_REMOTE_SENSING_DATA_SEGARA_ANAKAN_AND_ALAS_PURWO_CASE_STUDY/links/5562d90c08ae8c0cab333ab4/NEW-MANGROVE-INDEX-AS-DEGRADATION-HEALTH-INDICATOR-USING-REMOTE-SENSING-DATA-SEGARA-ANAKAN-AND-ALAS-PURWO-CASE-STUDY.pdf" target="_blank">MI</a>: Mangrove Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/014311697216810" target="_blank">MNDVI</a>: Modified Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/TGRS.2003.812910" target="_blank">MNLI</a>: Modified Non-Linear Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/s20185055" target="_blank">MRBVI</a>: Modified Red Blue Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(94)90134-1" target="_blank">MSAVI</a>: Modified Soil-Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(89)90046-1" target="_blank">MSI</a>: Moisture Stress Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/07038992.1996.10855178" target="_blank">MSR</a>: Modified Simple Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.agrformet.2008.03.005" target="_blank">MSR705</a>: Modified Simple Ratio (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/0143116042000274015" target="_blank">MTCI</a>: MERIS Terrestrial Chlorophyll Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2003.12.013" target="_blank">MTVI1</a>: Modified Triangular Vegetation Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2003.12.013" target="_blank">MTVI2</a>: Modified Triangular Vegetation Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2020.06.001" target="_blank">MVI</a>: Mangrove Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00010-X" target="_blank">mND705</a>: Modified Normalized Difference (705, 750 and 445 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00010-X" target="_blank">mSR705</a>: Modified Simple Ratio (705 and 445 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00010-X" target="_blank">ND705</a>: Normalized Difference (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2006GL029127" target="_blank">NDDI</a>: Normalized Difference Drought Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2019.03.028" target="_blank">NDGI</a>: Normalized Difference Greenness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf" target="_blank">NDII</a>: Normalized Difference Infrared Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00318-2" target="_blank">NDMI</a>: Normalized Difference Moisture Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2017.04.031" target="_blank">NDPI</a>: Normalized Difference Phenology Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/1011-1344(93)06963-4" target="_blank">NDREI</a>: Normalized Difference Red Edge Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">NDTI4RE</a>: 4-band Red Edge Normalized Difference Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf" target="_blank">NDTillI</a>: Normalized Difference Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://ntrs.nasa.gov/citations/19740022614" target="_blank">NDVI</a>: Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">NDVI4RE</a>: 4-band Red Edge Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(11)81633-0" target="_blank">NDVI705</a>: Normalized Difference Vegetation Index (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2016.06.016" target="_blank">NDYI</a>: Normalized Difference Yellowness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(79)90013-0" target="_blank">NGRDI</a>: Normalized Green Red Difference Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.1602244" target="_blank">NIRv</a>: Near-Infrared Reflectance of Vegetation.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2021.112723" target="_blank">NIRvH2</a>: Hyperspectral Near-Infrared Reflectance of Vegetation.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2021.112763" target="_blank">NIRvP</a>: Near-Infrared Reflectance of Vegetation and Incoming PAR.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/02757259409532252" target="_blank">NLI</a>: Non-Linear Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2007GL031021" target="_blank">NMDI</a>: Normalized Multi-band Drought Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(94)90136-8" target="_blank">NPCI</a>: Normalized Pigments Chlorophyll Ratio Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs13010105" target="_blank">NRFIg</a>: Normalized Rapeseed Flowering Index Green.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs13010105" target="_blank">NRFIr</a>: Normalized Rapeseed Flowering Index Red.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">NormG</a>: Normalized Green.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">NormNIR</a>: Normalized NIR.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj2004.0314" target="_blank">NormR</a>: Normalized Red.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1007/s11119-008-9075-z" target="_blank">OCVI</a>: Optimized Chlorophyll Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(95)00186-7" target="_blank">OSAVI</a>: Optimized Soil-Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1034/j.1399-3054.1999.106119.x" target="_blank">PSRI</a>: Plant Senescing Reflectance Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(87)90088-5" target="_blank">RCC</a>: Red Chromatic Coordinate.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(94)00114-3" target="_blank">RDVI</a>: Renormalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/s18030868" target="_blank">REDSI</a>: Red-Edge Disease Stress Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(11)81633-0" target="_blank">RENDVI</a>: Red Edge Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2015.02.012" target="_blank">RGBVI</a>: Red Green Blue Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2014.03.018" target="_blank">RGRI</a>: Red-Green Ratio Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://www.documentation.ird.fr/hor/fdi:34390" target="_blank">RI</a>: Redness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2134/agronj1968.00021962006000060016x" target="_blank">RVI</a>: Ratio Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">RVI4RE</a>: 4-band Red Edge Ratio Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2013.04.007" target="_blank">S2REP</a>: Sentinel-2 Red-Edge Position.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/36.134076" target="_blank">SARVI</a>: Soil Adjusted and Atmospherically Resistant Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(88)90106-X" target="_blank">SAVI</a>: Soil-Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431169008955053" target="_blank">SAVI2</a>: Soil-Adjusted Vegetation Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">SAVI4RE</a>: 4-band Red Edge Soil Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/17538947.2018.1495770" target="_blank">SEVI</a>: Shadow-Eliminated Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf" target="_blank">SI</a>: Shadow Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://eurekamag.com/research/009/395/009395053.php" target="_blank">SIPI</a>: Structure Insensitive Pigment Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.asprs.org/wp-content/uploads/pers/2000journal/february/2000_feb_183-191.pdf" target="_blank">SLAVI</a>: Specific Leaf Area Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/22797254.2017.1418186" target="_blank">SNDTI</a>: Soil-Adjusted Normalized Difference Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">SNDTI4RE</a>: 4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.2307/1936256" target="_blank">SR</a>: Simple Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431169308904370" target="_blank">SR2</a>: Simple Ratio (800 and 550 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(98)00046-7" target="_blank">SR3</a>: Simple Ratio (860, 550 and 708 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(11)81633-0" target="_blank">SR555</a>: Simple Ratio (555 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0176-1617(11)81633-0" target="_blank">SR705</a>: Simple Ratio (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1038/s41598-025-34720-x" target="_blank">SRVI</a>: Symbolic Regression Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf" target="_blank">STI</a>: Simple Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102793" target="_blank">STI4RE</a>: 4-band Red Edge Soil Tillage Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/s19040904" target="_blank">SeLI</a>: Sentinel-2 LAI Green Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">sNIRvLSWI</a>: SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">sNIRvNDPI</a>: SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">sNIRvNDVILSWIP</a>: SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">sNIRvNDVILSWIS</a>: SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1029/2024JG008240" target="_blank">sNIRvSWIR</a>: SWIR-enhanced Near-Infrared Reflectance of Vegetation.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00018-4" target="_blank">TCARI</a>: Transformed Chlorophyll Absorption in Reflectance Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(02)00018-4" target="_blank">TCARIOSAVI</a>: TCARI/OSAVI Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.agrformet.2008.03.005" target="_blank">TCARIOSAVI705</a>: TCARI/OSAVI Ratio (705 and 750 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1109/TGRS.2007.904836" target="_blank">TCI</a>: Triangular Chlorophyll Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.2002.1026867" target="_blank">TDVI</a>: Transformed Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1016/j.jag.2012.07.020" target="_blank">TGI</a>: Triangular Greenness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs12152359" target="_blank">TRRVI</a>: Transformed Red Range Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.1989.576128" target="_blank">TSAVI</a>: Transformed Soil-Adjusted Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs12010016" target="_blank">TTVI</a>: Transformed Triangular Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://ntrs.nasa.gov/citations/19740022614" target="_blank">TVI</a>: Transformed Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1016/S0034-4257(00)00197-8" target="_blank">TriVI</a>: Triangular Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00289-9" target="_blank">VARI</a>: Visible Atmospherically Resistant Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00289-9" target="_blank">VARI700</a>: Visible Atmospherically Resistant Index (700 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00289-9" target="_blank">VI700</a>: Vegetation Index (700 nm).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(01)00289-9" target="_blank">VIG</a>: Vegetation Index Green.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.mlwa.2026.100914" target="_blank">WCI1</a>: Wheat Canopy Index (Growth Stage 1).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.mlwa.2026.100914" target="_blank">WCI2</a>: Wheat Canopy Index (Growth Stage 2).</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1078/0176-1617-01176" target="_blank">WDRVI</a>: Wide Dynamic Range Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/0034-4257(89)90076-X" target="_blank">WDVI</a>: Weighted Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-</table>
-
-## Water
-
-<table><tr><td width="50%"><a href="https://doi.org/10.1016/j.envsoft.2021.105030" target="_blank">ANDWI</a>: Augmented Normalized Difference Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2013.08.029" target="_blank">AWEInsh</a>: Automated Water Extraction Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2013.08.029" target="_blank">AWEIsh</a>: Automated Water Extraction Index with Shadows Elimination.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2009.05.012" target="_blank">FAI</a>: Floating Algae Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1038/s41598-020-62298-z" target="_blank">FDI</a>: Floating Debris Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1007/s00477-024-02660-z" target="_blank">FWEI</a>: Flood/Water Extraction Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2003.11.008" target="_blank">LSWI</a>: Land Surface Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2018.01.018" target="_blank">MBWI</a>: Multi-Band Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs71215805" target="_blank">MLSWI26</a>: Modified Land Surface Water Index (MODIS Bands 2 and 6).</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs71215805" target="_blank">MLSWI27</a>: Modified Land Surface Water Index (MODIS Bands 2 and 7).</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160600589179" target="_blank">MNDWI</a>: Modified Normalized Difference Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs10101643" target="_blank">MuWIR</a>: Revised Multi-Spectral Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2011.10.016" target="_blank">NDCI</a>: Normalized Difference Chlorophyll Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2006.07.012" target="_blank">NDPonI</a>: Normalized Difference Pond Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2006.07.012" target="_blank">NDTI</a>: Normalized Difference Turbidity Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1007/978-3-662-45737-5_51" target="_blank">NDVIMNDWI</a>: NDVI-MNDWI Model.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431169608948714" target="_blank">NDWI</a>: Normalized Difference Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/w12051339" target="_blank">NDWIns</a>: Normalized Difference Water Index with no Snow Cover and Glaciers.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.11873/j.issn.1004-0323.2009.2.167" target="_blank">NWI</a>: New Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.mex.2021.101327" target="_blank">OSI</a>: Oil Spill Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs12162648" target="_blank">PI</a>: Plastic Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs12162648" target="_blank">RNDVI</a>: Reversed Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/JSTARS.2025.3562089" target="_blank">RWI</a>: Rescaled Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/w13121647" target="_blank">S2WI</a>: Sentinel-2 Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs16152795" target="_blank">SCoWI</a>: Subtractive Coastal Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1038/s41598-025-34720-x" target="_blank">SRWI</a>: Symbolic Regression Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://eoscience.esa.int/landtraining2017/files/posters/MILCZAREK.pdf" target="_blank">SWM</a>: Sentinel Water Mask.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs14215289" target="_blank">TWI</a>: Triangle Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs11182186" target="_blank">WI1</a>: Water Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs11182186" target="_blank">WI2</a>: Water Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2015.12.055" target="_blank">WI2015</a>: Water Index 2015.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/GEOINFORMATICS.2010.5567762" target="_blank">WRI</a>: Water Ratio Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-</table>
-
-## Burn
-
-<table><tr><td width="50%"><a href="https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf" target="_blank">BAI</a>: Burned Area Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.foreco.2006.08.248" target="_blank">BAIM</a>: Burned Area Index adapted to MODIS.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/ecrs-2-05177" target="_blank">BAIS2</a>: Burned Area Index for Sentinel 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2005.04.014" target="_blank">CSI</a>: Char Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160600954704" target="_blank">CSIT</a>: Char Soil Index Thermal.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160110053185" target="_blank">MIRBI</a>: Mid-Infrared Burn Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3133/ofr0211" target="_blank">NBR</a>: Normalized Burn Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2" target="_blank">NBR2</a>: Normalized Burn Ratio 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/22797254.2020.1738900" target="_blank">NBRSWIR</a>: Normalized Burn Ratio SWIR.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160500239008" target="_blank">NBRT1</a>: Normalized Burn Ratio Thermal 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160500239008" target="_blank">NBRT2</a>: Normalized Burn Ratio Thermal 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160500239008" target="_blank">NBRT3</a>: Normalized Burn Ratio Thermal 3.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs14071727" target="_blank">NBRplus</a>: Normalized Burn Ratio Plus.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/TGRS.2003.819190" target="_blank">NDSWIR</a>: Normalized Difference SWIR.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160600954704" target="_blank">NDVIT</a>: Normalized Difference Vegetation Index Thermal.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2011.06.010" target="_blank">NSTv1</a>: NIR-SWIR-Temperature Version 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2011.06.010" target="_blank">NSTv2</a>: NIR-SWIR-Temperature Version 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160600954704" target="_blank">SAVIT</a>: Soil-Adjusted Vegetation Index Thermal.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160500239008" target="_blank">VI6T</a>: VI6T Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-</table>
-
-## Snow
-
-<table><tr><td width="50%"><a href="https://doi.org/10.3390/rs13142777" target="_blank">NBSIMS</a>: Non-Binary Snow Index for Multi-Component Surfaces.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160802385459" target="_blank">NDGlaI</a>: Normalized Difference Glacier Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.1994.399618" target="_blank">NDSI</a>: Normalized Difference Snow Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160802385459" target="_blank">NDSII</a>: Normalized Difference Snow Ice Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160119766" target="_blank">NDSIITM</a>: Normalized Difference Snow/Ice Index for Landsat TM.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/w12051339" target="_blank">NDSInw</a>: Normalized Difference Snow Index with no Water.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160119766" target="_blank">NDSaII</a>: Normalized Difference Snow and Ice Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3178/jjshwr.12.28" target="_blank">S3</a>: S3 Snow Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs11232774" target="_blank">SWI</a>: Snow Water Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-</table>
-
-## Urban
-
-<table><tr><td width="50%"><a href="https://doi.org/10.1080/10106049.2018.1497094" target="_blank">BLFEI</a>: Built-Up Land Features Extraction Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf" target="_blank">BRBA</a>: Band Ratio for Built-up Area.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/land7030081" target="_blank">DBI</a>: Dry Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs4102957" target="_blank">EBBI</a>: Enhanced Built-Up and Bareness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1080/01431160802039957" target="_blank">IBI</a>: Index-Based Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf" target="_blank">NBAI</a>: Normalized Built-up Area Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://hdl.handle.net/1959.11/29500" target="_blank">NBUI</a>: New Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1080/01431160304987" target="_blank">NDBI</a>: Normalized Difference Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.14358/PERS.76.5.557" target="_blank">NDISIb</a>: Normalized Difference Impervious Surface Index Blue.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.14358/PERS.76.5.557" target="_blank">NDISIg</a>: Normalized Difference Impervious Surface Index Green.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.14358/PERS.76.5.557" target="_blank">NDISImndwi</a>: Normalized Difference Impervious Surface Index with MNDWI.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.14358/PERS.76.5.557" target="_blank">NDISIndwi</a>: Normalized Difference Impervious Surface Index with NDWI.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.14358/PERS.76.5.557" target="_blank">NDISIr</a>: Normalized Difference Impervious Surface Index Red.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4" target="_blank">NHFD</a>: Non-Homogeneous Feature Difference.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs10101521" target="_blank">PISI</a>: Perpendicular Impervious Surface Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf" target="_blank">UI</a>: Urban Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="http://dx.doi.org/10.1080/01431161.2012.687842" target="_blank">VIBI</a>: Vegetation Index Built-up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.ecolind.2015.03.037" target="_blank">VgNIRBI</a>: Visible Green-Based Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.ecolind.2015.03.037" target="_blank">VrNIRBI</a>: Visible Red-Based Built-Up Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-</table>
-
-## Soil
-
-<table><tr><td width="50%"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf" target="_blank">BI</a>: Bare Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(98)00030-3" target="_blank">BITM</a>: Landsat TM-based Brightness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(98)00030-3" target="_blank">BIXS</a>: SPOT HRV XS-based Brightness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.2005.1525743" target="_blank">BaI</a>: Bareness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/land7030081" target="_blank">DBSI</a>: Dry Bareness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2022.102703" target="_blank">EMBI</a>: Enhanced Modified Bare Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/land10030231" target="_blank">MBI</a>: Modified Bare Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs9030249" target="_blank">NBLI</a>: Normalized Difference Bare Land Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/rs9030249" target="_blank">NBLIOLI</a>: Normalized Difference Bare Land Index for Landsat-OLI.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.2005.1526319" target="_blank">NDBaI</a>: Normalized Difference Bareness Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+"> </td></tr>
-<tr><td width="50%"><a href="https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4" target="_blank">NDSIWV</a>: WorldView Normalized Difference Soil Index.</td><td width="50%"></td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.jag.2015.02.010" target="_blank">NDSoI</a>: Normalized Difference Soil Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/land10030231" target="_blank">NSDS</a>: Normalized Shortwave Infrared Difference Soil-Moisture.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2019.06.012" target="_blank">NSDSI1</a>: Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2019.06.012" target="_blank">NSDSI2</a>: Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2019.06.012" target="_blank">NSDSI3</a>: Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/S0034-4257(98)00030-3" target="_blank">RI4XS</a>: SPOT HRV XS-based Redness Index 4.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-</table>
-
-## Clouds
-
-<table><tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CI1SWIR</a>: Cloud Index Form 1 with SWIR 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CI1woSWIR</a>: Cloud Index Form 1 without SWIR bands.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CI2SWIR</a>: Cloud Index Form 2 with SWIR bands.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CI2woSWIR</a>: Cloud Index Form 2 without SWIR bands.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rsase.2026.101990" target="_blank">CLOSDI</a>: Cloud Shadow Detection Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CSISWIR</a>: Cloud Shadow Index with SWIR 1.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.isprsjprs.2018.07.006" target="_blank">CSIwoSWIR</a>: Cloud Shadow Index without SWIR bands.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-</table>
-
-## Kernel
-
-<table><tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kEVI</a>: Kernel Enhanced Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kIPVI</a>: Kernel Infrared Percentage Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kNDVI</a>: Kernel Normalized Difference Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kRVI</a>: Kernel Ratio Vegetation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1126/sciadv.abc7447" target="_blank">kVARI</a>: Kernel Visible Atmospherically Resistant Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-MODIS-green?style=flat-square" alt="MODIS">  <img src="https://img.shields.io/badge/-Landsat%20TM-blueviolet?style=flat-square" alt="Landsat-TM">  <img src="https://img.shields.io/badge/-Landsat%20ETM+-purple?style=flat-square" alt="Landsat-ETM+">  <img src="https://img.shields.io/badge/-Landsat%20OLI-blue?style=flat-square" alt="Landsat-OLI">  <img src="https://img.shields.io/badge/-Sentinel%202-red?style=flat-square" alt="Sentinel-2">  <img src="https://img.shields.io/badge/-Planet%20Fusion-yellow?style=flat-square" alt="Planet-Fusion"> </td></tr>
-</table>
+## Properties
+
+Each v1 catalogue entry has a case-sensitive lookup key and the following
+primary properties. Nested objects contain additional generated and
+contributor-provided information. For the complete schema and validation
+rules, visit [v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
+
+| Property | Meaning |
+| --- | --- |
+| `acronym` | Required display acronym; it does not have to be unique. |
+| `name` | Required full index name; it does not have to be unique. |
+| `formula` | Validated v1 mathematical expression. |
+| `classification` | Application domain, generated sensing modalities, and optional families. |
+| `bands` | Generated spectral, thermal, and hyperspectral inputs. |
+| `polarizations` | Generated radar-polarization inputs. |
+| `constants` | Per-index definitions for constants used by the formula. |
+| `external_variables` | Per-index definitions for formula inputs supplied outside spectral data. |
+| `reductions` | Execution context for contextual reduction functions. |
+| `source` | Source link plus generated status, metadata, and citation data. |
+| `contributor` | Contributor GitHub profile URL or email address. |
+| `date_of_addition` | Catalogue contribution date in YYYY-MM-DD format. |
+
+## Formula expressions
+
+V1 formulas are validated mathematical expressions. Their variables are
+classified into broad spectral or thermal bands, exact or selectable-range
+hyperspectral inputs, radar polarizations, constants, and external variables.
+
+### Broad spectral and thermal bands
+
+| Standard | Description | Spectral range (nm) | Sentinel-2 | Landsat-89 | Landsat-457 | MODIS |
+| --- | --- | --- | --- | --- | --- | --- |
+| `A` | Aerosols | 400–455 | `B1` | `B1` | — | — |
+| `B` | Blue | 450–530 | `B2` | `B2` | `B1` | `B3` |
+| `G` | Green | 510–600 | `B3` | `B3` | `B2` | `B4` |
+| `G1` | Green 1 | 510–550 | — | — | — | `B11` |
+| `N` | Near-Infrared (NIR) | 760–900 | `B8` | `B5` | `B4` | `B2` |
+| `N2` | Near-Infrared (NIR) 2 | 850–880 | `B8A` | — | — | — |
+| `R` | Red | 620–690 | `B4` | `B4` | `B3` | `B1` |
+| `RE1` | Red Edge 1 | 695–715 | `B5` | — | — | — |
+| `RE2` | Red Edge 2 | 730–750 | `B6` | — | — | — |
+| `RE3` | Red Edge 3 | 765–795 | `B7` | — | — | — |
+| `S1` | Short-wave Infrared (SWIR) 1 | 1550–1750 | `B11` | `B6` | `B5` | `B6` |
+| `S2` | Short-wave Infrared (SWIR) 2 | 2080–2350 | `B12` | `B7` | `B7` | `B7` |
+| `T` | Thermal Infrared | 10400–12500 | — | — | `B6` | — |
+| `T1` | Thermal Infrared 1 | 10600–11190 | — | `B10` | — | — |
+| `T2` | Thermal Infrared 2 | 11500–12510 | — | `B11` | — | — |
+| `WV` | Water Vapour | 930–960 | `B9` | — | — | — |
+| `Y` | Yellow | 585–625 | — | — | — | — |
+
+### Radar polarizations
+
+| Standard | Description |
+| --- | --- |
+| `HH` | Horizontal transmit, horizontal receive |
+| `HV` | Horizontal transmit, vertical receive |
+| `VH` | Vertical transmit, horizontal receive |
+| `VV` | Vertical transmit, vertical receive |
+
+### Hyperspectral standards
+
+Hyperspectral reflectance operands use integer wavelengths in nanometres.
+
+| Standard | Meaning | Validation |
+| --- | --- | --- |
+| `R<a>` | Reflectance at the exact integer wavelength `a`. | `300 <= a <= 2500` |
+| `R<a>_<b>` | Reflectance at any one wavelength in the inclusive range `a` to `b`. | `300 <= a < b <= 2500` |
+
+### Supported functions
+
+Only the following function calls are currently accepted in v1 formulas.
+Contextual `spatial_*` functions additionally require a matching `reductions`
+definition.
+
+| Function | Meaning |
+| --- | --- |
+| `max(X, ...)` | Per-pixel maximum of positional expressions. |
+| `min(X, ...)` | Per-pixel minimum of positional expressions. |
+| `tanh(X)` | Hyperbolic tangent of one expression. |
+| `log(X)` | Natural logarithm of one expression. |
+| `kernel(X, Y)` | Kernel evaluation over exactly two input expressions. |
+| `spatial_max(X)` | Maximum of an input over the configured spatial scope. |
+| `spatial_min(X)` | Minimum of an input over the configured spatial scope. |
+| `spatial_mean(X)` | Arithmetic mean of an input over the configured spatial scope. |
+
+### Constants
+
+Constant meanings are defined per index rather than globally. The following
+table is generated from `output/v1/constants.json` and intentionally shows
+only each standard, the indices sharing its description, and that contributed
+description.
+
+| Constant | Indices | Description |
+| --- | --- | --- |
+| `a` | [NDWIns](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDWIns.html) | Empirical parameter weighting NIR reflectance |
+| `alpha` | [BWDRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BWDRVI.html) | NIR reflectance scalar |
+| `alpha` | [NDVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI4RE.html), [RVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RVI4RE.html), [SAVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI4RE.html) | Parameter representing the proportion of Red Edge 3 reflectance (Sentinel-2) |
+| `alpha` | [sNIRvNDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvNDPI.html) | Parameter to mitigate soil and snow effects. Taken from NDPI |
+| `alpha` | [NDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDPI.html), [WDRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDRVI.html) | Weighting coefficient |
+| `b` | [NDSInw](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSInw.html) | Empirical parameter that offsets the index |
+| `beta` | [NDVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI4RE.html), [RVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RVI4RE.html), [SAVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI4RE.html) | Parameter representing the proportion of Red reflectance (Sentinel-2) |
+| `c` | [OCVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OCVI.html) | Correction factor |
+| `c` | [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html) | Ratio of red to blue reflectances. Red = c * Blue |
+| `C1` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html) | Coefficient 1 for the aerosol resistance term |
+| `C2` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html) | Coefficient 2 for the aerosol resistance term |
+| `epsilon` | [EBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EBI.html) | Adjustment constant |
+| `epsilon` | [WCI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI1.html), [WCI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI2.html), [WCI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI3.html) | Adjustment constant for numerical stability |
+| `eta` | [GRARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRARI.html) | Mix of green and red reflectances to get properties that are between ARVI and GARI |
+| `fdelta` | [SEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SEVI.html) | Adjustment factor to avoid under-elimination or over-elimination |
+| `g` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html) | Gain factor |
+| `gamma` | [IAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IAVI.html) | Correction coefficient for upward atmospheric path radiance reaching the satellite |
+| `gamma` | [MSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSAVI.html) | Primary soil line parameter. gamma = N/R (slope of the soil line, only for soil pixels/measurements) |
+| `gamma` | [NDTI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTI4RE.html), [SNDTI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SNDTI4RE.html), [STI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/STI4RE.html) | Weighting coefficient for the ratio SWIR1/SWIR2 (Sentinel-2) |
+| `gamma` | [ARVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ARVI.html), [SARVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARVI.html) | Weighting coefficient used for reducing atmospheric effects |
+| `k` | [NIRvH2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvH2.html) | Slope parameter by soil. Derived by fitting a linear model on refletances against wavelengths in either the red region (675-681 nm) or the NIR region (778-800 nm) |
+| `L` | [SAVISR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVISR.html) | Background Adjustment Factor |
+| `L` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [GSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GSAVI.html), [IBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IBI.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html), [MNLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MNLI.html), [NBUI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBUI.html), [SARVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARVI.html), [SAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI.html), [SAVIT](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVIT.html) | Canopy background adjustment |
+| `L` | [SNDTI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SNDTI.html) | Soil adjustment factor |
+| `lambdaG` | [DVIplus](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DVIplus.html), [NDGI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDGI.html) | Green central wavelength (nm) |
+| `lambdaN` | [DVIplus](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DVIplus.html), [FAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FAI.html), [FDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FDI.html), [NDGI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDGI.html), [NIRvH2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvH2.html) | NIR central wavelength (nm) |
+| `lambdaN2` | [CRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRSWIR.html) | NIR2 central wavelength (nm) |
+| `lambdaR` | [DVIplus](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DVIplus.html), [FAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FAI.html), [FDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FDI.html), [NDGI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDGI.html), [NIRvH2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvH2.html) | Red central wavelength (nm) |
+| `lambdaS1` | [CRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRSWIR.html), [FAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FAI.html), [FDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FDI.html) | SWIR1 central wavelength (nm) |
+| `lambdaS2` | [CRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRSWIR.html) | SWIR2 central wavelength (nm) |
+| `lmb` | [GARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GARI.html), [GRARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRARI.html) | Parameter that controls the atmospheric correction |
+| `n` | [RWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RWI.html) | Adjustment factor. This constant is calculated as `n = median(G ** (1.0 / 2.71828)) / median(G)`, reducing the spatial dimension (see https://doi.org/10.1109/JSTARS.2025.3562089) |
+| `n` | [GDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GDVI.html) | Power operation exponent to amplify the dynamic range |
+| `omega` | [MBWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MBWI.html) | Coefficient that maximizes the difference between water and non-water surfaces |
+| `sla` | [ATSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ATSAVI.html), [SAVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI2.html), [TSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TSAVI.html) | Soil line slope. N = sla * R + slb (only for soil pixels/measurements) |
+| `sla` | [WDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDVI.html) | Soil line slope. sla = N/R (only for soil pixels/measurements) |
+| `slb` | [ATSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ATSAVI.html), [SAVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI2.html), [TSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TSAVI.html) | Soil line intercept.  N = sla * R + slb (only for soil pixels/measurements) |
+| `X` | [ATSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ATSAVI.html) | Negative abscissa of a reference point located on the soil line |
+
+### External variables
+
+External variables are formula inputs supplied outside spectral data. Their
+descriptions are also specific to each index.
+
+| Variable | Index | Description |
+| --- | --- | --- |
+| `PAR` | [NIRvP](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvP.html) | Photosynthetically Active Radiation |
+
+# Spectral Indices by Sensing Modality and Application Domain
+
+## Multispectral
+
+### Vegetation
+
+- [AFRI1600](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AFRI1600.html): Aerosol Free Vegetation Index (1600 nm)
+- [AFRI2100](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AFRI2100.html): Aerosol Free Vegetation Index (2100 nm)
+- [ARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ARI.html): Anthocyanin Reflectance Index
+- [ARI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ARI2.html): Anthocyanin Reflectance Index 2
+- [ARVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ARVI.html): Atmospherically Resistant Vegetation Index
+- [AshburnVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AshburnVI.html): Ashburn Vegetation Index
+- [ATSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ATSAVI.html): Adjusted Transformed Soil-Adjusted Vegetation Index
+- [AVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AVI.html): Advanced Vegetation Index
+- [BCC](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BCC.html): Blue Chromatic Coordinate
+- [BNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BNDVI.html): Blue Normalized Difference Vegetation Index
+- [bNIRv](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/bNIRv.html): Blue Near-Infrared Reflectance of Vegetation
+- [BWDRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BWDRVI.html): Blue Wide Dynamic Range Vegetation Index
+- [CCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CCI.html): Chlorophyll Carotenoid Index
+- [CIG](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CIG.html): Chlorophyll Index Green
+- [CIRE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CIRE.html): Chlorophyll Index Red Edge
+- [CRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRSWIR.html): Continuum Removal SWIR
+- [CVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CVI.html): Chlorophyll Vegetation Index
+- [DSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSI.html): Drought Stress Index
+- [DSWI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI1.html): Disease-Water Stress Index 1
+- [DSWI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI2.html): Disease-Water Stress Index 2
+- [DSWI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI3.html): Disease-Water Stress Index 3
+- [DSWI4](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI4.html): Disease-Water Stress Index 4
+- [DSWI5](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI5.html): Disease-Water Stress Index 5
+- [DVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DVI.html): Difference Vegetation Index
+- [DVIplus](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DVIplus.html): Difference Vegetation Index Plus
+- [EBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EBI.html): Enhanced Bloom Index
+- [ENDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ENDVI.html): Enhanced Normalized Difference Vegetation Index
+- [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html): Enhanced Vegetation Index
+- [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html): Two-Band Enhanced Vegetation Index
+- [EVIv](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVIv.html): Enhanced Vegetation Index of Vegetation
+- [ExG](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ExG.html): Excess Green Index
+- [ExGR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ExGR.html): ExG - ExR Vegetation Index
+- [ExR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ExR.html): Excess Red Index
+- [FCVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FCVI.html): Fluorescence Correction Vegetation Index
+- [GARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GARI.html): Green Atmospherically Resistant Vegetation Index
+- [GBNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GBNDVI.html): Green-Blue Normalized Difference Vegetation Index
+- [GCC](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GCC.html): Green Chromatic Coordinate
+- [GDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GDVI.html): Generalized Difference Vegetation Index
+- [GEMI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GEMI.html): Global Environment Monitoring Index
+- [GLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GLI.html): Green Leaf Index
+- [GM1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GM1.html): Gitelson and Merzlyak Index 1
+- [GM2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GM2.html): Gitelson and Merzlyak Index 2
+- [GNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GNDVI.html): Green Normalized Difference Vegetation Index
+- [GOSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GOSAVI.html): Green Optimized Soil Adjusted Vegetation Index
+- [GRARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRARI.html): Atmospheric Resistant Green-Red Index
+- [GreenDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GreenDVI.html): Green Difference Vegetation Index
+- [GRNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRNDVI.html): Green-Red Normalized Difference Vegetation Index
+- [GRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRVI.html): Green Ratio Vegetation Index
+- [GSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GSAVI.html): Green Soil Adjusted Vegetation Index
+- [GVMI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GVMI.html): Global Vegetation Moisture Index
+- [IAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IAVI.html): New Atmospherically Resistant Vegetation Index
+- [IKAW](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IKAW.html): Kawashima Index
+- [IPVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IPVI.html): Infrared Percentage Vegetation Index
+- [IRECI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IRECI.html): Inverted Red-Edge Chlorophyll Index
+- [IRGBVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IRGBVI.html): Improved-Red-Green-Blue Vegetation Index
+- [KDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/KDI.html): Kochia Detection Index
+- [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html): Kernel Enhanced Vegetation Index
+- [kIPVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kIPVI.html): Kernel Infrared Percentage Vegetation Index
+- [kNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kNDVI.html): Kernel Normalized Difference Vegetation Index
+- [kRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kRVI.html): Kernel Ratio Vegetation Index
+- [kVARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kVARI.html): Kernel Visible Atmospherically Resistant Index
+- [MCARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARI.html): Modified Chlorophyll Absorption in Reflectance Index
+- [MCARI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARI1.html): Modified Chlorophyll Absorption in Reflectance Index 1
+- [MCARI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARI2.html): Modified Chlorophyll Absorption in Reflectance Index 2
+- [MCARI705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARI705.html): Modified Chlorophyll Absorption in Reflectance Index (705 and 750 nm)
+- [MCARIOSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARIOSAVI.html): MCARI/OSAVI Ratio
+- [MCARIOSAVI705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MCARIOSAVI705.html): MCARI/OSAVI Ratio (705 and 750 nm)
+- [MGRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MGRVI.html): Modified Green Red Vegetation Index
+- [MI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MI.html): Mangrove Index
+- [mND705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/mND705.html): Modified Normalized Difference (705, 750 and 445 nm)
+- [MNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MNDVI.html): Modified Normalized Difference Vegetation Index
+- [MNLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MNLI.html): Modified Non-Linear Vegetation Index
+- [MRBVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MRBVI.html): Modified Red Blue Vegetation Index
+- [MSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSAVI.html): Modified Soil-Adjusted Vegetation Index
+- [MSAVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSAVI2.html): Modified Soil-Adjusted Vegetation Index 2
+- [MSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSI.html): Moisture Stress Index
+- [MSR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSR.html): Modified Simple Ratio
+- [MSR705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MSR705-ratio.html): Modified Simple Ratio (705 and 750 nm)
+- [mSR705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/mSR705-modified.html): Modified Simple Ratio (705 and 445 nm)
+- [MTCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MTCI.html): MERIS Terrestrial Chlorophyll Index
+- [MTVI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MTVI1.html): Modified Triangular Vegetation Index 1
+- [MTVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MTVI2.html): Modified Triangular Vegetation Index 2
+- [MVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MVI.html): Mangrove Vegetation Index
+- [ND705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ND705.html): Normalized Difference (705 and 750 nm)
+- [NDDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDDI.html): Normalized Difference Drought Index
+- [NDGI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDGI.html): Normalized Difference Greenness Index
+- [NDII](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDII.html): Normalized Difference Infrared Index
+- [NDMI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDMI.html): Normalized Difference Moisture Index
+- [NDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDPI.html): Normalized Difference Phenology Index
+- [NDREI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDREI.html): Normalized Difference Red Edge Index
+- [NDTI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTI4RE.html): 4-band Red Edge Normalized Difference Tillage Index
+- [NDTillI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTillI.html): Normalized Difference Tillage Index
+- [NDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI.html): Normalized Difference Vegetation Index
+- [NDVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI4RE.html): 4-band Red Edge Normalized Difference Vegetation Index
+- [NDVI705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI705.html): Normalized Difference Vegetation Index (705 and 750 nm)
+- [NDVISR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVISR.html): Normalized Difference Vegetation Index with Simple Ratio
+- [NDYI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDYI.html): Normalized Difference Yellowness Index
+- [NGRDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NGRDI.html): Normalized Green Red Difference Index
+- [NIRv](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRv.html): Near-Infrared Reflectance of Vegetation
+- [NIRvH2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvH2.html): Hyperspectral Near-Infrared Reflectance of Vegetation
+- [NIRvP](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NIRvP.html): Near-Infrared Reflectance of Vegetation and Incoming PAR
+- [NLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NLI.html): Non-Linear Vegetation Index
+- [NMDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NMDI.html): Normalized Multi-band Drought Index
+- [NormG](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NormG.html): Normalized Green
+- [NormNIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NormNIR.html): Normalized NIR
+- [NormR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NormR.html): Normalized Red
+- [NPCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NPCI.html): Normalized Pigments Chlorophyll Ratio Index
+- [NRFIg](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NRFIg.html): Normalized Rapeseed Flowering Index Green
+- [NRFIr](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NRFIr.html): Normalized Rapeseed Flowering Index Red
+- [OCVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OCVI.html): Optimized Chlorophyll Vegetation Index
+- [OSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OSAVI.html): Optimized Soil-Adjusted Vegetation Index
+- [RCC](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RCC.html): Red Chromatic Coordinate
+- [RDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RDVI.html): Renormalized Difference Vegetation Index
+- [REDSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/REDSI.html): Red-Edge Disease Stress Index
+- [RENDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RENDVI.html): Red Edge Normalized Difference Vegetation Index
+- [RGBVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RGBVI.html): Red Green Blue Vegetation Index
+- [RGRI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RGRI.html): Red-Green Ratio Index
+- [RI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RI.html): Redness Index
+- [RVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RVI.html): Ratio Vegetation Index
+- [RVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RVI4RE.html): 4-band Red Edge Ratio Vegetation Index
+- [S2REP](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/S2REP.html): Sentinel-2 Red-Edge Position
+- [SARVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARVI.html): Soil Adjusted and Atmospherically Resistant Vegetation Index
+- [SAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI.html): Soil-Adjusted Vegetation Index
+- [SAVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI2.html): Soil-Adjusted Vegetation Index 2
+- [SAVI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVI4RE.html): 4-band Red Edge Soil Adjusted Vegetation Index
+- [SAVISR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVISR.html): Soil-Adjusted Vegetation Index with Simple Ratio
+- [SeLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SeLI.html): Sentinel-2 LAI Green Index
+- [SEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SEVI.html): Shadow-Eliminated Vegetation Index
+- [SI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SI.html): Shadow Index
+- [SIPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SIPI.html): Structure Insensitive Pigment Index
+- [SLAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SLAVI.html): Specific Leaf Area Vegetation Index
+- [SNDTI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SNDTI.html): Soil-Adjusted Normalized Difference Tillage Index
+- [SNDTI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SNDTI4RE.html): 4-band Red Edge Soil-Adjusted Normalized Difference Tillage Index
+- [sNIRvLSWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvLSWI.html): SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI
+- [sNIRvNDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvNDPI.html): SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI
+- [sNIRvNDVILSWIP](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvNDVILSWIP.html): SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product
+- [sNIRvNDVILSWIS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvNDVILSWIS.html): SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum
+- [sNIRvSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/sNIRvSWIR.html): SWIR-enhanced Near-Infrared Reflectance of Vegetation
+- [SR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SR.html): Simple Ratio
+- [SR2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SR2.html): Simple Ratio (800 and 550 nm)
+- [SR555](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SR555.html): Simple Ratio (555 and 750 nm)
+- [SR705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SR705.html): Simple Ratio (705 and 750 nm)
+- [SRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SRVI.html): Symbolic Regression Vegetation Index
+- [STI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/STI.html): Simple Tillage Index
+- [STI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/STI4RE.html): 4-band Red Edge Soil Tillage Index
+- [TCARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TCARI.html): Transformed Chlorophyll Absorption in Reflectance Index
+- [TCARIOSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TCARIOSAVI.html): TCARI/OSAVI Ratio
+- [TCARIOSAVI705](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TCARIOSAVI705.html): TCARI/OSAVI Ratio (705 and 750 nm)
+- [TCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TCI.html): Triangular Chlorophyll Index
+- [TDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TDVI.html): Transformed Difference Vegetation Index
+- [TGI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TGI.html): Triangular Greenness Index
+- [TMTCbrightness](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCbrightness.html): Thematic Mapper Tasseled Cap Brightness Feature
+- [TMTCfifth](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCfifth.html): Thematic Mapper Tasseled Cap Fifth Feature
+- [TMTCfourth](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCfourth.html): Thematic Mapper Tasseled Cap Fourth Feature
+- [TMTCgreenness](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCgreenness.html): Thematic Mapper Tasseled Cap Greenness Feature
+- [TMTCsixth](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCsixth.html): Thematic Mapper Tasseled Cap Sixth Feature
+- [TMTCwetness](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TMTCwetness.html): Thematic Mapper Tasseled Cap Wetness Feature
+- [TriVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TriVI.html): Triangular Vegetation Index
+- [TRRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TRRVI.html): Transformed Red Range Vegetation Index
+- [TSAVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TSAVI.html): Transformed Soil-Adjusted Vegetation Index
+- [TTVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TTVI.html): Transformed Triangular Vegetation Index
+- [TVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TVI.html): Transformed Vegetation Index
+- [VARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VARI.html): Visible Atmospherically Resistant Index
+- [VARI700](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VARI700.html): Visible Atmospherically Resistant Index (700 nm)
+- [VI700](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VI700.html): Vegetation Index (700 nm)
+- [VIG](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VIG.html): Vegetation Index Green
+- [WCI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI1.html): Wheat Canopy Index (Growth Stage 1)
+- [WCI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI2.html): Wheat Canopy Index (Growth Stage 2)
+- [WCI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI3.html): Wheat Canopy Index (Growth Stage 3)
+- [WDRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDRVI.html): Wide Dynamic Range Vegetation Index
+- [WDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDVI.html): Weighted Difference Vegetation Index
+
+### Water
+
+- [ANDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ANDWI.html): Augmented Normalized Difference Water Index
+- [AWEInsh](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AWEInsh.html): Automated Water Extraction Index
+- [AWEIsh](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AWEIsh.html): Automated Water Extraction Index with Shadows Elimination
+- [CWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CWI.html): Coastal Water Index
+- [FAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FAI.html): Floating Algae Index
+- [FDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FDI.html): Floating Debris Index
+- [FWEI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FWEI.html): Flood/Water Extraction Index
+- [LSWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/LSWI.html): Land Surface Water Index
+- [MBWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MBWI.html): Multi-Band Water Index
+- [MLSWI26](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MLSWI26.html): Modified Land Surface Water Index (MODIS Bands 2 and 6)
+- [MLSWI27](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MLSWI27.html): Modified Land Surface Water Index (MODIS Bands 2 and 7)
+- [MNDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MNDWI.html): Modified Normalized Difference Water Index
+- [MuWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MuWIR.html): Revised Multi-Spectral Water Index
+- [NDCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDCI.html): Normalized Difference Chlorophyll Index
+- [NDPonI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDPonI.html): Normalized Difference Pond Index
+- [NDTI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTI.html): Normalized Difference Turbidity Index
+- [NDVIMNDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVIMNDWI.html): NDVI-MNDWI Model
+- [NDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDWI.html): Normalized Difference Water Index
+- [NDWIns](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDWIns.html): Normalized Difference Water Index with no Snow Cover and Glaciers
+- [NWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NWI.html): New Water Index
+- [OSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OSI.html): Oil Spill Index
+- [PI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PI.html): Plastic Index
+- [RNDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RNDVI.html): Reversed Normalized Difference Vegetation Index
+- [RWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RWI.html): Rescaled Water Index
+- [S2WI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/S2WI.html): Sentinel-2 Water Index
+- [SCoWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SCoWI.html): Subtractive Coastal Water Index
+- [SRWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SRWI.html): Symbolic Regression Water Index
+- [SWM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SWM.html): Sentinel Water Mask
+- [TWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TWI.html): Triangle Water Index
+- [WI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI1.html): Water Index 1
+- [WI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI2.html): Water Index 2
+- [WI2015](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI2015.html): Water Index 2015
+- [WRI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WRI.html): Water Ratio Index
+
+### Burn
+
+- [BAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAI-burn.html): Burned Area Index
+- [BAIM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAIM.html): Burned Area Index adapted to MODIS
+- [BAIS2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAIS2.html): Burned Area Index for Sentinel 2
+- [CSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSI.html): Char Soil Index
+- [MIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MIRBI.html): Mid-Infrared Burn Index
+- [NBR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBR.html): Normalized Burn Ratio
+- [NBR2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBR2.html): Normalized Burn Ratio 2
+- [NBRplus](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRplus.html): Normalized Burn Ratio Plus
+- [NBRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRSWIR.html): Normalized Burn Ratio SWIR
+- [NDSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSWIR.html): Normalized Difference SWIR
+
+### Snow
+
+- [NBSIMS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBSIMS.html): Non-Binary Snow Index for Multi-Component Surfaces
+- [NDGlaI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDGlaI.html): Normalized Difference Glacier Index
+- [NDSaII](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSaII.html): Normalized Difference Snow and Ice Index
+- [NDSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSI.html): Normalized Difference Snow Index
+- [NDSII](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSII.html): Normalized Difference Snow Ice Index
+- [NDSIITM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSIITM.html): Normalized Difference Snow/Ice Index for Landsat TM
+- [NDSInw](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSInw.html): Normalized Difference Snow Index with no Water
+- [S3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/S3.html): S3 Snow Index
+- [SWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SWI.html): Snow Water Index
+
+### Urban
+
+- [BLFEI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BLFEI.html): Built-Up Land Features Extraction Index
+- [BRBA](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BRBA.html): Band Ratio for Built-up Area
+- [IBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IBI.html): Index-Based Built-Up Index
+- [NBAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBAI.html): Normalized Built-up Area Index
+- [NDBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDBI.html): Normalized Difference Built-Up Index
+- [NHFD](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NHFD.html): Non-Homogeneous Feature Difference
+- [PISI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PISI.html): Perpendicular Impervious Surface Index
+- [SUI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SUI.html): Sealed Urban Index
+- [UI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/UI.html): Urban Index
+- [VgNIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VgNIRBI.html): Visible Green-Based Built-Up Index
+- [VIBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VIBI.html): Vegetation Index Built-up Index
+- [VrNIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VrNIRBI.html): Visible Red-Based Built-Up Index
+
+### Soil
+
+- [BaI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BaI-soil.html): Bareness Index
+- [BI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BI.html): Bare Soil Index
+- [BITM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BITM.html): Landsat TM-based Brightness Index
+- [BIXS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BIXS.html): SPOT HRV XS-based Brightness Index
+- [DBSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DBSI.html): Dry Bareness Index
+- [EMBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EMBI.html): Enhanced Modified Bare Soil Index
+- [MBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MBI.html): Modified Bare Soil Index
+- [NDSIWV](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSIWV.html): WorldView Normalized Difference Soil Index
+- [NDSoI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSoI.html): Normalized Difference Soil Index
+- [NSDS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDS.html): Normalized Shortwave Infrared Difference Soil-Moisture
+- [NSDSI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI1.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1
+- [NSDSI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI2.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2
+- [NSDSI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI3.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3
+- [RI4XS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RI4XS.html): SPOT HRV XS-based Redness Index 4
+
+### Clouds
+
+- [CI1SWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CI1SWIR.html): Cloud Index Form 1 with SWIR 1
+- [CI1woSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CI1woSWIR.html): Cloud Index Form 1 without SWIR bands
+- [CI2SWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CI2SWIR.html): Cloud Index Form 2 with SWIR bands
+- [CI2woSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CI2woSWIR.html): Cloud Index Form 2 without SWIR bands
+- [CLOSDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CLOSDI.html): Cloud Shadow Detection Index
+- [CSISWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSISWIR.html): Cloud Shadow Index with SWIR 1
+- [CSIwoSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSIwoSWIR.html): Cloud Shadow Index without SWIR bands
+
+## Multispectral + Thermal
+
+### Burn
+
+- [CSIT](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSIT.html): Char Soil Index Thermal
+- [NBRT1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRT1.html): Normalized Burn Ratio Thermal 1
+- [NBRT2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRT2.html): Normalized Burn Ratio Thermal 2
+- [NBRT3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRT3.html): Normalized Burn Ratio Thermal 3
+- [NDVIT](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVIT.html): Normalized Difference Vegetation Index Thermal
+- [NSTv1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSTv1.html): NIR-SWIR-Temperature Version 1
+- [NSTv2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSTv2.html): NIR-SWIR-Temperature Version 2
+- [SAVIT](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVIT.html): Soil-Adjusted Vegetation Index Thermal
+- [VI6T](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VI6T.html): VI6T Index
+
+### Urban
+
+- [DBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DBI.html): Dry Built-Up Index
+- [EBBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EBBI.html): Enhanced Built-Up and Bareness Index
+- [NBUI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBUI.html): New Built-Up Index
+- [NDISIb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIb.html): Normalized Difference Impervious Surface Index Blue
+- [NDISIg](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIg.html): Normalized Difference Impervious Surface Index Green
+- [NDISImndwi](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISImndwi.html): Normalized Difference Impervious Surface Index with MNDWI
+- [NDISIndwi](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIndwi.html): Normalized Difference Impervious Surface Index with NDWI
+- [NDISIr](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIr.html): Normalized Difference Impervious Surface Index Red
+
+### Soil
+
+- [NBLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBLI.html): Normalized Difference Bare Land Index
+- [NBLIOLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBLIOLI.html): Normalized Difference Bare Land Index for Landsat-OLI
+- [NDBaI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDBaI.html): Normalized Difference Bareness Index
+
+## Hyperspectral
+
+### Vegetation
+
+- [CARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CARI.html): Carotenoid Index
+- [CCRI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CCRI.html): Carotenoid-Chlorophyll Ratio Index
+- [CRI550](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRI550.html): Carotenoid Reflectance Index at 550 nm
+- [CRI700](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRI700.html): Carotenoid Reflectance Index at 700 nm
+- [LCI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/LCI.html): Leaf Chlorophyll Index
+- [NDLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDLI.html): Normalized Difference Lignin Index
+- [NDNI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDNI.html): Normalized Difference Nitrogen Index
+- [OPSNDa](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSNDa.html): Optimized Pigment Specific Normalized Difference for Chlorophyll a
+- [OPSNDb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSNDb.html): Optimized Pigment Specific Normalized Difference for Chlorophyll b
+- [OPSNDc](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSNDc.html): Optimized Pigment Specific Normalized Difference for Carotenoids
+- [OPSSRa](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSSRa.html): Optimized Pigment Specific Simple Ratio for Chlorophyll a
+- [OPSSRb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSSRb.html): Optimized Pigment Specific Simple Ratio for Chlorophyll b
+- [OPSSRc](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/OPSSRc.html): Optimized Pigment Specific Simple Ratio for Carotenoids
+- [PRI550](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PRI550.html): Physiological Reflectance Index at 550 nm
+- [PRI570](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PRI570.html): Physiological Reflectance Index at 570 nm
+- [PRIm1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PRIm1.html): Modified Photochemical Reflectance Index 1
+- [PRIm4](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PRIm4.html): Modified Photochemical Reflectance Index 4
+- [PSNDa](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSNDa.html): Pigment Specific Normalized Difference for Chlorophyll a
+- [PSNDb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSNDb.html): Pigment Specific Normalized Difference for Chlorophyll b
+- [PSNDc](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSNDc.html): Pigment Specific Normalized Difference for Carotenoids
+- [PSRI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSRI.html): Plant Senescence Reflectance Index
+- [PSSRa](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSSRa.html): Pigment Specific Simple Ratio for Chlorophyll a
+- [PSSRb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSSRb.html): Pigment Specific Simple Ratio for Chlorophyll b
+- [PSSRc](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/PSSRc.html): Pigment Specific Simple Ratio for Carotenoids
+- [RARSa](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RARSa.html): Ratio Analysis of Reflectance Spectra for Chlorophyll a
+- [RARSb](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RARSb.html): Ratio Analysis of Reflectance Spectra for Chlorophyll b
+- [RARSc](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RARSc.html): Ratio Analysis of Reflectance Spectra for Carotenoids
+- [RVSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RVSI.html): Red-edge Vegetation Stress Index
+- [SARBR1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARBR1.html): Scatter-Adjusted Reflectance Band Ratio 1
+- [SARBR2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARBR2.html): Scatter-Adjusted Reflectance Band Ratio 2
+- [SARBR3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARBR3.html): Scatter-Adjusted Reflectance Band Ratio 3
+- [SARBR4](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARBR4.html): Scatter-Adjusted Reflectance Band Ratio 4
+- [SARBR5](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SARBR5.html): Scatter-Adjusted Reflectance Band Ratio 5
+- [URBR1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR1.html): Untransformed Reflectance Band Ratio 1
+- [URBR2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR2.html): Untransformed Reflectance Band Ratio 2
+- [URBR3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR3.html): Untransformed Reflectance Band Ratio 3
+- [URBR4](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR4.html): Untransformed Reflectance Band Ratio 4
+- [URBR5](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR5.html): Untransformed Reflectance Band Ratio 5
+
+### Snow
+
+- [NDISI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISI.html): Normalized Difference Ice-Snow Index
 
 ## Radar
 
-<table><tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2018.09.003" target="_blank">DPDD</a>: Dual-Pol Diagonal Distance.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://www.tandfonline.com/doi/abs/10.5589/m12-043" target="_blank">DpRVIHH</a>: Dual-Polarized Radar Vegetation Index HH.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/app9040655" target="_blank">DpRVIVV</a>: Dual-Polarized Radar Vegetation Index VV.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf" target="_blank">NDPolI</a>: Normalized Difference Polarization Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS.2001.976856" target="_blank">QpRVI</a>: Quad-Polarized Radar Vegetation Index.</td><td width="50%"></td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.5194/bg-9-179-2012" target="_blank">RFDI</a>: Radar Forest Degradation Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20HH%20HV)-gray?style=flat-square" alt="(Dual Polarisation HH-HV)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1016/j.rse.2018.09.003" target="_blank">VDDPI</a>: Vertical Dual De-Polarization Index.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/app9040655" target="_blank">VHVVD</a>: VH-VV Difference.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS47720.2021.9554099" target="_blank">VHVVP</a>: VH-VV Product.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS47720.2021.9554099" target="_blank">VHVVR</a>: VH-VV Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS47720.2021.9554099" target="_blank">VVVHD</a>: VV-VH Difference.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.3390/app9040655" target="_blank">VVVHR</a>: VV-VH Ratio.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-<tr><td width="50%"><a href="https://doi.org/10.1109/IGARSS47720.2021.9554099" target="_blank">VVVHS</a>: VV-VH Sum.</td><td width="50%"> <img src="https://img.shields.io/badge/-Sentinel%201%20(Dual%20VV%20VH)-lightgray?style=flat-square" alt="(Dual Polarisation VV-VH)"> </td></tr>
-</table>
+### Vegetation
 
-# List
+- [DPDD](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DPDD.html): Dual-Pol Diagonal Distance
+- [DpRVIHH](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DpRVIHH.html): Dual-Polarized Radar Vegetation Index HH
+- [DpRVIVV](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DpRVIVV.html): Dual-Polarized Radar Vegetation Index VV
+- [QpRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/QpRVI.html): Quad-Polarized Radar Vegetation Index
+- [RFDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RFDI.html): Radar Forest Degradation Index
+- [VDDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VDDPI.html): Vertical Dual De-Polarization Index
+- [VHVVD](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VHVVD.html): VH-VV Difference
+- [VHVVP](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VHVVP.html): VH-VV Product
+- [VHVVR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VHVVR.html): VH-VV Ratio
+- [VVVHD](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHD.html): VV-VH Difference
+- [VVVHR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHR.html): VV-VH Ratio
+- [VVVHS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHS.html): VV-VH Sum
 
-Check the full list of spectral indices with their formulas [here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv).
+### Geology
+
+- [NDPolI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDPolI.html): Normalized Difference Polarization Index
 
 # Download Raw Files
 
@@ -777,8 +641,8 @@ git clone https://github.com/awesome-spectral-indices/awesome-spectral-indices.g
 
 Or you can download the single files here (right-click > Save link as...):
 
-- JSON: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json)
-- CSV: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv)
+- JSON: [Raw v1 catalogue](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-dict.json)
+- CSV: [Raw v1 table](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-table.csv)
 
 # Credits
 

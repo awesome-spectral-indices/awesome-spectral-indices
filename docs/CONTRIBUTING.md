@@ -1,129 +1,161 @@
 # Contributing
 
-Contributing to the catalogue is straightforward. You can propose an index
-through a GitHub issue or add it directly in a code contribution.
+Thank you for helping improve Awesome Spectral Indices. You can propose a new
+index through a GitHub issue or add it directly through a code contribution.
 
-Before proposing a new index, read the
-[AI and Scientific Validation Policy](AI%20POLICY.md).
+The catalogue is currently being migrated to v1. The v1 schema is
+experimental and may continue to change; its current structure and validation
+rules are documented in
+[v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
+
+Before proposing an index, read the
+[AI and Scientific Validation Policy](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/AI%20POLICY.md).
 
 ## The easiest way
 
-Open a [new spectral index issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=new-spectral-index.md)
-with the following information:
+Open a
+[new spectral index issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=new-spectral-index.md)
+and provide, at minimum:
 
-- `short_name`: Short name of the index, such as `"NDWI"`.
-- `long_name`: Long name of the index, such as `"Normalized Difference Water Index"`.
-- `formula`: Expression for the index, such as `"(N - G)/(N + G)"`.
-- `reference`: Link to the index reference, paper, or DOI.
-- `application_domain`: One of `vegetation`, `burn`, `water`, `snow`,
-  `urban`, `soil`, `clouds`, `kernel`, or `radar`.
-- `date_of_addition`: Date of addition in `YYYY-MM-DD` format.
-- `contributor`: GitHub profile URL or email address.
+- the index acronym and full name;
+- the published formula;
+- a link to the original scientific source;
+- the application domain;
+- your GitHub profile URL or email address; and
+- any constant descriptions and values required by the formula.
 
-The formula must use the standard variables supported by the catalogue.
-Common variables include:
-
-| Description | Standard |
-| --- | --- |
-| Aerosols | `A` |
-| Blue | `B` |
-| Green 1 | `G1` |
-| Green | `G` |
-| Yellow | `Y` |
-| Red | `R` |
-| Red Edge 1 | `RE1` |
-| Red Edge 2 | `RE2` |
-| Red Edge 3 | `RE3` |
-| NIR | `N` |
-| NIR 2 | `N2` |
-| Water vapour | `WV` |
-| SWIR 1 | `S1` |
-| SWIR 2 | `S2` |
-| Thermal | `T` |
-| Thermal 1 | `T1` |
-| Thermal 2 | `T2` |
-| Gain factor | `g` |
-| Canopy background adjustment | `L` |
-| Coefficient 1 for the aerosol resistance term | `C1` |
-| Coefficient 2 for the aerosol resistance term | `C2` |
-| Exponent used for OCVI | `cexp` |
-| Exponent used for GDVI | `nexp` |
-| Weighting coefficient used for WDRVI | `alpha` |
-| Weighting coefficient used for ARVI | `gamma` |
-| Weighting coefficient used for MBWI | `omega` |
-| Soil line slope | `sla` |
-| Soil line intercept | `slb` |
-| Photosynthetically Active Radiation | `PAR` |
-| Slope parameter by soil used for NIRvH2 | `k` |
-| NIR central wavelength | `lambdaN` |
-| Red central wavelength | `lambdaR` |
-| Green central wavelength | `lambdaG` |
-| Kernel of variables A and B | `kAB` |
-
-The complete, authoritative list is defined by the `Bands` enum in
-[`src/utils.py`](src/utils.py).
+The issue does not need to reproduce every generated catalogue property.
+Sensing modalities, bands, polarizations, source status, publication metadata,
+citations, and other derived fields are added automatically.
 
 ## Contributing through code
 
-1. Fork and clone the repository.
+### 1. Prepare the repository
 
-2. Create and activate an isolated Python environment. For example, with
-   Conda:
+Fork and clone the repository, then create a development branch:
 
-   ```bash
-   conda create --name asi-dev python=3.10
-   conda activate asi-dev
-   python -m pip install -r requirements-test.txt
-   ```
+```bash
+git switch -c add-name-of-index
+```
 
-   Alternatively, using Python's built-in `venv`:
+Create and activate an isolated Python environment. With Conda:
 
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   python -m pip install --upgrade pip
-   python -m pip install -r requirements-test.txt
-   ```
+```bash
+conda create --name asi-dev python=3.10
+conda activate asi-dev
+python -m pip install -r requirements-test.txt
+```
 
-   On Windows, activate the virtual environment with
-   `.venv\Scripts\activate`.
+Alternatively, use Python's built-in `venv`:
 
-3. Create a development branch:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-test.txt
+```
 
-   ```bash
-   git switch -c name-of-development-branch
-   ```
+On Windows, activate the virtual environment with
+`.venv\Scripts\activate`.
 
-4. Add the index to the `SpectralIndices` catalogue in
-   [`src/indices.py`](src/indices.py):
+### 2. Add the v1 index definition
 
-   ```python
-   SeLI = SpectralIndex(
-       short_name="SeLI",
-       long_name="Sentinel-2 LAI Green Index",
-       formula="(N2 - RE1) / (N2 + RE1)",
-       reference="https://doi.org/10.3390/s19040904",
-       application_domain="vegetation",
-       date_of_addition="2021-04-08",
-       contributor="https://github.com/davemlz",
-   )
-   ```
+Add the index to the `SpectralIndices` mapping in
+[`src/v1/indices.py`](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/src/v1/indices.py):
 
-   `SpectralIndex` is a Pydantic model that validates the submitted metadata
-   and formula. The formula must use supported bands and parameters.
+```python
+SeLI = SpectralIndex(
+    acronym="SeLI",
+    name="Sentinel-2 LAI Green Index",
+    formula="(N2 - RE1) / (N2 + RE1)",
+    source={
+        "source_link": "https://doi.org/10.3390/s19040904",
+    },
+    classification={
+        "application_domain": "vegetation",
+    },
+    date_of_addition="2021-04-08",
+    contributor="https://github.com/davemlz",
+)
+```
 
-5. Run the tests:
+The Python mapping key is the case-sensitive catalogue identifier. It does not
+have to equal `acronym`, although using the acronym is normally the clearest
+choice. Acronyms and names do not have to be unique.
 
-   ```bash
-   pytest test
-   ```
+The required contributor-provided properties are:
 
-6. Commit and push the changes:
+| Property | What to provide |
+| --- | --- |
+| `acronym` | Display acronym |
+| `name` | Full index name |
+| `formula` | Published formula using supported v1 syntax |
+| `source.source_link` | Original HTTP(S) source, preferably a DOI when available |
+| `classification.application_domain` | `vegetation`, `water`, `burn`, `snow`, `urban`, `soil`, `geology`, or `clouds` |
+| `date_of_addition` | Contribution date in `YYYY-MM-DD` format |
+| `contributor` | GitHub profile URL or email address |
 
-   ```bash
-   git add src/indices.py
-   git commit -m "Add short-name-of-the-index"
-   git push origin name-of-development-branch
-   ```
+`classification.family` is optional and currently accepts `kernel`,
+`tasseled_cap`, and `radar`. Do not provide `sensing_modalities`; they are
+generated from the formula inputs.
 
-7. Submit a pull request with the test results and scientific reference.
+### 3. Describe constants when needed
+
+If the formula uses a registered constant, add a `constants` object with a
+description for that constant. A numeric default is optional:
+
+```python
+constants={
+    "L": {
+        "description": "Canopy background adjustment",
+        "default_value": 0.5,
+    },
+}
+```
+
+The index definition must describe every constant it uses and cannot include
+unused constants. Optional `suggested_values` and `suggested_range` metadata
+may be added when supported by the scientific source.
+
+External variables use a similar `external_variables` object, but require only
+a description. Contextual `spatial_max()`, `spatial_min()`, and
+`spatial_mean()` calls require a matching `reductions` definition. See
+[v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html)
+for examples.
+
+### 4. Use supported formula syntax
+
+Broad spectral and thermal bands use standards such as `B`, `G`, `R`, `N`,
+`S1`, and `T1`. Radar formulas use `HH`, `HV`, `VH`, or `VV`.
+Hyperspectral inputs use either an exact integer wavelength such as `R720` or a
+selectable inclusive range such as `R750_800`; wavelengths must be between 300
+and 2500 nm.
+
+V1 formulas currently support arithmetic plus `min()`, `max()`, `tanh()`,
+`log()`, `kernel()`, `spatial_max()`, `spatial_min()`, and `spatial_mean()`.
+The generated
+[README](https://github.com/awesome-spectral-indices/awesome-spectral-indices#formula-expressions)
+contains the current standards and index-specific constant descriptions.
+
+### 5. Validate the contribution
+
+Run the v1 tests:
+
+```bash
+python -m pytest test/v1
+```
+
+Generated JSON, CSV, bibliography, README, and website pages are refreshed by
+repository automation. Do not edit generated catalogue fields by hand.
+
+### 6. Submit the change
+
+Commit and push your source definition:
+
+```bash
+git add src/v1/indices.py
+git commit -m "Add acronym-of-index"
+git push origin add-name-of-index
+```
+
+Open a pull request and include the scientific source plus the test result.

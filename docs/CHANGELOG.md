@@ -147,6 +147,12 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Updated the automatic README generation to use the v1 catalogue. The README
+  now groups linked index lists by sensing modality and application domain and
+  generates its primary-property, band, polarization, hyperspectral-standard,
+  supported-function, constant, and external-variable reference tables from
+  the current v1 schema and outputs. Updated the contribution guide to target
+  v1 definitions and validation while the migration remains experimental.
 - Renamed the generated v1 `source.source_metadata.citations` property to
   `citations_metrics`. In addition to the latest citation count and retrieval
   date, it now provides deterministic ranks and citation-count percentiles

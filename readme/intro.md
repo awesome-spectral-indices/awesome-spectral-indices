@@ -17,7 +17,7 @@
 <a href="https://github.com/sindresorhus/awesome" target="_blank">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
 </a>
-<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-dict.json" target="_blank">
+<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-dict.json" target="_blank">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
 </a>
 <a href="https://share.streamlit.io/davemlz/espectro/main/espectro.py" target="_blank">
@@ -62,22 +62,35 @@
 
 ---
 
-> [!IMPORTANT]
-> As of 2026-07-29, the old Read the Docs website is no longer available, and Awesome Spectral Indices has started its migration to v1. You can find the new website here: https://awesome-spectral-indices.github.io/awesome-spectral-indices/
->
-> The existing API will not change during this process and can continue to be used as usual, and new spectral indices can still be submitted as usual. It will be migrated fully to v1 at a later stage. More details [here](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
-
 > [!WARNING]
-> Due to recent submissions of automatically generated spectral indices lacking scientific validation, Awesome Spectral Indices has adopted a new AI and Scientific Validation Policy.
+> Awesome Spectral Indices is being migrated to v1. The v1 catalogue and schema are **experimental and may change** while the migration is in progress. Existing APIs continue to use v0 until their individual migrations are ready.
 >
-> The use of AI is **not prohibited**, but AI-generated formulas, hypotheses, repositories, preprints, or DOI records are **not considered evidence of scientific validity on their own**.
+> Read [v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html) for the current schema, implemented changes, and migration status.
+
+> [!IMPORTANT]
+> **Call for Indices!** Researchers who have published—or aim to publish—their
+> novel spectral indices are encouraged to add them to this repository. To add
+> an index, follow the [Contribution Guidelines](CONTRIBUTING.md).
 >
-> Before submitting a new index, please review our [AI Policy](AI%20POLICY.md). Submissions that lack sufficient scientific justification, validation, or reproducibility may be rejected.
+> If you know a spectral index that is missing, or find an error in an existing
+> entry, please open an
+> [issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new).
+> There is no deadline; the repository is continuously updated.
 
 # Spectral Indices
 
-Spectral Indices are widely used in the Remote Sensing community. This repository keeps track of classical as well as novel spectral indices for different Remote Sensing applications. All spectral indices in the repository are curated and can be used in different environments and programming languages. 
-You can check the [curated list of spectral indices here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv), and if you want to use it in your environment, it is available in [CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv) and [JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json).
+Spectral indices are widely used throughout the remote-sensing community. This
+repository curates classical and novel indices for different Earth-observation
+applications and makes their definitions available across programming
+languages and processing environments.
+
+The README now follows the experimental v1 catalogue. Browse the generated
+[CSV table](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-table.csv),
+or download the raw
+[CSV](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-table.csv)
+and
+[JSON](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-dict.json)
+files.
 
 ## Citation
 
@@ -96,352 +109,57 @@ If you use this work, please consider citing the following paper:
 }
 ```
 
-## Attributes
-
-All spectral indices follow a standard. Each item of the list has the following attributes:
+## Properties
 
-- `short_name`: Short name of the index (e.g. `"NDWI"`).
-- `long_name`: Long name of the index (e.g. `"Normalized Difference Water Index"`).
-- `formula`: Expression/formula of the index (e.g. `"(G - N)/(G + N)"`).
-- `bands`: List of required bands/parameters for the index computation (e.g. `["N","G"]`).
-- `platforms`: List of platforms with the required bands for the index computation (e.g. `["MODIS", "Landsat-457", "Landsat-89", "Sentinel-2"]`).
-- `reference`: Link to the index reference/paper/doi (e.g. `"https://doi.org/10.1080/01431169608948714"`).
-- `application_domain`: Application domain of the index (e.g. `"water"`).
-- `date_of_addition`: Date of addition to the list (e.g. `"2021-04-07"`).
-- `contributor`: GitHub user link of the contributor (e.g. `"https://github.com/davemlz"`).
-
-## Expressions
+Each v1 catalogue entry has a case-sensitive lookup key and the following
+primary properties. Nested objects contain additional generated and
+contributor-provided information. For the complete schema and validation
+rules, visit [v1 Explained](https://awesome-spectral-indices.github.io/awesome-spectral-indices/v1.html).
 
-The formula of the index is presented as a string/expression (e.g. `"(N - R)/(N + R)"`) that can be easily evaluated. The parameters used in the expression for each index follow this standard:
+<!-- README-GENERATED:PROPERTIES -->
 
-<table>
+## Formula expressions
 
-<tr>
+V1 formulas are validated mathematical expressions. Their variables are
+classified into broad spectral or thermal bands, exact or selectable-range
+hyperspectral inputs, radar polarizations, constants, and external variables.
 
-<th> Description </th>
-<th> Standard </th>
-<th> Spectral Range (nm) </th>
-<th> Sentinel-2 </th>
-<th> Landsat-89 </th>
-<th> Landsat-457 </th>
-<th> MODIS </th>
+### Broad spectral and thermal bands
 
-</tr>
+<!-- README-GENERATED:BANDS -->
 
-<tr>
+### Radar polarizations
 
-<td>Aerosols</td>
-<td>A</td>
-<td>400 - 455</td>
-<td>B1</td>
-<td>B1</td>
-<td></td>
-<td></td>
+<!-- README-GENERATED:POLARIZATIONS -->
 
-</tr>
+### Hyperspectral standards
 
-<tr>
+Hyperspectral reflectance operands use integer wavelengths in nanometres.
 
-<td>Blue</td>
-<td>B</td>
-<td>450 - 530</td>
-<td>B2</td>
-<td>B2</td>
-<td>B1</td>
-<td>B3</td>
+<!-- README-GENERATED:HYPERSPECTRAL -->
 
-</tr>
+### Supported functions
 
-<tr>
+Only the following function calls are currently accepted in v1 formulas.
+Contextual `spatial_*` functions additionally require a matching `reductions`
+definition.
 
-<td>Green 1</td>
-<td>G1</td>
-<td>510 - 550</td>
-<td></td>
-<td></td>
-<td></td>
-<td>B11</td>
+<!-- README-GENERATED:FUNCTIONS -->
 
-</tr>
+### Constants
 
-<tr>
+Constant meanings are defined per index rather than globally. The following
+table is generated from `output/v1/constants.json` and intentionally shows
+only each standard, the indices sharing its description, and that contributed
+description.
 
-<td>Green</td>
-<td>G</td>
-<td>510 - 600</td>
-<td>B3</td>
-<td>B3</td>
-<td>B2</td>
-<td>B4</td>
+<!-- README-GENERATED:CONSTANTS -->
 
-</tr>
+### External variables
 
-<tr>
+External variables are formula inputs supplied outside spectral data. Their
+descriptions are also specific to each index.
 
-<td>Yellow</td>
-<td>Y</td>
-<td>585 - 625</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<!-- README-GENERATED:EXTERNAL_VARIABLES -->
 
-</tr>
-
-<tr>
-
-<td>Red</td>
-<td>R</td>
-<td>620 - 690</td>
-<td>B4</td>
-<td>B4</td>
-<td>B3</td>
-<td>B1</td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 1</td>
-<td>RE1</td>
-<td>695 - 715</td>
-<td>B5</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 2</td>
-<td>RE2</td>
-<td>730 - 750</td>
-<td>B6</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Red Edge 3</td>
-<td>RE3</td>
-<td>765 - 795</td>
-<td>B7</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>NIR</td>
-<td>N</td>
-<td>760 - 900</td>
-<td>B8</td>
-<td>B5</td>
-<td>B4</td>
-<td>B2</td>
-
-</tr>
-
-<tr>
-
-<td>NIR 2</td>
-<td>N2</td>
-<td>850 - 880</td>
-<td>B8A</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Water Vapour</td>
-<td>WV</td>
-<td>930 - 960</td>
-<td>B9</td>
-<td></td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>SWIR 1</td>
-<td>S1</td>
-<td>1550 - 1750</td>
-<td>B11</td>
-<td>B6</td>
-<td>B5</td>
-<td>B6</td>
-
-</tr>
-
-<tr>
-
-<td>SWIR 2</td>
-<td>S2</td>
-<td>2080 - 2350</td>
-<td>B12</td>
-<td>B7</td>
-<td>B7</td>
-<td>B7</td>
-
-</tr>
-
-<tr>
-
-<td>Thermal</td>
-<td>T</td>
-<td>10400 - 12500</td>
-<td></td>
-<td></td>
-<td>B6</td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Thermal 1</td>
-<td>T1</td>
-<td>10600 - 11190</td>
-<td></td>
-<td>B10</td>
-<td></td>
-<td></td>
-
-</tr>
-
-<tr>
-
-<td>Thermal 2</td>
-<td>T2</td>
-<td>11500 - 12510</td>
-<td></td>
-<td>B11</td>
-<td></td>
-<td></td>
-
-</tr>
-
-</table>
-
-In the case of RADAR Indices, the bands follow this standard:
-
-<table>
-
-<tr>
-
-<th> Description </th>
-<th> Standard </th>
-<th> Sentinel-1 </th>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient HV</td>
-<td>HV</td>
-<td>HV</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient VH</td>
-<td>VH</td>
-<td>VH</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient HH</td>
-<td>HH</td>
-<td>HH</td>
-
-</tr>
-
-<tr>
-
-<td>Backscattering Coefficient VV</td>
-<td>VV</td>
-<td>VV</td>
-
-</tr>
-
-</table>
-
-
-
-
-Additional index parameters also follow a standard:
-
-- `g`: Gain factor (e.g. Used for EVI).
-- `L`: Canopy background adjustment (e.g. Used for SAVI and EVI).
-- `C1`: Coefficient 1 for the aerosol resistance term (e.g. Used for EVI).
-- `C2`: Coefficient 2 for the aerosol resistance term (e.g. Used for EVI).
-- `cexp`: Exponent used for OCVI.
-- `nexp`: Exponent used for GDVI.
-- `alpha`: Weighting coefficient used for WDRVI, BWDRVI and NDPI.
-- `beta`: Calibration parameter used for NDSIns.
-- `gamma`: Weighting coefficient used for ARVI.
-- `omega`: Weighting coefficient used for MBWI.
-- `sla`: Soil line slope.
-- `slb`: Soil line intercept.
-- `PAR`: Photosynthetically Active Radiation.
-- `k`: Slope parameter by soil used for NIRvH2.
-- `epsilon`: Adjustment constant used for EBI, WC1 and WC2.
-- `n`: Adjustment factor used for RWI.
-- `eta`: Mix of green and red reflectances in GRARI.
-- `lmb`: Parameter that controls the atmospheric correction in GRARI.
-- `lambdaN`: NIR wavelength used for NIRvH2 and NDGI.
-- `lambdaR`: Red wavelength used for NIRvH2 and NDGI.
-- `lambdaG`: Green wavelength used for NDGI.
-
-The kernel indices are constructed using a special type of parameters:
-
-- `kAB`: Kernel of bands/parameters `A` and `B` (e.g. `kNR` means `k(N,R)`, where `k` is the kernel function).
-- `p`: Kernel degree (used for the polynomial kernel).
-- `c`: Free parameter that trades off the influence of higher-order versus lower-order terms (used for the polynomial kernel).
-
-# Call for Indices! :rotating_light:
-
-Researchers that have published (or aim to publish) their novel spectral indices are encouraged to add them to this repository! The list of spectral indices is used as a source for different resources that allow spectral indices computation in different environments (such as Python and Google Earth Engine). To add an index, please follow the [Contribution Guidelines](CONTRIBUTING.md).
-
-In the same line, if you know an spectral index that is not included in this repository, you are encouraged to follow the [Contribution Guidelines](CONTRIBUTING.md).
-
-And one more thing: If you see an error in one or several indices, please [open an issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new)!
-
-There is no deadline. The repository is continuously updated!
-
-# Used by
-
-## JavaScript
-
-- [spectral](https://github.com/awesome-spectral-indices/spectral): Awesome Spectral Indices for the Google Earth Engine JavaScript API (Code Editor).
-
-## Python
-
-- [eemont](https://github.com/davemlz/eemont): A Python package that extends Google Earth Engine.
-- [eeExtra](https://github.com/r-earthengine/ee_extra): A Python package that unifies the Google Earth Engine ecosystem.
-- [Espectro](https://github.com/davemlz/espectro): The Awesome Spectral Indices Streamlit App.
-- [spyndex](https://github.com/awesome-spectral-indices/spyndex): Awesome Spectral Indices in Python.
-
-## Julia
-
-- [SpectralIndices.jl](https://github.com/awesome-spectral-indices/SpectralIndices.jl): Awesome Spectral Indices in Julia.
-
-## R
-
-- [rgeeExtra](https://github.com/r-earthengine/rgeeExtra): High-level functions to process spatial and simple Earth Engine objects.
-
-# Spectral Indices by Application Domain
+# Spectral Indices by Sensing Modality and Application Domain

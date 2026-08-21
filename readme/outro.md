@@ -1,7 +1,3 @@
-# List
-
-Check the full list of spectral indices with their formulas [here](https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/spectral-indices-table.csv).
-
 # Download Raw Files
 
 You can download or clone the repository:
@@ -12,8 +8,8 @@ git clone https://github.com/awesome-spectral-indices/awesome-spectral-indices.g
 
 Or you can download the single files here (right-click > Save link as...):
 
-- JSON: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-dict.json)
-- CSV: [Raw list](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/spectral-indices-table.csv)
+- JSON: [Raw v1 catalogue](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-dict.json)
+- CSV: [Raw v1 table](https://raw.githubusercontent.com/awesome-spectral-indices/awesome-spectral-indices/main/output/v1/spectral-indices-table.csv)
 
 # Credits
 
