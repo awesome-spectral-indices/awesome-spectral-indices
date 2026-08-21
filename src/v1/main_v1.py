@@ -232,10 +232,18 @@ def source_metadata_is_fresh(metadata, today, refresh_days=CROSSREF_REFRESH_DAYS
 
 
 def migrate_cached_citation_metadata(metadata):
-    """Accept the pre-migration ``citations`` key in generated caches."""
+    """Keep only provider snapshots from old or current generated caches."""
     metadata = dict(metadata)
-    if "citations_metrics" not in metadata and "citations" in metadata:
-        metadata["citations_metrics"] = metadata.pop("citations")
+    citation_metadata = metadata.pop("citations", None)
+    citation_metadata = metadata.pop("citations_metrics", citation_metadata)
+    if isinstance(citation_metadata, dict):
+        snapshot = {
+            field: citation_metadata[field]
+            for field in ("citation_count", "date")
+            if field in citation_metadata
+        }
+        if snapshot:
+            metadata["citations_metrics"] = snapshot
     return metadata
 
 
@@ -533,6 +541,7 @@ def _citation_comparison_metrics(entries, similar_age_entries, target_key):
         "percentile": _citation_percentile(entries, target_key),
         "rank_similar_age": None,
         "percentile_similar_age": None,
+        "similar_age_count": len(similar_age_entries),
     }
     if similar_age_entries:
         metrics["rank_similar_age"] = _citation_rank(
@@ -600,7 +609,6 @@ def add_citation_metrics(index_catalog):
             within_application_domain=_citation_comparison_metrics(
                 domain_entries, similar_age_domain_entries, key
             ),
-            similar_age_count=len(similar_age_entries),
         )
 
     return index_catalog

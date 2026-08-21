@@ -200,10 +200,8 @@ def test_v1_citation_metrics_have_generated_comparison_statistics():
             "citation_count",
             "date",
             "overall",
-            "similar_age_count",
             "within_application_domain",
         }
-        assert metrics["similar_age_count"] >= 0
         for comparison in ("overall", "within_application_domain"):
             values = metrics[comparison]
             assert set(values) == {
@@ -211,9 +209,11 @@ def test_v1_citation_metrics_have_generated_comparison_statistics():
                 "percentile_similar_age",
                 "rank",
                 "rank_similar_age",
+                "similar_age_count",
             }
             assert values["rank"] >= 1
             assert 0 <= values["percentile"] <= 100
+            assert values["similar_age_count"] >= 0
 
     assert (
         cited_indices["NDVI"]["source"]["source_metadata"][

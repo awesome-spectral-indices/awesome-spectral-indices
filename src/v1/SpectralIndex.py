@@ -56,6 +56,7 @@ class CitationRankingMetrics(BaseModel):
     percentile_similar_age: Optional[
         Annotated[StrictFloat, Field(ge=0, le=100)]
     ] = None
+    similar_age_count: Annotated[StrictInt, Field(ge=0)]
 
     model_config = ConfigDict(extra="forbid")
 
@@ -67,7 +68,6 @@ class SourceCitationMetrics(BaseModel):
     date: date
     overall: Optional[CitationRankingMetrics] = None
     within_application_domain: Optional[CitationRankingMetrics] = None
-    similar_age_count: Optional[Annotated[StrictInt, Field(ge=0)]] = None
 
     model_config = ConfigDict(extra="forbid")
 

@@ -72,17 +72,6 @@ const domainCitationComparisonCount = citationComparableIndices.filter(
     candidate.classification.application_domain ===
     index.classification.application_domain
 ).length
-const similarAgeDomainCount = publicationYear == null
-  ? 0
-  : citationComparableIndices.filter((candidate) => {
-      const candidateMetadata = candidate.source?.source_metadata ?? {}
-      return (
-        candidate.classification.application_domain ===
-          index.classification.application_domain &&
-        Number.isInteger(candidateMetadata.year) &&
-        Math.abs(candidateMetadata.year - publicationYear) <= 2
-      )
-    }).length
 
 function formatList(values) {
   if (values.length < 2) return values[0] ?? ''
@@ -222,9 +211,9 @@ function contributorDetails(value) {
         {{ indexCountLabel(overallCitationComparisonCount) }} with citation data.
         <template v-if="citationMetrics.overall.rank_similar_age != null">
           Among the
-          <strong>{{ citationMetrics.similar_age_count }}</strong>
-          {{ indexCountLabel(citationMetrics.similar_age_count) }} published within
-          two years of {{ publicationYear }}, it ranks
+          <strong>{{ citationMetrics.overall.similar_age_count }}</strong>
+          {{ indexCountLabel(citationMetrics.overall.similar_age_count) }}
+          published within two years of {{ publicationYear }}, it ranks
           <strong>{{ citationMetrics.overall.rank_similar_age }}</strong>
           ({{ ordinal(citationMetrics.overall.percentile_similar_age) }} percentile).
         </template>
@@ -242,9 +231,17 @@ function contributorDetails(value) {
         <template
           v-if="citationMetrics.within_application_domain.rank_similar_age != null"
         >
-          Among the <strong>{{ similarAgeDomainCount }}</strong> similarly aged
+          Among the
+          <strong>
+            {{ citationMetrics.within_application_domain.similar_age_count }}
+          </strong>
+          similarly aged
           {{ applicationDomain }}
-          {{ indexCountLabel(similarAgeDomainCount) }}, it ranks
+          {{
+            indexCountLabel(
+              citationMetrics.within_application_domain.similar_age_count
+            )
+          }}, it ranks
           <strong>
             {{ citationMetrics.within_application_domain.rank_similar_age }}
           </strong>

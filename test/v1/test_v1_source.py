@@ -14,6 +14,7 @@ from src.v1.main_v1 import (
     add_semantic_scholar_metadata,
     add_source_companions,
     add_source_metadata,
+    migrate_cached_citation_metadata,
     write_citation_history,
 )
 from src.v1.semantic_scholar import (
@@ -222,19 +223,43 @@ def test_citation_metrics_rank_overall_age_and_application_domain_cohorts():
         "rank_similar_age": 1,
         "percentile": 100.0,
         "percentile_similar_age": 100.0,
+        "similar_age_count": 4,
     }
     assert tied.overall.rank == 2
     assert tied.overall.percentile == 100.0
-    assert first.similar_age_count == 4
     assert first.within_application_domain.rank == 1
     assert first.within_application_domain.rank_similar_age == 1
+    assert first.within_application_domain.similar_age_count == 3
     assert water.overall.rank == 3
     assert water.overall.percentile == 66.67
     assert water.within_application_domain.rank == 1
     assert undated.overall.rank == 6
     assert undated.overall.rank_similar_age is None
     assert undated.within_application_domain.rank_similar_age is None
-    assert undated.similar_age_count == 0
+    assert undated.overall.similar_age_count == 0
+    assert undated.within_application_domain.similar_age_count == 0
+
+
+def test_cached_citation_metrics_keep_only_the_provider_snapshot():
+    metadata = migrate_cached_citation_metadata(
+        {
+            "title": "Cached publication",
+            "citations_metrics": {
+                "citation_count": 42,
+                "date": "2026-08-20",
+                "overall": {"rank": 1},
+                "similar_age_count": 9,
+            },
+        }
+    )
+
+    assert metadata == {
+        "title": "Cached publication",
+        "citations_metrics": {
+            "citation_count": 42,
+            "date": "2026-08-20",
+        },
+    }
 
 
 def test_crossref_work_normalization_and_source_type_mapping():

@@ -151,7 +151,8 @@ submitted through the usual contribution process.
   `citations_metrics`. In addition to the latest citation count and retrieval
   date, it now provides deterministic ranks and citation-count percentiles
   across the complete cited catalogue, within the same application domain,
-  and within an inclusive five-year publication-age window.
+  and within an inclusive five-year publication-age window. Each comparison
+  object records the size of its own similar-age cohort.
 - Renamed the previous v1 `MSAVI` definition to `MSAVI2`, matching the name of
   its closed-form recursive formula. Added the distinct soil-line-dependent
   MSAVI formula with its `gamma` constant. The v0 definition remains unchanged.
