@@ -17,9 +17,6 @@
 <a href="https://github.com/sindresorhus/awesome" target="_blank">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
 </a>
-<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-dict.json" target="_blank">
-    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
-</a>
 <a href="https://share.streamlit.io/davemlz/espectro/main/espectro.py" target="_blank">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit">
 </a>
@@ -76,6 +73,8 @@
 > entry, please open an
 > [issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new).
 > There is no deadline; the repository is continuously updated.
+
+<!-- README-GENERATED:TOC -->
 
 # Spectral Indices
 

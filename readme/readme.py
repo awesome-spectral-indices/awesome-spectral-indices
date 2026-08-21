@@ -76,6 +76,7 @@ ROUTE_OVERRIDES = {
 }
 
 GENERATED_MARKERS = {
+    "toc": "<!-- README-GENERATED:TOC -->",
     "properties": "<!-- README-GENERATED:PROPERTIES -->",
     "bands": "<!-- README-GENERATED:BANDS -->",
     "polarizations": "<!-- README-GENERATED:POLARIZATIONS -->",
@@ -318,10 +319,80 @@ def render_external_variables_table(external_variables):
     return markdown_table(["Variable", "Index", "Description"], rows)
 
 
-def render_intro(bands, constants, external_variables):
+def modality_profile_rank(modalities):
+    """Match the sensing-modality profile order used by the VitePress search."""
+    return MODALITY_ORDER.index(modalities[0]) * 10 + len(modalities)
+
+
+def catalogue_profiles(catalogue):
+    """Return the catalogue grouped and sorted by sensing-modality profile."""
+    profiles = {}
+    for key, index in catalogue["SpectralIndices"].items():
+        modalities = tuple(index["classification"]["sensing_modalities"])
+        profiles.setdefault(modalities, []).append((key, index))
+    return sorted(
+        profiles.items(),
+        key=lambda item: (
+            modality_profile_rank(item[0]),
+            "+".join(item[0]),
+        ),
+    )
+
+
+def modality_profile_label(modalities):
+    """Return the display label for a sensing-modality profile."""
+    return " + ".join(MODALITY_LABELS[value] for value in modalities)
+
+
+def modality_profile_slug(modalities):
+    """Return a stable anchor component for a sensing-modality profile."""
+    return "-".join(modalities)
+
+
+def profile_domains(indices):
+    """Return populated application domains in catalogue display order."""
+    populated = {index["classification"]["application_domain"] for _, index in indices}
+    return [domain for domain in DOMAIN_ORDER if domain in populated]
+
+
+def render_toc(catalogue):
+    """Render the README contents, including generated catalogue groups."""
+    lines = [
+        "## Table of Contents",
+        "",
+        "- [Spectral Indices](#spectral-indices)",
+        "  - [Citation](#citation)",
+        "  - [Properties](#properties)",
+        "  - [Formula expressions](#formula-expressions)",
+        "    - [Broad spectral and thermal bands](#broad-spectral-and-thermal-bands)",
+        "    - [Radar polarizations](#radar-polarizations)",
+        "    - [Hyperspectral standards](#hyperspectral-standards)",
+        "    - [Supported functions](#supported-functions)",
+        "    - [Constants](#constants)",
+        "    - [External variables](#external-variables)",
+        "- [Spectral Indices by Sensing Modality and Application Domain]"
+        "(#spectral-indices-by-sensing-modality-and-application-domain)",
+    ]
+    for modalities, indices in catalogue_profiles(catalogue):
+        profile_slug = modality_profile_slug(modalities)
+        profile_label = modality_profile_label(modalities)
+        lines.append(f"  - [{profile_label}](#modality-{profile_slug})")
+        for domain in profile_domains(indices):
+            lines.append(f"    - [{DOMAIN_LABELS[domain]}](#{profile_slug}-{domain})")
+    lines.extend(
+        (
+            "- [Download Raw Files](#download-raw-files)",
+            "- [Credits](#credits)",
+        )
+    )
+    return "\n".join(lines)
+
+
+def render_intro(catalogue, bands, constants, external_variables):
     """Insert generated v1 reference tables into the static introduction."""
     intro = read_markdown_fragment(INTRO_PATH)
     replacements = {
+        "toc": render_toc(catalogue),
         "properties": render_properties_table(),
         "bands": render_bands_table(bands),
         "polarizations": render_polarizations_table(),
@@ -339,37 +410,33 @@ def render_intro(bands, constants, external_variables):
     return intro
 
 
-def modality_profile_rank(modalities):
-    """Match the sensing-modality profile order used by the VitePress search."""
-    return MODALITY_ORDER.index(modalities[0]) * 10 + len(modalities)
-
-
 def render_index_list(catalogue):
     """Group v1 indices by sensing-modality profile and application domain."""
-    profiles = {}
-    for key, index in catalogue["SpectralIndices"].items():
-        modalities = tuple(index["classification"]["sensing_modalities"])
-        profiles.setdefault(modalities, []).append((key, index))
-
     lines = []
-    for modalities, indices in sorted(
-        profiles.items(),
-        key=lambda item: (
-            modality_profile_rank(item[0]),
-            "+".join(item[0]),
-        ),
-    ):
-        modality_label = " + ".join(MODALITY_LABELS[value] for value in modalities)
-        lines.extend((f"## {modality_label}", ""))
-        for domain in DOMAIN_ORDER:
+    for modalities, indices in catalogue_profiles(catalogue):
+        profile_slug = modality_profile_slug(modalities)
+        lines.extend(
+            (
+                f'<a id="modality-{profile_slug}"></a>',
+                "",
+                f"## {modality_profile_label(modalities)}",
+                "",
+            )
+        )
+        for domain in profile_domains(indices):
             domain_indices = [
                 (key, index)
                 for key, index in indices
                 if index["classification"]["application_domain"] == domain
             ]
-            if not domain_indices:
-                continue
-            lines.extend((f"### {DOMAIN_LABELS[domain]}", ""))
+            lines.extend(
+                (
+                    f'<a id="{profile_slug}-{domain}"></a>',
+                    "",
+                    f"### {DOMAIN_LABELS[domain]}",
+                    "",
+                )
+            )
             for key, index in sorted(
                 domain_indices,
                 key=lambda item: (item[0].casefold(), item[0]),
@@ -381,7 +448,7 @@ def render_index_list(catalogue):
 
 def build_readme(catalogue, bands, constants, external_variables):
     """Merge static fragments with generated v1 reference data and index lists."""
-    intro = render_intro(bands, constants, external_variables)
+    intro = render_intro(catalogue, bands, constants, external_variables)
     index_list = render_index_list(catalogue)
     outro = read_markdown_fragment(OUTRO_PATH)
     return intro.rstrip() + "\n\n" + index_list + "\n" + outro.lstrip()

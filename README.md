@@ -17,9 +17,6 @@
 <a href="https://github.com/sindresorhus/awesome" target="_blank">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
 </a>
-<a href="https://github.com/awesome-spectral-indices/awesome-spectral-indices/blob/main/output/v1/spectral-indices-dict.json" target="_blank">
-    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/davemlz/5e9f08fa6a45d9d486e29d9d85ad5c84/raw/spectral.json" alt="Awesome Spectral Indices">
-</a>
 <a href="https://share.streamlit.io/davemlz/espectro/main/espectro.py" target="_blank">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit">
 </a>
@@ -76,6 +73,40 @@
 > entry, please open an
 > [issue](https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new).
 > There is no deadline; the repository is continuously updated.
+
+## Table of Contents
+
+- [Spectral Indices](#spectral-indices)
+  - [Citation](#citation)
+  - [Properties](#properties)
+  - [Formula expressions](#formula-expressions)
+    - [Broad spectral and thermal bands](#broad-spectral-and-thermal-bands)
+    - [Radar polarizations](#radar-polarizations)
+    - [Hyperspectral standards](#hyperspectral-standards)
+    - [Supported functions](#supported-functions)
+    - [Constants](#constants)
+    - [External variables](#external-variables)
+- [Spectral Indices by Sensing Modality and Application Domain](#spectral-indices-by-sensing-modality-and-application-domain)
+  - [Multispectral](#modality-multispectral)
+    - [Vegetation](#multispectral-vegetation)
+    - [Water](#multispectral-water)
+    - [Burn](#multispectral-burn)
+    - [Snow](#multispectral-snow)
+    - [Urban](#multispectral-urban)
+    - [Soil](#multispectral-soil)
+    - [Clouds](#multispectral-clouds)
+  - [Multispectral + Thermal](#modality-multispectral-thermal)
+    - [Burn](#multispectral-thermal-burn)
+    - [Urban](#multispectral-thermal-urban)
+    - [Soil](#multispectral-thermal-soil)
+  - [Hyperspectral](#modality-hyperspectral)
+    - [Vegetation](#hyperspectral-vegetation)
+    - [Snow](#hyperspectral-snow)
+  - [Radar](#modality-radar)
+    - [Vegetation](#radar-vegetation)
+    - [Geology](#radar-geology)
+- [Download Raw Files](#download-raw-files)
+- [Credits](#credits)
 
 # Spectral Indices
 
@@ -253,7 +284,11 @@ descriptions are also specific to each index.
 
 # Spectral Indices by Sensing Modality and Application Domain
 
+<a id="modality-multispectral"></a>
+
 ## Multispectral
+
+<a id="multispectral-vegetation"></a>
 
 ### Vegetation
 
@@ -429,6 +464,8 @@ descriptions are also specific to each index.
 - [WDRVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDRVI.html): Wide Dynamic Range Vegetation Index
 - [WDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WDVI.html): Weighted Difference Vegetation Index
 
+<a id="multispectral-water"></a>
+
 ### Water
 
 - [ANDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/ANDWI.html): Augmented Normalized Difference Water Index
@@ -465,6 +502,8 @@ descriptions are also specific to each index.
 - [WI2015](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI2015.html): Water Index 2015
 - [WRI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WRI.html): Water Ratio Index
 
+<a id="multispectral-burn"></a>
+
 ### Burn
 
 - [BAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAI-burn.html): Burned Area Index
@@ -478,6 +517,8 @@ descriptions are also specific to each index.
 - [NBRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBRSWIR.html): Normalized Burn Ratio SWIR
 - [NDSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSWIR.html): Normalized Difference SWIR
 
+<a id="multispectral-snow"></a>
+
 ### Snow
 
 - [NBSIMS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBSIMS.html): Non-Binary Snow Index for Multi-Component Surfaces
@@ -489,6 +530,8 @@ descriptions are also specific to each index.
 - [NDSInw](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDSInw.html): Normalized Difference Snow Index with no Water
 - [S3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/S3.html): S3 Snow Index
 - [SWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SWI.html): Snow Water Index
+
+<a id="multispectral-urban"></a>
 
 ### Urban
 
@@ -504,6 +547,8 @@ descriptions are also specific to each index.
 - [VgNIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VgNIRBI.html): Visible Green-Based Built-Up Index
 - [VIBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VIBI.html): Vegetation Index Built-up Index
 - [VrNIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VrNIRBI.html): Visible Red-Based Built-Up Index
+
+<a id="multispectral-soil"></a>
 
 ### Soil
 
@@ -522,6 +567,8 @@ descriptions are also specific to each index.
 - [NSDSI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI3.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3
 - [RI4XS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RI4XS.html): SPOT HRV XS-based Redness Index 4
 
+<a id="multispectral-clouds"></a>
+
 ### Clouds
 
 - [CI1SWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CI1SWIR.html): Cloud Index Form 1 with SWIR 1
@@ -532,7 +579,11 @@ descriptions are also specific to each index.
 - [CSISWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSISWIR.html): Cloud Shadow Index with SWIR 1
 - [CSIwoSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSIwoSWIR.html): Cloud Shadow Index without SWIR bands
 
+<a id="modality-multispectral-thermal"></a>
+
 ## Multispectral + Thermal
+
+<a id="multispectral-thermal-burn"></a>
 
 ### Burn
 
@@ -546,6 +597,8 @@ descriptions are also specific to each index.
 - [SAVIT](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SAVIT.html): Soil-Adjusted Vegetation Index Thermal
 - [VI6T](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VI6T.html): VI6T Index
 
+<a id="multispectral-thermal-urban"></a>
+
 ### Urban
 
 - [DBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DBI.html): Dry Built-Up Index
@@ -557,13 +610,19 @@ descriptions are also specific to each index.
 - [NDISIndwi](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIndwi.html): Normalized Difference Impervious Surface Index with NDWI
 - [NDISIr](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISIr.html): Normalized Difference Impervious Surface Index Red
 
+<a id="multispectral-thermal-soil"></a>
+
 ### Soil
 
 - [NBLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBLI.html): Normalized Difference Bare Land Index
 - [NBLIOLI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBLIOLI.html): Normalized Difference Bare Land Index for Landsat-OLI
 - [NDBaI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDBaI.html): Normalized Difference Bareness Index
 
+<a id="modality-hyperspectral"></a>
+
 ## Hyperspectral
+
+<a id="hyperspectral-vegetation"></a>
 
 ### Vegetation
 
@@ -606,11 +665,17 @@ descriptions are also specific to each index.
 - [URBR4](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR4.html): Untransformed Reflectance Band Ratio 4
 - [URBR5](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/URBR5.html): Untransformed Reflectance Band Ratio 5
 
+<a id="hyperspectral-snow"></a>
+
 ### Snow
 
 - [NDISI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDISI.html): Normalized Difference Ice-Snow Index
 
+<a id="modality-radar"></a>
+
 ## Radar
+
+<a id="radar-vegetation"></a>
 
 ### Vegetation
 
@@ -626,6 +691,8 @@ descriptions are also specific to each index.
 - [VVVHD](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHD.html): VV-VH Difference
 - [VVVHR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHR.html): VV-VH Ratio
 - [VVVHS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VVVHS.html): VV-VH Sum
+
+<a id="radar-geology"></a>
 
 ### Geology
 
