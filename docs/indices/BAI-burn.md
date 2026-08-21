@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://digital.csic.es/bitstream/10261/6426/1/Martin_Isabel_Serie_Geografica.pdf"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+BAI+%E2%80%94+"
 ---
 
 <script setup>

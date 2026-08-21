@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://doi.org/10.3390/w13121647"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+S2WI+%E2%80%94+"
 ---
 
 <script setup>

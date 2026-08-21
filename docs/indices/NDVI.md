@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://ntrs.nasa.gov/citations/19740022614"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+NDVI+%E2%80%94+"
 ---
 
 <script setup>

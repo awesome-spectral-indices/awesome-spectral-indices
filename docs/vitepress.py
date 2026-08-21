@@ -7,7 +7,7 @@ import re
 import shutil
 from html import escape
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 from urllib.request import Request, urlopen
 
 
@@ -29,6 +29,7 @@ GITHUB_REPOSITORY = os.environ.get(
 GITHUB_CONTRIBUTORS_URL = (
     f"https://api.github.com/repos/{GITHUB_REPOSITORY}/contributors"
 )
+GITHUB_NEW_ISSUE_URL = f"https://github.com/{GITHUB_REPOSITORY}/issues/new"
 GITHUB_API_VERSION = "2022-11-28"
 GITHUB_API_TIMEOUT = 20
 AUTOMATED_GITHUB_ACCOUNTS = {"actions-user", "github-actions[bot]"}
@@ -60,6 +61,17 @@ def load_json(path):
 def yaml_string(value):
     """Return a JSON-quoted string, which is also valid YAML."""
     return json.dumps(str(value), ensure_ascii=False)
+
+
+def report_error_url(key):
+    """Return an index-specific GitHub issue URL using the error template."""
+    query = urlencode(
+        {
+            "template": "report-error.md",
+            "title": f"INDEX ERROR: {key} — ",
+        }
+    )
+    return f"{GITHUB_NEW_ISSUE_URL}?{query}"
 
 
 def load_bibtex_entries(path):
@@ -169,6 +181,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: {yaml_string(index["source"]["source_link"])}
+    - theme: alt
+      text: Report error
+      link: {yaml_string(report_error_url(key))}
 ---
 
 <script setup>

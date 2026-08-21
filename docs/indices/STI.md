@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+STI+%E2%80%94+"
 ---
 
 <script setup>

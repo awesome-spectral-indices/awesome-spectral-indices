@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://doi.org/10.1034/j.1399-3054.1999.106119.x"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+PSRI+%E2%80%94+"
 ---
 
 <script setup>

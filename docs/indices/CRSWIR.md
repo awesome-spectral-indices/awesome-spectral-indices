@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://www.onf.fr/onf/+/cec::les-rendez-vous-techniques-de-lonf-no69-70.html"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+CRSWIR+%E2%80%94+"
 ---
 
 <script setup>

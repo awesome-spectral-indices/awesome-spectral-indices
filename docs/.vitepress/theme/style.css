@@ -757,6 +757,14 @@
   background: color-mix(in srgb, var(--domain-accent) 18%, var(--domain-bg));
 }
 
+.index-page .VPHero .VPButton[href*="report-error.md"] {
+  color: #7f1d1d;
+}
+
+.index-page .VPHero .VPButton[href*="report-error.md"]:hover {
+  color: #7f1d1d;
+}
+
 .index-page .VPHero .VPButton:hover {
   box-shadow: 0 0 28px color-mix(
     in srgb,

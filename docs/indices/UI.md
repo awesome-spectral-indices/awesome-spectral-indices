@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+UI+%E2%80%94+"
 ---
 
 <script setup>

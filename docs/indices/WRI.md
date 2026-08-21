@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://doi.org/10.1109/GEOINFORMATICS.2010.5567762"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+WRI+%E2%80%94+"
 ---
 
 <script setup>

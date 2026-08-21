@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: View source 🡕
       link: "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2"
+    - theme: alt
+      text: Report error
+      link: "https://github.com/awesome-spectral-indices/awesome-spectral-indices/issues/new?template=report-error.md&title=INDEX+ERROR%3A+NBR2+%E2%80%94+"
 ---
 
 <script setup>

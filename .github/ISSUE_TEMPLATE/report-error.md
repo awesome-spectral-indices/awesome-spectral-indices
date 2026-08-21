@@ -2,7 +2,7 @@
 name: Report an Index Error
 about: Report incorrect information in a catalogue index
 title: 'INDEX ERROR: acronym — brief description'
-labels: ''
+labels: 'INDEX ERROR'
 assignees: ''
 
 ---
