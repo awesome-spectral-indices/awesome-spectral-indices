@@ -30,7 +30,8 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```bibtex [BibTeX]
 @article{ASI_RVI,
   author = {Gerald S. Birth and George R. McVey},
-  title = {Measuring the Color of Growing Turf with a Reflectance Spectrophotometer<sup>1</sup>},
+  title = {Measuring the Color of Growing Turf with a Reflectance Spectrophotometer
+                    <sup>1</sup>},
   journal = {Agronomy Journal},
   volume = {60},
   number = {6},
@@ -41,7 +42,8 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Gerald S. Birth, & George R. McVey (1968). Measuring the Color of Growing Turf with a Reflectance Spectrophotometer<sup>1</sup>. Agronomy Journal, 60(6). https://doi.org/10.2134/agronj1968.00021962006000060016x
+Gerald S. Birth, & George R. McVey (1968). Measuring the Color of Growing Turf with a Reflectance Spectrophotometer
+                    <sup>1</sup>. Agronomy Journal, 60(6). https://doi.org/10.2134/agronj1968.00021962006000060016x
 ```
 
 :::
