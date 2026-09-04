@@ -3734,5 +3734,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-19",
             contributor="https://github.com/davemlz",
         ),
+          MSBI=SpectralIndex(
+            acronym="MSBI",
+            name="Misra Soil Brightness Index",
+            formula="0.406 * G + 0.600 * R + 0.645 * N + 0.243 * N2",
+            source={"source_link": "https://doi.org/10.1080/02757259509532298"},
+            classification={"application_domain": "soil"},
+            date_of_addition="2026-09-04",
+            contributor="https://github.com/lwx4787-ops",
+        ),
     )
 )
