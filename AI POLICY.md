@@ -44,6 +44,32 @@ Such disclosure will not negatively affect the evaluation process.
 
 However, failure to disclose substantial AI involvement may be considered during the review of a submission if concerns regarding validity arise.
 
+## Contributions Made by Agents
+
+An AI agent that submits an issue, pull request, review, comment, or other
+contribution on its own behalf should clearly identify itself as an agent. This
+disclosure helps maintainers understand whether they are communicating with a
+human contributor or an agent and adapt follow-up questions accordingly.
+
+The disclosure should be easy to find and include, when available:
+
+* A clear statement that the contribution or message was authored by an agent.
+* The model and provider used, including the model version or identifier when
+  known.
+* Whether replies will come from the agent, a human operator, or both.
+* The human operator or responsible contact, if one exists and can be shared.
+
+For example:
+
+> **Agent disclosure:** This contribution was prepared and submitted by an AI
+> agent using [provider and model]. Follow-up replies will be provided by
+> [the agent / human operator / both]. Human contact: [username, if applicable].
+
+Agents should not present themselves as human contributors. When an account is
+used by both a human and an agent, agent-authored messages should include the
+disclosure so that the speaker is clear. Disclosure does not count against a
+contribution; it is intended to make collaboration and review easier.
+
 ## Curatorial Discretion
 
 Awesome Spectral Indices is a curated community resource rather than an exhaustive catalogue of all proposed formulas.

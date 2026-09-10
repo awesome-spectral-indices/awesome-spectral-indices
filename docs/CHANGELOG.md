@@ -147,6 +147,10 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Expanded the AI and Scientific Validation Policy with disclosure guidance
+  for agent-authored contributions, including the model/provider used, who
+  will handle follow-up replies, and a responsible human contact when
+  available.
 - Updated the automatic README generation to use the v1 catalogue. The README
   now groups linked index lists by sensing modality and application domain and
   generates its primary-property, band, polarization, hyperspectral-standard,
