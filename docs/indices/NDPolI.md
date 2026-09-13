@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_NDPolI,
-  author = {Cao Yun-gang and Yan Li-juan and Zheng Ze-zhong},
+  author = {Yun-Gang Cao and Li-Juan Yan and Ze-Zhong Zheng},
   title = {EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES},
   year = {2008},
   url = {https://www.isprs.org/proceedings/XXXVII/congress/4\_pdf/267.pdf}
@@ -37,7 +37,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Cao Yun-gang, Yan Li-juan, & Zheng Ze-zhong (2008). EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES. https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf
+Yun-Gang Cao, Li-Juan Yan, & Ze-Zhong Zheng (2008). EXTRACTION OF INFORMATION ON GEOLOGY HAZARD FROM MULTI-POLARIZATION SAR IMAGES. https://www.isprs.org/proceedings/XXXVII/congress/4_pdf/267.pdf
 ```
 
 :::
