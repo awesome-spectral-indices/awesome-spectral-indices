@@ -6,7 +6,7 @@ pageClass: "index-page domain-urban"
 hero:
   name: "NBAI"
   text: "Normalized Built-up Area Index"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #235</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Urban</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #237</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search
@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_BRBA,
-  author = {W. Muhammad},
+  author = {Waqar Muhammad},
   title = {Development of New Indices for Extraction of Built-Up Area \& Bare Soil from Landsat Data},
   year = {2012},
   url = {https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf}
@@ -37,7 +37,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-W. Muhammad (2012). Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data. https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf
+Waqar Muhammad (2012). Development of New Indices for Extraction of Built-Up Area & Bare Soil from Landsat Data. https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf
 ```
 
 :::
