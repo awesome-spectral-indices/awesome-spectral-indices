@@ -3734,5 +3734,14 @@ spindex = SpectralIndices(
             date_of_addition="2026-08-19",
             contributor="https://github.com/davemlz",
         ),
+        DDWI=SpectralIndex(
+            acronym="DDWI",
+            name="Direct Difference Water Index",
+            formula="G - N",
+            source={"source_link": "https://doi.org/10.3390/rs14030557"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-09-22",
+            contributor="https://github.com/cmayet",
+        ),
     )
 )
