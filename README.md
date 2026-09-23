@@ -472,6 +472,7 @@ descriptions are also specific to each index.
 - [AWEInsh](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AWEInsh.html): Automated Water Extraction Index
 - [AWEIsh](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/AWEIsh.html): Automated Water Extraction Index with Shadows Elimination
 - [CWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CWI.html): Coastal Water Index
+- [DDWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DDWI.html): Direct Difference Water Index
 - [FAI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FAI.html): Floating Algae Index
 - [FDI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FDI.html): Floating Debris Index
 - [FWEI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FWEI.html): Flood/Water Extraction Index

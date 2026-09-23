@@ -93,6 +93,8 @@ submitted through the usual contribution process.
   multispectral vegetation indices.
 - Added CCRI (Carotenoid-Chlorophyll Ratio Index) to v1 as a hyperspectral
   vegetation index.
+- Added DDWI (Direct Difference Water Index) to v1 as a multispectral water
+  index using the difference between green and near-infrared reflectance.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
