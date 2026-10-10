@@ -511,6 +511,7 @@ descriptions are also specific to each index.
 - [BAIM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAIM.html): Burned Area Index adapted to MODIS
 - [BAIS2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/BAIS2.html): Burned Area Index for Sentinel 2
 - [CSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSI.html): Char Soil Index
+- [IBAIM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IBAIM.html): Improved Burned Area Index adapted to MODIS
 - [MIRBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/MIRBI.html): Mid-Infrared Burn Index
 - [NBR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBR.html): Normalized Burn Ratio
 - [NBR2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NBR2.html): Normalized Burn Ratio 2

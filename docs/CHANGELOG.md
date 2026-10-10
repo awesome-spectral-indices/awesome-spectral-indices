@@ -95,6 +95,8 @@ submitted through the usual contribution process.
   vegetation index.
 - Added DDWI (Direct Difference Water Index) to v1 as a multispectral water
   index using the difference between green and near-infrared reflectance.
+- Added IBAIM (Improved Burned Area Index adapted to MODIS) to v1 as a
+  multispectral burn index.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
@@ -149,6 +151,8 @@ submitted through the usual contribution process.
 
 ### Changed
 
+- Corrected the v1 BAIM formula so the two squared spectral-distance terms are
+  summed together in the denominator.
 - Expanded the AI and Scientific Validation Policy with disclosure guidance
   for agent-authored contributions, including the model/provider used, who
   will handle follow-up replies, and a responsible human contact when

@@ -2145,7 +2145,7 @@ spindex = SpectralIndices(
         BAIM=SpectralIndex(
             acronym="BAIM",
             name="Burned Area Index adapted to MODIS",
-            formula="1.0/((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0)",
+            formula="1.0/(((0.05 - N) ** 2.0) + ((0.2 - S2) ** 2.0))",
             source={"source_link": "https://doi.org/10.1016/j.foreco.2006.08.248"},
             classification={"application_domain": "burn"},
             date_of_addition="2022-04-20",
@@ -3742,6 +3742,22 @@ spindex = SpectralIndices(
             classification={"application_domain": "water"},
             date_of_addition="2026-09-22",
             contributor="https://github.com/cmayet",
+        ),
+        IBAIM=SpectralIndex(
+            acronym="IBAIM",
+            name="Improved Burned Area Index adapted to MODIS",
+            formula="(1.0/(((0.04 - N) ** 2.0) + ((0.2 - S2) ** 2.0))) * (S2/N) * ((N/R)**0.5)",
+            source={
+                "source_link": "https://digital.csic.es/bitstream/10261/157427/1/6th_EARsel_Workshop.pdf",
+                "source_link_semantic_scholar": {
+                    "paper_id": "e3f7f009a4db2fd572e2befa63c8d14134a11939",
+                    "corpus_id": 62894061
+                },
+                "source_metadata": {"type": "conference_paper", "source": "contributor"}
+            },
+            classification={"application_domain": "burn"},
+            date_of_addition="2026-10-10",
+            contributor="https://github.com/davemlz",
         ),
     )
 )
