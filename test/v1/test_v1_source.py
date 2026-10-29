@@ -740,8 +740,3 @@ def test_source_companions_include_every_other_key_with_the_same_link():
             and other_index.source.source_link == index.source.source_link
         ]
         assert index.source.source_companions == expected
-
-    assert catalogue.SpectralIndices["GARI"].source.source_companions == [
-        "GNDVI",
-        "GRARI",
-    ]

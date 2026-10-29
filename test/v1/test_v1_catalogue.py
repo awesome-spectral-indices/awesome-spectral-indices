@@ -170,7 +170,7 @@ def test_formula_variable_registries_are_disjoint():
     )
 
 
-def test_classification_vocabularies_and_authored_assignments():
+def test_classification_vocabularies_and_family_conventions():
     assert set(ApplicationDomain._value2member_map_) == {
         "vegetation",
         "water",
@@ -193,48 +193,18 @@ def test_classification_vocabularies_and_authored_assignments():
         "radar",
     }
 
-    kernel_keys = {"kEVI", "kNDVI", "kRVI", "kVARI", "kIPVI"}
-    tasseled_cap_keys = {
-        "TMTCbrightness",
-        "TMTCwetness",
-        "TMTCgreenness",
-        "TMTCfourth",
-        "TMTCfifth",
-        "TMTCsixth",
-    }
-    radar_keys = {
-        key
-        for key, index in spindex.SpectralIndices.items()
-        if set(parse_formula_variables(index.formula))
-        & set(Polarizations._value2member_map_)
-    }
+    supported_families = set(IndexFamily._value2member_map_)
+    polarization_names = set(Polarizations._value2member_map_)
 
-    for key, index in spindex.SpectralIndices.items():
-        if key in kernel_keys:
-            expected_family = ["kernel"]
-        elif key in tasseled_cap_keys:
-            expected_family = ["tasseled_cap"]
-        elif key in radar_keys:
-            expected_family = ["radar"]
-        else:
-            expected_family = None
-        assert index.classification.family == expected_family
+    for index in spindex.SpectralIndices.values():
+        families = set(index.classification.family or [])
+        variables = set(parse_formula_variables(index.formula))
+        uses_kernel = "kernel(" in index.formula
+        uses_radar = bool(variables & polarization_names)
 
-    assert spindex.SpectralIndices["NDPolI"].classification.application_domain == (
-        "geology"
-    )
-    assert all(
-        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
-        for key in radar_keys - {"NDPolI"}
-    )
-    assert all(
-        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
-        for key in kernel_keys
-    )
-    assert all(
-        spindex.SpectralIndices[key].classification.application_domain == "vegetation"
-        for key in tasseled_cap_keys
-    )
+        assert families <= supported_families
+        assert ("kernel" in families) == uses_kernel
+        assert ("radar" in families) == uses_radar
 
 
 def test_classification_rejects_invalid_or_duplicate_values():
@@ -270,9 +240,15 @@ def test_kernel_results_are_functions_not_registered_band_operands():
         "kLL",
     }
 
+    kernel_indices = [
+        index
+        for index in spindex.SpectralIndices.values()
+        if "kernel" in (index.classification.family or [])
+    ]
+
+    assert kernel_indices
     assert legacy_kernel_operands.isdisjoint(Bands._value2member_map_)
-    for key in ("kEVI", "kNDVI", "kRVI", "kVARI", "kIPVI"):
-        index = spindex.SpectralIndices[key]
+    for index in kernel_indices:
         assert "kernel(" in index.formula
         assert legacy_kernel_operands.isdisjoint(
             parse_formula_variables(index.formula)

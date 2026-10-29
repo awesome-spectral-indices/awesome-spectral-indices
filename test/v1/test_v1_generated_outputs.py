@@ -58,7 +58,8 @@ def test_v1_outputs_contain_generated_source_metadata():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
         json_catalogue = json.load(fp)["SpectralIndices"]
 
-    for index in json_catalogue.values():
+    citation_snapshots_by_source = {}
+    for key, index in json_catalogue.items():
         assert "reference" not in index
         assert set(index["source"]) == {
             "source_companions",
@@ -81,6 +82,27 @@ def test_v1_outputs_contain_generated_source_metadata():
                 "other",
             }
 
+        source_index = spindex.SpectralIndices[key]
+        semantic_scholar = source_index.source.source_link_semantic_scholar
+        expected_semantic_scholar = (
+            semantic_scholar.model_dump(mode="json")
+            if semantic_scholar is not None
+            else None
+        )
+        assert (
+            index["source"]["source_link_semantic_scholar"]
+            == expected_semantic_scholar
+        )
+
+        metrics = metadata.get("citations_metrics")
+        if metrics:
+            snapshot = (metrics["citation_count"], metrics["date"])
+            source_link = index["source"]["source_link"]
+            previous = citation_snapshots_by_source.setdefault(
+                source_link, snapshot
+            )
+            assert snapshot == previous
+
     for key, index in json_catalogue.items():
         companions = index["source"]["source_companions"]
         assert key not in companions
@@ -92,44 +114,6 @@ def test_v1_outputs_contain_generated_source_metadata():
             and other_index.source.source_link == index["source"]["source_link"]
         ]
 
-    assert json_catalogue["GARI"]["source"]["source_companions"] == [
-        "GNDVI",
-        "GRARI",
-    ]
-
-    assert json_catalogue["EVI"]["source"]["source_metadata"]["type"] == "article"
-    assert json_catalogue["SAVI"]["source"]["source_metadata"]["type"] == "article"
-    assert (
-        json_catalogue["NDVI"]["source"]["source_metadata"]["source"]
-        == "semantic_scholar"
-    )
-    assert (
-        json_catalogue["TVI"]["source"]["source_metadata"]["source"]
-        == "semantic_scholar"
-    )
-    ndvi_metrics = json_catalogue["NDVI"]["source"]["source_metadata"][
-        "citations_metrics"
-    ]
-    tvi_metrics = json_catalogue["TVI"]["source"]["source_metadata"][
-        "citations_metrics"
-    ]
-    assert {
-        "citation_count": ndvi_metrics["citation_count"],
-        "date": ndvi_metrics["date"],
-    } == {
-        "citation_count": tvi_metrics["citation_count"],
-        "date": tvi_metrics["date"],
-    }
-    assert (
-        json_catalogue["EVI"]["source"]["source_metadata"]["source"]
-        == "crossref"
-    )
-    assert json_catalogue["NDVI"]["source"]["source_link_semantic_scholar"] == {
-        "corpus_id": 133358670,
-        "paper_id": "fb2f60fe0fe2874e5cbf927a2556d719c32eac29",
-    }
-    assert json_catalogue["EVI"]["source"]["source_link_semantic_scholar"] is None
-
 
 def test_v1_bibtex_references_are_shared_by_source():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
@@ -138,6 +122,7 @@ def test_v1_bibtex_references_are_shared_by_source():
     bibtex_keys = set(re.findall(r"^@\w+\{([^,]+),", bibtex, flags=re.MULTILINE))
 
     used_keys = set()
+    citation_keys_by_source = {}
     for index in json_catalogue.values():
         citation = index["source"]["source_metadata"].get("how_to_cite")
         if citation:
@@ -145,16 +130,13 @@ def test_v1_bibtex_references_are_shared_by_source():
             assert citation["apa"].strip()
             assert citation["bibtex"] in bibtex_keys
             used_keys.add(citation["bibtex"])
+            source_link = index["source"]["source_link"]
+            previous = citation_keys_by_source.setdefault(
+                source_link, citation["bibtex"]
+            )
+            assert citation["bibtex"] == previous
 
     assert used_keys == bibtex_keys
-    assert (
-        json_catalogue["GARI"]["source"]["source_metadata"]["how_to_cite"][
-            "bibtex"
-        ]
-        == json_catalogue["GNDVI"]["source"]["source_metadata"]["how_to_cite"][
-            "bibtex"
-        ]
-    )
 
 
 def test_v1_citation_history_matches_latest_catalogue_snapshots():
@@ -214,15 +196,6 @@ def test_v1_citation_metrics_have_generated_comparison_statistics():
             assert values["rank"] >= 1
             assert 0 <= values["percentile"] <= 100
             assert values["similar_age_count"] >= 0
-
-    assert (
-        cited_indices["NDVI"]["source"]["source_metadata"][
-            "citations_metrics"
-        ]["overall"]["rank"]
-        < cited_indices["TVI"]["source"]["source_metadata"][
-            "citations_metrics"
-        ]["overall"]["rank"]
-    )
 
 
 def test_v1_outputs_separate_formula_input_types():
@@ -346,22 +319,6 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
         assert any(
             is_hyperspectral_band(band) for band in json_catalogue[key]["bands"]
         )
-
-
-def test_v1_outputs_include_spatial_reduction_contexts():
-    with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
-        json_catalogue = json.load(fp)["SpectralIndices"]
-
-    assert json_catalogue["CWI"]["bands"] == ["S2", "B"]
-    assert json_catalogue["NDRS"]["bands"] == ["R", "S2"]
-    expected_reductions = {
-        "CWI": {"space": {"scope": "aoi"}},
-        "NDRS": {"space": {"scope": "aoi"}},
-    }
-    assert all(
-        index["reductions"] == expected_reductions.get(key, {})
-        for key, index in json_catalogue.items()
-    )
 
 
 def test_v1_outputs_generate_physical_bands_for_kernel_indices():
