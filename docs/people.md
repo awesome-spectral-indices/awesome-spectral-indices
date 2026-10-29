@@ -61,7 +61,7 @@ const apiDevelopers = [{
   },
 ]
 const designer = [{
-    avatar: 'https://media.licdn.com/dms/image/v2/D4E03AQGgoj42ydBmVw/profile-displayphoto-shrink_800_800/B4EZbMFuIGHcAg-/0/1747180774373?e=1787184000&v=beta&t=g_s39jqaS5KnZqfEWNdme8A0GJO3AOevm74URE0Tnrw',
+    avatar: '/designer.jpeg',
     name: 'Juliana Quiñones Osorio',
     title: 'Logo Designer',
     links: [
