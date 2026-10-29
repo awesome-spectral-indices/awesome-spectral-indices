@@ -3,6 +3,7 @@ layout: page
 ---
 
 <script setup>
+import { withBase } from 'vitepress'
 import {
   VPTeamPage,
   VPTeamPageTitle,
@@ -61,7 +62,7 @@ const apiDevelopers = [{
   },
 ]
 const designer = [{
-    avatar: '/designer.jpeg',
+    avatar: withBase('/designer.jpeg'),
     name: 'Juliana Quiñones Osorio',
     title: 'Logo Designer',
     links: [
