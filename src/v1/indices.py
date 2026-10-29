@@ -3759,5 +3759,28 @@ spindex = SpectralIndices(
             date_of_addition="2026-10-10",
             contributor="https://github.com/davemlz",
         ),
+        DRS=SpectralIndex(
+            acronym="DRS",
+            name="Distance Red SWIR",
+            formula="(R ** 2.0 + S2 ** 2.0) ** 0.5",
+            source={"source_link": "https://doi.org/10.1016/j.rse.2020.112240"},
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-10-29",
+            contributor="https://github.com/Franziska279",
+        ),
+        NDRS=SpectralIndex(
+            acronym="NDRS",
+            name="Normalized Distance Red SWIR",
+            formula="(((R ** 2.0 + S2 ** 2.0) ** 0.5) - spatial_min((R ** 2.0 + S2 ** 2.0) ** 0.5))/(spatial_max((R ** 2.0 + S2 ** 2.0) ** 0.5) - spatial_min((R ** 2.0 + S2 ** 2.0) ** 0.5))",
+            source={"source_link": "https://doi.org/10.1016/j.rse.2020.112240"},
+            reductions={
+                "space": {
+                    "scope": "aoi"
+                }
+            },
+            classification={"application_domain": "vegetation"},
+            date_of_addition="2026-10-29",
+            contributor="https://github.com/Franziska279",
+        ),
     )
 )

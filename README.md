@@ -309,6 +309,7 @@ descriptions are also specific to each index.
 - [CIRE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CIRE.html): Chlorophyll Index Red Edge
 - [CRSWIR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CRSWIR.html): Continuum Removal SWIR
 - [CVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CVI.html): Chlorophyll Vegetation Index
+- [DRS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DRS.html): Distance Red SWIR
 - [DSI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSI.html): Drought Stress Index
 - [DSWI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI1.html): Disease-Water Stress Index 1
 - [DSWI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/DSWI2.html): Disease-Water Stress Index 2
@@ -382,6 +383,7 @@ descriptions are also specific to each index.
 - [NDMI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDMI.html): Normalized Difference Moisture Index
 - [NDPI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDPI.html): Normalized Difference Phenology Index
 - [NDREI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDREI.html): Normalized Difference Red Edge Index
+- [NDRS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDRS.html): Normalized Distance Red SWIR
 - [NDTI4RE](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTI4RE.html): 4-band Red Edge Normalized Difference Tillage Index
 - [NDTillI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDTillI.html): Normalized Difference Tillage Index
 - [NDVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NDVI.html): Normalized Difference Vegetation Index

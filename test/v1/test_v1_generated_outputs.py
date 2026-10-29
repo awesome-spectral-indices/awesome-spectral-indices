@@ -348,18 +348,19 @@ def test_v1_outputs_generate_classification_and_sensing_modalities():
         )
 
 
-def test_v1_outputs_include_cwi_spatial_reduction_context():
+def test_v1_outputs_include_spatial_reduction_contexts():
     with (OUTPUT_DIR / "spectral-indices-dict.json").open() as fp:
         json_catalogue = json.load(fp)["SpectralIndices"]
 
     assert json_catalogue["CWI"]["bands"] == ["S2", "B"]
-    assert json_catalogue["CWI"]["reductions"] == {
-        "space": {"scope": "aoi"}
+    assert json_catalogue["NDRS"]["bands"] == ["R", "S2"]
+    expected_reductions = {
+        "CWI": {"space": {"scope": "aoi"}},
+        "NDRS": {"space": {"scope": "aoi"}},
     }
     assert all(
-        index["reductions"] == {}
+        index["reductions"] == expected_reductions.get(key, {})
         for key, index in json_catalogue.items()
-        if key != "CWI"
     )
 
 

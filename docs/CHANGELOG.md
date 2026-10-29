@@ -97,6 +97,9 @@ submitted through the usual contribution process.
   index using the difference between green and near-infrared reflectance.
 - Added IBAIM (Improved Burned Area Index adapted to MODIS) to v1 as a
   multispectral burn index.
+- Added DRS (Distance Red SWIR) and NDRS (Normalized Distance Red SWIR) to v1
+  as multispectral vegetation indices. NDRS uses AOI-scoped spatial minimum
+  and maximum reductions to normalize DRS.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
