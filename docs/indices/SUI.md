@@ -32,6 +32,8 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
   author = {Ahmad Asad and Alessandra Capolupo and Eufemia Tarantino},
   title = {A cross-sensor spectral index for soil sealing detection with improved impervious-bare soil discrimination},
   journal = {International Journal of Remote Sensing},
+  volume = {47},
+  number = {21},
   year = {2026},
   doi = {10.1080/01431161.2026.2715141},
   url = {https://doi.org/10.1080/01431161.2026.2715141}
@@ -39,7 +41,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Ahmad Asad, Alessandra Capolupo, & Eufemia Tarantino (2026). A cross-sensor spectral index for soil sealing detection with improved impervious-bare soil discrimination. International Journal of Remote Sensing. https://doi.org/10.1080/01431161.2026.2715141
+Ahmad Asad, Alessandra Capolupo, & Eufemia Tarantino (2026). A cross-sensor spectral index for soil sealing detection with improved impervious-bare soil discrimination. International Journal of Remote Sensing, 47(21). https://doi.org/10.1080/01431161.2026.2715141
 ```
 
 :::
