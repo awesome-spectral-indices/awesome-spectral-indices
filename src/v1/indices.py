@@ -3782,5 +3782,15 @@ spindex = SpectralIndices(
             date_of_addition="2026-10-29",
             contributor="https://github.com/Franziska279",
         ),
+         FIR=SpectralIndex(
+            acronym="FIR",
+            name="Iron Oxides and Ferric Iron Index",
+            bands = ["R", "B"],
+            formula="(R / B)",
+            source={"source_link":"https://doi.org/10.1016/S0169-1368(99)00007-4"},
+            classification= {"application_domain":"geology"},
+            date_of_addition="2026-11-14",
+            contributor="https://github.com/rodreras",
+        ),
     )
 )
