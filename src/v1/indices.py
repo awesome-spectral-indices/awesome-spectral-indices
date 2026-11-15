@@ -3787,10 +3787,64 @@ spindex = SpectralIndices(
             name="Iron Oxides and Ferric Iron Index",
             bands = ["R", "B"],
             formula="(R / B)",
-            source={"source_link":"https://doi.org/10.1016/S0169-1368(99)00007-4"},
+            source =  {
+                "source_link": "https://www.worldcat.org/isbn/0045500371",
+                "source_link_status": "operational",
+                "source_link_type": "url",
+                "source_metadata": {
+                    "authors": [
+                        "S.A. Drury"
+                    ],
+                    "how_to_cite": {
+                        "apa": "Drury, S.A. (1987). Image Interpretation in Geology. Allen & Unwin Australia.",
+                        "bibtex": "ASI_FIR"
+                    },
+                    "source": "manual",
+                    "title": "Image Interpretation in Geology",
+                    "type": "book",
+                    "year": 1987
+                }
+            },
             classification= {"application_domain":"geology"},
             date_of_addition="2026-11-14",
             contributor="https://github.com/rodreras",
         ),
+        FeII=SpectralIndex(
+        acronym="FeII",
+        name="Ferrous Iron (Coarse Grained Ferric Iron)",
+        bands=["G", "S1", "R", "N"],
+        formula="(G + S1) / (R + N)",
+        source =  {
+                "source_link": "https://www.worldcat.org/isbn/0045500371",
+                "source_link_status": "operational",
+                "source_link_type": "url",
+                "source_metadata": {
+                    "authors": [
+                        "S.A. Drury"
+                    ],
+                    "how_to_cite": {
+                        "apa": "Drury, S.A. (1987). Image Interpretation in Geology. Allen & Unwin Australia.",
+                        "bibtex": "ASI_FIR"
+                    },
+                    "source": "manual",
+                    "title": "Image Interpretation in Geology",
+                    "type": "book",
+                    "year": 1987
+                }
+            },
+        classification={"application_domain": "geology"},
+        date_of_addition="2026-11-14",
+        contributor="https://github.com/rodreras",
+    ),
+    CSM=SpectralIndex(
+        acronym="CSM",
+        name="Clay Sulphate Mica Marble",
+        bands=["S1", "S2", "N", "R"],
+        formula="(S1 / S2) / (N / R)",
+        source={"source_link": "https://doi.org/10.1016/S0169-1368(99)00007-4"},
+        classification={"application_domain": "geology"},
+        date_of_addition="2026-11-14",
+        contributor="https://github.com/rodreras",
+    ),
     )
 )
