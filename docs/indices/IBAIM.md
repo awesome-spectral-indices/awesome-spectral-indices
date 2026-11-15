@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_IBAIM,
-  author = {Israel Gómez Nieto and M. P. Martín},
+  author = {Israel Gómez Nieto and M. Martín},
   title = {Improving the performance of the BAIM index for burnt area mapping using MODIS data},
   year = {2007},
   url = {https://digital.csic.es/bitstream/10261/157427/1/6th\_EARsel\_Workshop.pdf}
@@ -37,7 +37,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Israel Gómez Nieto, & M. P. Martín (2007). Improving the performance of the BAIM index for burnt area mapping using MODIS data. https://digital.csic.es/bitstream/10261/157427/1/6th_EARsel_Workshop.pdf
+Israel Gómez Nieto, & M. Martín (2007). Improving the performance of the BAIM index for burnt area mapping using MODIS data. https://digital.csic.es/bitstream/10261/157427/1/6th_EARsel_Workshop.pdf
 ```
 
 :::
