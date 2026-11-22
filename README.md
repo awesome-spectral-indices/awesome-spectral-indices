@@ -94,6 +94,7 @@
     - [Snow](#multispectral-snow)
     - [Urban](#multispectral-urban)
     - [Soil](#multispectral-soil)
+    - [Geology](#multispectral-geology)
     - [Clouds](#multispectral-clouds)
   - [Multispectral + Thermal](#modality-multispectral-thermal)
     - [Burn](#multispectral-thermal-burn)
@@ -570,6 +571,14 @@ descriptions are also specific to each index.
 - [NSDSI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI2.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2
 - [NSDSI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/NSDSI3.html): Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3
 - [RI4XS](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/RI4XS.html): SPOT HRV XS-based Redness Index 4
+
+<a id="multispectral-geology"></a>
+
+### Geology
+
+- [CSM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/CSM.html): Clay, Sulphates, Mica, Carbonates, Alteration Minerals & Vegetation
+- [FII](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/FII.html): Ferrous Iron Index
+- [IOR](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/IOR.html): Iron Oxide Ratio
 
 <a id="multispectral-clouds"></a>
 

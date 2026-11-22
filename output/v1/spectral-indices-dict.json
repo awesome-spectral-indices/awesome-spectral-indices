@@ -40,7 +40,7 @@
                         "citation_count": 153,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 38.49,
+                            "percentile": 38.68,
                             "percentile_similar_age": 26.83,
                             "rank": 196,
                             "rank_similar_age": 31,
@@ -108,7 +108,7 @@
                         "citation_count": 153,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 38.49,
+                            "percentile": 38.68,
                             "percentile_similar_age": 26.83,
                             "rank": 197,
                             "rank_similar_age": 32,
@@ -177,7 +177,7 @@
                         "citation_count": 147,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 34.7,
+                            "percentile": 34.91,
                             "percentile_similar_age": 65.0,
                             "rank": 208,
                             "rank_similar_age": 22,
@@ -243,7 +243,7 @@
                         "citation_count": 39,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 14.2,
+                            "percentile": 14.47,
                             "percentile_similar_age": 9.76,
                             "rank": 273,
                             "rank_similar_age": 38,
@@ -311,7 +311,7 @@
                         "citation_count": 39,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 14.2,
+                            "percentile": 14.47,
                             "percentile_similar_age": 9.76,
                             "rank": 274,
                             "rank_similar_age": 39,
@@ -397,11 +397,11 @@
                         "citation_count": 1202,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 85.49,
-                            "percentile_similar_age": 59.09,
+                            "percentile": 85.53,
+                            "percentile_similar_age": 60.87,
                             "rank": 47,
                             "rank_similar_age": 10,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 80.75,
@@ -474,11 +474,11 @@
                         "citation_count": 1524,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 88.33,
-                            "percentile_similar_age": 86.67,
+                            "percentile": 88.36,
+                            "percentile_similar_age": 87.5,
                             "rank": 38,
                             "rank_similar_age": 3,
-                            "similar_age_count": 15
+                            "similar_age_count": 16
                         },
                         "within_application_domain": {
                             "percentile": 84.98,
@@ -545,7 +545,7 @@
                         "citation_count": 496,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 65.93,
+                            "percentile": 66.04,
                             "percentile_similar_age": 46.94,
                             "rank": 109,
                             "rank_similar_age": 27,
@@ -613,7 +613,7 @@
                         "citation_count": 1975,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 91.48,
+                            "percentile": 91.51,
                             "percentile_similar_age": 100.0,
                             "rank": 28,
                             "rank_similar_age": 1,
@@ -683,7 +683,7 @@
                         "citation_count": 1975,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 91.48,
+                            "percentile": 91.51,
                             "percentile_similar_age": 100.0,
                             "rank": 29,
                             "rank_similar_age": 2,
@@ -748,7 +748,7 @@
                         "citation_count": 40,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 14.51,
+                            "percentile": 14.78,
                             "percentile_similar_age": 50.0,
                             "rank": 272,
                             "rank_similar_age": 2,
@@ -839,7 +839,7 @@
                         "citation_count": 42,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 15.14,
+                            "percentile": 15.41,
                             "percentile_similar_age": 6.0,
                             "rank": 270,
                             "rank_similar_age": 48,
@@ -904,7 +904,7 @@
                         "citation_count": 105,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 31.86,
+                            "percentile": 32.08,
                             "percentile_similar_age": 48.21,
                             "rank": 217,
                             "rank_similar_age": 30,
@@ -971,7 +971,7 @@
                         "citation_count": 644,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 74.13,
+                            "percentile": 74.21,
                             "percentile_similar_age": 66.67,
                             "rank": 83,
                             "rank_similar_age": 3,
@@ -1044,7 +1044,7 @@
                         "citation_count": 496,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 65.93,
+                            "percentile": 66.04,
                             "percentile_similar_age": 46.94,
                             "rank": 110,
                             "rank_similar_age": 28,
@@ -1112,7 +1112,7 @@
                         "citation_count": 187,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 45.43,
+                            "percentile": 45.6,
                             "percentile_similar_age": 14.63,
                             "rank": 174,
                             "rank_similar_age": 36,
@@ -1181,7 +1181,7 @@
                         "citation_count": 187,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 45.43,
+                            "percentile": 45.6,
                             "percentile_similar_age": 14.63,
                             "rank": 175,
                             "rank_similar_age": 37,
@@ -1249,7 +1249,7 @@
                         "citation_count": 81,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 24.61,
+                            "percentile": 24.84,
                             "percentile_similar_age": 37.14,
                             "rank": 240,
                             "rank_similar_age": 45,
@@ -1318,7 +1318,7 @@
                         "citation_count": 336,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 56.47,
+                            "percentile": 56.6,
                             "percentile_similar_age": 68.29,
                             "rank": 139,
                             "rank_similar_age": 14,
@@ -1386,7 +1386,7 @@
                         "citation_count": 87,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 25.87,
+                            "percentile": 26.1,
                             "percentile_similar_age": 22.22,
                             "rank": 236,
                             "rank_similar_age": 22,
@@ -1456,7 +1456,7 @@
                         "citation_count": 80,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 23.97,
+                            "percentile": 24.21,
                             "percentile_similar_age": 9.76,
                             "rank": 242,
                             "rank_similar_age": 38,
@@ -1524,7 +1524,7 @@
                         "citation_count": 6,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 3.79,
+                            "percentile": 4.09,
                             "percentile_similar_age": null,
                             "rank": 306,
                             "rank_similar_age": null,
@@ -1590,7 +1590,7 @@
                         "citation_count": 37,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 13.25,
+                            "percentile": 13.52,
                             "percentile_similar_age": 7.84,
                             "rank": 276,
                             "rank_similar_age": 48,
@@ -1659,7 +1659,7 @@
                         "citation_count": 366,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 59.31,
+                            "percentile": 59.43,
                             "percentile_similar_age": 84.21,
                             "rank": 130,
                             "rank_similar_age": 7,
@@ -1729,7 +1729,7 @@
                         "citation_count": 35,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 12.93,
+                            "percentile": 13.21,
                             "percentile_similar_age": 12.86,
                             "rank": 277,
                             "rank_similar_age": 62,
@@ -1803,7 +1803,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 202,
                             "rank_similar_age": 22,
@@ -1876,7 +1876,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 203,
                             "rank_similar_age": 23,
@@ -1951,7 +1951,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 204,
                             "rank_similar_age": 24,
@@ -2024,7 +2024,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 205,
                             "rank_similar_age": 25,
@@ -2090,7 +2090,7 @@
                         "citation_count": 2436,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 94.64,
+                            "percentile": 94.65,
                             "percentile_similar_age": 91.53,
                             "rank": 18,
                             "rank_similar_age": 6,
@@ -2157,7 +2157,7 @@
                         "citation_count": 2436,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 94.64,
+                            "percentile": 94.65,
                             "percentile_similar_age": 91.53,
                             "rank": 19,
                             "rank_similar_age": 7,
@@ -2220,7 +2220,7 @@
                         "citation_count": 3,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 2.21,
+                            "percentile": 2.52,
                             "percentile_similar_age": 31.58,
                             "rank": 311,
                             "rank_similar_age": 14,
@@ -2287,7 +2287,7 @@
                         "citation_count": 95,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 28.39,
+                            "percentile": 28.62,
                             "percentile_similar_age": 14.63,
                             "rank": 228,
                             "rank_similar_age": 36,
@@ -2355,7 +2355,7 @@
                         "citation_count": 95,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 28.39,
+                            "percentile": 28.62,
                             "percentile_similar_age": 14.63,
                             "rank": 229,
                             "rank_similar_age": 37,
@@ -2464,7 +2464,7 @@
                         "citation_count": 180,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 43.85,
+                            "percentile": 44.03,
                             "percentile_similar_age": 44.68,
                             "rank": 179,
                             "rank_similar_age": 27,
@@ -2536,7 +2536,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 206,
                             "rank_similar_age": 26,
@@ -2608,7 +2608,7 @@
                         "citation_count": 161,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 39.75,
+                            "percentile": 39.94,
                             "percentile_similar_age": 36.59,
                             "rank": 192,
                             "rank_similar_age": 27,
@@ -2679,7 +2679,7 @@
                         "citation_count": 150,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 36.59,
+                            "percentile": 36.79,
                             "percentile_similar_age": 62.5,
                             "rank": 207,
                             "rank_similar_age": 27,
@@ -2703,6 +2703,63 @@
                     "type": "article",
                     "volume": "144",
                     "year": 2018
+                }
+            }
+        },
+        "CSM": {
+            "acronym": "CSM",
+            "bands": [
+                "S1",
+                "S2"
+            ],
+            "classification": {
+                "application_domain": "geology",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/rodreras",
+            "date_of_addition": "2026-11-14",
+            "external_variables": {},
+            "formula": "(S1 / S2)",
+            "name": "Clay, Sulphates, Mica, Carbonates, Alteration Minerals & Vegetation",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://doi.org/10.3133/b1975",
+                "source_link_semantic_scholar": null,
+                "source_link_status": "operational",
+                "source_link_type": "doi",
+                "source_metadata": {
+                    "citations_metrics": {
+                        "citation_count": 0,
+                        "date": "2026-11-22",
+                        "overall": {
+                            "percentile": 0.63,
+                            "percentile_similar_age": 4.35,
+                            "rank": 317,
+                            "rank_similar_age": 23,
+                            "similar_age_count": 23
+                        },
+                        "within_application_domain": {
+                            "percentile": 50.0,
+                            "percentile_similar_age": 100.0,
+                            "rank": 2,
+                            "rank_similar_age": 1,
+                            "similar_age_count": 1
+                        }
+                    },
+                    "how_to_cite": {
+                        "apa": "(1992). Geology and mineral resources of the Altiplano and Cordillera Occidental, Bolivia. https://doi.org/10.3133/b1975",
+                        "bibtex": "ASI_CSM"
+                    },
+                    "source": "crossref",
+                    "title": "Geology and mineral resources of the Altiplano and Cordillera Occidental, Bolivia",
+                    "type": "report",
+                    "year": 1992
                 }
             }
         },
@@ -2743,7 +2800,7 @@
                         "citation_count": 70,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 22.4,
+                            "percentile": 22.64,
                             "percentile_similar_age": 15.38,
                             "rank": 247,
                             "rank_similar_age": 23,
@@ -2811,7 +2868,7 @@
                         "citation_count": 31,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 12.62,
+                            "percentile": 12.89,
                             "percentile_similar_age": 22.37,
                             "rank": 278,
                             "rank_similar_age": 60,
@@ -2886,7 +2943,7 @@
                         "citation_count": 234,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 49.21,
+                            "percentile": 49.37,
                             "percentile_similar_age": 85.71,
                             "rank": 162,
                             "rank_similar_age": 9,
@@ -2960,7 +3017,7 @@
                         "citation_count": 234,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 49.21,
+                            "percentile": 49.37,
                             "percentile_similar_age": 85.71,
                             "rank": 163,
                             "rank_similar_age": 10,
@@ -3026,7 +3083,7 @@
                         "citation_count": 56,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 20.5,
+                            "percentile": 20.75,
                             "percentile_similar_age": 60.38,
                             "rank": 253,
                             "rank_similar_age": 22,
@@ -3093,7 +3150,7 @@
                         "citation_count": 194,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 46.06,
+                            "percentile": 46.23,
                             "percentile_similar_age": 80.36,
                             "rank": 172,
                             "rank_similar_age": 12,
@@ -3159,7 +3216,7 @@
                         "citation_count": 172,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 43.53,
+                            "percentile": 43.71,
                             "percentile_similar_age": 78.33,
                             "rank": 180,
                             "rank_similar_age": 14,
@@ -3259,7 +3316,7 @@
                         "citation_count": 291,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.31,
+                            "percentile": 53.46,
                             "percentile_similar_age": 39.22,
                             "rank": 149,
                             "rank_similar_age": 32,
@@ -3330,7 +3387,7 @@
                         "citation_count": 291,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.31,
+                            "percentile": 53.46,
                             "percentile_similar_age": 39.22,
                             "rank": 150,
                             "rank_similar_age": 33,
@@ -3401,7 +3458,7 @@
                         "citation_count": 291,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.31,
+                            "percentile": 53.46,
                             "percentile_similar_age": 39.22,
                             "rank": 151,
                             "rank_similar_age": 34,
@@ -3472,7 +3529,7 @@
                         "citation_count": 291,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.31,
+                            "percentile": 53.46,
                             "percentile_similar_age": 39.22,
                             "rank": 152,
                             "rank_similar_age": 35,
@@ -3545,7 +3602,7 @@
                         "citation_count": 291,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.31,
+                            "percentile": 53.46,
                             "percentile_similar_age": 39.22,
                             "rank": 153,
                             "rank_similar_age": 36,
@@ -3611,7 +3668,7 @@
                         "citation_count": 1253,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 86.12,
+                            "percentile": 86.16,
                             "percentile_similar_age": 45.45,
                             "rank": 45,
                             "rank_similar_age": 13,
@@ -3698,7 +3755,7 @@
                         "citation_count": 78,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 23.34,
+                            "percentile": 23.58,
                             "percentile_similar_age": 34.29,
                             "rank": 244,
                             "rank_similar_age": 47,
@@ -3767,7 +3824,7 @@
                         "citation_count": 107,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 32.49,
+                            "percentile": 32.7,
                             "percentile_similar_age": 37.04,
                             "rank": 215,
                             "rank_similar_age": 18,
@@ -3838,7 +3895,7 @@
                         "citation_count": 246,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 50.47,
+                            "percentile": 50.63,
                             "percentile_similar_age": 85.71,
                             "rank": 158,
                             "rank_similar_age": 11,
@@ -3906,7 +3963,7 @@
                         "citation_count": 303,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 54.89,
+                            "percentile": 55.03,
                             "percentile_similar_age": 62.96,
                             "rank": 144,
                             "rank_similar_age": 11,
@@ -3981,7 +4038,7 @@
                         "citation_count": 124,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 32.81,
+                            "percentile": 33.02,
                             "percentile_similar_age": 48.57,
                             "rank": 214,
                             "rank_similar_age": 37,
@@ -4046,7 +4103,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 285,
                             "rank_similar_age": 36,
@@ -4111,7 +4168,7 @@
                         "citation_count": 47,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 16.72,
+                            "percentile": 16.98,
                             "percentile_similar_age": 13.73,
                             "rank": 265,
                             "rank_similar_age": 45,
@@ -4197,7 +4254,7 @@
                         "citation_count": 8835,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 99.05,
+                            "percentile": 99.06,
                             "percentile_similar_age": 100.0,
                             "rank": 4,
                             "rank_similar_age": 1,
@@ -4284,7 +4341,7 @@
                         "citation_count": 2007,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 91.8,
+                            "percentile": 91.82,
                             "percentile_similar_age": 97.14,
                             "rank": 27,
                             "rank_similar_age": 2,
@@ -4360,7 +4417,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 298,
                             "rank_similar_age": 15,
@@ -4427,7 +4484,7 @@
                         "citation_count": 1394,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 87.7,
+                            "percentile": 87.74,
                             "percentile_similar_age": 68.18,
                             "rank": 40,
                             "rank_similar_age": 8,
@@ -4492,7 +4549,7 @@
                         "citation_count": 969,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.97,
+                            "percentile": 83.02,
                             "percentile_similar_age": 94.29,
                             "rank": 55,
                             "rank_similar_age": 3,
@@ -4557,7 +4614,7 @@
                         "citation_count": 136,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 34.07,
+                            "percentile": 34.28,
                             "percentile_similar_age": 18.6,
                             "rank": 210,
                             "rank_similar_age": 36,
@@ -4630,7 +4687,7 @@
                         "citation_count": 937,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 80.76,
+                            "percentile": 80.82,
                             "percentile_similar_age": 94.74,
                             "rank": 62,
                             "rank_similar_age": 3,
@@ -4698,7 +4755,7 @@
                         "citation_count": 152,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 37.85,
+                            "percentile": 38.05,
                             "percentile_similar_age": 71.05,
                             "rank": 198,
                             "rank_similar_age": 23,
@@ -4774,7 +4831,7 @@
                         "citation_count": 265,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 51.42,
+                            "percentile": 51.57,
                             "percentile_similar_age": 92.11,
                             "rank": 155,
                             "rank_similar_age": 7,
@@ -4799,6 +4856,51 @@
                     "type": "article",
                     "volume": "10",
                     "year": 2020
+                }
+            }
+        },
+        "FII": {
+            "acronym": "FII",
+            "bands": [
+                "G",
+                "S1",
+                "R",
+                "N"
+            ],
+            "classification": {
+                "application_domain": "geology",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/rodreras",
+            "date_of_addition": "2026-11-15",
+            "external_variables": {},
+            "formula": "(G + S1) / (R + N)",
+            "name": "Ferrous Iron Index",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://pubs.usgs.gov/sim/3190/contents/SIM3190_pam.pdf",
+                "source_link_semantic_scholar": null,
+                "source_link_status": "operational",
+                "source_link_type": "other",
+                "source_metadata": {
+                    "authors": [
+                        "Barnaby W. Rockwell"
+                    ],
+                    "how_to_cite": {
+                        "apa": "Barnaby W. Rockwell (2012). Description and Validation of an Automated Methodology for Mapping Mineralogy, Vegetation, and Hydrothermal Alteration Type from ASTER Satellite Imagery with Examples from the San Juan Mountains, Colorado. U.S. Geological Survey Scientific Investigations Map 3190. https://pubs.usgs.gov/sim/3190/contents/SIM3190_pam.pdf",
+                        "bibtex": "ASI_FII"
+                    },
+                    "journal": "U.S. Geological Survey Scientific Investigations Map 3190",
+                    "source": "contributor",
+                    "title": "Description and Validation of an Automated Methodology for Mapping Mineralogy, Vegetation, and Hydrothermal Alteration Type from ASTER Satellite Imagery with Examples from the San Juan Mountains, Colorado",
+                    "type": "report",
+                    "year": 2012
                 }
             }
         },
@@ -4842,7 +4944,7 @@
                         "citation_count": 43,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 15.46,
+                            "percentile": 15.72,
                             "percentile_similar_age": 90.32,
                             "rank": 269,
                             "rank_similar_age": 4,
@@ -4917,7 +5019,7 @@
                         "citation_count": 2967,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 96.85,
+                            "percentile": 96.86,
                             "percentile_similar_age": 97.87,
                             "rank": 11,
                             "rank_similar_age": 2,
@@ -4987,7 +5089,7 @@
                         "citation_count": 336,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 56.47,
+                            "percentile": 56.6,
                             "percentile_similar_age": 68.29,
                             "rank": 140,
                             "rank_similar_age": 15,
@@ -5056,7 +5158,7 @@
                         "citation_count": 644,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 74.13,
+                            "percentile": 74.21,
                             "percentile_similar_age": 66.67,
                             "rank": 84,
                             "rank_similar_age": 4,
@@ -5130,7 +5232,7 @@
                         "citation_count": 220,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 48.58,
+                            "percentile": 48.74,
                             "percentile_similar_age": 60.71,
                             "rank": 164,
                             "rank_similar_age": 12,
@@ -5194,11 +5296,11 @@
                         "citation_count": 607,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 72.24,
-                            "percentile_similar_age": 27.27,
+                            "percentile": 72.33,
+                            "percentile_similar_age": 30.43,
                             "rank": 89,
                             "rank_similar_age": 17,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 62.91,
@@ -5260,7 +5362,7 @@
                         "citation_count": 778,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 76.34,
+                            "percentile": 76.42,
                             "percentile_similar_age": 58.54,
                             "rank": 76,
                             "rank_similar_age": 18,
@@ -5326,7 +5428,7 @@
                         "citation_count": 689,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 75.08,
+                            "percentile": 75.16,
                             "percentile_similar_age": 63.83,
                             "rank": 80,
                             "rank_similar_age": 18,
@@ -5392,7 +5494,7 @@
                         "citation_count": 689,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 75.08,
+                            "percentile": 75.16,
                             "percentile_similar_age": 63.83,
                             "rank": 81,
                             "rank_similar_age": 19,
@@ -5460,7 +5562,7 @@
                         "citation_count": 2967,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 96.85,
+                            "percentile": 96.86,
                             "percentile_similar_age": 97.87,
                             "rank": 12,
                             "rank_similar_age": 3,
@@ -5533,7 +5635,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 182,
                             "rank_similar_age": 28,
@@ -5612,7 +5714,7 @@
                         "citation_count": 2967,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 96.85,
+                            "percentile": 96.86,
                             "percentile_similar_age": 97.87,
                             "rank": 13,
                             "rank_similar_age": 4,
@@ -5682,7 +5784,7 @@
                         "citation_count": 336,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 56.47,
+                            "percentile": 56.6,
                             "percentile_similar_age": 68.29,
                             "rank": 141,
                             "rank_similar_age": 16,
@@ -5755,7 +5857,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 184,
                             "rank_similar_age": 30,
@@ -5833,7 +5935,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 185,
                             "rank_similar_age": 31,
@@ -5900,7 +6002,7 @@
                         "citation_count": 518,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 66.56,
+                            "percentile": 66.67,
                             "percentile_similar_age": 48.98,
                             "rank": 107,
                             "rank_similar_age": 26,
@@ -5973,7 +6075,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 183,
                             "rank_similar_age": 29,
@@ -6081,7 +6183,7 @@
                         "citation_count": 2,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 1.89,
+                            "percentile": 2.2,
                             "percentile_similar_age": 2.44,
                             "rank": 312,
                             "rank_similar_age": 41,
@@ -6147,7 +6249,7 @@
                         "citation_count": 685,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 74.45,
+                            "percentile": 74.53,
                             "percentile_similar_age": 77.14,
                             "rank": 82,
                             "rank_similar_age": 9,
@@ -6210,7 +6312,7 @@
                         "citation_count": 311,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 55.21,
+                            "percentile": 55.35,
                             "percentile_similar_age": 17.07,
                             "rank": 143,
                             "rank_similar_age": 35,
@@ -6235,6 +6337,48 @@
                     "type": "article",
                     "volume": "81",
                     "year": 1998
+                }
+            }
+        },
+        "IOR": {
+            "acronym": "IOR",
+            "bands": [
+                "R",
+                "B"
+            ],
+            "classification": {
+                "application_domain": "geology",
+                "family": null,
+                "sensing_modalities": [
+                    "multispectral"
+                ]
+            },
+            "constants": {},
+            "contributor": "https://github.com/rodreras",
+            "date_of_addition": "2026-11-15",
+            "external_variables": {},
+            "formula": "(R / B)",
+            "name": "Iron Oxide Ratio",
+            "polarizations": [],
+            "reductions": {},
+            "source": {
+                "source_companions": [],
+                "source_link": "https://search.worldcat.org/search?q=bn:0045500371",
+                "source_link_semantic_scholar": null,
+                "source_link_status": "operational",
+                "source_link_type": "other",
+                "source_metadata": {
+                    "authors": [
+                        "S. A. Drury"
+                    ],
+                    "how_to_cite": {
+                        "apa": "S. A. Drury (1987). Image Interpretation in Geology. https://search.worldcat.org/search?q=bn:0045500371",
+                        "bibtex": "ASI_IOR"
+                    },
+                    "source": "contributor",
+                    "title": "Image Interpretation in Geology",
+                    "type": "book",
+                    "year": 1987
                 }
             }
         },
@@ -6273,11 +6417,11 @@
                         "citation_count": 567,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 67.51,
-                            "percentile_similar_age": 26.67,
+                            "percentile": 67.61,
+                            "percentile_similar_age": 31.25,
                             "rank": 104,
                             "rank_similar_age": 12,
-                            "similar_age_count": 15
+                            "similar_age_count": 16
                         },
                         "within_application_domain": {
                             "percentile": 56.34,
@@ -6343,7 +6487,7 @@
                         "citation_count": 710,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 75.71,
+                            "percentile": 75.79,
                             "percentile_similar_age": 89.66,
                             "rank": 78,
                             "rank_similar_age": 4,
@@ -6412,7 +6556,7 @@
                         "citation_count": 8,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 4.1,
+                            "percentile": 4.4,
                             "percentile_similar_age": 32.26,
                             "rank": 305,
                             "rank_similar_age": 22,
@@ -6485,7 +6629,7 @@
                         "citation_count": 1,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 1.58,
+                            "percentile": 1.89,
                             "percentile_similar_age": 26.32,
                             "rank": 313,
                             "rank_similar_age": 15,
@@ -6548,7 +6692,7 @@
                         "citation_count": 475,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.35,
+                            "percentile": 64.47,
                             "percentile_similar_age": 60.47,
                             "rank": 114,
                             "rank_similar_age": 18,
@@ -6617,7 +6761,7 @@
                         "citation_count": 829,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 80.13,
+                            "percentile": 80.19,
                             "percentile_similar_age": 60.78,
                             "rank": 64,
                             "rank_similar_age": 21,
@@ -6686,7 +6830,7 @@
                         "citation_count": 255,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 51.1,
+                            "percentile": 51.26,
                             "percentile_similar_age": 88.33,
                             "rank": 156,
                             "rank_similar_age": 8,
@@ -6768,7 +6912,7 @@
                         "citation_count": 84,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 25.24,
+                            "percentile": 25.47,
                             "percentile_similar_age": 37.5,
                             "rank": 238,
                             "rank_similar_age": 36,
@@ -6831,7 +6975,7 @@
                         "citation_count": 2159,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 92.43,
+                            "percentile": 92.45,
                             "percentile_similar_age": 93.33,
                             "rank": 25,
                             "rank_similar_age": 5,
@@ -6899,7 +7043,7 @@
                         "citation_count": 2314,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 93.69,
+                            "percentile": 93.71,
                             "percentile_similar_age": 84.31,
                             "rank": 21,
                             "rank_similar_age": 9,
@@ -6967,7 +7111,7 @@
                         "citation_count": 2314,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 93.69,
+                            "percentile": 93.71,
                             "percentile_similar_age": 84.31,
                             "rank": 22,
                             "rank_similar_age": 10,
@@ -7038,7 +7182,7 @@
                         "citation_count": 793,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 77.92,
+                            "percentile": 77.99,
                             "percentile_similar_age": 88.57,
                             "rank": 71,
                             "rank_similar_age": 5,
@@ -7103,7 +7247,7 @@
                         "citation_count": 2159,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 92.43,
+                            "percentile": 92.45,
                             "percentile_similar_age": 93.33,
                             "rank": 26,
                             "rank_similar_age": 6,
@@ -7174,7 +7318,7 @@
                         "citation_count": 793,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 77.92,
+                            "percentile": 77.99,
                             "percentile_similar_age": 88.57,
                             "rank": 72,
                             "rank_similar_age": 6,
@@ -7246,7 +7390,7 @@
                         "citation_count": 555,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 67.19,
+                            "percentile": 67.3,
                             "percentile_similar_age": 76.0,
                             "rank": 105,
                             "rank_similar_age": 7,
@@ -7339,7 +7483,7 @@
                         "citation_count": 245,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 49.53,
+                            "percentile": 49.69,
                             "percentile_similar_age": 29.27,
                             "rank": 161,
                             "rank_similar_age": 30,
@@ -7406,7 +7550,7 @@
                         "citation_count": 53,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 20.19,
+                            "percentile": 20.44,
                             "percentile_similar_age": 20.0,
                             "rank": 254,
                             "rank_similar_age": 21,
@@ -7473,7 +7617,7 @@
                         "citation_count": 53,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 20.19,
+                            "percentile": 20.44,
                             "percentile_similar_age": 20.0,
                             "rank": 255,
                             "rank_similar_age": 22,
@@ -7536,7 +7680,7 @@
                         "citation_count": 134,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 33.75,
+                            "percentile": 33.96,
                             "percentile_similar_age": 4.76,
                             "rank": 211,
                             "rank_similar_age": 41,
@@ -7673,7 +7817,7 @@
                         "citation_count": 366,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 59.31,
+                            "percentile": 59.43,
                             "percentile_similar_age": 50.85,
                             "rank": 131,
                             "rank_similar_age": 30,
@@ -7744,7 +7888,7 @@
                         "citation_count": 93,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 27.76,
+                            "percentile": 27.99,
                             "percentile_similar_age": 48.68,
                             "rank": 230,
                             "rank_similar_age": 40,
@@ -7818,11 +7962,11 @@
                         "citation_count": 2910,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 95.9,
-                            "percentile_similar_age": 86.21,
+                            "percentile": 95.91,
+                            "percentile_similar_age": 86.67,
                             "rank": 14,
                             "rank_similar_age": 5,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 94.84,
@@ -7887,11 +8031,11 @@
                         "citation_count": 2910,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 95.9,
-                            "percentile_similar_age": 86.21,
+                            "percentile": 95.91,
+                            "percentile_similar_age": 86.67,
                             "rank": 15,
                             "rank_similar_age": 6,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 94.84,
@@ -7951,7 +8095,7 @@
                         "citation_count": 1057,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 84.23,
+                            "percentile": 84.28,
                             "percentile_similar_age": 80.0,
                             "rank": 51,
                             "rank_similar_age": 3,
@@ -8014,7 +8158,7 @@
                         "citation_count": 1015,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 83.6,
+                            "percentile": 83.65,
                             "percentile_similar_age": 70.21,
                             "rank": 53,
                             "rank_similar_age": 15,
@@ -8084,7 +8228,7 @@
                         "citation_count": 793,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 77.92,
+                            "percentile": 77.99,
                             "percentile_similar_age": 88.57,
                             "rank": 73,
                             "rank_similar_age": 7,
@@ -8149,7 +8293,7 @@
                         "citation_count": 1049,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 83.91,
+                            "percentile": 83.96,
                             "percentile_similar_age": 62.75,
                             "rank": 52,
                             "rank_similar_age": 20,
@@ -8217,7 +8361,7 @@
                         "citation_count": 2314,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 93.69,
+                            "percentile": 93.71,
                             "percentile_similar_age": 84.31,
                             "rank": 23,
                             "rank_similar_age": 11,
@@ -8285,7 +8429,7 @@
                         "citation_count": 2314,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 93.69,
+                            "percentile": 93.71,
                             "percentile_similar_age": 84.31,
                             "rank": 24,
                             "rank_similar_age": 12,
@@ -8352,7 +8496,7 @@
                         "citation_count": 293,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.63,
+                            "percentile": 53.77,
                             "percentile_similar_age": 93.42,
                             "rank": 148,
                             "rank_similar_age": 6,
@@ -8420,7 +8564,7 @@
                         "citation_count": 97,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 29.65,
+                            "percentile": 29.87,
                             "percentile_similar_age": 46.43,
                             "rank": 224,
                             "rank_similar_age": 31,
@@ -8489,7 +8633,7 @@
                         "citation_count": 87,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 25.87,
+                            "percentile": 26.1,
                             "percentile_similar_age": 22.22,
                             "rank": 237,
                             "rank_similar_age": 23,
@@ -8557,7 +8701,7 @@
                         "citation_count": 89,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 27.44,
+                            "percentile": 27.67,
                             "percentile_similar_age": 41.18,
                             "rank": 231,
                             "rank_similar_age": 31,
@@ -8629,7 +8773,7 @@
                         "citation_count": 89,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 27.44,
+                            "percentile": 27.67,
                             "percentile_similar_age": 41.18,
                             "rank": 232,
                             "rank_similar_age": 32,
@@ -8693,7 +8837,7 @@
                         "citation_count": 6,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 3.79,
+                            "percentile": 4.09,
                             "percentile_similar_age": 2.04,
                             "rank": 307,
                             "rank_similar_age": 49,
@@ -8743,7 +8887,7 @@
                 "source_companions": [],
                 "source_link": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2",
                 "source_link_semantic_scholar": null,
-                "source_link_status": "down",
+                "source_link_status": "operational",
                 "source_link_type": "other",
                 "source_metadata": {}
             }
@@ -8786,7 +8930,7 @@
                         "citation_count": 89,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 27.44,
+                            "percentile": 27.67,
                             "percentile_similar_age": 47.37,
                             "rank": 233,
                             "rank_similar_age": 41,
@@ -8859,7 +9003,7 @@
                         "citation_count": 99,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 31.55,
+                            "percentile": 31.76,
                             "percentile_similar_age": 21.28,
                             "rank": 218,
                             "rank_similar_age": 38,
@@ -8932,7 +9076,7 @@
                         "citation_count": 99,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 31.55,
+                            "percentile": 31.76,
                             "percentile_similar_age": 21.28,
                             "rank": 219,
                             "rank_similar_age": 39,
@@ -9005,7 +9149,7 @@
                         "citation_count": 99,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 31.55,
+                            "percentile": 31.76,
                             "percentile_similar_age": 21.28,
                             "rank": 220,
                             "rank_similar_age": 40,
@@ -9074,7 +9218,7 @@
                         "citation_count": 137,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 34.38,
+                            "percentile": 34.59,
                             "percentile_similar_age": 69.81,
                             "rank": 209,
                             "rank_similar_age": 17,
@@ -9146,7 +9290,7 @@
                         "citation_count": 10,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 7.26,
+                            "percentile": 7.55,
                             "percentile_similar_age": 3.33,
                             "rank": 295,
                             "rank_similar_age": 59,
@@ -9232,7 +9376,7 @@
                         "citation_count": 79,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 23.66,
+                            "percentile": 23.9,
                             "percentile_similar_age": 21.05,
                             "rank": 243,
                             "rank_similar_age": 31,
@@ -9297,7 +9441,7 @@
                         "citation_count": 2969,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 97.79,
+                            "percentile": 97.8,
                             "percentile_similar_age": 97.96,
                             "rank": 10,
                             "rank_similar_age": 4,
@@ -9362,7 +9506,7 @@
                         "citation_count": 2619,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 95.27,
+                            "percentile": 95.28,
                             "percentile_similar_age": 93.22,
                             "rank": 16,
                             "rank_similar_age": 5,
@@ -9427,7 +9571,7 @@
                         "citation_count": 106,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 32.18,
+                            "percentile": 32.39,
                             "percentile_similar_age": null,
                             "rank": 216,
                             "rank_similar_age": null,
@@ -9489,7 +9633,7 @@
                         "citation_count": 783,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 76.66,
+                            "percentile": 76.73,
                             "percentile_similar_age": 92.59,
                             "rank": 75,
                             "rank_similar_age": 3,
@@ -9555,7 +9699,7 @@
                         "citation_count": 514,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 66.25,
+                            "percentile": 66.35,
                             "percentile_similar_age": 78.05,
                             "rank": 108,
                             "rank_similar_age": 10,
@@ -9642,7 +9786,7 @@
                         "citation_count": 78,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 23.34,
+                            "percentile": 23.58,
                             "percentile_similar_age": 34.29,
                             "rank": 245,
                             "rank_similar_age": 48,
@@ -9708,7 +9852,7 @@
                         "citation_count": 96,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 29.34,
+                            "percentile": 29.56,
                             "percentile_similar_age": 26.32,
                             "rank": 225,
                             "rank_similar_age": 29,
@@ -9807,7 +9951,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 16.98,
                             "rank": 299,
                             "rank_similar_age": 47,
@@ -9878,7 +10022,7 @@
                         "citation_count": 345,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 58.04,
+                            "percentile": 58.18,
                             "percentile_similar_age": 72.73,
                             "rank": 134,
                             "rank_similar_age": 10,
@@ -9949,7 +10093,7 @@
                         "citation_count": 345,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 58.04,
+                            "percentile": 58.18,
                             "percentile_similar_age": 72.73,
                             "rank": 135,
                             "rank_similar_age": 11,
@@ -10020,7 +10164,7 @@
                         "citation_count": 345,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 58.04,
+                            "percentile": 58.18,
                             "percentile_similar_age": 72.73,
                             "rank": 136,
                             "rank_similar_age": 12,
@@ -10091,7 +10235,7 @@
                         "citation_count": 345,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 58.04,
+                            "percentile": 58.18,
                             "percentile_similar_age": 72.73,
                             "rank": 137,
                             "rank_similar_age": 13,
@@ -10162,7 +10306,7 @@
                         "citation_count": 345,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 58.04,
+                            "percentile": 58.18,
                             "percentile_similar_age": 72.73,
                             "rank": 138,
                             "rank_similar_age": 14,
@@ -10229,7 +10373,7 @@
                         "citation_count": 420,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 60.25,
+                            "percentile": 60.38,
                             "percentile_similar_age": 40.82,
                             "rank": 127,
                             "rank_similar_age": 30,
@@ -10293,7 +10437,7 @@
                         "citation_count": 728,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 76.03,
+                            "percentile": 76.1,
                             "percentile_similar_age": 51.02,
                             "rank": 77,
                             "rank_similar_age": 25,
@@ -10360,7 +10504,7 @@
                         "citation_count": 420,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 60.25,
+                            "percentile": 60.38,
                             "percentile_similar_age": 40.82,
                             "rank": 128,
                             "rank_similar_age": 31,
@@ -10439,7 +10583,7 @@
                         "citation_count": 183,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 44.48,
+                            "percentile": 44.65,
                             "percentile_similar_age": 70.59,
                             "rank": 177,
                             "rank_similar_age": 16,
@@ -10508,7 +10652,7 @@
                         "citation_count": 23,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 11.99,
+                            "percentile": 12.26,
                             "percentile_similar_age": 5.71,
                             "rank": 280,
                             "rank_similar_age": 34,
@@ -10573,7 +10717,7 @@
                         "citation_count": 479,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.98,
+                            "percentile": 65.09,
                             "percentile_similar_age": 75.61,
                             "rank": 112,
                             "rank_similar_age": 11,
@@ -10637,11 +10781,11 @@
                         "citation_count": 816,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.81,
-                            "percentile_similar_age": 31.03,
+                            "percentile": 79.87,
+                            "percentile_similar_age": 33.33,
                             "rank": 65,
                             "rank_similar_age": 21,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 73.24,
@@ -10708,7 +10852,7 @@
                         "citation_count": 172,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 43.53,
+                            "percentile": 43.71,
                             "percentile_similar_age": 78.33,
                             "rank": 181,
                             "rank_similar_age": 15,
@@ -10772,7 +10916,7 @@
                         "citation_count": 59,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 20.82,
+                            "percentile": 21.07,
                             "percentile_similar_age": null,
                             "rank": 252,
                             "rank_similar_age": null,
@@ -10837,7 +10981,7 @@
                         "citation_count": 96,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 29.34,
+                            "percentile": 29.56,
                             "percentile_similar_age": 26.32,
                             "rank": 226,
                             "rank_similar_age": 30,
@@ -10904,7 +11048,7 @@
                         "citation_count": 98,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 30.28,
+                            "percentile": 30.5,
                             "percentile_similar_age": 19.51,
                             "rank": 223,
                             "rank_similar_age": 35,
@@ -10972,7 +11116,7 @@
                         "citation_count": 61,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 21.45,
+                            "percentile": 21.7,
                             "percentile_similar_age": 11.11,
                             "rank": 250,
                             "rank_similar_age": 25,
@@ -11044,7 +11188,7 @@
                         "citation_count": 49,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 17.98,
+                            "percentile": 18.24,
                             "percentile_similar_age": 30.26,
                             "rank": 261,
                             "rank_similar_age": 54,
@@ -11113,7 +11257,7 @@
                         "citation_count": 49,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 17.98,
+                            "percentile": 18.24,
                             "percentile_similar_age": 8.47,
                             "rank": 262,
                             "rank_similar_age": 55,
@@ -11180,7 +11324,7 @@
                         "citation_count": 98,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 30.28,
+                            "percentile": 30.5,
                             "percentile_similar_age": 19.51,
                             "rank": 222,
                             "rank_similar_age": 34,
@@ -11246,7 +11390,7 @@
                         "citation_count": 84,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 25.24,
+                            "percentile": 25.47,
                             "percentile_similar_age": 28.0,
                             "rank": 239,
                             "rank_similar_age": 19,
@@ -11314,7 +11458,7 @@
                         "citation_count": 479,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.98,
+                            "percentile": 65.09,
                             "percentile_similar_age": 75.61,
                             "rank": 113,
                             "rank_similar_age": 12,
@@ -11402,7 +11546,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 286,
                             "rank_similar_age": 37,
@@ -11601,7 +11745,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 287,
                             "rank_similar_age": 38,
@@ -11668,11 +11812,11 @@
                         "citation_count": 1273,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 87.38,
-                            "percentile_similar_age": 65.52,
+                            "percentile": 87.42,
+                            "percentile_similar_age": 66.67,
                             "rank": 41,
                             "rank_similar_age": 11,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 83.57,
@@ -11737,7 +11881,7 @@
                         "citation_count": 12,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 7.57,
+                            "percentile": 7.86,
                             "percentile_similar_age": 4.0,
                             "rank": 294,
                             "rank_similar_age": 25,
@@ -11804,7 +11948,7 @@
                         "citation_count": 366,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 59.31,
+                            "percentile": 59.43,
                             "percentile_similar_age": 50.85,
                             "rank": 132,
                             "rank_similar_age": 31,
@@ -11877,7 +12021,7 @@
                         "citation_count": 161,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 39.75,
+                            "percentile": 39.94,
                             "percentile_similar_age": 36.59,
                             "rank": 193,
                             "rank_similar_age": 28,
@@ -12013,7 +12157,7 @@
                         "citation_count": 49,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 17.98,
+                            "percentile": 18.24,
                             "percentile_similar_age": 30.26,
                             "rank": 263,
                             "rank_similar_age": 55,
@@ -12077,7 +12221,7 @@
                         "citation_count": 196,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 46.37,
+                            "percentile": 46.54,
                             "percentile_similar_age": 68.42,
                             "rank": 171,
                             "rank_similar_age": 13,
@@ -12207,7 +12351,7 @@
                         "citation_count": 61,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 21.45,
+                            "percentile": 21.7,
                             "percentile_similar_age": 11.11,
                             "rank": 251,
                             "rank_similar_age": 26,
@@ -12271,7 +12415,7 @@
                         "citation_count": 979,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 83.28,
+                            "percentile": 83.33,
                             "percentile_similar_age": 100.0,
                             "rank": 54,
                             "rank_similar_age": 1,
@@ -12357,7 +12501,7 @@
                         "citation_count": 81,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 24.61,
+                            "percentile": 24.84,
                             "percentile_similar_age": 53.33,
                             "rank": 241,
                             "rank_similar_age": 30,
@@ -12436,7 +12580,7 @@
                         "citation_count": 182,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 44.16,
+                            "percentile": 44.34,
                             "percentile_similar_age": 83.02,
                             "rank": 178,
                             "rank_similar_age": 10,
@@ -12499,11 +12643,11 @@
                         "citation_count": 373,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 59.62,
-                            "percentile_similar_age": 3.45,
+                            "percentile": 59.75,
+                            "percentile_similar_age": 6.67,
                             "rank": 129,
                             "rank_similar_age": 29,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 46.01,
@@ -12564,7 +12708,7 @@
                         "citation_count": 449,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 60.88,
+                            "percentile": 61.01,
                             "percentile_similar_age": 70.73,
                             "rank": 125,
                             "rank_similar_age": 13,
@@ -12631,11 +12775,11 @@
                         "citation_count": 871,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 80.44,
-                            "percentile_similar_age": 34.48,
+                            "percentile": 80.5,
+                            "percentile_similar_age": 36.67,
                             "rank": 63,
                             "rank_similar_age": 20,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 73.71,
@@ -12698,7 +12842,7 @@
                         "citation_count": 52,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 19.56,
+                            "percentile": 19.81,
                             "percentile_similar_age": 35.53,
                             "rank": 256,
                             "rank_similar_age": 50,
@@ -12765,7 +12909,7 @@
                         "citation_count": 52,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 19.56,
+                            "percentile": 19.81,
                             "percentile_similar_age": 35.53,
                             "rank": 257,
                             "rank_similar_age": 51,
@@ -12833,7 +12977,7 @@
                         "citation_count": 255,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 51.1,
+                            "percentile": 51.26,
                             "percentile_similar_age": 88.33,
                             "rank": 157,
                             "rank_similar_age": 9,
@@ -12903,7 +13047,7 @@
                         "citation_count": 151,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 37.54,
+                            "percentile": 37.74,
                             "percentile_similar_age": 65.71,
                             "rank": 199,
                             "rank_similar_age": 25,
@@ -12972,7 +13116,7 @@
                         "citation_count": 151,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 37.54,
+                            "percentile": 37.74,
                             "percentile_similar_age": 65.71,
                             "rank": 200,
                             "rank_similar_age": 26,
@@ -13041,7 +13185,7 @@
                         "citation_count": 151,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 37.54,
+                            "percentile": 37.74,
                             "percentile_similar_age": 65.71,
                             "rank": 201,
                             "rank_similar_age": 27,
@@ -13109,7 +13253,7 @@
                         "citation_count": 88,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 26.5,
+                            "percentile": 26.73,
                             "percentile_similar_age": 30.77,
                             "rank": 234,
                             "rank_similar_age": 19,
@@ -13178,7 +13322,7 @@
                         "citation_count": 88,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 26.5,
+                            "percentile": 26.73,
                             "percentile_similar_age": 30.77,
                             "rank": 235,
                             "rank_similar_age": 20,
@@ -13284,7 +13428,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 186,
                             "rank_similar_age": 32,
@@ -13358,7 +13502,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 187,
                             "rank_similar_age": 33,
@@ -13432,7 +13576,7 @@
                         "citation_count": 170,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 42.9,
+                            "percentile": 43.08,
                             "percentile_similar_age": 42.55,
                             "rank": 188,
                             "rank_similar_age": 34,
@@ -13530,7 +13674,7 @@
                         "citation_count": 297,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 53.94,
+                            "percentile": 54.09,
                             "percentile_similar_age": 37.14,
                             "rank": 147,
                             "rank_similar_age": 23,
@@ -13605,7 +13749,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 92,
                             "rank_similar_age": 12,
@@ -13680,7 +13824,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 93,
                             "rank_similar_age": 13,
@@ -13755,7 +13899,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 94,
                             "rank_similar_age": 14,
@@ -13830,7 +13974,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 95,
                             "rank_similar_age": 15,
@@ -13905,7 +14049,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 96,
                             "rank_similar_age": 16,
@@ -13980,7 +14124,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 97,
                             "rank_similar_age": 17,
@@ -14045,7 +14189,7 @@
                         "citation_count": 2568,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 94.95,
+                            "percentile": 94.97,
                             "percentile_similar_age": 87.23,
                             "rank": 17,
                             "rank_similar_age": 7,
@@ -14115,7 +14259,7 @@
                         "citation_count": 28,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 12.3,
+                            "percentile": 12.58,
                             "percentile_similar_age": 25.0,
                             "rank": 279,
                             "rank_similar_age": 46,
@@ -14182,7 +14326,7 @@
                         "citation_count": 163,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 40.69,
+                            "percentile": 40.88,
                             "percentile_similar_age": 75.0,
                             "rank": 189,
                             "rank_similar_age": 20,
@@ -14248,7 +14392,7 @@
                         "citation_count": 67,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 22.08,
+                            "percentile": 22.33,
                             "percentile_similar_age": 28.57,
                             "rank": 248,
                             "rank_similar_age": 41,
@@ -14315,11 +14459,11 @@
                         "citation_count": 1931,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 89.59,
-                            "percentile_similar_age": 90.91,
+                            "percentile": 89.62,
+                            "percentile_similar_age": 91.3,
                             "rank": 34,
                             "rank_similar_age": 3,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 86.85,
@@ -14382,11 +14526,11 @@
                         "citation_count": 1931,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 89.59,
-                            "percentile_similar_age": 90.91,
+                            "percentile": 89.62,
+                            "percentile_similar_age": 91.3,
                             "rank": 35,
                             "rank_similar_age": 4,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 86.85,
@@ -14451,7 +14595,7 @@
                         "citation_count": 218,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 48.26,
+                            "percentile": 48.43,
                             "percentile_similar_age": 57.69,
                             "rank": 165,
                             "rank_similar_age": 12,
@@ -14521,7 +14665,7 @@
                         "citation_count": 218,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 48.26,
+                            "percentile": 48.43,
                             "percentile_similar_age": 57.69,
                             "rank": 166,
                             "rank_similar_age": 13,
@@ -14596,7 +14740,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 98,
                             "rank_similar_age": 18,
@@ -14671,7 +14815,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 99,
                             "rank_similar_age": 19,
@@ -14746,7 +14890,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 100,
                             "rank_similar_age": 20,
@@ -14813,7 +14957,7 @@
                         "citation_count": 1166,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 84.86,
+                            "percentile": 84.91,
                             "percentile_similar_age": 93.02,
                             "rank": 49,
                             "rank_similar_age": 4,
@@ -14888,7 +15032,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 101,
                             "rank_similar_age": 21,
@@ -14963,7 +15107,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 102,
                             "rank_similar_age": 22,
@@ -15038,7 +15182,7 @@
                         "citation_count": 571,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.29,
+                            "percentile": 71.38,
                             "percentile_similar_age": 73.17,
                             "rank": 103,
                             "rank_similar_age": 23,
@@ -15105,7 +15249,7 @@
                         "citation_count": 10,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 7.26,
+                            "percentile": 7.55,
                             "percentile_similar_age": 4.88,
                             "rank": 296,
                             "rank_similar_age": 40,
@@ -15171,11 +15315,11 @@
                         "citation_count": 642,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 73.19,
-                            "percentile_similar_age": 40.91,
+                            "percentile": 73.27,
+                            "percentile_similar_age": 43.48,
                             "rank": 86,
                             "rank_similar_age": 14,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 64.32,
@@ -15240,11 +15384,11 @@
                         "citation_count": 642,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 73.19,
-                            "percentile_similar_age": 40.91,
+                            "percentile": 73.27,
+                            "percentile_similar_age": 43.48,
                             "rank": 87,
                             "rank_similar_age": 15,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 64.32,
@@ -15308,11 +15452,11 @@
                         "citation_count": 642,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 73.19,
-                            "percentile_similar_age": 40.91,
+                            "percentile": 73.27,
+                            "percentile_similar_age": 43.48,
                             "rank": 88,
                             "rank_similar_age": 16,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 64.32,
@@ -15377,7 +15521,7 @@
                         "citation_count": 644,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 74.13,
+                            "percentile": 74.21,
                             "percentile_similar_age": 66.67,
                             "rank": 85,
                             "rank_similar_age": 5,
@@ -15443,7 +15587,7 @@
                         "citation_count": 1253,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 86.12,
+                            "percentile": 86.16,
                             "percentile_similar_age": 45.45,
                             "rank": 46,
                             "rank_similar_age": 14,
@@ -15511,7 +15655,7 @@
                         "citation_count": 163,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 40.69,
+                            "percentile": 40.88,
                             "percentile_similar_age": 75.0,
                             "rank": 190,
                             "rank_similar_age": 16,
@@ -15579,11 +15723,11 @@
                         "citation_count": 1273,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 87.38,
-                            "percentile_similar_age": 65.52,
+                            "percentile": 87.42,
+                            "percentile_similar_age": 66.67,
                             "rank": 42,
                             "rank_similar_age": 12,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 83.57,
@@ -15654,7 +15798,7 @@
                         "citation_count": 214,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 47.63,
+                            "percentile": 47.8,
                             "percentile_similar_age": 44.44,
                             "rank": 167,
                             "rank_similar_age": 16,
@@ -15727,7 +15871,7 @@
                         "citation_count": 555,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 67.19,
+                            "percentile": 67.3,
                             "percentile_similar_age": 76.0,
                             "rank": 106,
                             "rank_similar_age": 8,
@@ -15794,7 +15938,7 @@
                         "citation_count": 96,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 29.34,
+                            "percentile": 29.56,
                             "percentile_similar_age": 39.29,
                             "rank": 227,
                             "rank_similar_age": 18,
@@ -15860,11 +16004,11 @@
                         "citation_count": 49,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 17.98,
-                            "percentile_similar_age": 6.67,
+                            "percentile": 18.24,
+                            "percentile_similar_age": 12.5,
                             "rank": 264,
                             "rank_similar_age": 15,
-                            "similar_age_count": 15
+                            "similar_age_count": 16
                         },
                         "within_application_domain": {
                             "percentile": 15.96,
@@ -15925,7 +16069,7 @@
                         "citation_count": 187,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 45.43,
+                            "percentile": 45.6,
                             "percentile_similar_age": 14.63,
                             "rank": 176,
                             "rank_similar_age": 38,
@@ -15993,7 +16137,7 @@
                         "citation_count": 163,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 40.69,
+                            "percentile": 40.88,
                             "percentile_similar_age": 75.0,
                             "rank": 191,
                             "rank_similar_age": 22,
@@ -16057,7 +16201,7 @@
                         "citation_count": 585,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.92,
+                            "percentile": 72.01,
                             "percentile_similar_age": 50.0,
                             "rank": 90,
                             "rank_similar_age": 2,
@@ -16157,7 +16301,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 288,
                             "rank_similar_age": 39,
@@ -16266,7 +16410,7 @@
                         "citation_count": 4,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 2.52,
+                            "percentile": 2.83,
                             "percentile_similar_age": 36.84,
                             "rank": 310,
                             "rank_similar_age": 13,
@@ -16335,7 +16479,7 @@
                         "citation_count": 710,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 75.71,
+                            "percentile": 75.79,
                             "percentile_similar_age": 89.66,
                             "rank": 79,
                             "rank_similar_age": 5,
@@ -16406,7 +16550,7 @@
                         "citation_count": 129,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 33.12,
+                            "percentile": 33.33,
                             "percentile_similar_age": 60.0,
                             "rank": 213,
                             "rank_similar_age": 25,
@@ -16471,7 +16615,7 @@
                         "citation_count": 42,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 15.14,
+                            "percentile": 15.41,
                             "percentile_similar_age": 9.3,
                             "rank": 271,
                             "rank_similar_age": 40,
@@ -16544,7 +16688,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 115,
                             "rank_similar_age": 25,
@@ -16617,7 +16761,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 116,
                             "rank_similar_age": 26,
@@ -16690,7 +16834,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 117,
                             "rank_similar_age": 27,
@@ -16763,7 +16907,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 118,
                             "rank_similar_age": 28,
@@ -16837,7 +16981,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 119,
                             "rank_similar_age": 29,
@@ -16927,11 +17071,11 @@
                         "citation_count": 1202,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 85.49,
-                            "percentile_similar_age": 59.09,
+                            "percentile": 85.53,
+                            "percentile_similar_age": 60.87,
                             "rank": 48,
                             "rank_similar_age": 11,
-                            "similar_age_count": 22
+                            "similar_age_count": 23
                         },
                         "within_application_domain": {
                             "percentile": 80.75,
@@ -17004,7 +17148,7 @@
                         "citation_count": 6652,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 98.42,
+                            "percentile": 98.43,
                             "percentile_similar_age": 100.0,
                             "rank": 6,
                             "rank_similar_age": 1,
@@ -17078,11 +17222,11 @@
                         "citation_count": 315,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 55.52,
-                            "percentile_similar_age": 20.0,
+                            "percentile": 55.66,
+                            "percentile_similar_age": 25.0,
                             "rank": 142,
                             "rank_similar_age": 13,
-                            "similar_age_count": 15
+                            "similar_age_count": 16
                         },
                         "within_application_domain": {
                             "percentile": 42.25,
@@ -17178,7 +17322,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 289,
                             "rank_similar_age": 40,
@@ -17251,7 +17395,7 @@
                         "citation_count": 366,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 59.31,
+                            "percentile": 59.43,
                             "percentile_similar_age": 50.85,
                             "rank": 133,
                             "rank_similar_age": 32,
@@ -17329,7 +17473,7 @@
                         "citation_count": 161,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 39.75,
+                            "percentile": 39.94,
                             "percentile_similar_age": 36.59,
                             "rank": 194,
                             "rank_similar_age": 29,
@@ -17401,7 +17545,7 @@
                         "citation_count": 38,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 13.56,
+                            "percentile": 13.84,
                             "percentile_similar_age": 87.1,
                             "rank": 275,
                             "rank_similar_age": 5,
@@ -17474,7 +17618,7 @@
                         "citation_count": 45,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 16.4,
+                            "percentile": 16.67,
                             "percentile_similar_age": 18.57,
                             "rank": 266,
                             "rank_similar_age": 58,
@@ -17546,7 +17690,7 @@
                         "citation_count": 496,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 65.93,
+                            "percentile": 66.04,
                             "percentile_similar_age": 46.94,
                             "rank": 111,
                             "rank_similar_age": 29,
@@ -17684,7 +17828,7 @@
                         "citation_count": 16,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 8.2,
+                            "percentile": 8.49,
                             "percentile_similar_age": 1.79,
                             "rank": 292,
                             "rank_similar_age": 56,
@@ -17772,7 +17916,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 290,
                             "rank_similar_age": 41,
@@ -17834,7 +17978,7 @@
                         "citation_count": 2324,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 94.01,
+                            "percentile": 94.03,
                             "percentile_similar_age": 100.0,
                             "rank": 20,
                             "rank_similar_age": 1,
@@ -17898,11 +18042,11 @@
                         "citation_count": 441,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 60.57,
-                            "percentile_similar_age": 13.04,
+                            "percentile": 60.69,
+                            "percentile_similar_age": 16.67,
                             "rank": 126,
                             "rank_similar_age": 21,
-                            "similar_age_count": 23
+                            "similar_age_count": 24
                         },
                         "within_application_domain": {
                             "percentile": 47.42,
@@ -17966,11 +18110,11 @@
                         "citation_count": 1273,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 87.38,
-                            "percentile_similar_age": 65.52,
+                            "percentile": 87.42,
+                            "percentile_similar_age": 66.67,
                             "rank": 43,
                             "rank_similar_age": 13,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 83.57,
@@ -18034,11 +18178,11 @@
                         "citation_count": 1273,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 87.38,
-                            "percentile_similar_age": 65.52,
+                            "percentile": 87.42,
+                            "percentile_similar_age": 66.67,
                             "rank": 44,
                             "rank_similar_age": 14,
-                            "similar_age_count": 29
+                            "similar_age_count": 30
                         },
                         "within_application_domain": {
                             "percentile": 83.57,
@@ -18104,7 +18248,7 @@
                         "citation_count": 6,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 3.79,
+                            "percentile": 4.09,
                             "percentile_similar_age": 47.37,
                             "rank": 308,
                             "rank_similar_age": 11,
@@ -18174,7 +18318,7 @@
                         "citation_count": 6,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 3.79,
+                            "percentile": 4.09,
                             "percentile_similar_age": 47.37,
                             "rank": 309,
                             "rank_similar_age": 12,
@@ -18294,7 +18438,7 @@
                         "citation_count": 20,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 10.41,
+                            "percentile": 10.69,
                             "percentile_similar_age": 33.96,
                             "rank": 291,
                             "rank_similar_age": 42,
@@ -18360,9 +18504,9 @@
                         "citation_count": 0,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 0.32,
+                            "percentile": 0.63,
                             "percentile_similar_age": 5.26,
-                            "rank": 317,
+                            "rank": 318,
                             "rank_similar_age": 19,
                             "similar_age_count": 19
                         },
@@ -18426,7 +18570,7 @@
                         "citation_count": 45,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 16.4,
+                            "percentile": 16.67,
                             "percentile_similar_age": 18.57,
                             "rank": 267,
                             "rank_similar_age": 59,
@@ -18540,7 +18684,7 @@
                         "citation_count": 130,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 33.44,
+                            "percentile": 33.65,
                             "percentile_similar_age": 51.43,
                             "rank": 212,
                             "rank_similar_age": 35,
@@ -18610,7 +18754,7 @@
                         "citation_count": 1759,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 88.96,
+                            "percentile": 88.99,
                             "percentile_similar_age": 65.31,
                             "rank": 36,
                             "rank_similar_age": 18,
@@ -18681,7 +18825,7 @@
                         "citation_count": 1759,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 88.96,
+                            "percentile": 88.99,
                             "percentile_similar_age": 65.31,
                             "rank": 37,
                             "rank_similar_age": 19,
@@ -18752,7 +18896,7 @@
                         "citation_count": 793,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 77.92,
+                            "percentile": 77.99,
                             "percentile_similar_age": 88.57,
                             "rank": 74,
                             "rank_similar_age": 8,
@@ -18819,7 +18963,7 @@
                         "citation_count": 301,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 54.26,
+                            "percentile": 54.4,
                             "percentile_similar_age": 40.0,
                             "rank": 146,
                             "rank_similar_age": 22,
@@ -18884,7 +19028,7 @@
                         "citation_count": 78,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 23.34,
+                            "percentile": 23.58,
                             "percentile_similar_age": null,
                             "rank": 246,
                             "rank_similar_age": null,
@@ -18951,7 +19095,7 @@
                         "citation_count": 302,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 54.57,
+                            "percentile": 54.72,
                             "percentile_similar_age": 72.41,
                             "rank": 145,
                             "rank_similar_age": 9,
@@ -19026,7 +19170,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 56,
                             "rank_similar_age": 1,
@@ -19102,7 +19246,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 57,
                             "rank_similar_age": 2,
@@ -19178,7 +19322,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 58,
                             "rank_similar_age": 3,
@@ -19254,7 +19398,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 59,
                             "rank_similar_age": 4,
@@ -19330,7 +19474,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 60,
                             "rank_similar_age": 5,
@@ -19406,7 +19550,7 @@
                         "citation_count": 961,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 82.65,
+                            "percentile": 82.7,
                             "percentile_similar_age": 100.0,
                             "rank": 61,
                             "rank_similar_age": 6,
@@ -19475,7 +19619,7 @@
                         "citation_count": 44,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 15.77,
+                            "percentile": 16.04,
                             "percentile_similar_age": 25.0,
                             "rank": 268,
                             "rank_similar_age": 58,
@@ -19555,7 +19699,7 @@
                         "citation_count": 157,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 38.8,
+                            "percentile": 38.99,
                             "percentile_similar_age": null,
                             "rank": 195,
                             "rank_similar_age": null,
@@ -19625,7 +19769,7 @@
                         "citation_count": 67,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 22.08,
+                            "percentile": 22.33,
                             "percentile_similar_age": 31.43,
                             "rank": 249,
                             "rank_similar_age": 50,
@@ -19766,7 +19910,7 @@
                         "citation_count": 16,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 8.2,
+                            "percentile": 8.49,
                             "percentile_similar_age": 20.75,
                             "rank": 293,
                             "rank_similar_age": 43,
@@ -19831,7 +19975,7 @@
                         "citation_count": 1510,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 88.01,
+                            "percentile": 88.05,
                             "percentile_similar_age": 63.41,
                             "rank": 39,
                             "rank_similar_age": 16,
@@ -19934,7 +20078,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 120,
                             "rank_similar_age": 30,
@@ -20007,7 +20151,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 121,
                             "rank_similar_age": 31,
@@ -20080,7 +20224,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 122,
                             "rank_similar_age": 32,
@@ -20153,7 +20297,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 123,
                             "rank_similar_age": 33,
@@ -20227,7 +20371,7 @@
                         "citation_count": 473,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 64.04,
+                            "percentile": 64.15,
                             "percentile_similar_age": 41.46,
                             "rank": 124,
                             "rank_similar_age": 34,
@@ -20298,7 +20442,7 @@
                         "citation_count": 1972,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 90.85,
+                            "percentile": 90.88,
                             "percentile_similar_age": 73.47,
                             "rank": 30,
                             "rank_similar_age": 14,
@@ -20369,7 +20513,7 @@
                         "citation_count": 1972,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 90.85,
+                            "percentile": 90.88,
                             "percentile_similar_age": 73.47,
                             "rank": 31,
                             "rank_similar_age": 15,
@@ -20436,7 +20580,7 @@
                         "citation_count": 194,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 46.06,
+                            "percentile": 46.23,
                             "percentile_similar_age": 80.36,
                             "rank": 173,
                             "rank_similar_age": 13,
@@ -20508,7 +20652,7 @@
                         "citation_count": 246,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 50.47,
+                            "percentile": 50.63,
                             "percentile_similar_age": 85.71,
                             "rank": 159,
                             "rank_similar_age": 12,
@@ -20580,7 +20724,7 @@
                         "citation_count": 22,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 11.67,
+                            "percentile": 11.95,
                             "percentile_similar_age": 23.33,
                             "rank": 281,
                             "rank_similar_age": 47,
@@ -20650,7 +20794,7 @@
                         "citation_count": 22,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 11.67,
+                            "percentile": 11.95,
                             "percentile_similar_age": 23.33,
                             "rank": 282,
                             "rank_similar_age": 48,
@@ -20720,7 +20864,7 @@
                         "citation_count": 99,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 31.55,
+                            "percentile": 31.76,
                             "percentile_similar_age": 21.28,
                             "rank": 221,
                             "rank_similar_age": 41,
@@ -20790,7 +20934,7 @@
                         "citation_count": 1972,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 90.85,
+                            "percentile": 90.88,
                             "percentile_similar_age": 73.47,
                             "rank": 32,
                             "rank_similar_age": 16,
@@ -20856,7 +21000,7 @@
                         "citation_count": 52,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 19.56,
+                            "percentile": 19.81,
                             "percentile_similar_age": 3.7,
                             "rank": 258,
                             "rank_similar_age": 27,
@@ -20926,7 +21070,7 @@
                         "citation_count": 1972,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 90.85,
+                            "percentile": 90.88,
                             "percentile_similar_age": 73.47,
                             "rank": 33,
                             "rank_similar_age": 17,
@@ -20998,7 +21142,7 @@
                         "citation_count": 22,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 11.67,
+                            "percentile": 11.95,
                             "percentile_similar_age": 23.33,
                             "rank": 283,
                             "rank_similar_age": 49,
@@ -21069,7 +21213,7 @@
                         "citation_count": 246,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 50.47,
+                            "percentile": 50.63,
                             "percentile_similar_age": 85.71,
                             "rank": 160,
                             "rank_similar_age": 13,
@@ -21141,7 +21285,7 @@
                         "citation_count": 22,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 11.67,
+                            "percentile": 11.95,
                             "percentile_similar_age": 23.33,
                             "rank": 284,
                             "rank_similar_age": 50,
@@ -21205,7 +21349,7 @@
                         "citation_count": 204,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 47.32,
+                            "percentile": 47.48,
                             "percentile_similar_age": 56.0,
                             "rank": 168,
                             "rank_similar_age": 12,
@@ -21270,7 +21414,7 @@
                         "citation_count": 204,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 47.32,
+                            "percentile": 47.48,
                             "percentile_similar_age": 56.0,
                             "rank": 169,
                             "rank_similar_age": 13,
@@ -21349,7 +21493,7 @@
                         "citation_count": 1,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 1.58,
+                            "percentile": 1.89,
                             "percentile_similar_age": 26.32,
                             "rank": 314,
                             "rank_similar_age": 16,
@@ -21428,7 +21572,7 @@
                         "citation_count": 1,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 1.58,
+                            "percentile": 1.89,
                             "percentile_similar_age": 26.32,
                             "rank": 315,
                             "rank_similar_age": 17,
@@ -21507,7 +21651,7 @@
                         "citation_count": 1,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 1.58,
+                            "percentile": 1.89,
                             "percentile_similar_age": 26.32,
                             "rank": 316,
                             "rank_similar_age": 18,
@@ -21584,7 +21728,7 @@
                         "citation_count": 1100,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 84.54,
+                            "percentile": 84.59,
                             "percentile_similar_age": 64.71,
                             "rank": 50,
                             "rank_similar_age": 19,
@@ -21655,7 +21799,7 @@
                         "citation_count": 288,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 51.74,
+                            "percentile": 51.89,
                             "percentile_similar_age": 20.0,
                             "rank": 154,
                             "rank_similar_age": 9,
@@ -21721,7 +21865,7 @@
                         "citation_count": 51,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 18.61,
+                            "percentile": 18.87,
                             "percentile_similar_age": 25.71,
                             "rank": 259,
                             "rank_similar_age": 53,
@@ -21787,7 +21931,7 @@
                         "citation_count": 51,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 18.61,
+                            "percentile": 18.87,
                             "percentile_similar_age": 25.71,
                             "rank": 260,
                             "rank_similar_age": 54,
@@ -21855,7 +21999,7 @@
                         "citation_count": 583,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 71.61,
+                            "percentile": 71.7,
                             "percentile_similar_age": 92.11,
                             "rank": 91,
                             "rank_similar_age": 4,
@@ -21920,7 +22064,7 @@
                         "citation_count": 201,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 46.69,
+                            "percentile": 46.86,
                             "percentile_similar_age": 39.39,
                             "rank": 170,
                             "rank_similar_age": 21,
@@ -21993,7 +22137,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 297,
                             "rank_similar_age": 14,
@@ -22094,7 +22238,7 @@
                         "citation_count": 798,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.5,
+                            "percentile": 79.56,
                             "percentile_similar_age": 100.0,
                             "rank": 66,
                             "rank_similar_age": 1,
@@ -22177,7 +22321,7 @@
                         "citation_count": 798,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.5,
+                            "percentile": 79.56,
                             "percentile_similar_age": 100.0,
                             "rank": 67,
                             "rank_similar_age": 2,
@@ -22260,7 +22404,7 @@
                         "citation_count": 798,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.5,
+                            "percentile": 79.56,
                             "percentile_similar_age": 100.0,
                             "rank": 68,
                             "rank_similar_age": 3,
@@ -22343,7 +22487,7 @@
                         "citation_count": 798,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.5,
+                            "percentile": 79.56,
                             "percentile_similar_age": 100.0,
                             "rank": 69,
                             "rank_similar_age": 4,
@@ -22427,7 +22571,7 @@
                         "citation_count": 798,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 79.5,
+                            "percentile": 79.56,
                             "percentile_similar_age": 100.0,
                             "rank": 70,
                             "rank_similar_age": 5,
@@ -22495,7 +22639,7 @@
                         "citation_count": 2969,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 97.79,
+                            "percentile": 97.8,
                             "percentile_similar_age": 97.96,
                             "rank": 8,
                             "rank_similar_age": 2,
@@ -22562,7 +22706,7 @@
                         "citation_count": 2969,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 97.79,
+                            "percentile": 97.8,
                             "percentile_similar_age": 97.96,
                             "rank": 9,
                             "rank_similar_age": 3,
@@ -22637,7 +22781,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 300,
                             "rank_similar_age": 17,
@@ -22718,7 +22862,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 301,
                             "rank_similar_age": 18,
@@ -22794,7 +22938,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 302,
                             "rank_similar_age": 19,
@@ -22870,7 +23014,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 303,
                             "rank_similar_age": 20,
@@ -22946,7 +23090,7 @@
                         "citation_count": 9,
                         "date": "2026-11-22",
                         "overall": {
-                            "percentile": 6.62,
+                            "percentile": 6.92,
                             "percentile_similar_age": 58.06,
                             "rank": 304,
                             "rank_similar_age": 21,

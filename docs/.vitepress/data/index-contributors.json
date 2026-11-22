@@ -240,5 +240,16 @@
         "link": "https://github.com/remi-braun"
       }
     ]
+  },
+  {
+    "avatar": "https://github.com/rodreras.png",
+    "name": "rodreras",
+    "title": "Index Contributor",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/rodreras"
+      }
+    ]
   }
 ]

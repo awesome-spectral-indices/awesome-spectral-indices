@@ -100,6 +100,9 @@ submitted through the usual contribution process.
 - Added DRS (Distance Red SWIR) and NDRS (Normalized Distance Red SWIR) to v1
   as multispectral vegetation indices. NDRS uses AOI-scoped spatial minimum
   and maximum reductions to normalize DRS.
+- Added IOR (Iron Oxide Ratio), FII (Ferrous Iron Index), and CSM (Clay,
+  Sulphates, Mica, Carbonates, Alteration Minerals & Vegetation) to v1 as
+  multispectral geology indices.
 - Added a catalogue search page with:
   - immediate filtering by catalogue key, acronym, name, and
     application domain;
