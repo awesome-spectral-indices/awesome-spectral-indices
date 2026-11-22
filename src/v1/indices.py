@@ -3782,20 +3782,43 @@ spindex = SpectralIndices(
             date_of_addition="2026-10-29",
             contributor="https://github.com/Franziska279",
         ),
-        FIR=SpectralIndex(
+        IOR=SpectralIndex(
             acronym="IOR",
-            name="Iron Oxides Ratio",
+            name="Iron Oxide Ratio",
             formula="(R / B)",
-            source={"source_link": "https://search.worldcat.org/search?q=bn:0045500371"},
+            source={
+                "source_link": "https://search.worldcat.org/search?q=bn:0045500371",
+                "source_metadata": {
+                    "authors": [
+                        "S. A. Drury"
+                    ],
+                    "source": "contributor",
+                    "title": "Image Interpretation in Geology",
+                    "type": "book",
+                    "year": 1987
+                }
+            },
             classification={"application_domain": "geology"},
             date_of_addition="2026-11-15",
             contributor="https://github.com/rodreras",
         ),
-        FeII=SpectralIndex(
-            acronym="FeII",
-            name="Ferrous Iron (Coarse Grained Ferric Iron)",
+        FII=SpectralIndex(
+            acronym="FII",
+            name="Ferrous Iron Index",
             formula="(G + S1) / (R + N)",
-            source={"source_link": "https://pubs.usgs.gov/sim/3190/contents/SIM3190_pam.pdf"},
+            source={
+                "source_link": "https://pubs.usgs.gov/sim/3190/contents/SIM3190_pam.pdf",
+                "source_metadata": {
+                    "authors": [
+                        "Barnaby W. Rockwell"
+                    ],
+                    "journal": "U.S. Geological Survey Scientific Investigations Map 3190",
+                    "source": "contributor",
+                    "title": "Description and Validation of an Automated Methodology for Mapping Mineralogy, Vegetation, and Hydrothermal Alteration Type from ASTER Satellite Imagery with Examples from the San Juan Mountains, Colorado",
+                    "type": "report",
+                    "year": 2012
+                }
+            },
             classification={"application_domain": "geology"},
             date_of_addition="2026-11-15",
             contributor="https://github.com/rodreras",
