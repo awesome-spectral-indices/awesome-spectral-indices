@@ -3782,5 +3782,32 @@ spindex = SpectralIndices(
             date_of_addition="2026-10-29",
             contributor="https://github.com/Franziska279",
         ),
+        FIR=SpectralIndex(
+            acronym="IOR",
+            name="Iron Oxides Ratio",
+            formula="(R / B)",
+            source={"source_link": "https://search.worldcat.org/search?q=bn:0045500371"},
+            classification={"application_domain": "geology"},
+            date_of_addition="2026-11-15",
+            contributor="https://github.com/rodreras",
+        ),
+        FeII=SpectralIndex(
+            acronym="FeII",
+            name="Ferrous Iron (Coarse Grained Ferric Iron)",
+            formula="(G + S1) / (R + N)",
+            source={"source_link": "https://pubs.usgs.gov/sim/3190/contents/SIM3190_pam.pdf"},
+            classification={"application_domain": "geology"},
+            date_of_addition="2026-11-15",
+            contributor="https://github.com/rodreras",
+        ),
+        CSM=SpectralIndex(
+            acronym="CSM",
+            name="Clay, Sulphates, Mica, Carbonates, Alteration Minerals & Vegetation",
+            formula="(S1 / S2)",
+            source={"source_link": "https://doi.org/10.3133/b1975"},
+            classification={"application_domain": "geology"},
+            date_of_addition="2026-11-14",
+            contributor="https://github.com/rodreras",
+        ),
     )
 )
