@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_NDVI,
-  author = {J. Rouse and R. H. Haas and J. A. Schell and D. Deering},
+  author = {J. W. Rouse and R. H. Haas and J. A. Schell and D. Deering},
   title = {Monitoring vegetation systems in the great plains with ERTS},
   volume = {1},
   year = {1973},
@@ -38,7 +38,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-J. Rouse, R. H. Haas, J. A. Schell, & D. Deering (1973). Monitoring vegetation systems in the great plains with ERTS. https://ntrs.nasa.gov/citations/19740022614
+J. W. Rouse, R. H. Haas, J. A. Schell, & D. Deering (1973). Monitoring vegetation systems in the great plains with ERTS. https://ntrs.nasa.gov/citations/19740022614
 ```
 
 :::

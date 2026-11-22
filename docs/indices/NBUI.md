@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_NBUI,
-  author = {Priyakant Sinha and N. K. Verma and E. Ayele},
+  author = {Priyakant Sinha and N. K. Verma and Eskindir Ayele},
   title = {Urban Built-up Area Extraction and Change Detection of Adama Municipal Area using Time-Series Landsat Images},
   howpublished = {International Journal of Advanced Remote Sensing and GIS},
   volume = {5},
@@ -39,7 +39,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Priyakant Sinha, N. K. Verma, & E. Ayele (2016). Urban Built-up Area Extraction and Change Detection of Adama Municipal Area using Time-Series Landsat Images. International Journal of Advanced Remote Sensing and GIS, 5. https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images
+Priyakant Sinha, N. K. Verma, & Eskindir Ayele (2016). Urban Built-up Area Extraction and Change Detection of Adama Municipal Area using Time-Series Landsat Images. International Journal of Advanced Remote Sensing and GIS, 5. https://www.researchgate.net/publication/306346676_Urban_Built-up_Area_Extraction_and_Change_Detection_of_Adama_Municipal_Area_using_Time-Series_Landsat_Images
 ```
 
 :::

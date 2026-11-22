@@ -29,7 +29,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 
 ```bibtex [BibTeX]
 @misc{ASI_DpRVIHH,
-  author = {Mélanie Trudel and F. Charbonneau and R. Leconte},
+  author = {M. Trudel and F. Charbonneau and R. Leconte},
   title = {Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields},
   howpublished = {Canadian Journal of Remote Sensing},
   volume = {38},
@@ -39,7 +39,7 @@ import IndexDetails from '../.vitepress/theme/components/IndexDetails.vue'
 ```
 
 ```text [APA]
-Mélanie Trudel, F. Charbonneau, & R. Leconte (2012). Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields. Canadian Journal of Remote Sensing, 38. https://www.tandfonline.com/doi/abs/10.5589/m12-043
+M. Trudel, F. Charbonneau, & R. Leconte (2012). Using RADARSAT-2 polarimetric and ENVISAT-ASAR dual-polarization data for estimating soil moisture over agricultural fields. Canadian Journal of Remote Sensing, 38. https://www.tandfonline.com/doi/abs/10.5589/m12-043
 ```
 
 :::
