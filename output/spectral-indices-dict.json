@@ -174,7 +174,7 @@
             ],
             "contributor": "https://github.com/davemlz",
             "date_of_addition": "2021-09-18",
-            "formula": "4.0 * (G - S1) - 0.25 * N + 2.75 * S2",
+            "formula": "4.0 * (G - S1) - (0.25 * N + 2.75 * S2)",
             "long_name": "Automated Water Extraction Index",
             "platforms": [
                 "Sentinel-2",
