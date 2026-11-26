@@ -6,7 +6,7 @@ pageClass: "index-page domain-geology"
 hero:
   name: "CSM"
   text: "Clay, Sulphates, Mica, Carbonates, Alteration Minerals & Vegetation"
-  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Geology</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #317</span></span>"
+  tagline: "<span class=\"hero-classification-badges\"><span class=\"hero-domain-badge\">Geology</span><span class=\"hero-modality-badge modality-multispectral\">Multispectral</span><span class=\"hero-citation-badge citation-rank-standard\">Citation Rank #322</span></span>"
   actions:
     - theme: brand
       text: 🡰 Back to Catalogue Search

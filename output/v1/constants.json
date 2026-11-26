@@ -278,6 +278,14 @@
                 "For reflectances in [0,1]": 1.0
             }
         },
+        "VAWIND": {
+            "default_value": 1e-06,
+            "description": "Constant to maintain index stability"
+        },
+        "VAWIlog": {
+            "default_value": 1e-06,
+            "description": "Constant to maintain index stability"
+        },
         "WCI1": {
             "default_value": 1e-10,
             "description": "Adjustment constant for numerical stability"

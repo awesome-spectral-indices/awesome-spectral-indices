@@ -248,6 +248,7 @@ description.
 | `C2` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html) | Coefficient 2 for the aerosol resistance term |
 | `epsilon` | [EBI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EBI.html) | Adjustment constant |
 | `epsilon` | [WCI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI1.html), [WCI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI2.html), [WCI3](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WCI3.html) | Adjustment constant for numerical stability |
+| `epsilon` | [VAWIlog](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWIlog.html), [VAWIND](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWIND.html) | Constant to maintain index stability |
 | `eta` | [GRARI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/GRARI.html) | Mix of green and red reflectances to get properties that are between ARVI and GARI |
 | `fdelta` | [SEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SEVI.html) | Adjustment factor to avoid under-elimination or over-elimination |
 | `g` | [EVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI.html), [EVI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/EVI2.html), [kEVI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/kEVI.html) | Gain factor |
@@ -501,6 +502,11 @@ descriptions are also specific to each index.
 - [SRWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SRWI.html): Symbolic Regression Water Index
 - [SWM](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/SWM.html): Sentinel Water Mask
 - [TWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/TWI.html): Triangle Water Index
+- [VAWI](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWI.html): Vegetation-Adjusted Water Index
+- [VAWIlog](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWIlog.html): Log Transformed Vegetation-Adjusted Water Index
+- [VAWIND](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWIND.html): Normalized Difference Vegetation-Adjusted Water Index
+- [VAWInorm](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWInorm.html): Vegetation Normalized Vegetation-Adjusted Water Index
+- [VAWIweighted](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/VAWIweighted.html): Vegetation Weighted Vegetation-Adjusted Water Index
 - [WI1](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI1.html): Water Index 1
 - [WI2](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI2.html): Water Index 2
 - [WI2015](https://awesome-spectral-indices.github.io/awesome-spectral-indices/indices/WI2015.html): Water Index 2015

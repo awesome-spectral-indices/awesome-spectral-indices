@@ -251,5 +251,16 @@
         "link": "https://github.com/rodreras"
       }
     ]
+  },
+  {
+    "avatar": "https://github.com/VanZeidt.png",
+    "name": "VanZeidt",
+    "title": "Index Contributor",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/VanZeidt"
+      }
+    ]
   }
 ]
