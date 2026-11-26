@@ -3832,5 +3832,62 @@ spindex = SpectralIndices(
             date_of_addition="2026-11-14",
             contributor="https://github.com/rodreras",
         ),
+        VAWI=SpectralIndex(
+            acronym="VAWI",
+            name="Vegetation-Adjusted Water Index",
+            formula="((N-S1)/(N+S1)) - (2.5*(N-R)/(N+6.0*R-7.5*B+1.0))",
+            source={"source_link": "https://doi.org/10.3390/rs17162771"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-11-26",
+            contributor="https://github.com/davemlz",
+        ),
+        VAWIND=SpectralIndex(
+            acronym="VAWIND",
+            name="Normalized Difference Vegetation-Adjusted Water Index",
+            formula="(((N-S1)/(N+S1)) - (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)))/(((N-S1)/(N+S1)) + (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)) + epsilon)",
+            constants={
+                "epsilon": {
+                    "description": "Constant to maintain index stability",
+                    "default_value": 0.000001,
+                },
+            },
+            source={"source_link": "https://doi.org/10.3390/rs17162771"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-11-26",
+            contributor="https://github.com/davemlz",
+        ),
+        VAWIweighted=SpectralIndex(
+            acronym="VAWIweighted",
+            name="Vegetation Weighted Vegetation-Adjusted Water Index",
+            formula="((N-S1)/(N+S1)) * (1.0 - (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)))",
+            source={"source_link": "https://doi.org/10.3390/rs17162771"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-11-26",
+            contributor="https://github.com/davemlz",
+        ),
+        VAWInorm=SpectralIndex(
+            acronym="VAWInorm",
+            name="Vegetation Normalized Vegetation-Adjusted Water Index",
+            formula="(((N-S1)/(N+S1)) - (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)))/(1.0 - (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)))",
+            source={"source_link": "https://doi.org/10.3390/rs17162771"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-11-26",
+            contributor="https://github.com/davemlz",
+        ),
+        VAWIlog=SpectralIndex(
+            acronym="VAWIlog",
+            name="Log Transformed Vegetation-Adjusted Water Index",
+            formula="log((1.0 + ((N-S1)/(N+S1)) + epsilon) / (1.0 + (2.5*(N-R)/(N+6.0*R-7.5*B+1.0)) + epsilon))",
+            constants={
+                "epsilon": {
+                    "description": "Constant to maintain index stability",
+                    "default_value": 0.000001,
+                },
+            },
+            source={"source_link": "https://doi.org/10.3390/rs17162771"},
+            classification={"application_domain": "water"},
+            date_of_addition="2026-11-26",
+            contributor="https://github.com/VanZeidt",
+        ),
     )
 )
